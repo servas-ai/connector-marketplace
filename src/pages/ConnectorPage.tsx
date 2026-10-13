@@ -145,7 +145,7 @@ function ConnectorView({ id }: { id: string }) {
   const tabs = [
     { id: 'overview', label: 'Übersicht', icon: <LayoutGrid size={15} aria-hidden />, content: <Overview c={c} d={d} /> },
     { id: 'routes', label: 'Routes', icon: <RouteIcon size={15} aria-hidden />, content: <ApiReference c={c} d={d} /> },
-    ...(d?.screenshot ? [{ id: 'shots', label: 'Screenshots', icon: <Camera size={15} aria-hidden />, content: <Shots c={c} d={d} /> }] : []),
+    ...((d?.screenshot || extra(c).shot) ? [{ id: 'shots', label: 'Screenshots', icon: <Camera size={15} aria-hidden />, content: <Shots c={c} d={d} /> }] : []),
     { id: 'install', label: 'Installieren', icon: <Bot size={15} aria-hidden />, content: <Install c={c} d={d} /> },
     { id: 'dev', label: 'Dev', icon: <Code2 size={15} aria-hidden />, content: <Dev c={c} d={d} /> },
     { id: 'tests', label: 'Tests & Verlauf', icon: <History size={15} aria-hidden />, content: <Tests c={c} d={d} /> },
