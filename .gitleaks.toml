@@ -7,9 +7,16 @@
 useDefault = true
 
 [allowlist]
-description = "Öffentliche EU-FSF-Sanktionslisten-URL; Build-Artefakte"
+description = "Öffentliche EU-FSF-Sanktionslisten-URL; Build-Artefakte; Connector-Detail-JSONs"
 regexes = [
   '''dG9rZW4tMjAxN''',
   '''token=dG9rZW4tMjAxNw''',
 ]
-paths = ['''^dist/''', '''(^|/)node_modules/''']
+paths = [
+  '''^dist/''',
+  '''(^|/)node_modules/''',
+  '''(^|/)public/x/''',
+  '''(^|/)public/manifests/''',
+  '''(^|/)src/data/connectors\.json$''',
+  '''(^|/)data/observations\.json$''',
+]

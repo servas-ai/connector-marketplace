@@ -17,7 +17,6 @@ export const dataset: Dataset = new Proxy({} as Dataset, {
   },
 });
 
-/** Tests / Node: inject without fetch. */
 /** Compact public JSON may omit empty arrays — restore shape the UI assumes. */
 function normalizeDataset(d: Dataset): Dataset {
   for (const c of d.connectors) {

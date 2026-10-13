@@ -8,38 +8,35 @@
   --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --radius-lg: 0.625rem; --radius-md: 0.5rem; --radius-sm: 0.375rem;
+  --color-destructive: var(--destructive); --color-success: var(--success);
+  --radius-lg: 0.75rem; --radius-md: 0.5rem; --radius-sm: 0.375rem; --radius-xl: 1rem;
 }
+/* shadcn/ui neutral (zinc) */
 :root {
-  --background: #f5f5f7; --foreground: #1d1d1f;
-  --card: #ffffff; --card-foreground: #1d1d1f;
-  --muted: #e8e8ed; --muted-foreground: #5f5f66;
-  --border: rgb(0 0 0 / 10%); --input: rgb(0 0 0 / 14%); --ring: #0071e3;
-  --primary: #0071e3; --primary-foreground: #ffffff;
-  --secondary: #e8e8ed; --secondary-foreground: #1d1d1f;
-  --accent: #e8e8ed; --accent-foreground: #1d1d1f;
-  --destructive: #c4161c; --link: #0066cc;
+  --background: oklch(0.985 0 0); --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0); --card-foreground: oklch(0.145 0 0);
+  --muted: oklch(0.96 0 0); --muted-foreground: oklch(0.46 0 0);
+  --border: oklch(0.92 0 0); --input: oklch(0.88 0 0); --ring: oklch(0.55 0.2 260);
+  --primary: oklch(0.205 0 0); --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.96 0 0); --secondary-foreground: oklch(0.205 0 0);
+  --accent: oklch(0.95 0 0); --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.55 0.22 27); --success: oklch(0.55 0.15 150); --link: oklch(0.48 0.2 260);
 }
 .dark {
   --background: oklch(0.145 0 0); --foreground: oklch(0.985 0 0);
-  --card: oklch(0.19 0 0); --card-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.25 0 0); --muted-foreground: oklch(0.708 0 0);
-  --border: oklch(1 0 0 / 10%); --input: oklch(1 0 0 / 15%); --ring: oklch(0.556 0 0);
-  --primary: oklch(0.922 0 0); --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0); --secondary-foreground: oklch(0.985 0 0);
-  --accent: oklch(0.269 0 0); --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216); --link: #2997ff; --primary: #0071e3; --primary-foreground: #fff; --ring: #0a84ff;
+  --card: oklch(0.185 0 0); --card-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.245 0 0); --muted-foreground: oklch(0.72 0 0);
+  --border: oklch(1 0 0 / 11%); --input: oklch(1 0 0 / 16%); --ring: oklch(0.7 0.15 260);
+  --primary: oklch(0.985 0 0); --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.27 0 0); --secondary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.27 0 0); --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.7 0.19 22); --success: oklch(0.75 0.16 150); --link: oklch(0.78 0.12 260);
 }
 * { border-color: var(--border); }
-body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; letter-spacing: -0.01em; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 html { color-scheme: light; } html.dark { color-scheme: dark; }
-.as-scroll { scroll-snap-type: x mandatory; scrollbar-width: none; } .as-scroll::-webkit-scrollbar { display: none; } .as-scroll > * { scroll-snap-align: start; }
-.as-lift { transition: transform .25s ease, box-shadow .25s ease; } .as-lift:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 12px 30px rgb(0 0 0 / 12%); }
-@keyframes as-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } } .as-fade { animation: as-fade .35s ease both; }
-@media (prefers-reduced-motion: reduce) { .as-lift, .as-fade { transition: none; animation: none; } .as-lift:hover { transform: none; } }
-a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
-
-/* Gate: kein horizontaler Overflow auf Mobil */
-.as-scroll, pre { max-width: 100%; min-width: 0; }
+.no-scrollbar { scrollbar-width: none; } .no-scrollbar::-webkit-scrollbar { display: none; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+main, main * { min-width: 0; }
 h1, h2, h3, dd, td { overflow-wrap: anywhere; }
+pre { max-width: 100%; }
