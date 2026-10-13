@@ -102,7 +102,8 @@ let _restReady = false;
 let _restPromise: Promise<void> | null = null;
 const _restListeners = new Set<() => void>();
 
-export function isRestReady(): boolean { return _restReady || !_isListOnly; }
+const _restIds = new Set<string>();
+export function isRestReady(id?: string): boolean { return _restReady || !_isListOnly || (id != null && _restIds.has(id)); }
 export function onRest(cb: () => void): () => void { _restListeners.add(cb); return () => { _restListeners.delete(cb); }; }
 
 function mergeRest(ds: Dataset, rest: Record<string, RestEntry>): void {
@@ -131,6 +132,16 @@ export function loadRest(): Promise<void> {
   })();
   _restPromise.catch(() => { _restPromise = null; });
   return _restPromise;
+}
+
+/** Deep-Link Detailseite: nur data/r/<id>.json mergen (list-rest.json folgt nach dem ersten Paint). */
+export async function loadRestFor(id: string): Promise<void> {
+  if (isRestReady(id)) return;
+  let r: RestEntry;
+  try { r = await fetchJson<RestEntry>(`${baseUrl()}data/r/${encodeURIComponent(id)}.json`); } catch { return loadRest(); }
+  if (_ds && _isListOnly && !_restReady) mergeRest(_ds, { [id]: r });
+  _restIds.add(id);
+  _restListeners.forEach((cb) => cb());
 }
 
 export function isListOnly(): boolean {

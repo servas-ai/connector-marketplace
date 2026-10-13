@@ -4,7 +4,7 @@ import { BarChart3, Blocks, Bot, Columns3, Compass, Moon, Sun } from 'lucide-rea
 import { Home } from '@/pages/Home';
 import { cn } from '@/lib/utils';
 import { CommandSearch } from '@/components/CommandSearch';
-import { dataset, isRestReady, loadRest, onRest } from '@/lib/data';
+import { dataset, isRestReady, loadRest, loadRestFor, onRest } from '@/lib/data';
 
 const ConnectorPage = lazy(() => import('@/pages/ConnectorPage').then((m) => ({ default: m.ConnectorPage })));
 const Compare = lazy(() => import('@/pages/Compare').then((m) => ({ default: m.Compare })));
@@ -22,18 +22,30 @@ const Old = () => { const { id } = useParams(); return <Navigate to={`/c/${id}`}
 
 const Loading = () => <div className="p-10 text-center text-muted-foreground">Lädt …</div>;
 /** Seiten außer Home brauchen list-rest.json (Beschreibung, Detail-KPIs) — bis dahin derselbe Fallback wie Suspense. */
-function NeedRest({ children }: { children: ReactNode }) {
-  const ready = isRestReady();
-  useEffect(() => { if (!ready) void loadRest(); }, [ready]);
+function NeedRest({ id, children }: { id?: string; children: ReactNode }) {
+  const ready = isRestReady(id);
+  useEffect(() => { if (!ready) void (id ? loadRestFor(id) : loadRest()); }, [ready, id]);
   return ready ? children : <Loading />;
 }
+const DetailRoute = () => { const { id } = useParams(); return <NeedRest id={id}><ConnectorPage /></NeedRest>; };
 
 export function App() {
   const [, setRestTick] = useState(0);
   // Nachgeladene Restfelder (Suche/Tooltips) als unterbrechbare Transition rendern — kein Long Task nach dem ersten Paint.
   useEffect(() => onRest(() => startTransition(() => setRestTick((n) => n + 1))), []);
-  // Startseite: Restfelder erst nach dem ersten Paint holen (Effekt läuft nach Commit, rAF+Timeout nach dem Frame) — konkurriert sonst mit LCP.
-  useEffect(() => { if (isRestReady()) return; const id = requestAnimationFrame(() => setTimeout(() => { void loadRest(); }, 0)); return () => cancelAnimationFrame(id); }, []);
+  // Restfelder (Beschreibung für die Suche, Ampel-Gründe als Tooltip, weitere Detailseiten) sind nicht kritisch:
+  // bei erster Interaktion (Tippen, Tippen ins Suchfeld, Scrollen) oder nach 2 s Leerlauf laden — nicht parallel zu LCP-Text/-Bild.
+  // Seiten, die sie sofort brauchen, laden selbst (NeedRest); Suche re-rendert nach dem Merge.
+  useEffect(() => {
+    if (isRestReady()) return;
+    const ev = ['pointerdown', 'keydown', 'touchstart', 'scroll', 'focusin'] as const;
+    let idle = 0;
+    const go = () => { cleanup(); void loadRest(); };
+    const t = window.setTimeout(() => { const ric = window.requestIdleCallback; if (ric) idle = ric(go, { timeout: 1000 }); else go(); }, 2000);
+    const cleanup = () => { clearTimeout(t); if (idle) window.cancelIdleCallback?.(idle); ev.forEach((e) => window.removeEventListener(e, go, true)); };
+    ev.forEach((e) => window.addEventListener(e, go, { capture: true, passive: true, once: true }));
+    return cleanup;
+  }, []);
   return (
     <div className="min-h-screen">
       <a href="#main" className="sr-only focus:not-sr-only">Zum Inhalt</a>
@@ -46,7 +58,7 @@ export function App() {
         </div>
       </header>
       <main id="main" className="mx-auto min-h-screen max-w-7xl px-4 py-8"><Suspense fallback={<Loading />}><Routes>
-        <Route path="/" element={<Home />} /><Route path="/alle" element={<Navigate to="/" replace />} /><Route path="/c/:id" element={<NeedRest><ConnectorPage /></NeedRest>} /><Route path="/c/:id/technik" element={<Old />} />
+        <Route path="/" element={<Home />} /><Route path="/alle" element={<Navigate to="/" replace />} /><Route path="/c/:id" element={<DetailRoute />} /><Route path="/c/:id/technik" element={<Old />} />
         <Route path="/dashboard" element={<NeedRest><Dashboard /></NeedRest>} /><Route path="/compare" element={<NeedRest><Compare /></NeedRest>} /><Route path="/agent" element={<NeedRest><Agent /></NeedRest>} /></Routes></Suspense></main>
       <footer className="mx-auto max-w-7xl border-t px-4 py-6 text-xs text-muted-foreground">servas-ai · read-only Katalog · Daten aus <a className="underline" href={`https://github.com/${dataset.sourceRepo}`}>opencli-connectors</a> · Stand {dataset.sourceGeneratedAt} · <a className="underline" href={`${import.meta.env.BASE_URL}llms.txt`}>llms.txt</a> · Lizenz- und Compliance-Angaben automatisch abgeleitet, keine Rechtsberatung</footer>
     </div>
