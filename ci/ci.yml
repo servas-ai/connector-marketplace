@@ -1,13 +1,22 @@
+# Vorbereitet, noch nicht aktiv: nach `gh auth refresh -s workflow` nach .github/workflows/ci.yml verschieben.
 name: ci
 on: [pull_request, push]
 jobs:
   quality:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]   # Fallback: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20, cache: npm }
+        with: { node-version: 22, cache: npm }
       - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run enrich:offline   # nur Cache + Snapshots, kein Netz
       - run: npm run lint
+      - run: npm run typecheck
       - run: npm test
       - run: npm run build
+      - run: npm run e2e              # Playwright-Smoke + axe (WCAG 2 A/AA)
+      - run: npm run lighthouse       # a11y >= 90, best-practices >= 85, perf >= 60
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: reports, path: reports/ }

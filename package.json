@@ -10,7 +10,13 @@
     "preview": "vite preview",
     "lint": "eslint . --max-warnings 0",
     "test": "vitest run",
-    "screenshot": "node scripts/screenshot.mjs"
+    "screenshot": "node scripts/screenshot.mjs",
+    "enrich": "node scripts/enrich.mjs",
+    "enrich:offline": "node scripts/enrich.mjs --offline",
+    "typecheck": "tsc -b --noEmit",
+    "e2e": "playwright test",
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "gates": "npm run lint && npm run typecheck && npm test && npm run build && npm run e2e && npm run lighthouse"
   },
   "dependencies": {
     "@openuidev/react-lang": "^1.0.0",
@@ -26,7 +32,9 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.0",
     "@tailwindcss/vite": "^4.3.3",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
@@ -34,10 +42,12 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "chrome-launcher": "^1.2.2",
     "eslint": "^10.12.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.13.0",
     "jsdom": "^25.0.1",
+    "lighthouse": "^13.5.0",
     "playwright": "^1.64.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",

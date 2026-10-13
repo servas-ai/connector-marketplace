@@ -1,3 +1,4 @@
+import { INTERFACE_KEYS } from './interfaceKeys';
 import raw from '@/data/connectors.json';
 import type { Connector, Dataset } from './types';
 export const dataset = raw as unknown as Dataset;
@@ -52,4 +53,16 @@ export function groupCount(list: Connector[], k: 'category' | 'country' | 'statu
   const m = new Map<string, { name: string; total: number; passing: number }>();
   for (const c of list) { const e = m.get(c[k]) ?? { name: c[k], total: 0, passing: 0 }; e.total++; if (c.status === 'passing') e.passing++; m.set(c[k], e); }
   return [...m.values()].sort((a, b) => b.total - a.total);
+}
+
+export function groupBy(list: Connector[], f: (c: Connector) => string | null | undefined, top = 10) {
+  const m = new Map<string, number>();
+  for (const c of list) { const k = f(c) || 'unbekannt'; m.set(k, (m.get(k) ?? 0) + 1); }
+  const all = [...m.entries()].map(([name, total]) => ({ name, total })).sort((a, b) => b.total - a.total);
+  if (all.length <= top) return all;
+  return [...all.slice(0, top), { name: 'andere', total: all.slice(top).reduce((a, x) => a + x.total, 0) }];
+}
+export function interfaceCoverage(list: Connector[]) {
+  const n = list.length || 1;
+  return INTERFACE_KEYS.map(([key, name]) => { const total = list.filter((c) => c.interfaces?.[key]).length; return { name, total, pct: Math.round((100 * total) / n) }; });
 }

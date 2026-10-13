@@ -19,10 +19,14 @@ fs.mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
 const detailId = process.env.DETAIL_ID || 'ris';
-for (const [name, hash] of [['grid', ''], ['detail', `#/c/${detailId}`], ['dashboard', '#/dashboard']]) {
+const prefix = process.env.PREFIX || 'marketplace';
+const cmp = process.env.COMPARE_IDS || 'spusu-at,drei-at,magenta-at';
+const shots = [['grid', ''], ['detail', `#/c/${detailId}`], ['detail-server', `#/c/${detailId}`, 'Server & Technik'], ['detail-schnittstellen', `#/c/${detailId}`, 'Schnittstellen'], ['detail-gates', `#/c/${detailId}`, 'Qualität/Gates'], ['compare', `#/compare?ids=${cmp}`], ['dashboard', '#/dashboard']];
+for (const [name, hash, tabName] of shots) {
   await page.goto(base + hash, { waitUntil: 'networkidle' });
+  if (tabName) await page.getByRole('tab', { name: tabName }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: path.join(out, `marketplace-${name}.png`), fullPage: name !== 'grid' });
-  console.log(path.join(out, `marketplace-${name}.png`));
+  await page.screenshot({ path: path.join(out, `${prefix}-${name}.png`), fullPage: name !== 'grid' });
+  console.log(path.join(out, `${prefix}-${name}.png`));
 }
 await browser.close(); server.close();

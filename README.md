@@ -34,3 +34,9 @@ Wird nur angezeigt („offiziell nicht erlaubt“), nicht gefiltert oder blockie
 Änderungen nur per PR.
 
 CI-Workflow liegt in `ci/ci.yml` (Token ohne `workflow`-Scope); nach `gh auth refresh -s workflow` nach `.github/workflows/` verschieben.
+
+## Anreicherung & Quality-Gates (v2)
+- `npm run enrich`: passiv über die webintel-Connectoren aus opencli-connectors (`dns`, `ip-geo`, `rdap`, `ct-certspotter`, `webtech`). Höchstens 1 Request pro Ziel-Host, robots.txt wird vorher geprüft, Drittanbieter-APIs ≥ 1,1 s Abstand, Ergebnisse in `data/enrich-cache.json`. `--offline` nutzt nur Cache und Snapshots.
+- Daten pro Connector: `server` (Hoster/ASN/Land, CDN, Webserver, CMS, TLS-Aussteller, Domain-Alter), `sourceType`, `interfaces` (API offen/Key, OGD-Dump, Feed, JSON-Backend, MCP, CLI, OpenCLI, Paperclip, Playwright, PDF), `gates` aus `check_connectors.py --strict` (`data/gates.snapshot.json`), Quellen-Matrix aus `data/sources.snapshot.json` (opencli-connectors #31).
+- Gates lokal: `npm run gates` = Lint, Typecheck, vitest, Playwright-Smoke + axe (WCAG 2 A/AA), Lighthouse (a11y ≥ 90, best-practices ≥ 85, perf ≥ 60). `ci/ci.yml` ist vorbereitet (aktivieren nach `gh auth refresh -s workflow`).
+- Grenzen: `.at`/`.gv.at` haben kein RDAP, daher kein Domain-Alter; Cert Spotter ist ohne Key rate-limitiert (429), fehlende Werte stehen als `UNKNOWN`.
