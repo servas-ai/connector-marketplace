@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { AMPEL_LABEL } from '@/components/Ampel';
+import { AMPEL_LABEL } from '@/components/ampelMeta';
 import { dataset } from '@/lib/data';
 import type { Connector } from '@/lib/types';
 
@@ -14,7 +14,7 @@ export function SignalsPanel({ c }: { c: Connector }) {
     <div className="grid gap-4 lg:grid-cols-2" data-testid="signals-panel">
       <Card><CardHeader><CardTitle>Ampel: {a ? AMPEL_LABEL[a.level] : '—'}</CardTitle></CardHeader><CardContent className="flex flex-col gap-2 text-sm">
         {a?.reasons.length ? <ul className="list-disc pl-5">{a.reasons.map((r) => <li key={r}>{r}</li>)}</ul> : <p>Gates grün, keine Captchas, stabil.</p>}
-        <img src={`badges/${c.id}.svg`} alt={`Ampel-Badge ${c.id}`} height={20} className="h-5 w-fit" />
+        <img src={`badges/${c.id}.svg`} alt={`Ampel-Badge ${c.id}`} width={80} height={20} loading="lazy" decoding="async" className="h-5 w-fit" />
         <code className="break-all rounded bg-secondary p-2 text-xs">{md}</code>
       </CardContent></Card>
       <Card><CardHeader><CardTitle>Captcha- & Fehler-Zähler ({s?.observations ?? 0} Beobachtungen)</CardTitle></CardHeader><CardContent>
@@ -34,7 +34,7 @@ export function SignalsPanel({ c }: { c: Connector }) {
         </tbody></table>
       </CardContent></Card>
       <Card><CardHeader><CardTitle>Screenshot der Quelle</CardTitle></CardHeader><CardContent>
-        {c.screenshot ? <img src={c.screenshot} alt={`Screenshot ${c.domain ?? c.id}`} className="w-full rounded-md border" /> : <p className="text-sm text-muted-foreground">Noch kein Screenshot (Proof-Lauf fehlt).</p>}
+        {c.screenshot ? <img src={c.screenshot} alt={`Screenshot ${c.domain ?? c.id}`} width={320} height={120} loading="lazy" decoding="async" className="h-auto w-52 max-w-full rounded-md border object-contain" /> : <p className="text-sm text-muted-foreground">Noch kein Screenshot (Proof-Lauf fehlt).</p>}
       </CardContent></Card>
     </div>
   );

@@ -1,7 +1,46 @@
 import { INTERFACE_KEYS } from './interfaceKeys';
-import raw from '@/data/connectors.json';
 import type { Connector, Dataset } from './types';
-export const dataset = raw as unknown as Dataset;
+
+let _ds: Dataset | null = null;
+
+export function getDataset(): Dataset {
+  if (!_ds) throw new Error('dataset not loaded — call loadDataset() first');
+  return _ds;
+}
+
+/** Proxy so existing `dataset.connectors` call sites keep working after loadDataset()/setDataset(). */
+export const dataset: Dataset = new Proxy({} as Dataset, {
+  get(_t, prop) {
+    const d = getDataset();
+    const v = Reflect.get(d, prop, d);
+    return typeof v === 'function' ? (v as Function).bind(d) : v;
+  },
+});
+
+/** Tests / Node: inject without fetch. */
+/** Compact public JSON may omit empty arrays — restore shape the UI assumes. */
+function normalizeDataset(d: Dataset): Dataset {
+  for (const c of d.connectors) {
+    if (!Array.isArray(c.incidents)) c.incidents = [];
+    if (!Array.isArray(c.commands)) c.commands = [];
+  }
+  return d;
+}
+
+export function setDataset(d: Dataset): void {
+  _ds = normalizeDataset(d);
+}
+
+/** Browser: load connectors.json as separate (gzip-friendly) asset — not bundled into JS. */
+export async function loadDataset(): Promise<Dataset> {
+  if (_ds) return _ds;
+  const base = import.meta.env.BASE_URL || './';
+  const url = `${base}data/connectors.json`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`connectors.json HTTP ${res.status} (${url})`);
+  _ds = normalizeDataset((await res.json()) as Dataset);
+  return _ds;
+}
 
 export type Tri = 'all' | 'yes' | 'no';
 export interface Filters { q: string; category: string; country: string; login: Tri; status: string; robots: string; captcha: Tri; ampel: string; sort: SortKey; }
@@ -45,7 +84,7 @@ export function stats(list: Connector[]) {
     avgStability: avg(withKpi.map((c) => c.kpi!.stability!)), avgP50: avg(list.filter((c) => c.kpi?.p50).map((c) => c.kpi!.p50!)),
     records: list.reduce((a, c) => a + (c.records ?? 0), 0), login: count((c) => c.loginRequired === true),
     captcha: count((c) => c.captcha === true), robotsDisallowed: count((c) => c.robots === 'disallowed'),
-    incidents: list.reduce((a, c) => a + c.incidents.length, 0),
+    incidents: list.reduce((a, c) => a + (c.incidents?.length ?? 0), 0),
   };
 }
 

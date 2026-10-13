@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { ChevronLeft, Copy, Check } from 'lucide-react';
 import { dataset } from '@/lib/data';
-import { AMPEL_COLOR, AMPEL_LABEL } from '@/components/Ampel';
+import { AMPEL_COLOR, AMPEL_LABEL } from '@/components/ampelMeta';
 import { AppIcon, AppRow, Section, Stars } from '@/appstore/ui';
 import { catOf, rating, snippets, title, topList } from '@/appstore/meta';
 
@@ -33,7 +33,7 @@ export function AppDetail() {
     <article className="as-fade flex flex-col gap-8">
       <Link to="/" className="inline-flex w-fit items-center text-[color:var(--link)]"><ChevronLeft size={18} aria-hidden />Heute</Link>
       <header className="flex flex-wrap items-start gap-5">
-        <AppIcon c={c} size={128} />
+        <AppIcon c={c} size={128} priority />
         <div className="min-w-0 flex-1">
           <h1 className="text-3xl font-bold tracking-tight">{title(c)}</h1>
           <p className="text-muted-foreground">{c.id} · {cat.label}</p>
@@ -50,7 +50,7 @@ export function AppDetail() {
         <div className="min-w-32 px-4"><dt className="text-xs uppercase text-muted-foreground">Land</dt><dd className="text-xl font-bold">{c.country || '–'}</dd><dd className="text-xs text-muted-foreground">{cat.label}</dd></div>
         <div className="min-w-32 px-4"><dt className="text-xs uppercase text-muted-foreground">Latenz p50</dt><dd className="text-xl font-bold">{c.kpi?.p50 != null ? `${c.kpi.p50} ms` : '–'}</dd><dd className="text-xs text-muted-foreground">KPI-Score {c.kpi?.score ?? '–'}</dd></div>
       </dl>
-      {c.screenshot && <Section title="Vorschau"><div className="as-scroll -mx-4 flex gap-4 overflow-x-auto px-4"><img src={`${import.meta.env.BASE_URL}${c.screenshot}`} alt={`Bildschirmfoto der Quelle ${title(c)}`} loading="lazy" className="h-72 w-auto rounded-2xl ring-1 ring-black/10" /></div></Section>}
+      {c.screenshot && <Section title="Vorschau"><div className="as-scroll -mx-4 flex gap-4 overflow-x-auto px-4"><img src={`${import.meta.env.BASE_URL}${c.screenshot}`} alt={`Bildschirmfoto der Quelle ${title(c)}`} width={320} height={120} loading="lazy" decoding="async" className="h-auto w-52 max-w-full rounded-2xl ring-1 ring-black/10 object-contain" /></div></Section>}
       <Section title="Beschreibung"><p className="max-w-3xl leading-relaxed">{c.description}</p></Section>
       <Section title="Installieren"><div id="install" className="scroll-mt-20 rounded-2xl bg-[color:var(--card)] p-4 shadow-sm ring-1 ring-[color:var(--border)]">
         <div role="tablist" aria-label="Installationsart" className="mb-3 inline-flex rounded-lg bg-[color:var(--muted)] p-0.5">

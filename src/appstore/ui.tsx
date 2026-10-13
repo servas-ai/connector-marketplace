@@ -2,14 +2,15 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Star } from 'lucide-react';
 import type { Connector } from '@/lib/types';
-import { AMPEL_COLOR, AMPEL_LABEL } from '@/components/Ampel';
+import { AMPEL_COLOR, AMPEL_LABEL } from '@/components/ampelMeta';
 import { catOf, rating, title } from './meta';
 
-export function AppIcon({ c, size = 64 }: { c: Connector; size?: number }) {
+export function AppIcon({ c, size = 64, priority = false }: { c: Connector; size?: number; priority?: boolean }) {
   const [err, setErr] = useState(false);
   const cat = catOf(c);
   const r = Math.round(size * 0.225);
-  if (c.logo && !err) return <img src={`${import.meta.env.BASE_URL}logos/${c.logo}`} alt="" width={size} height={size} loading="lazy" onError={() => setErr(true)} className="shrink-0 bg-white object-contain ring-1 ring-black/10" style={{ width: size, height: size, borderRadius: r, padding: size * 0.14 }} />;
+  const eager = priority;
+  if (c.logo && !err) return <img src={`${import.meta.env.BASE_URL}logos/${c.logo}`} alt="" width={size} height={size} loading={eager ? "eager" : "lazy"} decoding="async" fetchPriority={eager ? "high" : undefined} onError={() => setErr(true)} className="shrink-0 bg-white object-contain ring-1 ring-black/10" style={{ width: size, height: size, borderRadius: r, padding: size * 0.14 }} />;
   const t = title(c).replace(/^(api|data|www|open)\./, '');
   return <div aria-hidden className="flex shrink-0 items-center justify-center font-semibold text-white ring-1 ring-black/10" style={{ width: size, height: size, borderRadius: r, fontSize: size * 0.4, background: `linear-gradient(135deg, ${cat.from}, ${cat.to})` }}>{t.slice(0, 1).toUpperCase()}</div>;
 }
