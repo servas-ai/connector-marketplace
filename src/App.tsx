@@ -26,7 +26,7 @@ export function App() {
       <header className="sticky top-0 z-20 border-b border-[color:var(--border)] bg-[color:var(--background)]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2">
           <Link to="/" className="flex items-center gap-2 font-semibold"><span aria-hidden className="flex size-7 items-center justify-center rounded-lg bg-gradient-to-br from-[#0a84ff] to-[#5e5ce6] text-white">⌘</span>Connectors</Link>
-          <nav aria-label="Hauptnavigation" className="ml-auto flex gap-1 overflow-x-auto"><NavLink to="/" end className={tab}>Heute</NavLink><NavLink to="/alle" className={tab}>Alle</NavLink><NavLink to="/dashboard" className={tab}>Statistik</NavLink><NavLink to="/compare" className={tab}>Vergleich</NavLink></nav>
+          <nav aria-label="Hauptnavigation" className="ml-auto flex min-w-0 gap-1 overflow-x-auto"><NavLink to="/" end className={tab}>Heute</NavLink><NavLink to="/alle" className={tab}>Alle</NavLink><NavLink to="/dashboard" className={tab}>Statistik</NavLink><NavLink to="/compare" className={tab}>Vergleich</NavLink></nav>
           <ThemeToggle />
         </div>
       </header>

@@ -43,7 +43,7 @@ export function AppDetail() {
           </div>
         </div>
       </header>
-      <dl className="as-scroll -mx-4 flex divide-x divide-[color:var(--border)] overflow-x-auto px-4 text-center">
+      <dl tabIndex={0} aria-label="Kennzahlen" className="as-scroll -mx-4 flex divide-x divide-[color:var(--border)] overflow-x-auto px-4 text-center">
         <div className="min-w-32 px-4"><dt className="text-xs uppercase text-muted-foreground">Bewertung</dt><dd className="text-xl font-bold">{r ? r.stars.toFixed(1) : '–'}</dd><dd><Stars c={c} size={11} /></dd></div>
         <div className="min-w-32 px-4"><dt className="text-xs uppercase text-muted-foreground">Ampel</dt><dd className="flex items-center justify-center gap-1.5 text-xl font-bold" data-testid="ampel-badge">{lvl && <span aria-hidden className="inline-block size-3 rounded-full" style={{ background: AMPEL_COLOR[lvl] }} />}{lvl ? AMPEL_LABEL[lvl] : '–'}</dd><dd className="text-xs text-muted-foreground">{c.ampel?.reasons[0] ?? 'alles grün'}</dd></div>
         <div className="min-w-32 px-4"><dt className="text-xs uppercase text-muted-foreground">Live-Tests</dt><dd className="text-xl font-bold">{c.e2eTotal ? `${c.e2ePassed}/${c.e2eTotal}` : '–'}</dd><dd className="text-xs text-muted-foreground">{c.status === 'passing' ? 'bestanden' : c.status}</dd></div>
@@ -56,7 +56,7 @@ export function AppDetail() {
         <div role="tablist" aria-label="Installationsart" className="mb-3 inline-flex rounded-lg bg-[color:var(--muted)] p-0.5">
           {(['MCP', 'CLI', 'HTTP'] as const).map((k) => <button key={k} role="tab" type="button" aria-selected={tab === k} onClick={() => setTab(k)} className={`rounded-md px-4 py-1 text-sm font-medium ${tab === k ? 'bg-[color:var(--card)] shadow-sm' : 'text-muted-foreground'}`}>{k}</button>)}
         </div>
-        <div className="relative"><pre data-testid="snippet" className="overflow-x-auto rounded-xl bg-[#1d1d1f] p-4 text-sm leading-relaxed text-[#f5f5f7]"><code>{sn[tab]}</code></pre>
+        <div className="relative"><pre tabIndex={0} data-testid="snippet" className="overflow-x-auto rounded-xl bg-[#1d1d1f] p-4 text-sm leading-relaxed text-[#f5f5f7]"><code>{sn[tab]}</code></pre>
           <button type="button" onClick={copy} aria-label="Snippet kopieren" className="absolute right-2 top-2 rounded-md bg-white/15 p-1.5 text-white hover:bg-white/25">{copied ? <Check size={16} /> : <Copy size={16} />}</button></div>
       </div></Section>
       <Section title="Informationen"><dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8">{info.map(([k, v]) => <div key={k} data-testid="info-row" className="flex justify-between gap-4 border-b border-[color:var(--border)] py-3 text-sm"><dt className="text-muted-foreground">{k}</dt><dd className="text-right font-medium">{v}</dd></div>)}</dl></Section>

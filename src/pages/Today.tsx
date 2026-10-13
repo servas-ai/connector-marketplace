@@ -14,7 +14,7 @@ function FeatureCard({ c, kicker, headline, i }: { c: Connector; kicker: string;
   return (
     <Link to={`/c/${c.id}`} data-testid="feature-card" className="as-lift as-fade relative flex min-h-[22rem] w-[min(85vw,24rem)] shrink-0 flex-col justify-between overflow-hidden rounded-3xl p-6 text-white shadow-md"
       style={{ background: `linear-gradient(160deg, ${cat.from}, ${cat.to})`, animationDelay: `${i * 60}ms` }}>
-      <div><p className="text-xs font-semibold uppercase tracking-wider text-white/90">{kicker}</p><h3 className="mt-1 text-3xl font-bold leading-tight tracking-tight">{headline}</h3></div>
+      <div><p className="text-xs font-semibold uppercase tracking-wider text-white/90">{kicker}</p><h2 className="mt-1 text-3xl font-bold leading-tight tracking-tight">{headline}</h2></div>
       <div className="flex items-center gap-3 rounded-2xl bg-black/30 p-3 backdrop-blur">
         <AppIcon c={c} size={48} />
         <div className="min-w-0 flex-1"><p className="truncate font-semibold">{title(c)}</p><p className="truncate text-sm text-white/90">{cat.label} · {c.country}</p></div>
