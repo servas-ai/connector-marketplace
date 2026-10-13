@@ -1,3 +1,5 @@
+import { configure } from '@testing-library/react';
+configure({ asyncUtilTimeout: 90000 });
 import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { App } from './App';

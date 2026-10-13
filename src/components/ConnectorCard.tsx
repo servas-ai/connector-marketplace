@@ -15,7 +15,7 @@ export function ConnectorCard({ c }: { c: Connector }) {
           <div className="min-w-0 flex-1"><div className="truncate font-semibold">{c.id}</div><div className="truncate text-xs text-muted-foreground">{c.domain ?? '—'}</div></div>
           <div className="flex flex-col items-end gap-1"><AmpelLight a={c.ampel} /><StatusBadge c={c} /></div>
         </div>
-        {c.screenshot && <img src={c.screenshot} alt={`Screenshot ${c.domain ?? c.id}`} loading="lazy" width={320} height={180} className="h-24 w-full rounded-md border object-cover object-top opacity-90" />}
+        {c.screenshot && <img src={c.screenshot} alt={`Screenshot ${c.domain ?? c.id}`} loading="lazy" decoding="async" width={320} height={120} className="h-auto w-full max-h-24 rounded-md border object-contain object-top opacity-90" />}
         <p className="line-clamp-2 text-sm text-muted-foreground">{c.description || 'Keine Beschreibung'}</p>
         <div className="mt-auto flex flex-wrap gap-1">
           <Badge variant="secondary">{c.category}</Badge>{c.live?.realtime && <Badge>Realtime</Badge>}<Badge variant="outline">{c.country}</Badge><FeatureBadges c={c} />
