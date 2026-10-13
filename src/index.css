@@ -39,3 +39,7 @@ html { color-scheme: light; } html.dark { color-scheme: dark; }
 @keyframes as-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } } .as-fade { animation: as-fade .35s ease both; }
 @media (prefers-reduced-motion: reduce) { .as-lift, .as-fade { transition: none; animation: none; } .as-lift:hover { transform: none; } }
 a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
+
+/* Gate: kein horizontaler Overflow auf Mobil */
+.as-scroll, pre { max-width: 100%; min-width: 0; }
+main, main * { min-width: 0; }
