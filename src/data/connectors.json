@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-13T02:38:07.569Z",
+  "generatedAt": "2026-10-13T03:23:15.425Z",
   "sourceRepo": "servas-ai/opencli-connectors",
   "sourceGeneratedAt": "2026-10-13 02:24 UTC",
-  "count": 115,
+  "count": 124,
   "connectors": [
     {
       "id": "spusu-at",
@@ -2017,11 +2017,11 @@
       "category": "international",
       "country": "CZ",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/ares-cz",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/risk-b/ares-cz",
+      "records": 6,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:26:09.252Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -2047,7 +2047,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/risk-b/ares-cz/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/ares-cz/samples"
       },
-      "source": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest"
+      "source": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest",
+      "live": null
     },
     {
       "id": "at-holzpellets-net",
@@ -2086,19 +2087,19 @@
     {
       "id": "aws-foerderungen",
       "name": "opencli-aws-foerderungen",
-      "domain": null,
+      "domain": "aws-foerderungen",
       "description": "aws – Förderprogramme. Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "AT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/aws-foerderungen",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/aws-foerderungen",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 1,
+      "e2eTotal": 1,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -2112,24 +2113,25 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/aws-foerderungen/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/aws-foerderungen/samples"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "bbg-ausschreibungen",
       "name": "opencli-bbg-ausschreibungen",
-      "domain": null,
+      "domain": "bbg-ausschreibungen",
       "description": "BBG – Aktuelle Ausschreibungen. Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "AT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/bbg-ausschreibungen",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/bbg-ausschreibungen",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 2,
+      "e2eTotal": 2,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -2143,21 +2145,22 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/bbg-ausschreibungen/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/bbg-ausschreibungen/samples"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "bodacc-fr",
-      "name": "opencli-bodacc-fr",
-      "domain": null,
+      "name": "bodacc-fr",
+      "domain": "bodacc-fr",
       "description": "BODACC (DILA, Opendatasoft) – öffentliche Firmendaten ohne Login abfragen.",
       "category": "international",
       "country": "FR",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/bodacc-fr",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/bodacc-fr",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -2172,23 +2175,24 @@
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/bodacc-fr/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/bodacc-fr/PRUEFPROTOKOLL.md",
-        "samples": null
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/bodacc-fr/PRUEFPROTOKOLL.md"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "brreg-no",
       "name": "opencli-brreg-no",
-      "domain": null,
+      "domain": "brreg-no",
       "description": "Brønnøysundregistrene Enhetsregisteret NO – öffentliche Firmendaten ohne Login abfragen.",
       "category": "international",
       "country": "NO",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/brreg-no",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/brreg-no",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -2203,9 +2207,10 @@
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/brreg-no/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/brreg-no/PRUEFPROTOKOLL.md",
-        "samples": null
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/brreg-no/PRUEFPROTOKOLL.md"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "burgenlandenergie-at",
@@ -2243,6 +2248,76 @@
       "source": "https://www.burgenlandenergie.at/de/privat/oekostrom-tarifuebersicht/"
     },
     {
+      "id": "coinbase-exchange",
+      "name": "opencli-coinbase-exchange",
+      "domain": "api.exchange.coinbase.com",
+      "description": "Krypto-Ticker, Kerzen und Produkte der öffentlichen Coinbase-Exchange-API. Ohne Login/Key.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/coinbase-exchange",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:21:04.325Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 845,
+        "p95": 2669,
+        "throughput": 71,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "Exchange REST",
+      "robots": "allowed",
+      "robotsNote": "api.exchange.coinbase.com/robots.txt nicht vorhanden (401 JSON); öffentliche Market-Data-Endpunkte laut Doku ohne Auth, Limit 10 req/s. Gedrosselt ≥1,1 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/coinbase-exchange/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/coinbase-exchange/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/coinbase-exchange/samples"
+      },
+      "source": "https://api.exchange.coinbase.com",
+      "live": {
+        "realtime": true,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [
+          {
+            "t": "2026-10-12T04:00:00.000Z",
+            "v": 74999.86
+          },
+          {
+            "t": "2026-10-12T05:00:00.000Z",
+            "v": 74915.93
+          },
+          {
+            "t": "2026-10-12T06:00:00.000Z",
+            "v": 75069.53
+          },
+          {
+            "t": "2026-10-12T07:00:00.000Z",
+            "v": 74899
+          },
+          {
+            "t": "2026-10-12T08:00:00.000Z",
+            "v": 74532.27
+          }
+        ],
+        "endpoint": "coinbase-candles"
+      }
+    },
+    {
       "id": "data-gv-at",
       "name": "opencli-data-gv-at",
       "domain": "www.data.gv.at",
@@ -2250,11 +2325,11 @@
       "category": "opendata",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/data-gv-at",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/data-gv-at",
+      "records": 231,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:17:49.554Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
@@ -2280,7 +2355,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/data-gv-at/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/data-gv-at/samples"
       },
-      "source": "https://www.data.gv.at/api/hub/search"
+      "source": "https://www.data.gv.at/api/hub/search",
+      "live": null
     },
     {
       "id": "disk-energy",
@@ -2385,6 +2461,78 @@
       "source": "https://www.ebnerstrom.at/wp-content/uploads/2026/01/Preisblatt_ENERGIE_ab-01.2026-3.pdf"
     },
     {
+      "id": "ecb",
+      "name": "opencli-ecb",
+      "domain": "www.ecb.europa.eu",
+      "description": "Tägliche Euro-Referenzkurse der EZB (≈30 Währungen) und 90-Tage-Historie. Ohne Login/Key.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/ecb",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:21:03.596Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1352,
+        "p95": 1757,
+        "throughput": 44.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "eurofxref XML",
+      "robots": "disallowed",
+      "robotsNote": "www.ecb.europa.eu/robots.txt sperrt nur *_content.<lang>.html; /stats/eurofxref/ erlaubt. Wiederverwendung mit Quellenangabe. Gedrosselt ≥1,1 s.",
+      "incidents": [
+        "Hinweis: data-api.ecb.europa.eu (SDMX) bricht vom Testhost mit TLS-Fehler ab – daher offizieller eurofxref-Feed; Leitzinsen/MIR-Zinsen AT folgen, Status pruefen."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/ecb/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/ecb/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/ecb/samples"
+      },
+      "source": "https://www.ecb.europa.eu/stats/eurofxref",
+      "live": {
+        "realtime": false,
+        "label": "EUR/USD",
+        "unit": "USD",
+        "view": "line",
+        "refreshS": 86400,
+        "series": [
+          {
+            "t": "2026-09-01",
+            "v": 1.159
+          },
+          {
+            "t": "2026-09-02",
+            "v": 1.1578
+          },
+          {
+            "t": "2026-09-03",
+            "v": 1.1615
+          },
+          {
+            "t": "2026-09-04",
+            "v": 1.1622
+          },
+          {
+            "t": "2026-09-07",
+            "v": 1.1622
+          }
+        ],
+        "endpoint": null
+      }
+    },
+    {
       "id": "edikte-versteigerungen",
       "name": "opencli-edikte-versteigerungen",
       "domain": "edikte.justiz.gv.at",
@@ -2392,11 +2540,11 @@
       "category": "opendata",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/edikte-versteigerungen",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/edikte-versteigerungen",
+      "records": 17,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:18:28.621Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -2422,7 +2570,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/edikte-versteigerungen/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/edikte-versteigerungen/samples"
       },
-      "source": "https://edikte.justiz.gv.at/edikte/ex/exedi3.nsf"
+      "source": "https://edikte.justiz.gv.at/edikte/ex/exedi3.nsf",
+      "live": null
     },
     {
       "id": "efriends-at",
@@ -2536,11 +2685,11 @@
       "category": "international",
       "country": "EU",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/eu-sanktionen",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/risk-b/eu-sanktionen",
+      "records": 3,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:26:11.878Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -2566,7 +2715,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/risk-b/eu-sanktionen/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/eu-sanktionen/samples"
       },
-      "source": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw"
+      "source": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+      "live": null
     },
     {
       "id": "evi-amtsblatt",
@@ -2576,11 +2726,11 @@
       "category": "opendata",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/evi-amtsblatt",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/evi-amtsblatt",
+      "records": 13,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:18:21.519Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
@@ -2606,7 +2756,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/evi-amtsblatt/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/evi-amtsblatt/samples"
       },
-      "source": "https://www.evi.gv.at"
+      "source": "https://www.evi.gv.at",
+      "live": null
     },
     {
       "id": "eww-at",
@@ -2681,19 +2832,19 @@
     {
       "id": "ffg",
       "name": "opencli-ffg",
-      "domain": null,
+      "domain": "ffg",
       "description": "FFG – Erreichbarkeitsprüfung (blockiert). Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "AT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/ffg",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/ffg",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 1,
+      "e2eTotal": 1,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -2707,7 +2858,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/ffg/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/ffg/samples"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "fiberplus-at",
@@ -2747,19 +2899,19 @@
     {
       "id": "firmenbuch-ai",
       "name": "opencli-firmenbuch-ai",
-      "domain": "firmenbuch.ai",
+      "domain": "firmenbuch-ai",
       "description": "firmenbuch.ai: öffentliche Firmen-Stammdaten je FN (SSR-Seite und JSON-LD). Ohne Login, höflich gedrosselt.",
-      "category": "adapters",
+      "category": "register-at",
       "country": "AT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/adapters/opencli-firmenbuch-ai",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/register-at/firmenbuch-ai",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 3,
+      "e2eTotal": 3,
       "kpi": null,
       "loginRequired": false,
       "captcha": null,
@@ -2773,7 +2925,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/register-at/firmenbuch-ai/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/register-at/firmenbuch-ai/samples"
       },
-      "source": "https://firmenbuch.ai"
+      "source": "https://firmenbuch.ai",
+      "live": null
     },
     {
       "id": "firmenbuchgrundbuch-at",
@@ -2782,15 +2935,15 @@
       "description": "OpenCLI-Connector für www.firmenbuchgrundbuch.at – firma, dokumente ohne Login, JSON/CSV-Ausgabe.",
       "category": "adapters",
       "country": "AT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/adapters/opencli-firmenbuchgrundbuch-at",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/adapters/opencli-firmenbuchgrundbuch-at",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 2,
+      "e2eTotal": 2,
       "kpi": null,
       "loginRequired": false,
       "captcha": null,
@@ -2804,24 +2957,25 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/adapters/opencli-firmenbuchgrundbuch-at/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/adapters/opencli-firmenbuchgrundbuch-at/samples"
       },
-      "source": "https://www.firmenbuchgrundbuch.at"
+      "source": "https://www.firmenbuchgrundbuch.at",
+      "live": null
     },
     {
       "id": "gleif",
       "name": "opencli-gleif",
-      "domain": null,
+      "domain": "gleif",
       "description": "LEI einer Firma finden oder prüfen (Name, Sitz, Registernummer, LEI-Status, Erneuerungsdatum), weltweit inkl. Österreich.",
       "category": "international",
       "country": "INT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/welle-int/gleif",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/welle-int/gleif",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 2,
+      "e2eTotal": 2,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -2833,9 +2987,10 @@
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/gleif/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/gleif/PRUEFPROTOKOLL.md",
-        "samples": null
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/gleif/PRUEFPROTOKOLL.md"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "goldgas-at",
@@ -2875,19 +3030,19 @@
     {
       "id": "handelsregister-de",
       "name": "opencli-handelsregister-de",
-      "domain": null,
+      "domain": "handelsregister-de",
       "description": "Deutsche Firma im Handelsregister finden: Registergericht, HRA/HRB-Nummer, Sitz, Status (aktuell/gelöscht).",
       "category": "international",
       "country": "DE",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/welle-int/handelsregister-de",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/welle-int/handelsregister-de",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 1,
+      "e2eTotal": 1,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -2899,9 +3054,10 @@
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/handelsregister-de/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/handelsregister-de/PRUEFPROTOKOLL.md",
-        "samples": null
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/handelsregister-de/PRUEFPROTOKOLL.md"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "heizoel24-at",
@@ -3008,6 +3164,76 @@
       "source": "https://kabelplus.at"
     },
     {
+      "id": "kraken",
+      "name": "opencli-kraken",
+      "domain": "api.kraken.com",
+      "description": "Krypto-Kurse in Echtzeit (Ticker, OHLC-Kerzen, Paare) von der öffentlichen Kraken-REST-API. Ohne Login/Key.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/kraken",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:21:02.966Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 902,
+        "p95": 1117,
+        "throughput": 66.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "0",
+      "robots": "allowed",
+      "robotsNote": "api.kraken.com liefert kein robots.txt (API-Fehler-JSON); öffentliche Endpunkte laut offizieller API-Doku frei nutzbar, Limit ~1 req/s. Gedrosselt ≥1,1 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/kraken/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/kraken/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/kraken/samples"
+      },
+      "source": "https://api.kraken.com/0/public",
+      "live": {
+        "realtime": true,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [
+          {
+            "t": "2026-10-12T04:00:00.000Z",
+            "v": 74994.7
+          },
+          {
+            "t": "2026-10-12T05:00:00.000Z",
+            "v": 74920.6
+          },
+          {
+            "t": "2026-10-12T06:00:00.000Z",
+            "v": 75071.5
+          },
+          {
+            "t": "2026-10-12T07:00:00.000Z",
+            "v": 74909.2
+          },
+          {
+            "t": "2026-10-12T08:00:00.000Z",
+            "v": 74535.7
+          }
+        ],
+        "endpoint": "kraken-ohlc"
+      }
+    },
+    {
       "id": "krs-pl",
       "name": "opencli-krs-pl",
       "domain": "api-krs.ms.gov.pl",
@@ -3015,11 +3241,11 @@
       "category": "international",
       "country": "PL",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/krs-pl",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/risk-b/krs-pl",
+      "records": 17,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:26:16.948Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -3045,7 +3271,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/risk-b/krs-pl/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/krs-pl/samples"
       },
-      "source": "https://api-krs.ms.gov.pl/api/krs"
+      "source": "https://api-krs.ms.gov.pl/api/krs",
+      "live": null
     },
     {
       "id": "kufnet-at",
@@ -3224,7 +3451,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/linz/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/laender/linz/samples"
       },
-      "source": "https://www.data.gv.at/api/hub/search (Kataloge: gga-40101)"
+      "source": "https://www.data.gv.at/api/hub/search (Kataloge: gga-40101)",
+      "live": null
     },
     {
       "id": "murauer-stadtwerke-at",
@@ -3333,7 +3561,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/oberoesterreich/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/laender/oberoesterreich/samples"
       },
-      "source": "https://www.data.gv.at/api/hub/search (Kataloge: harvest-ooe)"
+      "source": "https://www.data.gv.at/api/hub/search (Kataloge: harvest-ooe)",
+      "live": null
     },
     {
       "id": "ofac-sls",
@@ -3341,13 +3570,13 @@
       "domain": "sanctionslistservice.ofac.treas.gov",
       "description": "Namen gegen die US-OFAC-SDN-Liste (inkl. Aliase) prüfen, Einträge nach Programm filtern.",
       "category": "international",
-      "country": "INT",
+      "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/ofac-sls",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/risk-b/ofac-sls",
+      "records": 11,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:26:17.931Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -3373,24 +3602,25 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/risk-b/ofac-sls/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/ofac-sls/samples"
       },
-      "source": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports"
+      "source": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports",
+      "live": null
     },
     {
       "id": "open-firmenbuch",
       "name": "opencli-open-firmenbuch",
-      "domain": null,
+      "domain": "open-firmenbuch",
       "description": "Open Firmenbuch (firmenbuchgrundbuch.at): Stammdaten und kaufbare Dokumente je Firmenbuchnummer. Ohne Login, höflich gedrosselt.",
       "category": "register-at",
       "country": "AT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/register-at/open-firmenbuch",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/register-at/open-firmenbuch",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 2,
+      "e2eTotal": 2,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -3404,24 +3634,25 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/register-at/open-firmenbuch/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/register-at/open-firmenbuch/samples"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "opencorporates",
       "name": "opencli-opencorporates",
-      "domain": null,
+      "domain": "opencorporates",
       "description": "Stammdaten einer Firma, wenn Jurisdiktion und Registernummer bekannt sind (z. B. aus GLEIF): Status, Typ, Adresse, Branche, frühere Namen.",
       "category": "international",
-      "country": "INT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/welle-int/opencorporates",
-      "records": null,
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/welle-int/opencorporates",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 1,
+      "e2eTotal": 1,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -3433,9 +3664,196 @@
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/opencorporates/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/opencorporates/PRUEFPROTOKOLL.md",
-        "samples": null
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/opencorporates/PRUEFPROTOKOLL.md"
       },
-      "source": null
+      "source": null,
+      "live": null
+    },
+    {
+      "id": "opendata-linz",
+      "name": "opendata-linz",
+      "domain": "www.data.gv.at",
+      "description": "Offene Daten von Stadt Linz (data.linz.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/laender/linz",
+      "records": 27,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-13T02:23:38.687Z",
+      "e2ePassed": 5,
+      "e2eTotal": 5,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [],
+      "links": {
+        "skill": null,
+        "protocol": null,
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/linz/PRUEFPROTOKOLL.md"
+      },
+      "source": "https://www.data.gv.at/api/hub/search"
+    },
+    {
+      "id": "opendata-oberoesterreich",
+      "name": "opendata-oberoesterreich",
+      "domain": "www.data.gv.at",
+      "description": "Offene Daten von Land Oberösterreich (data.ooe.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/laender/oberoesterreich",
+      "records": 24,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-13T02:23:37.257Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [],
+      "links": {
+        "skill": null,
+        "protocol": null,
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/oberoesterreich/PRUEFPROTOKOLL.md"
+      },
+      "source": "https://www.data.gv.at/api/hub/search"
+    },
+    {
+      "id": "opendata-salzburg",
+      "name": "opendata-salzburg",
+      "domain": "www.data.gv.at",
+      "description": "Offene Daten von Land Salzburg (data.salzburg.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/laender/salzburg",
+      "records": 25,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-13T02:23:39.852Z",
+      "e2ePassed": 5,
+      "e2eTotal": 5,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [],
+      "links": {
+        "skill": null,
+        "protocol": null,
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/salzburg/PRUEFPROTOKOLL.md"
+      },
+      "source": "https://www.data.gv.at/api/hub/search"
+    },
+    {
+      "id": "opendata-steiermark",
+      "name": "opendata-steiermark",
+      "domain": "www.data.gv.at",
+      "description": "Offene Daten von Land Steiermark (data.steiermark.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/laender/steiermark",
+      "records": 26,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-13T02:23:39.898Z",
+      "e2ePassed": 5,
+      "e2eTotal": 5,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [],
+      "links": {
+        "skill": null,
+        "protocol": null,
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/steiermark/PRUEFPROTOKOLL.md"
+      },
+      "source": "https://www.data.gv.at/api/hub/search"
+    },
+    {
+      "id": "opendata-tirol",
+      "name": "opendata-tirol",
+      "domain": "www.data.gv.at",
+      "description": "Offene Daten von Land Tirol (data.tirol.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/laender/tirol",
+      "records": 34,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-13T02:23:42.671Z",
+      "e2ePassed": 5,
+      "e2eTotal": 5,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [],
+      "links": {
+        "skill": null,
+        "protocol": null,
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/tirol/PRUEFPROTOKOLL.md"
+      },
+      "source": "https://www.data.gv.at/api/hub/search"
+    },
+    {
+      "id": "opendata-wien",
+      "name": "opendata-wien",
+      "domain": "www.data.gv.at",
+      "description": "Offene Daten von Stadt Wien (data.wien.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/laender/wien",
+      "records": 54,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-13T02:23:43.453Z",
+      "e2ePassed": 6,
+      "e2eTotal": 6,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [],
+      "links": {
+        "skill": null,
+        "protocol": null,
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/wien/PRUEFPROTOKOLL.md"
+      },
+      "source": "https://www.data.gv.at/api/hub/search"
     },
     {
       "id": "ourpower-coop",
@@ -3510,16 +3928,16 @@
     {
       "id": "prh-fi",
       "name": "opencli-prh-fi",
-      "domain": null,
+      "domain": "prh-fi",
       "description": "PRH / YTJ Open Data FI – öffentliche Firmendaten ohne Login abfragen.",
       "category": "international",
       "country": "FI",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/prh-fi",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/prh-fi",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -3534,9 +3952,10 @@
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/prh-fi/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/prh-fi/PRUEFPROTOKOLL.md",
-        "samples": null
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/prh-fi/PRUEFPROTOKOLL.md"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "propellets-at",
@@ -3576,16 +3995,16 @@
     {
       "id": "recherche-entreprises-fr",
       "name": "opencli-recherche-entreprises-fr",
-      "domain": null,
+      "domain": "recherche-entreprises-fr",
       "description": "Recherche d'entreprises (api.gouv.fr) – öffentliche Firmendaten ohne Login abfragen.",
       "category": "international",
       "country": "FR",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/recherche-entreprises-fr",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/recherche-entreprises-fr",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
       "e2ePassed": 1,
       "e2eTotal": 1,
@@ -3600,9 +4019,10 @@
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/recherche-entreprises-fr/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/recherche-entreprises-fr/PRUEFPROTOKOLL.md",
-        "samples": null
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/recherche-entreprises-fr/PRUEFPROTOKOLL.md"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "ris",
@@ -3612,11 +4032,11 @@
       "category": "opendata",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/ris",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/ris",
+      "records": 16,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:17:43.334Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
@@ -3642,7 +4062,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/ris/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/ris/samples"
       },
-      "source": "https://data.bka.gv.at/ris/api/v2.6"
+      "source": "https://data.bka.gv.at/ris/api/v2.6",
+      "live": null
     },
     {
       "id": "salzburg",
@@ -3684,7 +4105,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/salzburg/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/laender/salzburg/samples"
       },
-      "source": "https://www.data.gv.at/api/hub/search (Kataloge: harvest-sbg, l5)"
+      "source": "https://www.data.gv.at/api/hub/search (Kataloge: harvest-sbg, l5)",
+      "live": null
     },
     {
       "id": "sec-edgar",
@@ -3692,13 +4114,13 @@
       "domain": "data.sec.gov",
       "description": "US-börsennotierte Firmen: Ticker/CIK finden, Filings (10-K, 8-K …) und XBRL-Kennzahlen aus SEC EDGAR.",
       "category": "international",
-      "country": "INT",
+      "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/sec-edgar",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/risk-b/sec-edgar",
+      "records": 16,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:26:21.638Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -3724,7 +4146,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/risk-b/sec-edgar/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/sec-edgar/samples"
       },
-      "source": "https://data.sec.gov"
+      "source": "https://data.sec.gov",
+      "live": null
     },
     {
       "id": "spritpreisrechner-at",
@@ -3941,11 +4364,11 @@
       "category": "opendata",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statistik-austria",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/statistik-austria",
+      "records": 26,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:18:00.136Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -3971,7 +4394,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/statistik-austria/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statistik-austria/samples"
       },
-      "source": "https://data.statistik.gv.at"
+      "source": "https://data.statistik.gv.at",
+      "live": null
     },
     {
       "id": "steiermark",
@@ -4013,7 +4437,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/steiermark/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/laender/steiermark/samples"
       },
-      "source": "https://www.data.gv.at/api/hub/search (Kataloge: harvest-stmk, l6)"
+      "source": "https://www.data.gv.at/api/hub/search (Kataloge: harvest-stmk, l6)",
+      "live": null
     },
     {
       "id": "sturmenergie-at",
@@ -4087,19 +4512,19 @@
     {
       "id": "ted-eu",
       "name": "opencli-ted-eu",
-      "domain": null,
+      "domain": "ted-eu",
       "description": "TED – EU-Ausschreibungen & Zuschläge. Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "EU",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/ted-eu",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/ted-eu",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 2,
+      "e2eTotal": 2,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -4113,7 +4538,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/ted-eu/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/ted-eu/samples"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "tirol",
@@ -4156,24 +4582,25 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/tirol/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/laender/tirol/samples"
       },
-      "source": "https://www.data.gv.at/api/hub/search (Kataloge: l7-elak, l7, harvest-tirol-gis)"
+      "source": "https://www.data.gv.at/api/hub/search (Kataloge: l7-elak, l7, harvest-tirol-gis)",
+      "live": null
     },
     {
       "id": "transparenzportal",
       "name": "opencli-transparenzportal",
-      "domain": null,
+      "domain": "transparenzportal",
       "description": "Transparenzportal – Förderkatalog Österreich. Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "AT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/transparenzportal",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/transparenzportal",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 2,
+      "e2eTotal": 2,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -4187,7 +4614,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/transparenzportal/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/transparenzportal/samples"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "tullnenergie-at",
@@ -4231,11 +4659,11 @@
       "category": "international",
       "country": "INT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/un-sanktionen",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/risk-b/un-sanktionen",
+      "records": 15,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T02:26:22.116Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -4261,21 +4689,22 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/risk-b/un-sanktionen/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/un-sanktionen/samples"
       },
-      "source": "https://scsanctions.un.org/resources/xml/en/consolidated.xml"
+      "source": "https://scsanctions.un.org/resources/xml/en/consolidated.xml",
+      "live": null
     },
     {
       "id": "vies",
       "name": "opencli-vies",
-      "domain": null,
+      "domain": "vies",
       "description": "EU VIES (USt-IdNr-Prüfung) – öffentliche Firmendaten ohne Login abfragen.",
       "category": "international",
       "country": "EU",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/vies",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/vies",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -4290,9 +4719,10 @@
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/vies/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/vies/PRUEFPROTOKOLL.md",
-        "samples": null
+        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/vies/PRUEFPROTOKOLL.md"
       },
-      "source": null
+      "source": null,
+      "live": null
     },
     {
       "id": "voltino-gastino-at",
@@ -4369,24 +4799,25 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/wien/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/laender/wien/samples"
       },
-      "source": "https://www.data.gv.at/api/hub/search (Kataloge: l9, l9-vgw)"
+      "source": "https://www.data.gv.at/api/hub/search (Kataloge: l9, l9-vgw)",
+      "live": null
     },
     {
       "id": "wko-firmen",
       "name": "opencli-wko-firmen",
-      "domain": "firmen.wko.at",
+      "domain": "wko-firmen",
       "description": "WKO Firmen A-Z: Firmensuche nach Name/Branche und Ort. Ohne Login, höflich gedrosselt.",
-      "category": "adapters",
+      "category": "register-at",
       "country": "AT",
-      "status": "failing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/adapters/opencli-wko-firmen",
-      "records": null,
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/register-at/wko-firmen",
+      "records": 0,
       "commands": [],
       "logo": null,
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": null,
-      "e2ePassed": null,
-      "e2eTotal": null,
+      "e2ePassed": 2,
+      "e2eTotal": 2,
       "kpi": null,
       "loginRequired": false,
       "captcha": null,
@@ -4400,7 +4831,8 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/register-at/wko-firmen/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/register-at/wko-firmen/samples"
       },
-      "source": "https://firmen.wko.at"
+      "source": "https://firmen.wko.at",
+      "live": null
     },
     {
       "id": "wvnet-at",

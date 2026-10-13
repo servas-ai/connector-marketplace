@@ -4,6 +4,7 @@ import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Select } from '@/components/ui/select';
 import { ConnectorCard } from '@/components/ConnectorCard';
+import { LiveStrip } from '@/components/LiveCard';
 import { dataset, defaultFilters, filterConnectors, uniq, type Filters } from '@/lib/data';
 
 const all = { value: 'all', label: 'Alle' };
@@ -17,6 +18,7 @@ export function Marketplace() {
   const res = useMemo(() => filterConnectors(list, f), [list, f]);
   return (
     <div className="flex flex-col gap-4">
+      {(f.category === 'all' || f.category === 'finance') && <LiveStrip list={list} />}
       <div className="relative"><Search className="absolute left-3 top-2.5 text-muted-foreground" size={16} />
         <Input aria-label="Suche" placeholder="Connector, Domain, Beschreibung …" className="pl-9" value={f.q} onChange={(e) => set('q', e.target.value)} /></div>
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-7">

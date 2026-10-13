@@ -148,12 +148,30 @@ export function build(src) {
         samples: fs.existsSync(path.join(dir, 'samples')) ? `https://github.com/${REPO}/tree/main/${rel}/samples` : prev.links?.samples ?? null,
       },
       source: p.source || prev.source || null,
+      live: liveInfo(dir, id),
     });
   }
   const logoDir = path.join(src, 'assets/logos');
   for (const c of out.values()) if (!c.logo && c.domain && fs.existsSync(path.join(logoDir, `${c.domain}.png`))) c.logo = `${c.domain}.png`;
   const connectors = [...out.values()].sort((a, b) => (b.kpi?.score ?? -1) - (a.kpi?.score ?? -1) || a.id.localeCompare(b.id));
   return { generatedAt: new Date().toISOString(), sourceRepo: REPO, sourceGeneratedAt: index.generated_at, count: connectors.length, connectors };
+}
+
+// Finance/Realtime: x-servas aus paperclip/manifest.json + Zeitreihe aus samples/
+const ENDPOINTS = { kraken: 'kraken-ohlc', 'coinbase-exchange': 'coinbase-candles' };
+export function liveInfo(dir, id) {
+  const mf = path.join(dir, 'paperclip/manifest.json');
+  if (!fs.existsSync(mf)) return null;
+  let xs; try { xs = JSON.parse(fs.readFileSync(mf, 'utf8'))['x-servas']; } catch { return null; }
+  if (!xs?.openui || xs.category !== 'finance') return null;
+  const series = [];
+  const sd = path.join(dir, 'samples');
+  if (fs.existsSync(sd)) for (const f of fs.readdirSync(sd).sort()) {
+    if (series.length || !/ohlc|kerzen|historie/.test(f)) continue;
+    try { for (const r of JSON.parse(fs.readFileSync(path.join(sd, f), 'utf8')).output?.rows || []) { const v = Number(r.close ?? r.kurs); if (Number.isFinite(v)) series.push({ t: r.zeit || r.datum, v }); } } catch { /* Sample defekt */ }
+  }
+  return { realtime: !!xs.realtime, label: id === 'ecb' ? 'EUR/USD' : 'BTC/EUR', unit: id === 'ecb' ? 'USD' : 'EUR', view: xs.openui.view || 'sparkline',
+    refreshS: Number(xs.openui.refresh_s) || 60, series, endpoint: ENDPOINTS[id] || null };
 }
 
 function resolveSrc() {
