@@ -13,3 +13,16 @@ describe('live', () => {
   });
   it('berechnet Änderung', () => { expect(change([{ t: 'a', v: 100 }, { t: 'b', v: 110 }])).toBeCloseTo(10); expect(change([])).toBeNull(); });
 });
+
+describe('fetchLive cache', () => {
+  it('teilt Antworten innerhalb der TTL und hält ≥1 s pro Host ein', async () => {
+    const { fetchLive, _resetLiveCache, CACHE_TTL_MS } = await import('./live');
+    _resetLiveCache();
+    let t = 0; const calls: number[] = [];
+    const f = (async () => { calls.push(t); return new Response(JSON.stringify([[1, 0, 0, 0, 5, 1]])); }) as unknown as typeof fetch;
+    await Promise.all([fetchLive('coinbase-candles', () => t, f), fetchLive('coinbase-candles', () => t, f)]);
+    expect(calls).toHaveLength(1);
+    t = CACHE_TTL_MS + 1; await fetchLive('coinbase-candles', () => t, f);
+    expect(calls).toHaveLength(2);
+  });
+});

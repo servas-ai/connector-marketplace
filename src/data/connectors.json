@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-13T03:23:15.425Z",
+  "generatedAt": "2026-10-13T03:30:06.570Z",
   "sourceRepo": "servas-ai/opencli-connectors",
-  "sourceGeneratedAt": "2026-10-13 02:24 UTC",
-  "count": 124,
+  "sourceGeneratedAt": "2026-10-13 03:26 UTC",
+  "count": 126,
   "connectors": [
     {
       "id": "spusu-at",
       "name": "spusu-at",
       "domain": "spusu.at",
-      "description": "OpenCLI plugin + standalone CLI for spusu Austria tariffs (spusu.at)",
+      "description": "List and export spusu Austria mobile and internet tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
@@ -46,18 +46,18 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-spusu-at/e2e.log"
       },
-      "source": "https://www.spusu.at/imoscmsapi/tariffs/mobile"
+      "source": "https://www.spusu.at"
     },
     {
       "id": "drei-at",
       "name": "drei-at",
       "domain": "drei.at",
-      "description": "OpenCLI plugin + standalone CLI for Drei Austria tariffs (drei.at)",
+      "description": "List and export Drei Austria handytarife, internet/Boost 5G and business tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-drei-at",
-      "records": 59,
+      "records": 62,
       "commands": [
         "handytarife",
         "internet",
@@ -92,7 +92,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-drei-at/e2e.log"
       },
-      "source": "https://www.drei.at/de/info/netzabdeckung/"
+      "source": "https://nominatim.openstreetmap.org/search"
     },
     {
       "id": "gruenwelt-at",
@@ -186,15 +186,15 @@
       "id": "georg-at",
       "name": "georg-at",
       "domain": "georg.at",
-      "description": "OpenCLI plugin + standalone CLI for Georg Austria tariffs (georg.at)",
+      "description": "List and export Georg (georg.at) mobile tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-georg-at",
       "records": 16,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "georg.at.png",
       "paperclip": true,
@@ -318,7 +318,7 @@
       "id": "geizhals-at",
       "name": "geizhals-at",
       "domain": "geizhals.at",
-      "description": "OpenCLI plugin + standalone CLI for geizhals.at category listings, product details and price history",
+      "description": "List categories, product details and price history from geizhals.at",
       "category": "geraete",
       "country": "AT",
       "status": "passing",
@@ -326,8 +326,8 @@
       "records": 5,
       "commands": [
         "category",
-        "product",
         "price-history",
+        "product",
         "search",
         "scrape-category"
       ],
@@ -358,7 +358,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-geizhals-at/e2e.log"
       },
-      "source": "https://github.com/jackwener/OpenCLI"
+      "source": "https://geizhals.at/api/gh0/price_history"
     },
     {
       "id": "linzag-at",
@@ -408,15 +408,15 @@
       "id": "hot-at",
       "name": "hot-at",
       "domain": "hot.at",
-      "description": "OpenCLI plugin + standalone CLI for HoT Austria tariffs (hot.at)",
+      "description": "List and export HoT (hot.at) mobile tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-hot-at",
       "records": 10,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "hot.at.png",
       "paperclip": true,
@@ -537,15 +537,15 @@
       "id": "wowww-at",
       "name": "wowww-at",
       "domain": "wowww.at",
-      "description": "OpenCLI plugin + standalone CLI for WOWWW! Austria tariffs (wowww.at)",
+      "description": "List and export WOWWW! (wowww.at) tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-wowww-at",
       "records": 9,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "wowww.at.png",
       "paperclip": true,
@@ -574,7 +574,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-wowww-at/e2e.log"
       },
-      "source": "https://wowww.at"
+      "source": "https://wowww.at/produkte-tarife/{p}/"
     },
     {
       "id": "myelectric-at",
@@ -798,7 +798,7 @@
       "id": "tarife-at",
       "name": "tarife-at",
       "domain": "tarife.at",
-      "description": "OpenCLI plugin + standalone CLI for scraping Austrian mobile tariffs from tarife.at",
+      "description": "List and export Austrian handytarife and mobiles Internet from tarife.at",
       "category": "vergleich",
       "country": "AT",
       "status": "passing",
@@ -886,16 +886,16 @@
       "id": "magenta-at",
       "name": "magenta-at",
       "domain": "magenta.at",
-      "description": "OpenCLI plugin + standalone CLI for Magenta Austria tariffs and read-only availability checks",
+      "description": "Magenta Austria: Mobilfunk-, Internet- und Business-Tarife plus lesender Verfügbarkeitscheck",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-magenta-at",
       "records": 62,
       "commands": [
-        "mobilfunk",
-        "internet",
         "business",
+        "internet",
+        "mobilfunk",
         "verfuegbarkeit",
         "scrape-all"
       ],
@@ -926,7 +926,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-magenta-at/e2e.log"
       },
-      "source": "https://github.com/jackwener/OpenCLI"
+      "source": "https://magentawebbff.magenta.at/v1/availability"
     },
     {
       "id": "stadtwerkeschwaz-at",
@@ -1063,18 +1063,18 @@
       "id": "a1-net",
       "name": "a1-net",
       "domain": "a1.net",
-      "description": "OpenCLI plugin + standalone CLI for A1 Österreich tariffs (a1.net)",
+      "description": "List and export A1 Österreich handytarife, Cube/Internet and Business tariffs from a1.net",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-a1-net",
       "records": 24,
       "commands": [
+        "business",
         "handytarife",
         "internet-cube",
-        "business",
-        "scrape-all",
-        "verfuegbarkeit"
+        "verfuegbarkeit",
+        "scrape-all"
       ],
       "logo": "a1.net.png",
       "paperclip": true,
@@ -1103,21 +1103,21 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-a1-net/e2e.log"
       },
-      "source": "https://a1.net"
+      "source": "https://www.a1.net"
     },
     {
       "id": "redbullmobile-at",
       "name": "redbullmobile-at",
       "domain": "redbullmobile.at",
-      "description": "OpenCLI plugin + standalone CLI for Red Bull MOBILE Austria tariffs (redbullmobile.at)",
+      "description": "List and export Red Bull MOBILE (redbullmobile.at) mobile tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-redbullmobile-at",
       "records": 6,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "redbullmobile.at.png",
       "paperclip": true,
@@ -1152,15 +1152,15 @@
       "id": "liwest-at",
       "name": "liwest-at",
       "domain": "liwest.at",
-      "description": "OpenCLI plugin + standalone CLI for LIWEST Austria tariffs (liwest.at)",
+      "description": "List and export LIWEST (liwest.at) tariffs",
       "category": "festnetz",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-liwest-at",
       "records": 7,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "liwest.at.png",
       "paperclip": true,
@@ -1189,7 +1189,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-liwest-at/e2e.log"
       },
-      "source": "https://liwest.at"
+      "source": "https://www.liwest.at/produkte/internet"
     },
     {
       "id": "hall-ag",
@@ -1239,17 +1239,17 @@
       "id": "xoxo-mobile-at",
       "name": "xoxo-mobile-at",
       "domain": "xoxo-mobile.at",
-      "description": "OpenCLI plugin + standalone CLI for XOXO Austria tariffs (xoxo-mobile.at)",
+      "description": "List and export XOXO (xoxo-mobile.at) mobile tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-xoxo-mobile-at",
       "records": 8,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
-      "logo": null,
+      "logo": "xoxo-mobile.at.png",
       "paperclip": true,
       "lastRun": "2026-10-13T01:41:05+00:00",
       "e2ePassed": 1,
@@ -1282,15 +1282,15 @@
       "id": "yesss-at",
       "name": "yesss-at",
       "domain": "yesss.at",
-      "description": "OpenCLI plugin + standalone CLI for yesss! Austria tariffs (yesss.at)",
+      "description": "List and export yesss! (yesss.at) mobile tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-yesss-at",
       "records": 16,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "yesss.at.png",
       "paperclip": true,
@@ -1379,8 +1379,8 @@
         "strom",
         "netzbetreiber"
       ],
-      "logo": null,
-      "paperclip": false,
+      "logo": "e-control.at.png",
+      "paperclip": true,
       "lastRun": "2026-10-13T01:33:20+00:00",
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -1406,7 +1406,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-e-control-at/e2e.log"
       },
-      "source": "https://www.e-control.at/tarifkalkulator"
+      "source": "https://www.e-control.at/o/rc-public-rest"
     },
     {
       "id": "e-steiermark-com",
@@ -1462,13 +1462,13 @@
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-awattar-at",
-      "records": 46,
+      "records": 44,
       "commands": [
         "strom",
         "marktpreise"
       ],
       "logo": "awattar.at.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T01:32:43+00:00",
       "e2ePassed": 2,
       "e2eTotal": 2,
@@ -1500,17 +1500,17 @@
       "id": "lidl-connect-at",
       "name": "lidl-connect-at",
       "domain": "lidl-connect.at",
-      "description": "OpenCLI plugin + standalone CLI for Lidl Connect Austria tariffs (lidl-connect.at)",
+      "description": "List and export Lidl Connect (lidl-connect.at) mobile tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-lidl-connect-at",
       "records": 7,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
-      "logo": null,
+      "logo": "lidl-connect.at.png",
       "paperclip": true,
       "lastRun": "2026-10-13T01:37:05+00:00",
       "e2ePassed": 1,
@@ -1543,15 +1543,15 @@
       "id": "fonira-at",
       "name": "fonira-at",
       "domain": "fonira.at",
-      "description": "OpenCLI plugin + standalone CLI for fonira Austria tariffs (fonira.at)",
+      "description": "List and export fonira (fonira.at) tariffs",
       "category": "festnetz",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-fonira-at",
       "records": 12,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "fonira.at.png",
       "paperclip": true,
@@ -1580,21 +1580,21 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-fonira-at/e2e.log"
       },
-      "source": "https://fonira.at"
+      "source": "https://fonira.at/produkte/internet/privat/"
     },
     {
       "id": "educom-at",
       "name": "educom-at",
       "domain": "educom.at",
-      "description": "OpenCLI plugin + standalone CLI for educom Austria tariffs (educom.at)",
+      "description": "List and export educom (educom.at) mobile tariffs",
       "category": "mobil",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-educom-at",
       "records": 12,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "educom.at.png",
       "paperclip": true,
@@ -1682,7 +1682,7 @@
         "strom"
       ],
       "logo": "energieag.at.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T01:34:39+00:00",
       "e2ePassed": 1,
       "e2eTotal": 1,
@@ -1724,7 +1724,7 @@
         "strom"
       ],
       "logo": "verbund.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T01:40:05+00:00",
       "e2ePassed": 1,
       "e2eTotal": 1,
@@ -1843,18 +1843,21 @@
     {
       "id": "rtr-at",
       "name": "rtr-at",
-      "domain": "rtr.at",
-      "description": "OpenCLI plugin + standalone CLI for RTR Netztest open data (read-only)",
+      "domain": "netztest.at",
+      "description": "RTR-Netztest Open Data: Messungen & Statistik je Anbieter/Technologie rund um eine Adresse, plus Breitbandatlas-Hinweis (read-only)",
       "category": "netz",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-rtr-at",
       "records": 35,
       "commands": [
+        "adresse",
+        "adresse",
+        "adresse",
         "bandgasse"
       ],
-      "logo": "rtr.at.png",
-      "paperclip": false,
+      "logo": "netztest.at.png",
+      "paperclip": true,
       "lastRun": "2026-10-13T01:45:47+00:00",
       "e2ePassed": 1,
       "e2eTotal": 1,
@@ -1880,21 +1883,21 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-rtr-at/e2e.log"
       },
-      "source": "https://github.com/servas-ai/opencli-rtr-at.git"
+      "source": "https://c01.netztest.at/RMBTStatisticServer/opentests/search"
     },
     {
       "id": "salzburg-ag-at",
       "name": "salzburg-ag-at",
       "domain": "salzburg-ag.at",
-      "description": "OpenCLI plugin + standalone CLI for Salzburg AG CableLink Austria tariffs (salzburg-ag.at)",
+      "description": "List and export Salzburg AG CableLink (salzburg-ag.at) tariffs",
       "category": "festnetz",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-salzburg-ag-at",
       "records": 5,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "salzburg-ag.at.png",
       "paperclip": true,
@@ -1923,7 +1926,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-salzburg-ag-at/e2e.log"
       },
-      "source": "https://salzburg.ag.at"
+      "source": "https://www.salzburg-ag.at/internet-tv-telefon/fuer-privat/internet.html"
     },
     {
       "id": "check24-at",
@@ -1939,7 +1942,7 @@
         "links"
       ],
       "logo": "check24.at.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T01:32:45+00:00",
       "e2ePassed": 1,
       "e2eTotal": 1,
@@ -1965,7 +1968,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-check24-at/e2e.log"
       },
-      "source": "https://github.com/servas-ai/opencli-check24-at.git"
+      "source": "https://check24.at"
     },
     {
       "id": "durchblicker-at",
@@ -1981,7 +1984,7 @@
         "links"
       ],
       "logo": "durchblicker.at.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T01:33:09+00:00",
       "e2ePassed": 1,
       "e2eTotal": 1,
@@ -2007,7 +2010,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-durchblicker-at/e2e.log"
       },
-      "source": "https://github.com/servas-ai/opencli-durchblicker-at.git"
+      "source": "https://durchblicker.at"
     },
     {
       "id": "ares-cz",
@@ -2022,14 +2025,14 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:26:09.252Z",
+      "lastRun": "2026-10-13T03:03:34.876Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 1565,
-        "p95": 1686,
-        "throughput": 38.3,
+        "p50": 2177,
+        "p95": 2686,
+        "throughput": 27.6,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2066,7 +2069,7 @@
       ],
       "logo": "at.holzpellets.net.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:12:33+00:00",
+      "lastRun": "2026-10-13T03:04:22.526Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": null,
@@ -2087,97 +2090,312 @@
     {
       "id": "aws-foerderungen",
       "name": "opencli-aws-foerderungen",
-      "domain": "aws-foerderungen",
+      "domain": "www.aws.at",
       "description": "aws – Förderprogramme. Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/aws-foerderungen",
-      "records": 0,
+      "records": 14,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
+      "lastRun": "2026-10-13T03:03:57.950Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
-      "kpi": null,
-      "loginRequired": null,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "disallowed",
-      "robotsNote": "robots.txt: `Allow: /` (nur /typo3/ gesperrt) – Programmseiten erlaubt.",
+      "kpi": {
+        "stability": 100,
+        "p50": 3499,
+        "p95": 3499,
+        "throughput": 17.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "geprüft",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/aws-foerderungen/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/aws-foerderungen/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/aws-foerderungen/samples"
       },
-      "source": null,
+      "source": "https://www.aws.at/sitemap.xml",
       "live": null
     },
     {
       "id": "bbg-ausschreibungen",
       "name": "opencli-bbg-ausschreibungen",
-      "domain": "bbg-ausschreibungen",
+      "domain": "www.bbg.gv.at",
       "description": "BBG – Aktuelle Ausschreibungen. Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/bbg-ausschreibungen",
-      "records": 0,
+      "records": 5,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
-      "e2ePassed": 2,
-      "e2eTotal": 2,
-      "kpi": null,
-      "loginRequired": null,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "disallowed",
-      "robotsNote": "robots.txt sperrt Parameter-URLs (`tx_tenderlist`, `?id=`, Suche). Der Connector lädt nur `/information/aktuelle-ausschreibungen` ohne Parameter und keine .ics-Links → erlaubt.",
+      "lastRun": "2026-10-13T03:03:58.610Z",
+      "e2ePassed": 1,
+      "e2eTotal": 1,
+      "kpi": {
+        "stability": 100,
+        "p50": 2739,
+        "p95": 2739,
+        "throughput": 21.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "geprüft, Delay",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/bbg-ausschreibungen/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/bbg-ausschreibungen/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/bbg-ausschreibungen/samples"
       },
-      "source": null,
+      "source": "https://www.bbg.gv.at/information/aktuelle-ausschreibungen",
       "live": null
+    },
+    {
+      "id": "binance",
+      "name": "opencli-binance",
+      "domain": "data-api.binance.vision",
+      "description": "Krypto-Ticker (24h) und Kerzen vom offiziellen öffentlichen Market-Data-Host data-api.binance.vision. Ohne Login/Key.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/binance",
+      "records": null,
+      "commands": [],
+      "logo": "data-api.binance.vision.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:29:30.791Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1216,
+        "p95": 1263,
+        "throughput": 49.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": true,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v3",
+      "robots": "disallowed",
+      "robotsNote": "api.binance.com/robots.txt: Disallow: / -> nicht genutzt (blocked_robots). data-api.binance.vision ist der offizielle Public-Market-Data-Host (kein robots.txt, 404). Gedrosselt ≥1,1 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/binance/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/binance/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/binance/samples"
+      },
+      "source": "https://data-api.binance.vision/api/v3",
+      "live": {
+        "realtime": true,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [
+          {
+            "t": "2026-10-12T04:00:00.000Z",
+            "v": 75021.56
+          },
+          {
+            "t": "2026-10-12T05:00:00.000Z",
+            "v": 74924.5
+          },
+          {
+            "t": "2026-10-12T06:00:00.000Z",
+            "v": 75077.73
+          },
+          {
+            "t": "2026-10-12T07:00:00.000Z",
+            "v": 74889.97
+          },
+          {
+            "t": "2026-10-12T08:00:00.000Z",
+            "v": 74527.96
+          },
+          {
+            "t": "2026-10-12T09:00:00.000Z",
+            "v": 74653.71
+          },
+          {
+            "t": "2026-10-12T10:00:00.000Z",
+            "v": 74609.91
+          },
+          {
+            "t": "2026-10-12T11:00:00.000Z",
+            "v": 74568.3
+          },
+          {
+            "t": "2026-10-12T12:00:00.000Z",
+            "v": 73970.34
+          },
+          {
+            "t": "2026-10-12T13:00:00.000Z",
+            "v": 74151.05
+          },
+          {
+            "t": "2026-10-12T14:00:00.000Z",
+            "v": 73844.64
+          },
+          {
+            "t": "2026-10-12T15:00:00.000Z",
+            "v": 74063.88
+          },
+          {
+            "t": "2026-10-12T16:00:00.000Z",
+            "v": 73851.39
+          },
+          {
+            "t": "2026-10-12T17:00:00.000Z",
+            "v": 73861.4
+          },
+          {
+            "t": "2026-10-12T18:00:00.000Z",
+            "v": 73811.68
+          },
+          {
+            "t": "2026-10-12T19:00:00.000Z",
+            "v": 74212.7
+          },
+          {
+            "t": "2026-10-12T20:00:00.000Z",
+            "v": 74405.29
+          },
+          {
+            "t": "2026-10-12T21:00:00.000Z",
+            "v": 73899.78
+          },
+          {
+            "t": "2026-10-12T22:00:00.000Z",
+            "v": 73595.55
+          },
+          {
+            "t": "2026-10-12T23:00:00.000Z",
+            "v": 73282.39
+          },
+          {
+            "t": "2026-10-13T00:00:00.000Z",
+            "v": 72893.9
+          },
+          {
+            "t": "2026-10-13T01:00:00.000Z",
+            "v": 73748.08
+          },
+          {
+            "t": "2026-10-13T02:00:00.000Z",
+            "v": 74142.05
+          },
+          {
+            "t": "2026-10-13T03:00:00.000Z",
+            "v": 74110.05
+          }
+        ],
+        "endpoint": "binance-klines"
+      }
+    },
+    {
+      "id": "bitpanda",
+      "name": "opencli-bitpanda",
+      "domain": "api.bitpanda.com",
+      "description": "Preise aller Bitpanda-Assets (Krypto, Edelmetalle) in EUR/USD/CHF … über den öffentlichen Ticker. Ohne Login/Key.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/bitpanda",
+      "records": null,
+      "commands": [],
+      "logo": "api.bitpanda.com.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:29:29.779Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 818,
+        "p95": 1034,
+        "throughput": 73.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.bitpanda.com hat kein robots.txt (401-JSON); /v1/ticker ist öffentlich dokumentiert. www.bitpanda.com: Allow /, Content-Signal ai-input=no (betrifft Website, nicht API) -> prüfen. Gedrosselt ≥1,1 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/bitpanda/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/bitpanda/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/bitpanda/samples"
+      },
+      "source": "https://api.bitpanda.com/v1/ticker",
+      "live": {
+        "realtime": true,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "value",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      }
     },
     {
       "id": "bodacc-fr",
       "name": "bodacc-fr",
-      "domain": "bodacc-fr",
+      "domain": "bodacc-datadila.opendatasoft.com",
       "description": "BODACC (DILA, Opendatasoft) – öffentliche Firmendaten ohne Login abfragen.",
       "category": "international",
       "country": "FR",
-      "status": "passing",
+      "status": "blocked",
       "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/bodacc-fr",
-      "records": 0,
+      "records": 6,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
-      "e2ePassed": 2,
-      "e2eTotal": 2,
+      "lastRun": "2026-10-13T03:22:00.000Z",
+      "e2ePassed": 0,
+      "e2eTotal": 0,
       "kpi": null,
       "loginRequired": false,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "unknown",
-      "robotsNote": null,
-      "incidents": [],
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "Disallow `/api/` für `User-agent: *` → blocked_robots",
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/bodacc-fr/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/bodacc-fr/PRUEFPROTOKOLL.md",
-        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/bodacc-fr/PRUEFPROTOKOLL.md"
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/bodacc-fr/samples"
       },
-      "source": null,
+      "source": "https://bodacc-datadila.opendatasoft.com/api/",
       "live": null
     },
     {
@@ -2189,27 +2407,36 @@
       "country": "NO",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/brreg-no",
-      "records": 0,
+      "records": 4,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
+      "lastRun": "2026-10-13T03:03:29.901Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
-      "kpi": null,
-      "loginRequired": false,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "unknown",
-      "robotsNote": null,
+      "kpi": {
+        "stability": 100,
+        "p50": 1531,
+        "p95": 1590,
+        "throughput": 39.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": true,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "öffentliche APIs, gedrosselt",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/brreg-no/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/brreg-no/PRUEFPROTOKOLL.md",
-        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/brreg-no/PRUEFPROTOKOLL.md"
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/brreg-no/samples"
       },
-      "source": null,
+      "source": "brreg-no",
       "live": null
     },
     {
@@ -2229,7 +2456,7 @@
       ],
       "logo": "burgenlandenergie.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:12:49+00:00",
+      "lastRun": "2026-10-13T03:04:30.102Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -2258,16 +2485,16 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/coinbase-exchange",
       "records": null,
       "commands": [],
-      "logo": null,
+      "logo": "api.exchange.coinbase.com.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:21:04.325Z",
+      "lastRun": "2026-10-13T03:29:32.288Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 845,
-        "p95": 2669,
-        "throughput": 71,
+        "p50": 809,
+        "p95": 2434,
+        "throughput": 74.2,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2312,6 +2539,82 @@
           {
             "t": "2026-10-12T08:00:00.000Z",
             "v": 74532.27
+          },
+          {
+            "t": "2026-10-12T09:00:00.000Z",
+            "v": 74658.25
+          },
+          {
+            "t": "2026-10-12T10:00:00.000Z",
+            "v": 74611.63
+          },
+          {
+            "t": "2026-10-12T11:00:00.000Z",
+            "v": 74573.65
+          },
+          {
+            "t": "2026-10-12T12:00:00.000Z",
+            "v": 73977.43
+          },
+          {
+            "t": "2026-10-12T13:00:00.000Z",
+            "v": 74170.96
+          },
+          {
+            "t": "2026-10-12T14:00:00.000Z",
+            "v": 73832.94
+          },
+          {
+            "t": "2026-10-12T15:00:00.000Z",
+            "v": 74076.25
+          },
+          {
+            "t": "2026-10-12T16:00:00.000Z",
+            "v": 73853.03
+          },
+          {
+            "t": "2026-10-12T17:00:00.000Z",
+            "v": 73868.88
+          },
+          {
+            "t": "2026-10-12T18:00:00.000Z",
+            "v": 73811.97
+          },
+          {
+            "t": "2026-10-12T19:00:00.000Z",
+            "v": 74211.15
+          },
+          {
+            "t": "2026-10-12T20:00:00.000Z",
+            "v": 74422.64
+          },
+          {
+            "t": "2026-10-12T21:00:00.000Z",
+            "v": 73952.28
+          },
+          {
+            "t": "2026-10-12T22:00:00.000Z",
+            "v": 73578.73
+          },
+          {
+            "t": "2026-10-12T23:00:00.000Z",
+            "v": 73268.79
+          },
+          {
+            "t": "2026-10-13T00:00:00.000Z",
+            "v": 72897.12
+          },
+          {
+            "t": "2026-10-13T01:00:00.000Z",
+            "v": 73714.27
+          },
+          {
+            "t": "2026-10-13T02:00:00.000Z",
+            "v": 74108.66
+          },
+          {
+            "t": "2026-10-13T03:00:00.000Z",
+            "v": 74138.54
           }
         ],
         "endpoint": "coinbase-candles"
@@ -2330,20 +2633,20 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:17:49.554Z",
+      "lastRun": "2026-10-13T03:02:57.811Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 893,
-        "p95": 3219,
-        "throughput": 67.2,
+        "p50": 2008,
+        "p95": 5373,
+        "throughput": 29.9,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
         "blocked": false
       },
-      "loginRequired": false,
+      "loginRequired": true,
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "piveau hub-search",
@@ -2374,7 +2677,7 @@
       ],
       "logo": "disk.energy.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:13:00+00:00",
+      "lastRun": "2026-10-13T03:23:56+00:00",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -2408,7 +2711,7 @@
       ],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:09:40+00:00",
+      "lastRun": "2026-10-13T03:04:46.100Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -2442,7 +2745,7 @@
       ],
       "logo": "ebnerstrom.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:13:11+00:00",
+      "lastRun": "2026-10-13T03:04:49.911Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -2471,16 +2774,16 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/ecb",
       "records": null,
       "commands": [],
-      "logo": null,
+      "logo": "www.ecb.europa.eu.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:21:03.596Z",
+      "lastRun": "2026-10-13T03:29:31.042Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 1352,
-        "p95": 1757,
-        "throughput": 44.4,
+        "p50": 1192,
+        "p95": 1563,
+        "throughput": 50.3,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2527,6 +2830,106 @@
           {
             "t": "2026-09-07",
             "v": 1.1622
+          },
+          {
+            "t": "2026-09-08",
+            "v": 1.1614
+          },
+          {
+            "t": "2026-09-09",
+            "v": 1.1652
+          },
+          {
+            "t": "2026-09-10",
+            "v": 1.1616
+          },
+          {
+            "t": "2026-09-11",
+            "v": 1.1592
+          },
+          {
+            "t": "2026-09-14",
+            "v": 1.1551
+          },
+          {
+            "t": "2026-09-15",
+            "v": 1.1539
+          },
+          {
+            "t": "2026-09-16",
+            "v": 1.1537
+          },
+          {
+            "t": "2026-09-17",
+            "v": 1.1481
+          },
+          {
+            "t": "2026-09-18",
+            "v": 1.146
+          },
+          {
+            "t": "2026-09-21",
+            "v": 1.149
+          },
+          {
+            "t": "2026-09-22",
+            "v": 1.1463
+          },
+          {
+            "t": "2026-09-23",
+            "v": 1.1411
+          },
+          {
+            "t": "2026-09-24",
+            "v": 1.1367
+          },
+          {
+            "t": "2026-09-25",
+            "v": 1.1403
+          },
+          {
+            "t": "2026-09-28",
+            "v": 1.1378
+          },
+          {
+            "t": "2026-09-29",
+            "v": 1.1355
+          },
+          {
+            "t": "2026-09-30",
+            "v": 1.1355
+          },
+          {
+            "t": "2026-10-01",
+            "v": 1.1298
+          },
+          {
+            "t": "2026-10-02",
+            "v": 1.1225
+          },
+          {
+            "t": "2026-10-05",
+            "v": 1.1204
+          },
+          {
+            "t": "2026-10-06",
+            "v": 1.1269
+          },
+          {
+            "t": "2026-10-07",
+            "v": 1.1177
+          },
+          {
+            "t": "2026-10-08",
+            "v": 1.1186
+          },
+          {
+            "t": "2026-10-09",
+            "v": 1.1206
+          },
+          {
+            "t": "2026-10-12",
+            "v": 1.1181
           }
         ],
         "endpoint": null
@@ -2545,14 +2948,14 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:18:28.621Z",
+      "lastRun": "2026-10-13T03:02:57.010Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 1808,
-        "p95": 3880,
-        "throughput": 33.2,
+        "p50": 3480,
+        "p95": 4809,
+        "throughput": 17.2,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2589,7 +2992,7 @@
       ],
       "logo": "efriends.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:13:24+00:00",
+      "lastRun": "2026-10-13T03:04:54.652Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -2624,7 +3027,7 @@
       ],
       "logo": "energy.ec.europa.eu.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:13:39+00:00",
+      "lastRun": "2026-10-13T03:05:07.305Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": null,
@@ -2659,7 +3062,7 @@
       ],
       "logo": "energyagency.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:13:56+00:00",
+      "lastRun": "2026-10-13T03:05:10.953Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": null,
@@ -2690,20 +3093,20 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:26:11.878Z",
+      "lastRun": "2026-10-13T03:03:42.008Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 1194,
-        "p95": 1303,
-        "throughput": 50.3,
+        "p50": 1207,
+        "p95": 7622,
+        "throughput": 49.7,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
         "blocked": false
       },
-      "loginRequired": false,
+      "loginRequired": true,
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "csvFullSanctionsList 1.1",
@@ -2731,14 +3134,14 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:18:21.519Z",
+      "lastRun": "2026-10-13T03:03:12.039Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 5283,
-        "p95": 6971,
-        "throughput": 11.4,
+        "p50": 6756,
+        "p95": 8230,
+        "throughput": 8.9,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2776,7 +3179,7 @@
       ],
       "logo": "eww.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:14:09+00:00",
+      "lastRun": "2026-10-13T03:05:15.951Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -2811,7 +3214,7 @@
       ],
       "logo": "fastenergy.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:14:35+00:00",
+      "lastRun": "2026-10-13T03:05:35.050Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": null,
@@ -2832,33 +3235,35 @@
     {
       "id": "ffg",
       "name": "opencli-ffg",
-      "domain": "ffg",
+      "domain": "www.ffg.at",
       "description": "FFG – Erreichbarkeitsprüfung (blockiert). Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "AT",
-      "status": "passing",
+      "status": "blocked",
       "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/ffg",
       "records": 0,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
-      "e2ePassed": 1,
-      "e2eTotal": 1,
+      "lastRun": "2026-10-13T03:03:56.537Z",
+      "e2ePassed": 0,
+      "e2eTotal": 0,
       "kpi": null,
-      "loginRequired": null,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
+      "loginRequired": false,
+      "captcha": true,
+      "apiAvailable": true,
+      "apiVersion": "–",
       "robots": "allowed",
-      "robotsNote": "robots.txt nicht abrufbar (403 + Challenge) → automatisierter Zugriff gilt als nicht freigegeben.",
-      "incidents": [],
+      "robotsNote": "Cloudflare-Challenge",
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/ffg/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/ffg/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/ffg/samples"
       },
-      "source": null,
+      "source": "https://www.ffg.at/ausschreibungen",
       "live": null
     },
     {
@@ -2878,7 +3283,7 @@
       ],
       "logo": "fiberplus.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:14:53+00:00",
+      "lastRun": "2026-10-13T03:05:25.829Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": null,
@@ -2905,27 +3310,36 @@
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/register-at/firmenbuch-ai",
-      "records": 0,
+      "records": 1,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
-      "e2ePassed": 3,
-      "e2eTotal": 3,
-      "kpi": null,
+      "lastRun": "2026-10-13T03:03:55.755Z",
+      "e2ePassed": 1,
+      "e2eTotal": 1,
+      "kpi": {
+        "stability": 100,
+        "p50": 3393,
+        "p95": 3393,
+        "throughput": 17.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
       "loginRequired": false,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "unknown",
-      "robotsNote": null,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "Disallow /api/ /v1/; genutzt nur /<FN>",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/register-at/firmenbuch-ai/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/register-at/firmenbuch-ai/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/register-at/firmenbuch-ai/samples"
       },
-      "source": "https://firmenbuch.ai",
+      "source": "opencli-firmenbuch-ai",
       "live": null
     },
     {
@@ -2937,59 +3351,77 @@
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/adapters/opencli-firmenbuchgrundbuch-at",
-      "records": 0,
+      "records": 10,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
+      "lastRun": "2026-10-13T03:04:05.204Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
-      "kpi": null,
+      "kpi": {
+        "stability": 100,
+        "p50": 1877,
+        "p95": 1912,
+        "throughput": 32,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
       "loginRequired": false,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "disallowed",
-      "robotsNote": "Allow für * außer /account/ (Bots wie PetalBot/BLEXBot komplett gesperrt; unser UA nicht betroffen). Genutzt nur öffentliche, per Sitemap verlinkte Seiten /de/abfrageservices/firmenbuch/fn/<FN>.",
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "Disallow /account/",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/adapters/opencli-firmenbuchgrundbuch-at/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/adapters/opencli-firmenbuchgrundbuch-at/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/adapters/opencli-firmenbuchgrundbuch-at/samples"
       },
-      "source": "https://www.firmenbuchgrundbuch.at",
+      "source": "https://www.firmenbuchgrundbuch.at/de/abfrageservices/firmenbuch/fn/<FN>",
       "live": null
     },
     {
       "id": "gleif",
       "name": "opencli-gleif",
-      "domain": "gleif",
+      "domain": "api.gleif.org",
       "description": "LEI einer Firma finden oder prüfen (Name, Sitz, Registernummer, LEI-Status, Erneuerungsdatum), weltweit inkl. Österreich.",
       "category": "international",
       "country": "INT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/international/welle-int/gleif",
-      "records": 0,
+      "records": 2,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
+      "lastRun": "2026-10-13T03:03:49.678Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
-      "kpi": null,
-      "loginRequired": null,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
+      "kpi": {
+        "stability": 100,
+        "p50": 2372,
+        "p95": 2478,
+        "throughput": 25.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
       "robots": "allowed",
-      "robotsNote": "keine robots.txt-Sperre für /api",
+      "robotsNote": "keine robots.txt-Sperre für /api; 1,5 s Delay",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/gleif/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/gleif/PRUEFPROTOKOLL.md",
-        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/gleif/PRUEFPROTOKOLL.md"
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/welle-int/gleif/samples"
       },
-      "source": null,
+      "source": "https://api.gleif.org/api/v1/lei-records",
       "live": null
     },
     {
@@ -3009,7 +3441,7 @@
       ],
       "logo": "goldgas.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:15:36+00:00",
+      "lastRun": "2026-10-13T03:06:15.376Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -3030,33 +3462,46 @@
     {
       "id": "handelsregister-de",
       "name": "opencli-handelsregister-de",
-      "domain": "handelsregister-de",
+      "domain": "www.handelsregister.de",
       "description": "Deutsche Firma im Handelsregister finden: Registergericht, HRA/HRB-Nummer, Sitz, Status (aktuell/gelöscht).",
       "category": "international",
       "country": "DE",
-      "status": "passing",
+      "status": "failing",
       "repo": "https://github.com/servas-ai/opencli-connectors/international/welle-int/handelsregister-de",
       "records": 0,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
-      "e2ePassed": 1,
+      "lastRun": "2026-10-13T03:06:45.909Z",
+      "e2ePassed": 0,
       "e2eTotal": 1,
-      "kpi": null,
-      "loginRequired": null,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
+      "kpi": {
+        "stability": 0,
+        "p50": 180104,
+        "p95": 180104,
+        "throughput": 0.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
       "robots": "allowed",
-      "robotsNote": "keine robots.txt (404)",
-      "incidents": [],
+      "robotsNote": "keine robots.txt (404); max. 60 Abrufe/Stunde, Delay 60 s",
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md",
+        "Captcha-Erkennung: Abbruch, keine Umgehung. Langsam wegen Rate-Limit.",
+        "Testfall im Prüfprotokoll fehlgeschlagen"
+      ],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/handelsregister-de/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/handelsregister-de/PRUEFPROTOKOLL.md",
-        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/handelsregister-de/PRUEFPROTOKOLL.md"
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/welle-int/handelsregister-de/samples"
       },
-      "source": null,
+      "source": "https://www.handelsregister.de/rp_web/erweitertesuche/welcome.xhtml",
       "live": null
     },
     {
@@ -3075,7 +3520,7 @@
       ],
       "logo": "heizoel24.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:16:01+00:00",
+      "lastRun": "2026-10-13T03:06:14.502Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": null,
@@ -3109,7 +3554,7 @@
       ],
       "logo": "hofer-gruenstrom.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:16:26+00:00",
+      "lastRun": "2026-10-13T03:06:29.234Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -3131,19 +3576,19 @@
       "id": "kabelplus-at",
       "name": "kabelplus-at",
       "domain": "kabelplus.at",
-      "description": "OpenCLI plugin + standalone CLI for kabelplus Austria tariffs (kabelplus.at)",
+      "description": "List and export kabelplus (kabelplus.at) tariffs",
       "category": "festnetz",
       "country": "AT",
       "status": "failing",
       "repo": "https://github.com/servas-ai/opencli-kabelplus-at",
-      "records": 0,
+      "records": 4,
       "commands": [
-        "tarife",
-        "scrape-all"
+        "scrape-all",
+        "tarife"
       ],
       "logo": "kabelplus.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T01:45:50+00:00",
+      "lastRun": "2026-10-13T03:13:06.152Z",
       "e2ePassed": 0,
       "e2eTotal": 1,
       "kpi": null,
@@ -3154,14 +3599,14 @@
       "robots": "unknown",
       "robotsNote": null,
       "incidents": [
-        "playwright nicht installiert – Seite rendert Preise per JS"
+        "Status nicht grün"
       ],
       "links": {
         "skill": null,
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-kabelplus-at/e2e.log"
       },
-      "source": "https://kabelplus.at"
+      "source": "https://www.kabelplus.at/privat/produkte/internet"
     },
     {
       "id": "kraken",
@@ -3174,16 +3619,16 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/kraken",
       "records": null,
       "commands": [],
-      "logo": null,
+      "logo": "api.kraken.com.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:21:02.966Z",
+      "lastRun": "2026-10-13T03:29:31.125Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 902,
-        "p95": 1117,
-        "throughput": 66.5,
+        "p50": 929,
+        "p95": 1266,
+        "throughput": 64.6,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -3228,6 +3673,82 @@
           {
             "t": "2026-10-12T08:00:00.000Z",
             "v": 74535.7
+          },
+          {
+            "t": "2026-10-12T09:00:00.000Z",
+            "v": 74646.9
+          },
+          {
+            "t": "2026-10-12T10:00:00.000Z",
+            "v": 74619
+          },
+          {
+            "t": "2026-10-12T11:00:00.000Z",
+            "v": 74566.2
+          },
+          {
+            "t": "2026-10-12T12:00:00.000Z",
+            "v": 73975.4
+          },
+          {
+            "t": "2026-10-12T13:00:00.000Z",
+            "v": 74168.6
+          },
+          {
+            "t": "2026-10-12T14:00:00.000Z",
+            "v": 73843.3
+          },
+          {
+            "t": "2026-10-12T15:00:00.000Z",
+            "v": 74073.3
+          },
+          {
+            "t": "2026-10-12T16:00:00.000Z",
+            "v": 73860.8
+          },
+          {
+            "t": "2026-10-12T17:00:00.000Z",
+            "v": 73869.7
+          },
+          {
+            "t": "2026-10-12T18:00:00.000Z",
+            "v": 73811.2
+          },
+          {
+            "t": "2026-10-12T19:00:00.000Z",
+            "v": 74198.9
+          },
+          {
+            "t": "2026-10-12T20:00:00.000Z",
+            "v": 74420.8
+          },
+          {
+            "t": "2026-10-12T21:00:00.000Z",
+            "v": 73898.9
+          },
+          {
+            "t": "2026-10-12T22:00:00.000Z",
+            "v": 73598
+          },
+          {
+            "t": "2026-10-12T23:00:00.000Z",
+            "v": 73284.2
+          },
+          {
+            "t": "2026-10-13T00:00:00.000Z",
+            "v": 72904.1
+          },
+          {
+            "t": "2026-10-13T01:00:00.000Z",
+            "v": 73728.5
+          },
+          {
+            "t": "2026-10-13T02:00:00.000Z",
+            "v": 74147.7
+          },
+          {
+            "t": "2026-10-13T03:00:00.000Z",
+            "v": 74135.2
           }
         ],
         "endpoint": "kraken-ohlc"
@@ -3246,14 +3767,14 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:26:16.948Z",
+      "lastRun": "2026-10-13T03:03:44.709Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 1580,
-        "p95": 1805,
-        "throughput": 38,
+        "p50": 3424,
+        "p95": 3591,
+        "throughput": 17.5,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -3279,18 +3800,15 @@
       "name": "kufnet-at",
       "domain": "kufnet.at",
       "description": "OpenCLI connector for Kufgem (kufnet.at)",
-      "category": "festnetz",
+      "category": "sonstige",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-kufnet-at",
       "records": 20,
-      "commands": [
-        "tarife",
-        "scrape-all"
-      ],
+      "commands": [],
       "logo": "kufnet.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:23:33Z",
+      "lastRun": "2026-10-13T03:06:39.314Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -3306,7 +3824,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-kufnet-at/e2e.log"
       },
-      "source": "https://www.kufnet.at/internet/"
+      "source": "https://github.com/servas-ai/opencli-factory"
     },
     {
       "id": "kwg-at",
@@ -3324,7 +3842,7 @@
       ],
       "logo": "kwg.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:16:47+00:00",
+      "lastRun": "2026-10-13T03:06:26.459Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -3359,7 +3877,7 @@
       ],
       "logo": "lampert.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:17:02+00:00",
+      "lastRun": "2026-10-13T03:06:34.972Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": null,
@@ -3393,7 +3911,7 @@
       ],
       "logo": "lidl-energie.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:17:14+00:00",
+      "lastRun": "2026-10-13T03:06:37.706Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -3424,20 +3942,20 @@
       "commands": [],
       "logo": null,
       "paperclip": false,
-      "lastRun": "2026-10-13T02:23:38.687Z",
+      "lastRun": "2026-10-13T03:02:57.863Z",
       "e2ePassed": 5,
       "e2eTotal": 5,
       "kpi": {
         "stability": 100,
-        "p50": 1201,
-        "p95": 3350,
-        "throughput": 50,
+        "p50": 1981,
+        "p95": 4666,
+        "throughput": 30.3,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
         "blocked": false
       },
-      "loginRequired": false,
+      "loginRequired": true,
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "piveau hub-search (data.gv.at)",
@@ -3470,7 +3988,7 @@
       ],
       "logo": "murauer-stadtwerke.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:17:24+00:00",
+      "lastRun": "2026-10-13T03:06:45.366Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -3503,7 +4021,7 @@
       ],
       "logo": "nessus.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:17:37+00:00",
+      "lastRun": "2026-10-13T03:06:53.980Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -3534,14 +4052,14 @@
       "commands": [],
       "logo": null,
       "paperclip": false,
-      "lastRun": "2026-10-13T02:23:37.257Z",
+      "lastRun": "2026-10-13T03:03:05.842Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 1307,
-        "p95": 1908,
-        "throughput": 45.9,
+        "p50": 1960,
+        "p95": 2613,
+        "throughput": 30.6,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -3577,14 +4095,14 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:26:17.931Z",
+      "lastRun": "2026-10-13T03:03:38.998Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 433,
-        "p95": 434,
-        "throughput": 138.6,
+        "p50": 388,
+        "p95": 3610,
+        "throughput": 154.6,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -3614,59 +4132,77 @@
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/register-at/open-firmenbuch",
-      "records": 0,
+      "records": 1,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
-      "e2ePassed": 2,
-      "e2eTotal": 2,
-      "kpi": null,
-      "loginRequired": null,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "unknown",
-      "robotsNote": null,
+      "lastRun": "2026-10-13T03:03:53.751Z",
+      "e2ePassed": 1,
+      "e2eTotal": 1,
+      "kpi": {
+        "stability": 100,
+        "p50": 3604,
+        "p95": 3604,
+        "throughput": 16.6,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": true,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "geprüft",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/register-at/open-firmenbuch/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/register-at/open-firmenbuch/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/register-at/open-firmenbuch/samples"
       },
-      "source": null,
+      "source": "opencli-open-firmenbuch",
       "live": null
     },
     {
       "id": "opencorporates",
       "name": "opencli-opencorporates",
-      "domain": "opencorporates",
+      "domain": "opencorporates.com",
       "description": "Stammdaten einer Firma, wenn Jurisdiktion und Registernummer bekannt sind (z. B. aus GLEIF): Status, Typ, Adresse, Branche, frühere Namen.",
       "category": "international",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/international/welle-int/opencorporates",
-      "records": 0,
+      "records": 1,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
+      "lastRun": "2026-10-13T03:03:50.023Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
-      "kpi": null,
-      "loginRequired": null,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
+      "kpi": {
+        "stability": 100,
+        "p50": 2832,
+        "p95": 2832,
+        "throughput": 21.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": true,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
       "robots": "disallowed",
-      "robotsNote": "/companies/* erlaubt; /search, /officers, /filings sind per robots.txt gesperrt und werden nicht genutzt",
+      "robotsNote": "/companies/* erlaubt; /search gesperrt",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/opencorporates/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/opencorporates/PRUEFPROTOKOLL.md",
-        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/welle-int/opencorporates/PRUEFPROTOKOLL.md"
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/welle-int/opencorporates/samples"
       },
-      "source": null,
+      "source": "https://opencorporates.com/companies",
       "live": null
     },
     {
@@ -3682,7 +4218,7 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:23:38.687Z",
+      "lastRun": "2026-10-13T03:02:57.863Z",
       "e2ePassed": 5,
       "e2eTotal": 5,
       "kpi": null,
@@ -3713,7 +4249,7 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:23:37.257Z",
+      "lastRun": "2026-10-13T03:03:05.842Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": null,
@@ -3744,7 +4280,7 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:23:39.852Z",
+      "lastRun": "2026-10-13T03:03:10.018Z",
       "e2ePassed": 5,
       "e2eTotal": 5,
       "kpi": null,
@@ -3775,7 +4311,7 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:23:39.898Z",
+      "lastRun": "2026-10-13T03:03:11.641Z",
       "e2ePassed": 5,
       "e2eTotal": 5,
       "kpi": null,
@@ -3806,7 +4342,7 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:23:42.671Z",
+      "lastRun": "2026-10-13T03:03:23.863Z",
       "e2ePassed": 5,
       "e2eTotal": 5,
       "kpi": null,
@@ -3837,7 +4373,7 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:23:43.453Z",
+      "lastRun": "2026-10-13T03:03:26.666Z",
       "e2ePassed": 6,
       "e2eTotal": 6,
       "kpi": null,
@@ -3871,7 +4407,7 @@
       ],
       "logo": "ourpower.coop.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:17:48+00:00",
+      "lastRun": "2026-10-13T03:06:56.288Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -3907,7 +4443,7 @@
       ],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:09:14+00:00",
+      "lastRun": "2026-10-13T03:07:12.751Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": null,
@@ -3934,27 +4470,36 @@
       "country": "FI",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/prh-fi",
-      "records": 0,
+      "records": 4,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
+      "lastRun": "2026-10-13T03:03:33.052Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
-      "kpi": null,
+      "kpi": {
+        "stability": 100,
+        "p50": 2010,
+        "p95": 3827,
+        "throughput": 29.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
       "loginRequired": false,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "unknown",
-      "robotsNote": null,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "öffentliche APIs, gedrosselt",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/prh-fi/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/prh-fi/PRUEFPROTOKOLL.md",
-        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/prh-fi/PRUEFPROTOKOLL.md"
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/prh-fi/samples"
       },
-      "source": null,
+      "source": "prh-fi",
       "live": null
     },
     {
@@ -3974,7 +4519,7 @@
       ],
       "logo": "propellets.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:18:06+00:00",
+      "lastRun": "2026-10-13T03:07:04.664Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": null,
@@ -4001,27 +4546,36 @@
       "country": "FR",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/recherche-entreprises-fr",
-      "records": 0,
+      "records": 3,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
+      "lastRun": "2026-10-13T03:03:29.220Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
-      "kpi": null,
+      "kpi": {
+        "stability": 100,
+        "p50": 1797,
+        "p95": 1797,
+        "throughput": 33.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
       "loginRequired": false,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "unknown",
-      "robotsNote": null,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "öffentliche APIs, gedrosselt",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/recherche-entreprises-fr/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/recherche-entreprises-fr/PRUEFPROTOKOLL.md",
-        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/recherche-entreprises-fr/PRUEFPROTOKOLL.md"
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/recherche-entreprises-fr/samples"
       },
-      "source": null,
+      "source": "recherche-entreprises-fr",
       "live": null
     },
     {
@@ -4031,20 +4585,20 @@
       "description": "Gesetze (Bundes-/Landesrecht) und Entscheidungen (OGH, VfGH, VwGH, BVwG …) suchen. Ohne Login. Nutze diesen Skill, wenn ein Agent Daten aus RIS braucht.",
       "category": "opendata",
       "country": "AT",
-      "status": "passing",
+      "status": "blocked",
       "repo": "https://github.com/servas-ai/opencli-connectors/opendata/ris",
-      "records": 16,
+      "records": 0,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:17:43.334Z",
-      "e2ePassed": 4,
+      "lastRun": "2026-10-13T03:03:54.337Z",
+      "e2ePassed": 0,
       "e2eTotal": 4,
       "kpi": {
-        "stability": 100,
-        "p50": 987,
-        "p95": 1322,
-        "throughput": 60.8,
+        "stability": 0,
+        "p50": 10640,
+        "p95": 10659,
+        "throughput": 5.6,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -4056,7 +4610,13 @@
       "apiVersion": "v2.6",
       "robots": "disallowed",
       "robotsNote": "robots.txt von data.bka.gv.at sperrt Crawler (Disallow: /). Die RIS-OGD-API ist aber ausdrücklich zur maschinellen Nutzung veröffentlicht (CC BY 4.0, data.gv.at). Der Connector macht nur gezielte, gedrosselte Anfragen (1,5 s), keinen Crawl.",
-      "incidents": [],
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md",
+        "Testfall im Prüfprotokoll fehlgeschlagen",
+        "Testfall im Prüfprotokoll fehlgeschlagen",
+        "Testfall im Prüfprotokoll fehlgeschlagen",
+        "Testfall im Prüfprotokoll fehlgeschlagen"
+      ],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/ris/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/ris/PRUEFPROTOKOLL.md",
@@ -4078,20 +4638,20 @@
       "commands": [],
       "logo": null,
       "paperclip": false,
-      "lastRun": "2026-10-13T02:23:39.852Z",
+      "lastRun": "2026-10-13T03:03:10.018Z",
       "e2ePassed": 5,
       "e2eTotal": 5,
       "kpi": {
         "stability": 100,
-        "p50": 1582,
-        "p95": 2682,
-        "throughput": 37.9,
+        "p50": 1852,
+        "p95": 4064,
+        "throughput": 32.4,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
         "blocked": false
       },
-      "loginRequired": false,
+      "loginRequired": true,
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "piveau hub-search (data.gv.at)",
@@ -4121,14 +4681,14 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:26:21.638Z",
+      "lastRun": "2026-10-13T03:03:45.697Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 1421,
-        "p95": 1510,
-        "throughput": 42.2,
+        "p50": 2583,
+        "p95": 2658,
+        "throughput": 23.2,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -4158,7 +4718,7 @@
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-spritpreisrechner-at",
-      "records": 239,
+      "records": 235,
       "commands": [
         "bundeslaender",
         "bezirk",
@@ -4167,7 +4727,7 @@
       ],
       "logo": "api.e-control.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:18:39+00:00",
+      "lastRun": "2026-10-13T03:07:36.201Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": null,
@@ -4202,7 +4762,7 @@
       ],
       "logo": "stadtwerke-bregenz.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:18:54+00:00",
+      "lastRun": "2026-10-13T03:07:23.095Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4236,7 +4796,7 @@
       ],
       "logo": "stadtwerke-gleisdorf.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:19:05+00:00",
+      "lastRun": "2026-10-13T03:07:19.529Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4270,7 +4830,7 @@
       ],
       "logo": "stadtwerke-hartberg.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:19:17+00:00",
+      "lastRun": "2026-10-13T03:07:25.025Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4304,7 +4864,7 @@
       ],
       "logo": "stadtwerke-kapfenberg.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:19:28+00:00",
+      "lastRun": "2026-10-13T03:07:25.834Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4338,7 +4898,7 @@
       ],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:19:40+00:00",
+      "lastRun": "2026-10-13T03:07:29.679Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4369,14 +4929,14 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:18:00.136Z",
+      "lastRun": "2026-10-13T03:03:27.082Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 1936,
-        "p95": 7492,
-        "throughput": 31,
+        "p50": 3214,
+        "p95": 9096,
+        "throughput": 18.7,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -4410,14 +4970,14 @@
       "commands": [],
       "logo": null,
       "paperclip": false,
-      "lastRun": "2026-10-13T02:23:39.898Z",
+      "lastRun": "2026-10-13T03:03:11.641Z",
       "e2ePassed": 5,
       "e2eTotal": 5,
       "kpi": {
         "stability": 100,
-        "p50": 1680,
-        "p95": 2366,
-        "throughput": 35.7,
+        "p50": 1949,
+        "p95": 5401,
+        "throughput": 30.8,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -4457,7 +5017,7 @@
       ],
       "logo": "sturmenergie.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:20:08+00:00",
+      "lastRun": "2026-10-13T03:07:46.329Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4491,7 +5051,7 @@
       ],
       "logo": "stww.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:20:21+00:00",
+      "lastRun": "2026-10-13T03:07:39.376Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4512,33 +5072,42 @@
     {
       "id": "ted-eu",
       "name": "opencli-ted-eu",
-      "domain": "ted-eu",
+      "domain": "api.ted.europa.eu",
       "description": "TED – EU-Ausschreibungen & Zuschläge. Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "EU",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/ted-eu",
-      "records": 0,
+      "records": 10,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
+      "lastRun": "2026-10-13T03:04:01.614Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
-      "kpi": null,
-      "loginRequired": null,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
+      "kpi": {
+        "stability": 100,
+        "p50": 2324,
+        "p95": 2644,
+        "throughput": 25.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
       "robots": "allowed",
-      "robotsNote": "api.ted.europa.eu: keine robots.txt (404). Daten: EU-Amtsblatt, Weiterverwendung erlaubt (Beschluss 2011/833/EU, Quellenangabe).",
+      "robotsNote": "Offizielle API, gedrosselt",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/ted-eu/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/ted-eu/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/ted-eu/samples"
       },
-      "source": null,
+      "source": "https://api.ted.europa.eu/v3/notices/search",
       "live": null
     },
     {
@@ -4554,20 +5123,20 @@
       "commands": [],
       "logo": null,
       "paperclip": false,
-      "lastRun": "2026-10-13T02:23:42.671Z",
+      "lastRun": "2026-10-13T03:03:23.863Z",
       "e2ePassed": 5,
       "e2eTotal": 5,
       "kpi": {
         "stability": 100,
-        "p50": 1867,
-        "p95": 3738,
-        "throughput": 32.1,
+        "p50": 3926,
+        "p95": 4790,
+        "throughput": 15.3,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
         "blocked": false
       },
-      "loginRequired": false,
+      "loginRequired": true,
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "piveau hub-search (data.gv.at)",
@@ -4588,33 +5157,42 @@
     {
       "id": "transparenzportal",
       "name": "opencli-transparenzportal",
-      "domain": "transparenzportal",
+      "domain": "transparenzportal.gv.at",
       "description": "Transparenzportal – Förderkatalog Österreich. Ohne Login, nur lesend.",
       "category": "vergabe",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/welle-vergabe-foerder/transparenzportal",
-      "records": 0,
+      "records": 5,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
-      "e2ePassed": 2,
-      "e2eTotal": 2,
-      "kpi": null,
-      "loginRequired": null,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
+      "lastRun": "2026-10-13T03:04:01.295Z",
+      "e2ePassed": 1,
+      "e2eTotal": 1,
+      "kpi": {
+        "stability": 100,
+        "p50": 3217,
+        "p95": 3217,
+        "throughput": 18.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
       "robots": "allowed",
-      "robotsNote": "robots.txt existiert nicht (404) → keine Einschränkung. Öffentliche Förderinformation des BMF.",
+      "robotsNote": "geprüft",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/transparenzportal/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/welle-vergabe-foerder/transparenzportal/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/welle-vergabe-foerder/transparenzportal/samples"
       },
-      "source": null,
+      "source": "https://transparenzportal.gv.at/tdb/tp/sitemap",
       "live": null
     },
     {
@@ -4633,7 +5211,7 @@
       ],
       "logo": "tullnenergie.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:20:36+00:00",
+      "lastRun": "2026-10-13T03:07:48.253Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4664,14 +5242,14 @@
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": "2026-10-13T02:26:22.116Z",
+      "lastRun": "2026-10-13T03:03:47.077Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 176,
-        "p95": 187,
-        "throughput": 340.9,
+        "p50": 158,
+        "p95": 4794,
+        "throughput": 379.7,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -4701,27 +5279,36 @@
       "country": "EU",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/international/eu-a/vies",
-      "records": 0,
+      "records": 2,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
+      "lastRun": "2026-10-13T03:03:34.186Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
-      "kpi": null,
+      "kpi": {
+        "stability": 100,
+        "p50": 1453,
+        "p95": 3396,
+        "throughput": 41.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
       "loginRequired": false,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "unknown",
-      "robotsNote": null,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "öffentliche APIs, gedrosselt",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/vies/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/vies/PRUEFPROTOKOLL.md",
-        "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/vies/PRUEFPROTOKOLL.md"
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/vies/samples"
       },
-      "source": null,
+      "source": "vies",
       "live": null
     },
     {
@@ -4740,7 +5327,7 @@
       ],
       "logo": "voltino-gastino.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:20:46+00:00",
+      "lastRun": "2026-10-13T03:07:53.979Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4771,20 +5358,20 @@
       "commands": [],
       "logo": null,
       "paperclip": false,
-      "lastRun": "2026-10-13T02:23:43.453Z",
+      "lastRun": "2026-10-13T03:03:26.666Z",
       "e2ePassed": 6,
       "e2eTotal": 6,
       "kpi": {
         "stability": 100,
-        "p50": 2120,
-        "p95": 2630,
-        "throughput": 28.3,
+        "p50": 2674,
+        "p95": 3806,
+        "throughput": 22.4,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
         "blocked": false
       },
-      "loginRequired": false,
+      "loginRequired": true,
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "piveau hub-search (data.gv.at)",
@@ -4811,27 +5398,36 @@
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/register-at/wko-firmen",
-      "records": 0,
+      "records": 10,
       "commands": [],
       "logo": null,
       "paperclip": true,
-      "lastRun": null,
-      "e2ePassed": 2,
-      "e2eTotal": 2,
-      "kpi": null,
+      "lastRun": "2026-10-13T03:12:55.295Z",
+      "e2ePassed": 1,
+      "e2eTotal": 1,
+      "kpi": {
+        "stability": 100,
+        "p50": 2487,
+        "p95": 2487,
+        "throughput": 24.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
       "loginRequired": false,
-      "captcha": null,
-      "apiAvailable": null,
-      "apiVersion": null,
-      "robots": "unknown",
-      "robotsNote": null,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "–",
+      "robots": "allowed",
+      "robotsNote": "Allow /suche_*; Disallow SearchComplex.aspx",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/register-at/wko-firmen/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/register-at/wko-firmen/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/register-at/wko-firmen/samples"
       },
-      "source": "https://firmen.wko.at",
+      "source": "opencli-wko-firmen",
       "live": null
     },
     {
@@ -4839,18 +5435,15 @@
       "name": "wvnet-at",
       "domain": "wvnet.at",
       "description": "OpenCLI connector for WVNET (wvnet.at)",
-      "category": "festnetz",
+      "category": "sonstige",
       "country": "AT",
       "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-wvnet-at",
       "records": 58,
-      "commands": [
-        "tarife",
-        "scrape-all"
-      ],
+      "commands": [],
       "logo": "wvnet.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T02:23:54Z",
+      "lastRun": "2026-10-13T03:08:16.874Z",
       "e2ePassed": 1,
       "e2eTotal": 1,
       "kpi": null,
@@ -4866,7 +5459,7 @@
         "protocol": null,
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-wvnet-at/e2e.log"
       },
-      "source": "https://www.wvnet.at/-/internet"
+      "source": "https://github.com/servas-ai/opencli-factory"
     }
   ]
 }

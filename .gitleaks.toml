@@ -1,0 +1,10 @@
+# Erweitert die Standardregeln. False Positive: öffentliche EU-Sanktionsliste (FSF) –
+# die Download-URL enthält den öffentlich dokumentierten, für alle gleichen Parameter
+# token=dG9rZW4tMjAxNw (Base64 von "token-2017"); kein Geheimnis.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Öffentliche EU-FSF-Sanktionslisten-URL; Build-Artefakte"
+regexes = ['''^dG9rZW4tMjAxNw$''']
+paths = ['''^dist/''', '''(^|/)node_modules/''']

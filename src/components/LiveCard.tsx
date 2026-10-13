@@ -4,7 +4,7 @@ import { Activity, TrendingDown, TrendingUp } from 'lucide-react';
 import { Area, AreaChart, ResponsiveContainer, YAxis } from 'recharts';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { change, fetchLive } from '@/lib/live';
+import { change, fetchLive, subscribeTick } from '@/lib/live';
 import type { Connector, LivePoint } from '@/lib/types';
 
 const fmt = (v: number, unit: string) => new Intl.NumberFormat('de-AT', { style: 'currency', currency: unit, maximumFractionDigits: v < 10 ? 4 : 0 }).format(v);
@@ -15,12 +15,12 @@ export function LiveCard({ c, live = true }: { c: Connector; live?: boolean }) {
   const [src, setSrc] = useState<'live' | 'sample'>('sample');
   useEffect(() => {
     if (!live || !info.endpoint) return;
-    const ac = new AbortController();
-    const load = () => fetchLive(info.endpoint!, ac.signal).then((s) => { if (s.length) { setSeries(s); setSrc('live'); } }).catch(() => {});
+    let alive = true;
+    const load = () => fetchLive(info.endpoint!).then((s) => { if (alive && s.length) { setSeries(s); setSrc('live'); } }).catch(() => {});
     load();
-    const t = setInterval(load, Math.max(30, info.refreshS) * 1000);
-    return () => { ac.abort(); clearInterval(t); };
-  }, [live, info.endpoint, info.refreshS]);
+    const off = subscribeTick(load);
+    return () => { alive = false; off(); };
+  }, [live, info.endpoint]);
   const last = series.at(-1)?.v ?? null;
   const ch = change(series);
   const up = (ch ?? 0) >= 0;
