@@ -1,6 +1,6 @@
 # servas-ai Connector Marketplace
 
-> Katalog von 1588 read-only Datenconnectoren (MCP, CLI, HTTP) für öffentliche Quellen, 170 mit grüner Ampel. Ausgabe einheitlich im Schema servas.record.v1. Stand 2026-10-13 21:35 UTC.
+> Katalog von 1613 read-only Datenconnectoren (MCP, CLI, HTTP) für öffentliche Quellen, 170 mit grüner Ampel. Ausgabe einheitlich im Schema servas.record.v1. Stand 2026-10-13 21:35 UTC.
 
 - Quelle: https://github.com/servas-ai/opencli-connectors
 - Katalog: https://servas-ai.github.io/connector-marketplace/
@@ -39,6 +39,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/anaconda-org (opendata/anaconda-org)
 - [andmed-ee](https://servas-ai.github.io/connector-marketplace/#/c/andmed-ee): Estlands Open-Data-Portal (andmed.eesti.ee, früher avaandmed.eesti.ee): Datensätze listen/suchen und Details (Organisation, Lizenz, Status). Ohne Login/Key. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/andmed-ee (opendata/andmed-ee)
+- [aneel-geo-hub](https://servas-ai.github.io/connector-marketplace/#/c/aneel-geo-hub): dadosabertos-aneel.opendata.arcgis.com – Agência Nacional de Energia Elétrica (ANEEL): Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt g (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/aneel-geo-hub
 - [angouleme-hub](https://servas-ai.github.io/connector-marketplace/#/c/angouleme-hub): grandangouleme-data16.lacharente.fr – GrandAngoulême: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Daten (Ampel red, FR)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/angouleme-hub (opendata/angouleme-hub)
 - [anne-arundel-hub](https://servas-ai.github.io/connector-marketplace/#/c/anne-arundel-hub): Anne Arundel County Open Data (USA): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Ser (Ampel red, AT)
@@ -271,6 +273,8 @@
   Befehle: – · robots: unknown · Login: ? · Repo: https://github.com/servas-ai/opencli-business-drei-at
 - [bvg-transport](https://servas-ai.github.io/connector-marketplace/#/c/bvg-transport): BVG HAFAS-Wrapper (transport.rest): Haltestellen-Suche und Stationsdetails für Berlin, keyless JSON. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/mobility/bvg-transport (mobility/bvg-transport)
+- [ca-state-geoportal-hub](https://servas-ai.github.io/connector-marketplace/#/c/ca-state-geoportal-hub): gis.data.ca.gov – State of California: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/ca-state-geoportal-hub
 - [calgary-data](https://servas-ai.github.io/connector-marketplace/#/c/calgary-data): City of Calgary Open Data (Calgary, Alberta, Kanada): Datensatz-Katalog der Socrata-Instanz data.calgary.ca – Dataset-Suche und Dataset-Metadaten über die Disco (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/calgary-data (opendata/calgary-data)
 - [cambridge-data](https://servas-ai.github.io/connector-marketplace/#/c/cambridge-data): City of Cambridge MA Open Data (Cambridge, Massachusetts, USA): Datensatz-Katalog der Socrata-Instanz data.cambridgema.gov – Dataset-Suche und Dataset-Metadaten (Ampel red, AT)
@@ -297,6 +301,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/cctegis-odp-hub (opendata/cctegis-odp-hub)
 - [cdc-data](https://servas-ai.github.io/connector-marketplace/#/c/cdc-data): CDC Open Data (data.cdc.gov, Centers for Disease Control and Prevention, USA): Datensatz-Katalog der Socrata-Instanz – Dataset-Suche und Dataset-Metadaten über  (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/cdc-data (opendata/cdc-data)
+- [cdfw-hub](https://servas-ai.github.io/connector-marketplace/#/c/cdfw-hub): data-cdfw.opendata.arcgis.com – California Department of Fish and Wildlife: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Da (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/cdfw-hub
 - [cellxgene](https://servas-ai.github.io/connector-marketplace/#/c/cellxgene): CZ CELLxGENE Discover API: Liste von Single-Cell-Collections, keyless JSON. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/cellxgene (opendata/cellxgene)
 - [census-geocoder](https://servas-ai.github.io/connector-marketplace/#/c/census-geocoder): U.S. Census Bureau Geocoder: US-Adresse → Koordinaten und TIGER/Line-Zuordnung (Public Address Ranges), plus Liste der Benchmarks, keyless JSON, Public Domain. (Ampel yellow, AT)
@@ -351,6 +357,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/cleveland-hub (opendata/cleveland-hub)
 - [clevelandart](https://servas-ai.github.io/connector-marketplace/#/c/clevelandart): Cleveland Museum of Art Open Access API: Kunstwerke suchen (Titel, Künstler, Datierung, Technik, CC0-Status, Bilder), Werk per ID und Künstler/Creators. Ohne Lo (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/clevelandart (international/clevelandart)
+- [climate-resilience-hub](https://servas-ai.github.io/connector-marketplace/#/c/climate-resilience-hub): resilience.climate.gov – U.S. Federal Government (NOAA/climate.gov): Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätz (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/climate-resilience-hub
 - [clojars](https://servas-ai.github.io/connector-marketplace/#/c/clojars): Clojars: JSON-Suche nach Clojure-/ClojureScript-Bibliotheken (Gruppe, Artifact, Version, Beschreibung), keyless. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tech/clojars (tech/clojars)
 - [cloudflare-status](https://servas-ai.github.io/connector-marketplace/#/c/cloudflare-status): Cloudflare Status (Atlassian-Statuspage-API): Gesamtstatus, Komponenten/Rechenzentren und aktuelle Vorfälle des Cloudflare-Netzes, keyless, mit llms.txt. (Ampel yellow, AT)
@@ -423,6 +431,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/cso-ie (international/cso-ie)
 - [ct-certspotter](https://servas-ai.github.io/connector-marketplace/#/c/ct-certspotter): SSLMate Cert Spotter API (CT-Logs). Ohne Login, nur GET, 1 Req/1,5 s. (Ampel yellow, AT)
   Befehle: – · robots: unknown · Login: ? · Repo: https://github.com/servas-ai/opencli-connectors/webintel/ct-certspotter (webintel/ct-certspotter)
+- [ct-geodata-hub](https://servas-ai.github.io/connector-marketplace/#/c/ct-geodata-hub): geodata.ct.gov – State of Connecticut: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/ct-geodata-hub
 - [ctis-clinical-trials](https://servas-ai.github.io/connector-marketplace/#/c/ctis-clinical-trials): Klinische Studien im EU-Register CTIS (euclinicaltrials.eu) nach Wirkstoff, Erkrankung oder Sponsor suchen, optional nur Studien mit Zentren in Österreich. Ohne (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/ctis-clinical-trials (international/ctis-clinical-trials)
 - [cumberland-ns-hub](https://servas-ai.github.io/connector-marketplace/#/c/cumberland-ns-hub): data-cumberlandns.opendata.arcgis.com – Municipality of the County of Cumberland: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geände (Ampel red, AT)
@@ -487,6 +497,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/data-pa-gov (opendata/data-pa-gov)
 - [data-public-lu](https://servas-ai.github.io/connector-marketplace/#/c/data-public-lu): data.public.lu udata API: Dataset-Suche und Dataset-Details (Titel, Organisation, Ressourcen). Ohne Login/Key. (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/data-public-lu (opendata/data-public-lu)
+- [data-rio-hub](https://servas-ai.github.io/connector-marketplace/#/c/data-rio-hub): www.data.rio – Prefeitura da Cidade do Rio de Janeiro (IPP): Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einze (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/data-rio-hub
 - [data-sa-gov-au](https://servas-ai.github.io/connector-marketplace/#/c/data-sa-gov-au): South Australia Open Data (Data.SA) – CKAN API 3: Dataset-Suche und Dataset-Details (Titel, Herausgeber, Ressourcen). Ohne Login/Key. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/data-sa-gov-au (opendata/data-sa-gov-au)
 - [data-sccgov-org](https://servas-ai.github.io/connector-marketplace/#/c/data-sccgov-org): Santa Clara County Open Data – Socrata Discovery API v1: Dataset-Suche und Dataset-Details (Titel, Herausgeber, Ressourcen). Ohne Login/Key. (Ampel yellow, AT)
@@ -545,6 +557,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/dc-opendata (opendata/dc-opendata)
 - [dcat-conformance](https://servas-ai.github.io/connector-marketplace/#/c/dcat-conformance):  (Ampel red, AT)
   Befehle: – · robots: unknown · Login: ? · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/tools/dcat-conformance
+- [dcceew-fed-hub](https://servas-ai.github.io/connector-marketplace/#/c/dcceew-fed-hub): fed.dcceew.gov.au – Australian Government – DCCEEW: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensa (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/dcceew-fed-hub
 - [deckofcards](https://servas-ai.github.io/connector-marketplace/#/c/deckofcards): Deck of Cards API: Kartendecks mischen und Karten ziehen (Wert, Farbe, Bild-URL) – Test-/Lehr-API, keyless. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tech/deckofcards (tech/deckofcards)
 - [defillama](https://servas-ai.github.io/connector-marketplace/#/c/defillama): DefiLlama API: Total Value Locked (TVL) je Blockchain und je DeFi-Protokoll. Ohne Login/Key. (Ampel green, FI)
@@ -563,6 +577,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/finance/dexscreener (finance/dexscreener)
 - [dft-roadtraffic](https://servas-ai.github.io/connector-marketplace/#/c/dft-roadtraffic): UK Department for Transport Road Traffic API: Average Annual Daily Flow Zählstellen, keyless JSON. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/dft-roadtraffic (opendata/dft-roadtraffic)
+- [digital-atlas-au-hub](https://servas-ai.github.io/connector-marketplace/#/c/digital-atlas-au-hub): digital.atlas.gov.au – Geoscience Australia: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit  (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/digital-atlas-au-hub
 - [digitalnz](https://servas-ai.github.io/connector-marketplace/#/c/digitalnz): DigitalNZ API v3: Suche in Millionen digitalisierter Objekte, Texte und Medien aus neuseeländischen Bibliotheken, Museen und Archiven, keyless JSON. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/digitalnz (opendata/digitalnz)
 - [disaster-amerigeoss](https://servas-ai.github.io/connector-marketplace/#/c/disaster-amerigeoss): disaster-amerigeoss.opendata.arcgis.com – AmeriGEOSS: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Daten (Ampel red, AT)
@@ -769,6 +785,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tech/fakestoreapi (tech/fakestoreapi)
 - [falkirk-uk](https://servas-ai.github.io/connector-marketplace/#/c/falkirk-uk): Falkirk Council Open Spatial Data Hub (UK): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz  (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/falkirk-uk (opendata/falkirk-uk)
+- [fao-diem-hub](https://servas-ai.github.io/connector-marketplace/#/c/fao-diem-hub): data-in-emergencies-hqfao.hub.arcgis.com – Food and Agriculture Organization of the United Nations (FAO): Open-Data-Katalog (ArcGIS Hub, OGC API Records): Vollt (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/fao-diem-hub
 - [fao-sdmx](https://servas-ai.github.io/connector-marketplace/#/c/fao-sdmx): nsi-release-ro-statsuite.fao.org SDMX: amtliche Statistik-Zeitreihen (FAO SDMX). Ohne Login/Key. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/fao-sdmx (international/fao-sdmx)
 - [fastenergy-at](https://servas-ai.github.io/connector-marketplace/#/c/fastenergy-at): Heizölpreise Österreich von FastEnergy: Ø-Preis €/100 l mit Verlauf, Mengenstaffel 1.000–5.000 l je Bundesland, Ölmarkt-Faktoren (Ampel yellow, AT)
@@ -1849,6 +1867,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tech/httpbin (tech/httpbin)
 - [htx-huobi](https://servas-ai.github.io/connector-marketplace/#/c/htx-huobi): HTX/Huobi Public Market API: Ticker je Symbol (merged), alle Ticker nach Quote-Währung gefiltert und Kerzen (K-Lines). Ohne Login/Key. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: true · Repo: https://github.com/servas-ai/opencli-connectors/finance/htx-huobi (finance/htx-huobi)
+- [hud-hub](https://servas-ai.github.io/connector-marketplace/#/c/hud-hub): hudgis-hud.opendata.arcgis.com – U.S. Department of Housing and Urban Development: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänd (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/hud-hub
 - [huggingface-hub](https://servas-ai.github.io/connector-marketplace/#/c/huggingface-hub): Hugging Face Hub Index über die öffentliche Hub-API ohne Token: Modelle und Datensätze mit Downloads, Likes, Pipeline, Library, Lizenz. Nutze den Skill zum Find (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: true · Repo: https://github.com/servas-ai/opencli-connectors/tech/huggingface-hub (tech/huggingface-hub)
 - [huggingface-papers](https://servas-ai.github.io/connector-marketplace/#/c/huggingface-papers): Hugging Face Papers – Studien/Paper-Suche (Titel, Autoren, Jahr, DOI, URL, Abstract wo erlaubt). Ohne Login, Ausgabe servas.record.v1 (type generic, kind public (Ampel yellow, AT)
@@ -1905,6 +1925,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/imgw-pl (opendata/imgw-pl)
 - [independentreserve](https://servas-ai.github.io/connector-marketplace/#/c/independentreserve): Independent Reserve Public API: Marktübersicht je Paar (z. B. XBT/AUD), letzte Trades und gültige Primär-/Sekundärwährungen. Ohne Login/Key. (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/finance/independentreserve (finance/independentreserve)
+- [indianamap-hub](https://servas-ai.github.io/connector-marketplace/#/c/indianamap-hub): www.indianamap.org – State of Indiana – IGIO / IndianaMap: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel- (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/indianamap-hub
 - [ine-es](https://servas-ai.github.io/connector-marketplace/#/c/ine-es): servicios.ine.es wstempus: statistische Operationen und Tabellen des Instituto Nacional de Estadística. Ohne Login/Key. (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/ine-es (international/ine-es)
 - [insee-bdm](https://servas-ai.github.io/connector-marketplace/#/c/insee-bdm): bdm.insee.fr SDMX: amtliche Statistik-Zeitreihen (INSEE BDM SDMX). Ohne Login/Key. (Ampel yellow, FR)
@@ -1915,6 +1937,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/invemar-hub (opendata/invemar-hub)
 - [ioos-atn-erddap](https://servas-ai.github.io/connector-marketplace/#/c/ioos-atn-erddap): IOOS Animal Telemetry Network: Satelliten-Telemetriedaten markierter Meerestiere (Robben, Haie, Schildkröten, Seevögel). Zugriff über die offizielle ERDDAP-API  (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/ioos-atn-erddap (opendata/ioos-atn-erddap)
+- [iowa-geodata-hub](https://servas-ai.github.io/connector-marketplace/#/c/iowa-geodata-hub): geodata.iowa.gov – State of Iowa – Iowa Geospatial Office: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel- (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/iowa-geodata-hub
 - [ip-geo](https://servas-ai.github.io/connector-marketplace/#/c/ip-geo): ipapi.co IP-Geo/ASN (frei ~1000/Tag). Ohne Login, nur GET, 1 Req/1,5 s. (Ampel yellow, AT)
   Befehle: – · robots: unknown · Login: ? · Repo: https://github.com/servas-ai/opencli-connectors/webintel/ip-geo (webintel/ip-geo)
 - [ipapi](https://servas-ai.github.io/connector-marketplace/#/c/ipapi): ipapi.co: IP-Geolokation (Land, Region, Stadt, ASN) über die öffentliche JSON-API. Ohne Login/Key (Free-Tier-Limits). (Ampel yellow, AT)
@@ -1963,6 +1987,8 @@
   Befehle: – · robots: unknown · Login: ? · Repo: https://github.com/servas-ai/opencli-kapper-net
 - [kartverket-wmts](https://servas-ai.github.io/connector-marketplace/#/c/kartverket-wmts): Kartverket (Norwegen): offene WMTS-Kartenlayer (Topo, Graustufen, Seekarte). Nur GetCapabilities, ohne Key. (Ampel red, NO)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/geo/kartverket-wmts (geo/kartverket-wmts)
+- [kaunas-atvirasgis-hub](https://servas-ai.github.io/connector-marketplace/#/c/kaunas-atvirasgis-hub): atvirasgis.kaunas.lt – Kauno miesto savivaldybė: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz  (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/kaunas-atvirasgis-hub
 - [kbo-be](https://servas-ai.github.io/connector-marketplace/#/c/kbo-be): KBO Public Search Belgien (Unternehmensnummer/Namenssuche). Ohne Login, nur GET, 1 Req/1,5 s. (Ampel yellow, BE)
   Befehle: – · robots: unknown · Login: ? · Repo: https://github.com/servas-ai/opencli-connectors/webintel/kbo-be (webintel/kbo-be)
 - [kegg](https://servas-ai.github.io/connector-marketplace/#/c/kegg): KEGG REST API: Info, Organismenliste und Pathway-Listen (Plaintext), keyless. (Ampel yellow, AT)
@@ -2063,6 +2089,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/livsmedelsverket-se (international/livsmedelsverket-se)
 - [liwest-at](https://servas-ai.github.io/connector-marketplace/#/c/liwest-at): List and export LIWEST (liwest.at) tariffs (Ampel yellow, AT)
   Befehle: scrape-all, tarife · robots: unknown · Login: false · Repo: https://github.com/servas-ai/opencli-liwest-at
+- [lki-atviri-duomenys-hub](https://servas-ai.github.io/connector-marketplace/#/c/lki-atviri-duomenys-hub): atviri-duomenys.lki.lt – Lietuvių kalbos institutas (LKI): Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel- (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/lki-atviri-duomenys-hub
 - [lobbyregister](https://servas-ai.github.io/connector-marketplace/#/c/lobbyregister): Registrierte Lobbying-Unternehmen, Unternehmen mit In-house-Lobbyist:innen, Selbstverwaltungskörper und Interessenverbände abrufen. Ohne Login. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/lobbyregister (opendata/lobbyregister)
 - [lobid-gnd](https://servas-ai.github.io/connector-marketplace/#/c/lobid-gnd): lobid-gnd (hbz): Suche in der Gemeinsamen Normdatei der Deutschen Nationalbibliothek – Werke, Orte, Körperschaften, Schlagwörter – mit GND-ID und Typ. Ohne Logi (Ampel red, AT)
@@ -2101,6 +2129,8 @@
   Befehle: business, internet, mobilfunk, verfuegbarkeit, scrape-all · robots: unknown · Login: false · Repo: https://github.com/servas-ai/opencli-magenta-at
 - [magicthegathering](https://servas-ai.github.io/connector-marketplace/#/c/magicthegathering): Magic: The Gathering API: Kartensuche und Sets, keyless JSON. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/magicthegathering (opendata/magicthegathering)
+- [mainroads-wa-hub](https://servas-ai.github.io/connector-marketplace/#/c/mainroads-wa-hub): portal-mainroads.opendata.arcgis.com – Main Roads Western Australia: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätz (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/mainroads-wa-hub
 - [makstat-mk](https://servas-ai.github.io/connector-marketplace/#/c/makstat-mk): makstat.stat.gov.mk PxWeb: amtliche Statistik-Zeitreihen (MakStat – State Statistical Office North Macedonia). Ohne Login/Key. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/makstat-mk (international/makstat-mk)
 - [manitoba-geoportal](https://servas-ai.github.io/connector-marketplace/#/c/manitoba-geoportal): geoportal.gov.mb.ca – Government of Manitoba: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit (Ampel red, AT)
@@ -2117,6 +2147,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/marlborough-hub (opendata/marlborough-hub)
 - [mass-e2c-hub](https://servas-ai.github.io/connector-marketplace/#/c/mass-e2c-hub): Education-to-Career Hub Massachusetts: Bildungs- und Arbeitsmarktdaten des Bundesstaats Massachusetts – Schulbezirke, Ausgaben, Abschlüsse, Hochschulen und Besc (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/mass-e2c-hub (opendata/mass-e2c-hub)
+- [massgis-hub](https://servas-ai.github.io/connector-marketplace/#/c/massgis-hub): open-data-massgis.hub.arcgis.com – Commonwealth of Massachusetts – MassGIS: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Da (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/massgis-hub
 - [mastr](https://servas-ai.github.io/connector-marketplace/#/c/mastr): Marktstammdatenregister der Bundesnetzagentur: öffentliche Einheiten der Stromerzeugung (Solar, Wind, Speicher …) je PLZ/Ort/Energieträger und Einheit per MaStR (Ampel red, DE)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/mastr (opendata/mastr)
 - [mathjs-api](https://servas-ai.github.io/connector-marketplace/#/c/mathjs-api): Math.js HTTP API: mathematische Ausdrücke auswerten (expr=...), keyless Text. (Ampel yellow, AT)
@@ -2283,6 +2315,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/nina-warnung (opendata/nina-warnung)
 - [nj-healthdata](https://servas-ai.github.io/connector-marketplace/#/c/nj-healthdata): NJ Health Data: Gesundheitsindikatoren des New Jersey Department of Health – Sterberaten, Krankheitslast und Bevölkerungsgesundheit nach Jahr und Gruppe. Zugrif (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/nj-healthdata (opendata/nj-healthdata)
+- [njdep-hub](https://servas-ai.github.io/connector-marketplace/#/c/njdep-hub): gisdata-njdep.opendata.arcgis.com – New Jersey Department of Environmental Protection: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt g (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/njdep-hub
 - [nlm-clinicaltables](https://servas-ai.github.io/connector-marketplace/#/c/nlm-clinicaltables): NLM Clinical Table Search Service (clinicaltables.nlm.nih.gov): Autocomplete-Suche in ICD-10-CM-Diagnosecodes, RxTerms-Medikamenten und LOINC-Labortests. Ohne L (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/nlm-clinicaltables (international/nlm-clinicaltables)
 - [nlm-datadiscovery](https://servas-ai.github.io/connector-marketplace/#/c/nlm-datadiscovery): NLM Data Discovery: Datensätze der U.S. National Library of Medicine, u. a. MeSH-Vokabulare, Pillbox, Toxikologie- und Gesundheitsdaten. Zugriff über die offizi (Ampel red, AT)
@@ -2333,6 +2367,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/nyc-opendata (opendata/nyc-opendata)
 - [nyfed-reference-rates](https://servas-ai.github.io/connector-marketplace/#/c/nyfed-reference-rates): Federal Reserve Bank of New York Markets Data API: offizielle Referenzzinsen SOFR, EFFR, OBFR, TGCR, BGCR inkl. Perzentilen und Volumen, OpenAPI (YAML), keyless (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/finance/nyfed-reference-rates (finance/nyfed-reference-rates)
+- [nys-gis-clearinghouse-hub](https://servas-ai.github.io/connector-marketplace/#/c/nys-gis-clearinghouse-hub): data.gis.ny.gov – New York State ITS – GIS Program Office: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel- (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/nys-gis-clearinghouse-hub
 - [nys-health-data](https://servas-ai.github.io/connector-marketplace/#/c/nys-health-data): Health Data NY: offener Gesundheitsdaten-Katalog des New York State Department of Health mit Impf-, Krankenhaus-, Qualitäts- und Bevölkerungsgesundheitsdaten. Z (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/nys-health-data (opendata/nys-health-data)
 - [nzta-hub](https://servas-ai.github.io/connector-marketplace/#/c/nzta-hub): Waka Kotahi NZTA Open Data (Neuseeland): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und (Ampel red, AT)
@@ -2491,6 +2527,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/orcities-data (opendata/orcities-data)
 - [oregon-data](https://servas-ai.github.io/connector-marketplace/#/c/oregon-data): Oregon Open Data (Oregon, USA): Datensatz-Katalog der Socrata-Instanz data.oregon.gov – Dataset-Suche und Dataset-Metadaten über die Discovery API. Ohne Login/K (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/oregon-data (opendata/oregon-data)
+- [oregon-geohub](https://servas-ai.github.io/connector-marketplace/#/c/oregon-geohub): geohub.oregon.gov – State of Oregon – Geospatial Enterprise Office: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/oregon-geohub
 - [orf-rss](https://servas-ai.github.io/connector-marketplace/#/c/orf-rss): ORF.at RSS-Feeds: aktuelle Meldungen aus News, Wirtschaft-/Österreich-Ressorts, Science, Sport und den Bundesländer-Feeds (z. B. ooe, wien). Ohne Login/Key. (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/intel/orf-rss (intel/orf-rss)
 - [orlando-data](https://servas-ai.github.io/connector-marketplace/#/c/orlando-data): data.cityoforlando.net Socrata Discovery API + SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen (City of Orlando, Florida). Ohne Login/Key. (Ampel red, AT)
@@ -2873,6 +2911,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/stockholm-miljo-hub (opendata/stockholm-miljo-hub)
 - [stortinget](https://servas-ai.github.io/connector-marketplace/#/c/stortinget): Stortinget Datenservice (data.stortinget.no): Sitzungsperioden, im Parlament vertretene Parteien je Sesjon und Themenkatalog, keyless JSON, NLOD. (Ampel yellow, NO)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/stortinget (international/stortinget)
+- [stpaul-information-hub](https://servas-ai.github.io/connector-marketplace/#/c/stpaul-information-hub): information.stpaul.gov – City of Saint Paul: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit  (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/stpaul-information-hub
 - [string-db](https://servas-ai.github.io/connector-marketplace/#/c/string-db): STRING API: Protein-Identifikatoren auflösen und funktionale Protein-Protein-Interaktionen mit Konfidenz-Scores je Organismus abrufen (z. B. TP53 human), keyles (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/string-db (opendata/string-db)
 - [stromberg-quotes](https://servas-ai.github.io/connector-marketplace/#/c/stromberg-quotes): Stromberg-API (Fanprojekt): Zitate und Figuren aus der TV-Serie „Stromberg“, keyless JSON (deutschsprachig). (Ampel yellow, DE)
@@ -2975,6 +3015,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/turismo-portugal-dados (opendata/turismo-portugal-dados)
 - [tvmaze](https://servas-ai.github.io/connector-marketplace/#/c/tvmaze): TVmaze API: TV-Serien suchen, Detail je Serie, Episodenliste und tagesaktuelles TV-Programm je Land. Ohne Login/Key. (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tech/tvmaze (tech/tvmaze)
+- [txdot-hub](https://servas-ai.github.io/connector-marketplace/#/c/txdot-hub): gis-txdot.opendata.arcgis.com – Texas Department of Transportation: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/txdot-hub
 - [tzkt-tezos](https://servas-ai.github.io/connector-marketplace/#/c/tzkt-tezos): TzKT API v1 (Baking Bad): Tezos-Head (Level, Zyklus, Protokoll) und neueste Blöcke mit Rewards/Fees, OpenAPI 3.0 (287 Pfade), keyless JSON. „Powered by TzKT API (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/finance/tzkt-tezos (finance/tzkt-tezos)
 - [uba-luftguete](https://servas-ai.github.io/connector-marketplace/#/c/uba-luftguete): Aktuelle Luftgüte-Messwerte (NO2, O3, PM10, PM2.5, SO2, CO) aller Messstellen in Österreich aus der Luftgütekarte des Umweltbundesamts. Ohne Login/Key, Ausgabe  (Ampel yellow, AT)
@@ -3025,14 +3067,22 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tech/urbandictionary (tech/urbandictionary)
 - [usac-datahub](https://servas-ai.github.io/connector-marketplace/#/c/usac-datahub): datahub.usac.org Socrata Discovery API + SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen (Universal Service Administrative Company). Ohne Login/Key. (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/usac-datahub (opendata/usac-datahub)
+- [usace-geospatial-hub](https://servas-ai.github.io/connector-marketplace/#/c/usace-geospatial-hub): geospatial-usace.opendata.arcgis.com – U.S. Army Corps of Engineers: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätz (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/usace-geospatial-hub
 - [usaspending](https://servas-ai.github.io/connector-marketplace/#/c/usaspending): api.usaspending.gov: Toptier-Agencies und Award-Suche (öffentliche Endpunkte). Ohne Login/Key. (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/usaspending (international/usaspending)
 - [usc-ndsc-data](https://servas-ai.github.io/connector-marketplace/#/c/usc-ndsc-data): USC Neighborhood Data for Social Change: Nachbarschaftsdaten für Los Angeles County (Census Tracts, Gesundheit, Bildung, Wohnen) des USC Price Center for Social (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/usc-ndsc-data (opendata/usc-ndsc-data)
 - [usda-fdc](https://servas-ai.github.io/connector-marketplace/#/c/usda-fdc): USDA FoodData Central: Lebensmittelsuche (Foundation, SR Legacy, Branded, FNDDS) und alle Nährwerte je fdcId über die offizielle API mit öffentlichem DEMO_KEY.  (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/usda-fdc (international/usda-fdc)
+- [usdot-bts-geo-hub](https://servas-ai.github.io/connector-marketplace/#/c/usdot-bts-geo-hub): data-usdot.opendata.arcgis.com – U.S. DOT – Bureau of Transportation Statistics: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänder (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/usdot-bts-geo-hub
 - [uselessfacts](https://servas-ai.github.io/connector-marketplace/#/c/uselessfacts): Useless Facts API: zufällige und tägliche Fun Facts, keyless JSON. (Ampel yellow, PL)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tech/uselessfacts (tech/uselessfacts)
+- [usfs-geodata-hub](https://servas-ai.github.io/connector-marketplace/#/c/usfs-geodata-hub): data-usfs.hub.arcgis.com – USDA Forest Service: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz m (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/usfs-geodata-hub
+- [usfws-hub](https://servas-ai.github.io/connector-marketplace/#/c/usfws-hub): gis-fws.opendata.arcgis.com – U.S. Fish and Wildlife Service: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einz (Ampel red, AT)
+  Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/tree/main/opendata/usfws-hub
 - [usgs-earthquakes](https://servas-ai.github.io/connector-marketplace/#/c/usgs-earthquakes): USGS Earthquake Hazards FDSN Event API 1: aktuelle Erdbeben weltweit (Magnitude, Ort, Tiefe, Tsunami-Flag) und Einzel-Events. Ohne Login/Key. (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/usgs-earthquakes (international/usgs-earthquakes)
 - [usgs-volcanoes](https://servas-ai.github.io/connector-marketplace/#/c/usgs-volcanoes): USGS Volcano Hazards Program (HANS Public API): Vulkane mit erhöhter Warnstufe, alle überwachten US-Vulkane, aktuelle Meldungen und Vulkan-Details per Nummer. O (Ampel green, AT)
