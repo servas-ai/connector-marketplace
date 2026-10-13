@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-13T17:43:41.439Z",
+  "generatedAt": "2026-10-13T18:03:40.881Z",
   "sourceRepo": "servas-ai/opencli-connectors",
   "sourceGeneratedAt": "2026-10-13 17:32 UTC",
-  "count": 1355,
+  "count": 1385,
   "connectors": [
     {
       "id": "spusu-at",
@@ -9281,6 +9281,100 @@
       "screenshot": null
     },
     {
+      "id": "atmo-occitanie-hub",
+      "name": "opencli-atmo-occitanie-hub",
+      "domain": null,
+      "description": "data-atmo-occitanie.opendata.arcgis.com – Atmo Occitanie: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/atmo-occitanie-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:36.911Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1973,
+        "p95": 2016,
+        "throughput": 30.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "data-atmo-occitanie.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/atmo-occitanie-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/atmo-occitanie-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/atmo-occitanie-hub/samples"
+      },
+      "source": "data-atmo-occitanie.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:36.911Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "auburnwa-data",
       "name": "opencli-auburnwa-data",
       "path": "opendata/auburnwa-data",
@@ -15166,6 +15260,100 @@
       "screenshot": null
     },
     {
+      "id": "boise-hub",
+      "name": "opencli-boise-hub",
+      "domain": null,
+      "description": "city-of-boise.opendata.arcgis.com – City of Boise: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/boise-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:36.862Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1973,
+        "p95": 2001,
+        "throughput": 30.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "city-of-boise.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/boise-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/boise-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/boise-hub/samples"
+      },
+      "source": "city-of-boise.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:36.862Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "bonndata",
       "name": "opencli-bonndata",
       "path": "opendata/bonndata",
@@ -17253,6 +17441,100 @@
       "screenshot": null
     },
     {
+      "id": "canalrivertrust-hub",
+      "name": "opencli-canalrivertrust-hub",
+      "domain": null,
+      "description": "data-canalrivertrust.opendata.arcgis.com – Canal & River Trust: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/canalrivertrust-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:36.920Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1933,
+        "p95": 1966,
+        "throughput": 31,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "data-canalrivertrust.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/canalrivertrust-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/canalrivertrust-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/canalrivertrust-hub/samples"
+      },
+      "source": "data-canalrivertrust.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:36.920Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "canwin-erddap",
       "name": "opencli-canwin-erddap",
       "path": "opendata/canwin-erddap",
@@ -17726,6 +18008,100 @@
       "ampel": {
         "level": "yellow",
         "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "cctegis-odp-hub",
+      "name": "opencli-cctegis-odp-hub",
+      "domain": null,
+      "description": "odp-cctegis.opendata.arcgis.com – CCTE GIS: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/cctegis-odp-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:36.876Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1989,
+        "p95": 2000,
+        "throughput": 30.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "odp-cctegis.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/cctegis-odp-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/cctegis-odp-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/cctegis-odp-hub/samples"
+      },
+      "source": "odp-cctegis.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:36.876Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
           "Gates nicht geprüft"
         ]
       },
@@ -19822,6 +20198,100 @@
         "observations": 2,
         "uptime": 100,
         "last": "2026-10-13T13:15:52.226Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "cnmh-datos-hub",
+      "name": "opencli-cnmh-datos-hub",
+      "domain": null,
+      "description": "geoportal-de-datos-abiertos-cnmh-cnmh.hub.arcgis.com – Centro Nacional de Memoria Histórica: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/cnmh-datos-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:36.871Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1980,
+        "p95": 2012,
+        "throughput": 30.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "geoportal-de-datos-abiertos-cnmh-cnmh.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/cnmh-datos-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/cnmh-datos-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/cnmh-datos-hub/samples"
+      },
+      "source": "geoportal-de-datos-abiertos-cnmh-cnmh.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:36.871Z"
       },
       "ampel": {
         "level": "red",
@@ -22769,6 +23239,100 @@
         "reasons": []
       },
       "screenshot": "screens/ctis-clinical-trials.webp"
+    },
+    {
+      "id": "cumberland-ns-hub",
+      "name": "opencli-cumberland-ns-hub",
+      "domain": null,
+      "description": "data-cumberlandns.opendata.arcgis.com – Municipality of the County of Cumberland: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/cumberland-ns-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:41.593Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1967,
+        "p95": 2021,
+        "throughput": 30.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "data-cumberlandns.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/cumberland-ns-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/cumberland-ns-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/cumberland-ns-hub/samples"
+      },
+      "source": "data-cumberlandns.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:41.593Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
     },
     {
       "id": "currency-api",
@@ -40271,6 +40835,100 @@
       "screenshot": null
     },
     {
+      "id": "forestry-england-hub",
+      "name": "opencli-forestry-england-hub",
+      "domain": null,
+      "description": "data-forestry.opendata.arcgis.com – Forestry Commission: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/forestry-england-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:41.626Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1907,
+        "p95": 2109,
+        "throughput": 31.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "data-forestry.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/forestry-england-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/forestry-england-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/forestry-england-hub/samples"
+      },
+      "source": "data-forestry.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:41.626Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "forschung-orgs",
       "name": "opencli-forschung-orgs",
       "path": "international/forschung-orgs",
@@ -40361,6 +41019,100 @@
         "reasons": []
       },
       "screenshot": "screens/forschung-orgs.webp"
+    },
+    {
+      "id": "forsyth-ga-hub",
+      "name": "opencli-forsyth-ga-hub",
+      "domain": null,
+      "description": "geo-forsythcoga.opendata.arcgis.com – Forsyth County, Georgia: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/forsyth-ga-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:41.617Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1929,
+        "p95": 1994,
+        "throughput": 31.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "geo-forsythcoga.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/forsyth-ga-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/forsyth-ga-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/forsyth-ga-hub/samples"
+      },
+      "source": "geo-forsythcoga.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:41.617Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
     },
     {
       "id": "fpisc-permits-data",
@@ -65886,6 +66638,100 @@
       "screenshot": "screens/gdelt-news.webp"
     },
     {
+      "id": "gema-georgia-hub",
+      "name": "opencli-gema-georgia-hub",
+      "domain": null,
+      "description": "hub-gema-soc.opendata.arcgis.com – Georgia Emergency Management & Homeland Security Agency: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/gema-georgia-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:41.703Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1982,
+        "p95": 1991,
+        "throughput": 30.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "hub-gema-soc.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/gema-georgia-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/gema-georgia-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/gema-georgia-hub/samples"
+      },
+      "source": "hub-gema-soc.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:41.703Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gemini",
       "name": "opencli-gemini",
       "path": "finance/gemini",
@@ -84377,6 +85223,194 @@
       "screenshot": null
     },
     {
+      "id": "highwaysengland-hub",
+      "name": "opencli-highwaysengland-hub",
+      "domain": null,
+      "description": "open-data-highwaysengland.hub.arcgis.com – National Highways (Highways England): Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/highwaysengland-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:41.943Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1996,
+        "p95": 2065,
+        "throughput": 30.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "open-data-highwaysengland.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/highwaysengland-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/highwaysengland-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/highwaysengland-hub/samples"
+      },
+      "source": "open-data-highwaysengland.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:41.943Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "historicengland-hub",
+      "name": "opencli-historicengland-hub",
+      "domain": null,
+      "description": "opendata-historicengland.hub.arcgis.com – Historic England: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/historicengland-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:46.513Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1951,
+        "p95": 1985,
+        "throughput": 30.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "opendata-historicengland.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/historicengland-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/historicengland-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/historicengland-hub/samples"
+      },
+      "source": "opendata-historicengland.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:46.513Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "hn-algolia",
       "name": "opencli-hn-algolia",
       "path": "tech/hn-algolia",
@@ -86316,6 +87350,100 @@
       "screenshot": null
     },
     {
+      "id": "icde2-datos-hub",
+      "name": "opencli-icde2-datos-hub",
+      "domain": null,
+      "description": "datos-abiertos-icde-2-igac-oit.hub.arcgis.com – IGAC / ICDE Colombia: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/icde2-datos-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:46.333Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1970,
+        "p95": 2012,
+        "throughput": 30.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "datos-abiertos-icde-2-igac-oit.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/icde2-datos-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/icde2-datos-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/icde2-datos-hub/samples"
+      },
+      "source": "datos-abiertos-icde-2-igac-oit.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:46.333Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "ieee-oui",
       "name": "opencli-ieee-oui",
       "path": "opendata/ieee-oui",
@@ -86501,6 +87629,100 @@
       "ampel": {
         "level": "yellow",
         "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "igac-datos-hub",
+      "name": "opencli-igac-datos-hub",
+      "domain": null,
+      "description": "datos-abiertos-igac-igac-oit.hub.arcgis.com – IGAC – Instituto Geográfico Agustín Codazzi: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/igac-datos-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:46.355Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1984,
+        "p95": 1988,
+        "throughput": 30.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "datos-abiertos-igac-igac-oit.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/igac-datos-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/igac-datos-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/igac-datos-hub/samples"
+      },
+      "source": "datos-abiertos-igac-igac-oit.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:46.355Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
           "Gates nicht geprüft"
         ]
       },
@@ -87661,6 +88883,100 @@
         ]
       },
       "screenshot": "screens/inspirehep.webp"
+    },
+    {
+      "id": "invemar-hub",
+      "name": "opencli-invemar-hub",
+      "domain": null,
+      "description": "acceso-datos-ambientales-invemar.hub.arcgis.com – INVEMAR: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/invemar-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:46.439Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1972,
+        "p95": 1986,
+        "throughput": 30.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "acceso-datos-ambientales-invemar.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/invemar-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/invemar-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/invemar-hub/samples"
+      },
+      "source": "acceso-datos-ambientales-invemar.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:46.439Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
     },
     {
       "id": "ioos-atn-erddap",
@@ -94944,6 +96260,100 @@
       "screenshot": null
     },
     {
+      "id": "madison-hub",
+      "name": "opencli-madison-hub",
+      "domain": null,
+      "description": "data-cityofmadison.opendata.arcgis.com – City of Madison: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/madison-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:46.699Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1995,
+        "p95": 2009,
+        "throughput": 30.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "data-cityofmadison.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/madison-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/madison-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/madison-hub/samples"
+      },
+      "source": "data-cityofmadison.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:46.699Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "magicthegathering",
       "name": "opencli-magicthegathering",
       "path": "opendata/magicthegathering",
@@ -95128,6 +96538,100 @@
       "ampel": {
         "level": "yellow",
         "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "manitoba-geoportal",
+      "name": "opencli-manitoba-geoportal",
+      "domain": null,
+      "description": "geoportal.gov.mb.ca – Government of Manitoba: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/manitoba-geoportal",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:51.034Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1977,
+        "p95": 2002,
+        "throughput": 30.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "geoportal.gov.mb.ca/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/manitoba-geoportal/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/manitoba-geoportal/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/manitoba-geoportal/samples"
+      },
+      "source": "geoportal.gov.mb.ca",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:51.034Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
           "Gates nicht geprüft"
         ]
       },
@@ -95992,6 +97496,100 @@
       "screenshot": null
     },
     {
+      "id": "mdb-spatialhub",
+      "name": "opencli-mdb-spatialhub",
+      "domain": null,
+      "description": "spatialhub-mdb-sa.opendata.arcgis.com – Murray–Darling Basin Authority: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/mdb-spatialhub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:50.977Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1950,
+        "p95": 1958,
+        "throughput": 30.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "spatialhub-mdb-sa.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/mdb-spatialhub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/mdb-spatialhub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/mdb-spatialhub/samples"
+      },
+      "source": "spatialhub-mdb-sa.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:50.977Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "medrxiv",
       "name": "opencli-medrxiv",
       "path": "opendata/medrxiv",
@@ -96176,6 +97774,100 @@
       "ampel": {
         "level": "yellow",
         "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "memphis-hub",
+      "name": "opencli-memphis-hub",
+      "domain": null,
+      "description": "memphis-open-data-hub-memegis.hub.arcgis.com – City of Memphis: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/memphis-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:51.090Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1975,
+        "p95": 1989,
+        "throughput": 30.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "memphis-open-data-hub-memegis.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/memphis-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/memphis-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/memphis-hub/samples"
+      },
+      "source": "memphis-open-data-hub-memegis.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:51.090Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
           "Gates nicht geprüft"
         ]
       },
@@ -96459,6 +98151,100 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T11:42:12.222Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "mestomost-hub",
+      "name": "opencli-mestomost-hub",
+      "domain": null,
+      "description": "opendata-mestomost.hub.arcgis.com – Město Most: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/mestomost-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:51.150Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1990,
+        "p95": 1992,
+        "throughput": 30.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "opendata-mestomost.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/mestomost-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/mestomost-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/mestomost-hub/samples"
+      },
+      "source": "opendata-mestomost.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:51.150Z"
       },
       "ampel": {
         "level": "red",
@@ -98388,6 +100174,100 @@
       "screenshot": "screens/murauer-stadtwerke-at.webp"
     },
     {
+      "id": "muroran-hub",
+      "name": "opencli-muroran-hub",
+      "domain": null,
+      "description": "murorancity-opendata-muroran.hub.arcgis.com – City of Muroran: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/muroran-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:51.412Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1951,
+        "p95": 1997,
+        "throughput": 30.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "murorancity-opendata-muroran.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/muroran-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/muroran-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/muroran-hub/samples"
+      },
+      "source": "murorancity-opendata-muroran.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:51.412Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "mymemory",
       "name": "opencli-mymemory",
       "path": "tech/mymemory",
@@ -99240,6 +101120,100 @@
       "ampel": {
         "level": "yellow",
         "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "nashville-hub",
+      "name": "opencli-nashville-hub",
+      "domain": null,
+      "description": "datanashvillegov-nashville.hub.arcgis.com – Metropolitan Government of Nashville and Davidson County: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/nashville-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:55.661Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1862,
+        "p95": 2112,
+        "throughput": 32.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "datanashvillegov-nashville.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nashville-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nashville-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/nashville-hub/samples"
+      },
+      "source": "datanashvillegov-nashville.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:55.661Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
           "Gates nicht geprüft"
         ]
       },
@@ -100715,6 +102689,100 @@
         "reasons": []
       },
       "screenshot": "screens/nhtsa-vpic.webp"
+    },
+    {
+      "id": "nigeria-africageoportal",
+      "name": "opencli-nigeria-africageoportal",
+      "domain": null,
+      "description": "nigeria.africageoportal.com – Esri Africa GeoPortal / Nigeria: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/nigeria-africageoportal",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:55.661Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1862,
+        "p95": 2040,
+        "throughput": 32.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "nigeria.africageoportal.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nigeria-africageoportal/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nigeria-africageoportal/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/nigeria-africageoportal/samples"
+      },
+      "source": "nigeria.africageoportal.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:55.661Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
     },
     {
       "id": "nina-warnung",
@@ -104464,6 +106532,100 @@
         "level": "yellow",
         "reasons": [
           "Gates: 2 Fehler"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "ofesa-rcmrd-hub",
+      "name": "opencli-ofesa-rcmrd-hub",
+      "domain": null,
+      "description": "ofesageoportal-rcmrd.opendata.arcgis.com – RCMRD – Regional Centre for Mapping of Resources for Development: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/ofesa-rcmrd-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:55.711Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1912,
+        "p95": 2026,
+        "throughput": 31.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "ofesageoportal-rcmrd.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/ofesa-rcmrd-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/ofesa-rcmrd-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/ofesa-rcmrd-hub/samples"
+      },
+      "source": "ofesageoportal-rcmrd.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:55.711Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
         ]
       },
       "screenshot": null
@@ -111925,6 +114087,100 @@
       "screenshot": "screens/pegelonline.webp"
     },
     {
+      "id": "pei-opendata-hub",
+      "name": "opencli-pei-opendata-hub",
+      "domain": null,
+      "description": "data-princeedwardisland-peigov.hub.arcgis.com – Government of Prince Edward Island: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/pei-opendata-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:55.771Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1849,
+        "p95": 2112,
+        "throughput": 32.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "data-princeedwardisland-peigov.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/pei-opendata-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/pei-opendata-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/pei-opendata-hub/samples"
+      },
+      "source": "data-princeedwardisland-peigov.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:55.771Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "perth-kinross-uk",
       "name": "opencli-perth-kinross-uk",
       "path": "opendata/perth-kinross-uk",
@@ -117490,6 +119746,100 @@
       "screenshot": null
     },
     {
+      "id": "saskatchewan-geohub",
+      "name": "opencli-saskatchewan-geohub",
+      "domain": null,
+      "description": "geohub-old-saskatchewan.opendata.arcgis.com – Government of Saskatchewan: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/saskatchewan-geohub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:28:56.085Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1970,
+        "p95": 1993,
+        "throughput": 30.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "geohub-old-saskatchewan.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/saskatchewan-geohub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/saskatchewan-geohub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/saskatchewan-geohub/samples"
+      },
+      "source": "geohub-old-saskatchewan.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:28:56.085Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "sbb-opentransportdata",
       "name": "opencli-sbb-opentransportdata",
       "path": "mobility/ch/sbb-opentransportdata",
@@ -119036,6 +121386,100 @@
       "screenshot": null
     },
     {
+      "id": "sjcounty-nm-hub",
+      "name": "opencli-sjcounty-nm-hub",
+      "domain": null,
+      "description": "data-sjcounty.opendata.arcgis.com – San Juan County, New Mexico: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/sjcounty-nm-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:29:00.243Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1892,
+        "p95": 2072,
+        "throughput": 31.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "data-sjcounty.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/sjcounty-nm-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/sjcounty-nm-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/sjcounty-nm-hub/samples"
+      },
+      "source": "data-sjcounty.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:29:00.243Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "slo-county-data",
       "name": "opencli-slo-county-data",
       "path": "opendata/slo-county-data",
@@ -120067,6 +122511,100 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T10:01:41.467Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "south-africa-sdg-hub",
+      "name": "opencli-south-africa-sdg-hub",
+      "domain": null,
+      "description": "south-africa-sdg.hub.arcgis.com – South Africa SDG: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/south-africa-sdg-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:29:00.468Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1779,
+        "p95": 2239,
+        "throughput": 33.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "south-africa-sdg.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/south-africa-sdg-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/south-africa-sdg-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/south-africa-sdg-hub/samples"
+      },
+      "source": "south-africa-sdg.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:29:00.468Z"
       },
       "ampel": {
         "level": "red",
@@ -126798,6 +129336,100 @@
       "screenshot": null
     },
     {
+      "id": "ttsk-hub",
+      "name": "opencli-ttsk-hub",
+      "domain": null,
+      "description": "opendata-ttsk.hub.arcgis.com – Trnavský samosprávny kraj: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/ttsk-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:29:00.364Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1943,
+        "p95": 1943,
+        "throughput": 30.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "opendata-ttsk.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/ttsk-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/ttsk-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/ttsk-hub/samples"
+      },
+      "source": "opendata-ttsk.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:29:00.364Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "tullnenergie-at",
       "name": "tullnenergie-at",
       "path": null,
@@ -126934,6 +129566,100 @@
         ]
       },
       "screenshot": "screens/tullnenergie-at.webp"
+    },
+    {
+      "id": "tulsa-hub",
+      "name": "opencli-tulsa-hub",
+      "domain": null,
+      "description": "gis2-cityoftulsa.opendata.arcgis.com – City of Tulsa: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/tulsa-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:29:00.422Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1874,
+        "p95": 2142,
+        "throughput": 32,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "gis2-cityoftulsa.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/tulsa-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/tulsa-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/tulsa-hub/samples"
+      },
+      "source": "gis2-cityoftulsa.opendata.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:29:00.422Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
     },
     {
       "id": "tvmaze",
@@ -131797,6 +134523,100 @@
       "screenshot": null
     },
     {
+      "id": "westmeath-hub",
+      "name": "opencli-westmeath-hub",
+      "domain": null,
+      "description": "westmeath-county-council-open-data-westmeath.hub.arcgis.com – Westmeath County Council: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/westmeath-hub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T17:29:01.166Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1810,
+        "p95": 2082,
+        "throughput": 33.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "hub-search-v1",
+      "robots": "disallowed",
+      "robotsNote": "westmeath-county-council-open-data-westmeath.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/westmeath-hub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/westmeath-hub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/westmeath-hub/samples"
+      },
+      "source": "westmeath-county-council-open-data-westmeath.hub.arcgis.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T17:29:01.166Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "wexford-hub",
       "name": "opencli-wexford-hub",
       "path": "opendata/wexford-hub",
@@ -135084,14 +137904,14 @@
       "screenshot": "screens/zippopotam.webp"
     }
   ],
-  "enrichedAt": "2026-10-13T17:43:42.556Z",
+  "enrichedAt": "2026-10-13T18:03:42.077Z",
   "gatesSource": "check_connectors.py --strict (data/gates.snapshot.json)",
   "timeline": [
     {
       "403": 0,
       "429": 0,
       "day": "2026-10-13",
-      "ok": 1474,
+      "ok": 1504,
       "captcha": 25,
       "timeout": 1,
       "offline": 3,
@@ -135100,6 +137920,6 @@
     }
   ],
   "egress": null,
-  "observationsAt": "2026-10-13T17:43:42.751Z",
-  "observationCount": 1564
+  "observationsAt": "2026-10-13T18:03:42.313Z",
+  "observationCount": 1594
 }
