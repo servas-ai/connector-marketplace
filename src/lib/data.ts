@@ -18,8 +18,17 @@ export const dataset: Dataset = new Proxy({} as Dataset, {
 });
 
 /** Tests / Node: inject without fetch. */
+/** Compact public JSON may omit empty arrays — restore shape the UI assumes. */
+function normalizeDataset(d: Dataset): Dataset {
+  for (const c of d.connectors) {
+    if (!Array.isArray(c.incidents)) c.incidents = [];
+    if (!Array.isArray(c.commands)) c.commands = [];
+  }
+  return d;
+}
+
 export function setDataset(d: Dataset): void {
-  _ds = d;
+  _ds = normalizeDataset(d);
 }
 
 /** Browser: load connectors.json as separate (gzip-friendly) asset — not bundled into JS. */
@@ -29,7 +38,7 @@ export async function loadDataset(): Promise<Dataset> {
   const url = `${base}data/connectors.json`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`connectors.json HTTP ${res.status} (${url})`);
-  _ds = (await res.json()) as Dataset;
+  _ds = normalizeDataset((await res.json()) as Dataset);
   return _ds;
 }
 
@@ -75,7 +84,7 @@ export function stats(list: Connector[]) {
     avgStability: avg(withKpi.map((c) => c.kpi!.stability!)), avgP50: avg(list.filter((c) => c.kpi?.p50).map((c) => c.kpi!.p50!)),
     records: list.reduce((a, c) => a + (c.records ?? 0), 0), login: count((c) => c.loginRequired === true),
     captcha: count((c) => c.captcha === true), robotsDisallowed: count((c) => c.robots === 'disallowed'),
-    incidents: list.reduce((a, c) => a + c.incidents.length, 0),
+    incidents: list.reduce((a, c) => a + (c.incidents?.length ?? 0), 0),
   };
 }
 
