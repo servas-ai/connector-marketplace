@@ -33,7 +33,7 @@ export function LiveCard({ c, live = true }: { c: Connector; live?: boolean }) {
           <span className="text-2xl font-semibold tabular-nums" data-testid="live-value">{last != null ? fmt(last, info.unit) : '—'}</span>
           {ch != null && <span className={`flex items-center text-xs tabular-nums ${up ? 'text-emerald-500' : 'text-red-500'}`}>{up ? <TrendingUp size={12} /> : <TrendingDown size={12} />}{ch.toFixed(2)}%</span>}
         </div>
-        <div className="h-12" aria-hidden>{series.length > 1 && <ResponsiveContainer width="100%" height="100%"><AreaChart data={series}><YAxis hide domain={['dataMin', 'dataMax']} />
+        <div className="h-12" aria-hidden>{series.length > 1 && <ResponsiveContainer width="100%" height="100%"><AreaChart data={series} accessibilityLayer={false}><YAxis hide domain={['dataMin', 'dataMax']} />
           <Area type="monotone" dataKey="v" stroke={up ? '#10b981' : '#ef4444'} fill={up ? '#10b98133' : '#ef444433'} strokeWidth={1.5} isAnimationActive={false} /></AreaChart></ResponsiveContainer>}</div>
       </Card>
     </Link>

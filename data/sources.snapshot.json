@@ -1,0 +1,4627 @@
+{
+  "version": 1,
+  "generated_at": "2026-10-13 02:41 UTC",
+  "total": 115,
+  "zugang": {
+    "OpenCLI (HTML)": 73,
+    "Playwright/Headless": 2,
+    "offene API ohne Key": 26,
+    "API mit Key": 2,
+    "Open-Data-Dump": 2,
+    "PDF-Parsing": 9,
+    "passiv reverse-engineerter JSON-Endpunkt": 1
+  },
+  "robots": {
+    "erlaubt": 111,
+    "gesperrt": 2,
+    "teilweise gesperrt": 2
+  },
+  "sources": [
+    {
+      "slug": "firmenbuchgrundbuch-at",
+      "name": "OpenCLI-Connector für www.firmenbuchgrundbuch.at – firma, dokumente ohne Login, JSON/CSV-Ausgabe.",
+      "kategorie": "adapters",
+      "status": "passing",
+      "pfad": "adapters/opencli-firmenbuchgrundbuch-at",
+      "repo": "opencli-connectors/adapters/opencli-firmenbuchgrundbuch-at",
+      "urls": [
+        "https://www.firmenbuchgrundbuch.at",
+        "https://www.firmenbuchgrundbuch.at/de/abfrageservices/firmenbuch/fn/56247t",
+        "https://www.firmenbuchgrundbuch.at/de/abfrageservices/firmenbuch/fn/"
+      ],
+      "hosts": [
+        "https://www.firmenbuchgrundbuch.at"
+      ],
+      "befehle": [
+        "firma",
+        "dokumente"
+      ],
+      "abgedeckt": [
+        "Detail"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "Allow für * außer /account/ (Bots wie PetalBot/BLEXBot komplett gesperrt; unser UA nicht betroffen). Genutzt nur öffentliche, per Sitemap verlinkte Seiten /de/abfrageservices/firmenbuch/fn/<FN>.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Listen"
+      ]
+    },
+    {
+      "slug": "aae-at",
+      "name": "Stromtarife von AAE Naturstrom (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-aae-at",
+      "urls": [
+        "https://aae.at/stromprodukte/stromprodukte-privat/"
+      ],
+      "hosts": [
+        "https://aae.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads",
+        "Feeds",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads",
+        "Feeds",
+        "API"
+      ]
+    },
+    {
+      "slug": "e-steiermark-com",
+      "name": "Strom-, Gas und Fernwärmetarife von Energie Steiermark (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-e-steiermark-com",
+      "urls": [
+        "https://www.e-steiermark.com/privat/produkte/strom",
+        "https://www.e-steiermark.com/privat/produkte/strom/spottarif",
+        "https://www.e-steiermark.com/privat/produkte/erdgas",
+        "https://www.e-steiermark.com/privat/produkte/fernwaerme"
+      ],
+      "hosts": [
+        "https://www.e-steiermark.com"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "energie-ried-at",
+      "name": "Strom-, Gas und Fernwärmetarife von Energie Ried (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-energie-ried-at",
+      "urls": [
+        "https://www.energie-ried.at/index.php/start/strom-privat/strompreise-privat",
+        "https://www.energie-ried.at/index.php/start/gas-privat/gas-preis-privat",
+        "https://www.energie-ried.at/index.php/start/fernwaerme-privat/fernwaermepreis"
+      ],
+      "hosts": [
+        "https://www.energie-ried.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "API"
+      ]
+    },
+    {
+      "slug": "ewr-energie-com",
+      "name": "Stromtarife von EWR Reutte (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-ewr-energie-com",
+      "urls": [
+        "https://www.ewr-energie.com/strom/stromplus/",
+        "https://www.ewr-energie.com/strom/stromdynamix/",
+        "https://www.ewr-energie.com/strom/ewrwaerme/"
+      ],
+      "hosts": [
+        "https://www.ewr-energie.com"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "gogreenenergy-at",
+      "name": "Strom und Gastarife von Go Green Energy (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-gogreenenergy-at",
+      "urls": [
+        "https://www.gogreenenergy.at/strom.html",
+        "https://www.gogreenenergy.at/gas.html"
+      ],
+      "hosts": [
+        "https://www.gogreenenergy.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "gruenwelt-at",
+      "name": "Strom und Gastarife von Grünwelt Energie (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-gruenwelt-at",
+      "urls": [
+        "https://www.gruenwelt.at/gruenstrom-12.html",
+        "https://www.gruenwelt.at/gruenstrom-24.html",
+        "https://www.gruenwelt.at/gruenstrom-36.html",
+        "https://www.gruenwelt.at/gruenstrom-classic.html",
+        "https://www.gruenwelt.at/gruengas-12.html",
+        "https://www.gruenwelt.at/gruengas-24.html",
+        "https://www.gruenwelt.at/gruengas-36.html",
+        "https://www.gruenwelt.at/gruengas-classic.html"
+      ],
+      "hosts": [
+        "https://www.gruenwelt.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "hall-ag",
+      "name": "Strom und Fernwärmetarife von Hall AG (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-hall-ag",
+      "urls": [
+        "https://www.hall.ag/de/Strom/NEU-Tarif-SUNPOWER",
+        "https://www.hall.ag/de/Strom/Sommer-Tarif-SNAP",
+        "https://www.hall.ag/de/Waerme"
+      ],
+      "hosts": [
+        "https://www.hall.ag"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Feeds"
+      ],
+      "luecken": [
+        "Detail",
+        "Feeds"
+      ]
+    },
+    {
+      "slug": "ikb-at",
+      "name": "Strom und Fernwärmetarife von IKB Innsbruck (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-ikb-at",
+      "urls": [
+        "https://www.ikb.at/energie/stromtarife-privat",
+        "https://www.ikb.at/energie/stromtarife-privat/comfort",
+        "https://www.ikb.at/energie/stromtarife-privat/comfort-boiler-heizung",
+        "https://www.ikb.at/energie/fernwaerme"
+      ],
+      "hosts": [
+        "https://www.ikb.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "kelag-at",
+      "name": "Strom und Gastarife von Kelag (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-kelag-at",
+      "urls": [
+        "https://www.kelag.at/privatkunden/strom.htm",
+        "https://www.kelag.at/privatkunden/erdgas.htm"
+      ],
+      "hosts": [
+        "https://www.kelag.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "linzag-at",
+      "name": "Strom und Gastarife von Linz AG (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-linzag-at",
+      "urls": [
+        "https://www.linzag.at/portal/de/privatkunden/zuhause/strom/stromtarife",
+        "https://www.linzag.at/portal/de/privatkunden/zuhause/erdgas/erdgastarife"
+      ],
+      "hosts": [
+        "https://www.linzag.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "maxenergy-at",
+      "name": "Strom und Gastarife von MAXENERGY (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-maxenergy-at",
+      "urls": [
+        "https://www.maxenergy.at/tarifuebersicht.html",
+        "https://www.maxenergy.at/tarifuebersicht.html?tariff_type=electricity",
+        "https://www.maxenergy.at/tarifuebersicht.html?tariff_type=gas"
+      ],
+      "hosts": [
+        "https://www.maxenergy.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "myelectric-at",
+      "name": "Strom und Gastarife von MyElectric (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-myelectric-at",
+      "urls": [
+        "https://myelectric.at/de-at",
+        "https://myelectric.at/de-at/gas"
+      ],
+      "hosts": [
+        "https://myelectric.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "naturkraft-at",
+      "name": "Stromtarife von Naturkraft (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-naturkraft-at",
+      "urls": [
+        "https://www.naturkraft.at/oekostromtarife/oekostrom-detail/oekostrom-garant-30",
+        "https://www.naturkraft.at/oekostromtarife/oekostrom-detail/oekostrom-aktiv-10",
+        "https://www.naturkraft.at/oekostromtarife/oekostrom-detail/naturstrom-garant-30",
+        "https://www.naturkraft.at/oekostromtarife/oekostrom-detail/naturstrom-aktiv-10"
+      ],
+      "hosts": [
+        "https://www.naturkraft.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "oekostrom-at",
+      "name": "Stromtarife von oekostrom AG (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-oekostrom-at",
+      "urls": [
+        "https://oekostrom.at/strom/"
+      ],
+      "hosts": [
+        "https://oekostrom.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Feeds",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Feeds",
+        "API"
+      ]
+    },
+    {
+      "slug": "salzburg-ag-at-energie",
+      "name": "Stromtarife von Salzburg AG (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-salzburg-ag-at-energie",
+      "urls": [
+        "https://www.salzburg-ag.at/strom/privat/stromprodukte/strom-privat.html",
+        "https://www.salzburg-ag.at/strom/privat/stromprodukte/strom-preisfix.html",
+        "https://www.salzburg-ag.at/strom/privat/stromprodukte/strom-index-privat.html",
+        "https://www.salzburg-ag.at/strom/privat/stromprodukte/strom-flexspot.html"
+      ],
+      "hosts": [
+        "https://www.salzburg-ag.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "stadtwerke-amstetten-at",
+      "name": "Strom und Fernwärmetarife von Stadtwerke Amstetten (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-stadtwerke-amstetten-at",
+      "urls": [
+        "https://stadtwerke.amstetten.at/versorgungssicherheit/unsere-tarife",
+        "https://stadtwerke.amstetten.at/versorgungssicherheit/fernwaerme"
+      ],
+      "hosts": [
+        "https://stadtwerke.amstetten.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "stadtwerkeschwaz-at",
+      "name": "Strom und Fernwärmetarife von Stadtwerke Schwaz (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-stadtwerkeschwaz-at",
+      "urls": [
+        "https://www.stadtwerkeschwaz.at/strom",
+        "https://www.stadtwerkeschwaz.at/waerme-schwaz"
+      ],
+      "hosts": [
+        "https://www.stadtwerkeschwaz.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Downloads",
+        "API"
+      ]
+    },
+    {
+      "slug": "stw-at",
+      "name": "Strom-, Gas und Fernwärmetarife von Energie Klagenfurt (STW) (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-stw-at",
+      "urls": [
+        "https://www.stw.at/privat/energie/strom/strom-tarif-komfort/",
+        "https://www.stw.at/privat/energie/gas/gastarife/",
+        "https://www.stw.at/privat/energie/fernwaerme/unsere-fernwaermetarife/"
+      ],
+      "hosts": [
+        "https://www.stw.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "API"
+      ]
+    },
+    {
+      "slug": "switch-at",
+      "name": "Strom und Gastarife von switch (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-switch-at",
+      "urls": [
+        "https://www.switch.at/strom",
+        "https://www.switch.at/gas"
+      ],
+      "hosts": [
+        "https://www.switch.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "vkw-at",
+      "name": "Strom-, Gas und Fernwärmetarife von illwerke vkw (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "energie",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-vkw-at",
+      "urls": [
+        "https://www.vkw.at/produkte/strom/strom-duo",
+        "https://www.vkw.at/produkte/strom/strom-flex",
+        "https://www.vkw.at/produkte/strom/strom-dynamisch",
+        "https://www.vkw.at/produkte/strom/grundversorgung",
+        "https://www.vkw.at/produkte/waerme/erdgas",
+        "https://www.vkw.at/produkte/waerme/nahwaerme"
+      ],
+      "hosts": [
+        "https://www.vkw.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "fonira-at",
+      "name": "OpenCLI plugin + standalone CLI for fonira Austria tariffs (fonira.at)",
+      "kategorie": "festnetz",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-fonira-at",
+      "urls": [
+        "https://fonira.at",
+        "https://fonira.at/produkte/internet/privat/"
+      ],
+      "hosts": [
+        "https://fonira.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "API"
+      ]
+    },
+    {
+      "slug": "kabelplus-at",
+      "name": "OpenCLI plugin + standalone CLI for kabelplus Austria tariffs (kabelplus.at)",
+      "kategorie": "festnetz",
+      "status": "failing",
+      "pfad": null,
+      "repo": "opencli-kabelplus-at",
+      "urls": [
+        "https://kabelplus.at",
+        "https://www.kabelplus.at",
+        "https://www.kabelplus.at/privat/produkte/internet"
+      ],
+      "hosts": [
+        "https://kabelplus.at",
+        "https://www.kabelplus.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "kufnet-at",
+      "name": "OpenCLI connector for Kufgem (kufnet.at)",
+      "kategorie": "festnetz",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-kufnet-at",
+      "urls": [
+        "https://www.kufnet.at/internet/",
+        "https://www.kufnet.at/tarifaenderung/"
+      ],
+      "hosts": [
+        "https://www.kufnet.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "Playwright/Headless",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "liwest-at",
+      "name": "OpenCLI plugin + standalone CLI for LIWEST Austria tariffs (liwest.at)",
+      "kategorie": "festnetz",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-liwest-at",
+      "urls": [
+        "https://liwest.at",
+        "https://www.liwest.at",
+        "https://www.liwest.at/produkte/internet"
+      ],
+      "hosts": [
+        "https://liwest.at",
+        "https://www.liwest.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "salzburg-ag-at",
+      "name": "OpenCLI plugin + standalone CLI for Salzburg AG CableLink Austria tariffs (salzburg-ag.at)",
+      "kategorie": "festnetz",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-salzburg-ag-at",
+      "urls": [
+        "https://salzburg.ag.at",
+        "https://www.salzburg-ag.at",
+        "https://www.salzburg-ag.at/internet-tv-telefon/fuer-privat/internet.html"
+      ],
+      "hosts": [
+        "https://salzburg.ag.at",
+        "https://www.salzburg-ag.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "wienenergie-at",
+      "name": "Wien Energie Strom- und Internettarife (SuperSchnell) von den öffentlichen Produktseiten",
+      "kategorie": "festnetz",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-wienenergie-at",
+      "urls": [
+        "https://www.wienenergie.at/privat/produkte/strom/optima-entspannt-plus/",
+        "https://www.wienenergie.at/privat/produkte/internet-und-tv/",
+        "https://www.wienenergie.at/business/produkte/telekommunikation/blizznetbusinessinternet/",
+        "https://meine.wienenergie.at/superschnell-bestellen/",
+        "https://breitbandatlas.gv.at/",
+        "https://www.netztest.at/"
+      ],
+      "hosts": [
+        "https://www.wienenergie.at",
+        "https://meine.wienenergie.at",
+        "https://breitbandatlas.gv.at",
+        "https://www.netztest.at"
+      ],
+      "befehle": [
+        "strom",
+        "internet"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ]
+    },
+    {
+      "slug": "wvnet-at",
+      "name": "OpenCLI connector for WVNET (wvnet.at)",
+      "kategorie": "festnetz",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-wvnet-at",
+      "urls": [
+        "https://www.wvnet.at/-/internet",
+        "https://www.wvnet.at/-/internetbestellung-privat"
+      ],
+      "hosts": [
+        "https://www.wvnet.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "Playwright/Headless",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "geizhals-at",
+      "name": "OpenCLI plugin + standalone CLI for geizhals.at category listings, product details and price history",
+      "kategorie": "geraete",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-geizhals-at",
+      "urls": [
+        "https://geizhals.at/",
+        "https://geizhals.at/robots.txt",
+        "https://geizhals.at",
+        "https://geizhals.at/api/gh0/price_history"
+      ],
+      "hosts": [
+        "https://geizhals.at"
+      ],
+      "befehle": [
+        "category",
+        "product",
+        "price-history",
+        "search",
+        "scrape-category"
+      ],
+      "abgedeckt": [
+        "Suche",
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "ares-cz",
+      "name": "Tschechische Firmen per IČO oder Namen im amtlichen Register ARES finden (Stammdaten, Adresse, NACE).",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/risk-b/ares-cz",
+      "repo": "opencli-connectors/international/risk-b/ares-cz",
+      "urls": [
+        "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest",
+        "https://ares.gov.cz/ekonomicke-subjekty?ico="
+      ],
+      "hosts": [
+        "https://ares.gov.cz"
+      ],
+      "befehle": [
+        "subjekt",
+        "suche"
+      ],
+      "abgedeckt": [
+        "Suche"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle REST-API ARES (Ministerstvo financí CZ), JSON",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "robots.txt sperrt nur /cms/. API ist offiziell öffentlich, gedrosselt 1 s.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "bodacc-fr",
+      "name": "BODACC (DILA, Opendatasoft) – öffentliche Firmendaten ohne Login abfragen.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/eu-a/bodacc-fr",
+      "repo": "opencli-connectors/international/eu-a/bodacc-fr",
+      "urls": [
+        "https://bodacc-datadila.opendatasoft.com/api/explore/v2.1",
+        "https://bodacc-datadila.opendatasoft.com/api/explore/v2.1/catalog/datasets/annonces-commerciales/records?limit={a.limit}&order_by=dateparution%20desc{where}"
+      ],
+      "hosts": [
+        "https://bodacc-datadila.opendatasoft.com"
+      ],
+      "befehle": [],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": null,
+      "robots": "gesperrt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "brreg-no",
+      "name": "Brønnøysundregistrene Enhetsregisteret NO – öffentliche Firmendaten ohne Login abfragen.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/eu-a/brreg-no",
+      "repo": "opencli-connectors/international/eu-a/brreg-no",
+      "urls": [
+        "https://data.brreg.no/enhetsregisteret/api",
+        "https://data.brreg.no/enhetsregisteret/api/enheter/{a.orgnr}",
+        "https://data.brreg.no/enhetsregisteret/api/enheter?navn={Q(a.q"
+      ],
+      "hosts": [
+        "https://data.brreg.no"
+      ],
+      "befehle": [],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "API"
+      ],
+      "luecken": []
+    },
+    {
+      "slug": "eu-sanktionen",
+      "name": "Namen gegen die konsolidierte EU-Finanzsanktionsliste prüfen; Filter nach Programm, Land, Typ.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/risk-b/eu-sanktionen",
+      "repo": "opencli-connectors/international/risk-b/eu-sanktionen",
+      "urls": [
+        "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw"
+      ],
+      "hosts": [
+        "https://webgate.ec.europa.eu"
+      ],
+      "befehle": [
+        "suche",
+        "liste"
+      ],
+      "abgedeckt": [
+        "Suche",
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizieller CSV-Voll-Export EU Financial Sanctions Files (EU-Kommission, öffentlicher Token aus der FSF-Doku), 6 h lokal gecacht",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "robots.txt liefert 404. Öffentlicher Download ohne Login (der Token ist der öffentlich dokumentierte Standard-Token, kein Secret).",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "gleif",
+      "name": "LEI einer Firma finden oder prüfen (Name, Sitz, Registernummer, LEI-Status, Erneuerungsdatum), weltweit inkl. Österreich.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/welle-int/gleif",
+      "repo": "opencli-connectors/international/welle-int/gleif",
+      "urls": [
+        "https://search.gleif.org/#/record/5299000HTNHA5ACH9N32",
+        "https://api.gleif.org",
+        "https://api.gleif.org/api/v1/lei-records",
+        "https://search.gleif.org/#/record/"
+      ],
+      "hosts": [
+        "https://search.gleif.org",
+        "https://api.gleif.org"
+      ],
+      "befehle": [
+        "suche",
+        "lei"
+      ],
+      "abgedeckt": [
+        "Suche",
+        "Detail",
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "keine robots.txt-Sperre für /api",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "API"
+      ],
+      "luecken": []
+    },
+    {
+      "slug": "handelsregister-de",
+      "name": "Deutsche Firma im Handelsregister finden: Registergericht, HRA/HRB-Nummer, Sitz, Status (aktuell/gelöscht).",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/welle-int/handelsregister-de",
+      "repo": "opencli-connectors/international/welle-int/handelsregister-de",
+      "urls": [
+        "https://www.handelsregister.de/rp_web/erweitertesuche/welcome.xhtml",
+        "https://www.handelsregister.de"
+      ],
+      "hosts": [
+        "https://www.handelsregister.de"
+      ],
+      "befehle": [
+        "suche"
+      ],
+      "abgedeckt": [
+        "Suche"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "keine robots.txt (404)",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "krs-pl",
+      "name": "Polnische Gesellschaften per KRS-Nummer abfragen: Stammdaten, NIP/REGON, Kapital, Vorstand.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/risk-b/krs-pl",
+      "repo": "opencli-connectors/international/risk-b/krs-pl",
+      "urls": [
+        "https://api-krs.ms.gov.pl/api/krs",
+        "https://wyszukiwarka-krs.ms.gov.pl/"
+      ],
+      "hosts": [
+        "https://api-krs.ms.gov.pl",
+        "https://wyszukiwarka-krs.ms.gov.pl"
+      ],
+      "befehle": [
+        "auszug",
+        "organe"
+      ],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle API api-krs.ms.gov.pl (Justizministerium PL), aktueller Auszug JSON",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "Kein robots.txt. Offizielle API ohne Schlüssel; Suche nach Namen bietet die API nicht (nur KRS-Nummer).",
+      "robots": "erlaubt",
+      "website_features": [
+        "API"
+      ],
+      "luecken": []
+    },
+    {
+      "slug": "ofac-sls",
+      "name": "Namen gegen die US-OFAC-SDN-Liste (inkl. Aliase) prüfen, Einträge nach Programm filtern.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/risk-b/ofac-sls",
+      "repo": "opencli-connectors/international/risk-b/ofac-sls",
+      "urls": [
+        "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports",
+        "https://sanctionssearch.ofac.treas.gov/Details.aspx?id="
+      ],
+      "hosts": [
+        "https://sanctionslistservice.ofac.treas.gov",
+        "https://sanctionssearch.ofac.treas.gov"
+      ],
+      "befehle": [
+        "suche",
+        "liste"
+      ],
+      "abgedeckt": [
+        "Suche",
+        "Listen",
+        "Downloads",
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizieller Voll-Export OFAC Sanctions List Service (SDN.CSV + ALT.CSV), 6 h lokal gecacht",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "Kein robots.txt. Offizieller Download, 2 Requests pro 6 h.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "opencorporates",
+      "name": "Stammdaten einer Firma, wenn Jurisdiktion und Registernummer bekannt sind (z. B. aus GLEIF): Status, Typ, Adresse, Branche, frühere Namen.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/welle-int/opencorporates",
+      "repo": "opencli-connectors/international/welle-int/opencorporates",
+      "urls": [
+        "https://opencorporates.com/companies/gb/00445790",
+        "https://opencorporates.com/companies"
+      ],
+      "hosts": [
+        "https://opencorporates.com"
+      ],
+      "befehle": [
+        "firma"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "/companies/* erlaubt; /search, /officers, /filings sind per robots.txt gesperrt und werden nicht genutzt",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Feeds",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Feeds",
+        "API"
+      ]
+    },
+    {
+      "slug": "prh-fi",
+      "name": "PRH / YTJ Open Data FI – öffentliche Firmendaten ohne Login abfragen.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/eu-a/prh-fi",
+      "repo": "opencli-connectors/international/eu-a/prh-fi",
+      "urls": [
+        "https://avoindata.prh.fi/opendata-ytj-api/v3",
+        "https://avoindata.prh.fi/opendata-ytj-api/v3/companies?"
+      ],
+      "hosts": [
+        "https://avoindata.prh.fi"
+      ],
+      "befehle": [],
+      "abgedeckt": [],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen",
+        "API"
+      ]
+    },
+    {
+      "slug": "recherche-entreprises-fr",
+      "name": "Recherche d'entreprises (api.gouv.fr) – öffentliche Firmendaten ohne Login abfragen.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/eu-a/recherche-entreprises-fr",
+      "repo": "opencli-connectors/international/eu-a/recherche-entreprises-fr",
+      "urls": [
+        "https://recherche-entreprises.api.gouv.fr",
+        "https://recherche-entreprises.api.gouv.fr/search?q={Q(a.q"
+      ],
+      "hosts": [
+        "https://recherche-entreprises.api.gouv.fr"
+      ],
+      "befehle": [],
+      "abgedeckt": [],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen",
+        "API"
+      ]
+    },
+    {
+      "slug": "sec-edgar",
+      "name": "US-börsennotierte Firmen: Ticker/CIK finden, Filings (10-K, 8-K …) und XBRL-Kennzahlen aus SEC EDGAR.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/risk-b/sec-edgar",
+      "repo": "opencli-connectors/international/risk-b/sec-edgar",
+      "urls": [
+        "https://data.sec.gov",
+        "https://www.sec.gov/files/company_tickers.json",
+        "https://data.sec.gov/submissions/CIK",
+        "https://www.sec.gov/Archives/edgar/data/",
+        "https://data.sec.gov/api/xbrl/companyconcept/CIK"
+      ],
+      "hosts": [
+        "https://data.sec.gov",
+        "https://www.sec.gov"
+      ],
+      "befehle": [
+        "firmen",
+        "filings",
+        "kennzahl"
+      ],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "API mit Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle SEC-APIs data.sec.gov (submissions, XBRL companyconcept) + company_tickers.json",
+      "api_key": true,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "SEC Fair-Access: deklarierter User-Agent mit Kontakt nötig (Standard „servas-ai opencli-connectors office@servas.ai“, per SEC_USER_AGENT überschreibbar), max. 10 req/s – Connector nutzt 1 req/s. Ohne Kontakt-UA kommt 403.",
+      "robots": "erlaubt",
+      "website_features": [
+        "API"
+      ],
+      "luecken": []
+    },
+    {
+      "slug": "un-sanktionen",
+      "name": "Namen gegen die konsolidierte UN-Sanktionsliste (Personen, Organisationen, Aliase) prüfen.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/risk-b/un-sanktionen",
+      "repo": "opencli-connectors/international/risk-b/un-sanktionen",
+      "urls": [
+        "https://scsanctions.un.org/resources/xml/en/consolidated.xml",
+        "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list"
+      ],
+      "hosts": [
+        "https://scsanctions.un.org",
+        "https://main.un.org"
+      ],
+      "befehle": [
+        "suche",
+        "liste"
+      ],
+      "abgedeckt": [
+        "Suche",
+        "Listen"
+      ],
+      "zugang": "Open-Data-Dump",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizieller XML-Export der UN-SC Consolidated List, 6 h lokal gecacht",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "robots.txt liefert keine Regeln. Offizieller Download, 1 Request pro 6 h.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "vies",
+      "name": "EU VIES (USt-IdNr-Prüfung) – öffentliche Firmendaten ohne Login abfragen.",
+      "kategorie": "international",
+      "status": "passing",
+      "pfad": "international/eu-a/vies",
+      "repo": "opencli-connectors/international/eu-a/vies",
+      "urls": [
+        "https://ec.europa.eu/taxation_customs/vies/rest-api",
+        "https://ec.europa.eu/taxation_customs/vies/rest-api/ms/{a.country}/vat/{Q(a.vat"
+      ],
+      "hosts": [
+        "https://ec.europa.eu"
+      ],
+      "befehle": [],
+      "abgedeckt": [],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "a1-net",
+      "name": "OpenCLI plugin + standalone CLI for A1 Österreich tariffs (a1.net)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-a1-net",
+      "urls": [
+        "https://a1.net",
+        "https://www.a1.net/internet/mobile-internet-tarife/net-cube-mit-vertrag",
+        "https://www.a1.net/internet",
+        "https://www.a1.net/business/internet-telefonanlagen/mobiles-internet/business-cube",
+        "https://www.a1.net/business/handys-tarife/tarife-ohne-handy",
+        "https://www.a1.net/business",
+        "https://www.a1.net/salesrest/tariffConfigurator/getConfiguredData",
+        "https://www.a1.net/handys-tarife/tarife-ohne-bindung",
+        "https://www.a1.net/handys-tarife/jugendtarife",
+        "https://www.a1.net/handys-tarife/handytarife"
+      ],
+      "hosts": [
+        "https://a1.net",
+        "https://www.a1.net"
+      ],
+      "befehle": [
+        "handytarife",
+        "internet-cube",
+        "business",
+        "scrape-all",
+        "verfuegbarkeit"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "drei-at",
+      "name": "OpenCLI plugin + standalone CLI for Drei Austria tariffs (drei.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-drei-at",
+      "urls": [
+        "https://www.drei.at/de/info/netzabdeckung/",
+        "https://www.drei.at",
+        "https://nominatim.openstreetmap.org/search"
+      ],
+      "hosts": [
+        "https://www.drei.at",
+        "https://nominatim.openstreetmap.org"
+      ],
+      "befehle": [
+        "handytarife",
+        "internet",
+        "business",
+        "scrape-all",
+        "adresscheck"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "teilweise gesperrt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "educom-at",
+      "name": "OpenCLI plugin + standalone CLI for educom Austria tariffs (educom.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-educom-at",
+      "urls": [
+        "https://www.educom.at/tarife/handytarife",
+        "https://www.educom.at/tarife/internettarife",
+        "https://www.educom.at"
+      ],
+      "hosts": [
+        "https://www.educom.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "georg-at",
+      "name": "OpenCLI plugin + standalone CLI for Georg Austria tariffs (georg.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-georg-at",
+      "urls": [
+        "https://www.georg.at/handytarife",
+        "https://www.georg.at/internettarife",
+        "https://www.georg.at"
+      ],
+      "hosts": [
+        "https://www.georg.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "hot-at",
+      "name": "OpenCLI plugin + standalone CLI for HoT Austria tariffs (hot.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-hot-at",
+      "urls": [
+        "https://www.hot.at/tarife/",
+        "https://www.hot.at"
+      ],
+      "hosts": [
+        "https://www.hot.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "lidl-connect-at",
+      "name": "OpenCLI plugin + standalone CLI for Lidl Connect Austria tariffs (lidl-connect.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-lidl-connect-at",
+      "urls": [
+        "https://www.lidl-connect.at/tarife/",
+        "https://www.lidl-connect.at"
+      ],
+      "hosts": [
+        "https://www.lidl-connect.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Feeds",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Feeds",
+        "API"
+      ]
+    },
+    {
+      "slug": "magenta-at",
+      "name": "OpenCLI plugin + standalone CLI for Magenta Austria tariffs and read-only availability checks",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-magenta-at",
+      "urls": [
+        "https://www.magenta.at/handytarife/tarife-ohne-handy",
+        "https://www.magenta.at/handytarife/handy-mit-tarif",
+        "https://www.magenta.at/handytarife/wertkarte",
+        "https://www.magenta.at/handytarife/jugendtarif",
+        "https://www.magenta.at/handytarife/kindertarif",
+        "https://www.magenta.at/internet/verfuegbarkeit",
+        "https://www.magenta.at/internet/glasfaser",
+        "https://www.magenta.at/internet/mobiles-internet",
+        "https://www.magenta.at/internet/wertkarte",
+        "https://www.magenta.at/business/handys-tarife/alle-sprachtarife/handy-tarife"
+      ],
+      "hosts": [
+        "https://www.magenta.at"
+      ],
+      "befehle": [
+        "mobilfunk",
+        "internet",
+        "business",
+        "verfuegbarkeit",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "redbullmobile-at",
+      "name": "OpenCLI plugin + standalone CLI for Red Bull MOBILE Austria tariffs (redbullmobile.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-redbullmobile-at",
+      "urls": [
+        "https://www.redbullmobile.at/tarife",
+        "https://www.redbullmobile.at/internet",
+        "https://www.redbullmobile.at"
+      ],
+      "hosts": [
+        "https://www.redbullmobile.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "spusu-at",
+      "name": "OpenCLI plugin + standalone CLI for spusu Austria tariffs (spusu.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-spusu-at",
+      "urls": [
+        "https://www.spusu.at/imoscmsapi/tariffs/mobile",
+        "https://www.spusu.at/imoscmsapi/tariffs/fixedline",
+        "https://www.spusu.at/imoscmsapi",
+        "https://www.spusu.at/tarife",
+        "https://www.spusu.at",
+        "https://www.spusu.at/"
+      ],
+      "hosts": [
+        "https://www.spusu.at"
+      ],
+      "befehle": [
+        "handytarife",
+        "internet",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "wowww-at",
+      "name": "OpenCLI plugin + standalone CLI for WOWWW! Austria tariffs (wowww.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-wowww-at",
+      "urls": [
+        "https://wowww.at",
+        "https://wowww.at/produkte-tarife/"
+      ],
+      "hosts": [
+        "https://wowww.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "API"
+      ]
+    },
+    {
+      "slug": "xoxo-mobile-at",
+      "name": "OpenCLI plugin + standalone CLI for XOXO Austria tariffs (xoxo-mobile.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-xoxo-mobile-at",
+      "urls": [
+        "https://www.xoxo-mobile.at/tarife",
+        "https://www.xoxo-mobile.at"
+      ],
+      "hosts": [
+        "https://www.xoxo-mobile.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "yesss-at",
+      "name": "OpenCLI plugin + standalone CLI for yesss! Austria tariffs (yesss.at)",
+      "kategorie": "mobil",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-yesss-at",
+      "urls": [
+        "https://www.yesss.at/tarife",
+        "https://www.yesss.at/internet",
+        "https://www.yesss.at"
+      ],
+      "hosts": [
+        "https://www.yesss.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "rtr-at",
+      "name": "OpenCLI plugin + standalone CLI for RTR Netztest open data (read-only)",
+      "kategorie": "netz",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-rtr-at",
+      "urls": [
+        "https://c01.netztest.at/RMBTStatisticServer/opentests/search",
+        "https://data.wien.gv.at/daten/OGDAddressService.svc/GetAddressInfo",
+        "https://www.netztest.at/de/Opendata",
+        "https://www.netztest.at/de/Opentest?",
+        "https://breitbandatlas.gv.at/",
+        "https://www.data.gv.at/katalog/dataset/6d731e6e-7dcf-4bde-8061-d0e195f62f6c"
+      ],
+      "hosts": [
+        "https://c01.netztest.at",
+        "https://data.wien.gv.at",
+        "https://www.netztest.at",
+        "https://breitbandatlas.gv.at",
+        "https://www.data.gv.at"
+      ],
+      "befehle": [
+        "bandgasse"
+      ],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "data-gv-at",
+      "name": "Offene Datensätze österreichischer Behörden finden, inkl. Download-Links und Lizenz. Ohne Login. Nutze diesen Skill, wenn ein Agent Daten aus data.gv.at braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/data-gv-at",
+      "repo": "opencli-connectors/opendata/data-gv-at",
+      "urls": [
+        "https://www.data.gv.at/api/hub/search",
+        "https://www.data.gv.at/datasets/"
+      ],
+      "hosts": [
+        "https://www.data.gv.at"
+      ],
+      "befehle": [
+        "suche",
+        "kataloge",
+        "datensatz"
+      ],
+      "abgedeckt": [
+        "Suche",
+        "Listen",
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle Such-API des Katalogs (piveau hub-search, JSON)",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "www.data.gv.at hat keine robots.txt (404); API ist öffentlich dokumentiert. Gedrosselt.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "edikte-versteigerungen",
+      "name": "Aktuelle Zwangsversteigerungen von Immobilien nach Bundesland/PLZ/Ort, mit Schätzwert, Termin, Gericht, Aktenzeichen. Ohne Login. Nutze diesen Skill, wenn ein Agent Daten aus Ediktsdatei braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/edikte-versteigerungen",
+      "repo": "opencli-connectors/opendata/edikte-versteigerungen",
+      "urls": [
+        "https://edikte.justiz.gv.at/edikte/ex/exedi3.nsf"
+      ],
+      "hosts": [
+        "https://edikte.justiz.gv.at"
+      ],
+      "befehle": [
+        "liste",
+        "detail"
+      ],
+      "abgedeckt": [
+        "Detail",
+        "Listen"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Keine API. GET-Suche wie Webformular (Lotus Domino SearchView) + Edikt-Detailseite",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "/robots.txt liefert nur eine HTML-Ladeseite (keine Regeln). Seiten-Meta: nofollow/noarchive – der Connector folgt keinen Links automatisch und archiviert keine Seiten, nur gezielte Abfragen. Gedrosselt 1,5 s.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": []
+    },
+    {
+      "slug": "evi-amtsblatt",
+      "name": "Amtliche Bekanntmachungen: Zwangsstrafen (Firmenbuch), FMA-Warnungen/Sanktionen, Stellenausschreibungen, Bilanzen. Ohne Login. Nutze diesen Skill, wenn ein Agent Daten aus evi.gv.at braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/evi-amtsblatt",
+      "repo": "opencli-connectors/opendata/evi-amtsblatt",
+      "urls": [
+        "https://www.evi.gv.at",
+        "https://www.evi.gv.at/b/"
+      ],
+      "hosts": [
+        "https://www.evi.gv.at"
+      ],
+      "befehle": [
+        "kategorien",
+        "liste",
+        "detail"
+      ],
+      "abgedeckt": [
+        "Detail",
+        "Listen"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Keine API. Sitemaps + Veröffentlichungsseiten (/b/...) als HTML",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "robots.txt sperrt /s (Suche), /a, /v, /o/ (Firmenprofile) und PDFs – diese Pfade werden NICHT genutzt. Erlaubt: Sitemaps und /b/-Veröffentlichungen. Gedrosselt 1,5 s.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche"
+      ]
+    },
+    {
+      "slug": "opendata-linz",
+      "name": "Offene Daten von Stadt Linz (data.linz.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/laender/linz",
+      "repo": "opencli-connectors/opendata/laender/linz",
+      "urls": [
+        "https://www.data.gv.at/api/hub/search",
+        "https://www.data.gv.at/api/hub/search (Kataloge: gga-40101)",
+        "https://www.data.gv.at/datasets/",
+        "https://data.linz.gv.at"
+      ],
+      "hosts": [
+        "https://www.data.gv.at",
+        "https://data.linz.gv.at"
+      ],
+      "befehle": [],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle data.gv.at hub-search-API (piveau, JSON), gefiltert auf die Kataloge des Portals; Datenvorschau direkt aus der Distribution beim Herausgeber",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "www.data.gv.at hat keine robots.txt; API öffentlich dokumentiert, Daten meist CC BY 4.0. Gedrosselt (1,5 s).",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "opendata-oberoesterreich",
+      "name": "Offene Daten von Land Oberösterreich (data.ooe.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/laender/oberoesterreich",
+      "repo": "opencli-connectors/opendata/laender/oberoesterreich",
+      "urls": [
+        "https://www.data.gv.at/api/hub/search",
+        "https://www.data.gv.at/api/hub/search (Kataloge: harvest-ooe)",
+        "https://www.data.gv.at/datasets/",
+        "https://www.land-oberoesterreich.gv.at/opendata.htm"
+      ],
+      "hosts": [
+        "https://www.data.gv.at",
+        "https://www.land-oberoesterreich.gv.at"
+      ],
+      "befehle": [],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle data.gv.at hub-search-API (piveau, JSON), gefiltert auf die Kataloge des Portals; Datenvorschau direkt aus der Distribution beim Herausgeber",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "www.data.gv.at hat keine robots.txt; API öffentlich dokumentiert, Daten meist CC BY 4.0. Gedrosselt (1,5 s).",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "opendata-salzburg",
+      "name": "Offene Daten von Land Salzburg (data.salzburg.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/laender/salzburg",
+      "repo": "opencli-connectors/opendata/laender/salzburg",
+      "urls": [
+        "https://www.data.gv.at/api/hub/search",
+        "https://www.data.gv.at/api/hub/search (Kataloge: harvest-sbg, l5)",
+        "https://www.data.gv.at/datasets/",
+        "https://www.salzburg.gv.at/opendata"
+      ],
+      "hosts": [
+        "https://www.data.gv.at",
+        "https://www.salzburg.gv.at"
+      ],
+      "befehle": [],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle data.gv.at hub-search-API (piveau, JSON), gefiltert auf die Kataloge des Portals; Datenvorschau direkt aus der Distribution beim Herausgeber",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "www.data.gv.at hat keine robots.txt; API öffentlich dokumentiert, Daten meist CC BY 4.0. Gedrosselt (1,5 s).",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "opendata-steiermark",
+      "name": "Offene Daten von Land Steiermark (data.steiermark.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/laender/steiermark",
+      "repo": "opencli-connectors/opendata/laender/steiermark",
+      "urls": [
+        "https://www.data.gv.at/api/hub/search",
+        "https://www.data.gv.at/api/hub/search (Kataloge: harvest-stmk, l6)",
+        "https://www.data.gv.at/datasets/",
+        "https://data.steiermark.at"
+      ],
+      "hosts": [
+        "https://www.data.gv.at",
+        "https://data.steiermark.at"
+      ],
+      "befehle": [],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle data.gv.at hub-search-API (piveau, JSON), gefiltert auf die Kataloge des Portals; Datenvorschau direkt aus der Distribution beim Herausgeber",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "www.data.gv.at hat keine robots.txt; API öffentlich dokumentiert, Daten meist CC BY 4.0. Gedrosselt (1,5 s).",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "opendata-tirol",
+      "name": "Offene Daten von Land Tirol (data.tirol.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/laender/tirol",
+      "repo": "opencli-connectors/opendata/laender/tirol",
+      "urls": [
+        "https://www.data.gv.at/api/hub/search",
+        "https://www.data.gv.at/api/hub/search (Kataloge: l7-elak, l7, harvest-tirol-gis)",
+        "https://www.data.gv.at/datasets/",
+        "https://www.tirol.gv.at/data"
+      ],
+      "hosts": [
+        "https://www.data.gv.at",
+        "https://www.tirol.gv.at"
+      ],
+      "befehle": [],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle data.gv.at hub-search-API (piveau, JSON), gefiltert auf die Kataloge des Portals; Datenvorschau direkt aus der Distribution beim Herausgeber",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "www.data.gv.at hat keine robots.txt; API öffentlich dokumentiert, Daten meist CC BY 4.0. Gedrosselt (1,5 s).",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "opendata-wien",
+      "name": "Offene Daten von Stadt Wien (data.wien.gv.at) finden und echte Datenzeilen (CSV/JSON) abrufen, ohne Login. Nutze diesen Skill, wenn ein Agent Open-Government-Data dieses Landes/dieser Stadt braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/laender/wien",
+      "repo": "opencli-connectors/opendata/laender/wien",
+      "urls": [
+        "https://www.data.gv.at/api/hub/search",
+        "https://www.data.gv.at/api/hub/search (Kataloge: l9, l9-vgw)",
+        "https://www.data.gv.at/datasets/",
+        "https://data.wien.gv.at/daten/geo?",
+        "https://data.wien.gv.at"
+      ],
+      "hosts": [
+        "https://www.data.gv.at",
+        "https://data.wien.gv.at"
+      ],
+      "befehle": [],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle data.gv.at hub-search-API (piveau, JSON), gefiltert auf die Kataloge des Portals; Datenvorschau direkt aus der Distribution beim Herausgeber",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "www.data.gv.at hat keine robots.txt; API öffentlich dokumentiert, Daten meist CC BY 4.0. Gedrosselt (1,5 s).",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "ris",
+      "name": "Gesetze (Bundes-/Landesrecht) und Entscheidungen (OGH, VfGH, VwGH, BVwG …) suchen. Ohne Login. Nutze diesen Skill, wenn ein Agent Daten aus RIS braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/ris",
+      "repo": "opencli-connectors/opendata/ris",
+      "urls": [
+        "https://data.bka.gv.at/ris/api/v2.6"
+      ],
+      "hosts": [
+        "https://data.bka.gv.at"
+      ],
+      "befehle": [
+        "bundesrecht",
+        "judikatur",
+        "landesrecht"
+      ],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle OGD-API (REST/JSON) data.bka.gv.at/ris/api/v2.6",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "robots.txt von data.bka.gv.at sperrt Crawler (Disallow: /). Die RIS-OGD-API ist aber ausdrücklich zur maschinellen Nutzung veröffentlicht (CC BY 4.0, data.gv.at). Der Connector macht nur gezielte, gedrosselte Anfragen (1,5 s), keinen Crawl.",
+      "robots": "gesperrt",
+      "website_features": [
+        "Detail",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "statistik-austria",
+      "name": "Amtliche Statistiken (VPI, Unternehmen, Bevölkerung …) suchen und als dekodierte Tabelle laden. Ohne Login. Nutze diesen Skill, wenn ein Agent Daten aus Statistik Austria braucht.",
+      "kategorie": "opendata",
+      "status": "passing",
+      "pfad": "opendata/statistik-austria",
+      "repo": "opencli-connectors/opendata/statistik-austria",
+      "urls": [
+        "https://data.statistik.gv.at",
+        "https://www.data.gv.at/api/hub/search"
+      ],
+      "hosts": [
+        "https://data.statistik.gv.at",
+        "https://www.data.gv.at"
+      ],
+      "befehle": [
+        "suche",
+        "meta",
+        "tabelle"
+      ],
+      "abgedeckt": [
+        "Suche",
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": "Offizielle OGD-Schnittstelle (JSON-Metadaten + CSV) data.statistik.gv.at; Suche über data.gv.at (Katalog harvest-stat)",
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "Kein robots.txt-Verbot für /ogd und /data; OGD-Lizenz CC BY 4.0. Gedrosselt.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "firmenbuch-ai",
+      "name": "firmenbuch.ai: öffentliche Firmen-Stammdaten je FN (SSR-Seite und JSON-LD). Ohne Login, höflich gedrosselt.",
+      "kategorie": "register-at",
+      "status": "passing",
+      "pfad": "register-at/firmenbuch-ai",
+      "repo": "opencli-connectors/register-at/firmenbuch-ai",
+      "urls": [
+        "https://firmenbuch.ai",
+        "https://firmenbuch.ai/"
+      ],
+      "hosts": [
+        "https://firmenbuch.ai"
+      ],
+      "befehle": [],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "open-firmenbuch",
+      "name": "Open Firmenbuch (firmenbuchgrundbuch.at): Stammdaten und kaufbare Dokumente je Firmenbuchnummer. Ohne Login, höflich gedrosselt.",
+      "kategorie": "register-at",
+      "status": "passing",
+      "pfad": "register-at/open-firmenbuch",
+      "repo": "opencli-connectors/register-at/open-firmenbuch",
+      "urls": [
+        "https://firmenbuchgrundbuch.at",
+        "https://www.firmenbuchgrundbuch.at/de/abfrageservices/firmenbuch/fn/"
+      ],
+      "hosts": [
+        "https://firmenbuchgrundbuch.at",
+        "https://www.firmenbuchgrundbuch.at"
+      ],
+      "befehle": [],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "wko-firmen",
+      "name": "WKO Firmen A-Z: Firmensuche nach Name/Branche und Ort. Ohne Login, höflich gedrosselt.",
+      "kategorie": "register-at",
+      "status": "passing",
+      "pfad": "register-at/wko-firmen",
+      "repo": "opencli-connectors/register-at/wko-firmen",
+      "urls": [
+        "https://firmen.wko.at",
+        "https://firmen.wko.at/"
+      ],
+      "hosts": [
+        "https://firmen.wko.at"
+      ],
+      "befehle": [],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen",
+        "API"
+      ]
+    },
+    {
+      "slug": "at-holzpellets-net",
+      "name": "Pelletpreise Österreich (Ø €/t lose Ware + Sackware, Verlauf 1 Monat bis 3 Jahre) gesamt und für alle 9 Bundesländer",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-at-holzpellets-net",
+      "urls": [
+        "https://at.holzpellets.net/pelletspreise/",
+        "https://at.holzpellets.net/pelletspreise/{b}"
+      ],
+      "hosts": [
+        "https://at.holzpellets.net"
+      ],
+      "befehle": [
+        "preise",
+        "bundeslaender"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "burgenlandenergie-at",
+      "name": "Strom und Gastarife von Burgenland Energie (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-burgenlandenergie-at",
+      "urls": [
+        "https://www.burgenlandenergie.at/de/privat/oekostrom-tarifuebersicht/",
+        "https://assets.burgenlandenergie.at/Informations_und_Preisblatt_Strom_Privat_Optima12_Unabhaengig_4_0_2025_04_8c0bae5147.pdf",
+        "https://www.burgenlandenergie.at/de/privat/erdgas-tarifuebersicht/"
+      ],
+      "hosts": [
+        "https://www.burgenlandenergie.at",
+        "https://assets.burgenlandenergie.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "PDF-Parsing",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "disk-energy",
+      "name": "Stromtarife von DISK Energy (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-disk-energy",
+      "urls": [
+        "https://www.disk.energy/produkte"
+      ],
+      "hosts": [
+        "https://www.disk.energy"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "e-control-business-at",
+      "name": "Gewerbestrom-Tarife aller Landeshauptstädte aus dem E-Control Gewerbe-Tarifkalkulator",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-e-control-business-at",
+      "urls": [
+        "https://www.e-control.at/gewerbe-tarifkalkulator-info",
+        "https://www.e-control.at/o/rc-public-rest",
+        "https://www.e-control.at/tarifkalkulator"
+      ],
+      "hosts": [
+        "https://www.e-control.at"
+      ],
+      "befehle": [
+        "tarife",
+        "scrape-all",
+        "strom",
+        "netzbetreiber"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "API"
+      ]
+    },
+    {
+      "slug": "ebnerstrom-at",
+      "name": "Stromtarife von Ebner Strom (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-ebnerstrom-at",
+      "urls": [
+        "https://www.ebnerstrom.at/wp-content/uploads/2026/01/Preisblatt_ENERGIE_ab-01.2026-3.pdf"
+      ],
+      "hosts": [
+        "https://www.ebnerstrom.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "PDF-Parsing",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "efriends-at",
+      "name": "Stromtarife von eFriends (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-efriends-at",
+      "urls": [
+        "https://www.efriends.at/cms/wp-content/uploads/2026/03/eFRIENDS_derbessereTarif_01042026.pdf"
+      ],
+      "hosts": [
+        "https://www.efriends.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "PDF-Parsing",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "API"
+      ]
+    },
+    {
+      "slug": "energy-ec-europa-eu",
+      "name": "EU Weekly Oil Bulletin: Heizöl-, Diesel-, Super- und LPG-Preise inkl. Steuern für Österreich und alle EU-Staaten (wöchentlich, offizielle EU-Daten)",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-energy-ec-europa-eu",
+      "urls": [
+        "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+      ],
+      "hosts": [
+        "https://energy.ec.europa.eu"
+      ],
+      "befehle": [
+        "heizoel",
+        "oesterreich",
+        "alle"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "energyagency-at",
+      "name": "Energiepreisindex (EPI) je Energieträger (Heizöl, Pellets, Brennholz, Fernwärme, Erdgas, Strom, Treibstoffe) sowie ÖSPI und ÖGPI der Österreichischen Energieagentur",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-energyagency-at",
+      "urls": [
+        "https://www.energyagency.at/fakten/energiepreisindex",
+        "https://www.energyagency.at/fakten/strompreisindex",
+        "https://www.energyagency.at/fakten/gaspreisindex"
+      ],
+      "hosts": [
+        "https://www.energyagency.at"
+      ],
+      "befehle": [
+        "energiepreisindex",
+        "strompreisindex",
+        "gaspreisindex"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "eww-at",
+      "name": "Gas und Fernwärmetarife von eww / Wels Strom (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-eww-at",
+      "urls": [
+        "https://www.eww.at/fileadmin/user_upload/downloads/gas/tarife-gas-privat-business/eww-Gas-Preisblatt-Neukunden.pdf",
+        "https://www.eww.at/fileadmin/user_upload/downloads/waerme/tarife/eww-Fernwaerme-Preisblatt-2026.pdf"
+      ],
+      "hosts": [
+        "https://www.eww.at"
+      ],
+      "befehle": [
+        "tarife",
+        "gas",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "PDF-Parsing",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "fastenergy-at",
+      "name": "Heizölpreise Österreich von FastEnergy: Ø-Preis €/100 l mit Verlauf, Mengenstaffel 1.000–5.000 l je Bundesland, Ölmarkt-Faktoren",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-fastenergy-at",
+      "urls": [
+        "https://www.fastenergy.at/heizoelpreise.htm",
+        "https://www.fastenergy.at/heizoelpreise/heizoelpreise-1-"
+      ],
+      "hosts": [
+        "https://www.fastenergy.at"
+      ],
+      "befehle": [
+        "preise",
+        "bundeslaender",
+        "markt"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "fiberplus-at",
+      "name": "fiberplus Open-Access-Glasfaser: Partner-Internetanbieter, Bandbreiten und Preis für den Gigabit-Hausanschluss",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-fiberplus-at",
+      "urls": [
+        "https://www.fiberplus.at/preisuebersicht/",
+        "https://www.fiberplus.at/"
+      ],
+      "hosts": [
+        "https://www.fiberplus.at"
+      ],
+      "befehle": [
+        "anbieter",
+        "hausanschluss",
+        "bandbreiten"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen",
+        "Downloads",
+        "API"
+      ]
+    },
+    {
+      "slug": "goldgas-at",
+      "name": "Strom und Gastarife von goldgas (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-goldgas-at",
+      "urls": [
+        "https://goldgas.at/strom/",
+        "https://goldgas.at/gas/",
+        "https://goldgas.at/strom/?formBlockID=26475&heating_type=pump&slider_counter=2&consumption=3095&zip=1010&city=Wien&submit_tariff_form_strom_ggat=&tariff_type=1&skip_inputs=heating_type",
+        "https://goldgas.at/gas/?formBlockID=25332&heating_type=pump&slider_counter=55&consumption=11200&zip=1010&city=Wien&submit_tariff_form_gas_ggat=&tariff_type=0&skip_inputs=heating_type"
+      ],
+      "hosts": [
+        "https://goldgas.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "heizoel24-at",
+      "name": "Heizölpreise Österreich (Ø €/100 l, Bundesländer, Tagesveränderung) und Ölmarkt-Indikatoren von HeizOel24",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-heizoel24-at",
+      "urls": [
+        "https://www.heizoel24.at/heizoelpreise",
+        "https://www.heizoel24.at/heizoelpreise/{b}",
+        "https://www.heizoel24.at/heizoelpreise/"
+      ],
+      "hosts": [
+        "https://www.heizoel24.at"
+      ],
+      "befehle": [
+        "preise",
+        "markt"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "passiv reverse-engineerter JSON-Endpunkt",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "hofer-gruenstrom-at",
+      "name": "Stromtarife von HOFER Grünstrom (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-hofer-gruenstrom-at",
+      "urls": [
+        "https://www.xn--hofer-grnstrom-nsb.at/",
+        "https://www.xn--hofer-grnstrom-nsb.at/preisinformation-fix2610.pdf",
+        "https://www.xn--hofer-grnstrom-nsb.at/preisinformation-fair2.pdf",
+        "https://www.xn--hofer-grnstrom-nsb.at/preisinformation-spot3.pdf"
+      ],
+      "hosts": [
+        "https://www.xn--hofer-grnstrom-nsb.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "PDF-Parsing",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "kwg-at",
+      "name": "Stromtarife von Kraftwerk Glatzing-Rüstorf (KWG) (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-kwg-at",
+      "urls": [
+        "https://www.kwg.at/nachhaltiger-strom-angebote/"
+      ],
+      "hosts": [
+        "https://www.kwg.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads",
+        "Feeds",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Downloads",
+        "Feeds",
+        "API"
+      ]
+    },
+    {
+      "slug": "lampert-at",
+      "name": "Internet-Tarife von Lampert (Vorarlberg) im eigenen Glasfaser-/HFC-Netz und im vkw-Glasfasernetz: Down/Up, Preis, Aktion",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-lampert-at",
+      "urls": [
+        "https://lampert.at/privat/internet/internet-glasfaser",
+        "https://lampert.at/privat/internet/internet-vkw"
+      ],
+      "hosts": [
+        "https://lampert.at"
+      ],
+      "befehle": [
+        "tarife",
+        "glasfaser",
+        "vkw"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "lidl-energie-at",
+      "name": "Stromtarife von Lidl Energie (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-lidl-energie-at",
+      "urls": [
+        "https://www.lidl-energie.at/"
+      ],
+      "hosts": [
+        "https://www.lidl-energie.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "murauer-stadtwerke-at",
+      "name": "Stromtarife von Murauer Stadtwerke (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-murauer-stadtwerke-at",
+      "urls": [
+        "https://www.murauer-stadtwerke.at/leistungsbereiche/murauer-naturstrom"
+      ],
+      "hosts": [
+        "https://www.murauer-stadtwerke.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "nessus-at",
+      "name": "Business-Internet von NESSUS Wien: Glasfaser (symmetrisch bis 10 Gbit/s) und Richtfunk mit ab-Preisen der Produktseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-nessus-at",
+      "urls": [
+        "https://www.nessus.at/fiber/",
+        "https://www.nessus.at/richtfunk/"
+      ],
+      "hosts": [
+        "https://www.nessus.at"
+      ],
+      "befehle": [
+        "tarife"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Feeds",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Feeds",
+        "API"
+      ]
+    },
+    {
+      "slug": "ourpower-coop",
+      "name": "Stromtarife von OurPower Energiegenossenschaft (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-ourpower-coop",
+      "urls": [
+        "https://www.ourpower.coop/page/preise"
+      ],
+      "hosts": [
+        "https://www.ourpower.coop"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "peeringdb-at",
+      "name": "Rechenzentren, Netze und IX-Mitglieder in Österreich aus der PeeringDB-API",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-peeringdb-at",
+      "urls": [
+        "https://www.peeringdb.com/apidocs/",
+        "https://www.peeringdb.com/api",
+        "https://www.peeringdb.com/fac/",
+        "https://www.peeringdb.com/net/"
+      ],
+      "hosts": [
+        "https://www.peeringdb.com"
+      ],
+      "befehle": [
+        "rechenzentren",
+        "netze",
+        "ix",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "propellets-at",
+      "name": "Pelletpreisindex PPI06 von proPellets Austria: Monatswerte und Jahresdurchschnitte seit 2006 (lose Pellets, 6 t)",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-propellets-at",
+      "urls": [
+        "https://www.propellets.at/aktuelle-pelletpreise"
+      ],
+      "hosts": [
+        "https://www.propellets.at"
+      ],
+      "befehle": [
+        "index",
+        "jahresschnitt",
+        "aktuell"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "spritpreisrechner-at",
+      "name": "Diesel- und Superpreise je Bundesland/Bezirk aus der offiziellen Spritpreisrechner-API der E-Control (günstigste 10 Tankstellen je Region)",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-spritpreisrechner-at",
+      "urls": [
+        "https://www.spritpreisrechner.at/",
+        "https://api.e-control.at/sprit/1.0",
+        "https://api.e-control.at/sprit/1.0/search/gas-stations/by-region",
+        "https://api.e-control.at/sprit/1.0/regions",
+        "https://api.e-control.at/sprit/1.0/search/gas-stations/by-address"
+      ],
+      "hosts": [
+        "https://www.spritpreisrechner.at",
+        "https://api.e-control.at"
+      ],
+      "befehle": [
+        "bundeslaender",
+        "bezirk",
+        "umkreis",
+        "regionen"
+      ],
+      "abgedeckt": [
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "stadtwerke-bregenz-at",
+      "name": "Gas und Fernwärmetarife von Stadtwerke Bregenz (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-stadtwerke-bregenz-at",
+      "urls": [
+        "https://www.stadtwerke-bregenz.at/erdgas-biogas/erdgas-fuer-zuhause/erdgastarif-standard-online",
+        "https://www.stadtwerke-bregenz.at/erdgas-biogas/erdgas-fuer-zuhause/erdgastarif-vorarlberger-biogas20",
+        "https://www.stadtwerke-bregenz.at/erdgas-biogas/erdgas-fuer-zuhause/erdgastarif-vorarlberger-biogas100",
+        "https://www.stadtwerke-bregenz.at/regenerative-energien/biomasse-rieden"
+      ],
+      "hosts": [
+        "https://www.stadtwerke-bregenz.at"
+      ],
+      "befehle": [
+        "tarife",
+        "gas",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "stadtwerke-gleisdorf-at",
+      "name": "Fernwärmetarife von Stadtwerke Gleisdorf (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-stadtwerke-gleisdorf-at",
+      "urls": [
+        "https://www.stadtwerke-gleisdorf.at/waerme-preise/"
+      ],
+      "hosts": [
+        "https://www.stadtwerke-gleisdorf.at"
+      ],
+      "befehle": [
+        "tarife",
+        "fernwaerme"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Downloads",
+        "API"
+      ]
+    },
+    {
+      "slug": "stadtwerke-hartberg-at",
+      "name": "Stromtarife von Stadtwerke Hartberg (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-stadtwerke-hartberg-at",
+      "urls": [
+        "https://www.stadtwerke-hartberg.at/energie/unsere-tarife/privatkunden-3/",
+        "https://www.stadtwerke-hartberg.at/wp-content/uploads/2026/09/Preisblatt-Grundversorgung.pdf"
+      ],
+      "hosts": [
+        "https://www.stadtwerke-hartberg.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "PDF-Parsing",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads",
+        "Feeds",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Feeds",
+        "API"
+      ]
+    },
+    {
+      "slug": "stadtwerke-kapfenberg-at",
+      "name": "Stromtarife von Stadtwerke Kapfenberg (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-stadtwerke-kapfenberg-at",
+      "urls": [
+        "https://www.stadtwerke-kapfenberg.at/files/SWK_Layout/PDFs/Strom/Energiepreisblatt%20g%C3%BCltig%20ab%2001.01.2026_HP_Lab%202024.pdf"
+      ],
+      "hosts": [
+        "https://www.stadtwerke-kapfenberg.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "PDF-Parsing",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "stadtwerke-kitzbuehel-at",
+      "name": "Stromtarife von Stadtwerke Kitzbühel (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-stadtwerke-kitzbuehel-at",
+      "urls": [
+        "https://www.stadtwerke-kitzbuehel.at/de/strom/kitzdynamisch.html",
+        "https://www.stadtwerke-kitzbuehel.at/media/strom/KitzDynamisch-Produkt-und-Preisblatt.pdf"
+      ],
+      "hosts": [
+        "https://www.stadtwerke-kitzbuehel.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "PDF-Parsing",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail"
+      ]
+    },
+    {
+      "slug": "sturmenergie-at",
+      "name": "Strom und Gastarife von Sturm Energie (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-sturmenergie-at",
+      "urls": [
+        "https://www.sturmenergie.at/gruenstrom",
+        "https://www.sturmenergie.at/erdgas"
+      ],
+      "hosts": [
+        "https://www.sturmenergie.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom",
+        "gas"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "stww-at",
+      "name": "Stromtarife von Stadtwerke Wörgl (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-stww-at",
+      "urls": [
+        "https://www.stww.at/strom/oekostrom-privat/"
+      ],
+      "hosts": [
+        "https://www.stww.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Feeds",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Feeds",
+        "API"
+      ]
+    },
+    {
+      "slug": "tullnenergie-at",
+      "name": "Stromtarife von Tulln Energie (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-tullnenergie-at",
+      "urls": [
+        "https://tullnenergie.at/wp-content/uploads/2026/07/Preisblatt_TullnStrom_RELAX_2.0.pdf",
+        "https://tullnenergie.at/wp-content/uploads/2026/01/Preisblatt_TULLN_Relax_26.pdf",
+        "https://tullnenergie.at/wp-content/uploads/2026/01/Preisblatt_TULLN_Flow_Neukunde.pdf",
+        "https://tullnenergie.at/wp-content/uploads/2026/01/Preisblatt_TULLN_2-Seasons.pdf"
+      ],
+      "hosts": [
+        "https://tullnenergie.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "Downloads"
+      ],
+      "zugang": "PDF-Parsing",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads",
+        "Feeds",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Feeds",
+        "API"
+      ]
+    },
+    {
+      "slug": "voltino-gastino-at",
+      "name": "Stromtarife von voltino (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "sonstige",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-voltino-gastino-at",
+      "urls": [
+        "https://www.voltino-gastino.at/voltino-flexi-tarif"
+      ],
+      "hosts": [
+        "https://www.voltino-gastino.at"
+      ],
+      "befehle": [
+        "tarife",
+        "strom"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": true,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "awattar-at",
+      "name": "aWATTar Spot-Tarife und EPEX-Börsenpreise (öffentliche API)",
+      "kategorie": "strom",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-awattar-at",
+      "urls": [
+        "https://www.awattar.at/tariffs/hourly",
+        "https://www.awattar.at/tariffs/monthly",
+        "https://api.awattar.at/v1/marketdata?start="
+      ],
+      "hosts": [
+        "https://www.awattar.at",
+        "https://api.awattar.at"
+      ],
+      "befehle": [
+        "strom",
+        "marktpreise"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "e-control-at",
+      "name": "Stromtarife je PLZ aus dem E-Control Tarifkalkulator",
+      "kategorie": "strom",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-e-control-at",
+      "urls": [
+        "https://www.e-control.at/tarifkalkulator",
+        "https://www.e-control.at/o/rc-public-rest"
+      ],
+      "hosts": [
+        "https://www.e-control.at"
+      ],
+      "befehle": [
+        "strom",
+        "netzbetreiber"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Listen",
+        "API"
+      ]
+    },
+    {
+      "slug": "energieag-at",
+      "name": "Stromtarife von Energie AG (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "strom",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-energieag-at",
+      "urls": [
+        "https://www.energieag.at/privat/strom/standard-tarife/festpreis/",
+        "https://www.energieag.at/privat/strom/standard-tarife/feelgoodenergie/",
+        "https://www.energieag.at/privat/strom/flexible-tarife/smart/",
+        "https://www.energieag.at/privat/strom/flexible-tarife/spot/"
+      ],
+      "hosts": [
+        "https://www.energieag.at"
+      ],
+      "befehle": [
+        "strom"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen",
+        "Downloads"
+      ]
+    },
+    {
+      "slug": "evn-at",
+      "name": "Stromtarife von EVN (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "strom",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-evn-at",
+      "urls": [
+        "https://www.evn.at/home/strom/optimagarantstrom",
+        "https://www.evn.at/home/strom/optimaaktivstrom",
+        "https://www.evn.at/home/strom/optimagarantsonnestrom"
+      ],
+      "hosts": [
+        "https://www.evn.at"
+      ],
+      "befehle": [
+        "strom"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "verbund-com",
+      "name": "Stromtarife von VERBUND (Arbeitspreis, Grundpreis, Preisgarantie) von den öffentlichen Tarifseiten",
+      "kategorie": "strom",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-verbund-com",
+      "urls": [
+        "https://www.verbund.com/de/privat/strom/verbund-strom",
+        "https://www.verbund.com/de/privat/strom",
+        "https://www.verbund.com/de/privat/strom/stromanbieter-wien"
+      ],
+      "hosts": [
+        "https://www.verbund.com"
+      ],
+      "befehle": [
+        "strom"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "aws-foerderungen",
+      "name": "aws – Förderprogramme. Ohne Login, nur lesend.",
+      "kategorie": "vergabe",
+      "status": "passing",
+      "pfad": "vergabe/welle-vergabe-foerder/aws-foerderungen",
+      "repo": "opencli-connectors/vergabe/welle-vergabe-foerder/aws-foerderungen",
+      "urls": [
+        "https://www.aws.at/aws-digitalisierung/",
+        "https://www.aws.at/aws-energie-klima/",
+        "https://www.aws.at/sitemap.xml"
+      ],
+      "hosts": [
+        "https://www.aws.at"
+      ],
+      "befehle": [
+        "programme"
+      ],
+      "abgedeckt": [
+        "Feeds"
+      ],
+      "zugang": "Open-Data-Dump",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "robots.txt: `Allow: /` (nur /typo3/ gesperrt) – Programmseiten erlaubt.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Feeds"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "bbg-ausschreibungen",
+      "name": "BBG – Aktuelle Ausschreibungen. Ohne Login, nur lesend.",
+      "kategorie": "vergabe",
+      "status": "passing",
+      "pfad": "vergabe/welle-vergabe-foerder/bbg-ausschreibungen",
+      "repo": "opencli-connectors/vergabe/welle-vergabe-foerder/bbg-ausschreibungen",
+      "urls": [
+        "https://bbg.vergabeportal.at/Detail/253950",
+        "https://bbg.vergabeportal.at/Detail/247775",
+        "https://www.bbg.gv.at/information/aktuelle-ausschreibungen"
+      ],
+      "hosts": [
+        "https://bbg.vergabeportal.at",
+        "https://www.bbg.gv.at"
+      ],
+      "befehle": [
+        "ausschreibungen",
+        "produktfamilien"
+      ],
+      "abgedeckt": [
+        "Listen"
+      ],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "robots.txt sperrt Parameter-URLs (`tx_tenderlist`, `?id=`, Suche). Der Connector lädt nur `/information/aktuelle-ausschreibungen` ohne Parameter und keine .ics-Links → erlaubt.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "ffg",
+      "name": "FFG – Erreichbarkeitsprüfung (blockiert). Ohne Login, nur lesend.",
+      "kategorie": "vergabe",
+      "status": "passing",
+      "pfad": "vergabe/welle-vergabe-foerder/ffg",
+      "repo": "opencli-connectors/vergabe/welle-vergabe-foerder/ffg",
+      "urls": [
+        "https://www.ffg.at/robots.txt",
+        "https://www.ffg.at/ausschreibungen"
+      ],
+      "hosts": [
+        "https://www.ffg.at"
+      ],
+      "befehle": [
+        "status"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "ja",
+      "robots_notiz": "robots.txt nicht abrufbar (403 + Challenge) → automatisierter Zugriff gilt als nicht freigegeben.",
+      "robots": "erlaubt",
+      "website_features": [],
+      "luecken": []
+    },
+    {
+      "slug": "ted-eu",
+      "name": "TED – EU-Ausschreibungen & Zuschläge. Ohne Login, nur lesend.",
+      "kategorie": "vergabe",
+      "status": "passing",
+      "pfad": "vergabe/welle-vergabe-foerder/ted-eu",
+      "repo": "opencli-connectors/vergabe/welle-vergabe-foerder/ted-eu",
+      "urls": [
+        "https://ted.europa.eu/de/notice/-/detail/705338-2026",
+        "https://ted.europa.eu/de/notice/-/detail/706713-2026",
+        "https://api.ted.europa.eu/v3/notices/search",
+        "https://ted.europa.eu/de/notice/-/detail/"
+      ],
+      "hosts": [
+        "https://ted.europa.eu",
+        "https://api.ted.europa.eu"
+      ],
+      "befehle": [
+        "ausschreibungen",
+        "zuschlaege",
+        "alle"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "API"
+      ],
+      "zugang": "API mit Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": true,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "api.ted.europa.eu: keine robots.txt (404). Daten: EU-Amtsblatt, Weiterverwendung erlaubt (Beschluss 2011/833/EU, Quellenangabe).",
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "API"
+      ],
+      "luecken": [
+        "Detail"
+      ]
+    },
+    {
+      "slug": "transparenzportal",
+      "name": "Transparenzportal – Förderkatalog Österreich. Ohne Login, nur lesend.",
+      "kategorie": "vergabe",
+      "status": "passing",
+      "pfad": "vergabe/welle-vergabe-foerder/transparenzportal",
+      "repo": "opencli-connectors/vergabe/welle-vergabe-foerder/transparenzportal",
+      "urls": [
+        "https://transparenzportal.gv.at/tdb/tp/leistung/1003102.html",
+        "https://transparenzportal.gv.at/tdb/tp/leistung/1066356.html",
+        "https://transparenzportal.gv.at/tdb/tp"
+      ],
+      "hosts": [
+        "https://transparenzportal.gv.at"
+      ],
+      "befehle": [
+        "leistungen",
+        "leistung"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein",
+      "robots_notiz": "robots.txt existiert nicht (404) → keine Einschränkung. Öffentliche Förderinformation des BMF.",
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "check24-at",
+      "name": "Deeplinks zu den CHECK24-Vergleichsrechnern (kein Scraping, ToS)",
+      "kategorie": "vergleich",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-check24-at",
+      "urls": [
+        "https://check24.at",
+        "https://www.check24.at/strom/",
+        "https://www.check24.at/gas/",
+        "https://www.check24.at/handytarife/",
+        "https://www.check24.at/internet/"
+      ],
+      "hosts": [
+        "https://check24.at",
+        "https://www.check24.at"
+      ],
+      "befehle": [
+        "links"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Suche",
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "durchblicker-at",
+      "name": "Deeplinks zu den durchblicker-Vergleichsrechnern (kein Scraping, ToS)",
+      "kategorie": "vergleich",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-durchblicker-at",
+      "urls": [
+        "https://durchblicker.at",
+        "https://durchblicker.at/strom",
+        "https://durchblicker.at/gas",
+        "https://durchblicker.at/internet",
+        "https://durchblicker.at/handytarife"
+      ],
+      "hosts": [
+        "https://durchblicker.at"
+      ],
+      "befehle": [
+        "links"
+      ],
+      "abgedeckt": [],
+      "zugang": "OpenCLI (HTML)",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "erlaubt",
+      "website_features": [
+        "Detail",
+        "Listen"
+      ],
+      "luecken": [
+        "Detail",
+        "Listen"
+      ]
+    },
+    {
+      "slug": "tarife-at",
+      "name": "OpenCLI plugin + standalone CLI for scraping Austrian mobile tariffs from tarife.at",
+      "kategorie": "vergleich",
+      "status": "passing",
+      "pfad": null,
+      "repo": "opencli-tarife-at",
+      "urls": [
+        "https://www.tarife.at",
+        "https://www.tarife.at/api/v2/calculations?offset={n}&session={uuid}",
+        "https://www.tarife.at/fragen/speedmap",
+        "https://www.tarife.at/api/v2/calculations",
+        "https://www.tarife.at/telefon-internet/handytarife",
+        "https://www.tarife.at/telefon-internet/mobiles-internet",
+        "https://www.tarife.at/details/"
+      ],
+      "hosts": [
+        "https://www.tarife.at"
+      ],
+      "befehle": [
+        "handytarife",
+        "mobiles-internet",
+        "scrape-all"
+      ],
+      "abgedeckt": [
+        "Listen",
+        "API"
+      ],
+      "zugang": "offene API ohne Key",
+      "playwright_fallback": false,
+      "zugriffsart": null,
+      "api_key": false,
+      "login": "nein",
+      "captcha": "nein (nicht beobachtet)",
+      "robots_notiz": null,
+      "robots": "teilweise gesperrt",
+      "website_features": [
+        "Detail",
+        "Listen",
+        "Downloads",
+        "API"
+      ],
+      "luecken": [
+        "Detail",
+        "Downloads"
+      ]
+    }
+  ]
+}

@@ -84,7 +84,10 @@ function walk(dir, name, acc = []) {
   return acc;
 }
 
+const readJson = (f) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return {}; } };
+
 export function build(src) {
+  const overrides = readJson(path.join(src, 'assets/domain-overrides.json'));
   const index = JSON.parse(fs.readFileSync(path.join(src, 'index.json'), 'utf8'));
   const rankFile = path.join(src, 'kpi/ranking.csv');
   const ranking = fs.existsSync(rankFile) ? parseCsv(fs.readFileSync(rankFile, 'utf8')) : [];
@@ -94,7 +97,7 @@ export function build(src) {
   for (const c of index.connectors) {
     const r = rankBy.get(c.slug);
     out.set(c.slug, {
-      id: c.slug, name: c.slug, domain: c.domain, description: c.description, category: c.category,
+      id: c.slug, name: c.slug, path: c.path || null, endpoint: (c.routes || []).find((r) => r.method === 'GET')?.url || c.source_url || null, domain: /\./.test(c.domain || '') ? c.domain : (() => { try { return new URL((c.routes || [])[0]?.url).hostname.replace(/^www\./, ''); } catch { return c.domain || null; } })(), description: c.description, category: c.category,
       country: countryOf(c.slug, c.domain), status: c.status, repo: `https://github.com/servas-ai/${c.repo}`,
       records: c.records ?? null, commands: c.commands || [], logo: c.logo ? path.basename(c.logo) : null,
       paperclip: !!c.paperclip, lastRun: r?.last_success || c.last_run || null,
@@ -122,7 +125,7 @@ export function build(src) {
     const prev = out.get(id) || {};
     const ok = p.e2ePassed != null && p.e2ePassed === p.e2eTotal;
     const p50 = pct(p.latencies, 50), p95 = pct(p.latencies, 95);
-    let domain = prev.domain || null;
+    let domain = prev.domain || overrides[id] || null;
     try { domain = domain || new URL(p.source).hostname; } catch { /* keine URL */ }
     const r = rankBy.get(id);
     out.set(id, {
@@ -152,7 +155,15 @@ export function build(src) {
     });
   }
   const logoDir = path.join(src, 'assets/logos');
-  for (const c of out.values()) if (!c.logo && c.domain && fs.existsSync(path.join(logoDir, `${c.domain}.png`))) c.logo = `${c.domain}.png`;
+  const branding = readJson(path.join(src, 'assets/branding.json'));
+  for (const c of out.values()) { if (!c.domain && overrides[c.id]) c.domain = overrides[c.id]; const d = (c.domain || '').replace(/^www\./, ''); if (branding[d]?.favicon) { c.logo = path.basename(branding[d].favicon); c.logoSource = branding[d].source; } }
+  const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return null; } };
+  for (const c of out.values()) {
+    if (!c.domain && c.source) c.domain = hostOf(c.source.match(/https?:\/\/\S+/)?.[0]);
+    if (c.logo || !c.domain || !fs.existsSync(logoDir)) continue;
+    const parts = c.domain.replace(/^www\./, '').split('.');
+    for (let i = 0; i < parts.length - 1 && !c.logo; i++) for (const ext of ['png', 'svg', 'ico']) { const f = `${parts.slice(i).join('.')}.${ext}`; if (fs.existsSync(path.join(logoDir, f))) { c.logo = f; break; } }
+  }
   const connectors = [...out.values()].sort((a, b) => (b.kpi?.score ?? -1) - (a.kpi?.score ?? -1) || a.id.localeCompare(b.id));
   return { generatedAt: new Date().toISOString(), sourceRepo: REPO, sourceGeneratedAt: index.generated_at, count: connectors.length, connectors };
 }

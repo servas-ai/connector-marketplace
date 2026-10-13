@@ -42,16 +42,44 @@ export const Notice = defineComponent({
   ),
 });
 
+export const Fact = defineComponent({
+  name: 'Fact', description: 'Zeile Label/Wert in einer FactList',
+  props: z.object({ label: z.string(), value: z.string(), tone: tone.optional() }),
+  component: ({ props }) => (
+    <div data-testid="fact" className="flex items-baseline justify-between gap-4 border-b py-2 text-sm last:border-0">
+      <dt className="text-muted-foreground">{props.label}</dt><dd className={cn('text-right font-medium', toneCls[props.tone ?? 'neutral'])}>{props.value}</dd>
+    </div>
+  ),
+});
+
+export const FactList = defineComponent({
+  name: 'FactList', description: 'Karte mit Titel und Fact-Zeilen',
+  props: z.object({ title: z.string(), items: z.array(Fact.ref) }),
+  component: function FactListView({ props }) {
+    const render = useRenderNode();
+    return <Card><CardContent className="p-4"><h3 className="mb-1 text-sm font-semibold">{props.title}</h3><dl>{render(props.items)}</dl></CardContent></Card>;
+  },
+});
+
+export const Columns = defineComponent({
+  name: 'Columns', description: 'Zwei Spalten mit FactLists',
+  props: z.object({ items: z.array(FactList.ref) }),
+  component: function ColumnsView({ props }) {
+    const render = useRenderNode();
+    return <div className="grid gap-4 md:grid-cols-2">{render(props.items)}</div>;
+  },
+});
+
 export const Panel = defineComponent({
   name: 'Panel', description: 'Vertikaler Container',
-  props: z.object({ children: z.array(z.union([KpiGrid.ref, Notice.ref])) }),
+  props: z.object({ children: z.array(z.union([KpiGrid.ref, Notice.ref, Columns.ref, FactList.ref])) }),
   component: function PanelView({ props }) {
     const render = useRenderNode();
     return <div className="flex flex-col gap-4">{render(props.children)}</div>;
   },
 });
 
-export const library = createLibrary({ root: 'Panel', components: [Panel, KpiGrid, Kpi, Notice] });
+export const library = createLibrary({ root: 'Panel', components: [Panel, KpiGrid, Kpi, Notice, Columns, FactList, Fact] });
 
 const s = (v: string) => JSON.stringify(v);
 const yn = (v: boolean | null) => (v == null ? 'UNKNOWN' : v ? 'ja' : 'nein');
@@ -83,4 +111,40 @@ export function connectorToOpenUI(c: Connector): string {
   if (c.robots === 'disallowed') { lines.push(`robots = Notice(${s('robots.txt: offiziell nicht erlaubt')}, ${s(c.robotsNote ?? 'Disallow')}, "warn")`); kids.push('robots'); }
   c.incidents.forEach((inc, i) => { lines.push(`inc${i} = Notice(${s('Incident')}, ${s(inc)}, "bad")`); kids.push(`inc${i}`); });
   return [`root = Panel([${kids.join(', ')}])`, ...lines].join('\n');
+}
+
+type Row = [string, string, ('good' | 'warn' | 'bad' | 'neutral')?];
+const v = (x: unknown) => (x == null || x === '' ? 'UNKNOWN' : String(x));
+/** Baut FactLists als OpenUI Lang. groups: [Titel, Zeilen][] */
+export function factsToOpenUI(groups: [string, Row[]][], notices: [string, string, string][] = []): string {
+  const lines: string[] = []; const lists: string[] = [];
+  groups.forEach(([title, rows], g) => {
+    rows.forEach(([l, val, t], r) => lines.push(`f${g}_${r} = Fact(${s(l)}, ${s(val)}, ${s(t ?? 'neutral')})`));
+    lines.push(`l${g} = FactList(${s(title)}, [${rows.map((_, r) => `f${g}_${r}`).join(', ')}])`); lists.push(`l${g}`);
+  });
+  lines.push(`cols = Columns([${lists.join(', ')}])`);
+  const kids = ['cols'];
+  notices.forEach(([t, x, tn], i) => { lines.push(`n${i} = Notice(${s(t)}, ${s(x)}, ${s(tn)})`); kids.push(`n${i}`); });
+  return [`root = Panel([${kids.join(', ')}])`, ...lines].join('\n');
+}
+
+export function serverToOpenUI(c: Connector): string {
+  const sv = c.server;
+  if (!sv) return factsToOpenUI([], [['Keine Server-Daten', 'Noch nicht angereichert (npm run enrich).', 'neutral']]);
+  const yn2 = (b: boolean | null): Row[1] => (b == null ? 'UNKNOWN' : b ? 'ja' : 'nein');
+  return factsToOpenUI([
+    ['Hosting', [['Hoster', v(sv.hoster)], ['ASN', v(sv.asn)], ['IP', v(sv.ip)], ['Standort', sv.country ? `${sv.city ?? ''} ${sv.country}`.trim() : 'UNKNOWN'], ['CDN', v(sv.cdn ?? 'keins erkannt')]]],
+    ['Technik', [['Webserver', v(sv.webserver)], ['X-Powered-By', v(sv.poweredBy)], ['CMS/Framework', v(sv.cms)], ['Erkannt', sv.tech.length ? sv.tech.join(', ') : '—'], ['HSTS', yn2(sv.hsts), sv.hsts ? 'good' : 'warn'], ['CSP', yn2(sv.csp), sv.csp ? 'good' : 'neutral']]],
+    ['TLS & Domain', [['TLS-Aussteller', v(sv.tlsIssuer)], ['Zertifikat bis', sv.tlsNotAfter ? sv.tlsNotAfter.slice(0, 10) : 'UNKNOWN'], ['Registriert', sv.registered ? sv.registered.slice(0, 10) : v(sv.rdap)], ['Domain-Alter', sv.domainAgeYears != null ? `${sv.domainAgeYears} Jahre` : 'UNKNOWN']]],
+    ['Quelle', [['Quellentyp', v(c.sourceType)], ['Zugangsweg', v(c.interfaces?.access)], ['Geprüft', sv.probedAt.slice(0, 16).replace('T', ' ') + ' UTC']]],
+  ], sv.robotsBlockedProbe ? [['robots.txt', 'Startseite per robots.txt gesperrt, Technik-Fingerprint ausgelassen.', 'warn']] : []);
+}
+
+export function gatesToOpenUI(c: Connector): string {
+  const g = c.gates;
+  if (!g || g.state === 'unknown') return factsToOpenUI([], [['Gate-Status unbekannt', 'Kein check_connectors.py-Lauf vorhanden.', 'neutral']]);
+  if (g.state === 'extern') return factsToOpenUI([['Quality-Gates', [['Status', 'extern'], ['Hinweis', v(g.note)]]]]);
+  const e2e: Row = ['E2E', c.e2eTotal ? `${c.e2ePassed}/${c.e2eTotal}` : 'UNKNOWN', c.e2eTotal && c.e2ePassed === c.e2eTotal ? 'good' : 'warn'];
+  return factsToOpenUI([['Quality-Gates (--strict)', [['Status', g.state === 'pass' ? 'bestanden' : 'nicht bestanden', g.state === 'pass' ? 'good' : 'bad'], ['Fehler', String(g.errors), g.errors ? 'bad' : 'good'], ['Regeln verletzt', g.codes.join(', ') || '—'], ['Pfad', v(g.path)], e2e]]],
+    (g.top ?? []).map((t) => ['Gate-Fehler', t, 'bad'] as [string, string, string]));
 }
