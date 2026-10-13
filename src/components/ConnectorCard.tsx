@@ -15,7 +15,7 @@ export function ConnectorCard({ c }: { c: Connector }) {
         </div>
         <p className="line-clamp-2 text-sm text-muted-foreground">{c.description || 'Keine Beschreibung'}</p>
         <div className="mt-auto flex flex-wrap gap-1">
-          <Badge variant="secondary">{c.category}</Badge><Badge variant="outline">{c.country}</Badge><RobotsBadge c={c} /><FlagBadges c={c} />
+          <Badge variant="secondary">{c.category}</Badge>{c.live?.realtime && <Badge>Realtime</Badge>}<Badge variant="outline">{c.country}</Badge><RobotsBadge c={c} /><FlagBadges c={c} />
         </div>
         <div className="grid grid-cols-3 gap-2 border-t pt-2 text-center text-xs">
           <div><div className="text-muted-foreground">Stabil</div><div className="font-medium tabular-nums">{c.kpi?.stability != null ? `${c.kpi.stability}%` : '—'}</div></div>
