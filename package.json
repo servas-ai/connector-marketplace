@@ -6,7 +6,7 @@
   "scripts": {
     "sync": "node scripts/sync-data.mjs",
     "dev": "vite",
-    "build": "python3 scripts/build-extras.py && node scripts/gen-llms.mjs && tsc -b && vite build",
+    "build": "node scripts/copy-public-data.mjs && python3 scripts/build-extras.py && node scripts/gen-llms.mjs && tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint . --max-warnings 0",
     "test": "vitest run",
@@ -20,7 +20,8 @@
     "lighthouse": "node scripts/lighthouse.mjs",
     "deploy": "bash scripts/deploy-pages.sh",
     "gates": "npm run lint && npm run typecheck && npm test && npm run build && npm run e2e && npm run lighthouse",
-    "extras": "python3 scripts/build-extras.py"
+    "extras": "python3 scripts/build-extras.py",
+    "copy-data": "node scripts/copy-public-data.mjs"
   },
   "dependencies": {
     "@openuidev/react-lang": "^1.0.0",

@@ -7,4 +7,4 @@ useDefault = true
 [allowlist]
 description = "Öffentliche EU-FSF-Sanktionslisten-URL; Build-Artefakte"
 regexes = ['''^dG9rZW4tMjAxNw$''']
-paths = ['''^dist/''', '''(^|/)node_modules/''']
+paths = ['''^dist/''', '''(^|/)node_modules/''', '''(^|/)public/x/''', '''(^|/)public/manifests/''']

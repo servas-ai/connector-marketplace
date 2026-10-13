@@ -4,7 +4,11 @@ import data from '../src/data/connectors.json' with { type: 'json' };
 import extras from '../src/data/extras.json' with { type: 'json' };
 
 const X = extras.connectors as Record<string, { shot?: string }>;
-export const DETAIL = process.env.DETAIL_ID || data.connectors.find((c) => X[c.id]?.shot && c.logo && c.ampel?.level === 'green')!.id;
+export const DETAIL = process.env.DETAIL_ID
+  || data.connectors.find((c) => X[c.id]?.shot && c.logo && c.ampel?.level === 'green')?.id
+  || data.connectors.find((c) => X[c.id]?.shot && c.logo)?.id
+  || data.connectors.find((c) => c.logo)?.id
+  || data.connectors[0]!.id;
 const NOSHOT = data.connectors.find((c) => !X[c.id]?.shot)!.id;
 const pages = [['start', '#/'], ['detail', `#/c/${DETAIL}`], ['dashboard', '#/dashboard'], ['compare', `#/compare?ids=${data.connectors.slice(0, 3).map((c) => c.id).join(',')}`], ['agent', '#/agent']] as const;
 

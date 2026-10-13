@@ -16,7 +16,7 @@ import { cn } from '@/lib/utils';
 import { commercial, enterprise } from '@/lib/compliance';
 import type { Connector } from '@/lib/types';
 
-const ALL = dataset.connectors;
+const connectors = () => dataset.connectors;
 const CAP_FILTERS = [['mcp', 'MCP'], ['cli', 'CLI'], ['http', 'HTTP/API'], ['nologin', 'Ohne Login'], ['robots', 'robots ok'], ['llms', 'llms.txt'], ['openapi', 'OpenAPI'], ['shot', 'Screenshot']] as const;
 const lvlRank = (c: Connector) => ({ green: 2, yellow: 1, red: 0 })[c.ampel?.level ?? 'red'];
 type Col = { key: string; label: string; sort?: (c: Connector) => number | string; className?: string };
@@ -41,10 +41,10 @@ function sortList(list: Connector[], key: string, dir: string) {
 const PAGE = 50;
 
 export function globalKpis() {
-  const green = ALL.filter((c) => c.ampel?.level === 'green').length;
-  const audited = ALL.filter((c) => extra(c).verdict); const verified = audited.filter((c) => extra(c).verdict === 'echt_gruen').length;
-  const p50 = median(ALL.map((c) => c.kpi?.p50).filter((x): x is number => x != null && x > 0));
-  const nologin = ALL.filter((c) => c.loginRequired === false).length;
+  const green = connectors().filter((c) => c.ampel?.level === 'green').length;
+  const audited = connectors().filter((c) => extra(c).verdict); const verified = audited.filter((c) => extra(c).verdict === 'echt_gruen').length;
+  const p50 = median(connectors().map((c) => c.kpi?.p50).filter((x): x is number => x != null && x > 0));
+  const nologin = connectors().filter((c) => c.loginRequired === false).length;
   return { total: dataset.count, green, audited: audited.length, verified, p50, nologin };
 }
 
@@ -84,12 +84,12 @@ export function Home() {
   const toggleCap = (k: string) => set('cap', (caps.includes(k) ? caps.filter((x) => x !== k) : [...caps, k]).join(','));
   const [sheet, setSheet] = useState(false);
   const k = useMemo(() => globalKpis(), []);
-  const countries = useMemo(() => [...new Set(ALL.map((c) => c.country).filter(Boolean))].sort(), []);
-  const access = useMemo(() => [...new Set(ALL.map((c) => c.interfaces?.access).filter(Boolean) as string[])].sort(), []);
-  const catCount = useMemo(() => { const m: Record<string, number> = {}; for (const c of ALL) { const id = categoryOf(c).id; m[id] = (m[id] ?? 0) + 1; } return m; }, []);
+  const countries = useMemo(() => [...new Set(connectors().map((c) => c.country).filter(Boolean))].sort(), []);
+  const access = useMemo(() => [...new Set(connectors().map((c) => c.interfaces?.access).filter(Boolean) as string[])].sort(), []);
+  const catCount = useMemo(() => { const m: Record<string, number> = {}; for (const c of connectors()) { const id = categoryOf(c).id; m[id] = (m[id] ?? 0) + 1; } return m; }, []);
   const list = (() => {
     const s = q.trim().toLowerCase();
-    return sortList(ALL.filter((c) => (!s || [c.id, c.domain, c.description, categoryOf(c).label].some((x) => x?.toLowerCase().includes(s)))
+    return sortList(connectors().filter((c) => (!s || [c.id, c.domain, c.description, categoryOf(c).label].some((x) => x?.toLowerCase().includes(s)))
       && (cat === 'all' || categoryOf(c).id === cat) && (land === 'all' || c.country === land) && (ampel === 'all' || c.ampel?.level === ampel)
       && (zugriff === 'all' || c.interfaces?.access === zugriff) && (ent === 'all' || enterprise(c).level === ent) && (kom === 'all' || commercial(c).v === kom)
       && capKey.split(',').filter(Boolean).every((x) => (x === 'shot' ? !!extra(c).shot : capOn(c, x)))), sortKey, dir);
@@ -114,7 +114,7 @@ export function Home() {
         <Kpi label="Datenstand" value={relTime(dataset.sourceGeneratedAt.replace(' UTC', 'Z').replace(' ', 'T'))} sub={dataset.sourceGeneratedAt} />
       </KpiBar>
       <nav aria-label="Kategorien" className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
-        <Chip on={cat === 'all'} onClick={() => set('kat', 'all')}>Alle <span className="opacity-60">{ALL.length}</span></Chip>
+        <Chip on={cat === 'all'} onClick={() => set('kat', 'all')}>Alle <span className="opacity-60">{connectors().length}</span></Chip>
         {CATEGORIES.filter((x) => catCount[x.id]).map((x) => { const I = x.icon; return <Chip key={x.id} on={cat === x.id} onClick={() => set('kat', x.id)}><I size={15} aria-hidden style={{ color: cat === x.id ? undefined : x.hue }} />{x.label} <span className="opacity-60">{catCount[x.id]}</span></Chip>; })}
       </nav>
       <section aria-label="Connector-Liste" className="rounded-xl border bg-card">
@@ -125,7 +125,7 @@ export function Home() {
           {activeF.map(([key, l, v]) => <Badge key={key} variant="secondary" className="gap-1">{l}: {v}<button type="button" aria-label={`Filter ${l} entfernen`} onClick={() => set(key, 'all')}><X size={12} /></button></Badge>)}
           {caps.map((x) => <Badge key={x} variant="secondary" className="gap-1">{CAP_FILTERS.find((f) => f[0] === x)?.[1]}<button type="button" aria-label={`Filter ${x} entfernen`} onClick={() => toggleCap(x)}><X size={12} /></button></Badge>)}
           {active > 0 && <button type="button" onClick={() => setSp({}, { replace: true })} className="text-xs text-muted-foreground hover:text-foreground">Zurücksetzen</button>}
-          <p className="ml-auto text-xs text-muted-foreground" aria-live="polite"><span data-testid="result-count"><strong className="text-foreground">{list.length}</strong> von {ALL.length}</span> Treffer</p>
+          <p className="ml-auto text-xs text-muted-foreground" aria-live="polite"><span data-testid="result-count"><strong className="text-foreground">{list.length}</strong> von {connectors().length}</span> Treffer</p>
         </div>
         {list.length ? <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Tabelle aller Connectoren"><table className="w-full text-sm">
           <thead className="bg-muted/40"><tr className="border-b">
