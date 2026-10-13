@@ -26,6 +26,8 @@ function normalizeDataset(d: Dataset): Dataset {
     if (!Array.isArray(c.incidents)) c.incidents = [];
     if (!Array.isArray(c.commands)) c.commands = [];
     if (!c.links) c.links = { skill: null, protocol: null, samples: null };
+    if (c.name == null) c.name = c.id;
+    if (c.signals && !c.signals.counts) c.signals.counts = {};
   }
   return d;
 }

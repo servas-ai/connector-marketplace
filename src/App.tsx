@@ -32,7 +32,7 @@ export function App() {
           <ThemeToggle />
         </div>
       </header>
-      <main id="main" className="mx-auto min-h-[80vh] max-w-7xl px-4 py-8"><Suspense fallback={<div className="p-10 text-center text-muted-foreground">Lädt …</div>}><Routes>
+      <main id="main" className="mx-auto min-h-screen max-w-7xl px-4 py-8"><Suspense fallback={<div className="p-10 text-center text-muted-foreground">Lädt …</div>}><Routes>
         <Route path="/" element={<Home />} /><Route path="/alle" element={<Navigate to="/" replace />} /><Route path="/c/:id" element={<ConnectorPage />} /><Route path="/c/:id/technik" element={<Old />} />
         <Route path="/dashboard" element={<Dashboard />} /><Route path="/compare" element={<Compare />} /><Route path="/agent" element={<Agent />} /></Routes></Suspense></main>
       <footer className="mx-auto max-w-7xl border-t px-4 py-6 text-xs text-muted-foreground">servas-ai · read-only Katalog · Daten aus <a className="underline" href={`https://github.com/${dataset.sourceRepo}`}>opencli-connectors</a> · Stand {dataset.sourceGeneratedAt} · <a className="underline" href={`${import.meta.env.BASE_URL}llms.txt`}>llms.txt</a> · Lizenz- und Compliance-Angaben automatisch abgeleitet, keine Rechtsberatung</footer>

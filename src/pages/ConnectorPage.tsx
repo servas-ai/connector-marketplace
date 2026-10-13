@@ -158,7 +158,8 @@ function ConnectorView({ id }: { id: string }) {
   const tabs = [
     { id: 'overview', label: 'Übersicht', icon: <LayoutGrid size={15} aria-hidden />, content: <Overview c={conn} d={d} /> },
     { id: 'routes', label: 'Routes', icon: <RouteIcon size={15} aria-hidden />, content: <ApiReference c={conn} d={d} /> },
-    ...(d?.screenshot ? [{ id: 'shots', label: 'Screenshots', icon: <Camera size={15} aria-hidden />, content: <Shots c={conn} d={d} /> }] : []),
+    // Tab-Leiste stabil: Screenshot-Flag schon aus extras.json (vor x/<id>.json) → keine Tab-Verschiebung (CLS).
+    ...(d?.screenshot || extra(conn).shot ? [{ id: 'shots', label: 'Screenshots', icon: <Camera size={15} aria-hidden />, content: <Shots c={conn} d={d} /> }] : []),
     { id: 'install', label: 'Installieren', icon: <Bot size={15} aria-hidden />, content: <Install c={conn} d={d} /> },
     { id: 'dev', label: 'Dev', icon: <Code2 size={15} aria-hidden />, content: <Dev c={rich!} d={d} /> },
     { id: 'tests', label: 'Tests & Verlauf', icon: <History size={15} aria-hidden />, content: <Tests c={rich!} d={d} /> },
@@ -172,7 +173,7 @@ function ConnectorView({ id }: { id: string }) {
         <div className="shrink-0" style={{ width: 112, height: 112 }}><Logo c={conn} size={112} eager /></div>
         <div className="flex min-w-0 flex-1 flex-col gap-2">
           <h1 className="text-3xl font-bold tracking-tight">{titleOf(conn)}</h1>
-          <p className="inline-flex flex-wrap items-center gap-2 text-sm text-muted-foreground"><CatIcon size={15} aria-hidden style={{ color: cat.hue }} />{cat.label} · {conn.country || '–'} · <code className="text-xs">{conn.id}</code>{d?.version && <Badge variant="outline">v{d.version}</Badge>}</p>
+          <p className="inline-flex flex-wrap items-center gap-2 text-sm text-muted-foreground"><CatIcon size={15} aria-hidden style={{ color: cat.hue }} />{cat.label} · {conn.country || '–'} · <code className="text-xs">{conn.id}</code>{(d?.version ?? extra(conn).v) && <Badge variant="outline">v{d?.version ?? extra(conn).v}</Badge>}</p>
           <div className="flex flex-wrap items-center gap-2" data-testid="ampel-badge"><AmpelPill c={conn} /></div>
           <div className="flex flex-wrap items-center gap-2"><EnterpriseBadge c={conn} /><CommercialBadge c={conn} /></div>
           <div className="mt-1 flex flex-wrap gap-2"><button type="button" onClick={() => setTab('install')} className="inline-flex h-9 items-center gap-2 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90"><Bot size={16} aria-hidden />Installieren</button>
