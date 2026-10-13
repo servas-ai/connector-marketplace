@@ -131,9 +131,30 @@ const list = {
   count: data.count,
   connectors: data.connectors.map(lean),
 };
+// Kritischer Pfad: list.json = nur was Home (Tabelle, Filter, Sortierung, KPIs) zum ersten Rendern braucht.
+// list-rest.json = Beschreibung/Name/Detail-KPIs/Ampel-Gründe — nach dem ersten Rendern nachgeladen
+// (Suche, Detail, Vergleich warten darauf; src/lib/data.ts loadRest()).
+const REST_KEYS = ['name', 'description', 'sourceType', 'records', 'server'];
+const REST_KPI = ['score', 'p95', 'throughput', 'dataQuality'];
+const rest = { generatedAt: list.generatedAt, connectors: {} };
+for (const o of list.connectors) {
+  const r = {};
+  for (const k of REST_KEYS) if (o[k] !== undefined) { r[k] = o[k]; delete o[k]; }
+  if (o.kpi) {
+    const kx = {};
+    for (const x of REST_KPI) if (o.kpi[x] != null) { kx[x] = o.kpi[x]; delete o.kpi[x]; }
+    if (Object.keys(kx).length) r.kpi = kx;
+    if (!Object.keys(o.kpi).length) delete o.kpi;
+  }
+  if (o.ampel) { if (o.ampel.reasons?.length) r.reasons = o.ampel.reasons; delete o.ampel.reasons; }
+  if (Object.keys(r).length) rest.connectors[o.id] = r;
+}
 const listPath = path.join(destDir, 'list.json');
 fs.writeFileSync(listPath, JSON.stringify(list));
 const listGz = gzipSync(fs.readFileSync(listPath));
+const restPath = path.join(destDir, 'list-rest.json');
+fs.writeFileSync(restPath, JSON.stringify(rest));
+const restGz = gzipSync(fs.readFileSync(restPath));
 
 const extrasOut = {
   growth: extras.growth || [],
@@ -145,5 +166,6 @@ fs.writeFileSync(extrasPath, JSON.stringify(extrasOut));
 const extrasGz = gzipSync(fs.readFileSync(extrasPath));
 
 console.log('public/data/list.json', fs.statSync(listPath).size, 'bytes (gzip ~' + listGz.length + ')');
+console.log('public/data/list-rest.json', fs.statSync(restPath).size, 'bytes (gzip ~' + restGz.length + ')');
 console.log('public/data/connectors.json', fs.statSync(fullPath).size, 'bytes (gzip ~' + fullGz.length + ')');
 console.log('public/data/extras.json', fs.statSync(extrasPath).size, 'bytes (gzip ~' + extrasGz.length + ')');

@@ -28,6 +28,7 @@ function normalizeDataset(d: Dataset): Dataset {
     if (!c.links) c.links = { skill: null, protocol: null, samples: null };
     if (c.name == null) c.name = c.id;
     if (c.signals && !c.signals.counts) c.signals.counts = {};
+    if (c.ampel && !Array.isArray(c.ampel.reasons)) c.ampel.reasons = [];
   }
   return d;
 }
@@ -93,6 +94,43 @@ export async function ensureFullDataset(): Promise<Dataset> {
     _fullPromise = null;
     throw e;
   }
+}
+
+// ── list-rest.json: Beschreibung, Name, Detail-KPIs, Ampel-Gründe (nach erstem Rendern, s. copy-public-data.mjs) ──
+interface RestEntry { name?: string; description?: string; sourceType?: string; records?: number | null; server?: Connector['server']; kpi?: Partial<NonNullable<Connector['kpi']>>; reasons?: string[] }
+let _restReady = false;
+let _restPromise: Promise<void> | null = null;
+const _restListeners = new Set<() => void>();
+
+export function isRestReady(): boolean { return _restReady || !_isListOnly; }
+export function onRest(cb: () => void): () => void { _restListeners.add(cb); return () => { _restListeners.delete(cb); }; }
+
+function mergeRest(ds: Dataset, rest: Record<string, RestEntry>): void {
+  for (const c of ds.connectors) {
+    const r = rest[c.id]; if (!r) continue;
+    const { kpi, reasons, ...flat } = r;
+    Object.assign(c, flat);
+    if (kpi) c.kpi = { ...(c.kpi ?? {}), ...kpi } as Connector['kpi'];
+    if (reasons && c.ampel) c.ampel.reasons = reasons;
+  }
+}
+
+/** Restfelder nachladen und in das Listen-Dataset mergen (idempotent). Ohne list-rest.json → volles connectors.json. */
+export function loadRest(): Promise<void> {
+  if (isRestReady()) return Promise.resolve();
+  if (_restPromise) return _restPromise;
+  _restPromise = (async () => {
+    try {
+      const r = await fetchJson<{ connectors: Record<string, RestEntry> }>(`${baseUrl()}data/list-rest.json`);
+      if (_ds && _isListOnly) mergeRest(_ds, r.connectors);
+    } catch {
+      await ensureFullDataset();
+    }
+    _restReady = true;
+    _restListeners.forEach((cb) => cb());
+  })();
+  _restPromise.catch(() => { _restPromise = null; });
+  return _restPromise;
 }
 
 export function isListOnly(): boolean {
