@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-13T03:33:18.234Z",
+  "generatedAt": "2026-10-13T03:48:53.257Z",
   "sourceRepo": "servas-ai/opencli-connectors",
   "sourceGeneratedAt": "2026-10-13 03:26 UTC",
-  "count": 126,
+  "count": 137,
   "connectors": [
     {
       "id": "spusu-at",
@@ -2182,14 +2182,14 @@
       "commands": [],
       "logo": "data-api.binance.vision.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:32:37.223Z",
+      "lastRun": "2026-10-13T03:47:46.441Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 1206,
-        "p95": 1209,
-        "throughput": 49.8,
+        "p50": 1251,
+        "p95": 1293,
+        "throughput": 48,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2234,82 +2234,6 @@
           {
             "t": "2026-10-12T08:00:00.000Z",
             "v": 74527.96
-          },
-          {
-            "t": "2026-10-12T09:00:00.000Z",
-            "v": 74653.71
-          },
-          {
-            "t": "2026-10-12T10:00:00.000Z",
-            "v": 74609.91
-          },
-          {
-            "t": "2026-10-12T11:00:00.000Z",
-            "v": 74568.3
-          },
-          {
-            "t": "2026-10-12T12:00:00.000Z",
-            "v": 73970.34
-          },
-          {
-            "t": "2026-10-12T13:00:00.000Z",
-            "v": 74151.05
-          },
-          {
-            "t": "2026-10-12T14:00:00.000Z",
-            "v": 73844.64
-          },
-          {
-            "t": "2026-10-12T15:00:00.000Z",
-            "v": 74063.88
-          },
-          {
-            "t": "2026-10-12T16:00:00.000Z",
-            "v": 73851.39
-          },
-          {
-            "t": "2026-10-12T17:00:00.000Z",
-            "v": 73861.4
-          },
-          {
-            "t": "2026-10-12T18:00:00.000Z",
-            "v": 73811.68
-          },
-          {
-            "t": "2026-10-12T19:00:00.000Z",
-            "v": 74212.7
-          },
-          {
-            "t": "2026-10-12T20:00:00.000Z",
-            "v": 74405.29
-          },
-          {
-            "t": "2026-10-12T21:00:00.000Z",
-            "v": 73899.78
-          },
-          {
-            "t": "2026-10-12T22:00:00.000Z",
-            "v": 73595.55
-          },
-          {
-            "t": "2026-10-12T23:00:00.000Z",
-            "v": 73282.39
-          },
-          {
-            "t": "2026-10-13T00:00:00.000Z",
-            "v": 72893.9
-          },
-          {
-            "t": "2026-10-13T01:00:00.000Z",
-            "v": 73748.08
-          },
-          {
-            "t": "2026-10-13T02:00:00.000Z",
-            "v": 74142.05
-          },
-          {
-            "t": "2026-10-13T03:00:00.000Z",
-            "v": 74286.35
           }
         ],
         "endpoint": "binance-klines"
@@ -2328,14 +2252,14 @@
       "commands": [],
       "logo": "api.bitpanda.com.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:32:41.962Z",
+      "lastRun": "2026-10-13T03:47:51.020Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 799,
-        "p95": 1034,
-        "throughput": 75.1,
+        "p50": 827,
+        "p95": 835,
+        "throughput": 72.6,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2346,7 +2270,7 @@
       "apiAvailable": true,
       "apiVersion": "v1",
       "robots": "allowed",
-      "robotsNote": "api.bitpanda.com hat kein robots.txt (401-JSON); /v1/ticker ist öffentlich dokumentiert. www.bitpanda.com: Allow /, Content-Signal ai-input=no (betrifft Website, nicht API) -> prüfen. Gedrosselt ≥1,1 s.",
+      "robotsNote": "api.bitpanda.com hat kein robots.txt (401-JSON); /v1/ticker ist öffentlich dokumentiert. Hinweis: www.bitpanda.com setzt Allow / mit Content-Signal ai-input=no; das betrifft die Website, nicht die API. Gedrosselt ≥1,1 s.",
       "incidents": [],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/bitpanda/SKILL.md",
@@ -2487,14 +2411,14 @@
       "commands": [],
       "logo": "api.exchange.coinbase.com.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:32:49.464Z",
+      "lastRun": "2026-10-13T03:47:58.187Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 841,
-        "p95": 2438,
-        "throughput": 71.3,
+        "p50": 881,
+        "p95": 2446,
+        "throughput": 68.1,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2539,86 +2463,51 @@
           {
             "t": "2026-10-12T08:00:00.000Z",
             "v": 74532.27
-          },
-          {
-            "t": "2026-10-12T09:00:00.000Z",
-            "v": 74658.25
-          },
-          {
-            "t": "2026-10-12T10:00:00.000Z",
-            "v": 74611.63
-          },
-          {
-            "t": "2026-10-12T11:00:00.000Z",
-            "v": 74573.65
-          },
-          {
-            "t": "2026-10-12T12:00:00.000Z",
-            "v": 73977.43
-          },
-          {
-            "t": "2026-10-12T13:00:00.000Z",
-            "v": 74170.96
-          },
-          {
-            "t": "2026-10-12T14:00:00.000Z",
-            "v": 73832.94
-          },
-          {
-            "t": "2026-10-12T15:00:00.000Z",
-            "v": 74076.25
-          },
-          {
-            "t": "2026-10-12T16:00:00.000Z",
-            "v": 73853.03
-          },
-          {
-            "t": "2026-10-12T17:00:00.000Z",
-            "v": 73868.88
-          },
-          {
-            "t": "2026-10-12T18:00:00.000Z",
-            "v": 73811.97
-          },
-          {
-            "t": "2026-10-12T19:00:00.000Z",
-            "v": 74211.15
-          },
-          {
-            "t": "2026-10-12T20:00:00.000Z",
-            "v": 74422.64
-          },
-          {
-            "t": "2026-10-12T21:00:00.000Z",
-            "v": 73952.28
-          },
-          {
-            "t": "2026-10-12T22:00:00.000Z",
-            "v": 73578.73
-          },
-          {
-            "t": "2026-10-12T23:00:00.000Z",
-            "v": 73268.79
-          },
-          {
-            "t": "2026-10-13T00:00:00.000Z",
-            "v": 72897.12
-          },
-          {
-            "t": "2026-10-13T01:00:00.000Z",
-            "v": 73714.27
-          },
-          {
-            "t": "2026-10-13T02:00:00.000Z",
-            "v": 74108.66
-          },
-          {
-            "t": "2026-10-13T03:00:00.000Z",
-            "v": 74174.5
           }
         ],
         "endpoint": "coinbase-candles"
       }
+    },
+    {
+      "id": "ctis-clinical-trials",
+      "name": "opencli-ctis-clinical-trials",
+      "domain": "euclinicaltrials.eu",
+      "description": "Klinische Studien im EU-Register CTIS (euclinicaltrials.eu) nach Wirkstoff, Erkrankung oder Sponsor suchen, optional nur Studien mit Zentren in Österreich. Ohne Login. Nutze diesen Skill, wenn ein Agent klinische Studien in der EU braucht.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ctis-clinical-trials",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:24:06.657Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 3181,
+        "p95": 3529,
+        "throughput": 18.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "CTIS public search (POST /search)",
+      "robots": "allowed",
+      "robotsNote": "euclinicaltrials.eu hat keine robots.txt (404); öffentliche Suche des EU-Registers nach Verordnung (EU) 536/2014 (Transparenzpflicht). Gedrosselt 1,5 s, max. 50 Treffer pro Aufruf.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ctis-clinical-trials/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ctis-clinical-trials/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ctis-clinical-trials/samples"
+      },
+      "source": "https://euclinicaltrials.eu/ctis-public-api",
+      "live": null
     },
     {
       "id": "data-gv-at",
@@ -2776,14 +2665,14 @@
       "commands": [],
       "logo": "www.ecb.europa.eu.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:32:55.666Z",
+      "lastRun": "2026-10-13T03:48:04.278Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 1437,
-        "p95": 1486,
-        "throughput": 41.8,
+        "p50": 1298,
+        "p95": 1490,
+        "throughput": 46.2,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2830,110 +2719,92 @@
           {
             "t": "2026-09-07",
             "v": 1.1622
-          },
-          {
-            "t": "2026-09-08",
-            "v": 1.1614
-          },
-          {
-            "t": "2026-09-09",
-            "v": 1.1652
-          },
-          {
-            "t": "2026-09-10",
-            "v": 1.1616
-          },
-          {
-            "t": "2026-09-11",
-            "v": 1.1592
-          },
-          {
-            "t": "2026-09-14",
-            "v": 1.1551
-          },
-          {
-            "t": "2026-09-15",
-            "v": 1.1539
-          },
-          {
-            "t": "2026-09-16",
-            "v": 1.1537
-          },
-          {
-            "t": "2026-09-17",
-            "v": 1.1481
-          },
-          {
-            "t": "2026-09-18",
-            "v": 1.146
-          },
-          {
-            "t": "2026-09-21",
-            "v": 1.149
-          },
-          {
-            "t": "2026-09-22",
-            "v": 1.1463
-          },
-          {
-            "t": "2026-09-23",
-            "v": 1.1411
-          },
-          {
-            "t": "2026-09-24",
-            "v": 1.1367
-          },
-          {
-            "t": "2026-09-25",
-            "v": 1.1403
-          },
-          {
-            "t": "2026-09-28",
-            "v": 1.1378
-          },
-          {
-            "t": "2026-09-29",
-            "v": 1.1355
-          },
-          {
-            "t": "2026-09-30",
-            "v": 1.1355
-          },
-          {
-            "t": "2026-10-01",
-            "v": 1.1298
-          },
-          {
-            "t": "2026-10-02",
-            "v": 1.1225
-          },
-          {
-            "t": "2026-10-05",
-            "v": 1.1204
-          },
-          {
-            "t": "2026-10-06",
-            "v": 1.1269
-          },
-          {
-            "t": "2026-10-07",
-            "v": 1.1177
-          },
-          {
-            "t": "2026-10-08",
-            "v": 1.1186
-          },
-          {
-            "t": "2026-10-09",
-            "v": 1.1206
-          },
-          {
-            "t": "2026-10-12",
-            "v": 1.1181
           }
         ],
         "endpoint": null
       }
+    },
+    {
+      "id": "ecdc-atlas",
+      "name": "opencli-ecdc-atlas",
+      "domain": "atlas.ecdc.europa.eu",
+      "description": "Meldepflichtige Infektionskrankheiten (Masern, FSME, Salmonellen, Tuberkulose …) je EU-Land und Jahr aus dem ECDC Surveillance Atlas über die offizielle AtlasService-REST-API. Ohne Login, ohne Key. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ecdc-atlas",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:28:01.081Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1653,
+        "p95": 6511,
+        "throughput": 36.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "AtlasService REST",
+      "robots": "allowed",
+      "robotsNote": "atlas.ecdc.europa.eu hat keine robots.txt (404); offizielle, unter /help selbstdokumentierte ECDC-API. Gedrosselt 1,5 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ecdc-atlas/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ecdc-atlas/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ecdc-atlas/samples"
+      },
+      "source": "https://atlas.ecdc.europa.eu/public/AtlasService/rest",
+      "live": null
+    },
+    {
+      "id": "ecdc-opendata",
+      "name": "opencli-ecdc-opendata",
+      "domain": "raw.githubusercontent.com",
+      "description": "Wöchentliche Daten des ECDC zu Atemwegsinfekten (ILI/ARI, SARI, Testpositivität, Influenza-Subtypen, SARS-CoV-2-Varianten) je EU-Land aus dem offiziellen ECDC-Repository. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ecdc-opendata",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:23:59.715Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1498,
+        "p95": 1499,
+        "throughput": 40.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "ERVISS weekly CSV",
+      "robots": "allowed",
+      "robotsNote": "raw.githubusercontent.com hat keine robots.txt (404); offizielles, öffentlich publiziertes ECDC-Repository. Ein Download pro Aufruf.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ecdc-opendata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ecdc-opendata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ecdc-opendata/samples"
+      },
+      "source": "https://raw.githubusercontent.com/EU-ECDC/Respiratory_viruses_weekly_data/main/data",
+      "live": null
     },
     {
       "id": "edikte-versteigerungen",
@@ -3009,6 +2880,49 @@
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-efriends-at/e2e.log"
       },
       "source": "https://www.efriends.at/cms/wp-content/uploads/2026/03/eFRIENDS_derbessereTarif_01042026.pdf"
+    },
+    {
+      "id": "ema-medicines",
+      "name": "opencli-ema-medicines",
+      "domain": "www.ema.europa.eu",
+      "description": "Zentral in der EU zugelassene Humanarzneimittel der EMA (EPAR) nach Name, Wirkstoff oder ATC-Code suchen, inkl. Status und Zulassungsinhaber. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ema-medicines",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:22:38.383Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1438,
+        "p95": 2901,
+        "throughput": 41.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "EMA medicines JSON report (täglich)",
+      "robots": "allowed",
+      "robotsNote": "robots.txt von www.ema.europa.eu erlaubt /en/documents/ (geprüft per politeFetch); offizieller Download-Report der EMA, ein Request pro Aufruf.",
+      "incidents": [
+        "Nur zentral zugelassene Mittel; national zugelassene (BASG) fehlen – dafür eigener Connector."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ema-medicines/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ema-medicines/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ema-medicines/samples"
+      },
+      "source": "https://www.ema.europa.eu/en/documents/report/medicines-output-medicines_json-report_en.json",
+      "live": null
     },
     {
       "id": "energy-ec-europa-eu",
@@ -3119,6 +3033,88 @@
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/risk-b/eu-sanktionen/samples"
       },
       "source": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+      "live": null
+    },
+    {
+      "id": "eudamed-devices",
+      "name": "opencli-eudamed-devices",
+      "domain": "ec.europa.eu",
+      "description": "Medizinprodukte (UDI-DI) in der EU-Datenbank EUDAMED nach Handelsname, Hersteller-SRN oder UDI suchen, inkl. Risikoklasse und Marktstatus. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eudamed-devices",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:28:11.175Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 2395,
+        "p95": 7421,
+        "throughput": 25.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "EUDAMED public UI API (undokumentiert)",
+      "robots": "disallowed",
+      "robotsNote": "ec.europa.eu/robots.txt sperrt /tools/eudamed nicht für *; JSON-Backend der öffentlichen EUDAMED-Suche (nicht offiziell dokumentiert, Felder laut openregulatory/eudamed-api). Gedrosselt 1,5 s, max. 50 Treffer.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eudamed-devices/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eudamed-devices/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eudamed-devices/samples"
+      },
+      "source": "https://ec.europa.eu/tools/eudamed/api",
+      "live": null
+    },
+    {
+      "id": "eurostat-health",
+      "name": "opencli-eurostat-health",
+      "domain": "ec.europa.eu",
+      "description": "Eurostat-Gesundheitsdaten (Spitalsbetten, Ärzte, Pflegepersonal, Gesundheitsausgaben, Lebenserwartung) für Österreich und andere Länder über die offizielle Dissemination-API. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eurostat-health",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:22:41.504Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1437,
+        "p95": 1477,
+        "throughput": 41.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "Eurostat dissemination API 1.0 / JSON-stat 2.0",
+      "robots": "disallowed",
+      "robotsNote": "robots.txt von ec.europa.eu sperrt /eurostat/api nicht für *; offizielle API. Gedrosselt 1,5 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eurostat-health/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eurostat-health/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eurostat-health/samples"
+      },
+      "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data",
       "live": null
     },
     {
@@ -3384,6 +3380,47 @@
       "live": null
     },
     {
+      "id": "free-exercise-db",
+      "name": "opencli-free-exercise-db",
+      "domain": "raw.githubusercontent.com",
+      "description": "Offene Übungsdatenbank (~870 Kraft-/Fitnessübungen) mit Muskelgruppen, Equipment, Level, Anleitung und Bildern aus yuhonas/free-exercise-db. Ohne Login. Nutze diesen Skill, wenn ein Agent Fitnessübungen suchen oder nach Muskel/Equipment filtern muss.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/free-exercise-db",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:24:54.303Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1200,
+        "p95": 1377,
+        "throughput": 50,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "dist/exercises.json (main)",
+      "robots": "allowed",
+      "robotsNote": "raw.githubusercontent.com: keine robots.txt (404); Repo-Lizenz Unlicense. 1 Request pro Lauf, gedrosselt 1,5 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/free-exercise-db/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/free-exercise-db/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/free-exercise-db/samples"
+      },
+      "source": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json",
+      "live": null
+    },
+    {
       "id": "gleif",
       "name": "opencli-gleif",
       "domain": "api.gleif.org",
@@ -3609,6 +3646,47 @@
       "source": "https://www.kabelplus.at/privat/produkte/internet"
     },
     {
+      "id": "kliniksuche-at",
+      "name": "opencli-kliniksuche-at",
+      "domain": "khstrukturdaten.goeg.at",
+      "description": "Krankenanstalten in Österreich über Kliniksuche.at (GÖG) finden, nach Bundesland, Träger (gemeinnützig/privat) oder Umkreis. Ohne Login. Nutze diesen Skill, wenn ein Agent Spitäler in Österreich braucht.",
+      "category": "adapters",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/adapters/kliniksuche-at",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:23:22.264Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 3018,
+        "p95": 3314,
+        "throughput": 19.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "KliniksucheV2 (Website-Backend)",
+      "robots": "allowed",
+      "robotsNote": "robots.txt: kliniksuche.at ohne Einträge (leer), khstrukturdaten.goeg.at ohne robots.txt (404); öffentliches Backend der Website des Gesundheitsministeriums/GÖG. Nur Einzelabfragen, gedrosselt 1,5 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/adapters/kliniksuche-at/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/adapters/kliniksuche-at/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/adapters/kliniksuche-at/samples"
+      },
+      "source": "https://khstrukturdaten.goeg.at/backend2/KliniksucheV2/api",
+      "live": null
+    },
+    {
       "id": "kraken",
       "name": "opencli-kraken",
       "domain": "api.kraken.com",
@@ -3621,14 +3699,14 @@
       "commands": [],
       "logo": "api.kraken.com.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:33:01.375Z",
+      "lastRun": "2026-10-13T03:48:20.754Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 890,
-        "p95": 925,
-        "throughput": 67.4,
+        "p50": 965,
+        "p95": 1037,
+        "throughput": 62.2,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -3673,82 +3751,6 @@
           {
             "t": "2026-10-12T08:00:00.000Z",
             "v": 74535.7
-          },
-          {
-            "t": "2026-10-12T09:00:00.000Z",
-            "v": 74646.9
-          },
-          {
-            "t": "2026-10-12T10:00:00.000Z",
-            "v": 74619
-          },
-          {
-            "t": "2026-10-12T11:00:00.000Z",
-            "v": 74566.2
-          },
-          {
-            "t": "2026-10-12T12:00:00.000Z",
-            "v": 73975.4
-          },
-          {
-            "t": "2026-10-12T13:00:00.000Z",
-            "v": 74168.6
-          },
-          {
-            "t": "2026-10-12T14:00:00.000Z",
-            "v": 73843.3
-          },
-          {
-            "t": "2026-10-12T15:00:00.000Z",
-            "v": 74073.3
-          },
-          {
-            "t": "2026-10-12T16:00:00.000Z",
-            "v": 73860.8
-          },
-          {
-            "t": "2026-10-12T17:00:00.000Z",
-            "v": 73869.7
-          },
-          {
-            "t": "2026-10-12T18:00:00.000Z",
-            "v": 73811.2
-          },
-          {
-            "t": "2026-10-12T19:00:00.000Z",
-            "v": 74198.9
-          },
-          {
-            "t": "2026-10-12T20:00:00.000Z",
-            "v": 74420.8
-          },
-          {
-            "t": "2026-10-12T21:00:00.000Z",
-            "v": 73898.9
-          },
-          {
-            "t": "2026-10-12T22:00:00.000Z",
-            "v": 73598
-          },
-          {
-            "t": "2026-10-12T23:00:00.000Z",
-            "v": 73284.2
-          },
-          {
-            "t": "2026-10-13T00:00:00.000Z",
-            "v": 72904.1
-          },
-          {
-            "t": "2026-10-13T01:00:00.000Z",
-            "v": 73728.5
-          },
-          {
-            "t": "2026-10-13T02:00:00.000Z",
-            "v": 74147.7
-          },
-          {
-            "t": "2026-10-13T03:00:00.000Z",
-            "v": 74512.4
           }
         ],
         "endpoint": "kraken-ohlc"
@@ -4083,6 +4085,47 @@
       "live": null
     },
     {
+      "id": "oecd-health",
+      "name": "opencli-oecd-health",
+      "domain": "sdmx.oecd.org",
+      "description": "OECD-Gesundheitsstatistik (Spitalsbetten, Ärzte, Pflege, Wartezeiten, Impfungen, Qualitätsindikatoren) je Land über die offizielle OECD-SDMX-API. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/oecd-health",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:23:56.481Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1285,
+        "p95": 32619,
+        "throughput": 46.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "SDMX 2.1 REST (OECD.ELS.HD)",
+      "robots": "allowed",
+      "robotsNote": "sdmx.oecd.org hat keine robots.txt (404); offizielle, dokumentierte OECD-API (Bedingungen: OECD Terms, CC BY 4.0). Gedrosselt 1,5 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/oecd-health/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/oecd-health/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/oecd-health/samples"
+      },
+      "source": "https://sdmx.oecd.org/public/rest",
+      "live": null
+    },
+    {
       "id": "ofac-sls",
       "name": "opencli-ofac-sls",
       "domain": "sanctionslistservice.ofac.treas.gov",
@@ -4390,6 +4433,47 @@
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/wien/PRUEFPROTOKOLL.md"
       },
       "source": "https://www.data.gv.at/api/hub/search"
+    },
+    {
+      "id": "osm-fitness",
+      "name": "opencli-osm-fitness",
+      "domain": "download.geofabrik.de",
+      "description": "Fitnessstudios (leisure=fitness_centre) und Sportzentren (leisure=sports_centre) in Österreich aus OpenStreetMap – lokal gefilterter Extrakt aus dem Geofabrik-Dump, filterbar nach Ort, PLZ, Sportart, Name. Ohne Login, ohne Live-Request.",
+      "category": "international",
+      "country": "DE",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/osm-fitness",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:35:35.950Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 110,
+        "p95": 125,
+        "throughput": 545.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": true,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "Geofabrik-Extrakt (scripts/build_extract.py)",
+      "robots": "allowed",
+      "robotsNote": "Overpass: blocked_robots (Disallow /api/) – nicht genutzt. download.geofabrik.de: keine robots.txt (404), Download ausdrücklich angeboten; 1 Download pro Aktualisierung.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/osm-fitness/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/osm-fitness/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/osm-fitness/samples"
+      },
+      "source": "https://download.geofabrik.de/europe/austria-latest.osm.pbf",
+      "live": null
     },
     {
       "id": "ourpower-coop",
@@ -5344,6 +5428,47 @@
         "samples": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-voltino-gastino-at/e2e.log"
       },
       "source": "https://www.voltino-gastino.at/voltino-flexi-tarif"
+    },
+    {
+      "id": "who-gho",
+      "name": "opencli-who-gho",
+      "domain": "ghoapi.azureedge.net",
+      "description": "Gesundheitsindikatoren der WHO (Lebenserwartung, Sterblichkeit, Impfquoten …) je Land über die offizielle GHO-OData-API. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/who-gho",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T03:22:33.841Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1830,
+        "p95": 1862,
+        "throughput": 32.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GHO OData v4",
+      "robots": "allowed",
+      "robotsNote": "ghoapi.azureedge.net hat keine robots.txt (leer); offizielle, dokumentierte WHO-API. Gedrosselt 1,5 s.",
+      "incidents": [],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/who-gho/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/who-gho/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/who-gho/samples"
+      },
+      "source": "https://ghoapi.azureedge.net/api",
+      "live": null
     },
     {
       "id": "wien",
