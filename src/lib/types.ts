@@ -10,6 +10,9 @@ export interface Connector extends Enriched {
   apiAvailable: boolean | null; apiVersion: string | null; robots: Robots; robotsNote: string | null; incidents: string[];
   links: { skill: string | null; protocol: string | null; samples: string | null }; source: string | null;
   live?: LiveInfo | null;
+  /** Precomputed on list.json for fast Home filters */
+  ent?: 'grün' | 'gelb' | 'rot';
+  kom?: 'ja' | 'mit Namensnennung' | 'prüfen' | 'nein';
 }
 export interface Dataset { generatedAt: string; sourceRepo: string; sourceGeneratedAt: string; count: number; connectors: Connector[]; enrichedAt?: string; gatesSource?: string | null; egress?: { ip: string; at: string; rdns?: string | null } | null; observationsAt?: string; observationCount?: number; timeline?: ({ day: string } & Record<string, number | string>)[]; }
 export interface Server {

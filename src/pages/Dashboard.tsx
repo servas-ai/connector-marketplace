@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
-import { dataset } from '@/lib/data';
+import { useEffect, useState, type ReactNode } from 'react';
+import { dataset, ensureFullDataset } from '@/lib/data';
 import type { Connector } from '@/lib/types';
 import { CATEGORIES, categoryOf } from '@/lib/taxonomy';
 import { extra, growth } from '@/lib/extras';
@@ -39,6 +39,12 @@ function Growth() {
 const hist = (xs: number[], edges: number[], fmt: (a: number, b: number) => string): [string, number][] => edges.slice(0, -1).map((a, i) => [fmt(a, edges[i + 1]), xs.filter((x) => x >= a && x < edges[i + 1]).length]);
 
 export function Dashboard() {
+  const [ready, setReady] = useState(false);
+  useEffect(() => { ensureFullDataset().then(() => setReady(true)).catch(() => setReady(true)); }, []);
+  if (!ready) return <div className="p-10 text-center text-muted-foreground">Statistik lädt …</div>;
+  return <DashboardInner />;
+}
+function DashboardInner() {
   const k = globalKpis();
   const lv = { green: 0, yellow: 0, red: 0 }; for (const c of connectors()) if (c.ampel) lv[c.ampel.level]++;
   const p50s = connectors().map((c) => c.kpi?.p50).filter((x): x is number => !!x);

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import raw from '@/data/extras.json';
 import type { Connector } from './types';
 
 export interface ExtraSummary { shot?: string; v?: string; verdict?: string; liveOk?: string; auditAt?: string; llms?: boolean; openapi?: boolean; lic?: string; rc?: number; cmds?: string[]; codeLic?: string }
@@ -15,10 +14,29 @@ export interface Detail {
   llms?: { host: string; checkedAt: string; robots: string; llmsTxt: string | null; llmsFull: string | null; openapi: string | null; openapiPaths: number | null; mcp: string | null };
   screenshot?: string; screenshotAt?: string; samples?: Sample[]; index?: Record<string, unknown>;
 }
-interface Raw { growth: { t: string; total: number; passing: number; green: number | null }[]; connectors: Record<string, ExtraSummary> }
-const data = raw as unknown as Raw;
-export const growth = data.growth;
-export const extra = (c: Connector | string): ExtraSummary => data.connectors[typeof c === 'string' ? c : c.id] ?? {};
+interface Raw { growth: { t: string; total: number; passing: number; green: number | null }[]; connectors: Record<string, ExtraSummary>; builtFrom?: unknown }
+
+let _map: Record<string, ExtraSummary> = {};
+export let growth: Raw['growth'] = [];
+
+/** Tests / Node: inject without fetch. */
+export function setExtras(d: Raw): void {
+  growth = d.growth ?? [];
+  _map = d.connectors ?? {};
+}
+
+export function extra(c: Connector | string): ExtraSummary {
+  return _map[typeof c === 'string' ? c : c.id] ?? {};
+}
+
+/** Browser: load extras.json as separate gzip-friendly asset — not bundled into JS. */
+export async function loadExtras(): Promise<void> {
+  if (Object.keys(_map).length) return;
+  const base = import.meta.env.BASE_URL || './';
+  const res = await fetch(`${base}data/extras.json`);
+  if (!res.ok) throw new Error(`extras.json HTTP ${res.status}`);
+  setExtras((await res.json()) as Raw);
+}
 
 const base = import.meta.env.BASE_URL;
 function useJson<T>(url: string | null): { data: T | null; loading: boolean } {

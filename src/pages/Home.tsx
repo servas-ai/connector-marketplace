@@ -56,10 +56,10 @@ function Sel({ label, value, onChange, options }: { label: string; value: string
 }
 const YesNo = ({ v, yes = 'ja', no = 'nein' }: { v: boolean | null | undefined; yes?: string; no?: string }) => v == null ? <span className="text-muted-foreground">— prüfen</span> : <span className="inline-flex items-center gap-1"><CapIcon v={v} size={14} />{v ? yes : no}</span>;
 
-function Row({ c }: { c: Connector }) {
+function Row({ c, eager }: { c: Connector; eager?: boolean }) {
   const e = extra(c); const lc = lastCheck(c); const cat = categoryOf(c); const I = cat.icon;
   return <tr data-testid="connector-card" className="border-b transition-colors hover:bg-muted/40">
-    <td className="py-2 pl-3 pr-2"><Link to={`/c/${c.id}`} tabIndex={-1} aria-hidden><Logo c={c} size={32} /></Link></td>
+    <td className="py-2 pl-3 pr-2"><Link to={`/c/${c.id}`} tabIndex={-1} aria-hidden><Logo c={c} size={32} eager={eager} /></Link></td>
     <td className="max-w-[16rem] py-2 pr-3"><Link to={`/c/${c.id}`} className="block truncate font-medium hover:underline">{titleOf(c)}</Link><span className="block truncate font-mono text-xs text-muted-foreground">{c.id}</span></td>
     <td className="hidden py-2 pr-3 md:table-cell"><span className="inline-flex items-center gap-1.5 whitespace-nowrap text-xs"><I size={14} aria-hidden style={{ color: cat.hue }} />{cat.label}</span></td>
     <td className="py-2 pr-3"><AmpelPill c={c} /></td>
@@ -91,7 +91,7 @@ export function Home() {
     const s = q.trim().toLowerCase();
     return sortList(connectors().filter((c) => (!s || [c.id, c.domain, c.description, categoryOf(c).label].some((x) => x?.toLowerCase().includes(s)))
       && (cat === 'all' || categoryOf(c).id === cat) && (land === 'all' || c.country === land) && (ampel === 'all' || c.ampel?.level === ampel)
-      && (zugriff === 'all' || c.interfaces?.access === zugriff) && (ent === 'all' || enterprise(c).level === ent) && (kom === 'all' || commercial(c).v === kom)
+      && (zugriff === 'all' || c.interfaces?.access === zugriff) && (ent === 'all' || (c.ent ?? enterprise(c).level) === ent) && (kom === 'all' || (c.kom ?? commercial(c).v) === kom)
       && capKey.split(',').filter(Boolean).every((x) => (x === 'shot' ? !!extra(c).shot : capOn(c, x)))), sortKey, dir);
   })();
   const pages = Math.max(1, Math.ceil(list.length / PAGE)); const pg = Math.min(page, pages - 1);
@@ -133,7 +133,7 @@ export function Home() {
             {COLS.map((col) => <th key={col.key} scope="col" aria-sort={sortKey === col.key ? (dir === 'asc' ? 'ascending' : 'descending') : 'none'} className={cn('h-10 whitespace-nowrap pr-3 text-left text-xs font-medium text-muted-foreground', col.className)}>
               <button type="button" onClick={() => sortBy(col.key)} className="-ml-1 inline-flex items-center gap-1 rounded px-1 py-0.5 hover:bg-accent hover:text-foreground">{col.label}{sortKey === col.key ? (dir === 'asc' ? <ArrowUp size={12} aria-hidden /> : <ArrowDown size={12} aria-hidden />) : <ArrowUpDown size={12} aria-hidden className="opacity-40" />}</button></th>)}
           </tr></thead>
-          <tbody>{list.slice(pg * PAGE, pg * PAGE + PAGE).map((c) => <Row key={c.id} c={c} />)}</tbody>
+          <tbody>{list.slice(pg * PAGE, pg * PAGE + PAGE).map((c, i) => <Row key={c.id} c={c} eager={i < 8} />)}</tbody>
         </table></div> : <p className="py-16 text-center text-muted-foreground">Keine Connectoren für diese Filter.</p>}
         <div className="flex items-center justify-between gap-2 border-t px-3 py-2 text-xs text-muted-foreground">
           <span>{sortKey ? `Sortiert nach ${COLS.find((c) => c.key === sortKey)?.label} (${dir === 'asc' ? 'aufsteigend' : 'absteigend'})` : 'Sortiert: Empfohlen (Ampel, Erfolg, Latenz)'}</span>

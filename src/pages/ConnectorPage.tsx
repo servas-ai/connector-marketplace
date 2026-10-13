@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Bot, Camera, ChevronLeft, Code2, ExternalLink, FileText, History, LayoutGrid, ListTree, Route as RouteIcon, Scale } from 'lucide-react';
-import { dataset } from '@/lib/data';
+import { dataset, ensureFullDataset } from '@/lib/data';
 import type { Connector } from '@/lib/types';
 import { categoryOf } from '@/lib/taxonomy';
 import { capabilities } from '@/lib/capabilities';
@@ -135,44 +135,57 @@ function AllFields({ c, d }: { c: Connector; d: Detail | null }) {
 export function ConnectorPage() { const { id = '' } = useParams(); return <ConnectorView key={id} id={id} />; }
 
 function ConnectorView({ id }: { id: string }) {
-  const c = dataset.connectors.find((x) => x.id === id);
+  // Stable list row for above-the-fold (no mid-paint swap → weniger CLS).
+  const conn = dataset.connectors.find((x) => x.id === id);
+  const [full, setFull] = useState<Connector | null>(null);
   const { data: d } = useDetail(id);
   const [tab, setTab] = useState('overview');
   useEffect(() => { window.scrollTo(0, 0); }, [id]);
-  if (!c) return <div className="p-10 text-center"><h1 className="text-xl font-semibold">Connector „{id}“ nicht gefunden</h1><p className="mt-2"><Link className="underline" to="/">Zurück</Link></p></div>;
-  const cat = categoryOf(c); const CatIcon = cat.icon; const sr = successRate(c);
-  const similar = dataset.connectors.filter((x) => x.id !== c.id && categoryOf(x).id === cat.id && x.ampel?.level === 'green').slice(0, 3);
+  useEffect(() => {
+    let live = true;
+    const needFull = ['dev', 'tests', 'license', 'fields'].includes(tab);
+    if (!needFull) return;
+    ensureFullDataset().then((ds) => {
+      if (!live) return;
+      setFull(ds.connectors.find((x) => x.id === id) ?? null);
+    }).catch(() => {});
+    return () => { live = false; };
+  }, [id, tab]);
+  const rich = full ?? conn;
+  if (!conn) return <div className="p-10 text-center"><h1 className="text-xl font-semibold">Connector „{id}“ nicht gefunden</h1><p className="mt-2"><Link className="underline" to="/">Zurück</Link></p></div>;
+  const cat = categoryOf(conn); const CatIcon = cat.icon; const sr = successRate(conn);
+  const similar = dataset.connectors.filter((x) => x.id !== conn.id && categoryOf(x).id === cat.id && x.ampel?.level === 'green').slice(0, 3);
   const tabs = [
-    { id: 'overview', label: 'Übersicht', icon: <LayoutGrid size={15} aria-hidden />, content: <Overview c={c} d={d} /> },
-    { id: 'routes', label: 'Routes', icon: <RouteIcon size={15} aria-hidden />, content: <ApiReference c={c} d={d} /> },
-    ...(d?.screenshot ? [{ id: 'shots', label: 'Screenshots', icon: <Camera size={15} aria-hidden />, content: <Shots c={c} d={d} /> }] : []),
-    { id: 'install', label: 'Installieren', icon: <Bot size={15} aria-hidden />, content: <Install c={c} d={d} /> },
-    { id: 'dev', label: 'Dev', icon: <Code2 size={15} aria-hidden />, content: <Dev c={c} d={d} /> },
-    { id: 'tests', label: 'Tests & Verlauf', icon: <History size={15} aria-hidden />, content: <Tests c={c} d={d} /> },
-    { id: 'license', label: 'Compliance & Lizenz', icon: <Scale size={15} aria-hidden />, content: <div className="flex flex-col gap-5"><CompliancePanel c={c} /><License c={c} d={d} /></div> },
-    { id: 'fields', label: 'Alle Felder', icon: <ListTree size={15} aria-hidden />, content: <AllFields c={c} d={d} /> },
+    { id: 'overview', label: 'Übersicht', icon: <LayoutGrid size={15} aria-hidden />, content: <Overview c={conn} d={d} /> },
+    { id: 'routes', label: 'Routes', icon: <RouteIcon size={15} aria-hidden />, content: <ApiReference c={conn} d={d} /> },
+    ...(d?.screenshot ? [{ id: 'shots', label: 'Screenshots', icon: <Camera size={15} aria-hidden />, content: <Shots c={conn} d={d} /> }] : []),
+    { id: 'install', label: 'Installieren', icon: <Bot size={15} aria-hidden />, content: <Install c={conn} d={d} /> },
+    { id: 'dev', label: 'Dev', icon: <Code2 size={15} aria-hidden />, content: <Dev c={rich!} d={d} /> },
+    { id: 'tests', label: 'Tests & Verlauf', icon: <History size={15} aria-hidden />, content: <Tests c={rich!} d={d} /> },
+    { id: 'license', label: 'Compliance & Lizenz', icon: <Scale size={15} aria-hidden />, content: <div className="flex flex-col gap-5"><CompliancePanel c={rich!} /><License c={rich!} d={d} /></div> },
+    { id: 'fields', label: 'Alle Felder', icon: <ListTree size={15} aria-hidden />, content: <AllFields c={rich!} d={d} /> },
   ];
   return (
     <article className="flex flex-col gap-6">
       <Link to="/" className="inline-flex w-fit items-center text-sm text-[color:var(--link)] hover:underline"><ChevronLeft size={16} aria-hidden />Alle Connectoren</Link>
       <header className="flex flex-col gap-5 sm:flex-row sm:items-start">
-        <Logo c={c} size={112} />
+        <div className="shrink-0" style={{ width: 112, height: 112 }}><Logo c={conn} size={112} eager /></div>
         <div className="flex min-w-0 flex-1 flex-col gap-2">
-          <h1 className="text-3xl font-bold tracking-tight">{titleOf(c)}</h1>
-          <p className="inline-flex flex-wrap items-center gap-2 text-sm text-muted-foreground"><CatIcon size={15} aria-hidden style={{ color: cat.hue }} />{cat.label} · {c.country || '–'} · <code className="text-xs">{c.id}</code>{d?.version && <Badge variant="outline">v{d.version}</Badge>}</p>
-          <div className="flex flex-wrap items-center gap-2" data-testid="ampel-badge"><AmpelPill c={c} reasons /></div>
-          <div className="flex flex-wrap items-center gap-2"><EnterpriseBadge c={c} /><CommercialBadge c={c} /></div>
+          <h1 className="text-3xl font-bold tracking-tight">{titleOf(conn)}</h1>
+          <p className="inline-flex flex-wrap items-center gap-2 text-sm text-muted-foreground"><CatIcon size={15} aria-hidden style={{ color: cat.hue }} />{cat.label} · {conn.country || '–'} · <code className="text-xs">{conn.id}</code>{d?.version && <Badge variant="outline">v{d.version}</Badge>}</p>
+          <div className="flex flex-wrap items-center gap-2" data-testid="ampel-badge"><AmpelPill c={conn} /></div>
+          <div className="flex flex-wrap items-center gap-2"><EnterpriseBadge c={conn} /><CommercialBadge c={conn} /></div>
           <div className="mt-1 flex flex-wrap gap-2"><button type="button" onClick={() => setTab('install')} className="inline-flex h-9 items-center gap-2 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90"><Bot size={16} aria-hidden />Installieren</button>
-            <Link to={`/compare?ids=${c.id}`} className="inline-flex h-9 items-center gap-2 rounded-md border bg-card px-4 text-sm font-medium hover:bg-accent"><FileText size={16} aria-hidden />Vergleichen</Link></div>
+            <Link to={`/compare?ids=${conn.id}`} className="inline-flex h-9 items-center gap-2 rounded-md border bg-card px-4 text-sm font-medium hover:bg-accent"><FileText size={16} aria-hidden />Vergleichen</Link></div>
         </div>
       </header>
       <KpiBar label="Kennzahlen">
         <Kpi label="Live-Erfolg" value={sr ? `${sr.pct} %` : '–'} sub={sr?.label ?? 'nicht gemessen'} />
-        <Kpi label="Stabilität" value={c.kpi?.stability != null ? `${c.kpi.stability} %` : '–'} sub="KPI-Fenster" />
-        <Kpi label="Latenz p50 / p95" value={fmtMs(c.kpi?.p50)} sub={`p95 ${fmtMs(c.kpi?.p95)}`} />
-        <Kpi label="Letzte Prüfung" value={relTime(lastCheck(c))} sub={absTime(lastCheck(c))} />
+        <Kpi label="Stabilität" value={conn.kpi?.stability != null ? `${conn.kpi.stability} %` : '–'} sub="KPI-Fenster" />
+        <Kpi label="Latenz p50 / p95" value={fmtMs(conn.kpi?.p50)} sub={`p95 ${fmtMs(conn.kpi?.p95)}`} />
+        <Kpi label="Letzte Prüfung" value={relTime(lastCheck(conn))} sub={absTime(lastCheck(conn))} />
         <Kpi label="Datenfrische" value={d?.audit?.runs.map((r) => r.latestDate).filter(Boolean).sort().pop() ?? '–'} sub="jüngstes Datum in den Daten" />
-        <Kpi label="Routes" value={d ? buildRoutes(c, d).length + (d.routes?.length ?? 0) : routeCount(c) || '–'} sub={d ? `${buildRoutes(c, d).length} Commands · ${d.routes?.length ?? 0} HTTP` : 'lädt …'} />
+        <Kpi label="Routes" value={d ? buildRoutes(conn, d).length + (d.routes?.length ?? 0) : routeCount(conn) || '–'} sub={d ? `${buildRoutes(conn, d).length} Commands · ${d.routes?.length ?? 0} HTTP` : 'lädt …'} />
       </KpiBar>
       <Tabs tabs={tabs} value={tab} onChange={setTab} />
       {similar.length > 0 && <section><SectionTitle>Mehr aus {cat.label}</SectionTitle><div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">{similar.map((x) => <Tile key={x.id} c={x} />)}</div></section>}

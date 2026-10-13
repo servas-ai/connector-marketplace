@@ -2,11 +2,11 @@ import { NavLink, Navigate, Route, Routes, Link, useParams } from 'react-router-
 import { lazy, Suspense, useState } from 'react';
 import { BarChart3, Blocks, Bot, Columns3, Compass, Moon, Sun } from 'lucide-react';
 import { Home } from '@/pages/Home';
-import { ConnectorPage } from '@/pages/ConnectorPage';
 import { cn } from '@/lib/utils';
 import { CommandSearch } from '@/components/CommandSearch';
 import { dataset } from '@/lib/data';
 
+const ConnectorPage = lazy(() => import('@/pages/ConnectorPage').then((m) => ({ default: m.ConnectorPage })));
 const Compare = lazy(() => import('@/pages/Compare').then((m) => ({ default: m.Compare })));
 const Dashboard = lazy(() => import('@/pages/Dashboard').then((m) => ({ default: m.Dashboard })));
 const Agent = lazy(() => import('@/pages/Agent').then((m) => ({ default: m.Agent })));
