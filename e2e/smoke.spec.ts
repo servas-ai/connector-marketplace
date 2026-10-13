@@ -4,9 +4,10 @@ import data from '../src/data/connectors.json' with { type: 'json' };
 import extras from '../src/data/extras.json' with { type: 'json' };
 
 const X = extras.connectors as Record<string, { shot?: string }>;
+const hasShot = (c: (typeof data.connectors)[number]) => Boolean(X[c.id]?.shot);
 export const DETAIL = process.env.DETAIL_ID
-  || data.connectors.find((c) => X[c.id]?.shot && c.logo && c.ampel?.level === 'green')?.id
-  || data.connectors.find((c) => X[c.id]?.shot && c.logo)?.id
+  || data.connectors.find((c) => hasShot(c) && c.logo && c.ampel?.level === 'green')?.id
+  || data.connectors.find((c) => hasShot(c) && c.logo)?.id
   || data.connectors.find((c) => c.logo)?.id
   || data.connectors[0]!.id;
 const NOSHOT = data.connectors.find((c) => !X[c.id]?.shot)!.id;

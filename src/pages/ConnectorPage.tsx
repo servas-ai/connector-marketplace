@@ -5,7 +5,7 @@ import { dataset } from '@/lib/data';
 import type { Connector } from '@/lib/types';
 import { categoryOf } from '@/lib/taxonomy';
 import { capabilities } from '@/lib/capabilities';
-import { useDetail, useManifest, type Detail } from '@/lib/extras';
+import { extra, useDetail, useManifest, type Detail } from '@/lib/extras';
 import { VERDICT, absTime, fmtMs, lastCheck, relTime, routeCount, successRate } from '@/lib/kpi';
 import { agentPrompt, snippets, source } from '@/lib/prompt';
 import { Tabs } from '@/components/ui/tabs';
@@ -39,7 +39,10 @@ function Overview({ c, d }: { c: Connector; d: Detail | null }) {
 }
 
 function Shots({ c, d }: { c: Connector; d: Detail | null }) {
-  const src = d?.screenshot; if (!src) return null;
+  // Prefer detail screenshot; fall back to extras summary. Some builds still say .png while public/screens has .webp.
+  const raw = d?.screenshot || extra(c).shot;
+  if (!raw) return null;
+  const src = raw.replace(/\.png$/i, '.webp');
   return <Panel title="Echte Screenshots der Quelle"><figure className="flex flex-col gap-2"><img data-testid="screenshot" src={`${import.meta.env.BASE_URL}${src}`} alt={`Bildschirmfoto von ${titleOf(c)}`} width={1280} height={800} loading="eager" decoding="async" className="w-full rounded-lg border" />
     <figcaption className="text-xs text-muted-foreground">Aufgenommen {d?.screenshotAt ? `${relTime(d.screenshotAt)} (${absTime(d.screenshotAt)})` : 'beim Echtheits-Audit'} mit Playwright, robots.txt geprüft, Captcha-Seiten verworfen. {d?.audit?.sourceUrl && <Ext href={d.audit.sourceUrl}>{d.audit.sourceUrl}</Ext>}</figcaption></figure></Panel>;
 }

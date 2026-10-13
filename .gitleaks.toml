@@ -1,10 +1,15 @@
 # Erweitert die Standardregeln. False Positive: öffentliche EU-Sanktionsliste (FSF) –
 # die Download-URL enthält den öffentlich dokumentierten, für alle gleichen Parameter
 # token=dG9rZW4tMjAxNw (Base64 von "token-2017"); kein Geheimnis.
+# gitleaks generic-api-key matched Secret ist gekürzt auf "dG9rZW4tMjAxN" (ohne finales w),
+# daher ohne ^$ und mit Präfix matchen.
 [extend]
 useDefault = true
 
 [allowlist]
 description = "Öffentliche EU-FSF-Sanktionslisten-URL; Build-Artefakte"
-regexes = ['''^dG9rZW4tMjAxNw$''']
-paths = ['''^dist/''', '''(^|/)node_modules/''', '''(^|/)public/x/''', '''(^|/)public/manifests/''']
+regexes = [
+  '''dG9rZW4tMjAxN''',
+  '''token=dG9rZW4tMjAxNw''',
+]
+paths = ['''^dist/''', '''(^|/)node_modules/''']
