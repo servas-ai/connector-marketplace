@@ -84,7 +84,10 @@ function walk(dir, name, acc = []) {
   return acc;
 }
 
+const readJson = (f) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return {}; } };
+
 export function build(src) {
+  const overrides = readJson(path.join(src, 'assets/domain-overrides.json'));
   const index = JSON.parse(fs.readFileSync(path.join(src, 'index.json'), 'utf8'));
   const rankFile = path.join(src, 'kpi/ranking.csv');
   const ranking = fs.existsSync(rankFile) ? parseCsv(fs.readFileSync(rankFile, 'utf8')) : [];
@@ -122,7 +125,7 @@ export function build(src) {
     const prev = out.get(id) || {};
     const ok = p.e2ePassed != null && p.e2ePassed === p.e2eTotal;
     const p50 = pct(p.latencies, 50), p95 = pct(p.latencies, 95);
-    let domain = prev.domain || null;
+    let domain = prev.domain || overrides[id] || null;
     try { domain = domain || new URL(p.source).hostname; } catch { /* keine URL */ }
     const r = rankBy.get(id);
     out.set(id, {
@@ -151,6 +154,8 @@ export function build(src) {
     });
   }
   const logoDir = path.join(src, 'assets/logos');
+  const branding = readJson(path.join(src, 'assets/branding.json'));
+  for (const c of out.values()) { if (!c.domain && overrides[c.id]) c.domain = overrides[c.id]; const d = (c.domain || '').replace(/^www\./, ''); if (branding[d]?.favicon) { c.logo = path.basename(branding[d].favicon); c.logoSource = branding[d].source; } }
   for (const c of out.values()) if (!c.logo && c.domain && fs.existsSync(path.join(logoDir, `${c.domain}.png`))) c.logo = `${c.domain}.png`;
   const connectors = [...out.values()].sort((a, b) => (b.kpi?.score ?? -1) - (a.kpi?.score ?? -1) || a.id.localeCompare(b.id));
   return { generatedAt: new Date().toISOString(), sourceRepo: REPO, sourceGeneratedAt: index.generated_at, count: connectors.length, connectors };
