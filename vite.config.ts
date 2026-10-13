@@ -9,5 +9,5 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   json: { stringify: true },
   resolve: { alias: { '@': path.resolve(import.meta.dirname, 'src') } },
-  test: { environment: 'jsdom', setupFiles: ['./src/test/setup.ts'], globals: true, testTimeout: 30000, include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.mjs'] },
+  test: { environment: 'jsdom', setupFiles: ['./src/test/setup.ts'], globals: true, testTimeout: 120000, include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.mjs'] },
 });

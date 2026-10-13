@@ -102,7 +102,7 @@ function main() {
   obs.series.sort((a, b) => a.at.localeCompare(b.at)); obs.updatedAt = new Date().toISOString();
   fs.writeFileSync(OBS, JSON.stringify(obs, null, 1) + '\n');
   const badges = path.join(ROOT, 'public/badges'); fs.mkdirSync(badges, { recursive: true });
-  const egress = net.egress ?? null;
+  const egress = null; // eigene Egress-IP wird nie veröffentlicht
   for (const c of ds.connectors) {
     const h = c.domain ? net.hosts?.[c.domain] : null;
     c.net = h ? { rdns: h.rdns, network: h.network, cdn: h.cdn, cdnAll: h.cdnAll, evidence: h.evidence, waf: h.waf, proxy: h.proxy, datacenter: [c.server?.hoster, c.server?.city, c.server?.country].filter(Boolean).join(' · ') || null } : null;

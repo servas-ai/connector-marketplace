@@ -75,7 +75,7 @@ async function main() {
     hosts[d] = { ip: p.ip ?? null, rdns: p.ip ? rdns[p.ip] ?? null : null, network: p.geo?.network ?? null,
       ...edgeOf({ ip: p.ip, asn: p.geo?.asn, via: wt.cdn, server: wt.server, cdnHeader: wt.cdn }, ranges) };
   }
-  fs.writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), egress, ranges, rdns, hosts }, null, 1) + '\n');
+  fs.writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), egress: null, ranges, rdns, hosts }, null, 1) + '\n');
   console.log(`netintel: ${Object.keys(hosts).length} Hosts, CDN/WAF: ${Object.values(hosts).filter((h) => h.cdn).length}, rDNS: ${Object.values(hosts).filter((h) => h.rdns).length}, Egress ${egress?.ip ?? '?'}`);
 }
 if (process.argv[1] === fileURLToPath(import.meta.url)) main().catch((e) => { console.error(e); process.exit(1); });

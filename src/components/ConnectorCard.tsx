@@ -18,7 +18,7 @@ export function ConnectorCard({ c }: { c: Connector }) {
         {c.screenshot && <img src={c.screenshot} alt={`Screenshot ${c.domain ?? c.id}`} loading="lazy" width={320} height={180} className="h-24 w-full rounded-md border object-cover object-top opacity-90" />}
         <p className="line-clamp-2 text-sm text-muted-foreground">{c.description || 'Keine Beschreibung'}</p>
         <div className="mt-auto flex flex-wrap gap-1">
-          <Badge variant="secondary">{c.category}</Badge><Badge variant="outline">{c.country}</Badge><FeatureBadges c={c} />
+          <Badge variant="secondary">{c.category}</Badge>{c.live?.realtime && <Badge>Realtime</Badge>}<Badge variant="outline">{c.country}</Badge><FeatureBadges c={c} />
         </div>
         <div className="flex flex-wrap items-center gap-1"><InterfaceBadges i={c.interfaces} compact /><span className="ml-auto"><GateBadge state={c.gates?.state} errors={c.gates?.errors} /></span></div>
         {c.server?.hoster && <div className="truncate text-xs text-muted-foreground" title="Server-Hintergrund">{c.server.hoster}{c.server.country ? ` · ${c.server.country}` : ''}{c.server.cms ? ` · ${c.server.cms}` : ''}</div>}

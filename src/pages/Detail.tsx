@@ -6,6 +6,7 @@ import type { Connector } from '@/lib/types';
 import { Renderer } from '@openuidev/react-lang';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { LiveCard } from '@/components/LiveCard';
 import { ConnectorLogo } from '@/components/ConnectorLogo';
 import { StatusBadge } from '@/components/StatusBadges';
 import { AmpelBadge, AmpelLight, FeatureBadges } from '@/components/Ampel';
@@ -46,6 +47,7 @@ export function Detail() {
           <div className="mt-2 flex flex-wrap gap-1"><InterfaceBadges i={c.interfaces} /></div>
         </div>
       </div>
+      {c.live && <section aria-label="Live-Wert" className="max-w-md"><LiveCard c={c} /></section>}
       <Tabs tabs={[
         { id: 'overview', label: 'Übersicht', icon: <LayoutDashboard size={14} />, content: <UI src={overviewToOpenUI(c)} /> },
         { id: 'ampel', label: 'Ampel & Signale', icon: <TrafficCone size={14} />, content: <SignalsPanel c={c} /> },
