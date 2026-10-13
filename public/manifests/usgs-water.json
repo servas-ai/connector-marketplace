@@ -1,0 +1,121 @@
+{
+  "id": "servas-ai.opencli-usgs-water",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "USGS Water Services – Abfluss & Pegel USA",
+  "description": "USGS National Water Information System (waterservices.usgs.gov): aktuelle (Instantaneous) und tägliche Abfluss-/Pegelwerte je Messstelle. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "aktuell",
+      "displayName": "aktuell",
+      "description": "usgs-water aktuell",
+      "command": "usgs-water-cli aktuell"
+    },
+    {
+      "name": "tageswerte",
+      "displayName": "tageswerte",
+      "description": "usgs-water tageswerte",
+      "command": "usgs-water-cli tageswerte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "umwelt",
+    "realtime": true,
+    "source_url": "https://waterservices.usgs.gov/nwis/iv/",
+    "homepage": "https://waterdata.usgs.gov/",
+    "keywords": [
+      "USGS",
+      "Pegel",
+      "Abfluss",
+      "Gewässer",
+      "NWIS",
+      "water data",
+      "streamflow",
+      "USA",
+      "Umwelt"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "waterservices.usgs.gov/robots.txt: 404 (keine Einschränkung). Offizieller NWIS-Webservice (US-Bundesbehörde, Public Domain). Drossel ≥2 s.",
+    "tos": "USGS: Public Domain (US Government Work), Fair Use der Webservices.",
+    "logo": {
+      "domain": "waterservices.usgs.gov",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=usgs.gov&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/waterservices.usgs.gov.png",
+      "brand_domain": "usgs.gov"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3992,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "nwis-1.1",
+      "last_scrape": "2026-10-13T07:26:59.167Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "USGS Water Services – Abfluss & Pegel USA",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "wikimedia"
+  }
+}

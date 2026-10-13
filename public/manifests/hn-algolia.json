@@ -1,0 +1,121 @@
+{
+  "id": "servas-ai.opencli-hn-algolia",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Hacker News Search (Algolia)",
+  "description": "HN Search API (Algolia): Hacker-News-Stories/Kommentare nach Relevanz oder Datum suchen (Punkte, Kommentare, URL) und Item mit Kommentarbaum per ID. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "hn-algolia suche",
+      "command": "hn-algolia-cli suche"
+    },
+    {
+      "name": "neueste",
+      "displayName": "neueste",
+      "description": "hn-algolia neueste",
+      "command": "hn-algolia-cli neueste"
+    },
+    {
+      "name": "item",
+      "displayName": "item",
+      "description": "hn-algolia item",
+      "command": "hn-algolia-cli item"
+    },
+    {
+      "name": "front",
+      "displayName": "front",
+      "description": "hn-algolia front",
+      "command": "hn-algolia-cli front"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": true,
+    "source_url": "https://hn.algolia.com/api/v1/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "hn.algolia.com/robots.txt: 404 (keine Einschränkung). Offizielle öffentliche HN-Search-API. Drossel ≥2 s.",
+    "tos": "HN Search API: frei, ohne Key; Limit 10.000 Requests/h je IP.",
+    "logo": {
+      "domain": "hn.algolia.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=news.ycombinator.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/hn.algolia.com.png",
+      "brand_domain": "news.ycombinator.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3910,
+      "throughput_rps": 0.256,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:06:12.554Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Hacker News Search (Algolia)",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

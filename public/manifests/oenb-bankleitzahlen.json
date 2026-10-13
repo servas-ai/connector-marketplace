@@ -1,0 +1,114 @@
+{
+  "id": "servas-ai.opencli-oenb-bankleitzahlen",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OeNB – Bankleitzahlen/BIC",
+  "description": "OeNB SEPA-Verzeichnis Bankleitzahlen und BIC",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "OeNB – Bankleitzahlen/BIC: suche",
+      "command": "oenb-bankleitzahlen-cli suche --q Raiffeisen --limit 10 --format json"
+    },
+    {
+      "name": "blz",
+      "displayName": "blz",
+      "description": "OeNB – Bankleitzahlen/BIC: blz",
+      "command": "oenb-bankleitzahlen-cli blz --blz 100 --format json"
+    },
+    {
+      "name": "bic",
+      "displayName": "bic",
+      "description": "OeNB – Bankleitzahlen/BIC: bic",
+      "command": "oenb-bankleitzahlen-cli bic --bic NABAATWW --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://www.oenb.at/docroot/downloads_observ/sepa-zv-vz_gesamt.csv",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host (OPENCLI_DELAY_MS, nicht unterschreiten)",
+    "robots_status": "ok",
+    "robots": "www.oenb.at/robots.txt: HTTP 404.",
+    "logo": {
+      "domain": "www.oenb.at",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=oenb.at&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/www.oenb.at.svg",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "0.1.0",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "OeNB – Bankleitzahlen/BIC",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

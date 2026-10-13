@@ -1,107 +1,75 @@
 import type { ReactNode } from 'react';
-import { Legend, Bar, BarChart, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { Tabs } from '@/components/ui/tabs';
-import { LazyMount } from '@/components/LazyMount';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { dataset, groupBy, groupCount, interfaceCoverage, sortConnectors, stats } from '@/lib/data';
+import { dataset } from '@/lib/data';
+import type { Connector } from '@/lib/types';
+import { CATEGORIES, categoryOf } from '@/lib/taxonomy';
+import { extra, growth } from '@/lib/extras';
+import { fmtMs, median, successRate } from '@/lib/kpi';
+import { Kpi, KpiBar } from '@/components/kit';
+import { globalKpis } from './Home';
+import { commercial, enterprise } from '@/lib/compliance';
 
-const PAL = ['#60a5fa', '#34d399', '#fbbf24', '#f472b6', '#a78bfa', '#22d3ee', '#fb923c', '#a3e635', '#e879f9', '#94a3b8', '#52525b'];
+const ALL = dataset.connectors; const N = ALL.length;
+const pct = (n: number, d = N) => (d ? Math.round((100 * n) / d) : 0);
+function count<T extends string>(f: (c: Connector) => T | T[] | null | undefined, top = 10) {
+  const m = new Map<string, number>();
+  for (const c of ALL) { const v = f(c); for (const k of Array.isArray(v) ? v : [v]) if (k) m.set(k, (m.get(k) ?? 0) + 1); }
+  const all = [...m.entries()].sort((a, b) => b[1] - a[1]);
+  return all.length > top ? [...all.slice(0, top), ['andere', all.slice(top).reduce((a, x) => a + x[1], 0)] as [string, number]] : all;
+}
+function Card({ title, sub, children, wide }: { title: string; sub?: string; children: ReactNode; wide?: boolean }) {
+  return <section aria-label={title} className={`flex flex-col gap-3 rounded-xl border bg-card p-5 ${wide ? 'lg:col-span-2' : ''}`}><div><h2 className="font-semibold">{title}</h2>{sub && <p className="text-xs text-muted-foreground">{sub}</p>}</div>{children}</section>;
+}
+function Bars({ rows, color = 'var(--foreground)', total, testid }: { rows: [string, number][]; color?: string; total?: number; testid?: string }) {
+  const max = Math.max(1, ...rows.map((r) => r[1]));
+  return <ul className="flex flex-col gap-1.5" data-testid={testid}>{rows.map(([k, v]) => <li key={k} className="grid grid-cols-[minmax(6rem,11rem)_1fr_3.5rem] items-center gap-2 text-sm"><span className="truncate" title={k}>{k}</span><span className="h-2 rounded-full bg-muted"><span className="block h-2 rounded-full" style={{ width: `${(100 * v) / max}%`, background: color }} /></span><span className="text-right tabular-nums text-muted-foreground">{total ? `${pct(v, total)} %` : v}</span></li>)}</ul>;
+}
+function Coverage({ rows }: { rows: [string, number][] }) {
+  return <ul className="flex flex-col gap-2.5">{rows.map(([k, v]) => <li key={k} className="text-sm"><div className="mb-1 flex justify-between"><span>{k}</span><span className="tabular-nums text-muted-foreground">{v} · {pct(v)} %</span></div><div className="h-2 rounded-full bg-muted"><div className="h-2 rounded-full bg-emerald-500" style={{ width: `${pct(v)}%` }} /></div></li>)}</ul>;
+}
+function Growth() {
+  if (growth.length < 2) return <p className="text-sm text-muted-foreground">Noch zu wenige Messpunkte.</p>;
+  const W = 640, H = 180, max = Math.max(...growth.map((g) => g.total));
+  const pts = (k: 'total' | 'passing') => growth.map((g, i) => `${(i / (growth.length - 1)) * W},${H - (g[k] / max) * (H - 10)}`).join(' ');
+  return <figure><svg viewBox={`0 0 ${W} ${H + 20}`} role="img" aria-label={`Wachstum von ${growth[0].passing} auf ${growth.at(-1)!.passing} bestandene Connectoren`} className="w-full">
+    <polyline points={pts('total')} fill="none" stroke="currentColor" strokeOpacity="0.3" strokeWidth="2" /><polyline points={pts('passing')} fill="none" stroke="#10b981" strokeWidth="3" />
+    {growth.map((g, i) => <text key={g.t} x={(i / (growth.length - 1)) * W} y={H + 16} fontSize="10" textAnchor={i === 0 ? 'start' : i === growth.length - 1 ? 'end' : 'middle'} fill="currentColor" opacity=".6">{i % 2 === 0 || i === growth.length - 1 ? g.t.slice(11, 16) : ''}</text>)}
+  </svg><figcaption className="flex gap-4 text-xs text-muted-foreground"><span><span className="mr-1 inline-block h-0.5 w-4 bg-emerald-500 align-middle" />bestanden ({growth.at(-1)!.passing})</span><span><span className="mr-1 inline-block h-0.5 w-4 bg-current align-middle opacity-30" />gesamt im Index ({growth.at(-1)!.total})</span><span>stündlich, {growth[0].t.slice(0, 10)}</span></figcaption></figure>;
+}
+const hist = (xs: number[], edges: number[], fmt: (a: number, b: number) => string): [string, number][] => edges.slice(0, -1).map((a, i) => [fmt(a, edges[i + 1]), xs.filter((x) => x >= a && x < edges[i + 1]).length]);
 
 export function Dashboard() {
-  const list = dataset.connectors;
-  const s = stats(list);
-  const tiles = [
-    ['Connectoren', s.total], ['grün', `${s.passing} (${s.passRate} %)`], ['Ø Stabilität', s.avgStability != null ? `${s.avgStability} %` : '—'],
-    ['Ø Latenz p50', s.avgP50 != null ? `${s.avgP50} ms` : '—'], ['Datensätze', s.records.toLocaleString('de-AT')], ['Login nötig', s.login],
-    ['Captcha', s.captcha], ['robots Disallow', s.robotsDisallowed], ['Incidents', s.incidents],
-  ];
-  const byCat = groupCount(list, 'category');
-  const byRobots = groupCount(list, 'robots');
-  const top = sortConnectors(list, 'score').filter((c) => c.kpi?.score != null).slice(0, 10).map((c) => ({ name: c.id, score: c.kpi!.score }));
-  const slow = sortConnectors(list, 'p50').filter((c) => c.kpi?.p95).reverse().slice(0, 10).map((c) => ({ name: c.id, p50: c.kpi!.p50, p95: c.kpi!.p95 }));
-  const ax = { stroke: '#a1a1aa', fontSize: 11 };
-  const tt = { contentStyle: { background: '#18181b', border: 0 } };
-  const hoster = groupBy(list, (c) => c.server?.hoster);
-  const land = groupBy(list, (c) => c.server?.country);
-  const cms = groupBy(list, (c) => c.server?.cms ?? (c.server ? 'kein CMS erkannt' : null));
-  const typ = groupBy(list, (c) => c.sourceType);
-  const tls = groupBy(list, (c) => c.server?.tlsIssuer, 6);
-  const cov = interfaceCoverage(list);
-  const gates = groupBy(list, (c) => ({ pass: 'bestanden', fail: 'nicht bestanden', extern: 'externes Repo' } as Record<string, string>)[c.gates?.state ?? ''] ?? null);
-  const gateCol: Record<string, string> = { bestanden: '#34d399', 'nicht bestanden': '#f87171', 'externes Repo': '#71717a' };
-  const codeMap = new Map<string, number>();
-  list.forEach((c) => c.gates?.codes.forEach((k) => codeMap.set(k, (codeMap.get(k) ?? 0) + 1)));
-  const codes = [...codeMap].map(([name, total]) => ({ name, total })).sort((a, b) => b.total - a.total).slice(0, 12);
-  const hbar = (data: { name: string; total: number }[], fill: string, w = 120) => (
-    <ResponsiveContainer><BarChart data={data} layout="vertical" margin={{ left: 10 }}><XAxis type="number" {...ax} allowDecimals={false} /><YAxis type="category" dataKey="name" width={w} {...ax} /><Tooltip {...tt} /><Bar isAnimationActive={false} dataKey="total" name="Connectoren" fill={fill} /></BarChart></ResponsiveContainer>);
-  const pie = (data: { name: string; total: number }[], col?: Record<string, string>) => (
-    <ResponsiveContainer><PieChart><Pie isAnimationActive={false} data={data} dataKey="total" nameKey="name" innerRadius="45%" outerRadius="80%" label={({ name, value }) => `${name} (${value})`} fontSize={11}>
-      {data.map((d, i) => <Cell key={d.name} fill={col?.[d.name] ?? PAL[i % PAL.length]} />)}</Pie><Tooltip {...tt} /></PieChart></ResponsiveContainer>);
-  const extra: [string, ReactNode][] = [
-    ['Hoster (ASN)', hbar(hoster, '#60a5fa', 150)], ['Server-Land', hbar(land, '#34d399', 60)], ['CMS / Framework', hbar(cms, '#a78bfa', 130)],
-    ['Quellentyp', pie(typ)], ['Schnittstellen-Abdeckung (%)', <ResponsiveContainer><BarChart data={cov} layout="vertical" margin={{ left: 10 }}><XAxis type="number" domain={[0, 100]} {...ax} /><YAxis type="category" dataKey="name" width={100} {...ax} /><Tooltip {...tt} /><Bar isAnimationActive={false} dataKey="pct" name="% der Connectoren" fill="#22d3ee" /></BarChart></ResponsiveContainer>],
-    ['Quality-Gate-Status (check_connectors.py --strict)', pie(gates, gateCol)], ['Häufigste Gate-Verstöße', hbar(codes, '#f87171', 70)], ['TLS-Aussteller', hbar(tls, '#fbbf24', 130)],
-  ];
-  const lvl = (l: string) => list.filter((c) => c.ampel?.level === l).length;
-  const sum = (k: string) => list.reduce((a, c) => a + (c.signals?.counts[k] ?? 0), 0);
-  const ups = list.map((c) => c.signals?.uptime).filter((x): x is number => x != null);
-  const ampelTiles = [['🟢 grün', lvl('green')], ['🟡 gelb', lvl('yellow')], ['🔴 rot', lvl('red')], ['Captcha erkannt', list.filter((c) => c.captcha || c.signals?.counts.captcha).length],
-    ['403', sum('403')], ['429', sum('429')], ['Timeouts', sum('timeout')], ['offline/TLS', sum('offline')], ['Ø Uptime', ups.length ? `${Math.round(ups.reduce((a, b) => a + b, 0) / ups.length)} %` : '—'],
-    ['hinter CDN/WAF', list.filter((c) => c.net?.cdn).length], ['Proxy erkannt', list.filter((c) => c.net?.proxy).length], ['Egress-IP', dataset.egress?.ip ?? '—']];
-  const ampelPie = [{ name: 'grün', total: lvl('green') }, { name: 'gelb', total: lvl('yellow') }, { name: 'rot', total: lvl('red') }];
-  const ampelCol = { grün: '#22c55e', gelb: '#eab308', rot: '#ef4444' };
-  const reasonMap = new Map<string, number>();
-  list.forEach((c) => c.ampel?.reasons.forEach((r) => { const k = r.split(/[:×]/)[0].replace(/\d+ %$/, '').trim(); reasonMap.set(k, (reasonMap.get(k) ?? 0) + 1); }));
-  const reasons = [...reasonMap].map(([name, total]) => ({ name, total })).sort((a, b) => b.total - a.total).slice(0, 10);
-  const catAmpel = [...new Set(list.map((c) => c.category))].map((cat) => { const l = list.filter((c) => c.category === cat); return { name: cat, grün: l.filter((c) => c.ampel?.level === 'green').length, gelb: l.filter((c) => c.ampel?.level === 'yellow').length, rot: l.filter((c) => c.ampel?.level === 'red').length }; });
-  const capMap = new Map<string, number>();
-  list.forEach((c) => { const t = Object.keys(c.signals?.captchaTypes ?? {}); if (t.length) t.forEach((x) => capMap.set(x, (capMap.get(x) ?? 0) + 1)); else if (c.captcha) capMap.set('Captcha (Typ unbekannt)', (capMap.get('Captcha (Typ unbekannt)') ?? 0) + 1); });
-  const caps = [...capMap].map(([name, total]) => ({ name, total }));
-  const cdn = groupBy(list, (c) => (c.net ? c.net.cdn ?? 'kein CDN (Origin)' : null));
-  const proxy = groupBy(list, (c) => (c.net ? (c.net.proxy ? 'Proxy/CDN davor' : 'direkt') : null));
-  const upDist = [['100 %', (x: number) => x === 100], ['75–99 %', (x: number) => x >= 75 && x < 100], ['50–74 %', (x: number) => x >= 50 && x < 75], ['< 50 %', (x: number) => x < 50]].map(([name, f]) => ({ name: name as string, total: ups.filter(f as (x: number) => boolean).length }));
-  const tl = dataset.timeline ?? [];
-  const KCOL: Record<string, string> = { ok: '#22c55e', captcha: '#ef4444', '403': '#f97316', '429': '#eab308', timeout: '#a78bfa', offline: '#64748b', robots: '#f472b6', error: '#94a3b8' };
-  const signalCharts: [string, ReactNode][] = [
-    ['Ampel-Verteilung', pie(ampelPie, ampelCol)], ['Ampel pro Kategorie', <ResponsiveContainer><BarChart data={catAmpel}><XAxis dataKey="name" {...ax} /><YAxis {...ax} allowDecimals={false} /><Tooltip {...tt} /><Legend /><Bar isAnimationActive={false} dataKey="grün" stackId="a" fill="#22c55e" /><Bar isAnimationActive={false} dataKey="gelb" stackId="a" fill="#eab308" /><Bar isAnimationActive={false} dataKey="rot" stackId="a" fill="#ef4444" /></BarChart></ResponsiveContainer>],
-    ['Ereignis-Zeitreihe pro Tag (Captcha, 403, 429, Timeout, offline)', <ResponsiveContainer><BarChart data={tl}><XAxis dataKey="day" {...ax} /><YAxis {...ax} allowDecimals={false} /><Tooltip {...tt} /><Legend />{Object.keys(KCOL).map((k) => <Bar isAnimationActive={false} key={k} dataKey={k} stackId="t" fill={KCOL[k]} />)}</BarChart></ResponsiveContainer>],
-    ['Häufigste Ampel-Gründe', hbar(reasons, '#f97316', 160)], ['Captcha-Typen (nur gezählt)', caps.length ? hbar(caps, '#ef4444', 160) : <p className="text-sm text-muted-foreground">Keine Captchas erkannt.</p>],
-    ['CDN/WAF vor der Quelle', pie(cdn)], ['Proxy-Erkennung', pie(proxy)], ['Uptime-Verteilung', hbar(upDist, '#22c55e', 80)],
-  ];
+  const k = globalKpis();
+  const lv = { green: 0, yellow: 0, red: 0 }; for (const c of ALL) if (c.ampel) lv[c.ampel.level]++;
+  const p50s = ALL.map((c) => c.kpi?.p50).filter((x): x is number => !!x);
+  const srs = ALL.map((c) => successRate(c)?.pct).filter((x): x is number => x != null);
+  const captcha = new Map<string, number>(); for (const c of ALL) for (const [t, n] of Object.entries(c.signals?.captchaTypes ?? {})) captcha.set(t, (captcha.get(t) ?? 0) + n);
+  const sig: Record<string, number> = {}; for (const c of ALL) for (const [t, n] of Object.entries(c.signals?.counts ?? {})) sig[t] = (sig[t] ?? 0) + n;
   return (
-    <div className="flex flex-col gap-4">
-      <Tabs label="Dashboard-Bereiche" tabs={[
-        { id: 'ampel', label: 'Ampel & Signale', content: <div className="flex flex-col gap-4">
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-6">
-        {ampelTiles.map(([l, v]) => <Card key={l} data-testid="ampel-stat"><CardContent className="p-4"><div className="text-xs text-muted-foreground">{l}</div><div className="truncate text-xl font-semibold tabular-nums">{v}</div></CardContent></Card>)}
+    <div className="flex flex-col gap-6">
+      <header><h1 className="text-3xl font-bold tracking-tight">Statistik</h1><p className="text-muted-foreground">Alle Werte live aus der Datenbasis ({dataset.count} Connectoren, Stand {dataset.sourceGeneratedAt}).</p></header>
+      <KpiBar label="Kennzahlen">
+        <Kpi label="Connectoren" value={k.total} /><Kpi label="Ampel grün" value={`${pct(k.green)} %`} sub={`${k.green}`} /><Kpi label="Live verifiziert" value={`${k.verified}`} sub={`von ${k.audited} auditiert`} />
+        <Kpi label="Median Erfolg" value={srs.length ? `${median(srs)} %` : '–'} sub={`${srs.length} gemessen`} /><Kpi label="Median p50" value={fmtMs(median(p50s))} /><Kpi label="Median p95" value={fmtMs(median(ALL.map((c) => c.kpi?.p95).filter((x): x is number => !!x)))} />
+      </KpiBar>
+      <div className="grid gap-5 lg:grid-cols-2">
+        <Card title="Wachstum bestandener Connectoren" sub="aus der Git-Historie von index.json" wide><Growth /></Card>
+        <Card title="Ampel-Verteilung"><div className="flex h-4 overflow-hidden rounded-full" role="img" aria-label={`grün ${lv.green}, gelb ${lv.yellow}, rot ${lv.red}`}>{(['green', 'yellow', 'red'] as const).map((l) => <span key={l} style={{ width: `${pct(lv[l])}%`, background: { green: '#10b981', yellow: '#f59e0b', red: '#ef4444' }[l] }} />)}</div>
+          <p className="text-sm text-muted-foreground">grün {lv.green} · gelb {lv.yellow} · rot {lv.red}</p><h3 className="mt-2 text-sm font-medium">Häufigste Gründe für Gelb/Rot</h3><Bars testid="ampel-reasons" rows={count((c) => c.ampel?.reasons.map((r) => r.replace(/\d+ Fehler/, 'n Fehler')), 8)} color="#f59e0b" /></Card>
+        <Card title="Kategorien"><Bars rows={CATEGORIES.map((x) => [x.label, ALL.filter((c) => categoryOf(c).id === x.id).length] as [string, number]).filter((r) => r[1]).sort((a, b) => b[1] - a[1])} color="#6366f1" /></Card>
+        <Card title="Länder"><Bars rows={count((c) => c.country, 12)} color="#0ea5e9" /></Card>
+        <Card title="Zugriffsart"><Bars rows={count((c) => c.interfaces?.access)} total={N} color="#14b8a6" /></Card>
+        <Card title="Live-Erfolgsrate" sub="Audit-Läufe bzw. E2E je Connector"><Bars rows={hist(srs, [0, 50, 80, 100, 101], (a, b) => (a === 100 ? '100 %' : `${a}–${b - 1} %`))} color="#10b981" /></Card>
+        <Card title="Latenz p50" sub="Anzahl Connectoren je Bereich"><Bars rows={hist(p50s, [0, 200, 500, 1000, 3000, 1e9], (a, b) => (b > 1e8 ? `≥ ${a / 1000} s` : `${fmtMs(a)}–${fmtMs(b)}`))} color="#8b5cf6" /></Card>
+        <Card title="Maschinenlesbarkeit & Zugang"><Coverage rows={[['robots.txt erlaubt', ALL.filter((c) => c.robots === 'allowed').length], ['llms.txt', ALL.filter((c) => extra(c).llms).length], ['OpenAPI', ALL.filter((c) => extra(c).openapi).length], ['Ohne Login', ALL.filter((c) => c.loginRequired === false).length], ['MCP-fähig', ALL.filter((c) => c.interfaces?.mcp || c.paperclip).length]]} /></Card>
+        <Card title="Darstellung"><Coverage rows={[['Logo', ALL.filter((c) => c.logo).length], ['Echter Screenshot', ALL.filter((c) => extra(c).shot).length], ['Lizenz bekannt', ALL.filter((c) => extra(c).lic).length], ['Version bekannt', ALL.filter((c) => extra(c).v).length]]} /></Card>
+        <Card title="Häufigste Fehler" sub="Audit-Hinweise, Gate-Codes und Beobachtungen"><Bars rows={count((c) => [...(c.gates?.codes ?? []), ...(c.incidents ?? []).map((x) => x.split(':')[0])], 8)} color="#ef4444" />
+          <h3 className="mt-2 text-sm font-medium">Beobachtete Antworten</h3><Bars rows={Object.entries(sig).filter(([t]) => t !== 'ok').sort((a, b) => b[1] - a[1])} color="#ef4444" /></Card>
+        <Card title="Captcha-Typen">{captcha.size ? <Bars rows={[...captcha.entries()].sort((a, b) => b[1] - a[1])} color="#f97316" /> : <p className="text-sm text-muted-foreground">Keine Captchas beobachtet.</p>}<p className="text-xs text-muted-foreground">{ALL.filter((c) => c.captcha).length} Connectoren mit Captcha</p></Card>
+        <Card title="Compliance (Enterprise-Ampel)" sub="aus belegbaren Feldern, keine Rechtsberatung"><Bars rows={count((c) => enterprise(c).level)} total={N} color="#10b981" /><h3 className="mt-2 text-sm font-medium">Kommerziell nutzbar</h3><Bars rows={count((c) => commercial(c).v)} total={N} color="#0ea5e9" /></Card>
+        <Card title="Hoster"><Bars rows={count((c) => c.server?.hoster, 10)} color="#64748b" /></Card>
+        <Card title="CDN"><Bars rows={count((c) => c.net?.cdn ?? c.server?.cdn, 10)} color="#64748b" /></Card>
+        <Card title="ASN"><Bars rows={count((c) => c.server?.asn, 10)} color="#64748b" /></Card>
       </div>
-      <div className="grid gap-4 lg:grid-cols-2">
-        {signalCharts.map(([t, node]) => <Card key={t} data-testid="chart"><CardHeader><CardTitle>{t}</CardTitle></CardHeader><CardContent className="h-72"><LazyMount>{node}</LazyMount></CardContent></Card>)}
-      </div>
-        </div> },
-        { id: 'kpi', label: 'KPIs', content: <div className="flex flex-col gap-4">
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-9">
-        {tiles.map(([l, v]) => <Card key={l} data-testid="stat"><CardContent className="p-4"><div className="text-xs text-muted-foreground">{l}</div><div className="text-xl font-semibold tabular-nums">{v}</div></CardContent></Card>)}
-      </div>
-      <div className="grid gap-4 lg:grid-cols-2">
-        <Card><CardHeader><CardTitle>Connectoren pro Kategorie</CardTitle></CardHeader><CardContent className="h-72">
-          <ResponsiveContainer><BarChart data={byCat}><XAxis dataKey="name" {...ax} /><YAxis {...ax} /><Tooltip contentStyle={{ background: '#18181b', border: 0 }} />
-            <Bar isAnimationActive={false} dataKey="passing" fill="#34d399" name="grün" /><Bar isAnimationActive={false} dataKey="total" fill="#3f3f46" name="gesamt" /></BarChart></ResponsiveContainer></CardContent></Card>
-        <Card><CardHeader><CardTitle>robots.txt-Status</CardTitle></CardHeader><CardContent className="h-72">
-          <ResponsiveContainer><BarChart data={byRobots} layout="vertical" margin={{ left: 20 }}><XAxis type="number" {...ax} /><YAxis type="category" dataKey="name" width={90} {...ax} /><Tooltip contentStyle={{ background: '#18181b', border: 0 }} /><Bar isAnimationActive={false} dataKey="total" name="Connectoren">{byRobots.map((g) => <Cell key={g.name} fill={g.name === 'allowed' ? '#34d399' : g.name === 'disallowed' ? '#fbbf24' : '#71717a'} />)}</Bar></BarChart></ResponsiveContainer></CardContent></Card>
-        <Card><CardHeader><CardTitle>Top 10 KPI-Score</CardTitle></CardHeader><CardContent className="h-72">
-          <ResponsiveContainer><BarChart data={top} layout="vertical" margin={{ left: 40 }}><XAxis type="number" {...ax} /><YAxis type="category" dataKey="name" width={110} {...ax} /><Tooltip contentStyle={{ background: '#18181b', border: 0 }} /><Bar isAnimationActive={false} dataKey="score" fill="#60a5fa" /></BarChart></ResponsiveContainer></CardContent></Card>
-        <Card><CardHeader><CardTitle>Langsamste 10 (p50 / p95 ms)</CardTitle></CardHeader><CardContent className="h-72">
-          <ResponsiveContainer><BarChart data={slow} layout="vertical" margin={{ left: 40 }}><XAxis type="number" {...ax} /><YAxis type="category" dataKey="name" width={110} {...ax} /><Tooltip contentStyle={{ background: '#18181b', border: 0 }} /><Bar isAnimationActive={false} dataKey="p50" fill="#a78bfa" /><Bar isAnimationActive={false} dataKey="p95" fill="#f472b6" /></BarChart></ResponsiveContainer></CardContent></Card>
-      </div>
-        </div> },
-        { id: 'server', label: 'Server, Schnittstellen & Gates', content: <div className="flex flex-col gap-4">
-      <div className="grid gap-4 lg:grid-cols-2">
-        {extra.map(([t, node]) => <Card key={t} data-testid="chart"><CardHeader><CardTitle>{t}</CardTitle></CardHeader><CardContent className="h-72"><LazyMount>{node}</LazyMount></CardContent></Card>)}
-      </div>
-        </div> },
-      ]} />
-      <p className="text-xs text-muted-foreground">Daten: {dataset.sourceRepo} · Quelle erzeugt {dataset.sourceGeneratedAt} · Sync {dataset.generatedAt}{dataset.enrichedAt ? ` · angereichert ${dataset.enrichedAt}` : ''}{dataset.gatesSource ? ` · Gates: ${dataset.gatesSource}` : ''}</p>
     </div>
   );
 }

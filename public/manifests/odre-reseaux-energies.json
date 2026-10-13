@@ -1,0 +1,126 @@
+{
+  "id": "servas-ai.opencli-odre-reseaux-energies",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ODRÉ – Open Data Réseaux Énergies",
+  "description": "ODRÉ – Open Data Réseaux Énergies – OpenDataSoft Explore API v2.1: Dataset-Suche und Dataset-Details (Titel, Herausgeber, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "odre-reseaux-energies datasets",
+      "command": "odre-reseaux-energies-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "odre-reseaux-energies dataset",
+      "command": "odre-reseaux-energies-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://opendata.reseaux-energies.fr/api/explore/v2.1/catalog/datasets",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.reseaux-energies.fr/robots.txt: keine robots.txt (bzw. HTML) – keine Disallow-Regeln; Laufzeit-Prüfung in lib/http.js. Drossel ≥2 s/Host.",
+    "tos": "ODRÉ – Open Data Réseaux Énergies: offenes Datenportal (OpenDataSoft Explore API v2.1); Lizenz je Dataset, Fair Use.",
+    "logo": {
+      "domain": "opendata.reseaux-energies.fr",
+      "resolved": "https://opendata.reseaux-energies.fr/img/logo-odre.svg",
+      "file": "assets/logos/opendata.reseaux-energies.fr.png",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "keywords": [
+      "Open Data",
+      "offene Daten",
+      "Datenportal",
+      "data portal",
+      "Datensätze",
+      "datasets",
+      "Katalog",
+      "catalog",
+      "Verwaltung",
+      "government",
+      "Behörde",
+      "public sector",
+      "OpenDataSoft",
+      "Explore API",
+      "Frankreich",
+      "France",
+      "Energie"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": null,
+      "lat": 46.6,
+      "lon": 2.4,
+      "bbox": null,
+      "scope": "national"
+    },
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ods-explore-v2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "ODRÉ – Open Data Réseaux Énergies",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "FR",
+    "homepage": "https://opendata.reseaux-energies.fr"
+  }
+}

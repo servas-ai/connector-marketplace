@@ -1,0 +1,147 @@
+{
+  "id": "servas-ai.opencli-lacity-geohub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GeoHub Los Angeles – ArcGIS Hub",
+  "description": "GeoHub Los Angeles (USA): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "lacity-geohub suche",
+      "command": "lacity-geohub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "lacity-geohub neu",
+      "command": "lacity-geohub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "lacity-geohub datensatz",
+      "command": "lacity-geohub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://geohub.lacity.org/search",
+    "homepage": "https://geohub.lacity.org/",
+    "country": "US",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "geohub.lacity.org/robots.txt geprüft: /api/search nicht gesperrt. Öffentliche OGC-API-Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "ArcGIS-Hub-Open-Data-Portal; Lizenz je Datensatz (Feld lizenz), Quelle nennen.",
+    "logo": {
+      "domain": "geohub.lacity.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=geohub.lacity.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/geohub.lacity.org.png",
+      "brand_domain": "geohub.lacity.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3934,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": "2026-10-13T09:01:26.358Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "GeoHub Los Angeles – ArcGIS Hub",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "ArcGIS Hub",
+      "Geodaten",
+      "geodata",
+      "GIS",
+      "Datenkatalog",
+      "data catalog",
+      "Datensätze",
+      "datasets",
+      "Karten",
+      "maps",
+      "Verwaltung",
+      "government",
+      "OGC API Records",
+      "Los Angeles",
+      "California",
+      "USA"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "California",
+      "city": "Los Angeles",
+      "lat": 34.0522,
+      "lon": -118.2437,
+      "bbox": [
+        -118.744,
+        33.552,
+        -117.744,
+        34.552
+      ],
+      "scope": "city"
+    }
+  }
+}

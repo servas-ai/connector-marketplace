@@ -1,0 +1,114 @@
+{
+  "id": "servas-ai.opencli-deribit",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Deribit – öffentliche Derivate-Daten",
+  "description": "Perpetual-Ticker (Mark/Index, Funding, Open Interest), Indexpreise und DVOL-Volatilitätsindex von Deribit. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "deribit ticker",
+      "command": "deribit-cli ticker"
+    },
+    {
+      "name": "index",
+      "displayName": "index",
+      "description": "deribit index",
+      "command": "deribit-cli index"
+    },
+    {
+      "name": "volatilitaet",
+      "displayName": "volatilitaet",
+      "description": "deribit volatilitaet",
+      "command": "deribit-cli volatilitaet"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://www.deribit.com/api/v2/public",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "www.deribit.com hat kein robots.txt (404); /api/v2/public/* laut Doku ohne Auth. Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "www.deribit.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=deribit.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/www.deribit.com.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 939,
+      "throughput_rps": 0.909,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T04:09:43.553Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Deribit – öffentliche Derivate-Daten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "preis"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

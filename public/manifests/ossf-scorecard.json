@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-ossf-scorecard",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenSSF Scorecard API – Sicherheits-Score für Open-Source-Repos",
+  "description": "OpenSSF Scorecard (Open Source Security Foundation): Gesamt-Score und Einzelchecks (Code-Review, Branch-Protection, Signed-Releases, Dependency-Update-Tool …) für öffentliche GitHub/GitLab-Repositories. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "OpenSSF",
+    "Scorecard",
+    "Open Source",
+    "Supply Chain",
+    "Software-Sicherheit",
+    "GitHub",
+    "Repository",
+    "security"
+  ],
+  "keywords": [
+    "OpenSSF",
+    "Scorecard",
+    "Open Source",
+    "Supply Chain",
+    "Software-Sicherheit",
+    "GitHub",
+    "Repository",
+    "security"
+  ],
+  "homepage": "https://scorecard.dev/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "score",
+      "displayName": "score",
+      "description": "ossf-scorecard score",
+      "command": "ossf-scorecard-cli score"
+    },
+    {
+      "name": "checks",
+      "displayName": "checks",
+      "description": "ossf-scorecard checks",
+      "command": "ossf-scorecard-cli checks"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.securityscorecards.dev/projects/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.securityscorecards.dev/robots.txt: /projects/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "OpenSSF Scorecard – Daten unter CDLA-Permissive-2.0 / Apache-2.0, Quellenangabe OpenSSF.",
+    "provider": "Open Source Security Foundation (OpenSSF)",
+    "homepage": "https://scorecard.dev/",
+    "data_license": "CDLA-Permissive-2.0 / Apache-2.0",
+    "keywords": [
+      "OpenSSF",
+      "Scorecard",
+      "Open Source",
+      "Supply Chain",
+      "Software-Sicherheit",
+      "GitHub",
+      "Repository",
+      "security"
+    ],
+    "geo": {
+      "country": null,
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null
+    },
+    "logo": {
+      "domain": "api.securityscorecards.dev",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://scorecard.dev/_nuxt/openssf.D-VtrtLx.svg",
+      "fallback": "initials",
+      "brand_domain": "openssf.org",
+      "file": "assets/logos/api.securityscorecards.dev.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v5",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "OpenSSF Scorecard API – Sicherheits-Score für Open-Source-Repos",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "servas-ai.opencli-swiss-fcdb",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Schweizer Nährwertdatenbank (BLV)",
+  "description": "Nährwerte der Schweizer Nährwertdatenbank (BLV/naehrwertdaten.ch): Lebensmittelsuche und alle Komponenten pro 100 g über die offizielle Web-API.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "naehrwerte",
+    "schweiz"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "naehrwerte",
+      "displayName": "naehrwerte",
+      "description": "swiss-fcdb naehrwerte",
+      "command": "swiss-fcdb-cli naehrwerte"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "swiss-fcdb suche",
+      "command": "swiss-fcdb-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://api.webapp.prod.blv.foodcase-services.com/BLV_WebApp_WS/webresources/BLV-api",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/s je Host",
+    "robots_status": "ok",
+    "robots": "api.webapp.prod.blv.foodcase-services.com/robots.txt: 404 (keine Regeln); naehrwertdaten.ch/robots.txt erlaubt alles außer einer WP-Datei.",
+    "license": "Schweizer Nährwertdatenbank, BLV – freie Nutzung mit Quellenangabe (naehrwertdaten.ch Nutzungsbedingungen)",
+    "license_url": "https://naehrwertdaten.ch/de/nutzungsbedingungen/",
+    "logo": {
+      "domain": "naehrwertdaten.ch",
+      "resolved": "https://naehrwertdaten.ch/wp-content/uploads/2018/07/SW-FCD-D-350x1220-e1530787425948.png",
+      "file": "assets/logos/naehrwertdaten.ch.png",
+      "source": "favicon"
+    },
+    "keywords": [
+      "Lebensmittel",
+      "food",
+      "Nährwerte",
+      "nutrition",
+      "Nährwertdatenbank",
+      "food composition",
+      "Schweiz",
+      "Switzerland",
+      "BLV",
+      "Kalorien",
+      "calories",
+      "Vitamine",
+      "vitamins",
+      "Mineralstoffe"
+    ],
+    "geo": {
+      "country": "CH",
+      "region": null,
+      "city": "Bern",
+      "lat": 46.948,
+      "lon": 7.447,
+      "scope": "national"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3863,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "BLV-api (FoodCASE WebApp WS)",
+      "last_scrape": "2026-10-13T09:26:24.230Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Schweizer Nährwertdatenbank (BLV)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "food_id",
+          "kategorie"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "country": "CH",
+    "homepage": "https://naehrwertdaten.ch"
+  }
+}

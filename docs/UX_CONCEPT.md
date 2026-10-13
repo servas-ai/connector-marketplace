@@ -77,3 +77,21 @@ Energie (Zap), Telekom & Internet (Wifi), Finanzen & Krypto (Landmark), Statisti
 5. Lighthouse ≥ 90 (Performance, A11y, Best Practices, SEO), Desktop + Mobil
 6. Deploy auf `gh-pages` nur über `scripts/deploy-pages.sh`, das 1–5 ausführt und abbricht, wenn etwas rot ist
 7. Live-Check danach: HTTP 200, angezeigte Connector-Zahl == `count` in der ausgelieferten Datenbasis == index.json-Abgleich
+
+## 8. Compliance & Lizenz (Unternehmenssicht)
+
+Neuer Tab „Compliance & Lizenz“, Filter „Enterprise-Ampel“ und „Kommerziell nutzbar“ auf der Startseite, Gruppe „Compliance“ im Vergleich, Karte in der Statistik. Logik in `src/lib/compliance.ts`, getestet in `compliance.test.ts`.
+
+| Feld | Quelle | Werte |
+|---|---|---|
+| Adapter-Code-Lizenz | `package.json` → `license` | MIT, Apache-2.0, UNLICENSED, nicht festgelegt |
+| Lizenz der Quelldaten | index.json `license` | CC-BY, CC0, gemeinfrei, Terms, **unbekannt – prüfen** |
+| Kommerziell nutzbar | abgeleitet aus Datenlizenz | ja (CC0/PD) · mit Namensnennung (CC-BY, DL-DE-BY, ODbL, OGL, Etalab) · prüfen (unbekannt/Terms/je Dataset) · nein (NC) |
+| Personenbezug | Kategorie + Stichworte | keiner erkennbar · Firmendaten · möglicherweise personenbezogen · prüfen |
+| Rechtsgrundlage, Datenquelle | `sourceType` | amtlich (Behörde/Register) sonst prüfen |
+| Server-Land | `server.country` | EU/EWR, außerhalb EU, unbekannt |
+| robots.txt, Login, Captcha, Rate-Limit | Index, Beobachtungen | eingehalten / kritisch / prüfen |
+
+**Enterprise-Ampel:** rot, wenn ein Punkt kritisch ist (robots Disallow, Login, Captcha, NC-Lizenz); gelb, wenn ein Punkt offen ist (prüfen/Achtung); grün nur, wenn alles belegt und unkritisch ist. Begründung wird immer angezeigt.
+
+**Keine Rechtsberatung:** Nur belegbare Angaben mit Beleg-Feld, sonst „prüfen“. Unbekannte Lizenzen werden nicht schöngefärbt. Hinweis im Footer und im Tab. Die Felder werden als `connector-meta.v1` vorgeschlagen (PRs in opencli-connectors und opencli-factory).

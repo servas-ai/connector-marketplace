@@ -1,0 +1,129 @@
+{
+  "id": "servas-ai.opencli-ign-geocodage",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "IGN Géoplateforme Geocoding",
+  "description": "IGN Géoplateforme (data.geopf.fr): Adress- und Ortssuche (Geocoding) sowie Reverse-Geocoding für Frankreich. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "Adresse/Ort suchen (--q TEXT)",
+      "command": "ign-geocodage-cli suche"
+    },
+    {
+      "name": "reverse",
+      "displayName": "reverse",
+      "description": "Reverse-Geocoding (--lat --lon)",
+      "command": "ign-geocodage-cli reverse"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "place",
+    "realtime": false,
+    "source_url": "https://data.geopf.fr/geocodage/search",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.geopf.fr: kein robots.txt (404/JSON). Offizielle Géoplateforme-API, Drossel ≥2 s, kein Bulk-Geocoding.",
+    "tos": "IGN Géoplateforme: offene Dienste (Licence Ouverte 2.0), Limit 50 Req/s.",
+    "keywords": [
+      "geocoding",
+      "geokodierung",
+      "adresssuche",
+      "address search",
+      "reverse geocoding",
+      "frankreich",
+      "france",
+      "ign",
+      "adressen",
+      "addresses",
+      "koordinaten",
+      "coordinates",
+      "karte",
+      "map",
+      "ban"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": null,
+      "bbox": [
+        -5.14,
+        41.33,
+        9.56,
+        51.09
+      ],
+      "scope": "national"
+    },
+    "logo": {
+      "domain": "data.geopf.fr",
+      "resolved": "https://commons.wikimedia.org/wiki/File:IGN_logo_2012.svg",
+      "file": "assets/logos/data.geopf.fr.png",
+      "brand_domain": "geopf.fr",
+      "source": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3293,
+      "throughput_rps": 0.304,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:06:23.982Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "IGN Géoplateforme Geocoding",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "FR",
+    "homepage": "https://geoservices.ign.fr"
+  }
+}

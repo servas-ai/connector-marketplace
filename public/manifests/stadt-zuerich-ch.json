@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-stadt-zuerich-ch",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Stadt Zürich – Open Data (CKAN)",
+  "description": "data.stadt-zuerich.ch CKAN API: Dataset-Suche und Dataset-Details (Titel, Organisation, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "stadt-zuerich-ch datasets",
+      "command": "stadt-zuerich-ch-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "stadt-zuerich-ch dataset",
+      "command": "stadt-zuerich-ch-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.stadt-zuerich.ch/api/3/action/package_search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.stadt-zuerich.ch/robots.txt: 404 (keine Sperre) – CKAN /api/3/action/ öffentlich. Drossel ≥2 s.",
+    "tos": "Stadt Zürich Open Data (CC0/CC-BY); Fair Use.",
+    "logo": {
+      "domain": "data.stadt-zuerich.ch",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=data.stadt-zuerich.ch&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.stadt-zuerich.ch.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Stadt Zürich – Open Data (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CH",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "favicon"
+  }
+}

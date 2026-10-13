@@ -1,0 +1,135 @@
+{
+  "id": "servas-ai.opencli-eurostat-lebensmittelpreise",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Eurostat Lebensmittel-Teuerung (HICP)",
+  "description": "Lebensmittel-Teuerung in der EU: harmonisierter Verbraucherpreisindex (HICP, ECOICOP 2) je Land und Warengruppe (Brot, Fleisch, Milch …), Jahres-/Monatsraten und Indizes über die offizielle Eurostat-API.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "preise",
+    "inflation",
+    "eu"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "gruppen",
+      "displayName": "gruppen",
+      "description": "eurostat-lebensmittelpreise gruppen",
+      "command": "eurostat-lebensmittelpreise-cli gruppen"
+    },
+    {
+      "name": "teuerung",
+      "displayName": "teuerung",
+      "description": "eurostat-lebensmittelpreise teuerung",
+      "command": "eurostat-lebensmittelpreise-cli teuerung"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "html"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/s je Host",
+    "robots_status": "ok",
+    "robots": "ec.europa.eu/robots.txt: Abschnitt User-agent * sperrt /eurostat/api nicht.",
+    "license": "CC BY 4.0 – Eurostat",
+    "license_url": "https://ec.europa.eu/eurostat/about-us/policies/copyright",
+    "logo": {
+      "domain": "ec.europa.eu",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=128",
+      "fallback": "initials"
+    },
+    "keywords": [
+      "Lebensmittel",
+      "food",
+      "Nährwerte",
+      "nutrition",
+      "Teuerung",
+      "inflation",
+      "Verbraucherpreise",
+      "consumer prices",
+      "HICP",
+      "Eurostat",
+      "Preisindex",
+      "price index",
+      "EU",
+      "COICOP"
+    ],
+    "geo": {
+      "country": "EU",
+      "region": null,
+      "city": "Luxembourg",
+      "lat": 49.61,
+      "lon": 6.13,
+      "scope": "supranational"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1477,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Eurostat Statistics API 1.0 (JSON-stat 2.0)",
+      "last_scrape": "2026-10-13T09:35:46.475Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Eurostat Lebensmittel-Teuerung (HICP)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "monat",
+          "wert"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    }
+  }
+}

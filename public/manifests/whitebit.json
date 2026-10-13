@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-whitebit",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "WhiteBIT – öffentliche Marktdaten",
+  "description": "Krypto-Ticker und Marktliste der EU-Börse WhiteBIT über die öffentliche API v4. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "whitebit ticker",
+      "command": "whitebit-cli ticker"
+    },
+    {
+      "name": "maerkte",
+      "displayName": "maerkte",
+      "description": "whitebit maerkte",
+      "command": "whitebit-cli maerkte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://whitebit.com/api/v4/public",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "whitebit.com/robots.txt sperrt nur /loading, /balance/, /history/, /settings/ u. ä.; /api/v4/public erlaubt und laut Doku ohne Auth. Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "whitebit.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=whitebit.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/whitebit.com.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1870,
+      "throughput_rps": 0.535,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v4",
+      "last_scrape": "2026-10-13T04:12:18.383Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "WhiteBIT – öffentliche Marktdaten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "preis"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

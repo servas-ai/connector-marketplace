@@ -1,0 +1,133 @@
+{
+  "id": "servas-ai.opencli-db-stada",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Deutsche Bahn StaDa – Stationsdaten (DB API Marketplace, opt-in)",
+  "description": "DB StaDa: Stammdaten aller DB-Bahnhöfe über den DB API Marketplace. Nur mit eigenem Client-ID/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "abfrage",
+      "displayName": "abfrage",
+      "description": "Generische Abfrage eines API-Pfads (--path, Standard /stations?limit=5)",
+      "command": "db-stada-cli abfrage"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://apis.deutschebahn.com/db-api-marketplace/apis/station-data/v2",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": true,
+    "opt_in": {
+      "env": "DB_API_KEY",
+      "required": true,
+      "never_in_repo": true
+    },
+    "status": "pruefen",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "none",
+    "robots": "developers.deutschebahn.com: offizielle API, Zugriff nur mit eigenem Key.",
+    "tos": "DB API Marketplace Nutzungsbedingungen (Registrierung, CC BY 4.0 für StaDa).",
+    "keywords": [
+      "verkehr",
+      "transport",
+      "öffis",
+      "public transport",
+      "fahrplan",
+      "timetable",
+      "abfahrten",
+      "departures",
+      "haltestelle",
+      "stop",
+      "echtzeit",
+      "realtime",
+      "mobilität",
+      "mobility",
+      "deutsche bahn",
+      "db",
+      "bahnhof",
+      "station",
+      "zug",
+      "train"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": null,
+      "city": null,
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ],
+      "scope": "national"
+    },
+    "logo": {
+      "domain": "developers.deutschebahn.com",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/f7/e5/85f7e5e2-b57c-0e6a-cd11-17bb21f0d5db/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "file": "assets/logos/developers.deutschebahn.com.png",
+      "brand_domain": "bahn.de",
+      "source": "appstore"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": true,
+      "api_version": "opt-in",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Deutsche Bahn StaDa – Stationsdaten (DB API Marketplace, opt-in)",
+        "subtitle": "verkehr · opt-in",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "opt_in"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "DE",
+    "homepage": "https://developers.deutschebahn.com"
+  }
+}

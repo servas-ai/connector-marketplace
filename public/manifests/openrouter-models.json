@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-openrouter-models",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenRouter – Modelle & Preise",
+  "description": "OpenRouter LLM-Modellkatalog über die öffentliche API ohne Key: Preise pro 1 Mio. Tokens, Kontextlänge, Modalitäten, Anbieter-Endpunkte mit Uptime, Inferenz-Anbieter. Nutze den Skill für LLM-Preisvergleiche.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "modelle",
+      "displayName": "modelle",
+      "description": "openrouter-models modelle",
+      "command": "openrouter-models-cli modelle"
+    },
+    {
+      "name": "endpunkte",
+      "displayName": "endpunkte",
+      "description": "openrouter-models endpunkte",
+      "command": "openrouter-models-cli endpunkte"
+    },
+    {
+      "name": "anbieter",
+      "displayName": "anbieter",
+      "description": "openrouter-models anbieter",
+      "command": "openrouter-models-cli anbieter"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": true,
+    "source_url": "https://openrouter.ai/api/v1/models",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "openrouter.ai/robots.txt: User-Agent * Allow / (nur /seo/ gesperrt). /api/v1/models, /api/v1/models/{id}/endpoints und /api/v1/providers laut API-Doku ohne Auth. Drossel ≥2 s, Abbruch bei 403/429.",
+    "tos": "OpenRouter-API-Doku: Modell-Liste öffentlich; Connector macht keine Completions (die bräuchten einen Key).",
+    "logo": {
+      "domain": "openrouter.ai",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=openrouter.ai&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/openrouter.ai.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2155,
+      "throughput_rps": 0.464,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T05:07:45.176Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "OpenRouter – Modelle & Preise",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "prompt_usd_1m"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

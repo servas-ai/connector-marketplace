@@ -1,0 +1,114 @@
+{
+  "id": "servas-ai.opencli-riksbank",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Sveriges Riksbank – SWEA",
+  "description": "SEK-Wechselkurse, Leitzins und Zeitreihen der schwedischen Riksbank (SWEA-API). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kurse",
+      "displayName": "kurse",
+      "description": "riksbank kurse",
+      "command": "riksbank-cli kurse"
+    },
+    {
+      "name": "leitzins",
+      "displayName": "leitzins",
+      "description": "riksbank leitzins",
+      "command": "riksbank-cli leitzins"
+    },
+    {
+      "name": "historie",
+      "displayName": "historie",
+      "description": "riksbank historie",
+      "command": "riksbank-cli historie"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://api.riksbank.se/swea/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "api.riksbank.se hat kein robots.txt (404); SWEA-API ohne Key mit anonymem Kontingent nutzbar. Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "api.riksbank.se",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=riksbank.se&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.riksbank.se.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3256,
+      "throughput_rps": 0.307,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "SWEA v1",
+      "last_scrape": "2026-10-13T04:12:02.264Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Sveriges Riksbank – SWEA",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "kurs_sek"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "SE",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

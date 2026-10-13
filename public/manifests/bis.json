@@ -1,0 +1,114 @@
+{
+  "id": "servas-ai.opencli-bis",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BIS – Leitzinsen & Wechselkurse",
+  "description": "Zentralbank-Leitzinsen (inkl. Eurozone, US, CH, JP) und USD-Wechselkurse aus dem BIS Data Portal (SDMX). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "leitzinsen",
+      "displayName": "leitzinsen",
+      "description": "bis leitzinsen",
+      "command": "bis-cli leitzinsen"
+    },
+    {
+      "name": "wechselkurse",
+      "displayName": "wechselkurse",
+      "description": "bis wechselkurse",
+      "command": "bis-cli wechselkurse"
+    },
+    {
+      "name": "serie",
+      "displayName": "serie",
+      "description": "bis serie",
+      "command": "bis-cli serie"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://stats.bis.org/api/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "stats.bis.org hat kein robots.txt; BIS-Statistiken frei nutzbar mit Quellenangabe (BIS Terms). Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "stats.bis.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=bis.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/stats.bis.org.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1273,
+      "throughput_rps": 0.786,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "SDMX v1",
+      "last_scrape": "2026-10-13T03:42:40.948Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "BIS – Leitzinsen & Wechselkurse",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "prozent"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "svg"
+  }
+}

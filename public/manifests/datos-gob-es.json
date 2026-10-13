@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-datos-gob-es",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "datos.gob.es – Datos Abiertos España",
+  "description": "datos.gob.es Linked-Data-API: Dataset-Katalog und Dataset-Details (Titel, Identifier, Themes). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "datos-gob-es datasets",
+      "command": "datos-gob-es-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "datos-gob-es dataset",
+      "command": "datos-gob-es-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://datos.gob.es/apidata/catalog/dataset",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "datos.gob.es/robots.txt: Disallow Drupal-Core/Admin – /apidata/catalog/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "datos.gob.es: Datos Abiertos; Fair Use der API.",
+    "logo": {
+      "domain": "datos.gob.es",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=datos.gob.es&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/datos.gob.es.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "linked-data-api-0.2",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "datos.gob.es – Datos Abiertos España",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "ES",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

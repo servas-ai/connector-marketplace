@@ -1,0 +1,145 @@
+{
+  "id": "servas-ai.opencli-archive-org",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Internet Archive – Sammlungssuche",
+  "description": "Internet Archive Advanced Search + Metadata API: Suche nach Items (Texte, Filme, Audio, Software, Bilder) mit Medientyp, Jahr, Sammlung und Item-Metadaten.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "archiv",
+    "archive",
+    "internet archive",
+    "digitalisate",
+    "digitized",
+    "bücher",
+    "books",
+    "filme"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "Items suchen (<query>)",
+      "command": "archive-org-cli suche"
+    },
+    {
+      "name": "item",
+      "displayName": "item",
+      "description": "Item-Metadaten (<identifier>)",
+      "command": "archive-org-cli item"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://archive.org/advancedsearch.php",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "archive.org/robots.txt: /advancedsearch.php und /metadata nicht gesperrt (nur /control/, /report/ …). Offizielle API, 1 req/2 s.",
+    "tos": "Internet Archive Terms of Use; Rechte je Item.",
+    "keywords": [
+      "archiv",
+      "archive",
+      "internet archive",
+      "digitalisate",
+      "digitized",
+      "bücher",
+      "books",
+      "filme",
+      "movies",
+      "audio",
+      "software",
+      "kulturerbe",
+      "cultural heritage",
+      "sammlung",
+      "collection",
+      "bibliothek"
+    ],
+    "geo": {
+      "country": "WORLD",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "archive.org",
+      "file": "assets/logos/archive.org.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://archive.org/offshoot_assets/apple-touch-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 4341,
+      "throughput_rps": 0.23,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:36:14.918Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "Internet Archive – Sammlungssuche",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "titel",
+          "medientyp",
+          "jahr"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "id": "servas-ai.opencli-ooe-hydro",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI ooe-hydro",
+  "description": "OÖ Hydrographie: Pegel, Durchfluss, Niederschlag, Grundwasser (ZRXP-OGD)",
+  "author": "servas-ai (OpenCLI-Squad)",
+  "categories": [
+    "connector",
+    "opendata",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.dashboardWidget.register"
+  ],
+  "tools": [
+    {
+      "name": "ooe-hydro-aktuell",
+      "displayName": "Aktuelle Pegel/Messwerte",
+      "description": "node bin/cli.js aktuell --datei og --gewaesser Donau --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "datei": {
+            "type": "string"
+          },
+          "parameter": {
+            "type": "string"
+          },
+          "gewaesser": {
+            "type": "string"
+          },
+          "q": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "ooe-hydro-verlauf",
+      "displayName": "Zeitreihe einer Messstelle",
+      "description": "node bin/cli.js verlauf --nr SANR --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "nr": {
+            "type": "string"
+          },
+          "datei": {
+            "type": "string"
+          },
+          "parameter": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "nr"
+        ]
+      }
+    },
+    {
+      "name": "ooe-hydro-dateien",
+      "displayName": "ZRXP-Exporte",
+      "description": "node bin/cli.js dateien --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "status": "cli-ready",
+    "category": "opendata",
+    "cli_commands": [
+      "aktuell",
+      "verlauf",
+      "dateien"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "access_chain": [
+      "file_download"
+    ],
+    "robots_status": "ok",
+    "rate_limit": "≥ 2 s Abstand pro Prozess (OPENCLI_DELAY_MS, Minimum 2000), ein Worker pro Host; Datei je Aufruf einmal geladen (0,1–0,8 MB)",
+    "source_url": "https://www.land-oberoesterreich.gv.at/files/ogd/hydro/",
+    "login": "none",
+    "openui": "paperclip/openui.txt",
+    "logo": {
+      "domain": "www.land-oberoesterreich.gv.at",
+      "chain": [
+        "https://www.land-oberoesterreich.gv.at/favicon.ico",
+        "https://www.google.com/s2/favicons?domain=www.land-oberoesterreich.gv.at&sz=64"
+      ],
+      "fallback": "https://www.google.com/s2/favicons?domain=ooe.gv.at&sz=64",
+      "file": "assets/logos/www.land-oberoesterreich.gv.at.png",
+      "source": "official-site"
+    },
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4863,
+      "throughput_rps": 0.21,
+      "captcha_rate": 0,
+      "login": "none",
+      "api_version": "ZRXP 2300.100",
+      "last_scrape": "2026-10-13T05:12:08.338Z",
+      "datenqualitaet": 1.0
+    },
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "host": "www.land-oberoesterreich.gv.at",
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "id": "servas-ai.opencli-sensor-community",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Sensor.Community – Feinstaub- und Klimasensoren (airrohr)",
+  "description": "Sensor.Community (ehemals luftdaten.info, OK Lab Stuttgart): aktuelle Messwerte (PM10, PM2,5, Temperatur, Luftfeuchte, Luftdruck) aller Bürger-Sensoren in einem Umkreis oder eines einzelnen Sensors. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Sensor.Community",
+    "luftdaten.info",
+    "Feinstaub",
+    "PM2.5",
+    "PM10",
+    "Citizen Science",
+    "Luftqualität",
+    "airrohr",
+    "air quality"
+  ],
+  "keywords": [
+    "Sensor.Community",
+    "luftdaten.info",
+    "Feinstaub",
+    "PM2.5",
+    "PM10",
+    "Citizen Science",
+    "Luftqualität",
+    "airrohr",
+    "air quality"
+  ],
+  "homepage": "https://sensor.community/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "umgebung",
+      "displayName": "umgebung",
+      "description": "sensor-community umgebung",
+      "command": "sensor-community-cli umgebung"
+    },
+    {
+      "name": "sensor",
+      "displayName": "sensor",
+      "description": "sensor-community sensor",
+      "command": "sensor-community-cli sensor"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://data.sensor.community/airrohr/v1/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.sensor.community/robots.txt: /airrohr/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Sensor.Community-Daten unter Open Database License (ODbL) 1.0 / DbCL.",
+    "provider": "Sensor.Community (OK Lab Stuttgart / Code for Germany)",
+    "homepage": "https://sensor.community/",
+    "data_license": "ODbL 1.0 / DbCL 1.0",
+    "keywords": [
+      "Sensor.Community",
+      "luftdaten.info",
+      "Feinstaub",
+      "PM2.5",
+      "PM10",
+      "Citizen Science",
+      "Luftqualität",
+      "airrohr",
+      "air quality"
+    ],
+    "geo": {
+      "country": null,
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null
+    },
+    "logo": {
+      "domain": "data.sensor.community",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://maps.sensor.community/favicons/android-chrome-192x192.png",
+      "fallback": "initials",
+      "brand_domain": "sensor.community",
+      "file": "assets/logos/data.sensor.community.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Sensor.Community – Feinstaub- und Klimasensoren (airrohr)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

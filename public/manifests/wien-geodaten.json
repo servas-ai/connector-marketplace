@@ -1,0 +1,146 @@
+{
+  "id": "servas-ai.opencli-wien-geodaten",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI wien-geodaten",
+  "description": "Wien Geodaten-WFS: Layer-Katalog + Themen mit Umkreissuche (ohne Key)",
+  "author": "servas-ai (OpenCLI-Squad)",
+  "categories": [
+    "connector",
+    "opendata",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.dashboardWidget.register"
+  ],
+  "tools": [
+    {
+      "name": "wien-geodaten-layer",
+      "displayName": "Layer-Katalog",
+      "description": "node bin/cli.js layer --q TEXT --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "wien-geodaten-features",
+      "displayName": "Features eines Layers",
+      "description": "node bin/cli.js features <LAYER> --umkreis LAT,LON,M --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "layer": {
+            "type": "string"
+          },
+          "umkreis": {
+            "type": "string"
+          },
+          "zeilen": {
+            "type": "number"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "wien-geodaten-trinkbrunnen",
+      "displayName": "Trinkbrunnen",
+      "description": "node bin/cli.js trinkbrunnen --umkreis LAT,LON,M --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "umkreis": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "wien-geodaten-defibrillatoren",
+      "displayName": "Defibrillatoren",
+      "description": "node bin/cli.js defibrillatoren --umkreis LAT,LON,M --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "umkreis": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "wien-geodaten-baeume",
+      "displayName": "Baumkataster",
+      "description": "node bin/cli.js baeume --umkreis LAT,LON,M --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "umkreis": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "umkreis"
+        ]
+      }
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "status": "cli-ready",
+    "category": "opendata",
+    "cli_commands": [
+      "layer",
+      "features",
+      "trinkbrunnen",
+      "defibrillatoren",
+      "baeume"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "access_chain": [
+      "api_public"
+    ],
+    "robots_status": "ok",
+    "rate_limit": "≥ 2 s Abstand pro Prozess (OPENCLI_DELAY_MS, Minimum 2000), ein Worker pro Host",
+    "source_url": "https://data.wien.gv.at/daten/geo",
+    "login": "none",
+    "openui": "paperclip/openui.txt",
+    "logo": {
+      "domain": "data.wien.gv.at",
+      "chain": [
+        "https://www.wien.gv.at/favicon.ico",
+        "https://www.google.com/s2/favicons?domain=www.wien.gv.at&sz=64"
+      ],
+      "fallback": "https://www.google.com/s2/favicons?domain=wien.gv.at&sz=64",
+      "file": "assets/logos/data.wien.gv.at.svg",
+      "source": "official-site"
+    },
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4544,
+      "throughput_rps": 0.22,
+      "captcha_rate": 0,
+      "login": "none",
+      "api_version": "WFS 1.1.0 GeoServer",
+      "last_scrape": "2026-10-13T05:13:36.888Z",
+      "datenqualitaet": 1.0
+    },
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "host": "data.wien.gv.at",
+    "country": "AT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "svg"
+  }
+}

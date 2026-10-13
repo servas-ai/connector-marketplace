@@ -1,0 +1,137 @@
+{
+  "id": "servas-ai.opencli-iso639-3",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SIL – ISO 639-3 Sprachcodes",
+  "description": "SIL – ISO 639-3 Sprachcodes: offizielle Gesamtdatei (CSV) als Datensätze – Liste, Volltextsuche, Dump-Metadaten. Download höchstens 1× pro Tag (Cache 24 h). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "iso639-3 liste",
+      "command": "iso639-3-cli liste"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "iso639-3 suche",
+      "command": "iso639-3-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "iso639-3 info",
+      "command": "iso639-3-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://iso639-3.sil.org/sites/iso639-3/files/downloads/iso-639-3.tab",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host, Dump ≤1×/Tag",
+    "robots_status": "ok",
+    "robots": "iso639-3.sil.org/robots.txt geprüft: Dump-Pfad nicht gesperrt (zusätzlich Laufzeitprüfung). Kein Key. Drossel ≥2 s/Host, Dump-Cache 24 h.",
+    "tos": "Lizenz: SIL, Nutzungsbedingungen ISO 639-3 (frei mit Quellenangabe). Quelle nennen.",
+    "logo": {
+      "domain": "iso639-3.sil.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=iso639-3.sil.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/iso639-3.sil.org.png",
+      "brand_domain": "iso639-3.sil.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 158,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dump",
+      "last_scrape": "2026-10-13T09:25:13.342Z",
+      "datenqualitaet": 1.0
+    },
+    "keywords": [
+      "Bulk-Dump",
+      "bulk download",
+      "offene Daten",
+      "open data",
+      "CSV",
+      "Datensatz",
+      "dataset",
+      "Referenzdaten",
+      "reference data",
+      "Internet",
+      "Technik",
+      "technology",
+      "Standard",
+      "639-3",
+      "Sprachcodes"
+    ],
+    "geo": {
+      "country": "WORLD",
+      "region": null,
+      "city": null,
+      "lat": null,
+      "lon": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "openui": {
+      "card": {
+        "title": "SIL – ISO 639-3 Sprachcodes",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

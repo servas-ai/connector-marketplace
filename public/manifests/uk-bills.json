@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-uk-bills",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UK Parliament – Bills API",
+  "description": "UK Parliament Bills API: Suche in Gesetzentwürfen von House of Commons und House of Lords, Details (Langtitel, Sponsoren) und Beratungsstufen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "UK Parliament",
+    "House of Commons",
+    "House of Lords",
+    "Bills",
+    "Gesetzentwürfe",
+    "Gesetzgebung",
+    "Vereinigtes Königreich",
+    "legislation"
+  ],
+  "keywords": [
+    "UK Parliament",
+    "House of Commons",
+    "House of Lords",
+    "Bills",
+    "Gesetzentwürfe",
+    "Gesetzgebung",
+    "Vereinigtes Königreich",
+    "legislation"
+  ],
+  "homepage": "https://bills.parliament.uk/",
+  "license": "MIT",
+  "geo": {
+    "country": "GB",
+    "region": "Vereinigtes Königreich",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      -8.65,
+      49.86,
+      1.77,
+      60.86
+    ],
+    "centroid": {
+      "lat": 54.0,
+      "lon": -2.0
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "uk-bills suche",
+      "command": "uk-bills-cli suche"
+    },
+    {
+      "name": "bill",
+      "displayName": "bill",
+      "description": "uk-bills bill",
+      "command": "uk-bills-cli bill"
+    },
+    {
+      "name": "stufen",
+      "displayName": "stufen",
+      "description": "uk-bills stufen",
+      "command": "uk-bills-cli stufen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://bills-api.parliament.uk/api/v1/Bills",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "bills-api.parliament.uk/robots.txt: /api/v1/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Open Parliament Licence v3.0, Quelle: UK Parliament.",
+    "provider": "UK Parliament",
+    "homepage": "https://bills.parliament.uk/",
+    "data_license": "Open Parliament Licence v3.0",
+    "keywords": [
+      "UK Parliament",
+      "House of Commons",
+      "House of Lords",
+      "Bills",
+      "Gesetzentwürfe",
+      "Gesetzgebung",
+      "Vereinigtes Königreich",
+      "legislation"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": "Vereinigtes Königreich",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        -8.65,
+        49.86,
+        1.77,
+        60.86
+      ],
+      "centroid": {
+        "lat": 54.0,
+        "lon": -2.0
+      }
+    },
+    "logo": {
+      "domain": "bills-api.parliament.uk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://bills-api.parliament.uk/",
+      "fallback": "initials",
+      "brand_domain": "parliament.uk",
+      "file": "assets/logos/bills-api.parliament.uk.png",
+      "source": "official-site",
+      "source_kind": "header-svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "UK Parliament – Bills API",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

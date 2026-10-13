@@ -1,0 +1,194 @@
+{
+  "id": "servas-ai.opencli-linz-feuerwehr-einsaetze",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Feuerwehr Linz – Einsatzstatistik seit 1980 (OGD)",
+  "description": "Einsätze der Berufsfeuerwehr Linz (OGD Stadt Linz): Jahresstatistik seit 1980 – Brände, technische Einsätze, Fehlalarme, Sachschäden, gerettete Werte – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Feuerwehr",
+    "Einsätze",
+    "Berufsfeuerwehr",
+    "Linz",
+    "Brände",
+    "Fehlalarm",
+    "technischer Einsatz",
+    "Statistik",
+    "Zivilschutz",
+    "fire brigade",
+    "fire department",
+    "statistics",
+    "Upper Austria",
+    "emergency",
+    "Oberösterreich"
+  ],
+  "keywords": [
+    "Feuerwehr",
+    "Einsätze",
+    "Berufsfeuerwehr",
+    "Linz",
+    "Brände",
+    "Fehlalarm",
+    "technischer Einsatz",
+    "Statistik",
+    "Zivilschutz",
+    "fire brigade",
+    "fire department",
+    "statistics",
+    "Upper Austria",
+    "emergency",
+    "Oberösterreich"
+  ],
+  "geo": {
+    "country": "AT",
+    "region": "Oberösterreich",
+    "city": "Linz",
+    "coverage": "local",
+    "bbox": [
+      14.22,
+      48.23,
+      14.38,
+      48.38
+    ],
+    "centroid": {
+      "lat": 48.3069,
+      "lon": 14.2858
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kennzahlen",
+      "displayName": "kennzahlen",
+      "description": "linz-feuerwehr-einsaetze kennzahlen",
+      "command": "linz-feuerwehr-einsaetze-cli kennzahlen"
+    },
+    {
+      "name": "zeitreihe",
+      "displayName": "zeitreihe",
+      "description": "linz-feuerwehr-einsaetze zeitreihe",
+      "command": "linz-feuerwehr-einsaetze-cli zeitreihe"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "status": "gruen",
+    "realtime": false,
+    "source_url": "https://data.linz.gv.at/katalog/linz_service/feuerwehr/Feuerw_2015-2024.csv",
+    "license": "CC-BY-4.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "data.linz.gv.at/robots.txt: liefert keine robots-Regeln (SPA-Seite) → keine Sperre. Offizielle OGD-CSV. Drossel ≥2 s.",
+    "tos": "OGD Stadt Linz, CC BY 4.0 (data.linz.gv.at), Quellenangabe „Stadt Linz – data.linz.gv.at“. Aggregierte Jahreswerte, keine Einsatzdetails/Personendaten.",
+    "keywords": [
+      "Feuerwehr",
+      "Einsätze",
+      "Berufsfeuerwehr",
+      "Linz",
+      "Brände",
+      "Fehlalarm",
+      "technischer Einsatz",
+      "Statistik",
+      "Zivilschutz",
+      "fire brigade",
+      "fire department",
+      "statistics",
+      "Upper Austria",
+      "emergency",
+      "Oberösterreich"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Oberösterreich",
+      "city": "Linz",
+      "coverage": "local",
+      "bbox": [
+        14.22,
+        48.23,
+        14.38,
+        48.38
+      ],
+      "centroid": {
+        "lat": 48.3069,
+        "lon": 14.2858
+      }
+    },
+    "logo": {
+      "domain": "linz.at",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=linz.at&sz=128",
+      "fallback": "initials",
+      "brand_domain": "linz.at",
+      "file": "assets/logos/linz.at.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 6694,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "OGD CSV",
+      "last_scrape": "2026-10-13T09:14:18Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Feuerwehr Linz – Einsatzstatistik seit 1980 (OGD)",
+        "subtitle": "opendata · Linz",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "geo"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "keywords",
+          "geo"
+        ]
+      }
+    }
+  }
+}

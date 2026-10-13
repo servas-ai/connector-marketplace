@@ -1,0 +1,121 @@
+{
+  "id": "servas-ai.opencli-ripestat",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "RIPEstat – IP/ASN-Netzwerkinfos",
+  "description": "RIPEstat Data API ohne Key: Präfix, ASN, Holder (Hoster/Provider), Geolokation und Abuse-Kontakt zu IPs, ASN-Überblick, angekündigte Präfixe und RIR-Ressourcen je Land. Nutze den Skill für Server-IP/ASN/Hoster-Statistiken je Quelle.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ip",
+      "displayName": "ip",
+      "description": "ripestat ip",
+      "command": "ripestat-cli ip"
+    },
+    {
+      "name": "asn",
+      "displayName": "asn",
+      "description": "ripestat asn",
+      "command": "ripestat-cli asn"
+    },
+    {
+      "name": "praefixe",
+      "displayName": "praefixe",
+      "description": "ripestat praefixe",
+      "command": "ripestat-cli praefixe"
+    },
+    {
+      "name": "land",
+      "displayName": "land",
+      "description": "ripestat land",
+      "command": "ripestat-cli land"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": true,
+    "source_url": "https://stat.ripe.net/docs/data-api/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host (bis 4 Data-Calls pro IP)",
+    "robots_status": "ok",
+    "robots": "stat.ripe.net/robots.txt: User-agent * Allow / (nur /admin/, /plugin/ gesperrt). Offizielle Data API ohne Key, sourceapp=servas-opencli laut RIPE-Doku. Drossel ≥2 s, max. 10 IPs pro Aufruf.",
+    "tos": "RIPEstat Data API Terms: öffentliche Nutzung mit sourceapp-Kennung; keine Massenabfragen.",
+    "logo": {
+      "domain": "stat.ripe.net",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=ripe.net&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/stat.ripe.net.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2425,
+      "throughput_rps": 0.412,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "RIPEstat Data API v1",
+      "last_scrape": "2026-10-13T05:08:23.376Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "RIPEstat – IP/ASN-Netzwerkinfos",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "holder"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon"
+  }
+}

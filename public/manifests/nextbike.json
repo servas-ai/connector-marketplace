@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-nextbike",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "nextbike – Bikesharing-Städte und Stationen (Live-Feed)",
+  "description": "nextbike by TIER: alle Bikesharing-Systeme/Städte weltweit mit verfügbaren Rädern und Stationen sowie Live-Belegung der Stationen einer Stadt (Räder, freie Plätze, Koordinaten) aus dem öffentlichen Live-Feed. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "nextbike",
+    "Bikesharing",
+    "Leihräder",
+    "Mobilität",
+    "Stationen",
+    "Echtzeit",
+    "bike sharing",
+    "GBFS"
+  ],
+  "keywords": [
+    "nextbike",
+    "Bikesharing",
+    "Leihräder",
+    "Mobilität",
+    "Stationen",
+    "Echtzeit",
+    "bike sharing",
+    "GBFS"
+  ],
+  "homepage": "https://www.nextbike.net/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "staedte",
+      "displayName": "staedte",
+      "description": "nextbike staedte",
+      "command": "nextbike-cli staedte"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "nextbike stationen",
+      "command": "nextbike-cli stationen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://maps.nextbike.net/maps/nextbike-live.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "maps.nextbike.net/robots.txt: /maps/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Öffentlicher nextbike-Live-Feed (auch als GBFS veröffentlicht), Quellenangabe nextbike; keine Massenabzüge.",
+    "provider": "nextbike GmbH (TIER Mobility)",
+    "homepage": "https://www.nextbike.net/",
+    "data_license": "Öffentlicher Live-Feed / GBFS (Quellenangabe nextbike)",
+    "keywords": [
+      "nextbike",
+      "Bikesharing",
+      "Leihräder",
+      "Mobilität",
+      "Stationen",
+      "Echtzeit",
+      "bike sharing",
+      "GBFS"
+    ],
+    "geo": {
+      "country": null,
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null
+    },
+    "logo": {
+      "domain": "maps.nextbike.net",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/17/24/e6/1724e677-cf4e-6798-a662-59597a1e475b/AppIconNextbike-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "brand_domain": "nextbike.net",
+      "file": "assets/logos/maps.nextbike.net.png",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "app": "nextbike – Bike Sharing",
+      "developer": "nextbike GmbH"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "live-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "nextbike – Bikesharing-Städte und Stationen (Live-Feed)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

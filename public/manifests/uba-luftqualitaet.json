@@ -1,0 +1,186 @@
+{
+  "id": "servas-ai.opencli-uba-luftqualitaet",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Umweltbundesamt – Luftqualität Deutschland (Air Data API v3)",
+  "description": "Umweltbundesamt (UBA): Luftmessstationen in Deutschland (Netz, Lage, Stationstyp), Schadstoff-Komponenten und stündlicher Luftqualitätsindex je Station mit Einzelwerten (PM10, PM2,5, NO2, O3 …) über die offizielle Air-Data-API v3. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Umweltbundesamt",
+    "UBA",
+    "Luftqualität",
+    "Feinstaub",
+    "PM10",
+    "Stickstoffdioxid",
+    "Ozon",
+    "Messstationen",
+    "Deutschland",
+    "air quality"
+  ],
+  "keywords": [
+    "Umweltbundesamt",
+    "UBA",
+    "Luftqualität",
+    "Feinstaub",
+    "PM10",
+    "Stickstoffdioxid",
+    "Ozon",
+    "Messstationen",
+    "Deutschland",
+    "air quality"
+  ],
+  "homepage": "https://www.umweltbundesamt.de/daten/luft/luftdaten",
+  "license": "MIT",
+  "geo": {
+    "country": "DE",
+    "region": "Deutschland",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      5.87,
+      47.27,
+      15.04,
+      55.06
+    ],
+    "centroid": {
+      "lat": 51.165,
+      "lon": 10.455
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "uba-luftqualitaet stationen",
+      "command": "uba-luftqualitaet-cli stationen"
+    },
+    {
+      "name": "komponenten",
+      "displayName": "komponenten",
+      "description": "uba-luftqualitaet komponenten",
+      "command": "uba-luftqualitaet-cli komponenten"
+    },
+    {
+      "name": "luftqualitaet",
+      "displayName": "luftqualitaet",
+      "description": "uba-luftqualitaet luftqualitaet",
+      "command": "uba-luftqualitaet-cli luftqualitaet"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://luftdaten.umweltbundesamt.de/api/air-data/v3/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "luftdaten.umweltbundesamt.de/robots.txt: /api/air-data/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Datenlizenz Deutschland – Namensnennung 2.0, Quelle: Umweltbundesamt mit Daten der Messnetze der Länder und des Bundes.",
+    "provider": "Umweltbundesamt (UBA)",
+    "homepage": "https://www.umweltbundesamt.de/daten/luft/luftdaten",
+    "data_license": "Datenlizenz Deutschland – Namensnennung 2.0",
+    "keywords": [
+      "Umweltbundesamt",
+      "UBA",
+      "Luftqualität",
+      "Feinstaub",
+      "PM10",
+      "Stickstoffdioxid",
+      "Ozon",
+      "Messstationen",
+      "Deutschland",
+      "air quality"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Deutschland",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ],
+      "centroid": {
+        "lat": 51.165,
+        "lon": 10.455
+      }
+    },
+    "logo": {
+      "domain": "luftdaten.umweltbundesamt.de",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/4f/a2/844fa2ed-24ca-9a6d-19af-f4d43ae06197/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "brand_domain": "umweltbundesamt.de",
+      "file": "assets/logos/luftdaten.umweltbundesamt.de.png",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "app": "Luftqualität",
+      "developer": "Umweltbundesamt"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "air-data-v3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Umweltbundesamt – Luftqualität Deutschland (Air Data API v3)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

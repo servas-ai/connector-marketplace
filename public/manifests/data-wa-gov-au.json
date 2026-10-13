@@ -1,0 +1,125 @@
+{
+  "id": "servas-ai.opencli-data-wa-gov-au",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Western Australia Data Catalogue",
+  "description": "Western Australia Data Catalogue – CKAN API 3: Dataset-Suche und Dataset-Details (Titel, Herausgeber, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-wa-gov-au datasets",
+      "command": "data-wa-gov-au-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-wa-gov-au dataset",
+      "command": "data-wa-gov-au-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://catalogue.data.wa.gov.au/api/3/action/package_search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "catalogue.data.wa.gov.au/robots.txt: keine robots.txt (bzw. HTML) – keine Disallow-Regeln; Laufzeit-Prüfung in lib/http.js. Drossel ≥2 s/Host.",
+    "tos": "Western Australia Data Catalogue: offenes Datenportal (CKAN API 3); Lizenz je Dataset, Fair Use.",
+    "logo": {
+      "domain": "catalogue.data.wa.gov.au",
+      "resolved": "https://data.wa.gov.au:443/themes/custom/datawa/logo.svg",
+      "file": "assets/logos/catalogue.data.wa.gov.au.png",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "keywords": [
+      "Open Data",
+      "offene Daten",
+      "Datenportal",
+      "data portal",
+      "Datensätze",
+      "datasets",
+      "Katalog",
+      "catalog",
+      "Verwaltung",
+      "government",
+      "Behörde",
+      "public sector",
+      "CKAN",
+      "Australien",
+      "Australia",
+      "Westaustralien"
+    ],
+    "geo": {
+      "country": "AU",
+      "region": "Western Australia",
+      "city": null,
+      "lat": -25.3,
+      "lon": 122.3,
+      "bbox": null,
+      "scope": "regional"
+    },
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Western Australia Data Catalogue",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AU",
+    "homepage": "https://catalogue.data.wa.gov.au"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "servas-ai.opencli-ha-integrations",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Home Assistant Integrationsverzeichnis",
+  "description": "Home Assistant: offizielles Integrationsverzeichnis (integrations.json) – Suche nach Name/Hersteller, Details je Integration (IoT-Klasse, Qualitätsstufe, Kategorien). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "ha-integrations suche",
+      "command": "ha-integrations-cli suche"
+    },
+    {
+      "name": "integration",
+      "displayName": "integration",
+      "description": "ha-integrations integration",
+      "command": "ha-integrations-cli integration"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://www.home-assistant.io/integrations.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.home-assistant.io/robots.txt: kein Disallow für /integrations.json. Öffentliche Verzeichnisdatei der Doku-Seite – Datei-Cache 6 h, Drossel ≥2 s.",
+    "tos": "Home Assistant Docs – CC BY-NC-SA 4.0 (Inhalte), Metadaten frei abrufbar.",
+    "logo": {
+      "domain": "www.home-assistant.io",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=www.home-assistant.io&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/www.home-assistant.io.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "integrations.json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Home Assistant Integrationsverzeichnis",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

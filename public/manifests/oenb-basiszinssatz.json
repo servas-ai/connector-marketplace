@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-oenb-basiszinssatz",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OeNB – Basis-/Referenzzinssatz",
+  "description": "OeNB Basis- und Referenzzinssatz Report 2.1",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "aktuell",
+      "displayName": "aktuell",
+      "description": "OeNB – Basis-/Referenzzinssatz: aktuell",
+      "command": "oenb-basiszinssatz-cli aktuell --format json"
+    },
+    {
+      "name": "historisch",
+      "displayName": "historisch",
+      "description": "OeNB – Basis-/Referenzzinssatz: historisch",
+      "command": "oenb-basiszinssatz-cli historisch --limit 20 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://www.oenb.at/isawebstat/stabfrage/createReport?lang=DE&report=2.1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "html",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host (OPENCLI_DELAY_MS, nicht unterschreiten)",
+    "robots_status": "ok",
+    "robots": "www.oenb.at/robots.txt: HTTP 404 (keine Sperre).",
+    "logo": {
+      "domain": "www.oenb.at",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=oenb.at&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/www.oenb.at.svg",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "0.1.0",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "OeNB – Basis-/Referenzzinssatz",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "servas-ai.opencli-bmf-spenden",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI bmf-spenden",
+  "description": "BMF Liste begünstigter Einrichtungen (Spenden) – öffentliche HTML-Liste ohne Login.",
+  "author": "servas-ai (OpenCLI-Squad)",
+  "categories": [
+    "connector",
+    "opendata",
+    "funding"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.dashboardWidget.register"
+  ],
+  "tools": [
+    {
+      "name": "bmf-spenden-suche",
+      "displayName": "Spendenbegünstigte suchen",
+      "description": "node bin/cli.js suche --q TEXT --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "status": "cli-ready",
+    "category": "opendata",
+    "cli_commands": [
+      "suche",
+      "liste"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "access_chain": [
+      "html_public"
+    ],
+    "robots_status": "ok",
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS)",
+    "source_url": "https://service.bmf.gv.at/service/allg/spenden/",
+    "login": "none",
+    "openui": "paperclip/openui.txt",
+    "logo": {
+      "domain": "service.bmf.gv.at",
+      "chain": [
+        "https://service.bmf.gv.at/favicon.ico",
+        "https://www.bmf.gv.at/favicon.ico",
+        "https://www.google.com/s2/favicons?domain=service.bmf.gv.at&sz=64"
+      ],
+      "fallback": "https://www.google.com/s2/favicons?domain=bmf.gv.at&sz=64",
+      "file": "assets/logos/service.bmf.gv.at.png",
+      "source": "official-site"
+    },
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4160,
+      "throughput_rps": 0.24,
+      "captcha_rate": 0,
+      "login": "none",
+      "api_version": "HTML dataRows",
+      "last_scrape": "2026-10-13T03:54:02.398Z",
+      "datenqualitaet": 1.0
+    },
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

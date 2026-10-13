@@ -1,0 +1,110 @@
+{
+  "id": "servas-ai.opencli-aviationweather",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NOAA AviationWeather.gov – METAR/TAF",
+  "description": "NOAA Aviation Weather Center Data API: METAR-Beobachtungen, TAF-Vorhersagen und Stationsinfos je ICAO-Code (z. B. LOWL Linz, LOWW Wien). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "metar",
+      "displayName": "metar",
+      "description": "aviationweather metar",
+      "command": "aviationweather-cli metar"
+    },
+    {
+      "name": "taf",
+      "displayName": "taf",
+      "description": "aviationweather taf",
+      "command": "aviationweather-cli taf"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "aviationweather station",
+      "command": "aviationweather-cli station"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://aviationweather.gov/api/data/metar",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "aviationweather.gov/robots.txt: 404 (keine Einschränkung). Offizielle Data API (max. 100 req/min) – hier ≥2 s Abstand.",
+    "tos": "NOAA/NWS – US-Regierungswerk, gemeinfrei.",
+    "logo": {
+      "domain": "aviationweather.gov",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=aviationweather.gov&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/aviationweather.gov.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "data-api",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "NOAA AviationWeather.gov – METAR/TAF",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

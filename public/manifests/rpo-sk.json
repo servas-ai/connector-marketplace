@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-rpo-sk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "RPO – Register juristischer Personen (SK)",
+  "description": "Firmen-Stammdaten aus dem slowakischen Register juristischer Personen (Statistikamt, offene API): Name, IČO, Rechtsform, Sitz, Status. Keine Personendaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "rpo-sk suche",
+      "command": "rpo-sk-cli suche"
+    },
+    {
+      "name": "ico",
+      "displayName": "ico",
+      "description": "rpo-sk ico",
+      "command": "rpo-sk-cli ico"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://api.statistics.sk/rpo/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "api.statistics.sk hat kein robots.txt; offene Daten des Statistikamts (Lizenz CC BY 4.0). Nur Einzelsuchen, keine Massenabzüge, Personen (Organe/Gesellschafter) werden nicht ausgegeben. Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "api.statistics.sk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://icon.horse/icon/statistics.sk",
+      "fallback": "initials",
+      "file": "assets/logos/api.statistics.sk.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1739,
+      "throughput_rps": 0.575,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T03:45:25.464Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "RPO – Register juristischer Personen (SK)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "name"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "SK",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-un-comtrade",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UN Comtrade – Außenhandelsstatistik (Public API)",
+  "description": "UN Comtrade (UN Statistics Division): jährliche Import-/Exportwerte je Berichtsland, Partner und HS-Warencode über die öffentliche Preview-API (max. 500 Datensätze), dazu Länder- und Warencode-Referenzlisten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "UN Comtrade",
+    "Außenhandel",
+    "Import",
+    "Export",
+    "HS-Code",
+    "Handelsstatistik",
+    "Vereinte Nationen",
+    "trade statistics"
+  ],
+  "keywords": [
+    "UN Comtrade",
+    "Außenhandel",
+    "Import",
+    "Export",
+    "HS-Code",
+    "Handelsstatistik",
+    "Vereinte Nationen",
+    "trade statistics"
+  ],
+  "homepage": "https://comtradeplus.un.org/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "handel",
+      "displayName": "handel",
+      "description": "un-comtrade handel",
+      "command": "un-comtrade-cli handel"
+    },
+    {
+      "name": "laender",
+      "displayName": "laender",
+      "description": "un-comtrade laender",
+      "command": "un-comtrade-cli laender"
+    },
+    {
+      "name": "waren",
+      "displayName": "waren",
+      "description": "un-comtrade waren",
+      "command": "un-comtrade-cli waren"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "comtradeapi.un.org/robots.txt: /public/ und /files/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "UN Comtrade Nutzungsbedingungen: öffentliche Preview ohne Abo, Quellenangabe UN Comtrade Database; keine Massenabzüge.",
+    "provider": "United Nations Statistics Division (UN Comtrade)",
+    "homepage": "https://comtradeplus.un.org/",
+    "data_license": "UN Comtrade Terms of Use (frei mit Quellenangabe, Preview ohne Abo)",
+    "keywords": [
+      "UN Comtrade",
+      "Außenhandel",
+      "Import",
+      "Export",
+      "HS-Code",
+      "Handelsstatistik",
+      "Vereinte Nationen",
+      "trade statistics"
+    ],
+    "geo": {
+      "country": null,
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null
+    },
+    "logo": {
+      "domain": "comtradeapi.un.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.un.org/en/img/splash/un-logo.png",
+      "fallback": "initials",
+      "brand_domain": "un.org",
+      "file": "assets/logos/comtradeapi.un.org.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "public-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "UN Comtrade – Außenhandelsstatistik (Public API)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

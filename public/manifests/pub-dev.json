@@ -1,0 +1,114 @@
+{
+  "id": "servas-ai.opencli-pub-dev",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "pub.dev – Dart/Flutter Package Registry",
+  "description": "pub.dev API: Paket-Suche, Paketmetadaten (neueste Version, Pubspec) und Versionsliste. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "pub-dev suche",
+      "command": "pub-dev-cli suche"
+    },
+    {
+      "name": "paket",
+      "displayName": "paket",
+      "description": "pub-dev paket",
+      "command": "pub-dev-cli paket"
+    },
+    {
+      "name": "versionen",
+      "displayName": "versionen",
+      "description": "pub-dev versionen",
+      "command": "pub-dev-cli versionen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://pub.dev/api/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "pub.dev/robots.txt: User-agent * nur Disallow /packages?q= (HTML-Suche) – /api/ erlaubt. Offizielle Repository-API. Drossel ≥2 s.",
+    "tos": "pub.dev: öffentliche Package-Repository-API (Hosted Pub Repository Spec v2); Fair Use.",
+    "logo": {
+      "domain": "pub.dev",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=pub.dev&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/pub.dev.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2187,
+      "throughput_rps": 0.457,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "api",
+      "last_scrape": "2026-10-13T06:36:35.354Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "pub.dev – Dart/Flutter Package Registry",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

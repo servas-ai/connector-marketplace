@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-mfapi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "MFAPI – Indische Investmentfonds (NAV)",
+  "description": "MFAPI.in: Suche nach indischen Investmentfonds (AMFI), aktueller NAV und NAV-Historie je Scheme. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "mfapi suche",
+      "command": "mfapi-cli suche"
+    },
+    {
+      "name": "nav",
+      "displayName": "nav",
+      "description": "mfapi nav",
+      "command": "mfapi-cli nav"
+    },
+    {
+      "name": "historie",
+      "displayName": "historie",
+      "description": "mfapi historie",
+      "command": "mfapi-cli historie"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://api.mfapi.in/mf",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.mfapi.in/robots.txt: 404 (keine Einschränkung). Freie API (AMFI-Daten). Drossel ≥2 s.",
+    "tos": "MFAPI.in: kostenlose öffentliche API ohne Key, Daten von AMFI India.",
+    "logo": {
+      "domain": "api.mfapi.in",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "initials",
+      "fallback": "initials",
+      "file": "assets/logos/api.mfapi.in.png",
+      "brand_domain": "mfapi.in"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3866,
+      "throughput_rps": 0.259,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:26:38.526Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "MFAPI – Indische Investmentfonds (NAV)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "IN",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

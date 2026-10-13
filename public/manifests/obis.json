@@ -1,0 +1,126 @@
+{
+  "id": "servas-ai.opencli-obis",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OBIS – Ocean Biodiversity Information System (UNESCO-IOC)",
+  "description": "OBIS API v3: Meeres-Taxa (WoRMS-Taxonomie), Vorkommensdaten je Art (Koordinaten, Datum, Datensatz) und Datensatz-Katalog. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "taxon",
+      "displayName": "taxon",
+      "description": "obis taxon",
+      "command": "obis-cli taxon"
+    },
+    {
+      "name": "vorkommen",
+      "displayName": "vorkommen",
+      "description": "obis vorkommen",
+      "command": "obis-cli vorkommen"
+    },
+    {
+      "name": "datensaetze",
+      "displayName": "datensaetze",
+      "description": "obis datensaetze",
+      "command": "obis-cli datensaetze"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "umwelt",
+    "realtime": false,
+    "source_url": "https://api.obis.org/v3/occurrence",
+    "homepage": "https://obis.org/",
+    "keywords": [
+      "OBIS",
+      "Meeresbiologie",
+      "Biodiversität",
+      "Taxa",
+      "WoRMS",
+      "marine biodiversity",
+      "occurrences",
+      "Umwelt"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.obis.org/robots.txt: 404 (keine Einschränkung). Offizielle öffentliche API der UNESCO-IOC. Drossel ≥2 s.",
+    "tos": "OBIS: Daten unter CC0/CC BY/CC BY-NC je Datensatz; Zitierung des Datensatzes erbeten.",
+    "logo": {
+      "domain": "api.obis.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=obis.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.obis.org.png",
+      "brand_domain": "obis.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3715,
+      "throughput_rps": 0.269,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": "2026-10-13T08:04:55.192Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "OBIS – Ocean Biodiversity Information System (UNESCO-IOC)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "favicon"
+  }
+}

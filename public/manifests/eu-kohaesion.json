@@ -1,0 +1,113 @@
+{
+  "id": "servas-ai.opencli-eu-kohaesion",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "EU-Kohäsionsfonds – Programmfinanzen (ESF/EFRE/ELER/EMFF)",
+  "description": "Geplante EU- und nationale Förderbeträge je Programm, Priorität und Fonds (Kohäsionspolitik 2014–2020) für AT und alle EU-Länder. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "vergabe"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "summe-at",
+      "displayName": "summe",
+      "description": "EU-Kohäsionsfonds – Programmfinanzen (ESF/EFRE/ELER/EMFF): summe",
+      "command": "eu-kohaesion-cli summe --land AT --format json"
+    },
+    {
+      "name": "programme-at-esf",
+      "displayName": "programme",
+      "description": "EU-Kohäsionsfonds – Programmfinanzen (ESF/EFRE/ELER/EMFF): programme",
+      "command": "eu-kohaesion-cli programme --land AT --fonds ESF --limit 10 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "vergabe",
+    "realtime": false,
+    "source_url": "https://cohesiondata.ec.europa.eu",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "robots.txt sperrt nur /browse-Filterseiten, nicht /resource (API); Daten CC BY 4.0. Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "cohesiondata.ec.europa.eu",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=cohesiondata.ec.europa.eu&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/cohesiondata.ec.europa.eu.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1582,
+      "throughput_rps": 0.9,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Socrata SODA 2.1 (Datensatz 99js-gm52)",
+      "last_scrape": "2026-10-13T03:39:17Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "EU-Kohäsionsfonds – Programmfinanzen (ESF/EFRE/ELER/EMFF)",
+        "subtitle": "vergabe",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "land",
+          "fonds",
+          "programme",
+          "eu_betrag",
+          "gesamt_geplant"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon"
+  }
+}

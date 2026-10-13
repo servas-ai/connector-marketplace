@@ -1,0 +1,120 @@
+{
+  "id": "servas-ai.opencli-vam",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Victoria and Albert Museum – Collections API",
+  "description": "V&A Collections API v2: Objekte der Sammlung des Victoria and Albert Museum durchsuchen (Typ, Hersteller, Datierung, Ort, Bild) und Objektdetail. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "vam suche",
+      "command": "vam-cli suche"
+    },
+    {
+      "name": "objekt",
+      "displayName": "objekt",
+      "description": "vam objekt",
+      "command": "vam-cli objekt"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://api.vam.ac.uk/v2/objects/search",
+    "homepage": "https://www.vam.ac.uk/",
+    "keywords": [
+      "V&A",
+      "Victoria and Albert Museum",
+      "Museum",
+      "Sammlung",
+      "Design",
+      "museum",
+      "collection",
+      "Kultur"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.vam.ac.uk/robots.txt: 404 (keine Einschränkung). Offizielle Collections API. Drossel ≥2 s.",
+    "tos": "V&A Collections API: frei für nicht-kommerzielle Nutzung, Bild-Nutzungsbedingungen der V&A beachten.",
+    "logo": {
+      "domain": "api.vam.ac.uk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=vam.ac.uk&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.vam.ac.uk.png",
+      "brand_domain": "vam.ac.uk"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3881,
+      "throughput_rps": 0.258,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T07:27:31.958Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Victoria and Albert Museum – Collections API",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "GB",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon"
+  }
+}

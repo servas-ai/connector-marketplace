@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-data-public-lu",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "data.public.lu – Open Data Luxembourg",
+  "description": "data.public.lu udata API: Dataset-Suche und Dataset-Details (Titel, Organisation, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-public-lu datasets",
+      "command": "data-public-lu-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-public-lu dataset",
+      "command": "data-public-lu-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.public.lu/api/1/datasets/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.public.lu/robots.txt: 404 (keine Sperre) – udata /api/1/ öffentlich. Drossel ≥2 s.",
+    "tos": "data.public.lu: Luxemburgisches Open-Data-Portal (udata); Fair Use.",
+    "logo": {
+      "domain": "data.public.lu",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=data.public.lu&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.public.lu.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "udata-1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "data.public.lu – Open Data Luxembourg",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "LU",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

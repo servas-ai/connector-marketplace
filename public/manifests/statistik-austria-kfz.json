@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-statistik-austria-kfz",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Statistik Austria – Pkw-Neuzulassungen",
+  "description": "Pkw-Neuzulassungen nach Marken ab Jänner 2000 (OGD). Ohne Login.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "neuzulassungen",
+      "displayName": "neuzulassungen",
+      "description": "Statistik Austria – Pkw-Neuzulassungen: neuzulassungen",
+      "command": "statistik-austria-kfz-cli neuzulassungen --limit 15 --format json"
+    },
+    {
+      "name": "meta",
+      "displayName": "meta",
+      "description": "Statistik Austria – Pkw-Neuzulassungen: meta",
+      "command": "statistik-austria-kfz-cli meta --datensatz neuzulassungen --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.statistik.gv.at",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host (OPENCLI_DELAY_MS, nicht unterschreiten)",
+    "robots_status": "pruefen",
+    "robots": "data.statistik.gv.at/robots.txt liefert HTML-Startseite (keine robots-Regeln). OGD CC BY 4.0. Gedrosselt ≥2 s. Abbruch bei 403/429/Captcha.",
+    "logo": {
+      "domain": "data.statistik.gv.at",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=statistik.gv.at&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.statistik.gv.at.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "0.1.0",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Statistik Austria – Pkw-Neuzulassungen",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon"
+  }
+}

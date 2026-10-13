@@ -1,0 +1,12 @@
+{
+  "name": "opencli-wko-firmen",
+  "version": "0.1.0",
+  "description": "WKO Firmen A-Z: Firmensuche nach Name/Branche und Ort",
+  "opencli": ">=1.0.0",
+  "commands": [
+    "suche"
+  ],
+  "login_noetig": [
+    "Keine Login-Funktionen benötigt. Paging (ASP.NET-Postback) und SearchComplex.aspx (robots-gesperrt) werden bewusst nicht genutzt, daher nur die erste Seite."
+  ]
+}

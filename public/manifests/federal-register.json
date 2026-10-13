@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-federal-register",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Federal Register – US-Amtsblatt",
+  "description": "Federal Register API: Regeln, Verordnungsentwürfe, Bekanntmachungen und Präsidialdokumente der US-Bundesbehörden, Suche und Behördenliste.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "amtsblatt",
+    "official gazette",
+    "usa",
+    "united states",
+    "verordnung",
+    "regulation",
+    "regel",
+    "rule"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "Volltextsuche (<begriff>)",
+      "command": "federal-register-cli suche"
+    },
+    {
+      "name": "neueste",
+      "displayName": "neueste",
+      "description": "Neueste Dokumente eines Typs (RULE|PRORULE|NOTICE|PRESDOCU)",
+      "command": "federal-register-cli neueste"
+    },
+    {
+      "name": "dokument",
+      "displayName": "dokument",
+      "description": "Dokument per Nummer (<nr>)",
+      "command": "federal-register-cli dokument"
+    },
+    {
+      "name": "behoerden",
+      "displayName": "behoerden",
+      "description": "Alle Bundesbehörden",
+      "command": "federal-register-cli behoerden"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.federalregister.gov/api/v1/documents.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.federalregister.gov/robots.txt: /api/v1 nicht gesperrt (nur Suchseiten). Offizielle API ohne Key, 1 req/2 s.",
+    "tos": "Federal Register (NARA/GPO): Public Domain.",
+    "keywords": [
+      "amtsblatt",
+      "official gazette",
+      "usa",
+      "united states",
+      "verordnung",
+      "regulation",
+      "regel",
+      "rule",
+      "behörde",
+      "agency",
+      "bundesregierung",
+      "federal government",
+      "gesetzgebung",
+      "legislation",
+      "bekanntmachung",
+      "notice"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": [
+        -125,
+        24,
+        -66,
+        50
+      ],
+      "scope": "national"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "www.federalregister.gov",
+      "file": "assets/logos/www.federalregister.gov.png",
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 3992,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:15:04.867Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "Federal Register – US-Amtsblatt",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "nummer",
+          "datum",
+          "typ",
+          "titel"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

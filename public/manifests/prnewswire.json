@@ -1,0 +1,126 @@
+{
+  "id": "servas-ai.opencli-prnewswire",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "PR Newswire – Pressemitteilungen (RSS)",
+  "description": "PR Newswire (Cision): neueste Unternehmens-Pressemitteilungen über den offiziellen RSS-Feed „All News Releases“. Titel, Datum, Teaser und Link, ohne Login.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "firmendaten"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Neueste Pressemitteilungen (--q filtert Titel/Teaser)",
+      "command": "prnewswire-cli meldungen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "firmendaten",
+    "record_kind": "generic",
+    "realtime": false,
+    "source_url": "https://www.prnewswire.com/rss/news-releases-list.rss",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.prnewswire.com/robots.txt: /rss/ nicht gesperrt (nur /templates/…, /multivu/ u. a.). Offizieller RSS-Feed. Drossel ≥2 s.",
+    "tos": "Offizielle RSS-Feeds (prnewswire.com/rss/); nur Metadaten + Link, Volltext verbleibt bei der Quelle.",
+    "keywords": [
+      "pressemitteilung",
+      "press release",
+      "presse",
+      "press",
+      "unternehmensnachrichten",
+      "company news",
+      "wirtschaft",
+      "business",
+      "rss",
+      "meldungen",
+      "news",
+      "publikation",
+      "publication",
+      "pr newswire",
+      "cision",
+      "usa",
+      "international",
+      "investor relations"
+    ],
+    "geo": {
+      "country": null,
+      "region": null,
+      "city": null,
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "www.prnewswire.com",
+      "resolved": "https://www.prnewswire.com/content/dam/prnewswire/common/prn_facebook_sharing_logo.jpg",
+      "file": "assets/logos/www.prnewswire.com.png",
+      "brand_domain": "prnewswire.com",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3977,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "RSS 2.0",
+      "last_scrape": "2026-10-13T09:19:22.397Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "PR Newswire – Pressemitteilungen (RSS)",
+        "subtitle": "generic",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "US",
+    "homepage": "https://www.prnewswire.com"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "servas-ai.opencli-opentopodata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open Topo Data – Geländehöhen (EU-DEM, SRTM, ASTER …)",
+  "description": "Open Topo Data Public API: Geländehöhe für bis zu 100 Koordinaten je Request aus offenen Höhenmodellen (eudem25m, srtm30m/90m, aster30m, mapzen, etopo1 …). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "hoehe",
+      "displayName": "hoehe",
+      "description": "opentopodata hoehe",
+      "command": "opentopodata-cli hoehe"
+    },
+    {
+      "name": "datensaetze",
+      "displayName": "datensaetze",
+      "description": "opentopodata datensaetze",
+      "command": "opentopodata-cli datensaetze"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.opentopodata.org/v1/eudem25m?locations=48.3,14.29",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.opentopodata.org/robots.txt: Allow / für alle. Öffentliche API (max. 1 Request/s, 1000/Tag). Drossel ≥2 s.",
+    "tos": "Open Topo Data Public API: frei, max. 100 Orte/Request, 1 Request/s, 1000 Requests/Tag; Lizenzen der Datensätze beachten.",
+    "logo": {
+      "domain": "api.opentopodata.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=opentopodata.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.opentopodata.org.svg",
+      "brand_domain": "opentopodata.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1322,
+      "throughput_rps": 0.756,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:04:36.658Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Open Topo Data – Geländehöhen (EU-DEM, SRTM, ASTER …)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

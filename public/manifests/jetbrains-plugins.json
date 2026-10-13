@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-jetbrains-plugins",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "JetBrains Marketplace – IDE-Plugins",
+  "description": "JetBrains Marketplace API: Plugins suchen (Downloads, Bewertung, Preismodell, Tags) und Plugin-Details per ID (Hersteller, Links, Tags). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "jetbrains-plugins suche",
+      "command": "jetbrains-plugins-cli suche"
+    },
+    {
+      "name": "plugin",
+      "displayName": "plugin",
+      "description": "jetbrains-plugins plugin",
+      "command": "jetbrains-plugins-cli plugin"
+    },
+    {
+      "name": "updates",
+      "displayName": "updates",
+      "description": "jetbrains-plugins updates",
+      "command": "jetbrains-plugins-cli updates"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://plugins.jetbrains.com/api/searchPlugins",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "plugins.jetbrains.com/robots.txt: Disallow nur /plugin/download, /plugins/list, /pluginManager, */ajax* – /api/ erlaubt. Drossel ≥2 s.",
+    "tos": "JetBrains Marketplace: öffentliche Lese-API; Marketplace-Nutzungsbedingungen beachten.",
+    "logo": {
+      "domain": "plugins.jetbrains.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=plugins.jetbrains.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/plugins.jetbrains.com.png",
+      "brand_domain": "plugins.jetbrains.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3955,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "api",
+      "last_scrape": "2026-10-13T08:05:06.695Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "JetBrains Marketplace – IDE-Plugins",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon"
+  }
+}

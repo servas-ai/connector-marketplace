@@ -1,0 +1,128 @@
+{
+  "id": "servas-ai.opencli-livsmedelsverket-se",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Livsmedelsverket Lebensmitteldatenbank (SE)",
+  "description": "Schwedische Lebensmitteldatenbank (Livsmedelsverket): rund 2.600 Lebensmittel mit Nährwerten pro 100 g, EuroFIR-Codes, Wertetyp und Herkunft über die offizielle REST-API.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "naehrwerte",
+    "schweden"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "naehrwerte",
+      "displayName": "naehrwerte",
+      "description": "livsmedelsverket-se naehrwerte",
+      "command": "livsmedelsverket-se-cli naehrwerte"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "livsmedelsverket-se suche",
+      "command": "livsmedelsverket-se-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://dataportal.livsmedelsverket.se/livsmedel/api/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "html"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/s je Host; Liste 7 Tage gecacht",
+    "robots_status": "ok",
+    "robots": "dataportal.livsmedelsverket.se/robots.txt: 404 (keine Regeln); offizielle offene API.",
+    "license": "CC BY 4.0 – Livsmedelsverket",
+    "license_url": "https://www.livsmedelsverket.se/om-oss/psidata/livsmedelsdatabasen",
+    "logo": {
+      "domain": "livsmedelsverket.se",
+      "resolved": "https://www.livsmedelsverket.se/images/logo.png",
+      "file": "assets/logos/dataportal.livsmedelsverket.se.png",
+      "source": "favicon"
+    },
+    "keywords": [
+      "Lebensmittel",
+      "food",
+      "Nährwerte",
+      "nutrition",
+      "Lebensmitteldatenbank",
+      "food database",
+      "Schweden",
+      "Sweden",
+      "Livsmedelsverket",
+      "nutrient values",
+      "Vitamine",
+      "vitamins",
+      "EuroFIR"
+    ],
+    "geo": {
+      "country": "SE",
+      "region": null,
+      "city": "Uppsala",
+      "lat": 59.86,
+      "lon": 17.64,
+      "scope": "national"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 125,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Livsmedel API v1",
+      "last_scrape": "2026-10-13T09:36:32.744Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Livsmedelsverket Lebensmitteldatenbank (SE)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "nummer",
+          "typ"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "country": "SE",
+    "homepage": "https://www.livsmedelsverket.se"
+  }
+}

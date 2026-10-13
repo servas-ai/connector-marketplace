@@ -1,0 +1,109 @@
+{
+  "id": "servas-ai.opencli-hagstofa-is",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Statistics Iceland – PxWeb API",
+  "description": "px.hagstofa.is PxWeb: Statistikkatalog und Tabellen-Metadaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "hagstofa-is katalog",
+      "command": "hagstofa-is-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "hagstofa-is info",
+      "command": "hagstofa-is-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://px.hagstofa.is/pxen/api/v1/en",
+    "homepage": "https://www.hagstofa.is/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "px.hagstofa.is/robots.txt: nicht abrufbar (keine Regeln) – öffentliche PxWeb API. Drossel ≥2 s.",
+    "tos": "Statistics Iceland PxWeb API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "px.hagstofa.is",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=px.hagstofa.is&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/px.hagstofa.is.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Statistics Iceland – PxWeb API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "IS",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-coinpaprika",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CoinPaprika – Krypto-Marktdaten",
+  "description": "CoinPaprika API v1: globale Krypto-Marktdaten, Ticker je Coin (EUR/USD) und Coin-Suche. Ohne Login/Key (Free-Tier).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "global",
+      "displayName": "global",
+      "description": "coinpaprika global",
+      "command": "coinpaprika-cli global"
+    },
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "coinpaprika ticker",
+      "command": "coinpaprika-cli ticker"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "coinpaprika suche",
+      "command": "coinpaprika-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.coinpaprika.com/v1/global",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.coinpaprika.com/robots.txt: 404 (keine Einschränkung). Offizielle Free-API ohne Key. Drossel ≥2 s.",
+    "tos": "CoinPaprika API Free-Plan: ohne Key, Fair Use (≈20k Calls/Monat), Attribution erbeten.",
+    "logo": {
+      "domain": "api.coinpaprika.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=coinpaprika.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.coinpaprika.com.png",
+      "brand_domain": "coinpaprika.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3928,
+      "throughput_rps": 0.255,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:26:24.027Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "CoinPaprika – Krypto-Marktdaten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

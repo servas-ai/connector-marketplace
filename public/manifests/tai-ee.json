@@ -1,0 +1,160 @@
+{
+  "id": "servas-ai.opencli-tai-ee",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "TAI Estonian Health Statistics – PxWeb",
+  "description": "statistika.tai.ee PxWeb: amtliche Statistik-Zeitreihen (TAI Estonian Health Statistics). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "tai-ee katalog",
+      "command": "tai-ee-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "tai-ee info",
+      "command": "tai-ee-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "Zeitreihen",
+    "time series",
+    "PxWeb",
+    "Tabellen",
+    "tables",
+    "Amtliche Statistik",
+    "official statistics",
+    "Open Data",
+    "offene Daten",
+    "Datenkatalog",
+    "data catalogue",
+    "Gesundheit",
+    "health",
+    "Estland"
+  ],
+  "geo": {
+    "country": "EE",
+    "region": "Estonia",
+    "city": "Tallinn",
+    "lat": 59.44,
+    "lon": 24.75,
+    "bbox": null,
+    "scope": "national"
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://statistika.tai.ee/api/v1/et/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "statistika.tai.ee/robots.txt geprüft: keine Sperre für den API-Pfad – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "TAI Estonian Health Statistics: öffentliche PxWeb-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe statistika.tai.ee.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "Zeitreihen",
+      "time series",
+      "PxWeb",
+      "Tabellen",
+      "tables",
+      "Amtliche Statistik",
+      "official statistics",
+      "Open Data",
+      "offene Daten",
+      "Datenkatalog",
+      "data catalogue",
+      "Gesundheit",
+      "health",
+      "Estland"
+    ],
+    "geo": {
+      "country": "EE",
+      "region": "Estonia",
+      "city": "Tallinn",
+      "lat": 59.44,
+      "lon": 24.75,
+      "bbox": null,
+      "scope": "national"
+    },
+    "logo": {
+      "domain": "statistika.tai.ee",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=statistika.tai.ee&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/statistika.tai.ee.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "TAI Estonian Health Statistics – PxWeb",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

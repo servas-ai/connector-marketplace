@@ -1,0 +1,106 @@
+{
+  "id": "servas-ai.opencli-mastr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Marktstammdatenregister (MaStR) – Stromerzeugung",
+  "description": "Marktstammdatenregister der Bundesnetzagentur: öffentliche Einheiten der Stromerzeugung (Solar, Wind, Speicher …) je PLZ/Ort/Energieträger und Einheit per MaStR-Nummer. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "einheiten",
+      "displayName": "einheiten",
+      "description": "mastr einheiten",
+      "command": "mastr-cli einheiten"
+    },
+    {
+      "name": "einheit",
+      "displayName": "einheit",
+      "description": "mastr einheit",
+      "command": "mastr-cli einheit"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.marktstammdatenregister.de/MaStR/Einheit/EinheitJson/GetVerkleinerteOeffentlicheEinheitStromerzeugung",
+    "license": "DL-DE-BY-2.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "json_endpoint",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "www.marktstammdatenregister.de/robots.txt: kein Disallow für /MaStR/Einheit/EinheitJson/ (öffentliche Einheitenübersicht). Drossel ≥2 s, kleine pageSize.",
+    "tos": "Bundesnetzagentur – öffentliche MaStR-Daten (Datenlizenz Deutschland – Namensnennung 2.0); personenbezogene Daten sind von der Quelle anonymisiert.",
+    "logo": {
+      "domain": "www.marktstammdatenregister.de",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=www.marktstammdatenregister.de&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/www.marktstammdatenregister.de.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "mastr-web",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Marktstammdatenregister (MaStR) – Stromerzeugung",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

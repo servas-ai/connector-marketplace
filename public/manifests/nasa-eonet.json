@@ -1,0 +1,120 @@
+{
+  "id": "servas-ai.opencli-nasa-eonet",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NASA EONET – Naturereignisse",
+  "description": "NASA EONET API v3: aktuelle Naturereignisse (Waldbrände, Stürme, Vulkane, Eis) mit Koordinaten und Kategorien. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "events",
+      "displayName": "events",
+      "description": "nasa-eonet events",
+      "command": "nasa-eonet-cli events"
+    },
+    {
+      "name": "kategorien",
+      "displayName": "kategorien",
+      "description": "nasa-eonet kategorien",
+      "command": "nasa-eonet-cli kategorien"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "umwelt",
+    "realtime": true,
+    "source_url": "https://eonet.gsfc.nasa.gov/api/v3/events",
+    "homepage": "https://eonet.gsfc.nasa.gov/",
+    "keywords": [
+      "NASA",
+      "EONET",
+      "Naturereignisse",
+      "Waldbrände",
+      "Stürme",
+      "Vulkane",
+      "natural events",
+      "wildfires",
+      "Umwelt"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "eonet.gsfc.nasa.gov/robots.txt: User-agent * Disallow leer (alles erlaubt). Offizielle NASA-API ohne Key. Drossel ≥2 s.",
+    "tos": "NASA EONET: US-Government Open Data, frei nutzbar; Fair Use.",
+    "logo": {
+      "domain": "eonet.gsfc.nasa.gov",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=eonet.gsfc.nasa.gov&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/eonet.gsfc.nasa.gov.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2179,
+      "throughput_rps": 0.459,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": "2026-10-13T06:38:46.700Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "NASA EONET – Naturereignisse",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-uis-unesco",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UNESCO Institute for Statistics – UIS Data API",
+  "description": "UNESCO-Institut für Statistik (UIS): Indikatoren zu Bildung, Wissenschaft, Kultur (SDG 4) suchen, Länder/Regionen auflisten und Zeitreihen je Indikator und Land abrufen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "UNESCO",
+    "UIS",
+    "Bildung",
+    "Bildungsstatistik",
+    "SDG 4",
+    "Wissenschaft",
+    "Kultur",
+    "Indikatoren",
+    "education statistics"
+  ],
+  "keywords": [
+    "UNESCO",
+    "UIS",
+    "Bildung",
+    "Bildungsstatistik",
+    "SDG 4",
+    "Wissenschaft",
+    "Kultur",
+    "Indikatoren",
+    "education statistics"
+  ],
+  "homepage": "https://databrowser.uis.unesco.org/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "indikatoren",
+      "displayName": "indikatoren",
+      "description": "uis-unesco indikatoren",
+      "command": "uis-unesco-cli indikatoren"
+    },
+    {
+      "name": "laender",
+      "displayName": "laender",
+      "description": "uis-unesco laender",
+      "command": "uis-unesco-cli laender"
+    },
+    {
+      "name": "daten",
+      "displayName": "daten",
+      "description": "uis-unesco daten",
+      "command": "uis-unesco-cli daten"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://api.uis.unesco.org/api/public/data/indicators",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.uis.unesco.org/robots.txt: /api/public/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "UIS-Daten unter CC BY-SA 3.0 IGO, Quellenangabe UNESCO Institute for Statistics.",
+    "provider": "UNESCO Institute for Statistics (UIS)",
+    "homepage": "https://databrowser.uis.unesco.org/",
+    "data_license": "CC BY-SA 3.0 IGO",
+    "keywords": [
+      "UNESCO",
+      "UIS",
+      "Bildung",
+      "Bildungsstatistik",
+      "SDG 4",
+      "Wissenschaft",
+      "Kultur",
+      "Indikatoren",
+      "education statistics"
+    ],
+    "geo": {
+      "country": null,
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null
+    },
+    "logo": {
+      "domain": "api.uis.unesco.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.uis.unesco.org/themes/custom/bunesco8/icon.svg",
+      "fallback": "initials",
+      "brand_domain": "unesco.org",
+      "file": "assets/logos/api.uis.unesco.org.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "public-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "UNESCO Institute for Statistics – UIS Data API",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

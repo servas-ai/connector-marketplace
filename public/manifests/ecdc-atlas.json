@@ -1,0 +1,140 @@
+{
+  "id": "servas-ai.opencli-ecdc-atlas",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI ecdc-atlas",
+  "description": "Meldepflichtige Infektionskrankheiten (Masern, FSME, Salmonellen, Tuberkulose …) je EU-Land und Jahr aus dem ECDC Surveillance Atlas über die offizielle AtlasService-REST-API. Ohne Login, ohne Key. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+  "author": "servas-ai (Health Connector Builder)",
+  "categories": [
+    "connector",
+    "ui",
+    "gesundheit"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.page.register",
+    "ui.dashboardWidget.register"
+  ],
+  "entrypoints": {
+    "worker": "./dist/worker.js",
+    "ui": "./dist/ui"
+  },
+  "tools": [
+    {
+      "name": "ecdc-atlas-themen",
+      "displayName": "ecdc-atlas themen",
+      "description": "CLI-Befehl `themen` (node bin/cli.js themen --format json)",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "ecdc-atlas-werte",
+      "displayName": "ecdc-atlas werte",
+      "description": "CLI-Befehl `werte` (node bin/cli.js werte --format json)",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "ui": {
+    "slots": [
+      {
+        "type": "page",
+        "id": "table",
+        "displayName": "ecdc-atlas",
+        "exportName": "RecordsPage",
+        "routePath": "opencli-ecdc-atlas"
+      },
+      {
+        "type": "dashboardWidget",
+        "id": "kpis",
+        "displayName": "ecdc-atlas KPIs",
+        "exportName": "KpiWidget",
+        "openui": "paperclip/openui.txt"
+      }
+    ]
+  },
+  "x-servas": {
+    "status": "cli-ready; worker/ui bundle noch nicht gebaut (dist/ fehlt)",
+    "category": "international",
+    "cli_commands": [
+      "themen",
+      "werte"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "record_schema": {
+      "$id": "servas.record.v1",
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "name",
+        "source",
+        "source_url",
+        "fetched_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "const": "ecdc-atlas"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "fetched_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "raw": {
+          "type": "object",
+          "description": "Originalzeile des Connectors (CLI rows[])"
+        }
+      }
+    },
+    "kpis": {
+      "tests_passed": 4,
+      "tests_total": 4,
+      "last_live_run": "2026-10-13T03:28:01.081Z",
+      "median_ms": 6365,
+      "login": "none",
+      "captcha": false
+    },
+    "robots": {
+      "status": "allowed",
+      "note": "atlas.ecdc.europa.eu hat keine robots.txt (404); offizielle, unter /help selbstdokumentierte ECDC-API. Gedrosselt 1,5 s."
+    },
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS)",
+    "access_chain": [
+      "official_api"
+    ],
+    "source_url": "https://atlas.ecdc.europa.eu/public/AtlasService/rest",
+    "logo": {
+      "favicon": "https://www.google.com/s2/favicons?domain=atlas.ecdc.europa.eu&sz=64",
+      "source_host": "atlas.ecdc.europa.eu",
+      "domain": "atlas.ecdc.europa.eu",
+      "file": "assets/logos/atlas.ecdc.europa.eu.svg",
+      "source": "official-site"
+    },
+    "login": "none",
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

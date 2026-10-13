@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-bitso",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Bitso – Krypto-Börse Lateinamerika",
+  "description": "Bitso API v3 (öffentlich): Ticker je Orderbuch (z. B. btc_mxn), alle verfügbaren Bücher und aggregiertes Orderbuch. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "bitso ticker",
+      "command": "bitso-cli ticker"
+    },
+    {
+      "name": "buecher",
+      "displayName": "buecher",
+      "description": "bitso buecher",
+      "command": "bitso-cli buecher"
+    },
+    {
+      "name": "orderbuch",
+      "displayName": "orderbuch",
+      "description": "bitso orderbuch",
+      "command": "bitso-cli orderbuch"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.bitso.com/v3/ticker/?book=btc_mxn",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.bitso.com/robots.txt: 404 (keine Einschränkung). Öffentliche API-Endpunkte ohne Key. Drossel ≥2 s.",
+    "tos": "Bitso API: öffentliche Endpunkte ohne Authentifizierung, Rate-Limit 60 Requests/min.",
+    "logo": {
+      "domain": "api.bitso.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=bitso.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.bitso.com.png",
+      "brand_domain": "bitso.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3987,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": "2026-10-13T08:04:07.860Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Bitso – Krypto-Börse Lateinamerika",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-circl-vulnlookup",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CIRCL Vulnerability-Lookup (cve.circl.lu)",
+  "description": "CIRCL (Computer Incident Response Center Luxembourg) Vulnerability-Lookup: CVE-Datensätze (CVE 5.x) mit CVSS, CWE und betroffenen Produkten, neueste Schwachstellen aus CVE/GHSA/PySEC/CSAF und Produktliste je Hersteller. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "CVE",
+    "Schwachstellen",
+    "Vulnerability",
+    "CVSS",
+    "CWE",
+    "IT-Sicherheit",
+    "CIRCL",
+    "CSAF",
+    "GHSA",
+    "security"
+  ],
+  "keywords": [
+    "CVE",
+    "Schwachstellen",
+    "Vulnerability",
+    "CVSS",
+    "CWE",
+    "IT-Sicherheit",
+    "CIRCL",
+    "CSAF",
+    "GHSA",
+    "security"
+  ],
+  "homepage": "https://vulnerability.circl.lu/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "cve",
+      "displayName": "cve",
+      "description": "circl-vulnlookup cve",
+      "command": "circl-vulnlookup-cli cve"
+    },
+    {
+      "name": "neueste",
+      "displayName": "neueste",
+      "description": "circl-vulnlookup neueste",
+      "command": "circl-vulnlookup-cli neueste"
+    },
+    {
+      "name": "produkte",
+      "displayName": "produkte",
+      "description": "circl-vulnlookup produkte",
+      "command": "circl-vulnlookup-cli produkte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://cve.circl.lu/api/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "cve.circl.lu/robots.txt: /api/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "CIRCL Vulnerability-Lookup – offene Daten (CVE-Inhalte unter CVE Terms of Use, CC BY 4.0 für CIRCL-Daten).",
+    "provider": "CIRCL – Computer Incident Response Center Luxembourg",
+    "homepage": "https://vulnerability.circl.lu/",
+    "data_license": "CVE Terms of Use / CC BY 4.0 (CIRCL)",
+    "keywords": [
+      "CVE",
+      "Schwachstellen",
+      "Vulnerability",
+      "CVSS",
+      "CWE",
+      "IT-Sicherheit",
+      "CIRCL",
+      "CSAF",
+      "GHSA",
+      "security"
+    ],
+    "geo": {
+      "country": null,
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null
+    },
+    "logo": {
+      "domain": "cve.circl.lu",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://cve.circl.lu/static/img/VL-hori-coul.png",
+      "fallback": "initials",
+      "brand_domain": "circl.lu",
+      "file": "assets/logos/cve.circl.lu.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "vulnerability-lookup",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "CIRCL Vulnerability-Lookup (cve.circl.lu)",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

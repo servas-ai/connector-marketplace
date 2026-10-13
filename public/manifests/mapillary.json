@@ -1,0 +1,124 @@
+{
+  "id": "servas-ai.opencli-mapillary",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Mapillary Straßenbilder (opt-in, eigener Token)",
+  "description": "Opt-in-Skelett für die Mapillary Graph API v4 (Straßenbilder). Die API verlangt einen Client-Token (ohne Token HTTP 500/401) → läuft NUR mit MAPILLARY_TOKEN.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "bilder",
+      "displayName": "bilder",
+      "description": "Bilder in BBox (--bbox minLon,minLat,maxLon,maxLat, max 0.01°²)",
+      "command": "mapillary-cli bilder"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "place",
+    "realtime": false,
+    "source_url": "https://graph.mapillary.com",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": true,
+    "opt_in": {
+      "env": "MAPILLARY_TOKEN",
+      "required": true,
+      "never_in_repo": true
+    },
+    "status": "pruefen",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "blocked_robots",
+    "robots": "Offizielle API mit eigenem Key (MAPILLARY_TOKEN); kein Scraping. robots_status blocked_robots (API-Host robots.txt sperrt alles, #475).",
+    "tos": "Mapillary (Meta): Bilder CC BY-SA 4.0, API nur mit Client-Token laut Terms.",
+    "keywords": [
+      "mapillary",
+      "street view",
+      "straßenbilder",
+      "street-level imagery",
+      "fotos",
+      "photos",
+      "karte",
+      "map",
+      "token",
+      "opt-in",
+      "crowdsourcing"
+    ],
+    "geo": {
+      "country": null,
+      "region": null,
+      "city": null,
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "graph.mapillary.com",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9b/23/8d/9b238dcb-25df-db97-03e0-c13d37c4628d/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+      "file": "assets/logos/graph.mapillary.com.png",
+      "brand_domain": "mapillary.com",
+      "source": "appstore"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": true,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:06:51.911Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Mapillary Straßenbilder (opt-in, eigener Token)",
+        "subtitle": "geo · opt-in",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "opt_in"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://www.mapillary.com"
+  }
+}

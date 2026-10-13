@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-norges-bank",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Norges Bank – Kurse & Leitzins",
+  "description": "NOK-Wechselkurse und Leitzins der Norges Bank über die offene SDMX-API. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kurse",
+      "displayName": "kurse",
+      "description": "norges-bank kurse",
+      "command": "norges-bank-cli kurse"
+    },
+    {
+      "name": "leitzins",
+      "displayName": "leitzins",
+      "description": "norges-bank leitzins",
+      "command": "norges-bank-cli leitzins"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://data.norges-bank.no/api",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "data.norges-bank.no: robots.txt nicht abrufbar (403); offizielle offene SDMX-API (Norges Bank Open Data, freie Nutzung). Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "data.norges-bank.no",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=norges-bank.no&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.norges-bank.no.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2895,
+      "throughput_rps": 0.345,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "SDMX",
+      "last_scrape": "2026-10-13T04:11:05.806Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Norges Bank – Kurse & Leitzins",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "kurs_nok"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "NO",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

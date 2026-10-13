@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-oslo-bysykkel",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Oslo Bysykkel – GBFS",
+  "description": "GBFS-Feed (Oslo Bysykkel – GBFS): Stationen mit Standort/Kapazität und Echtzeit-Verfügbarkeit von Rädern und freien Stellplätzen.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "bikesharing",
+    "bike sharing",
+    "leihrad",
+    "rental bike",
+    "fahrrad",
+    "bicycle",
+    "mobilität",
+    "mobility"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feeds",
+      "displayName": "feeds",
+      "description": "Verfügbare GBFS-Feeds",
+      "command": "oslo-bysykkel-cli feeds"
+    },
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Einzelnen Feed roh als Zeilen (<name>)",
+      "command": "oslo-bysykkel-cli feed"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen (station_information)",
+      "command": "oslo-bysykkel-cli stationen"
+    },
+    {
+      "name": "verfuegbarkeit",
+      "displayName": "verfuegbarkeit",
+      "description": "Echtzeit-Verfügbarkeit (station_status)",
+      "command": "oslo-bysykkel-cli verfuegbarkeit"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://gbfs.urbansharing.com/oslobysykkel.no/gbfs.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gbfs.urbansharing.com/robots.txt: GBFS-Pfade nicht gesperrt. Offener GBFS-Feed (General Bikeshare Feed Specification), 1 req/2 s.",
+    "tos": "Oslo Bysykkel (Urban Sharing): NLOD 2.0, Client-Identifier empfohlen.",
+    "keywords": [
+      "bikesharing",
+      "bike sharing",
+      "leihrad",
+      "rental bike",
+      "fahrrad",
+      "bicycle",
+      "mobilität",
+      "mobility",
+      "gbfs",
+      "station",
+      "verfügbarkeit",
+      "availability",
+      "verkehr",
+      "transport",
+      "oslo",
+      "echtzeit"
+    ],
+    "geo": {
+      "country": "NO",
+      "region": null,
+      "city": "Oslo",
+      "bbox": [
+        10.6,
+        59.85,
+        10.9,
+        59.97
+      ],
+      "lat": 59.91,
+      "lon": 10.75,
+      "scope": "city"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "gbfs.urbansharing.com",
+      "file": "assets/logos/gbfs.urbansharing.com.png",
+      "source": "og:image",
+      "source_kind": "og:image",
+      "resolved": "https://urbansharing.com/assets/opengraph-image-CWnpStFQ.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 5863,
+      "throughput_rps": 0.171,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:24:52.050Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "Oslo Bysykkel – GBFS",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "name",
+          "raeder",
+          "frei",
+          "kapazitaet"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

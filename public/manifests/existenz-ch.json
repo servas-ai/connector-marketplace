@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-existenz-ch",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Existenz.ch – Schweizer Hydrodaten (BAFU)",
+  "description": "Existenz.ch Hydro-API: BAFU-Messstationen (Flüsse/Seen) und aktuelle Werte für Abfluss, Pegel und Wassertemperatur. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "existenz-ch stationen",
+      "command": "existenz-ch-cli stationen"
+    },
+    {
+      "name": "aktuell",
+      "displayName": "aktuell",
+      "description": "existenz-ch aktuell",
+      "command": "existenz-ch-cli aktuell"
+    },
+    {
+      "name": "parameter",
+      "displayName": "parameter",
+      "description": "existenz-ch parameter",
+      "command": "existenz-ch-cli parameter"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://api.existenz.ch/apiv1/hydro/locations",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.existenz.ch/robots.txt: 404 (keine Einschränkung). Offene API (Daten BAFU Hydrologie). Drossel ≥2 s.",
+    "tos": "Existenz.ch: freie API, Daten BAFU (Liefer- und Nutzungsbedingungen hydrologische Daten); Quelle angeben.",
+    "logo": {
+      "domain": "api.existenz.ch",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=existenz.ch&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.existenz.ch.png",
+      "brand_domain": "existenz.ch"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3952,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "apiv1",
+      "last_scrape": "2026-10-13T07:26:34.382Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Existenz.ch – Schweizer Hydrodaten (BAFU)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CH",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon"
+  }
+}

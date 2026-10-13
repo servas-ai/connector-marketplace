@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-data-gov-sg",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "data.gov.sg – Singapore Open Data API",
+  "description": "api-production.data.gov.sg v2: Dataset-Liste und Dataset-Metadaten des Singapore Open Data Portals. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-gov-sg datasets",
+      "command": "data-gov-sg-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-gov-sg dataset",
+      "command": "data-gov-sg-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api-production.data.gov.sg/v2/public/api/datasets",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api-production.data.gov.sg/robots.txt: 404 (keine Sperre) – öffentliche data.gov.sg v2 Public API. Drossel ≥2 s.",
+    "tos": "data.gov.sg: Singapore Open Data Licence; Fair Use (anonyme Rate-Limits).",
+    "logo": {
+      "domain": "api-production.data.gov.sg",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=api-production.data.gov.sg&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api-production.data.gov.sg.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2-public",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "data.gov.sg – Singapore Open Data API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "SG",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

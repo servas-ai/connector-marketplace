@@ -1,0 +1,139 @@
+{
+  "id": "servas-ai.opencli-peeringdb-at",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "PeeringDB AT – Colocation, IX, Netze",
+  "description": "Colocation-Rechenzentren, Internet Exchanges und Netze/Carrier je Standort in Österreich aus PeeringDB. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "rechenzentren-wien",
+      "displayName": "rechenzentren",
+      "description": "Colocation-Standorte in AT",
+      "command": "peeringdb-at-cli rechenzentren --stadt Vienna --format json"
+    },
+    {
+      "name": "ix-at",
+      "displayName": "ix",
+      "description": "Internet Exchanges in AT",
+      "command": "peeringdb-at-cli ix --format json"
+    },
+    {
+      "name": "netze-am-standort",
+      "displayName": "netze-am-standort",
+      "description": "Carrier/ISPs (ASN) an einem Standort",
+      "command": "peeringdb-at-cli netze-am-standort 67 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.peeringdb.com/api",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "20 req/min/IP (anonym, PeeringDB) – CLI ≥3,1 s Pause + Cache: identische Anfragen höchstens 2x/Minute",
+    "robots_status": "ok",
+    "robots": "robots.txt sperrt nur /register, /account/login, /username-retrieve, /reset-password; /api erlaubt. Anonym limitiert, gedrosselt ≥3,1 s, Cache 30 s.",
+    "logo": {
+      "domain": "www.peeringdb.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=peeringdb.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/www.peeringdb.com.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1100,
+      "throughput_rps": 0.32,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "2",
+      "last_scrape": "2026-10-13T03:41:43Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "PeeringDB AT – Colocation, IX, Netze",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ],
+        "footer": "Daten: PeeringDB"
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "betreiber",
+          "stadt",
+          "asn",
+          "netze",
+          "ix",
+          "carrier"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      },
+      "map": {
+        "lat": "lat",
+        "lon": "lon"
+      }
+    },
+    "attribution": "Daten: PeeringDB",
+    "usage_policy": {
+      "zweck": [
+        "Netzbetrieb",
+        "Fehlersuche",
+        "Forschung"
+      ],
+      "verboten": [
+        "Vollexport",
+        "Kontaktabfragen (poc)",
+        "Marketing"
+      ],
+      "quelle": "https://www.peeringdb.com/aup"
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

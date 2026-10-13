@@ -1,0 +1,125 @@
+{
+  "id": "servas-ai.opencli-inspirehep",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "INSPIRE-HEP – Hochenergiephysik-Literatur",
+  "description": "INSPIRE-HEP REST API (CERN/DESY/Fermilab/SLAC/IHEP): Literatursuche in der Hochenergiephysik mit Zitationen, Detail je Record und Autorensuche. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "literatur",
+      "displayName": "literatur",
+      "description": "inspirehep literatur",
+      "command": "inspirehep-cli literatur"
+    },
+    {
+      "name": "record",
+      "displayName": "record",
+      "description": "inspirehep record",
+      "command": "inspirehep-cli record"
+    },
+    {
+      "name": "autoren",
+      "displayName": "autoren",
+      "description": "inspirehep autoren",
+      "command": "inspirehep-cli autoren"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "realtime": false,
+    "source_url": "https://inspirehep.net/api/literature",
+    "homepage": "https://inspirehep.net/",
+    "keywords": [
+      "Hochenergiephysik",
+      "INSPIRE-HEP",
+      "CERN",
+      "Literatur",
+      "Physik",
+      "high energy physics",
+      "literature",
+      "Wissenschaft"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "inspirehep.net/robots.txt: Disallow nur Such-UI-Pfade – /api/literature und /api/authors nicht gesperrt. Offizielle REST-API. Drossel ≥2 s (Limit 15 Req/5 s).",
+    "tos": "INSPIRE: Metadaten CC0, REST-API frei, Rate-Limit 15 Requests / 5 s.",
+    "logo": {
+      "domain": "inspirehep.net",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "initials",
+      "fallback": "initials",
+      "file": "assets/logos/inspirehep.net.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3455,
+      "throughput_rps": 0.289,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:27:22.230Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "INSPIRE-HEP – Hochenergiephysik-Literatur",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "favicon"
+  }
+}

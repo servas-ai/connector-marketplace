@@ -1,0 +1,141 @@
+{
+  "id": "servas-ai.opencli-companies-house-uk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UK Companies House – Firmensuche (offizielle API, opt-in)",
+  "description": "UK Companies House Public Data API: Firmensuche nach Name und Firmenprofil per Company Number (Stammdaten: Name, Status, Rechtsform, Gründung, Sitz-Adresse, SIC). Keine Officers/PSC-Ausgabe (natürliche Personen). Opt-in mit eigenem kostenlosen Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "firmendaten"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "Firmensuche nach Name (--q)",
+      "command": "companies-house-uk-cli suche"
+    },
+    {
+      "name": "firma",
+      "displayName": "firma",
+      "description": "Firmenprofil per Company Number (<nr>)",
+      "command": "companies-house-uk-cli firma"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "firmendaten",
+    "record_kind": "company",
+    "realtime": false,
+    "source_url": "https://api.company-information.service.gov.uk",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": true,
+    "opt_in": {
+      "env": "COMPANIES_HOUSE_API_KEY",
+      "required": true,
+      "never_in_repo": true
+    },
+    "status": "pruefen",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "none",
+    "robots": "API-Host, keine robots-Einschränkung für die REST-API; Rate-Limit lt. Doku 600 Requests / 5 min. Drossel ≥2 s.",
+    "tos": "Offizielle API, kostenloser Key nach Registrierung (developer.company-information.service.gov.uk).",
+    "keywords": [
+      "firmenbuch",
+      "handelsregister",
+      "company register",
+      "firmendaten",
+      "company data",
+      "unternehmen",
+      "company",
+      "firmensuche",
+      "company search",
+      "stammdaten",
+      "master data",
+      "companies house",
+      "uk",
+      "united kingdom",
+      "großbritannien",
+      "company number"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": null,
+      "city": null,
+      "bbox": [
+        -8.65,
+        49.86,
+        1.77,
+        60.86
+      ],
+      "scope": "national"
+    },
+    "logo": {
+      "domain": "www.gov.uk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=www.gov.uk&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/www.gov.uk.png",
+      "brand_domain": "company-information.service.gov.uk"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": true,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:18:57.233Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "UK Companies House – Firmensuche (offizielle API, opt-in)",
+        "subtitle": "company · opt-in",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "opt_in"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

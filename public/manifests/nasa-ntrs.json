@@ -1,0 +1,152 @@
+{
+  "id": "servas-ai.opencli-nasa-ntrs",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NASA Technical Reports Server",
+  "description": "NASA Technical Reports Server: Suche nach Studien, Papers und Publikationen (Metadaten: Titel, Autoren, Jahr, DOI, URL, Abstract wo erlaubt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "generic"
+  ],
+  "tags": [
+    "wissenschaft",
+    "publikationen",
+    "studien",
+    "papers"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "search",
+      "displayName": "search",
+      "description": "nasa-ntrs search",
+      "command": "nasa-ntrs-cli search"
+    },
+    {
+      "name": "get",
+      "displayName": "get",
+      "description": "nasa-ntrs get",
+      "command": "nasa-ntrs-cli get"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "kind": "publication",
+    "realtime": false,
+    "source_url": "https://ntrs.nasa.gov",
+    "country": "US",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1 s",
+    "robots_status": "ok",
+    "robots": "ntrs.nasa.gov/robots.txt ohne Disallow. Offizielle öffentliche API.",
+    "keywords": {
+      "de": [
+        "Studien",
+        "Fachartikel",
+        "Publikationen",
+        "Wissenschaft",
+        "Forschung",
+        "Literatursuche",
+        "Zitationen",
+        "Open Access",
+        "DOI",
+        "Autoren",
+        "Abstracts",
+        "Paper",
+        "NASA Technical Reports Server"
+      ],
+      "en": [
+        "studies",
+        "papers",
+        "publications",
+        "scholarly",
+        "research",
+        "literature search",
+        "citations",
+        "open access",
+        "doi",
+        "metadata",
+        "nasa-ntrs"
+      ]
+    },
+    "geo": {
+      "country": "US",
+      "region": "DC",
+      "city": "Washington",
+      "lat": 38.88,
+      "lon": -77.02,
+      "bbox": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "ntrs.nasa.gov",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=ntrs.nasa.gov&sz=128",
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "NTRS API /api/citations",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "NASA Technical Reports Server",
+        "subtitle": "publication",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "authors",
+          "year",
+          "doi"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "id": "servas-ai.opencli-boe-iadb",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Bank of England – Statistical Interactive Database (IADB)",
+  "description": "Bank of England, Statistical Interactive Database: Bank Rate (Leitzins), tägliche GBP-Wechselkurse und beliebige IADB-Zeitreihen per Seriencode als CSV-Export. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "Bank of England",
+    "BoE",
+    "Bank Rate",
+    "Leitzins",
+    "Wechselkurse",
+    "GBP",
+    "SONIA",
+    "Zinsen",
+    "Zeitreihen",
+    "interest rates"
+  ],
+  "keywords": [
+    "Bank of England",
+    "BoE",
+    "Bank Rate",
+    "Leitzins",
+    "Wechselkurse",
+    "GBP",
+    "SONIA",
+    "Zinsen",
+    "Zeitreihen",
+    "interest rates"
+  ],
+  "homepage": "https://www.bankofengland.co.uk/boeapps/database/",
+  "license": "MIT",
+  "geo": {
+    "country": "GB",
+    "region": "Vereinigtes Königreich",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      -8.65,
+      49.86,
+      1.77,
+      60.86
+    ],
+    "centroid": {
+      "lat": 54.0,
+      "lon": -2.0
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "leitzins",
+      "displayName": "leitzins",
+      "description": "boe-iadb leitzins",
+      "command": "boe-iadb-cli leitzins"
+    },
+    {
+      "name": "wechselkurse",
+      "displayName": "wechselkurse",
+      "description": "boe-iadb wechselkurse",
+      "command": "boe-iadb-cli wechselkurse"
+    },
+    {
+      "name": "reihe",
+      "displayName": "reihe",
+      "description": "boe-iadb reihe",
+      "command": "boe-iadb-cli reihe"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.bankofengland.co.uk/robots.txt: /boeapps/database/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Bank of England – Wiederverwendung der Statistikdaten mit Quellenangabe (BoE Terms and conditions, OGL-kompatibel).",
+    "provider": "Bank of England",
+    "homepage": "https://www.bankofengland.co.uk/boeapps/database/",
+    "data_license": "Bank of England – Wiederverwendung mit Quellenangabe",
+    "keywords": [
+      "Bank of England",
+      "BoE",
+      "Bank Rate",
+      "Leitzins",
+      "Wechselkurse",
+      "GBP",
+      "SONIA",
+      "Zinsen",
+      "Zeitreihen",
+      "interest rates"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": "Vereinigtes Königreich",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        -8.65,
+        49.86,
+        1.77,
+        60.86
+      ],
+      "centroid": {
+        "lat": 54.0,
+        "lon": -2.0
+      }
+    },
+    "logo": {
+      "domain": "www.bankofengland.co.uk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.bankofengland.co.uk/favicon.svg?ver=98f91",
+      "fallback": "initials",
+      "brand_domain": "bankofengland.co.uk",
+      "file": "assets/logos/www.bankofengland.co.uk.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "iadb-csv",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Bank of England – Statistical Interactive Database (IADB)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

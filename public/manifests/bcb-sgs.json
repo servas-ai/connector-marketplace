@@ -1,0 +1,116 @@
+{
+  "id": "servas-ai.opencli-bcb-sgs",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Banco Central do Brasil – SGS Zeitreihen",
+  "description": "Banco Central do Brasil, SGS-API: Zeitreihen wie Selic-Zielzins (432), IPCA-Inflation (433), USD/BRL (1) und EUR/BRL (21619) – letzte N Werte oder Zeitraum. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "serie",
+      "displayName": "serie",
+      "description": "bcb-sgs serie",
+      "command": "bcb-sgs-cli serie"
+    },
+    {
+      "name": "zeitraum",
+      "displayName": "zeitraum",
+      "description": "bcb-sgs zeitraum",
+      "command": "bcb-sgs-cli zeitraum"
+    },
+    {
+      "name": "reihen",
+      "displayName": "reihen",
+      "description": "bcb-sgs reihen",
+      "command": "bcb-sgs-cli reihen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/10?formato=json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.bcb.gov.br/robots.txt: 404 (keine Einschränkung). Offene Daten der Zentralbank (Dados Abertos). Drossel ≥2 s.",
+    "tos": "BCB Dados Abertos: offene Lizenz, freie Nutzung mit Quellenangabe.",
+    "logo": {
+      "domain": "api.bcb.gov.br",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=bcb.gov.br&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.bcb.gov.br.png",
+      "brand_domain": "bcb.gov.br",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3789,
+      "throughput_rps": 0.264,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sgs",
+      "last_scrape": "2026-10-13T08:04:08.144Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Banco Central do Brasil – SGS Zeitreihen",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "BR",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "wikimedia"
+  }
+}

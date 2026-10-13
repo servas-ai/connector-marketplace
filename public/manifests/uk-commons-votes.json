@@ -1,0 +1,169 @@
+{
+  "id": "servas-ai.opencli-uk-commons-votes",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UK House of Commons – Votes (Divisions) API",
+  "description": "UK House of Commons Votes API: namentliche Abstimmungen (Divisions) suchen und Ergebnis je Abstimmung mit Ja/Nein-Stimmen nach Partei abrufen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "House of Commons",
+    "UK Parliament",
+    "Abstimmungen",
+    "Divisions",
+    "Votes",
+    "Parlament",
+    "Vereinigtes Königreich"
+  ],
+  "keywords": [
+    "House of Commons",
+    "UK Parliament",
+    "Abstimmungen",
+    "Divisions",
+    "Votes",
+    "Parlament",
+    "Vereinigtes Königreich"
+  ],
+  "homepage": "https://votes.parliament.uk/",
+  "license": "MIT",
+  "geo": {
+    "country": "GB",
+    "region": "Vereinigtes Königreich",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      -8.65,
+      49.86,
+      1.77,
+      60.86
+    ],
+    "centroid": {
+      "lat": 54.0,
+      "lon": -2.0
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "abstimmungen",
+      "displayName": "abstimmungen",
+      "description": "uk-commons-votes abstimmungen",
+      "command": "uk-commons-votes-cli abstimmungen"
+    },
+    {
+      "name": "abstimmung",
+      "displayName": "abstimmung",
+      "description": "uk-commons-votes abstimmung",
+      "command": "uk-commons-votes-cli abstimmung"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://commonsvotes-api.parliament.uk/data/divisions.json/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "commonsvotes-api.parliament.uk/robots.txt: /data/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Open Parliament Licence v3.0, Quelle: UK Parliament.",
+    "provider": "UK Parliament",
+    "homepage": "https://votes.parliament.uk/",
+    "data_license": "Open Parliament Licence v3.0",
+    "keywords": [
+      "House of Commons",
+      "UK Parliament",
+      "Abstimmungen",
+      "Divisions",
+      "Votes",
+      "Parlament",
+      "Vereinigtes Königreich"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": "Vereinigtes Königreich",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        -8.65,
+        49.86,
+        1.77,
+        60.86
+      ],
+      "centroid": {
+        "lat": 54.0,
+        "lon": -2.0
+      }
+    },
+    "logo": {
+      "domain": "commonsvotes-api.parliament.uk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commonsvotes-api.parliament.uk/",
+      "fallback": "initials",
+      "brand_domain": "parliament.uk",
+      "file": "assets/logos/commonsvotes-api.parliament.uk.png",
+      "source": "official-site",
+      "source_kind": "header-svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "UK House of Commons – Votes (Divisions) API",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

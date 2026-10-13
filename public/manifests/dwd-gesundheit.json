@@ -1,0 +1,195 @@
+{
+  "id": "servas-ai.opencli-dwd-gesundheit",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DWD – Pollenflug- und UV-Index (Open Data)",
+  "description": "DWD Open Data Medizin-Meteorologie: Pollenflug-Gefahrenindex (27 Regionen, 8 Pollenarten) und UV-Index-Prognose für deutsche Städte – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Pollenflug",
+    "Pollen",
+    "Allergie",
+    "UV-Index",
+    "Sonnenbrand",
+    "DWD",
+    "Deutscher Wetterdienst",
+    "Medizin-Meteorologie",
+    "Deutschland",
+    "pollen forecast",
+    "allergy",
+    "UV index",
+    "Germany",
+    "health weather"
+  ],
+  "keywords": [
+    "Pollenflug",
+    "Pollen",
+    "Allergie",
+    "UV-Index",
+    "Sonnenbrand",
+    "DWD",
+    "Deutscher Wetterdienst",
+    "Medizin-Meteorologie",
+    "Deutschland",
+    "pollen forecast",
+    "allergy",
+    "UV index",
+    "Germany",
+    "health weather"
+  ],
+  "geo": {
+    "country": "DE",
+    "region": "Deutschland",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      5.87,
+      47.27,
+      15.04,
+      55.06
+    ],
+    "centroid": {
+      "lat": 51.165,
+      "lon": 10.455
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "pollen",
+      "displayName": "pollen",
+      "description": "dwd-gesundheit pollen",
+      "command": "dwd-gesundheit-cli pollen"
+    },
+    {
+      "name": "uv",
+      "displayName": "uv",
+      "description": "dwd-gesundheit uv",
+      "command": "dwd-gesundheit-cli uv"
+    },
+    {
+      "name": "stand",
+      "displayName": "stand",
+      "description": "dwd-gesundheit stand",
+      "command": "dwd-gesundheit-cli stand"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "status": "gruen",
+    "realtime": true,
+    "source_url": "https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.dwd.de/robots.txt: 404 (keine Einschränkung). DWD Open-Data-Server. Drossel ≥2 s.",
+    "tos": "DWD Open Data: Nutzung frei gem. GeoNutzV, Quellenangabe „Deutscher Wetterdienst“.",
+    "keywords": [
+      "Pollenflug",
+      "Pollen",
+      "Allergie",
+      "UV-Index",
+      "Sonnenbrand",
+      "DWD",
+      "Deutscher Wetterdienst",
+      "Medizin-Meteorologie",
+      "Deutschland",
+      "pollen forecast",
+      "allergy",
+      "UV index",
+      "Germany",
+      "health weather"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Deutschland",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ],
+      "centroid": {
+        "lat": 51.165,
+        "lon": 10.455
+      }
+    },
+    "logo": {
+      "domain": "dwd.de",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=dwd.de&sz=128",
+      "fallback": "initials",
+      "brand_domain": "dwd.de",
+      "file": "assets/logos/dwd.de.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4183,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "health/alerts",
+      "last_scrape": "2026-10-13T09:14:18Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "DWD – Pollenflug- und UV-Index (Open Data)",
+        "subtitle": "opendata · Deutschland",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "geo"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "keywords",
+          "geo"
+        ]
+      }
+    }
+  }
+}

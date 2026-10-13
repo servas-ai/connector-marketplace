@@ -1,0 +1,130 @@
+{
+  "id": "servas-ai.opencli-worldbank",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Weltbank – World Development Indicators",
+  "description": "Zeitreihen der Weltbank (BIP, Inflation, Bevölkerung …) für AT und alle Länder, Indikatorsuche und Länderstammdaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "indikator-bip-at",
+      "displayName": "indikator",
+      "description": "Weltbank – World Development Indicators: indikator",
+      "command": "worldbank-cli indikator NY.GDP.MKTP.CD --land AT --von 2015 --format json"
+    },
+    {
+      "name": "land-at",
+      "displayName": "land",
+      "description": "Weltbank – World Development Indicators: land",
+      "command": "worldbank-cli land AT --format json"
+    },
+    {
+      "name": "suche-inflation",
+      "displayName": "suche",
+      "description": "Weltbank – World Development Indicators: suche",
+      "command": "worldbank-cli suche --q inflation --limit 5 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.worldbank.org/v2",
+    "homepage": "https://data.worldbank.org/",
+    "keywords": [
+      "Weltbank",
+      "Zeitreihen",
+      "BIP",
+      "Inflation",
+      "Bevölkerung",
+      "World Bank",
+      "indicators",
+      "Statistik"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "api.worldbank.org hat kein robots.txt (404); offene API, Lizenz CC BY 4.0. Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "api.worldbank.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=worldbank.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.worldbank.org.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 946,
+      "throughput_rps": 0.9,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T03:38:46Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Weltbank – World Development Indicators",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "land",
+          "indikator",
+          "name",
+          "jahr",
+          "wert"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "wikimedia"
+  }
+}

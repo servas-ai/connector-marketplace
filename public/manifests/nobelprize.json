@@ -1,0 +1,126 @@
+{
+  "id": "servas-ai.opencli-nobelprize",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Nobel Prize API – Preise & Laureaten",
+  "description": "Nobel Prize API v2.1 (Nobel Prize Outreach): Nobelpreise nach Jahr/Kategorie mit Begründung sowie Laureaten-Suche und Detail. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "preise",
+      "displayName": "preise",
+      "description": "nobelprize preise",
+      "command": "nobelprize-cli preise"
+    },
+    {
+      "name": "laureaten",
+      "displayName": "laureaten",
+      "description": "nobelprize laureaten",
+      "command": "nobelprize-cli laureaten"
+    },
+    {
+      "name": "laureat",
+      "displayName": "laureat",
+      "description": "nobelprize laureat",
+      "command": "nobelprize-cli laureat"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://api.nobelprize.org/2.1/nobelPrizes",
+    "homepage": "https://www.nobelprize.org/",
+    "keywords": [
+      "Nobelpreis",
+      "Preisträger",
+      "Nobel Prize",
+      "Laureaten",
+      "laureates",
+      "prizes",
+      "Kultur",
+      "Wissenschaft"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "api.nobelprize.org/robots.txt: kein Disallow für /2.1/. Offizielle offene API (CC0). Drossel ≥2 s.",
+    "tos": "Nobel Prize API: Metadaten CC0, frei nutzbar.",
+    "logo": {
+      "domain": "api.nobelprize.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=nobelprize.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.nobelprize.org.png",
+      "brand_domain": "nobelprize.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3770,
+      "throughput_rps": 0.265,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "2.1",
+      "last_scrape": "2026-10-13T07:27:37.648Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Nobel Prize API – Preise & Laureaten",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "favicon"
+  }
+}

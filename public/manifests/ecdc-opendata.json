@@ -1,0 +1,130 @@
+{
+  "id": "servas-ai.opencli-ecdc-opendata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI ecdc-opendata",
+  "description": "Wöchentliche Daten des ECDC zu Atemwegsinfekten (ILI/ARI, SARI, Testpositivität, Influenza-Subtypen, SARS-CoV-2-Varianten) je EU-Land aus dem offiziellen ECDC-Repository. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+  "author": "servas-ai (Health Connector Builder)",
+  "categories": [
+    "connector",
+    "ui",
+    "gesundheit"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.page.register",
+    "ui.dashboardWidget.register"
+  ],
+  "entrypoints": {
+    "worker": "./dist/worker.js",
+    "ui": "./dist/ui"
+  },
+  "tools": [
+    {
+      "name": "ecdc-opendata-daten",
+      "displayName": "ecdc-opendata daten",
+      "description": "CLI-Befehl `daten` (node bin/cli.js daten --format json)",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "ui": {
+    "slots": [
+      {
+        "type": "page",
+        "id": "table",
+        "displayName": "ecdc-opendata",
+        "exportName": "RecordsPage",
+        "routePath": "opencli-ecdc-opendata"
+      },
+      {
+        "type": "dashboardWidget",
+        "id": "kpis",
+        "displayName": "ecdc-opendata KPIs",
+        "exportName": "KpiWidget",
+        "openui": "paperclip/openui.txt"
+      }
+    ]
+  },
+  "x-servas": {
+    "status": "cli-ready; worker/ui bundle noch nicht gebaut (dist/ fehlt)",
+    "category": "international",
+    "cli_commands": [
+      "daten"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "record_schema": {
+      "$id": "servas.record.v1",
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "name",
+        "source",
+        "source_url",
+        "fetched_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "const": "ecdc-opendata"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "fetched_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "raw": {
+          "type": "object",
+          "description": "Originalzeile des Connectors (CLI rows[])"
+        }
+      }
+    },
+    "kpis": {
+      "tests_passed": 3,
+      "tests_total": 3,
+      "last_live_run": "2026-10-13T03:23:59.715Z",
+      "median_ms": 1498,
+      "login": "none",
+      "captcha": false
+    },
+    "robots": {
+      "status": "allowed",
+      "note": "raw.githubusercontent.com hat keine robots.txt (404); offizielles, öffentlich publiziertes ECDC-Repository. Ein Download pro Aufruf."
+    },
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS)",
+    "access_chain": [
+      "official_api"
+    ],
+    "source_url": "https://github.com/EU-ECDC/Respiratory_viruses_weekly_data",
+    "logo": {
+      "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=64",
+      "source_host": "github.com",
+      "domain": "github.com",
+      "file": "assets/logos/github.com.svg",
+      "source": "official-site"
+    },
+    "login": "none",
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

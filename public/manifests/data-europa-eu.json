@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-data-europa-eu",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "data.europa.eu – EU Open Data Portal",
+  "description": "data.europa.eu Search API: Dataset-Suche und Dataset-Details (Titel, Publisher, Distributionen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-europa-eu datasets",
+      "command": "data-europa-eu-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-europa-eu dataset",
+      "command": "data-europa-eu-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.europa.eu/api/hub/search/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.europa.eu/robots.txt: Disallow /*search?* (GET mit Query) – Search per POST /api/hub/search/search ohne Query-String; /api/hub/search/datasets/{id} erlaubt. Drossel ≥2 s.",
+    "tos": "data.europa.eu: EU Open Data; Fair Use der Search API.",
+    "logo": {
+      "domain": "data.europa.eu",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=data.europa.eu&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.europa.eu.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "data.europa.eu – EU Open Data Portal",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

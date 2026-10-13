@@ -1,0 +1,70 @@
+{
+  "id": "servas-ai.opencli-free-exercise-db",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI free-exercise-db",
+  "description": "Fitnessübungen (Muskeln, Equipment, Level, Anleitung, Bilder) aus der offenen Free Exercise DB.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "fitness"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "free-exercise-db",
+      "description": "Fitnessübungen (Muskeln, Equipment, Level, Anleitung, Bilder) aus der offenen Free Exercise DB.",
+      "command": "node international/free-exercise-db/bin/cli.js suche --muskel chest --level beginner --format json"
+    },
+    {
+      "name": "uebung",
+      "displayName": "free-exercise-db",
+      "description": "Fitnessübungen (Muskeln, Equipment, Level, Anleitung, Bilder) aus der offenen Free Exercise DB.",
+      "command": "node international/free-exercise-db/bin/cli.js uebung --id 3_4_Sit-Up --format json"
+    },
+    {
+      "name": "muskeln",
+      "displayName": "free-exercise-db",
+      "description": "Fitnessübungen (Muskeln, Equipment, Level, Anleitung, Bilder) aus der offenen Free Exercise DB.",
+      "command": "node international/free-exercise-db/bin/cli.js muskeln --format json"
+    }
+  ],
+  "schema": "servas.record.v1",
+  "record_type": "generic",
+  "openui": {
+    "view": "table",
+    "columns": [
+      "title",
+      "url"
+    ],
+    "detail": "record"
+  },
+  "kpis": {
+    "e2e": "4/4",
+    "records": 876
+  },
+  "robots": "ok (keine robots.txt, 404)",
+  "logo": "https://github.githubassets.com/favicons/favicon.png",
+  "access_chain": [
+    "open_data_file"
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "alternatives": {
+    "wger": "blocked_robots (Disallow /api/v2)"
+  },
+  "x-servas": {
+    "logo": {
+      "domain": "raw.githubusercontent.com",
+      "file": "assets/logos/raw.githubusercontent.com.svg",
+      "source": "official-site"
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "svg"
+  }
+}

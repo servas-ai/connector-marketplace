@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-gemini",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Gemini – öffentliche Marktdaten",
+  "description": "Krypto-Ticker und Kerzen der US-Börse Gemini über die öffentliche Market-Data-API. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "gemini ticker",
+      "command": "gemini-cli ticker"
+    },
+    {
+      "name": "kerzen",
+      "displayName": "kerzen",
+      "description": "gemini kerzen",
+      "command": "gemini-cli kerzen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.gemini.com",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "api.gemini.com hat kein robots.txt; Market-Data-Endpunkte laut Doku öffentlich (120 req/min). Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "api.gemini.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=gemini.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.gemini.com.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1101,
+      "throughput_rps": 0.908,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1/v2",
+      "last_scrape": "2026-10-13T03:50:16.221Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Gemini – öffentliche Marktdaten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "preis"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

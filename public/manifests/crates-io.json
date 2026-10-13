@@ -1,0 +1,114 @@
+{
+  "id": "servas-ai.opencli-crates-io",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "crates.io – Rust Crate Registry",
+  "description": "crates.io API v1: Crate-Suche, Crate-Metadaten und Versionsliste. Ohne Login/Key. Nutze den Skill für Rust-Abhängigkeiten und Release-Infos.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "crates-io suche",
+      "command": "crates-io-cli suche"
+    },
+    {
+      "name": "crate",
+      "displayName": "crate",
+      "description": "crates-io crate",
+      "command": "crates-io-cli crate"
+    },
+    {
+      "name": "versionen",
+      "displayName": "versionen",
+      "description": "crates-io versionen",
+      "command": "crates-io-cli versionen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://crates.io/api/v1/crates",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "crates.io/robots.txt: User-agent * Disallow leer (alles erlaubt). Offizielle API v1; User-Agent mit Kontakt empfohlen. Drossel ≥2 s.",
+    "tos": "crates.io: öffentliche Registry-API, Fair Use.",
+    "logo": {
+      "domain": "crates.io",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=crates.io&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/crates.io.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2184,
+      "throughput_rps": 0.458,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T06:04:11.398Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "crates.io – Rust Crate Registry",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

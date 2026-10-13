@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-huggingface-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Hugging Face Hub – Modelle & Datensätze",
+  "description": "Hugging Face Hub Index über die öffentliche Hub-API ohne Token: Modelle und Datensätze mit Downloads, Likes, Pipeline, Library, Lizenz. Nutze den Skill zum Finden und Vergleichen offener KI-Modelle.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "modelle",
+      "displayName": "modelle",
+      "description": "huggingface-hub modelle",
+      "command": "huggingface-hub-cli modelle"
+    },
+    {
+      "name": "modell",
+      "displayName": "modell",
+      "description": "huggingface-hub modell",
+      "command": "huggingface-hub-cli modell"
+    },
+    {
+      "name": "datensaetze",
+      "displayName": "datensaetze",
+      "description": "huggingface-hub datensaetze",
+      "command": "huggingface-hub-cli datensaetze"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": true,
+    "source_url": "https://huggingface.co/api/models",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host, limit ≤ 100",
+    "robots_status": "ok",
+    "robots": "huggingface.co/robots.txt: User-agent * Allow /. Öffentliche Hub-API ohne Token (anonymes Limit, kleine Seiten ≤100). Drossel ≥2 s, Abbruch bei 403/429.",
+    "tos": "Hugging Face Hub-API-Doku: öffentliche Metadaten-Endpunkte; Connector lädt keine Gewichte/Dateien, nur Metadaten.",
+    "logo": {
+      "domain": "huggingface.co",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/huggingface.co.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2152,
+      "throughput_rps": 0.465,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Hub API (öffentlich)",
+      "last_scrape": "2026-10-13T05:07:55.946Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Hugging Face Hub – Modelle & Datensätze",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "downloads"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

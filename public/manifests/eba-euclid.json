@@ -1,0 +1,127 @@
+{
+  "id": "servas-ai.opencli-eba-euclid",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "EBA EUCLID – Zahlungs- & E-Geld-Institute",
+  "description": "EBA-Register (EUCLID, PSD2/EMD2) der Zahlungsinstitute, E-Geld-Institute, AISP und Ausnahmen in EU/EWR: Zulassung, Adresse, Aufsicht, Dienste und Passporting je Land. Öffentliche Register-API ohne Login. Nutze den Skill zur Lizenzprüfung von Zahlungsdienstleistern (z. B. AT).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "institute",
+      "displayName": "institute",
+      "description": "eba-euclid institute",
+      "command": "eba-euclid-cli institute"
+    },
+    {
+      "name": "institut",
+      "displayName": "institut",
+      "description": "eba-euclid institut",
+      "command": "eba-euclid-cli institut"
+    },
+    {
+      "name": "download",
+      "displayName": "download",
+      "description": "eba-euclid download",
+      "command": "eba-euclid-cli download"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://euclid.eba.europa.eu/register/pir/search",
+    "homepage": "https://www.eba.europa.eu/",
+    "keywords": [
+      "EBA",
+      "Zahlungsinstitute",
+      "E-Geld-Institute",
+      "PSD2",
+      "Register",
+      "Finanzaufsicht",
+      "payment institutions",
+      "EU",
+      "banking"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "json_endpoint",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "euclid.eba.europa.eu/robots.txt: HTTP 404 (keine robots.txt → keine Sperre). Register-API (register/api/search/entities, entity/read, filemetadata) wird von der öffentlichen Register-Seite ohne Login genutzt. Drossel ≥2 s, Abbruch bei 403/429/Captcha.",
+    "tos": "EBA-Register: öffentliche Auskunft nach Art. 15 PSD2; tägliche Golden-Copy-Gesamtdatei öffentlich angeboten (Connector verlinkt nur Metadaten).",
+    "logo": {
+      "domain": "euclid.eba.europa.eu",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=eba.europa.eu&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/euclid.eba.europa.eu.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2243,
+      "throughput_rps": 0.446,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "EUCLID PIR register/api",
+      "last_scrape": "2026-10-13T05:06:42.156Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "EBA EUCLID – Zahlungs- & E-Geld-Institute",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "typ"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg"
+  }
+}

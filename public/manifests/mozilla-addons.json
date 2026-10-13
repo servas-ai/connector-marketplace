@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-mozilla-addons",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Firefox Add-ons (addons.mozilla.org) – AMO API v5",
+  "description": "addons.mozilla.org API v5: Add-ons suchen (Nutzerzahl, Bewertung, Kategorie), Add-on-Details per Slug (Version, Lizenz, Berechtigungen) und Versionsliste. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "mozilla-addons suche",
+      "command": "mozilla-addons-cli suche"
+    },
+    {
+      "name": "addon",
+      "displayName": "addon",
+      "description": "mozilla-addons addon",
+      "command": "mozilla-addons-cli addon"
+    },
+    {
+      "name": "versionen",
+      "displayName": "versionen",
+      "description": "mozilla-addons versionen",
+      "command": "mozilla-addons-cli versionen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://addons.mozilla.org/api/v5/addons/search/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "addons.mozilla.org/robots.txt: /api/ nicht gesperrt (Allow /). Offizielle öffentliche AMO-API. Drossel ≥2 s.",
+    "tos": "AMO API: öffentliche Lese-Endpunkte ohne Authentifizierung; Mozilla API-Richtlinien beachten.",
+    "logo": {
+      "domain": "addons.mozilla.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=addons.mozilla.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/addons.mozilla.org.png",
+      "brand_domain": "addons.mozilla.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3946,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v5",
+      "last_scrape": "2026-10-13T08:05:09.447Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Firefox Add-ons (addons.mozilla.org) – AMO API v5",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

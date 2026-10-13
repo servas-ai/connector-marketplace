@@ -1,0 +1,137 @@
+{
+  "id": "servas-ai.opencli-openflights-airports",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenFlights – Flughafen-Dump",
+  "description": "OpenFlights – Flughafen-Dump: offizielle Gesamtdatei (CSV) als Datensätze – Liste, Volltextsuche, Dump-Metadaten. Download höchstens 1× pro Tag (Cache 24 h). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "openflights-airports liste",
+      "command": "openflights-airports-cli liste"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "openflights-airports suche",
+      "command": "openflights-airports-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "openflights-airports info",
+      "command": "openflights-airports-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host, Dump ≤1×/Tag",
+    "robots_status": "ok",
+    "robots": "raw.githubusercontent.com/robots.txt geprüft: Dump-Pfad nicht gesperrt (zusätzlich Laufzeitprüfung). Kein Key. Drossel ≥2 s/Host, Dump-Cache 24 h.",
+    "tos": "Lizenz: ODbL 1.0 (OpenFlights). Quelle nennen.",
+    "logo": {
+      "domain": "raw.githubusercontent.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=raw.githubusercontent.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/raw.githubusercontent.com.png",
+      "brand_domain": "raw.githubusercontent.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 249,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dump",
+      "last_scrape": "2026-10-13T09:25:16.381Z",
+      "datenqualitaet": 1.0
+    },
+    "keywords": [
+      "Bulk-Dump",
+      "bulk download",
+      "offene Daten",
+      "open data",
+      "CSV",
+      "Datensatz",
+      "dataset",
+      "Referenzdaten",
+      "reference data",
+      "Verkehr",
+      "transport",
+      "Flughafen",
+      "airport",
+      "OpenFlights",
+      "Flughafen-Dump"
+    ],
+    "geo": {
+      "country": "WORLD",
+      "region": null,
+      "city": null,
+      "lat": null,
+      "lon": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "openui": {
+      "card": {
+        "title": "OpenFlights – Flughafen-Dump",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

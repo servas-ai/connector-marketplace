@@ -1,0 +1,126 @@
+{
+  "id": "servas-ai.opencli-data-act-gov-au",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ACT Open Data (Canberra)",
+  "description": "ACT Open Data (Canberra) – Socrata Discovery API v1: Dataset-Suche und Dataset-Details (Titel, Herausgeber, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-act-gov-au datasets",
+      "command": "data-act-gov-au-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-act-gov-au dataset",
+      "command": "data-act-gov-au-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.data.act.gov.au/api/catalog/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.data.act.gov.au/robots.txt: Crawl-delay 1, Disallow nur /browse?* Filter – /api erlaubt; Laufzeit-Prüfung in lib/http.js. Drossel ≥2 s/Host. Apex data.act.gov.au → http-Redirect vermeiden (HTTPS www nutzen).",
+    "tos": "ACT Open Data (Canberra): offenes Datenportal (Socrata Discovery API v1); Lizenz je Dataset, Fair Use.",
+    "logo": {
+      "domain": "data.act.gov.au",
+      "resolved": "https://www.data.act.gov.au/api/assets/99D787CA-5279-429B-AF04-22315B552833?ACT-gov-logo.png",
+      "file": "assets/logos/data.act.gov.au.png",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "keywords": [
+      "Open Data",
+      "offene Daten",
+      "Datenportal",
+      "data portal",
+      "Datensätze",
+      "datasets",
+      "Katalog",
+      "catalog",
+      "Verwaltung",
+      "government",
+      "Behörde",
+      "public sector",
+      "Socrata",
+      "SODA",
+      "Australien",
+      "Australia",
+      "Canberra"
+    ],
+    "geo": {
+      "country": "AU",
+      "region": "Australian Capital Territory",
+      "city": "Canberra",
+      "lat": -35.3,
+      "lon": 149.1,
+      "bbox": null,
+      "scope": "regional"
+    },
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "ACT Open Data (Canberra)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AU",
+    "homepage": "https://www.data.act.gov.au"
+  }
+}

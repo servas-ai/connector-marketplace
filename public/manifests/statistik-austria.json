@@ -1,0 +1,123 @@
+{
+  "id": "servas-ai.opencli-statistik-austria",
+  "apiVersion": 1,
+  "version": "0.2.0",
+  "displayName": "OpenCLI statistik-austria",
+  "description": "Amtliche Statistiken (VPI, Unternehmen, Bevölkerung …) suchen und als dekodierte Tabelle laden. Ohne Login. Nutze diesen Skill, wenn ein Agent Daten aus Statistik Austria braucht.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "gesundheit",
+      "displayName": "gesundheit",
+      "description": "Gesundheits-Tabellen von Statistik Austria (--thema gesundheit|spitaeler|todesursachen|lebenserwartung|krebs|ausgaben|pflege)",
+      "command": "statistik-austria-cli gesundheit"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "OGD-Datensätze von Statistik Austria suchen (--q)",
+      "command": "statistik-austria-cli suche"
+    },
+    {
+      "name": "meta",
+      "displayName": "meta",
+      "description": "Metadaten eines Datensatzes: meta <OGD_id>",
+      "command": "statistik-austria-cli meta"
+    },
+    {
+      "name": "tabelle",
+      "displayName": "tabelle",
+      "description": "Tabellenzeilen mit Klartext-Spalten: tabelle <OGD_id> [--limit N] [--roh]",
+      "command": "statistik-austria-cli tabelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.statistik.gv.at",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS)",
+    "robots_status": "ok",
+    "robots": "OGD-Portal von Statistik Austria; Suche über data.gv.at-API",
+    "logo": {
+      "domain": "data.statistik.gv.at",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=data.statistik.gv.at&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.statistik.gv.at.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "mcp",
+      "cli",
+      "http"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2148,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "OGD Austria Metadata 2.3",
+      "last_scrape": "2026-10-13T03:34:27.317Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "OpenCLI statistik-austria",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "author_bot": "Health Connector Builder",
+    "country": "AT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon"
+  }
+}

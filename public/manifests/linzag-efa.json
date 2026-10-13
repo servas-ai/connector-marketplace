@@ -1,0 +1,146 @@
+{
+  "id": "servas-ai.opencli-linzag-efa",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "LINZ AG LINIEN – EFA Fahrplanauskunft (OGD-Schnittstelle)",
+  "description": "LINZ AG LINIEN: offizielle OGD-EFA-Schnittstelle (data.linz.gv.at) – Haltestellensuche, Echtzeit-Abfahrtsmonitor (Bim, Bus, O-Bus) und Störungsmeldungen für Linz. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellensuche (--q NAME)",
+      "command": "linzag-efa-cli haltestellen"
+    },
+    {
+      "name": "abfahrten",
+      "displayName": "abfahrten",
+      "description": "Echtzeit-Abfahrten einer Haltestelle (<stopID>, --limit N)",
+      "command": "linzag-efa-cli abfahrten"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Aktuelle Störungs-/Verkehrsmeldungen (ICS, --limit N)",
+      "command": "linzag-efa-cli meldungen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://www.linzag.at/static/XML_DM_REQUEST",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "linzag.at/robots.txt: kein Disallow für * auf /static/. Schnittstelle offiziell als OGD auf data.linz.gv.at dokumentiert.",
+    "tos": "Open Government Data Linz (CC BY 4.0), Parameter stateless=1 laut Doku.",
+    "keywords": [
+      "verkehr",
+      "transport",
+      "öffis",
+      "public transport",
+      "fahrplan",
+      "timetable",
+      "abfahrten",
+      "departures",
+      "haltestelle",
+      "stop",
+      "echtzeit",
+      "realtime",
+      "mobilität",
+      "mobility",
+      "linz",
+      "linz ag linien",
+      "straßenbahn",
+      "tram",
+      "bus",
+      "oberösterreich"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Oberösterreich",
+      "city": "Linz",
+      "bbox": [
+        14.2,
+        48.23,
+        14.37,
+        48.37
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "linzag.at",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=linzag.at&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/linzag.at.png",
+      "brand_domain": "linzag.at"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4018,
+      "throughput_rps": 0.249,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "EFA-XML (JSON)",
+      "last_scrape": "2026-10-13T09:20:06.916Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "LINZ AG LINIEN – EFA Fahrplanauskunft (OGD-Schnittstelle)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

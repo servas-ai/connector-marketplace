@@ -1,0 +1,160 @@
+{
+  "id": "servas-ai.opencli-escap-sdmx",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UN ESCAP Data Explorer SDMX – SDMX",
+  "description": "api-dataexplorer.unescap.org SDMX: amtliche Statistik-Zeitreihen (UN ESCAP Data Explorer SDMX). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dataflows",
+      "displayName": "dataflows",
+      "description": "escap-sdmx dataflows",
+      "command": "escap-sdmx-cli dataflows"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "escap-sdmx info",
+      "command": "escap-sdmx-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "Zeitreihen",
+    "time series",
+    "SDMX",
+    "Datenfluss",
+    "dataflow",
+    "Amtliche Statistik",
+    "official statistics",
+    "Open Data",
+    "offene Daten",
+    "Indikatoren",
+    "indicators",
+    "ESCAP",
+    "Asien",
+    "Asia"
+  ],
+  "geo": {
+    "country": null,
+    "region": "Asia-Pacific",
+    "city": "Bangkok",
+    "lat": 13.76,
+    "lon": 100.5,
+    "bbox": null,
+    "scope": "regional"
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api-dataexplorer.unescap.org/rest/dataflow/ESCAP",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api-dataexplorer.unescap.org/robots.txt geprüft: keine Sperre für den API-Pfad – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "UN ESCAP Data Explorer SDMX: öffentliche SDMX-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe api-dataexplorer.unescap.org.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "Zeitreihen",
+      "time series",
+      "SDMX",
+      "Datenfluss",
+      "dataflow",
+      "Amtliche Statistik",
+      "official statistics",
+      "Open Data",
+      "offene Daten",
+      "Indikatoren",
+      "indicators",
+      "ESCAP",
+      "Asien",
+      "Asia"
+    ],
+    "geo": {
+      "country": null,
+      "region": "Asia-Pacific",
+      "city": "Bangkok",
+      "lat": 13.76,
+      "lon": 100.5,
+      "bbox": null,
+      "scope": "regional"
+    },
+    "logo": {
+      "domain": "api-dataexplorer.unescap.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=api-dataexplorer.unescap.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api-dataexplorer.unescap.org.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sdmx-rest-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "UN ESCAP Data Explorer SDMX – SDMX",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

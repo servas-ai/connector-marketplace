@@ -1,0 +1,151 @@
+{
+  "id": "servas-ai.opencli-discogs",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Discogs – Musik-Datenbank (Releases, Labels)",
+  "description": "Discogs API (ohne Token): Releases, Master-Releases und Labels der Musikdatenbank – Titel, Jahr, Formate, Genres, Tracklist, Label-Katalog.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "musik",
+    "music",
+    "discogs",
+    "schallplatte",
+    "vinyl",
+    "release",
+    "album",
+    "label"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "release",
+      "displayName": "release",
+      "description": "Release (<id>)",
+      "command": "discogs-cli release"
+    },
+    {
+      "name": "tracks",
+      "displayName": "tracks",
+      "description": "Tracklist eines Master-Release (<id>)",
+      "command": "discogs-cli tracks"
+    },
+    {
+      "name": "label-releases",
+      "displayName": "label-releases",
+      "description": "Releases eines Labels (<label-id>)",
+      "command": "discogs-cli label-releases"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://api.discogs.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.discogs.com/robots.txt: API-Pfade /releases, /masters, /labels nicht gesperrt. Unauthentifiziert 25 req/min – hier 1 req/2 s.",
+    "tos": "Discogs API Terms of Use; Daten CC0 (Release-Daten).",
+    "keywords": [
+      "musik",
+      "music",
+      "discogs",
+      "schallplatte",
+      "vinyl",
+      "release",
+      "album",
+      "label",
+      "plattenlabel",
+      "record label",
+      "tracklist",
+      "genre",
+      "diskografie",
+      "discography",
+      "cd",
+      "katalog"
+    ],
+    "geo": {
+      "country": "WORLD",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "api.discogs.com",
+      "file": "assets/logos/api.discogs.com.png",
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 3990,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:36:29.497Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "Discogs – Musik-Datenbank (Releases, Labels)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "titel",
+          "jahr",
+          "genres"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "servas-ai.opencli-data-transportation-gov",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "US DOT Open Data",
+  "description": "US DOT Open Data – Socrata Discovery API v1: Dataset-Suche und Dataset-Details (Titel, Herausgeber, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-transportation-gov datasets",
+      "command": "data-transportation-gov-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-transportation-gov dataset",
+      "command": "data-transportation-gov-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.transportation.gov/api/catalog/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.transportation.gov/robots.txt: keine robots.txt (bzw. HTML) – keine Disallow-Regeln; Laufzeit-Prüfung in lib/http.js. Drossel ≥2 s/Host.",
+    "tos": "US DOT Open Data: offenes Datenportal (Socrata Discovery API v1); Lizenz je Dataset, Fair Use.",
+    "logo": {
+      "domain": "data.transportation.gov",
+      "resolved": "https://commons.wikimedia.org/wiki/File:Seal_of_the_United_States_Department_of_Transportation.svg",
+      "file": "assets/logos/data.transportation.gov.png",
+      "source": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "keywords": [
+      "Open Data",
+      "offene Daten",
+      "Datenportal",
+      "data portal",
+      "Datensätze",
+      "datasets",
+      "Katalog",
+      "catalog",
+      "Verwaltung",
+      "government",
+      "Behörde",
+      "public sector",
+      "Socrata",
+      "SODA",
+      "USA",
+      "Verkehr",
+      "DOT"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "lat": 39.8,
+      "lon": -98.6,
+      "bbox": null,
+      "scope": "national"
+    },
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "US DOT Open Data",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "homepage": "https://data.transportation.gov"
+  }
+}

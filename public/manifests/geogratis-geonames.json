@@ -1,0 +1,151 @@
+{
+  "id": "servas-ai.opencli-geogratis-geonames",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GeoGratis Geographical Names – Ortsnamen Kanada",
+  "description": "Natural Resources Canada (CGNDB): amtliche geografische Namen Kanadas mit Typ, Provinz und Koordinaten; Suche per Name oder Bounding-Box.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "ortsnamen",
+    "place names",
+    "kanada",
+    "canada",
+    "geografie",
+    "geography",
+    "gazetteer",
+    "cgndb"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "Namen suchen (<name>)",
+      "command": "geogratis-geonames-cli suche"
+    },
+    {
+      "name": "box",
+      "displayName": "box",
+      "description": "Namen in Bounding-Box (<w,s,e,n>)",
+      "command": "geogratis-geonames-cli box"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://geogratis.gc.ca/services/geoname/en/geonames",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "geogratis.gc.ca/robots.txt: keine Sperren. Offizieller Dienst ohne Key, 1 req/2 s.",
+    "tos": "Open Government Licence – Canada.",
+    "keywords": [
+      "ortsnamen",
+      "place names",
+      "kanada",
+      "canada",
+      "geografie",
+      "geography",
+      "gazetteer",
+      "cgndb",
+      "provinz",
+      "province",
+      "koordinaten",
+      "coordinates",
+      "geodaten",
+      "geodata",
+      "nrcan",
+      "toponymie"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": null,
+      "city": null,
+      "bbox": [
+        -141,
+        41.7,
+        -52.6,
+        83.1
+      ],
+      "scope": "national"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "geogratis.gc.ca",
+      "file": "assets/logos/geogratis.gc.ca.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 3912,
+      "throughput_rps": 0.256,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:24:59.004Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "GeoGratis Geographical Names – Ortsnamen Kanada",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "name",
+          "typ",
+          "provinz",
+          "lat",
+          "lon"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

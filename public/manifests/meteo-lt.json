@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-meteo-lt",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Meteo.lt – Wetter Litauen (LHMT)",
+  "description": "Meteo.lt API (Litauischer Hydrometeorologischer Dienst): Ortsliste, Langfrist-Prognose je Ort und Messstationen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "orte",
+      "displayName": "orte",
+      "description": "meteo-lt orte",
+      "command": "meteo-lt-cli orte"
+    },
+    {
+      "name": "prognose",
+      "displayName": "prognose",
+      "description": "meteo-lt prognose",
+      "command": "meteo-lt-cli prognose"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "meteo-lt stationen",
+      "command": "meteo-lt-cli stationen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://api.meteo.lt/v1/places",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.meteo.lt/robots.txt: kein Disallow für /v1/. Offizielle offene API (CC BY-SA 4.0). Drossel ≥2 s (Limit 180 Req/min).",
+    "tos": "Meteo.lt API: frei, Lizenz CC BY-SA 4.0, max. 180 Requests/Minute/IP, Quelle LHMT angeben.",
+    "logo": {
+      "domain": "api.meteo.lt",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=meteo.lt&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.meteo.lt.png",
+      "brand_domain": "meteo.lt"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3803,
+      "throughput_rps": 0.263,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:26:34.373Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Meteo.lt – Wetter Litauen (LHMT)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "LT",
+    "ampel": "grün",
+    "license": "CC-BY-SA-4.0",
+    "logo_source": "favicon"
+  }
+}

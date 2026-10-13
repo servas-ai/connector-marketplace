@@ -1,0 +1,110 @@
+{
+  "id": "servas-ai.opencli-uk-parliament-members",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UK Parliament – Members API",
+  "description": "UK Parliament Members API: Abgeordnete (Commons) und Lords suchen, Detail je Mitglied (Partei, Wahlkreis, Status). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "uk-parliament-members suche",
+      "command": "uk-parliament-members-cli suche"
+    },
+    {
+      "name": "mitglied",
+      "displayName": "mitglied",
+      "description": "uk-parliament-members mitglied",
+      "command": "uk-parliament-members-cli mitglied"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://members-api.parliament.uk/api/Members/Search",
+    "license": "Open Parliament Licence",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "members-api.parliament.uk/robots.txt: 404 (keine Einschränkung). Offizielle Parlaments-API. Drossel ≥2 s.",
+    "tos": "UK Parliament: Open Parliament Licence, freie Nutzung mit Quellenangabe.",
+    "logo": {
+      "domain": "members-api.parliament.uk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=parliament.uk&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/members-api.parliament.uk.svg",
+      "brand_domain": "parliament.uk"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3701,
+      "throughput_rps": 0.27,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:27:33.974Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "UK Parliament – Members API",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "GB",
+    "ampel": "grün",
+    "logo_source": "svg"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-bithumb",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Bithumb – Krypto-Börse Korea (KRW)",
+  "description": "Bithumb Public API: Ticker je Coin in KRW, alle Ticker nach 24h-Umsatz und Orderbuch. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "bithumb ticker",
+      "command": "bithumb-cli ticker"
+    },
+    {
+      "name": "alle",
+      "displayName": "alle",
+      "description": "bithumb alle",
+      "command": "bithumb-cli alle"
+    },
+    {
+      "name": "orderbuch",
+      "displayName": "orderbuch",
+      "description": "bithumb orderbuch",
+      "command": "bithumb-cli orderbuch"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.bithumb.com/public/ticker/ALL_KRW",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.bithumb.com/robots.txt: 404 (keine Einschränkung). Öffentliche Public-API ohne Key. Drossel ≥2 s.",
+    "tos": "Bithumb Public API: öffentliche Marktdaten ohne Authentifizierung, Rate-Limit beachten.",
+    "logo": {
+      "domain": "api.bithumb.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=bithumb.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.bithumb.com.png",
+      "brand_domain": "bithumb.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3893,
+      "throughput_rps": 0.257,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "public-v1",
+      "last_scrape": "2026-10-13T08:04:07.964Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Bithumb – Krypto-Börse Korea (KRW)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

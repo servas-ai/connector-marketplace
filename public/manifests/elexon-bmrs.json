@@ -1,0 +1,121 @@
+{
+  "id": "servas-ai.opencli-elexon-bmrs",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Elexon BMRS – Strommarkt Großbritannien (Erzeugung, Nachfrage, Preise)",
+  "description": "Elexon Insights Solution (BMRS) API: aktuelle Stromerzeugung je Energieträger, Nachfrage-Outturn, Market Index Prices und Netzfrequenz für Großbritannien. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "erzeugung",
+      "displayName": "erzeugung",
+      "description": "elexon-bmrs erzeugung",
+      "command": "elexon-bmrs-cli erzeugung"
+    },
+    {
+      "name": "nachfrage",
+      "displayName": "nachfrage",
+      "description": "elexon-bmrs nachfrage",
+      "command": "elexon-bmrs-cli nachfrage"
+    },
+    {
+      "name": "marktpreis",
+      "displayName": "marktpreis",
+      "description": "elexon-bmrs marktpreis",
+      "command": "elexon-bmrs-cli marktpreis"
+    },
+    {
+      "name": "frequenz",
+      "displayName": "frequenz",
+      "description": "elexon-bmrs frequenz",
+      "command": "elexon-bmrs-cli frequenz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://data.elexon.co.uk/bmrs/api/v1/generation/outturn/current",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.elexon.co.uk/robots.txt: 404 (keine Einschränkung). Offizielle Insights-API ohne Key. Drossel ≥2 s.",
+    "tos": "Elexon BMRS-Daten: BMRS Data Licence (frei nutzbar mit Quellenangabe „Elexon“).",
+    "logo": {
+      "domain": "data.elexon.co.uk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=elexon.co.uk&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.elexon.co.uk.png",
+      "brand_domain": "elexon.co.uk"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4015,
+      "throughput_rps": 0.249,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:04:48.505Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Elexon BMRS – Strommarkt Großbritannien (Erzeugung, Nachfrage, Preise)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "GB",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

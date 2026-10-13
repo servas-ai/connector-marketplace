@@ -1,0 +1,143 @@
+{
+  "id": "servas-ai.opencli-lobid-gnd",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "lobid-gnd – Gemeinsame Normdatei (DNB)",
+  "description": "lobid-gnd (hbz): Suche in der Gemeinsamen Normdatei der Deutschen Nationalbibliothek – Werke, Orte, Körperschaften, Schlagwörter – mit GND-ID und Typ.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "normdaten",
+    "authority data",
+    "gnd",
+    "bibliothek",
+    "library",
+    "dnb",
+    "deutsche nationalbibliothek",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "GND-Suche (<begriff>), ohne Personen",
+      "command": "lobid-gnd-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://lobid.org/gnd/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "lobid.org/robots.txt: /gnd/search nicht gesperrt (nur /resource/, /subject/, /person/, /organisation/). 1 req/2 s.",
+    "tos": "GND-Daten: CC0 (DNB); lobid: hbz NRW.",
+    "keywords": [
+      "normdaten",
+      "authority data",
+      "gnd",
+      "bibliothek",
+      "library",
+      "dnb",
+      "deutsche nationalbibliothek",
+      "katalog",
+      "catalogue",
+      "schlagwort",
+      "subject heading",
+      "werk",
+      "work",
+      "körperschaft",
+      "geografikum",
+      "linked data"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": null,
+      "city": null,
+      "bbox": [
+        5.9,
+        47.3,
+        15,
+        55.1
+      ],
+      "scope": "national"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "lobid.org",
+      "file": "assets/logos/lobid.org.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://lobid.org/images/hbz.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 4059,
+      "throughput_rps": 0.246,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:18:09.646Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "lobid-gnd – Gemeinsame Normdatei (DNB)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "gnd",
+          "name",
+          "typ"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

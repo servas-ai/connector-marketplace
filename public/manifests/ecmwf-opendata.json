@@ -1,0 +1,191 @@
+{
+  "id": "servas-ai.opencli-ecmwf-opendata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ECMWF Open Data – IFS-Vorhersagefelder (GRIB2-Index)",
+  "description": "ECMWF Open Data (IFS 0,25°, CC-BY-4.0): neuesten Modelllauf finden und GRIB2-Feldindex (Parameter, Ebene, Byte-Bereich, Download-URL) abrufen – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ECMWF",
+    "Wettermodell",
+    "IFS",
+    "Vorhersage",
+    "GRIB",
+    "Temperatur",
+    "Niederschlag",
+    "Europa",
+    "numerische Wettervorhersage",
+    "weather model",
+    "forecast",
+    "open data",
+    "global",
+    "NWP"
+  ],
+  "keywords": [
+    "ECMWF",
+    "Wettermodell",
+    "IFS",
+    "Vorhersage",
+    "GRIB",
+    "Temperatur",
+    "Niederschlag",
+    "Europa",
+    "numerische Wettervorhersage",
+    "weather model",
+    "forecast",
+    "open data",
+    "global",
+    "NWP"
+  ],
+  "geo": {
+    "country": "INT",
+    "region": "global",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": {
+      "lat": 0.0,
+      "lon": 0.0
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "neuester",
+      "displayName": "neuester",
+      "description": "ecmwf-opendata neuester",
+      "command": "ecmwf-opendata-cli neuester"
+    },
+    {
+      "name": "index",
+      "displayName": "index",
+      "description": "ecmwf-opendata index",
+      "command": "ecmwf-opendata-cli index"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "status": "gruen",
+    "realtime": true,
+    "source_url": "https://data.ecmwf.int/forecasts/",
+    "license": "CC-BY-4.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.ecmwf.int/robots.txt: 404 (keine Einschränkung). Offizielles Open-Data-Portal. Nur Index-Dateien (KB), keine Massendownloads. Drossel ≥2 s.",
+    "tos": "ECMWF Open Data: CC-BY-4.0, Quellenangabe „ECMWF“.",
+    "keywords": [
+      "ECMWF",
+      "Wettermodell",
+      "IFS",
+      "Vorhersage",
+      "GRIB",
+      "Temperatur",
+      "Niederschlag",
+      "Europa",
+      "numerische Wettervorhersage",
+      "weather model",
+      "forecast",
+      "open data",
+      "global",
+      "NWP"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "global",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": {
+        "lat": 0.0,
+        "lon": 0.0
+      }
+    },
+    "logo": {
+      "domain": "ecmwf.int",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=ecmwf.int&sz=128",
+      "fallback": "initials",
+      "brand_domain": "ecmwf.int",
+      "file": "assets/logos/ecmwf.int.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 8405,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "forecasts/ifs/0p25/oper",
+      "last_scrape": "2026-10-13T09:14:18Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "ECMWF Open Data – IFS-Vorhersagefelder (GRIB2-Index)",
+        "subtitle": "opendata · global",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "geo"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "keywords",
+          "geo"
+        ]
+      }
+    }
+  }
+}

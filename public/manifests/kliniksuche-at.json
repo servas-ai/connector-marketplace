@@ -1,0 +1,111 @@
+{
+  "id": "servas-ai.opencli-kliniksuche-at",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI kliniksuche-at",
+  "description": "Krankenanstalten in Österreich über Kliniksuche.at (GÖG) finden, nach Bundesland, Träger (gemeinnützig/privat) oder Umkreis. Ohne Login. Nutze diesen Skill, wenn ein Agent Spitäler in Österreich braucht.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "adapters"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "drift",
+      "displayName": "drift",
+      "description": "Prüft das Schema der internen API gegen EXPECTED_KEYS (Drift-Test)",
+      "command": "kliniksuche-at-cli drift"
+    },
+    {
+      "name": "spitaeler",
+      "displayName": "spitaeler",
+      "description": "Krankenanstalten suchen (--bundesland, --typ, --lat/--lng/--km, --q Name/Ort)",
+      "command": "kliniksuche-at-cli spitaeler"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "adapters",
+    "realtime": false,
+    "source_url": "https://khstrukturdaten.goeg.at/backend2/KliniksucheV2/api/spitaeler",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "json_endpoint",
+    "login": false,
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS)",
+    "robots_status": "ok",
+    "robots": "robots.txt: kliniksuche.at ohne Einträge (leer), khstrukturdaten.goeg.at ohne robots.txt (404); öffentliches Backend der Website des Gesundheitsministeriums/GÖG. Nur Einzelabfragen, gedrosselt 1,5 s.",
+    "logo": {
+      "domain": "khstrukturdaten.goeg.at",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=khstrukturdaten.goeg.at&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/khstrukturdaten.goeg.at.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "mcp",
+      "cli",
+      "http"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2918,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "KliniksucheV2 (Website-Backend)",
+      "last_scrape": "2026-10-13T03:47:18.575Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "OpenCLI kliniksuche-at",
+        "subtitle": "adapters",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "author_bot": "Health Connector Builder",
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

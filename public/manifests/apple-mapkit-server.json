@@ -1,0 +1,131 @@
+{
+  "id": "servas-ai.opencli-apple-mapkit-server",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Apple Maps Server API (opt-in, eigenes Token)",
+  "description": "Opt-in-Skelett für die Apple Maps Server API (MapKit): Geocoding und Suche. Läuft NUR mit eigenem Maps-Token in APPLE_MAPS_TOKEN (Apple-Developer-Account); kein Scraping.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "geocode",
+      "displayName": "geocode",
+      "description": "Geocoding (--q ADRESSE)",
+      "command": "apple-mapkit-server-cli geocode"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "Orte suchen (--q TEXT)",
+      "command": "apple-mapkit-server-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "place",
+    "realtime": false,
+    "source_url": "https://maps-api.apple.com/v1",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": true,
+    "opt_in": {
+      "env": "APPLE_MAPS_TOKEN",
+      "required": true,
+      "never_in_repo": true
+    },
+    "status": "pruefen",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "none",
+    "robots": "Offizielle API mit eigenem Key (APPLE_MAPS_TOKEN); kein Scraping. robots_status none.",
+    "tos": "Apple Maps Server API: nur mit Apple-Developer-Account und eigenem Token, Kontingent pro Tag. Kein Scraping von maps.apple.com.",
+    "keywords": [
+      "apple maps",
+      "mapkit",
+      "geocoding",
+      "geokodierung",
+      "orte",
+      "places",
+      "suche",
+      "search",
+      "karte",
+      "map",
+      "token",
+      "opt-in"
+    ],
+    "geo": {
+      "country": null,
+      "region": null,
+      "city": null,
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "maps-api.apple.com",
+      "resolved": "https://www.apple.com/ac/structured-data/images/open_graph_logo.png",
+      "file": "assets/logos/maps-api.apple.com.png",
+      "brand_domain": "apple.com",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": true,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:04:51.112Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Apple Maps Server API (opt-in, eigenes Token)",
+        "subtitle": "geo · opt-in",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "opt_in"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://developer.apple.com/maps/"
+  }
+}

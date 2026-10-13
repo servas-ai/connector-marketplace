@@ -1,0 +1,125 @@
+{
+  "id": "servas-ai.opencli-plos",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "PLOS – Open-Access-Artikel (Solr Search API)",
+  "description": "PLOS Search API (Solr): Volltextsuche über alle PLOS-Journale (Titel, Autoren, Journal, Datum, Artikeltyp, Abstract) und Artikel per DOI. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "plos suche",
+      "command": "plos-cli suche"
+    },
+    {
+      "name": "artikel",
+      "displayName": "artikel",
+      "description": "plos artikel",
+      "command": "plos-cli artikel"
+    },
+    {
+      "name": "journal",
+      "displayName": "journal",
+      "description": "plos journal",
+      "command": "plos-cli journal"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "realtime": false,
+    "source_url": "https://api.plos.org/search",
+    "homepage": "https://plos.org/",
+    "keywords": [
+      "PLOS",
+      "Open Access",
+      "Fachartikel",
+      "Volltextsuche",
+      "journals",
+      "articles",
+      "Wissenschaft"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.plos.org/robots.txt: 404 (keine Einschränkung). Öffentliche Search-API (ohne Key, max. 10 Requests/min empfohlen). Drossel ≥2 s.",
+    "tos": "PLOS Search API: frei nutzbar, Inhalte CC BY; Fair Use (≤10 Requests/min, ≤7200/Tag).",
+    "logo": {
+      "domain": "api.plos.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=plos.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.plos.org.png",
+      "brand_domain": "plos.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3982,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "solr",
+      "last_scrape": "2026-10-13T08:04:50.963Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "PLOS – Open-Access-Artikel (Solr Search API)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC-BY",
+    "logo_source": "favicon"
+  }
+}

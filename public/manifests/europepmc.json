@@ -1,0 +1,146 @@
+{
+  "id": "servas-ai.opencli-europepmc",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Europe PMC",
+  "description": "Europe PMC: Suche nach Studien, Papers und Publikationen (Metadaten: Titel, Autoren, Jahr, DOI, URL, Abstract wo erlaubt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "generic"
+  ],
+  "tags": [
+    "wissenschaft",
+    "publikationen",
+    "studien",
+    "papers"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "search",
+      "displayName": "search",
+      "description": "europepmc search",
+      "command": "europepmc-cli search"
+    },
+    {
+      "name": "get",
+      "displayName": "get",
+      "description": "europepmc get",
+      "command": "europepmc-cli get"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "kind": "publication",
+    "realtime": false,
+    "source_url": "https://europepmc.org",
+    "country": "GB",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1 s",
+    "robots_status": "ok",
+    "robots": "www.ebi.ac.uk/robots.txt sperrt /europepmc/webservices nicht. Offizielle REST-API.",
+    "keywords": {
+      "de": [
+        "Studien",
+        "Fachartikel",
+        "Publikationen",
+        "Wissenschaft",
+        "Forschung",
+        "Literatursuche",
+        "Zitationen",
+        "Open Access",
+        "DOI",
+        "Autoren",
+        "Abstracts",
+        "Paper",
+        "Europe PMC"
+      ],
+      "en": [
+        "studies",
+        "papers",
+        "publications",
+        "scholarly",
+        "research",
+        "literature search",
+        "citations",
+        "open access",
+        "doi",
+        "metadata",
+        "europepmc"
+      ]
+    },
+    "geo": {
+      "country": "GB",
+      "region": "Cambridgeshire",
+      "city": "Hinxton",
+      "lat": 52.08,
+      "lon": 0.19,
+      "bbox": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "europepmc.org",
+      "resolved": "https://avatars.githubusercontent.com/u/24224151?s=460&v=4",
+      "file": "assets/logos/europepmc.org.png",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "REST webservices/rest 6.x",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Europe PMC",
+        "subtitle": "publication",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "authors",
+          "year",
+          "doi"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "homepage": "https://europepmc.org"
+  }
+}

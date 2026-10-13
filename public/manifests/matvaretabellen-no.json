@@ -1,0 +1,129 @@
+{
+  "id": "servas-ai.opencli-matvaretabellen-no",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Matvaretabellen Nährwerttabelle (NO)",
+  "description": "Norwegische Nährwerttabelle Matvaretabellen (Mattilsynet): rund 2.100 Lebensmittel mit allen Komponenten pro 100 g und EuroFIR-Codes über die offizielle JSON-API.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "naehrwerte",
+    "norwegen"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "naehrwerte",
+      "displayName": "naehrwerte",
+      "description": "matvaretabellen-no naehrwerte",
+      "command": "matvaretabellen-no-cli naehrwerte"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "matvaretabellen-no suche",
+      "command": "matvaretabellen-no-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://www.matvaretabellen.no/api/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "html"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/s je Host; Liste 7 Tage gecacht",
+    "robots_status": "ok",
+    "robots": "www.matvaretabellen.no/robots.txt: 404 (keine Regeln); API offiziell dokumentiert unter /api/.",
+    "license": "CC BY 4.0 – Matvaretabellen (Mattilsynet)",
+    "license_url": "https://www.matvaretabellen.no/om-matvaretabellen/",
+    "logo": {
+      "domain": "matvaretabellen.no",
+      "resolved": "https://www.matvaretabellen.no/mtds/e75a2187098f/favicon.svg",
+      "file": "assets/logos/www.matvaretabellen.no.png",
+      "source": "favicon"
+    },
+    "keywords": [
+      "Lebensmittel",
+      "food",
+      "Nährwerte",
+      "nutrition",
+      "Nährwerttabelle",
+      "food composition table",
+      "Norwegen",
+      "Norway",
+      "Mattilsynet",
+      "Kalorien",
+      "calories",
+      "Vitamine",
+      "vitamins",
+      "EuroFIR"
+    ],
+    "geo": {
+      "country": "NO",
+      "region": null,
+      "city": "Oslo",
+      "lat": 59.91,
+      "lon": 10.75,
+      "scope": "national"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 278,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Matvaretabellen API (foods.json, nutrients.json)",
+      "last_scrape": "2026-10-13T09:36:34.865Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Matvaretabellen Nährwerttabelle (NO)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "food_id",
+          "kcal_100g"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "country": "NO",
+    "homepage": "https://www.matvaretabellen.no"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "servas-ai.opencli-blockcypher",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BlockCypher – Blockchain-Status (BTC/LTC/DOGE/DASH)",
+  "description": "BlockCypher API v1: Chain-Status (Höhe, Gebühren je kB, unbestätigte TX) für BTC/LTC/DOGE/DASH und Blockdetails per Höhe/Hash. Ohne Login/Key (Free-Tier).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "chain",
+      "displayName": "chain",
+      "description": "blockcypher chain",
+      "command": "blockcypher-cli chain"
+    },
+    {
+      "name": "chains",
+      "displayName": "chains",
+      "description": "blockcypher chains",
+      "command": "blockcypher-cli chains"
+    },
+    {
+      "name": "block",
+      "displayName": "block",
+      "description": "blockcypher block",
+      "command": "blockcypher-cli block"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.blockcypher.com/v1/btc/main",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.blockcypher.com/robots.txt: 404 (keine Einschränkung). Free-Tier ohne Token (3 req/s, 100 req/h). Drossel ≥2 s.",
+    "tos": "BlockCypher: ohne Token 3 Requests/s und 100/h; für mehr ist ein Token nötig (hier nicht verwendet).",
+    "logo": {
+      "domain": "api.blockcypher.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=blockcypher.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.blockcypher.com.png",
+      "brand_domain": "blockcypher.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3989,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:04:07.789Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "BlockCypher – Blockchain-Status (BTC/LTC/DOGE/DASH)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

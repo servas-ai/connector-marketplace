@@ -1,0 +1,139 @@
+{
+  "id": "servas-ai.opencli-publicsuffix",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Public Suffix List – Domain-Suffix-Dump",
+  "description": "Public Suffix List – Domain-Suffix-Dump: offizielle Gesamtdatei (LINES) als Datensätze – Liste, Volltextsuche, Dump-Metadaten. Download höchstens 1× pro Tag (Cache 24 h). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "publicsuffix liste",
+      "command": "publicsuffix-cli liste"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "publicsuffix suche",
+      "command": "publicsuffix-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "publicsuffix info",
+      "command": "publicsuffix-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://publicsuffix.org/list/public_suffix_list.dat",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host, Dump ≤1×/Tag",
+    "robots_status": "ok",
+    "robots": "publicsuffix.org/robots.txt geprüft: Dump-Pfad nicht gesperrt (zusätzlich Laufzeitprüfung). Kein Key. Drossel ≥2 s/Host, Dump-Cache 24 h.",
+    "tos": "Lizenz: MPL 2.0 (Mozilla). Quelle nennen.",
+    "logo": {
+      "domain": "publicsuffix.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=publicsuffix.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/publicsuffix.org.png",
+      "brand_domain": "publicsuffix.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 122,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dump",
+      "last_scrape": "2026-10-13T09:25:32.050Z",
+      "datenqualitaet": 1.0
+    },
+    "keywords": [
+      "Bulk-Dump",
+      "bulk download",
+      "offene Daten",
+      "open data",
+      "CSV",
+      "Datensatz",
+      "dataset",
+      "Referenzdaten",
+      "reference data",
+      "Internet",
+      "Technik",
+      "technology",
+      "Standard",
+      "Public",
+      "Suffix",
+      "List",
+      "Domain-Suffix-Dump"
+    ],
+    "geo": {
+      "country": "WORLD",
+      "region": null,
+      "city": null,
+      "lat": null,
+      "lon": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "openui": {
+      "card": {
+        "title": "Public Suffix List – Domain-Suffix-Dump",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

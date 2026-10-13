@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-bis-stats",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BIS Statistics SDMX – SDMX",
+  "description": "stats.bis.org SDMX: amtliche Statistik-Zeitreihen (BIS Statistics SDMX). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dataflows",
+      "displayName": "dataflows",
+      "description": "bis-stats dataflows",
+      "command": "bis-stats-cli dataflows"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "bis-stats info",
+      "command": "bis-stats-cli info"
+    },
+    {
+      "name": "daten",
+      "displayName": "daten",
+      "description": "bis-stats daten",
+      "command": "bis-stats-cli daten"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "Zeitreihen",
+    "time series",
+    "SDMX",
+    "Datenfluss",
+    "dataflow",
+    "Amtliche Statistik",
+    "official statistics",
+    "Open Data",
+    "offene Daten",
+    "Indikatoren",
+    "indicators",
+    "BIZ",
+    "BIS",
+    "Zentralbanken",
+    "central banks"
+  ],
+  "geo": {
+    "country": null,
+    "region": "World",
+    "city": "Basel",
+    "lat": 47.55,
+    "lon": 7.59,
+    "bbox": null,
+    "scope": "global"
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://stats.bis.org/api/v1/dataflow/BIS/all/latest",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "stats.bis.org/robots.txt geprüft: keine Sperre für den API-Pfad – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "BIS Statistics SDMX: öffentliche SDMX-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe stats.bis.org.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "Zeitreihen",
+      "time series",
+      "SDMX",
+      "Datenfluss",
+      "dataflow",
+      "Amtliche Statistik",
+      "official statistics",
+      "Open Data",
+      "offene Daten",
+      "Indikatoren",
+      "indicators",
+      "BIZ",
+      "BIS",
+      "Zentralbanken",
+      "central banks"
+    ],
+    "geo": {
+      "country": null,
+      "region": "World",
+      "city": "Basel",
+      "lat": 47.55,
+      "lon": 7.59,
+      "bbox": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "stats.bis.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=stats.bis.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/stats.bis.org.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sdmx-rest-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "BIS Statistics SDMX – SDMX",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

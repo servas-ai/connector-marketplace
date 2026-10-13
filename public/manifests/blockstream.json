@@ -1,0 +1,121 @@
+{
+  "id": "servas-ai.opencli-blockstream",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Blockstream Esplora – Bitcoin-Blöcke, Mempool, Gebühren",
+  "description": "Blockstream Esplora API (blockstream.info): Blockhöhe, letzte 10 Blöcke, Mempool-Statistik, Gebührenschätzung und Blockdetails. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "bloecke",
+      "displayName": "bloecke",
+      "description": "blockstream bloecke",
+      "command": "blockstream-cli bloecke"
+    },
+    {
+      "name": "mempool",
+      "displayName": "mempool",
+      "description": "blockstream mempool",
+      "command": "blockstream-cli mempool"
+    },
+    {
+      "name": "gebuehren",
+      "displayName": "gebuehren",
+      "description": "blockstream gebuehren",
+      "command": "blockstream-cli gebuehren"
+    },
+    {
+      "name": "block",
+      "displayName": "block",
+      "description": "blockstream block",
+      "command": "blockstream-cli block"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://blockstream.info/api/blocks",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "blockstream.info/robots.txt: nur Disallow /nojs/ – /api/ erlaubt. Öffentliche Esplora-API ohne Key. Drossel ≥2 s.",
+    "tos": "Blockstream Esplora: öffentliche API (Open Source), Fair Use; für Massenabfragen eigene Instanz empfohlen.",
+    "logo": {
+      "domain": "blockstream.info",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=blockstream.info&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/blockstream.info.png",
+      "brand_domain": "blockstream.info"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3997,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "esplora",
+      "last_scrape": "2026-10-13T08:04:26.138Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Blockstream Esplora – Bitcoin-Blöcke, Mempool, Gebühren",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

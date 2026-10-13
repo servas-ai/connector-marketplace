@@ -1,0 +1,131 @@
+{
+  "id": "servas-ai.opencli-openfreemap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenFreeMap – Vektorkacheln (TileJSON-Metadaten)",
+  "description": "OpenFreeMap: freie OSM-Vektorkacheln. Liefert TileJSON-Metadaten (Layer, Felder, Zoomstufen, aktueller Build) und Style-Liste – keine Kacheldownloads. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "layer",
+      "displayName": "layer",
+      "description": "Vektor-Layer aus TileJSON (planet)",
+      "command": "openfreemap-cli layer"
+    },
+    {
+      "name": "style",
+      "displayName": "style",
+      "description": "Style-Metadaten (<name>: liberty|bright|positron|dark|fiord)",
+      "command": "openfreemap-cli style"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "geo",
+    "realtime": false,
+    "source_url": "https://tiles.openfreemap.org/planet",
+    "license": "ODbL-1.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "refused",
+    "robots": "tiles.openfreemap.org/robots.txt liefert 403 (kein Regelwerk) → nur TileJSON/Style-Metadaten, keine Kacheln. Drossel ≥2 s.",
+    "tos": "OpenFreeMap: frei, ohne Key/Limits; Daten © OpenMapTiles © OpenStreetMap (ODbL).",
+    "keywords": [
+      "vektorkacheln",
+      "vector tiles",
+      "tilejson",
+      "openstreetmap",
+      "osm",
+      "karte",
+      "map",
+      "basiskarte",
+      "basemap",
+      "kartenstil",
+      "map style",
+      "openmaptiles",
+      "kacheln",
+      "tiles",
+      "maplibre"
+    ],
+    "geo": {
+      "country": null,
+      "region": null,
+      "city": null,
+      "bbox": [
+        -180,
+        -85.05,
+        180,
+        85.05
+      ],
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "tiles.openfreemap.org",
+      "resolved": "https://openfreemap.org/logo.jpg",
+      "file": "assets/logos/tiles.openfreemap.org.png",
+      "brand_domain": "openfreemap.org",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2148,
+      "throughput_rps": 0.466,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "TileJSON 3.0",
+      "last_scrape": "2026-10-13T09:07:10.668Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "OpenFreeMap – Vektorkacheln (TileJSON-Metadaten)",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://openfreemap.org"
+  }
+}

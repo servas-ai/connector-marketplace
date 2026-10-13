@@ -1,0 +1,204 @@
+{
+  "id": "servas-ai.opencli-ctis-clinical-trials",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI ctis-clinical-trials",
+  "description": "Klinische Studien im EU-Register CTIS (euclinicaltrials.eu) nach Wirkstoff, Erkrankung oder Sponsor suchen, optional nur Studien mit Zentren in Österreich. Ohne Login. Nutze diesen Skill, wenn ein Agent klinische Studien in der EU braucht.",
+  "author": "servas-ai (Health Connector Builder)",
+  "categories": [
+    "connector",
+    "ui",
+    "gesundheit"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.page.register",
+    "ui.dashboardWidget.register"
+  ],
+  "entrypoints": {
+    "worker": "./dist/worker.js",
+    "ui": "./dist/ui"
+  },
+  "tools": [
+    {
+      "name": "ctis-clinical-trials-suche",
+      "displayName": "ctis-clinical-trials suche",
+      "description": "CLI-Befehl `suche` (node bin/cli.js suche --format json)",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "ctis-clinical-trials-neu",
+      "displayName": "ctis-clinical-trials neu",
+      "description": "Neue/aktualisierte Studien der letzten 7 Tage (offizieller RSS-Feed, --q) (node bin/cli.js neu --format json)",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "ui": {
+    "slots": [
+      {
+        "type": "page",
+        "id": "table",
+        "displayName": "ctis-clinical-trials",
+        "exportName": "RecordsPage",
+        "routePath": "opencli-ctis-clinical-trials"
+      },
+      {
+        "type": "dashboardWidget",
+        "id": "kpis",
+        "displayName": "ctis-clinical-trials KPIs",
+        "exportName": "KpiWidget",
+        "openui": "paperclip/openui.txt"
+      }
+    ]
+  },
+  "x-servas": {
+    "status": "cli-ready; worker/ui bundle noch nicht gebaut (dist/ fehlt)",
+    "category": "health",
+    "cli_commands": [
+      "suche"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "record_schema": {
+      "$id": "servas.record.v1",
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "name",
+        "source",
+        "source_url",
+        "fetched_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "const": "ctis-clinical-trials"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "fetched_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "raw": {
+          "type": "object",
+          "description": "Originalzeile des Connectors (CLI rows[])"
+        }
+      }
+    },
+    "kpis": {
+      "tests_passed": 3,
+      "tests_total": 3,
+      "last_live_run": "2026-10-13T03:24:06.657Z",
+      "median_ms": 3181,
+      "login": "none",
+      "captcha": false,
+      "stabilitaet": 1.0,
+      "latenz_ms": 3181,
+      "throughput_rps": 0.314,
+      "captcha_rate": 0,
+      "api_version": "CTIS public search + RSS",
+      "last_scrape": "2026-10-13T03:24:06.657Z",
+      "datenqualitaet": null
+    },
+    "robots": {
+      "status": "allowed",
+      "note": "euclinicaltrials.eu hat keine robots.txt (404); öffentliche Suche des EU-Registers nach Verordnung (EU) 536/2014 (Transparenzpflicht). Gedrosselt 1,5 s, max. 50 Treffer pro Aufruf."
+    },
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS)",
+    "access_chain": [
+      "web_backend_json"
+    ],
+    "source_url": "https://euclinicaltrials.eu/ctis-public-api/search",
+    "homepage": "https://euclinicaltrials.eu/",
+    "keywords": [
+      "klinische Studien",
+      "CTIS",
+      "EMA",
+      "EU-Register",
+      "Arzneimittel",
+      "clinical trials",
+      "EU",
+      "medicines",
+      "Gesundheit"
+    ],
+    "logo": {
+      "favicon": "https://www.google.com/s2/favicons?domain=euclinicaltrials.eu&sz=64",
+      "source_host": "euclinicaltrials.eu",
+      "domain": "euclinicaltrials.eu",
+      "file": "assets/logos/euclinicaltrials.eu.png",
+      "source": "official-site",
+      "resolved": "https://www.google.com/s2/favicons?domain=euclinicaltrials.eu&sz=64",
+      "fallback": "initials",
+      "chain": [
+        "google",
+        "direct"
+      ]
+    },
+    "login": "none",
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "country": "INT",
+    "ampel": "grün",
+    "schema": "servas.record.v1",
+    "robots_status": "ok",
+    "openui": {
+      "card": {
+        "title": "OpenCLI ctis-clinical-trials",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "status"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "realtime": false,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  },
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md"
+}

@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-askdata-rks",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Kosovo Agency of Statistics (ASKdata) – PxWeb",
+  "description": "askdata.rks-gov.net PxWeb: amtliche Statistik-Zeitreihen (Kosovo Agency of Statistics (ASKdata)). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "askdata-rks katalog",
+      "command": "askdata-rks-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "askdata-rks info",
+      "command": "askdata-rks-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "Zeitreihen",
+    "time series",
+    "PxWeb",
+    "Tabellen",
+    "tables",
+    "Amtliche Statistik",
+    "official statistics",
+    "Open Data",
+    "offene Daten",
+    "Datenkatalog",
+    "data catalogue",
+    "Kosovo"
+  ],
+  "geo": {
+    "country": "XK",
+    "region": "Kosovo",
+    "city": "Prishtina",
+    "lat": 42.66,
+    "lon": 21.17,
+    "bbox": null,
+    "scope": "national"
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://askdata.rks-gov.net/api/v1/en/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "askdata.rks-gov.net/robots.txt geprüft: keine Sperre für den API-Pfad – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "Kosovo Agency of Statistics (ASKdata): öffentliche PxWeb-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe askdata.rks-gov.net.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "Zeitreihen",
+      "time series",
+      "PxWeb",
+      "Tabellen",
+      "tables",
+      "Amtliche Statistik",
+      "official statistics",
+      "Open Data",
+      "offene Daten",
+      "Datenkatalog",
+      "data catalogue",
+      "Kosovo"
+    ],
+    "geo": {
+      "country": "XK",
+      "region": "Kosovo",
+      "city": "Prishtina",
+      "lat": 42.66,
+      "lon": 21.17,
+      "bbox": null,
+      "scope": "national"
+    },
+    "logo": {
+      "domain": "askdata.rks-gov.net",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=askdata.rks-gov.net&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/askdata.rks-gov.net.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Kosovo Agency of Statistics (ASKdata) – PxWeb",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

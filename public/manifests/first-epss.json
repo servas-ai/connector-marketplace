@@ -1,0 +1,121 @@
+{
+  "id": "servas-ai.opencli-first-epss",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "FIRST EPSS – Exploit Prediction Scoring System",
+  "description": "FIRST.org API: EPSS-Score und Perzentil je CVE (Wahrscheinlichkeit einer Ausnutzung in 30 Tagen), Top-CVEs nach EPSS, Zeitreihe je CVE sowie FIRST-Länder-/Teamliste. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "epss",
+      "displayName": "epss",
+      "description": "first-epss epss",
+      "command": "first-epss-cli epss"
+    },
+    {
+      "name": "top",
+      "displayName": "top",
+      "description": "first-epss top",
+      "command": "first-epss-cli top"
+    },
+    {
+      "name": "verlauf",
+      "displayName": "verlauf",
+      "description": "first-epss verlauf",
+      "command": "first-epss-cli verlauf"
+    },
+    {
+      "name": "laender",
+      "displayName": "laender",
+      "description": "first-epss laender",
+      "command": "first-epss-cli laender"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": true,
+    "source_url": "https://api.first.org/data/v1/epss",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.first.org/robots.txt: 404 (keine Einschränkung). Offizielle öffentliche FIRST-Daten-API. Drossel ≥2 s.",
+    "tos": "FIRST EPSS: frei nutzbar mit Quellenangabe (EPSS-Nutzungsbedingungen von FIRST.org).",
+    "logo": {
+      "domain": "api.first.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=first.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.first.org.png",
+      "brand_domain": "first.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3992,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:05:27.751Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "FIRST EPSS – Exploit Prediction Scoring System",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon"
+  }
+}

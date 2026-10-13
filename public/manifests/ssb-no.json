@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-ssb-no",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SSB Norway – PxWeb API",
+  "description": "data.ssb.no PxWeb: Statistikkatalog und Tabellen-Metadaten (Statistics Norway). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "ssb-no katalog",
+      "command": "ssb-no-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "ssb-no info",
+      "command": "ssb-no-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.ssb.no/api/v0/en/table",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "data.ssb.no/robots.txt: Redirect, keine API-Sperre erkannt – öffentliche PxWeb API. Drossel ≥2 s.",
+    "tos": "Statistics Norway PxWeb API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "data.ssb.no",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=data.ssb.no&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.ssb.no.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "SSB Norway – PxWeb API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "NO",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

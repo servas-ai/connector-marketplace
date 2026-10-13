@@ -1,0 +1,108 @@
+{
+  "id": "servas-ai.opencli-flathub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Flathub – Linux App Store API",
+  "description": "Flathub API v2: App-Suche, AppStream-Details und Kategorien des Flatpak-App-Stores. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "flathub suche",
+      "command": "flathub-cli suche"
+    },
+    {
+      "name": "app",
+      "displayName": "app",
+      "description": "flathub app",
+      "command": "flathub-cli app"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://flathub.org/api/v2/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "flathub.org/robots.txt: User-agent * Allow / (nur KI-Crawler gesperrt). Offizielle API v2. Drossel ≥2 s.",
+    "tos": "Flathub: öffentliche Store-API (OpenAPI-dokumentiert); Fair Use.",
+    "logo": {
+      "domain": "flathub.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=flathub.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/flathub.org.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2294,
+      "throughput_rps": 0.436,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T06:36:15.172Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Flathub – Linux App Store API",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

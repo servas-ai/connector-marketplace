@@ -1,0 +1,181 @@
+{
+  "id": "servas-ai.opencli-europarl-opendata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Europäisches Parlament – Open Data Portal API v2",
+  "description": "Europäisches Parlament, Open Data Portal: aktuelle MdEP mit Land und Fraktion, Plenarsitzungen und angenommene Texte (TA) eines Jahres über die offizielle API v2. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "Europäisches Parlament",
+    "EU",
+    "MdEP",
+    "Abgeordnete",
+    "Plenum",
+    "angenommene Texte",
+    "European Parliament",
+    "MEP",
+    "open data"
+  ],
+  "keywords": [
+    "Europäisches Parlament",
+    "EU",
+    "MdEP",
+    "Abgeordnete",
+    "Plenum",
+    "angenommene Texte",
+    "European Parliament",
+    "MEP",
+    "open data"
+  ],
+  "homepage": "https://data.europarl.europa.eu/de/home",
+  "license": "MIT",
+  "geo": {
+    "country": "EU",
+    "region": "Europäische Union",
+    "city": null,
+    "coverage": "supranational",
+    "bbox": [
+      -31.27,
+      27.64,
+      34.6,
+      70.09
+    ],
+    "centroid": {
+      "lat": 50.0,
+      "lon": 10.0
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "abgeordnete",
+      "displayName": "abgeordnete",
+      "description": "europarl-opendata abgeordnete",
+      "command": "europarl-opendata-cli abgeordnete"
+    },
+    {
+      "name": "sitzungen",
+      "displayName": "sitzungen",
+      "description": "europarl-opendata sitzungen",
+      "command": "europarl-opendata-cli sitzungen"
+    },
+    {
+      "name": "texte",
+      "displayName": "texte",
+      "description": "europarl-opendata texte",
+      "command": "europarl-opendata-cli texte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://data.europarl.europa.eu/api/v2/meps/show-current",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.europarl.europa.eu/robots.txt: /api/v2/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Wiederverwendung gestattet (EP Legal Notice / Open Data Portal, CC BY 4.0), Quelle: Europäisches Parlament.",
+    "provider": "Europäisches Parlament",
+    "homepage": "https://data.europarl.europa.eu/de/home",
+    "data_license": "CC BY 4.0 (EP Open Data Portal)",
+    "keywords": [
+      "Europäisches Parlament",
+      "EU",
+      "MdEP",
+      "Abgeordnete",
+      "Plenum",
+      "angenommene Texte",
+      "European Parliament",
+      "MEP",
+      "open data"
+    ],
+    "geo": {
+      "country": "EU",
+      "region": "Europäische Union",
+      "city": null,
+      "coverage": "supranational",
+      "bbox": [
+        -31.27,
+        27.64,
+        34.6,
+        70.09
+      ],
+      "centroid": {
+        "lat": 50.0,
+        "lon": 10.0
+      }
+    },
+    "logo": {
+      "domain": "data.europarl.europa.eu",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.europarl.europa.eu/assets/images/apple-touch-icon.png",
+      "fallback": "initials",
+      "brand_domain": "europarl.europa.eu",
+      "file": "assets/logos/data.europarl.europa.eu.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Europäisches Parlament – Open Data Portal API v2",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    }
+  }
+}

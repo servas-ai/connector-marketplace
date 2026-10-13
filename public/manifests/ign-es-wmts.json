@@ -1,0 +1,133 @@
+{
+  "id": "servas-ai.opencli-ign-es-wmts",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "IGN España Mapa base (WMTS)",
+  "description": "Instituto Geográfico Nacional (Spanien): WMTS-Layer der IGN-Basiskarte (gris, orto, simplificado). Nur GetCapabilities, ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "layer",
+      "displayName": "layer",
+      "description": "Alle Layer aus GetCapabilities",
+      "command": "ign-es-wmts-cli layer"
+    },
+    {
+      "name": "detail",
+      "displayName": "detail",
+      "description": "Layer per Identifier",
+      "command": "ign-es-wmts-cli detail"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "geo",
+    "realtime": false,
+    "source_url": "https://www.ign.es/wmts/ign-base?request=GetCapabilities&service=WMTS",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.ign.es/robots.txt geprüft: GetCapabilities nicht gesperrt. Nur Metadaten, keine Kachel-Massendownloads.",
+    "tos": "Offener Geodienst (OGC), nur Metadaten/GetCapabilities.",
+    "keywords": [
+      "karte",
+      "map",
+      "geodaten",
+      "geodata",
+      "kartendienst",
+      "map service",
+      "wmts",
+      "wms",
+      "ogc",
+      "kacheln",
+      "tiles",
+      "basiskarte",
+      "basemap",
+      "geoportal",
+      "metadaten",
+      "metadata",
+      "spanien",
+      "spain",
+      "ign"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": null,
+      "city": null,
+      "bbox": [
+        -18.2,
+        27.6,
+        4.3,
+        43.8
+      ],
+      "scope": "national"
+    },
+    "logo": {
+      "domain": "www.ign.es",
+      "resolved": "https://commons.wikimedia.org/wiki/File:Logotipo_del_Instituto_Geogr%C3%A1fico_Nacional.png",
+      "file": "assets/logos/www.ign.es.png",
+      "brand_domain": "ign.es",
+      "source": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3991,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "OGC",
+      "last_scrape": "2026-10-13T09:10:04.279Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "IGN España Mapa base (WMTS)",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "ES",
+    "homepage": "https://www.ign.es"
+  }
+}

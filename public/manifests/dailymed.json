@@ -1,0 +1,123 @@
+{
+  "id": "servas-ai.opencli-dailymed",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DailyMed Fachinformationen (NLM)",
+  "description": "US-Arzneimittel-Fachinformationen (SPL): Suche nach Produkt, NDC-Packungen und pharmakologische Klassen über die offiziellen DailyMed Web Services.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "health"
+  ],
+  "tags": [
+    "gesundheit",
+    "arzneimittel",
+    "global",
+    "spl"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "klassen",
+      "displayName": "klassen",
+      "description": "dailymed klassen",
+      "command": "dailymed-cli klassen"
+    },
+    {
+      "name": "packungen",
+      "displayName": "packungen",
+      "description": "dailymed packungen",
+      "command": "dailymed-cli packungen"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "dailymed suche",
+      "command": "dailymed-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "health",
+    "realtime": false,
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1,1 s",
+    "robots_status": "ok",
+    "robots": "dailymed.nlm.nih.gov/robots.txt liefert kein robots-Dokument (Redirect auf HTML) → keine Sperre; offizielle Web-Services ohne Key.",
+    "logo": {
+      "domain": "dailymed.nlm.nih.gov",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=nlm.nih.gov&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/dailymed.nlm.nih.gov.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 900,
+      "throughput_rps": 1.111,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "DailyMed Web Services v2",
+      "last_scrape": "2026-10-13T04:27:18.798Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "DailyMed Fachinformationen (NLM)",
+        "subtitle": "health",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "title",
+          "setid",
+          "veroeffentlicht"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

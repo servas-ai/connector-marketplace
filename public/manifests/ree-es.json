@@ -1,0 +1,124 @@
+{
+  "id": "servas-ai.opencli-ree-es",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Red Eléctrica – REData (Spanien)",
+  "description": "Spanische Strompreise (PVPC-Endkundenpreis und Spot) stündlich sowie Erzeugungsstruktur je Technologie vom Netzbetreiber Red Eléctrica. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "preise-gestern",
+      "displayName": "preise",
+      "description": "Red Eléctrica – REData (Spanien): preise",
+      "command": "ree-es-cli preise --format json"
+    },
+    {
+      "name": "erzeugung-gestern",
+      "displayName": "erzeugung",
+      "description": "Red Eléctrica – REData (Spanien): erzeugung",
+      "command": "ree-es-cli erzeugung --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "energie",
+    "realtime": false,
+    "source_url": "https://apidatos.ree.es",
+    "homepage": "https://www.ree.es/",
+    "keywords": [
+      "Red Eléctrica",
+      "Strompreise",
+      "PVPC",
+      "Spanien",
+      "Erzeugung",
+      "electricity prices",
+      "Spain",
+      "Energie"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kein robots.txt; offene REData-API. ≥1,1 s.",
+    "logo": {
+      "domain": "apidatos.ree.es",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=apidatos.ree.es&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/apidatos.ree.es.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1294,
+      "throughput_rps": 0.9,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "REData API",
+      "last_scrape": "2026-10-13T04:08:29Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Red Eléctrica – REData (Spanien)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "reihe",
+          "zeit",
+          "wert",
+          "einheit",
+          "anteil"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "ES",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}

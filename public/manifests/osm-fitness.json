@@ -1,0 +1,62 @@
+{
+  "id": "servas-ai.opencli-osm-fitness",
+  "apiVersion": 1,
+  "version": "0.2.0",
+  "displayName": "OpenCLI osm-fitness",
+  "description": "Fitnessstudios und Sportzentren in Österreich aus dem Geofabrik-OSM-Dump (lokaler Extrakt, ODbL).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "fitness"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "studios",
+      "displayName": "osm-fitness",
+      "description": "Studios/Sportzentren je Ort/PLZ",
+      "command": "node international/osm-fitness/bin/cli.js studios --ort Linz --format json"
+    },
+    {
+      "name": "stand",
+      "displayName": "osm-fitness",
+      "description": "Dump-Stand und Attribution",
+      "command": "node international/osm-fitness/bin/cli.js stand --format json"
+    }
+  ],
+  "schema": "servas.record.v1",
+  "record_type": "generic",
+  "openui": {
+    "view": "table",
+    "columns": [
+      "title",
+      "url"
+    ],
+    "detail": "record"
+  },
+  "kpis": {
+    "e2e": "4/4",
+    "records": 3798
+  },
+  "robots": "Overpass blocked_robots (nicht genutzt); Geofabrik ok (keine robots.txt)",
+  "logo": "https://www.openstreetmap.org/favicon.ico",
+  "access_chain": [
+    "dump"
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "attribution": "© OpenStreetMap-Mitwirkende, ODbL 1.0",
+  "x-servas": {
+    "logo": {
+      "domain": "download.geofabrik.de",
+      "file": "assets/logos/download.geofabrik.de.svg",
+      "source": "official-site"
+    },
+    "country": "DE",
+    "ampel": "gelb",
+    "license": "ODbL-1.0",
+    "logo_source": "svg"
+  }
+}

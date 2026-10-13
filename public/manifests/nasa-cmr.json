@@ -1,0 +1,150 @@
+{
+  "id": "servas-ai.opencli-nasa-cmr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NASA CMR – Earthdata Datensatz-Katalog",
+  "description": "NASA Common Metadata Repository: Suche nach Erdbeobachtungs-Collections (Titel, Kurzname, Version, Zeitraum, Cloud-Hosting) und Granules einer Collection.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "nasa",
+    "earthdata",
+    "cmr",
+    "erdbeobachtung",
+    "earth observation",
+    "satellit",
+    "satellite",
+    "fernerkundung"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "Collections suchen (<begriff>)",
+      "command": "nasa-cmr-cli suche"
+    },
+    {
+      "name": "granules",
+      "displayName": "granules",
+      "description": "Granules einer Collection (<concept-id>)",
+      "command": "nasa-cmr-cli granules"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://cmr.earthdata.nasa.gov/search/collections.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "cmr.earthdata.nasa.gov/robots.txt: /search nicht gesperrt (nur /ingest). Öffentliche Suche ohne Login, 1 req/2 s.",
+    "tos": "NASA Earthdata: Metadaten frei nutzbar.",
+    "keywords": [
+      "nasa",
+      "earthdata",
+      "cmr",
+      "erdbeobachtung",
+      "earth observation",
+      "satellit",
+      "satellite",
+      "fernerkundung",
+      "remote sensing",
+      "datensätze",
+      "datasets",
+      "katalog",
+      "catalogue",
+      "metadaten",
+      "metadata",
+      "klima"
+    ],
+    "geo": {
+      "country": "WORLD",
+      "region": null,
+      "city": null,
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "scope": "global"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "cmr.earthdata.nasa.gov",
+      "file": "assets/logos/cmr.earthdata.nasa.gov.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://www.earthdata.nasa.gov/themes/custom/project/hds_earthdata/nasa-logo.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 3959,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:21:37.896Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "NASA CMR – Earthdata Datensatz-Katalog",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "kurzname",
+          "titel",
+          "start"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

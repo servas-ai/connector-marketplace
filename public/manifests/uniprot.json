@@ -1,0 +1,119 @@
+{
+  "id": "servas-ai.opencli-uniprot",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UniProt – Proteindatenbank",
+  "description": "UniProt REST API (EMBL-EBI/SIB/PIR): Proteine in UniProtKB suchen (Name, Gen, Organismus) und Einträge per Accession abrufen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "uniprot suche",
+      "command": "uniprot-cli suche"
+    },
+    {
+      "name": "eintrag",
+      "displayName": "eintrag",
+      "description": "uniprot eintrag",
+      "command": "uniprot-cli eintrag"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "realtime": false,
+    "source_url": "https://rest.uniprot.org/uniprotkb/search",
+    "homepage": "https://www.uniprot.org/",
+    "keywords": [
+      "UniProt",
+      "Proteine",
+      "UniProtKB",
+      "Bioinformatik",
+      "proteins",
+      "sequences",
+      "Wissenschaft"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "rest.uniprot.org/robots.txt: Disallow nur Sonderpfade – /uniprotkb/search und /uniprotkb/{acc}.json nicht gesperrt. Offizielle REST-API. Drossel ≥2 s.",
+    "tos": "UniProt: CC BY 4.0, REST-API frei, Fair Use.",
+    "logo": {
+      "domain": "rest.uniprot.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=uniprot.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/rest.uniprot.org.png",
+      "brand_domain": "uniprot.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3947,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "2026",
+      "last_scrape": "2026-10-13T07:27:13.568Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "UniProt – Proteindatenbank",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon"
+  }
+}

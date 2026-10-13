@@ -1,0 +1,103 @@
+{
+  "id": "servas-ai.opencli-open-er-api",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ExchangeRate-API Open Access – Wechselkurse",
+  "description": "ExchangeRate-API Open Access (open.er-api.com): tagesaktuelle Wechselkurse für 160+ Währungen zu einer Basiswährung. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kurse",
+      "displayName": "kurse",
+      "description": "open-er-api kurse",
+      "command": "open-er-api-cli kurse"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://open.er-api.com/v6/latest/EUR",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "open.er-api.com/robots.txt: 404 (keine Einschränkung). Open-Access-Endpunkt ohne Key, Update 1×/Tag. Drossel ≥2 s.",
+    "tos": "ExchangeRate-API Open Access: kostenlos ohne Key, Attribution 'Rates By Exchange Rate API' Pflicht, Rate-Limit beachten.",
+    "logo": {
+      "domain": "open.er-api.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=exchangerate-api.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/open.er-api.com.png",
+      "brand_domain": "exchangerate-api.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3994,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v6",
+      "last_scrape": "2026-10-13T07:26:19.844Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "ExchangeRate-API Open Access – Wechselkurse",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon"
+  }
+}
