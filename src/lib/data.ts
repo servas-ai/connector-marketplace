@@ -4,9 +4,9 @@ import type { Connector, Dataset } from './types';
 export const dataset = raw as unknown as Dataset;
 
 export type Tri = 'all' | 'yes' | 'no';
-export interface Filters { q: string; category: string; country: string; login: Tri; status: string; robots: string; captcha: Tri; sort: SortKey; }
+export interface Filters { q: string; category: string; country: string; login: Tri; status: string; robots: string; captcha: Tri; ampel: string; sort: SortKey; }
 export type SortKey = 'score' | 'stability' | 'p50' | 'throughput' | 'dataQuality' | 'name';
-export const defaultFilters: Filters = { q: '', category: 'all', country: 'all', login: 'all', status: 'all', robots: 'all', captcha: 'all', sort: 'score' };
+export const defaultFilters: Filters = { q: '', category: 'all', country: 'all', login: 'all', status: 'all', robots: 'all', captcha: 'all', ampel: 'all', sort: 'score' };
 
 const tri = (f: Tri, v: boolean | null) => f === 'all' || (f === 'yes' ? v === true : v === false);
 
@@ -16,7 +16,7 @@ export function filterConnectors(list: Connector[], f: Filters): Connector[] {
     (!q || [c.id, c.name, c.domain, c.description, c.category].some((x) => x?.toLowerCase().includes(q))) &&
     (f.category === 'all' || c.category === f.category) && (f.country === 'all' || c.country === f.country) &&
     (f.status === 'all' || c.status === f.status) && (f.robots === 'all' || c.robots === f.robots) &&
-    tri(f.login, c.loginRequired) && tri(f.captcha, c.captcha));
+    (f.ampel === 'all' || c.ampel?.level === f.ampel) && tri(f.login, c.loginRequired) && tri(f.captcha, c.captcha));
   return sortConnectors(res, f.sort);
 }
 

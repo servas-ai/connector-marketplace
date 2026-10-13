@@ -7,7 +7,7 @@ export interface Connector extends Enriched {
   apiAvailable: boolean | null; apiVersion: string | null; robots: Robots; robotsNote: string | null; incidents: string[];
   links: { skill: string | null; protocol: string | null; samples: string | null }; source: string | null;
 }
-export interface Dataset { generatedAt: string; sourceRepo: string; sourceGeneratedAt: string; count: number; connectors: Connector[]; enrichedAt?: string; gatesSource?: string | null; }
+export interface Dataset { generatedAt: string; sourceRepo: string; sourceGeneratedAt: string; count: number; connectors: Connector[]; enrichedAt?: string; gatesSource?: string | null; egress?: { ip: string; at: string; rdns?: string | null } | null; observationsAt?: string; observationCount?: number; timeline?: ({ day: string } & Record<string, number | string>)[]; }
 export interface Server {
   ip: string | null; asn: string | null; hoster: string | null; country: string | null; city: string | null; cdn: string | null;
   webserver: string | null; poweredBy: string | null; cms: string | null; tech: string[]; hsts: boolean | null; csp: boolean | null;
@@ -16,4 +16,8 @@ export interface Server {
 }
 export interface Interfaces { access: string; apiOpen: boolean; apiKey: boolean; ogdDump: boolean; reJson: boolean; feed: boolean; mcp: boolean; cli: boolean; opencli: boolean; paperclip: boolean; playwright: boolean; pdf: boolean; }
 export interface Gates { state: 'pass' | 'fail' | 'extern' | 'unknown'; errors: number; codes: string[]; path?: string; top?: string[]; note?: string; }
-export interface Enriched { server?: Server | null; sourceType?: string; interfaces?: Interfaces; features?: string[]; covered?: string[]; gaps?: string[]; urls?: string[]; gates?: Gates; }
+export type AmpelLevel = 'green' | 'yellow' | 'red';
+export interface Ampel { level: AmpelLevel; reasons: string[]; }
+export interface Signals { counts: Record<string, number>; captchaTypes: Record<string, number>; observations: number; uptime: number | null; last: string | null; }
+export interface Net { rdns: string | null; network: string | null; cdn: string | null; cdnAll: string[]; evidence: string[]; waf: boolean; proxy: boolean; datacenter: string | null; }
+export interface Enriched { ampel?: Ampel; signals?: Signals; net?: Net | null; screenshot?: string | null; server?: Server | null; sourceType?: string; interfaces?: Interfaces; features?: string[]; covered?: string[]; gaps?: string[]; urls?: string[]; gates?: Gates; }

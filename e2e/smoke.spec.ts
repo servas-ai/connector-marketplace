@@ -22,3 +22,13 @@ test('Detail-Tabs klicken', async ({ page }) => {
   await page.goto(`#/c/${data.connectors[0].id}`);
   for (const t of ['KPIs', 'Server & Technik', 'Schnittstellen', 'Qualität/Gates']) { await page.getByRole('tab', { name: t }).click(); await expect(page.getByRole('tabpanel')).toBeVisible(); }
 });
+
+test('Ampel in Karten, Detail und Dashboard', async ({ page }) => {
+  await page.goto('#/');
+  await expect(page.getByTestId('ampel').first()).toBeVisible();
+  await page.goto(`#/c/${data.connectors[0].id}`);
+  await page.getByRole('tab', { name: 'Ampel & Signale' }).click();
+  await expect(page.getByTestId('signals-panel')).toBeVisible();
+  await page.goto('#/dashboard');
+  await expect(page.getByTestId('ampel-stat')).toHaveCount(12);
+});

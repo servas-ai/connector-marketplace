@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { AlertTriangle, ArrowLeft, Check, ExternalLink, FileText, FlaskConical, GitBranch, Gauge, LayoutDashboard, Minus, Plug, ScrollText, Server, ShieldCheck } from 'lucide-react';
+import { AlertTriangle, TrafficCone, ArrowLeft, Check, ExternalLink, FileText, FlaskConical, GitBranch, Gauge, LayoutDashboard, Minus, Plug, ScrollText, Server, ShieldCheck } from 'lucide-react';
 import { Tabs } from '@/components/ui/tabs';
 import { GateBadge, INTERFACES, InterfaceBadges } from '@/components/InterfaceBadges';
 import type { Connector } from '@/lib/types';
@@ -7,7 +7,9 @@ import { Renderer } from '@openuidev/react-lang';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ConnectorLogo } from '@/components/ConnectorLogo';
-import { FlagBadges, RobotsBadge, StatusBadge } from '@/components/StatusBadges';
+import { StatusBadge } from '@/components/StatusBadges';
+import { AmpelBadge, AmpelLight, FeatureBadges } from '@/components/Ampel';
+import { SignalsPanel } from '@/components/SignalsPanel';
 import { dataset } from '@/lib/data';
 import { connectorToOpenUI, factsToOpenUI, gatesToOpenUI, library, serverToOpenUI } from '@/openui/library';
 
@@ -35,10 +37,10 @@ export function Detail() {
       <div className="flex flex-wrap items-start gap-4">
         <ConnectorLogo c={c} size={64} />
         <div className="min-w-0 flex-1">
-          <h1 className="text-2xl font-semibold">{c.id}</h1>
+          <div className="flex items-center gap-2"><h1 className="text-2xl font-semibold">{c.id}</h1><AmpelLight a={c.ampel} size={12} /></div>
           <div className="text-sm text-muted-foreground">{c.domain} · {c.category} · {c.country}</div>
           <p className="mt-2 max-w-3xl text-sm">{c.description}</p>
-          <div className="mt-2 flex flex-wrap gap-1"><StatusBadge c={c} /><RobotsBadge c={c} /><FlagBadges c={c} />
+          <div className="mt-2 flex flex-wrap gap-1"><AmpelBadge a={c.ampel} /><StatusBadge c={c} /><FeatureBadges c={c} />
             <Badge variant="outline" title="Paperclip #55: Vertrauensklasse 1">Klasse 1 · read-only Katalog</Badge>
             {c.paperclip && <Badge variant="secondary">Paperclip-Manifest</Badge>}<GateBadge state={c.gates?.state} errors={c.gates?.errors} /></div>
           <div className="mt-2 flex flex-wrap gap-1"><InterfaceBadges i={c.interfaces} /></div>
@@ -46,6 +48,7 @@ export function Detail() {
       </div>
       <Tabs tabs={[
         { id: 'overview', label: 'Übersicht', icon: <LayoutDashboard size={14} />, content: <UI src={overviewToOpenUI(c)} /> },
+        { id: 'ampel', label: 'Ampel & Signale', icon: <TrafficCone size={14} />, content: <SignalsPanel c={c} /> },
         { id: 'kpi', label: 'KPIs', icon: <Gauge size={14} />, content: <section aria-label="KPIs"><UI src={connectorToOpenUI(c)} /></section> },
         { id: 'server', label: 'Server & Technik', icon: <Server size={14} />, content: <UI src={serverToOpenUI(c)} /> },
         { id: 'iface', label: 'Schnittstellen', icon: <Plug size={14} />, content: (

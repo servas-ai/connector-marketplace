@@ -1,0 +1,1607 @@
+{
+ "generatedAt": "2026-10-13T03:27:43.029Z",
+ "egress": {
+  "ip": "0.0.0.0",
+  "at": "2026-10-13T03:24:56.921Z",
+  "rdns": null
+ },
+ "ranges": {
+  "cloudflare": [
+   "173.245.48.0/20",
+   "103.21.244.0/22",
+   "103.22.200.0/22",
+   "103.31.4.0/22",
+   "141.101.64.0/18",
+   "108.162.192.0/18",
+   "190.93.240.0/20",
+   "188.114.96.0/20",
+   "197.234.240.0/22",
+   "198.41.128.0/17",
+   "162.158.0.0/15",
+   "104.16.0.0/13",
+   "104.24.0.0/14",
+   "172.64.0.0/13",
+   "131.0.72.0/22"
+  ],
+  "fastly": [
+   "23.235.32.0/20",
+   "43.249.72.0/22",
+   "90.98.0.0/17",
+   "90.98.128.0/18",
+   "103.244.50.0/24",
+   "103.245.222.0/23",
+   "103.245.224.0/24",
+   "104.156.80.0/20",
+   "140.248.64.0/18",
+   "140.248.128.0/17",
+   "146.75.0.0/17",
+   "151.101.0.0/16",
+   "157.52.64.0/18",
+   "167.82.0.0/17",
+   "167.82.128.0/20",
+   "167.82.160.0/20",
+   "167.82.224.0/20",
+   "172.111.64.0/18",
+   "185.31.16.0/22",
+   "199.27.72.0/21",
+   "199.232.0.0/16"
+  ],
+  "cloudfront": [
+   "23.228.249.0/24",
+   "120.52.22.96/27",
+   "23.228.222.0/24",
+   "205.251.249.0/24",
+   "180.163.57.128/26",
+   "23.228.220.0/24",
+   "204.246.168.0/22",
+   "111.13.171.128/26",
+   "18.160.0.0/15",
+   "205.251.252.0/23",
+   "54.192.0.0/16",
+   "204.246.173.0/24",
+   "23.228.244.0/24",
+   "54.230.200.0/21",
+   "120.253.240.192/26",
+   "23.234.192.0/18",
+   "116.129.226.128/26",
+   "130.176.0.0/17",
+   "3.173.192.0/18",
+   "108.156.0.0/14",
+   "99.86.0.0/16",
+   "23.228.214.0/24",
+   "23.228.213.0/24",
+   "13.32.0.0/15",
+   "120.253.245.128/26",
+   "13.224.0.0/14",
+   "70.132.0.0/18",
+   "15.158.0.0/16",
+   "111.13.171.192/26",
+   "13.249.0.0/16",
+   "18.238.0.0/15",
+   "18.244.0.0/15",
+   "205.251.208.0/20",
+   "3.165.0.0/16",
+   "3.168.0.0/14",
+   "23.228.251.0/24",
+   "65.9.128.0/18",
+   "130.176.128.0/18",
+   "23.228.221.0/24",
+   "23.228.248.0/24",
+   "58.254.138.0/25",
+   "205.251.206.0/23",
+   "54.230.208.0/20",
+   "3.160.0.0/14",
+   "116.129.226.0/25",
+   "23.91.0.0/19",
+   "52.222.128.0/17",
+   "18.164.0.0/15",
+   "23.228.246.0/24",
+   "111.13.185.32/27",
+   "64.252.128.0/18",
+   "205.251.254.0/24",
+   "3.166.0.0/15",
+   "54.230.224.0/19",
+   "71.152.0.0/17",
+   "216.137.32.0/19",
+   "204.246.172.0/24",
+   "205.251.202.0/23",
+   "18.172.0.0/15",
+   "120.52.39.128/27",
+   "118.193.97.64/26",
+   "3.164.64.0/18",
+   "18.154.0.0/15",
+   "3.173.0.0/17",
+   "54.240.128.0/18",
+   "205.251.250.0/23",
+   "180.163.57.0/25",
+   "52.46.0.0/18",
+   "3.174.0.0/15",
+   "52.82.128.0/19",
+   "54.230.0.0/17",
+   "54.230.128.0/18",
+   "23.228.247.0/24",
+   "54.239.128.0/18",
+   "130.176.224.0/20",
+   "36.103.232.128/26",
+   "52.84.0.0/15",
+   "143.204.0.0/16",
+   "144.220.0.0/16",
+   "120.52.153.192/26",
+   "23.228.250.0/24",
+   "119.147.182.0/25",
+   "120.232.236.0/25",
+   "111.13.185.64/27",
+   "3.164.0.0/18",
+   "3.172.64.0/18",
+   "54.182.0.0/16",
+   "58.254.138.128/26",
+   "120.253.245.192/27",
+   "54.239.192.0/19",
+   "18.68.0.0/16",
+   "18.64.0.0/14",
+   "120.52.12.64/26",
+   "24.110.32.0/19",
+   "99.84.0.0/16",
+   "205.251.204.0/23",
+   "130.176.192.0/19",
+   "23.228.223.0/24",
+   "23.228.212.0/24",
+   "52.124.128.0/17",
+   "204.246.164.0/22",
+   "13.35.0.0/16",
+   "204.246.174.0/23",
+   "3.164.128.0/17",
+   "24.110.128.0/17",
+   "3.172.0.0/18",
+   "36.103.232.0/25",
+   "119.147.182.128/26",
+   "118.193.97.128/25",
+   "120.232.236.128/26",
+   "204.246.176.0/20",
+   "65.8.0.0/16",
+   "65.9.0.0/17",
+   "108.138.0.0/15",
+   "120.253.241.160/27",
+   "3.173.128.0/18",
+   "51.74.192.0/18",
+   "64.252.64.0/18",
+   "13.113.196.64/26",
+   "13.113.203.0/24",
+   "52.199.127.192/26",
+   "57.182.253.0/24",
+   "57.183.42.0/25",
+   "13.124.199.0/24",
+   "3.35.130.128/25",
+   "52.78.247.128/26",
+   "13.203.133.0/26",
+   "13.233.177.192/26",
+   "15.207.13.128/25",
+   "15.207.213.128/25",
+   "52.66.194.128/26",
+   "13.228.69.0/24",
+   "47.129.82.0/24",
+   "47.129.83.0/24",
+   "47.129.84.0/24",
+   "52.220.191.0/26",
+   "13.210.67.128/26",
+   "13.54.63.128/26",
+   "3.107.43.128/25",
+   "3.107.44.0/25",
+   "3.107.44.128/25",
+   "43.218.56.128/26",
+   "43.218.56.192/26",
+   "43.218.56.64/26",
+   "43.218.71.0/26",
+   "99.79.169.0/24",
+   "18.192.142.0/23",
+   "18.199.68.0/22",
+   "18.199.72.0/22",
+   "18.199.76.0/22",
+   "35.158.136.0/24",
+   "52.57.254.0/24",
+   "18.200.212.0/23",
+   "52.212.248.0/26",
+   "13.134.24.0/23",
+   "13.134.94.0/23",
+   "18.175.65.0/24",
+   "18.175.66.0/24",
+   "18.175.67.0/24",
+   "3.10.17.128/25",
+   "3.11.53.0/24",
+   "52.56.127.0/25",
+   "15.188.184.0/24",
+   "51.44.234.0/23",
+   "51.44.236.0/23",
+   "51.44.238.0/23",
+   "52.47.139.0/24",
+   "3.29.40.128/26",
+   "3.29.40.192/26",
+   "3.29.40.64/26",
+   "3.29.57.0/26",
+   "18.229.220.192/26",
+   "18.230.229.0/24",
+   "18.230.230.0/25",
+   "54.233.255.128/26",
+   "56.125.46.0/24",
+   "56.125.47.0/32",
+   "56.125.48.0/24",
+   "3.231.2.0/25",
+   "3.234.232.224/27",
+   "3.236.169.192/26",
+   "3.236.48.0/23",
+   "34.195.252.0/24",
+   "34.226.14.0/24",
+   "44.220.194.0/23",
+   "44.220.196.0/23",
+   "44.220.198.0/23",
+   "44.220.200.0/23",
+   "44.220.202.0/23",
+   "44.222.66.0/24",
+   "13.59.250.0/26",
+   "18.216.170.128/25",
+   "3.128.93.0/24",
+   "3.134.215.0/24",
+   "3.146.232.0/22",
+   "3.147.164.0/22",
+   "3.147.244.0/22",
+   "52.15.127.128/26",
+   "3.101.158.0/23",
+   "52.52.191.128/26",
+   "34.216.51.0/25",
+   "34.223.12.224/27",
+   "34.223.80.192/26",
+   "35.162.63.192/26",
+   "35.167.191.128/26",
+   "35.93.168.0/23",
+   "35.93.170.0/23",
+   "35.93.172.0/23",
+   "44.227.178.0/24",
+   "44.234.108.128/25",
+   "44.234.90.252/30"
+  ],
+  "fetchedAt": "2026-10-13T03:24:56.639Z"
+ },
+ "rdns": {
+  "193.9.252.215": null,
+  "213.94.80.187": "live-webportal.drei.com",
+  "87.230.94.33": "lvps87-230-94-33.dedicated.hosteurope.de",
+  "76.76.21.21": null,
+  "91.206.8.171": null,
+  "193.186.93.32": "egvbrvdzwaf3v32.vkw.at",
+  "128.0.64.78": null,
+  "104.18.17.227": null,
+  "195.8.213.85": "www.linzag.at",
+  "188.172.241.180": null,
+  "5.75.141.219": "typo3-new.holzweg.tv",
+  "104.18.15.250": null,
+  "104.21.62.130": null,
+  "68.210.104.65": null,
+  "40.114.177.227": null,
+  "217.160.65.244": null,
+  "5.183.218.41": null,
+  "45.144.187.42": null,
+  "75.2.123.208": "a4affb89ea7d73b63.awsglobalaccelerator.com",
+  "217.75.176.17": "217.75.176.17.kelag.at",
+  "212.166.122.42": "www.t-mobile.at",
+  "138.199.198.120": "static.120.198.199.138.clients.your-server.de",
+  "128.204.138.11": "serv28990729.secure-node.at",
+  "80.75.40.1": "mk080075040001.as16305.a1.net",
+  "198.202.211.1": null,
+  "212.33.55.8": "liwest.at",
+  "185.35.181.97": "websrv01.hall.ag",
+  "91.206.8.172": null,
+  "91.206.8.177": "vy03-02.kontomanager.at",
+  "213.33.96.214": null,
+  "91.233.191.12": null,
+  "150.171.109.72": null,
+  "35.244.230.217": "217.230.244.35.bc.googleusercontent.com",
+  "128.204.133.202": "serv73133985-live01.secure-node.at",
+  "91.206.8.210": "www.fonira.at",
+  "217.13.99.61": "217-13-99-61.vie05.customers.xenox-it.at",
+  "162.159.134.42": null,
+  "172.66.144.169": null,
+  "207.174.61.1": null,
+  "193.228.112.53": null,
+  "144.76.93.148": "srv612133.dogado-shops.de",
+  "81.16.157.3": "www.rtr.at",
+  "185.125.95.21": "postman.check24.at",
+  "104.26.9.153": null,
+  "150.171.109.99": null,
+  "185.215.158.186": null,
+  "128.204.136.114": null,
+  "109.232.232.161": "ows-109-232-232-161.eu-west-2.compute.outscale.com",
+  "195.43.63.68": "ocp-prd-i.brreg.no",
+  "13.226.209.30": "server-13-226-209-30.iad61.r.cloudfront.net",
+  "91.107.202.79": "static.79.202.107.91.clients.your-server.de",
+  "188.40.26.238": "dedi6225.your-server.de",
+  "128.204.134.178": "serv96996624.secure-node.at",
+  "18.160.10.106": "server-18-160-10-106.iad12.r.cloudfront.net",
+  "37.252.191.191": "k005470vsa.ipax.at",
+  "18.165.98.41": "server-18-165-98-41.iad55.r.cloudfront.net",
+  "80.243.171.226": "smtpea.eww.at",
+  "104.21.13.40": null,
+  "109.70.103.201": "stat-109-70-103-201.customer.nextlayer.at",
+  "104.21.85.109": null,
+  "91.195.199.215": "host-91-195-199-215.compass.at",
+  "193.17.90.130": "lb1.anycast.ip.gleif.de",
+  "31.172.113.18": "eun-nginx1-ha2.wavecloud.de",
+  "93.184.141.237": null,
+  "185.105.115.66": null,
+  "195.189.198.43": null,
+  "195.202.168.23": null,
+  "91.224.144.159": "ekrs.ms.gov.pl",
+  "213.182.224.75": "213-182-224-75.static.kufnet.at",
+  "85.13.152.116": "dd35426.kasserver.com",
+  "91.118.154.96": "mail.duncrow.net",
+  "193.186.6.83": "rproxy.linz.at",
+  "78.46.5.126": "dedi1326.your-server.de",
+  "77.244.244.27": "www.nessus.at",
+  "23.212.251.87": "a23-212-251-87.deploy.static.akamaitechnologies.com",
+  "35.230.155.18": "18.155.230.35.bc.googleusercontent.com",
+  "62.99.231.42": "marmara.at",
+  "62.165.164.153": "tietopalvelut.prh.fi",
+  "94.247.150.133": "c16.aboliton.at",
+  "37.59.183.76": "wildcard-api.infra.data.gouv.fr",
+  "23.202.152.74": "a23-202-152-74.deploy.static.akamaitechnologies.com",
+  "91.233.191.50": null,
+  "168.119.26.129": "dedi8083.your-server.de",
+  "78.47.141.34": "dedivirt275.your-server.de",
+  "83.65.86.152": "mail07.styriaweb.at",
+  "116.202.133.223": "rlx3.loginserver.ch",
+  "217.14.230.56": "www.stadtwerke-kitzbuehel.at",
+  "193.170.163.105": "www.statistik.at",
+  "192.26.237.85": "www.stmk.gv.at",
+  "128.204.130.101": null,
+  "83.219.161.190": "stww.at",
+  "13.227.65.6": "server-13-227-65-6.iad61.r.cloudfront.net",
+  "91.151.16.129": "vm42862.cs.easyname.systems",
+  "157.150.185.92": null,
+  "147.67.210.30": null,
+  "194.107.236.190": null,
+  "62.212.163.4": "www.wvnet.at",
+  "128.204.134.86": "serv90647892.secure-node.at",
+  "85.158.227.13": "portalext.bbg.gv.at",
+  "85.158.225.14": "esgv.justiz.gv.at",
+  "194.48.48.82": "www.ooe.gv.at",
+  "95.131.199.75": null,
+  "80.90.19.160": "ip-80-90-19-160.ax5z.com",
+  "195.192.215.185": null,
+  "194.8.61.86": "cms-webs.ext.dvt.at",
+  "85.158.225.132": "www.transparenzportal.at",
+  "217.149.233.97": null
+ },
+ "hosts": {
+  "spusu.at": {
+   "ip": "193.9.252.215",
+   "rdns": null,
+   "network": "193.9.252.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "drei.at": {
+   "ip": "213.94.80.187",
+   "rdns": "live-webportal.drei.com",
+   "network": "213.94.64.0/18",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "gruenwelt.at": {
+   "ip": "87.230.94.33",
+   "rdns": "lvps87-230-94-33.dedicated.hosteurope.de",
+   "network": "87.230.92.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "stadtwerke.amstetten.at": {
+   "ip": "76.76.21.21",
+   "rdns": null,
+   "network": "76.76.21.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "georg.at": {
+   "ip": "91.206.8.171",
+   "rdns": null,
+   "network": "91.206.8.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "vkw.at": {
+   "ip": "193.186.93.32",
+   "rdns": "egvbrvdzwaf3v32.vkw.at",
+   "network": "193.186.93.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "maxenergy.at": {
+   "ip": "128.0.64.78",
+   "rdns": null,
+   "network": "128.0.64.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "geizhals.at": {
+   "ip": "104.18.17.227",
+   "rdns": null,
+   "network": "104.16.0.0/14",
+   "cdn": "Cloudflare",
+   "cdnAll": [
+    "Cloudflare"
+   ],
+   "evidence": [
+    "Cloudflare: IP-Range",
+    "Cloudflare: ASN"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "linzag.at": {
+   "ip": "195.8.213.85",
+   "rdns": "www.linzag.at",
+   "network": "195.8.213.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "hot.at": {
+   "ip": "188.172.241.180",
+   "rdns": null,
+   "network": "188.172.240.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "ikb.at": {
+   "ip": "5.75.141.219",
+   "rdns": "typo3-new.holzweg.tv",
+   "network": "5.75.128.0/18",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "evn.at": {
+   "ip": "104.18.15.250",
+   "rdns": null,
+   "network": "104.16.0.0/14",
+   "cdn": "Cloudflare",
+   "cdnAll": [
+    "Cloudflare"
+   ],
+   "evidence": [
+    "Cloudflare: IP-Range",
+    "Cloudflare: ASN"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "wowww.at": {
+   "ip": "104.21.62.130",
+   "rdns": null,
+   "network": "104.20.0.0/15",
+   "cdn": "Cloudflare",
+   "cdnAll": [
+    "Cloudflare"
+   ],
+   "evidence": [
+    "Cloudflare: IP-Range",
+    "Cloudflare: ASN"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "myelectric.at": {
+   "ip": "68.210.104.65",
+   "rdns": null,
+   "network": "68.210.0.0/16",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "salzburg-ag.at": {
+   "ip": "40.114.177.227",
+   "rdns": null,
+   "network": "40.114.128.0/17",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "energie-ried.at": {
+   "ip": "217.160.65.244",
+   "rdns": null,
+   "network": "217.160.64.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "oekostrom.at": {
+   "ip": "5.183.218.41",
+   "rdns": null,
+   "network": "5.183.216.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "ewr-energie.com": {
+   "ip": "45.144.187.42",
+   "rdns": null,
+   "network": "45.144.187.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "tarife.at": {
+   "ip": "75.2.123.208",
+   "rdns": "a4affb89ea7d73b63.awsglobalaccelerator.com",
+   "network": "75.2.0.0/17",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "kelag.at": {
+   "ip": "217.75.176.17",
+   "rdns": "217.75.176.17.kelag.at",
+   "network": "217.75.176.0/20",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "magenta.at": {
+   "ip": "212.166.122.42",
+   "rdns": "www.t-mobile.at",
+   "network": "212.166.120.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "stadtwerkeschwaz.at": {
+   "ip": "138.199.198.120",
+   "rdns": "static.120.198.199.138.clients.your-server.de",
+   "network": "138.199.192.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "naturkraft.at": {
+   "ip": "128.204.138.11",
+   "rdns": "serv28990729.secure-node.at",
+   "network": "128.204.128.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "switch.at": {
+   "ip": "128.204.138.11",
+   "rdns": "serv28990729.secure-node.at",
+   "network": "128.204.128.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "a1.net": {
+   "ip": "80.75.40.1",
+   "rdns": "mk080075040001.as16305.a1.net",
+   "network": "80.75.32.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "redbullmobile.at": {
+   "ip": "198.202.211.1",
+   "rdns": null,
+   "network": "198.202.211.0/24",
+   "cdn": "Cloudflare",
+   "cdnAll": [
+    "Cloudflare"
+   ],
+   "evidence": [
+    "Cloudflare: ASN",
+    "Cloudflare: Header"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "liwest.at": {
+   "ip": "212.33.55.8",
+   "rdns": "liwest.at",
+   "network": "212.33.52.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "hall.ag": {
+   "ip": "185.35.181.97",
+   "rdns": "websrv01.hall.ag",
+   "network": "185.35.181.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "xoxo-mobile.at": {
+   "ip": "91.206.8.172",
+   "rdns": null,
+   "network": "91.206.8.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "yesss.at": {
+   "ip": "91.206.8.177",
+   "rdns": "vy03-02.kontomanager.at",
+   "network": "91.206.8.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "gogreenenergy.at": {
+   "ip": "213.33.96.214",
+   "rdns": null,
+   "network": "213.33.96.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "e-control.at": {
+   "ip": "91.233.191.12",
+   "rdns": null,
+   "network": "91.233.191.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "e-steiermark.com": {
+   "ip": "150.171.109.72",
+   "rdns": null,
+   "network": "150.171.96.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "awattar.at": {
+   "ip": "35.244.230.217",
+   "rdns": "217.230.244.35.bc.googleusercontent.com",
+   "network": "35.244.128.0/17",
+   "cdn": "Google Frontend",
+   "cdnAll": [
+    "Google Frontend"
+   ],
+   "evidence": [
+    "Google Frontend: Header"
+   ],
+   "waf": false,
+   "proxy": true
+  },
+  "lidl-connect.at": {
+   "ip": "128.204.133.202",
+   "rdns": "serv73133985-live01.secure-node.at",
+   "network": "128.204.128.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "fonira.at": {
+   "ip": "91.206.8.210",
+   "rdns": "www.fonira.at",
+   "network": "91.206.8.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "educom.at": {
+   "ip": "217.13.99.61",
+   "rdns": "217-13-99-61.vie05.customers.xenox-it.at",
+   "network": "217.13.99.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "wienenergie.at": {
+   "ip": "162.159.134.42",
+   "rdns": null,
+   "network": "162.159.128.0/17",
+   "cdn": "Cloudflare",
+   "cdnAll": [
+    "Cloudflare"
+   ],
+   "evidence": [
+    "Cloudflare: IP-Range",
+    "Cloudflare: ASN"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "energieag.at": {
+   "ip": "172.66.144.169",
+   "rdns": null,
+   "network": "172.66.0.0/15",
+   "cdn": "Cloudflare",
+   "cdnAll": [
+    "Cloudflare"
+   ],
+   "evidence": [
+    "Cloudflare: IP-Range",
+    "Cloudflare: ASN"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "verbund.com": {
+   "ip": "207.174.61.1",
+   "rdns": null,
+   "network": "207.174.61.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "stw.at": {
+   "ip": "193.228.112.53",
+   "rdns": null,
+   "network": "193.228.112.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "aae.at": {
+   "ip": "144.76.93.148",
+   "rdns": "srv612133.dogado-shops.de",
+   "network": "144.76.0.0/16",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "rtr.at": {
+   "ip": "81.16.157.3",
+   "rdns": "www.rtr.at",
+   "network": "81.16.144.0/20",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "check24.at": {
+   "ip": "185.125.95.21",
+   "rdns": "postman.check24.at",
+   "network": "185.125.92.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "durchblicker.at": {
+   "ip": "104.26.9.153",
+   "rdns": null,
+   "network": "104.24.0.0/14",
+   "cdn": "Cloudflare",
+   "cdnAll": [
+    "Cloudflare"
+   ],
+   "evidence": [
+    "Cloudflare: IP-Range",
+    "Cloudflare: ASN"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "ares.gov.cz": {
+   "ip": "150.171.109.99",
+   "rdns": null,
+   "network": "150.171.96.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "at.holzpellets.net": {
+   "ip": "185.215.158.186",
+   "rdns": null,
+   "network": "185.215.158.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "aws.at": {
+   "ip": "128.204.136.114",
+   "rdns": null,
+   "network": "128.204.128.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "bodacc-datadila.opendatasoft.com": {
+   "ip": "109.232.232.161",
+   "rdns": "ows-109-232-232-161.eu-west-2.compute.outscale.com",
+   "network": "109.232.232.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "data.brreg.no": {
+   "ip": "195.43.63.68",
+   "rdns": "ocp-prd-i.brreg.no",
+   "network": "195.43.60.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "burgenlandenergie.at": {
+   "ip": "13.226.209.30",
+   "rdns": "server-13-226-209-30.iad61.r.cloudfront.net",
+   "network": "13.226.209.0/24",
+   "cdn": "CloudFront",
+   "cdnAll": [
+    "CloudFront"
+   ],
+   "evidence": [
+    "CloudFront: IP-Range",
+    "CloudFront: Header"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "disk.energy": {
+   "ip": "91.107.202.79",
+   "rdns": "static.79.202.107.91.clients.your-server.de",
+   "network": "91.107.192.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "e-control-business.at": {
+   "ip": null,
+   "rdns": null,
+   "network": null,
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "ebnerstrom.at": {
+   "ip": "188.40.26.238",
+   "rdns": "dedi6225.your-server.de",
+   "network": "188.40.26.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "efriends.at": {
+   "ip": "128.204.134.178",
+   "rdns": "serv96996624.secure-node.at",
+   "network": "128.204.128.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "energy.ec.europa.eu": {
+   "ip": "18.160.10.106",
+   "rdns": "server-18-160-10-106.iad12.r.cloudfront.net",
+   "network": "18.160.0.0/19",
+   "cdn": "CloudFront",
+   "cdnAll": [
+    "CloudFront"
+   ],
+   "evidence": [
+    "CloudFront: IP-Range",
+    "CloudFront: Header"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "energyagency.at": {
+   "ip": "37.252.191.191",
+   "rdns": "k005470vsa.ipax.at",
+   "network": "37.252.188.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "data.europa.eu": {
+   "ip": "18.165.98.41",
+   "rdns": "server-18-165-98-41.iad55.r.cloudfront.net",
+   "network": "18.165.96.0/21",
+   "cdn": "CloudFront",
+   "cdnAll": [
+    "CloudFront"
+   ],
+   "evidence": [
+    "CloudFront: IP-Range",
+    "CloudFront: Header"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "eww.at": {
+   "ip": "80.243.171.226",
+   "rdns": "smtpea.eww.at",
+   "network": "80.243.168.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "fastenergy.at": {
+   "ip": "185.215.158.186",
+   "rdns": null,
+   "network": "185.215.158.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "ffg.at": {
+   "ip": "104.21.13.40",
+   "rdns": null,
+   "network": "104.20.0.0/15",
+   "cdn": "Cloudflare",
+   "cdnAll": [
+    "Cloudflare"
+   ],
+   "evidence": [
+    "Cloudflare: IP-Range",
+    "Cloudflare: ASN"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "fiberplus.at": {
+   "ip": "109.70.103.201",
+   "rdns": "stat-109-70-103-201.customer.nextlayer.at",
+   "network": "109.70.96.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "firmenbuch.ai": {
+   "ip": "104.21.85.109",
+   "rdns": null,
+   "network": "104.20.0.0/15",
+   "cdn": "Cloudflare",
+   "cdnAll": [
+    "Cloudflare"
+   ],
+   "evidence": [
+    "Cloudflare: IP-Range",
+    "Cloudflare: ASN"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "www.firmenbuchgrundbuch.at": {
+   "ip": "91.195.199.215",
+   "rdns": "host-91-195-199-215.compass.at",
+   "network": "91.195.198.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "gleif.org": {
+   "ip": "193.17.90.130",
+   "rdns": "lb1.anycast.ip.gleif.de",
+   "network": "193.17.90.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "goldgas.at": {
+   "ip": "31.172.113.18",
+   "rdns": "eun-nginx1-ha2.wavecloud.de",
+   "network": "31.172.112.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "handelsregister.de": {
+   "ip": "93.184.141.237",
+   "rdns": null,
+   "network": "93.184.140.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "heizoel24.at": {
+   "ip": "185.105.115.66",
+   "rdns": null,
+   "network": "185.105.112.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "hofer-gruenstrom.at": {
+   "ip": "195.189.198.43",
+   "rdns": null,
+   "network": "195.189.198.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "kabelplus.at": {
+   "ip": "195.202.168.23",
+   "rdns": null,
+   "network": "195.202.168.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "ekrs.ms.gov.pl": {
+   "ip": "91.224.144.159",
+   "rdns": "ekrs.ms.gov.pl",
+   "network": "91.224.144.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "kufnet.at": {
+   "ip": "213.182.224.75",
+   "rdns": "213-182-224-75.static.kufnet.at",
+   "network": "213.182.224.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "kwg.at": {
+   "ip": "85.13.152.116",
+   "rdns": "dd35426.kasserver.com",
+   "network": "85.13.128.0/18",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "lampert.at": {
+   "ip": "91.118.154.96",
+   "rdns": "mail.duncrow.net",
+   "network": "91.118.154.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "lidl-energie.at": {
+   "ip": "213.33.96.214",
+   "rdns": null,
+   "network": "213.33.96.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "linz.at": {
+   "ip": "193.186.6.83",
+   "rdns": "rproxy.linz.at",
+   "network": "193.186.6.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "murauer-stadtwerke.at": {
+   "ip": "78.46.5.126",
+   "rdns": "dedi1326.your-server.de",
+   "network": "78.46.0.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "nessus.at": {
+   "ip": "77.244.244.27",
+   "rdns": "www.nessus.at",
+   "network": "77.244.240.0/20",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "ofac.treasury.gov": {
+   "ip": "23.212.251.87",
+   "rdns": "a23-212-251-87.deploy.static.akamaitechnologies.com",
+   "network": "23.212.248.0/22",
+   "cdn": "Akamai",
+   "cdnAll": [
+    "Akamai"
+   ],
+   "evidence": [
+    "Akamai: ASN",
+    "Akamai: Header"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "opencorporates.com": {
+   "ip": "35.230.155.18",
+   "rdns": "18.155.230.35.bc.googleusercontent.com",
+   "network": "35.230.128.0/19",
+   "cdn": "CloudFront",
+   "cdnAll": [
+    "CloudFront",
+    "Google Frontend"
+   ],
+   "evidence": [
+    "CloudFront: Header",
+    "Google Frontend: Header"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "ourpower.coop": {
+   "ip": "62.99.231.42",
+   "rdns": "marmara.at",
+   "network": "62.99.224.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "peeringdb.at": {
+   "ip": null,
+   "rdns": null,
+   "network": null,
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "avoindata.prh.fi": {
+   "ip": "62.165.164.153",
+   "rdns": "tietopalvelut.prh.fi",
+   "network": "62.165.164.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "propellets.at": {
+   "ip": "94.247.150.133",
+   "rdns": "c16.aboliton.at",
+   "network": "94.247.144.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "recherche-entreprises.api.gouv.fr": {
+   "ip": "37.59.183.76",
+   "rdns": "wildcard-api.infra.data.gouv.fr",
+   "network": "37.59.176.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "sec.gov": {
+   "ip": "23.202.152.74",
+   "rdns": "a23-202-152-74.deploy.static.akamaitechnologies.com",
+   "network": "23.202.152.0/22",
+   "cdn": "Akamai",
+   "cdnAll": [
+    "Akamai"
+   ],
+   "evidence": [
+    "Akamai: ASN"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "api.e-control.at": {
+   "ip": "91.233.191.50",
+   "rdns": null,
+   "network": "91.233.191.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "stadtwerke-bregenz.at": {
+   "ip": "168.119.26.129",
+   "rdns": "dedi8083.your-server.de",
+   "network": "168.119.24.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "stadtwerke-gleisdorf.at": {
+   "ip": "78.47.141.34",
+   "rdns": "dedivirt275.your-server.de",
+   "network": "78.47.140.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "stadtwerke-hartberg.at": {
+   "ip": "83.65.86.152",
+   "rdns": "mail07.styriaweb.at",
+   "network": "83.65.86.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "stadtwerke-kapfenberg.at": {
+   "ip": "116.202.133.223",
+   "rdns": "rlx3.loginserver.ch",
+   "network": "116.202.128.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "stadtwerke-kitzbuehel.at": {
+   "ip": "217.14.230.56",
+   "rdns": "www.stadtwerke-kitzbuehel.at",
+   "network": "217.14.230.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "statistik.at": {
+   "ip": "193.170.163.105",
+   "rdns": "www.statistik.at",
+   "network": "193.170.160.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "steiermark.at": {
+   "ip": "192.26.237.85",
+   "rdns": "www.stmk.gv.at",
+   "network": "192.26.237.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "sturmenergie.at": {
+   "ip": "128.204.130.101",
+   "rdns": null,
+   "network": "128.204.128.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "stww.at": {
+   "ip": "83.219.161.190",
+   "rdns": "stww.at",
+   "network": "83.219.160.0/20",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "ted.europa.eu": {
+   "ip": "13.227.65.6",
+   "rdns": "server-13-227-65-6.iad61.r.cloudfront.net",
+   "network": "13.227.65.0/24",
+   "cdn": "CloudFront",
+   "cdnAll": [
+    "CloudFront"
+   ],
+   "evidence": [
+    "CloudFront: IP-Range",
+    "CloudFront: Header"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "tullnenergie.at": {
+   "ip": "91.151.16.129",
+   "rdns": "vm42862.cs.easyname.systems",
+   "network": "91.151.16.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "un.org": {
+   "ip": "157.150.185.92",
+   "rdns": null,
+   "network": "157.150.0.0/16",
+   "cdn": "CloudFront",
+   "cdnAll": [
+    "CloudFront"
+   ],
+   "evidence": [
+    "CloudFront: Header"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "ec.europa.eu": {
+   "ip": "147.67.210.30",
+   "rdns": null,
+   "network": "147.67.0.0/16",
+   "cdn": "CloudFront",
+   "cdnAll": [
+    "CloudFront"
+   ],
+   "evidence": [
+    "CloudFront: Header"
+   ],
+   "waf": true,
+   "proxy": true
+  },
+  "voltino-gastino.at": {
+   "ip": "80.243.171.226",
+   "rdns": "smtpea.eww.at",
+   "network": "80.243.168.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "wko.at": {
+   "ip": "194.107.236.190",
+   "rdns": null,
+   "network": "194.107.232.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "wvnet.at": {
+   "ip": "62.212.163.4",
+   "rdns": "www.wvnet.at",
+   "network": "62.212.160.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "bbg.gv.at": {
+   "ip": "128.204.134.86",
+   "rdns": "serv90647892.secure-node.at",
+   "network": "128.204.128.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "data.gv.at": {
+   "ip": "85.158.227.13",
+   "rdns": "portalext.bbg.gv.at",
+   "network": "85.158.227.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "edikte.justiz.gv.at": {
+   "ip": "85.158.225.14",
+   "rdns": "esgv.justiz.gv.at",
+   "network": "85.158.224.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "www.evi.gv.at": {
+   "ip": "150.171.109.72",
+   "rdns": null,
+   "network": "150.171.96.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "land-oberoesterreich.gv.at": {
+   "ip": "194.48.48.82",
+   "rdns": "www.ooe.gv.at",
+   "network": "194.48.48.0/20",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "justiz.gv.at": {
+   "ip": "95.131.199.75",
+   "rdns": null,
+   "network": "95.131.192.0/21",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "ris.bka.gv.at": {
+   "ip": "80.90.19.160",
+   "rdns": "ip-80-90-19-160.ax5z.com",
+   "network": "80.90.0.0/19",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "salzburg.gv.at": {
+   "ip": "195.192.215.185",
+   "rdns": null,
+   "network": "195.192.212.0/22",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "tirol.gv.at": {
+   "ip": "194.8.61.86",
+   "rdns": "cms-webs.ext.dvt.at",
+   "network": "194.8.61.0/24",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "transparenzportal.gv.at": {
+   "ip": "85.158.225.132",
+   "rdns": "www.transparenzportal.at",
+   "network": "85.158.224.0/23",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  },
+  "wien.gv.at": {
+   "ip": "217.149.233.97",
+   "rdns": null,
+   "network": "217.149.224.0/20",
+   "cdn": null,
+   "cdnAll": [],
+   "evidence": [],
+   "waf": false,
+   "proxy": false
+  }
+ }
+}

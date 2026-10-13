@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ConnectorLogo } from './ConnectorLogo';
-import { FlagBadges, RobotsBadge, StatusBadge } from './StatusBadges';
+import { StatusBadge } from './StatusBadges';
+import { AmpelLight, FeatureBadges } from './Ampel';
 import { GateBadge, InterfaceBadges } from './InterfaceBadges';
 import type { Connector } from '@/lib/types';
 export function ConnectorCard({ c }: { c: Connector }) {
@@ -12,11 +13,12 @@ export function ConnectorCard({ c }: { c: Connector }) {
         <div className="flex items-start gap-3">
           <ConnectorLogo c={c} />
           <div className="min-w-0 flex-1"><div className="truncate font-semibold">{c.id}</div><div className="truncate text-xs text-muted-foreground">{c.domain ?? '—'}</div></div>
-          <StatusBadge c={c} />
+          <div className="flex flex-col items-end gap-1"><AmpelLight a={c.ampel} /><StatusBadge c={c} /></div>
         </div>
+        {c.screenshot && <img src={c.screenshot} alt={`Screenshot ${c.domain ?? c.id}`} loading="lazy" width={320} height={180} className="h-24 w-full rounded-md border object-cover object-top opacity-90" />}
         <p className="line-clamp-2 text-sm text-muted-foreground">{c.description || 'Keine Beschreibung'}</p>
         <div className="mt-auto flex flex-wrap gap-1">
-          <Badge variant="secondary">{c.category}</Badge><Badge variant="outline">{c.country}</Badge><RobotsBadge c={c} /><FlagBadges c={c} />
+          <Badge variant="secondary">{c.category}</Badge><Badge variant="outline">{c.country}</Badge><FeatureBadges c={c} />
         </div>
         <div className="flex flex-wrap items-center gap-1"><InterfaceBadges i={c.interfaces} compact /><span className="ml-auto"><GateBadge state={c.gates?.state} errors={c.gates?.errors} /></span></div>
         {c.server?.hoster && <div className="truncate text-xs text-muted-foreground" title="Server-Hintergrund">{c.server.hoster}{c.server.country ? ` · ${c.server.country}` : ''}{c.server.cms ? ` · ${c.server.cms}` : ''}</div>}

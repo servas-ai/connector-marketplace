@@ -2,7 +2,7 @@ import { useId, useState, type ReactNode, type KeyboardEvent } from 'react';
 import { cn } from '@/lib/utils';
 export interface TabDef { id: string; label: string; icon?: ReactNode; content: ReactNode }
 /** shadcn-artige Tabs (WAI-ARIA tablist, Pfeiltasten). */
-export function Tabs({ tabs, initial }: { tabs: TabDef[]; initial?: string }) {
+export function Tabs({ tabs, initial, label = "Connector-Details" }: { tabs: TabDef[]; initial?: string; label?: string }) {
   const [active, setActive] = useState(initial ?? tabs[0]?.id);
   const uid = useId();
   const onKey = (e: KeyboardEvent) => {
@@ -12,7 +12,7 @@ export function Tabs({ tabs, initial }: { tabs: TabDef[]; initial?: string }) {
   };
   return (
     <div className="flex flex-col gap-4">
-      <div role="tablist" aria-label="Connector-Details" className="flex flex-wrap gap-1 border-b" onKeyDown={onKey}>
+      <div role="tablist" aria-label={label} className="flex flex-wrap gap-1 border-b" onKeyDown={onKey}>
         {tabs.map((t) => (
           <button key={t.id} role="tab" type="button" id={`${uid}-t-${t.id}`} aria-controls={`${uid}-p-${t.id}`} aria-selected={active === t.id} tabIndex={active === t.id ? 0 : -1}
             onClick={() => setActive(t.id)} className={cn('-mb-px flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm', active === t.id ? 'border-foreground text-foreground' : 'border-transparent text-muted-foreground hover:text-foreground')}>

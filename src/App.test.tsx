@@ -28,15 +28,16 @@ describe('App', () => {
   });
   it('Dashboard zeigt Gesamtstats', async () => {
     at('/dashboard');
+    fireEvent.click(await screen.findByRole('tab', { name: 'KPIs' }));
     expect((await screen.findAllByTestId('stat')).length).toBe(9);
   });
   it('Detail-Tabs: Übersicht, Server, Schnittstellen, Gates, Incidents', async () => {
     const c = dataset.connectors.find((x) => x.server?.hoster) ?? dataset.connectors[0];
     at(`/c/${c.id}`);
     const tabs = await screen.findAllByRole('tab');
-    expect(tabs.map((t) => t.textContent)).toEqual(['Übersicht', 'KPIs', 'Server & Technik', 'Schnittstellen', 'Qualität/Gates', `Incidents (${c.incidents.length})`]);
+    expect(tabs.map((t) => t.textContent)).toEqual(['Übersicht', 'Ampel & Signale', 'KPIs', 'Server & Technik', 'Schnittstellen', 'Qualität/Gates', `Incidents (${c.incidents.length})`]);
     fireEvent.click(screen.getByRole('tab', { name: 'Server & Technik' }));
-    if (c.server?.hoster) expect(screen.getByText(c.server.hoster)).toBeInTheDocument();
+    if (c.server?.hoster) expect(screen.getAllByText(c.server.hoster).length).toBeGreaterThan(0);
     fireEvent.click(screen.getByRole('tab', { name: 'Schnittstellen' }));
     expect(screen.getByRole('table', { name: 'Schnittstellen-Matrix' })).toBeInTheDocument();
     fireEvent.click(screen.getByRole('tab', { name: 'Qualität/Gates' }));
@@ -56,6 +57,9 @@ describe('App', () => {
     fireEvent.click(screen.getByLabelText(`${a.id} vergleichen`)); fireEvent.click(screen.getByLabelText(`${b.id} vergleichen`));
     expect(screen.getByTestId('compare-link')).toHaveTextContent('2 vergleichen');
   });
-  it('Dashboard zeigt Server-/Schnittstellen-/Gate-Charts', async () => { at('/dashboard'); expect(await screen.findAllByTestId('chart')).toHaveLength(8); });
+  it('Dashboard zeigt Ampel-, KPI- und Server-/Gate-Charts', async () => {
+    at('/dashboard'); expect(await screen.findAllByTestId('chart')).toHaveLength(8); expect(screen.getAllByTestId('ampel-stat')).toHaveLength(12);
+    fireEvent.click(screen.getByRole('tab', { name: 'Server, Schnittstellen & Gates' })); expect(await screen.findAllByTestId('chart')).toHaveLength(8);
+  });
   it('unbekannter Connector', async () => { at('/c/gibtsnicht'); expect(await screen.findByText(/nicht gefunden/)).toBeInTheDocument(); });
 });
