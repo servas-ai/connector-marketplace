@@ -136,7 +136,7 @@ function ConnectorView({ id }: { id: string }) {
   const { data: d } = useDetail(id);
   const [tab, setTab] = useState('overview');
   useEffect(() => { window.scrollTo(0, 0); }, [id]);
-  if (!c) return <div className="p-10 text-center">Connector „{id}“ nicht gefunden. <Link className="underline" to="/">Zurück</Link></div>;
+  if (!c) return <div className="p-10 text-center"><h1 className="text-xl font-semibold">Connector „{id}“ nicht gefunden</h1><p className="mt-2"><Link className="underline" to="/">Zurück</Link></p></div>;
   const cat = categoryOf(c); const CatIcon = cat.icon; const sr = successRate(c);
   const similar = dataset.connectors.filter((x) => x.id !== c.id && categoryOf(x).id === cat.id && x.ampel?.level === 'green').slice(0, 3);
   const tabs = [
