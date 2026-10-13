@@ -3,6 +3,7 @@ import { ArrowLeft, ExternalLink, FileText, FlaskConical, GitBranch, ScrollText 
 import { Renderer } from '@openuidev/react-lang';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { LiveCard } from '@/components/LiveCard';
 import { ConnectorLogo } from '@/components/ConnectorLogo';
 import { FlagBadges, RobotsBadge, StatusBadge } from '@/components/StatusBadges';
 import { dataset } from '@/lib/data';
@@ -30,6 +31,7 @@ export function Detail() {
             {c.paperclip && <Badge variant="secondary">Paperclip-Manifest</Badge>}</div>
         </div>
       </div>
+      {c.live && <section aria-label="Live-Wert" className="max-w-md"><LiveCard c={c} /></section>}
       <section aria-label="KPIs"><Renderer response={connectorToOpenUI(c)} library={library} isStreaming={false} /></section>
       <section className="flex flex-wrap gap-2">
         {links.map(({ href, label, icon: I }) => href ? <Button key={label} asChild variant="outline"><a href={href} target="_blank" rel="noreferrer"><I size={14} />{label}</a></Button>
