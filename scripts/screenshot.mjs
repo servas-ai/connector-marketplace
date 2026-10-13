@@ -26,7 +26,7 @@ for (const [name, hash, tabName] of shots) {
   await page.goto(base + hash, { waitUntil: 'networkidle' });
   if (tabName) await page.getByRole('tab', { name: tabName }).click();
   for (let y = 0; y < 6000; y += 600) { await page.mouse.wheel(0, 600); await page.waitForTimeout(120); } // Lazy-Charts einblenden
-  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.evaluate(() => globalThis.scrollTo(0, 0));
   await page.waitForTimeout(800);
   await page.screenshot({ path: path.join(out, `${prefix}-${name}.png`), fullPage: name !== 'grid' });
   console.log(path.join(out, `${prefix}-${name}.png`));

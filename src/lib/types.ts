@@ -1,7 +1,7 @@
 export type Robots = 'allowed' | 'disallowed' | 'unknown';
 export interface Kpi { stability: number | null; p50: number | null; p95: number | null; throughput: number | null; captchaRate: number | null; dataQuality: number | null; score: number | null; blocked: boolean; }
 export interface Connector extends Enriched {
-  id: string; name: string; domain: string | null; description: string; category: string; country: string; status: string;
+  id: string; name: string; path?: string | null; endpoint?: string | null; domain: string | null; description: string; category: string; country: string; status: string;
   repo: string; records: number | null; commands: string[]; logo: string | null; logoSource?: string | null; paperclip: boolean; lastRun: string | null;
   e2ePassed: number | null; e2eTotal: number | null; kpi: Kpi | null; loginRequired: boolean | null; captcha: boolean | null;
   apiAvailable: boolean | null; apiVersion: string | null; robots: Robots; robotsNote: string | null; incidents: string[];

@@ -1,2442 +1,875 @@
 {
- "adapters/opencli-firmenbuch-ai": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-013",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Latenz|Dauer))"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-041",
-   "kein registry.json/index.json-Eintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ],
-  [
-   "QG-043",
-   "Connector-ID 'opencli-firmenbuch-ai' doppelt: adapters/opencli-firmenbuch-ai, register-at/firmenbuch-ai"
-  ]
- ],
- "adapters/opencli-firmenbuchgrundbuch-at": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-013",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Latenz|Dauer))"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "adapters/opencli-wko-firmen": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-013",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Latenz|Dauer))"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-041",
-   "kein registry.json/index.json-Eintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ],
-  [
-   "QG-043",
-   "Connector-ID 'opencli-wko-firmen' doppelt: adapters/opencli-wko-firmen, register-at/wko-firmen"
-  ]
- ],
- "connectors/data-europa-eu-at": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Befehle"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-009",
-   "PRUEFPROTOKOLL.md fehlt"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-041",
-   "kein registry.json/index.json-Eintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "connectors/gleif-at": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Befehle"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-009",
-   "PRUEFPROTOKOLL.md fehlt"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-041",
-   "kein registry.json/index.json-Eintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/eu-a/bodacc-fr": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Befehle"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-011",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Befehl|Aufruf))"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/eu-a/brreg-no": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Befehle"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-011",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Befehl|Aufruf))"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/eu-a/prh-fi": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Befehle"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-011",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Befehl|Aufruf))"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/eu-a/recherche-entreprises-fr": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Befehle"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-011",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Befehl|Aufruf))"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/eu-a/vies": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Befehle"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-011",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Befehl|Aufruf))"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/risk-b/ares-cz": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/risk-b/eu-sanktionen": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/risk-b/krs-pl": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "organe-pkp.json: count 15 != len(rows) 5"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/risk-b/ofac-sls": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "liste-russia-vessels.json: count 10 != len(rows) 5"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/risk-b/sec-edgar": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "firmen-apple.json: count 6 != len(rows) 5"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/risk-b/un-sanktionen": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "liste-dprk.json: count 10 != len(rows) 5"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/welle-int/gleif": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-013",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Latenz|Dauer))"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/welle-int/handelsregister-de": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-013",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Latenz|Dauer))"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "international/welle-int/opencorporates": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-013",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Latenz|Dauer))"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-020",
-   "samples/ fehlt oder leer"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/data-gv-at": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "kataloge.json: count 222 != len(rows) 15"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/edikte-versteigerungen": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/evi-amtsblatt": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/laender/linz": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "themen.json: count 10 != len(rows) 5"
-  ],
-  [
-   "QG-023",
-   "vorschau-echte-daten.json: count 10 != len(rows) 5"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/laender/oberoesterreich": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "themen.json: count 13 != len(rows) 5"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/laender/salzburg": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "vorschau-echte-daten.json: count 10 != len(rows) 5"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/laender/steiermark": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "vorschau-echte-daten.json: count 10 != len(rows) 5"
-  ],
-  [
-   "QG-024",
-   "vorschau-echte-daten.json: PII-Muster E-Mail (in Frontmatter pii_allowed freigeben, wenn öffentlich+zulässig)"
-  ],
-  [
-   "QG-024",
-   "vorschau-echte-daten.json: PII-Muster Telefon (in Frontmatter pii_allowed freigeben, wenn öffentlich+zulässig)"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/laender/tirol": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "themen.json: count 11 != len(rows) 5"
-  ],
-  [
-   "QG-023",
-   "vorschau-echte-daten.json: count 10 != len(rows) 5"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/laender/wien": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "themen.json: count 12 != len(rows) 5"
-  ],
-  [
-   "QG-023",
-   "vorschau-echte-daten.json: count 10 != len(rows) 5"
-  ],
-  [
-   "QG-023",
-   "wfs-wlan.json: count 20 != len(rows) 5"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/ris": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
- "opendata/statistik-austria": [
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-023",
-   "tabelle-vpi2020.json: count 20 != len(rows) 10"
-  ],
-  [
-   "QG-028",
-   "test/e2e.json ohne Fehlerfall (expect_error/expect_exit≠0)"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ]
- ],
  "register-at/firmenbuch-ai": [
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-013",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Latenz|Dauer))"
-  ],
-  [
-   "QG-016",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Captcha|403|429))"
-  ],
-  [
-   "QG-021",
-   "kein Input+Output-Paar in samples/"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ],
-  [
-   "QG-043",
-   "Connector-ID 'opencli-firmenbuch-ai' doppelt: adapters/opencli-firmenbuch-ai, register-at/firmenbuch-ai"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
   ]
  ],
  "register-at/open-firmenbuch": [
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-013",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Latenz|Dauer))"
-  ],
-  [
-   "QG-016",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Captcha|403|429))"
-  ],
-  [
-   "QG-021",
-   "kein Input+Output-Paar in samples/"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
   ]
  ],
  "register-at/wko-firmen": [
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: (Grenzen|Hinweise|Limits)"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-013",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Latenz|Dauer))"
-  ],
-  [
-   "QG-016",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Captcha|403|429))"
-  ],
-  [
-   "QG-021",
-   "kein Input+Output-Paar in samples/"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
-  ],
-  [
-   "QG-043",
-   "Connector-ID 'opencli-wko-firmen' doppelt: adapters/opencli-wko-firmen, register-at/wko-firmen"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
   ]
  ],
+ "international/welle-int/gleif": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/welle-int/handelsregister-de": [
+  [
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
+  ],
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/welle-int/opencorporates": [
+  [
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
+  ],
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/welle-int/eurostat": [
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['name', 'description', 'version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/risk-b/ares-cz": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/risk-b/eu-sanktionen": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/risk-b/krs-pl": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/risk-b/ofac-sls": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/risk-b/sec-edgar": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/risk-b/un-sanktionen": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/ctis-clinical-trials": [],
+ "international/ecdc-atlas": [],
+ "international/ecdc-opendata": [],
+ "international/ema-medicines": [],
+ "international/eudamed-devices": [],
+ "international/eurostat-health": [],
+ "international/free-exercise-db": [],
+ "international/oecd-health": [],
+ "international/osm-fitness": [],
+ "international/who-gho": [],
+ "international/ch/zefix-ch": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/eu-a/brreg-no": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/eu-a/prh-fi": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/eu-a/recherche-entreprises-fr": [
+  [
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
+  ],
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/eu-a/vies": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/eu-a/bodacc-fr": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "international/rpo-sk": [],
+ "international/ur-lv": [],
+ "international/forschung-orgs": [],
+ "international/worldbank": [],
+ "international/chembl": [],
+ "international/crossref": [],
+ "international/dailymed": [],
+ "international/eba-euclid": [],
+ "international/gbif": [],
+ "international/openfda": [],
+ "international/rxnorm": [],
+ "international/bfs-ch": [],
+ "international/contracts-finder-uk": [],
+ "international/doaj": [],
+ "international/nasa-eonet": [],
+ "international/nhtsa-vpic": [],
+ "international/scb-se": [],
+ "international/ssb-no": [],
+ "international/statbank-dk": [],
+ "international/statfin-fi": [],
+ "international/un-sdg": [],
+ "international/usaspending": [],
+ "international/usgs-earthquakes": [],
+ "international/artic": [],
+ "international/carbonintensity-uk": [],
+ "international/cso-ie": [],
+ "international/datacite": [],
+ "international/energidataservice-dk": [],
+ "international/geonet-nz": [],
+ "international/hagstofa-is": [],
+ "international/hagstova-fo": [],
+ "international/ibge-br": [],
+ "international/ine-es": [],
+ "international/inspirehep": [],
+ "international/jpl-ssd": [],
+ "international/nasa-images": [],
+ "international/nlm-clinicaltables": [],
+ "international/nobelprize": [],
+ "international/ons-uk": [],
+ "international/ree-es": [],
+ "international/series-tiempo-ar": [],
+ "international/singstat-sg": [],
+ "international/smard": [],
+ "international/spaceflight-news": [],
+ "international/stat-ee": [],
+ "international/stat-gl": [],
+ "international/stat-gov-lv": [],
+ "international/statcan": [],
+ "international/uk-parliament-members": [],
+ "international/unhcr": [],
+ "international/uniprot": [],
+ "international/usgs-water": [],
+ "international/vam": [],
+ "international/aemo-au": [],
+ "international/octopus-uk": [],
+ "international/biorxiv": [],
+ "international/clevelandart": [],
+ "international/loc-gov": [],
+ "international/obis": [],
+ "international/plos": [],
+ "international/poetrydb": [],
+ "international/smk": [],
+ "international/stat-si": [],
+ "adapters/opencli-firmenbuch-ai": [
+  [
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
+  ],
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "adapters/opencli-wko-firmen": [
+  [
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
+  ],
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "adapters/opencli-firmenbuchgrundbuch-at": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "adapters/kliniksuche-at": [],
  "vergabe/welle-vergabe-foerder/aws-foerderungen": [
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-023",
-   "aws.output.json: count 14 != len(rows) 3"
-  ],
-  [
-   "QG-021",
-   "kein Input+Output-Paar in samples/"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
   ]
  ],
  "vergabe/welle-vergabe-foerder/bbg-ausschreibungen": [
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-023",
-   "bbg-pf.output.json: count 12 != len(rows) 3"
-  ],
-  [
-   "QG-023",
-   "bbg.output.json: count 96 != len(rows) 3"
-  ],
-  [
-   "QG-021",
-   "kein Input+Output-Paar in samples/"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
   ]
  ],
  "vergabe/welle-vergabe-foerder/ffg": [
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-021",
-   "kein Input+Output-Paar in samples/"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
   ]
  ],
  "vergabe/welle-vergabe-foerder/ted-eu": [
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
-  ],
-  [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
-  ],
-  [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
-  ],
-  [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
-  ],
-  [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
-  ],
-  [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
-  ],
-  [
-   "QG-023",
-   "ted-ausschreibungen.output.json: count 120 != len(rows) 5"
-  ],
-  [
-   "QG-023",
-   "ted-zuschlaege.output.json: count 10 != len(rows) 5"
-  ],
-  [
-   "QG-021",
-   "kein Input+Output-Paar in samples/"
-  ],
-  [
-   "QG-026",
-   "test/e2e.json fehlt"
-  ],
-  [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
   ]
  ],
  "vergabe/welle-vergabe-foerder/transparenzportal": [
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: version"
+   "QG-STRICT",
+   "e2e.json hat < 2 Fälle"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: login"
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: robots"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "vergabe/welle-vergabe-foerder/vergabe-kerndaten": [],
+ "vergabe/ooe-foerderungen": [],
+ "vergabe/wko-foerderungen": [],
+ "vergabe/eu-kohaesion": [],
+ "intel/welle-fma-outside/ecb-data": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: rate_limit"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "intel/welle-fma-outside/eu-funding-tenders": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: source_url"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "intel/welle-fma-outside/fma-unternehmen": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-002",
-   "Frontmatter-Feld fehlt: license"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "intel/welle-fma-outside/fma-veroeffentlichungen": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-003",
-   "SKILL.md Pflichtabschnitt fehlt: Beispiel"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "intel/welle-fma-outside/fma-warnliste": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-010",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Letzter Live-Lauf|Datum)\\s*\\|\\s*\\d{4}-\\d{2}-\\d{2})"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "intel/welle-fma-outside/gdelt-news": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-012",
-   "PRUEFPROTOKOLL.md: Angabe fehlt (Exit[- ]?Code)"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "intel/welle-fma-outside/openaire-projekte": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-014",
-   "PRUEFPROTOKOLL.md: Angabe fehlt ((Ergebnisanzahl|Datensätze|Treffer))"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "intel/welle-fma-outside/wayback-cdx": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-021",
-   "kein Input+Output-Paar in samples/"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "intel/welle-fma-outside/wikimedia-pageviews": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
   ],
   [
-   "QG-026",
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "intel/cisa-kev": [],
+ "intel/nvd": [],
+ "opendata/data-gv-at": [],
+ "opendata/edikte-versteigerungen": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/evi-amtsblatt": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/laender/linz": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/laender/oberoesterreich": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/laender/salzburg": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/laender/steiermark": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/laender/tirol": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/laender/wien": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/laender/graz": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/laender/noe-wasserstand": [],
+ "opendata/laender/ooe-hydro": [],
+ "opendata/laender/ooe-luftguete": [],
+ "opendata/laender/wien-geodaten": [],
+ "opendata/laender/wiener-linien": [],
+ "opendata/ris": [
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/statistik-austria": [],
+ "opendata/bev-adressregister": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/fwf": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/lobbyregister": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/oenb": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/geosphere-at": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "opendata/bmf-spenden": [],
+ "opendata/cert-at": [],
+ "opendata/tfl": [],
+ "opendata/energy-charts": [],
+ "opendata/data-gouv-fr": [],
+ "opendata/findok-bmf": [],
+ "opendata/luftdaten-at": [],
+ "opendata/met-no": [],
+ "opendata/peeringdb-at": [],
+ "opendata/statistik-austria-aussenhandel": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ]
+ ],
+ "opendata/statistik-austria-baupreis": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ]
+ ],
+ "opendata/statistik-austria-haeuserpreis": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ]
+ ],
+ "opendata/statistik-austria-kfz": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ]
+ ],
+ "opendata/statistik-austria-tourismus": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ]
+ ],
+ "opendata/statistik-austria-vpi": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ]
+ ],
+ "opendata/uba-luftguete": [],
+ "opendata/autobahn-de": [],
+ "opendata/brightsky": [],
+ "opendata/data-europa-eu": [],
+ "opendata/dati-gov-it": [],
+ "opendata/datos-gob-es": [],
+ "opendata/open-canada-ca": [],
+ "opendata/pegelonline": [],
+ "opendata/auswaertiges-amt": [],
+ "opendata/calgary-data": [],
+ "opendata/cdc-data": [],
+ "opendata/chicago-data": [],
+ "opendata/citybik-es": [],
+ "opendata/dados-gov-pt": [],
+ "opendata/data-gov-sg": [],
+ "opendata/data-public-lu": [],
+ "opendata/datasf": [],
+ "opendata/datos-gov-co": [],
+ "opendata/ea-flood-uk": [],
+ "opendata/existenz-ch": [],
+ "opendata/feiertage-api": [],
+ "opendata/geo-admin-ch": [],
+ "opendata/geo-api-gouv": [],
+ "opendata/imgw-pl": [],
+ "opendata/ipma-pt": [],
+ "opendata/meteo-lt": [],
+ "opendata/nina-warnung": [],
+ "opendata/nyc-opendata": [],
+ "opendata/open-ny": [],
+ "opendata/police-uk": [],
+ "opendata/postcodes-io": [],
+ "opendata/rdw-nl": [],
+ "opendata/seattle-data": [],
+ "opendata/stadt-zuerich-ch": [],
+ "opendata/toronto-ca": [],
+ "opendata/wienerlinien": [],
+ "opendata/abwassermonitoring-at": [],
+ "opendata/bloomington-data": [],
+ "opendata/cambridge-data": [],
+ "opendata/colorado-data": [],
+ "opendata/dallas-data": [],
+ "opendata/dwd-warnwetter": [],
+ "opendata/edmonton-data": [],
+ "opendata/elexon-bmrs": [],
+ "opendata/entsog": [],
+ "opendata/entur-geocoder": [],
+ "opendata/gdacs": [],
+ "opendata/honolulu-data": [],
+ "opendata/kingcounty-data": [],
+ "opendata/lacity-data": [],
+ "opendata/london-data": [],
+ "opendata/mesa-data": [],
+ "opendata/montgomery-data": [],
+ "opendata/noaa-swpc": [],
+ "opendata/nola-data": [],
+ "opendata/nsw-data": [],
+ "opendata/oakland-data": [],
+ "opendata/openholidays": [],
+ "opendata/opentopodata": [],
+ "opendata/oregon-data": [],
+ "opendata/smhi-metobs": [],
+ "opendata/texas-data": [],
+ "opendata/usgs-volcanoes": [],
+ "opendata/usno-astro": [],
+ "opendata/wa-data": [],
+ "opendata/zippopotam": [],
+ "opendata/wko-lehrbetriebe": [],
+ "marktplaetze/g2g": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "marktplaetze/shop-zahlungsarten": [
+  [
+   "QG-STRICT",
+   "e2e.json ohne expect_error-Fall"
+  ],
+  [
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
+  ]
+ ],
+ "tech/crates-io": [],
+ "tech/docker-hub": [],
+ "tech/endoflife-date": [],
+ "tech/hetzner-serverboerse": [],
+ "tech/homebrew": [],
+ "tech/huggingface-hub": [],
+ "tech/npm-registry": [],
+ "tech/nuget": [],
+ "tech/openrouter-models": [],
+ "tech/openwrt-toh": [],
+ "tech/packagist": [],
+ "tech/ripestat": [],
+ "tech/rubygems": [],
+ "tech/datamuse": [],
+ "tech/f-droid": [],
+ "tech/flathub": [],
+ "tech/hacker-news": [],
+ "tech/hex-pm": [],
+ "tech/jsr": [],
+ "tech/launchpad": [],
+ "tech/osv-dev": [],
+ "tech/pub-dev": [],
+ "tech/stackexchange": [],
+ "tech/crandb": [],
+ "tech/jsdelivr": [],
+ "tech/scryfall": [],
+ "tech/terraform-registry": [],
+ "tech/tvmaze": [],
+ "tech/artifacthub": [],
+ "tech/cocoapods": [],
+ "tech/first-epss": [],
+ "tech/hackage": [],
+ "tech/hn-algolia": [],
+ "tech/jetbrains-plugins": [],
+ "tech/mozilla-addons": [],
+ "tech/npms": [],
+ "tech/open-vsx": [],
+ "tech/openbrewerydb": [],
+ "tech/pokeapi": [],
+ "tech/release-monitoring": [],
+ "finance/binance": [],
+ "finance/bitpanda": [],
+ "finance/coinbase-exchange": [],
+ "finance/ecb": [],
+ "finance/kraken": [],
+ "finance/bis": [],
+ "finance/bundesbank": [],
+ "finance/snb": [],
+ "finance/bitvavo": [],
+ "finance/okx": [],
+ "finance/bankofcanada": [],
+ "finance/bitfinex": [],
+ "finance/bitflyer": [],
+ "finance/bitget": [],
+ "finance/bitmex": [],
+ "finance/btcturk": [],
+ "finance/cnb": [],
+ "finance/crypto-com": [],
+ "finance/deribit": [],
+ "finance/fiscaldata": [],
+ "finance/frankfurter": [],
+ "finance/gateio": [],
+ "finance/gemini": [],
+ "finance/kucoin": [],
+ "finance/nbp": [],
+ "finance/norges-bank": [],
+ "finance/oenb-bankleitzahlen": [],
+ "finance/oenb-basiszinssatz": [],
+ "finance/riksbank": [],
+ "finance/upbit": [],
+ "finance/whitebit": [],
+ "finance/coinlore": [],
+ "finance/coinpaprika": [],
+ "finance/defillama": [],
+ "finance/mempool-space": [],
+ "finance/mfapi": [],
+ "finance/open-er-api": [],
+ "finance/vatcomply": [],
+ "finance/alternative-me": [],
+ "finance/bcb-sgs": [],
+ "finance/bithumb": [],
+ "finance/bitso": [],
+ "finance/blockchain-info": [],
+ "finance/blockcypher": [],
+ "finance/blockstream": [],
+ "finance/btcmarkets": [],
+ "finance/exmo": [],
+ "finance/gold-api": [],
+ "finance/htx-huobi": [],
+ "finance/independentreserve": [],
+ "finance/nbu-ua": [],
+ "lebensmittel/food-connectors": [
+  [
+   "QG-STRICT",
    "test/e2e.json fehlt"
   ],
   [
-   "QG-030",
-   "keine Rate-Limit-Konstante ≥1 s im Code gefunden"
-  ],
-  [
-   "QG-031",
-   "kein User-Agent gesetzt"
-  ],
-  [
-   "QG-032",
-   "kein Timeout gesetzt"
-  ],
-  [
-   "QG-036",
-   "keine Lizenzangabe"
-  ],
-  [
-   "QG-040",
-   "kein README-Tabelleneintrag"
-  ],
-  [
-   "QG-042",
-   "kein Changelog-Eintrag (CHANGELOG.md oder ## Changelog)"
+   "QG-STRICT",
+   "SKILL.md-Frontmatter fehlt ['version', 'login', 'robots', 'rate_limit', 'source_url', 'access_chain']"
   ]
- ]
+ ],
+ "telekom/hostprofis-business-internet": [],
+ "telekom/ipax-colocation": [],
+ "telekom/world4you-server": []
 }
