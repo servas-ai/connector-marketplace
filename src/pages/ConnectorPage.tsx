@@ -40,7 +40,7 @@ function Overview({ c, d }: { c: Connector; d: Detail | null }) {
 
 function Shots({ c, d }: { c: Connector; d: Detail | null }) {
   const src = d?.screenshot; if (!src) return null;
-  return <Panel title="Echte Screenshots der Quelle"><figure className="flex flex-col gap-2"><img data-testid="screenshot" src={`${import.meta.env.BASE_URL}${src}`} alt={`Bildschirmfoto von ${titleOf(c)}`} width={1280} height={800} loading="lazy" className="w-full rounded-lg border" />
+  return <Panel title="Echte Screenshots der Quelle"><figure className="flex flex-col gap-2"><img data-testid="screenshot" src={`${import.meta.env.BASE_URL}${src}`} alt={`Bildschirmfoto von ${titleOf(c)}`} width={1280} height={800} loading="eager" decoding="async" className="w-full rounded-lg border" />
     <figcaption className="text-xs text-muted-foreground">Aufgenommen {d?.screenshotAt ? `${relTime(d.screenshotAt)} (${absTime(d.screenshotAt)})` : 'beim Echtheits-Audit'} mit Playwright, robots.txt geprüft, Captcha-Seiten verworfen. {d?.audit?.sourceUrl && <Ext href={d.audit.sourceUrl}>{d.audit.sourceUrl}</Ext>}</figcaption></figure></Panel>;
 }
 

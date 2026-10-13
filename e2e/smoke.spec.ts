@@ -52,7 +52,10 @@ test('Detail: alle Tabs, echter Screenshot, Beispieldaten, Agent-Prompt', async 
       const img = page.getByTestId('screenshot');
       await expect(img).toBeVisible();
       await img.scrollIntoViewIfNeeded();
-      await expect.poll(async () => img.evaluate((i: HTMLImageElement) => i.naturalWidth)).toBeGreaterThan(0);
+      await expect.poll(
+        async () => img.evaluate((i: HTMLImageElement) => (i.complete && i.naturalWidth > 0 ? i.naturalWidth : 0)),
+        { timeout: 15_000 },
+      ).toBeGreaterThan(0);
     }
     if (t === 'Installieren') await expect(page.getByTestId('agent-prompt')).toContainText('servas.record.v1');
     if (t === 'Compliance & Lizenz') await expect(page.getByTestId('compliance')).toContainText('Keine Rechtsberatung');
