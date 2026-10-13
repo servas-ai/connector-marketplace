@@ -31,12 +31,16 @@ const COLS: Col[] = [
   { key: 'llms', label: 'llms.txt', sort: (c) => +!!extra(c).llms, className: 'hidden lg:table-cell' },
   { key: 'login', label: 'Login', sort: (c) => (c.loginRequired == null ? 2 : +c.loginRequired), className: 'hidden md:table-cell' },
 ];
-const recommended = (a: Connector, b: Connector) => lvlRank(b) - lvlRank(a) || (successRate(b)?.pct ?? -1) - (successRate(a)?.pct ?? -1) || +!!b.logo - +!!a.logo || (a.kpi?.p50 ?? 1e9) - (b.kpi?.p50 ?? 1e9) || a.id.localeCompare(b.id);
+// Sortierschlüssel einmal pro Connector berechnen (statt O(n log n) Regex-/extras-Lookups im Comparator) — spart mobil Main-Thread-Zeit.
+type RecKey = [number, number, number, number, string];
+const recKey = (c: Connector): RecKey => [lvlRank(c), successRate(c)?.pct ?? -1, +!!c.logo, c.kpi?.p50 ?? 1e9, c.id];
+const recCmp = (a: RecKey, b: RecKey) => b[0] - a[0] || b[1] - a[1] || b[2] - a[2] || a[3] - b[3] || a[4].localeCompare(b[4]);
 function sortList(list: Connector[], key: string, dir: string) {
   const col = COLS.find((c) => c.key === key);
-  if (!col?.sort) return [...list].sort(recommended);
-  const f = col.sort; const m = dir === 'desc' ? -1 : 1;
-  return [...list].sort((a, b) => { const x = f(a), y = f(b); return (x < y ? -1 : x > y ? 1 : 0) * m || recommended(a, b); });
+  const f = col?.sort; const m = dir === 'desc' ? -1 : 1;
+  const rows = list.map((c) => ({ c, r: recKey(c), v: f ? f(c) : 0 }));
+  rows.sort((a, b) => (f ? (a.v < b.v ? -1 : a.v > b.v ? 1 : 0) * m : 0) || recCmp(a.r, b.r));
+  return rows.map((x) => x.c);
 }
 const PAGE = 50;
 
@@ -91,7 +95,7 @@ export function Home() {
     const s = q.trim().toLowerCase();
     return sortList(connectors().filter((c) => (!s || [c.id, c.domain, c.description, categoryOf(c).label].some((x) => x?.toLowerCase().includes(s)))
       && (cat === 'all' || categoryOf(c).id === cat) && (land === 'all' || c.country === land) && (ampel === 'all' || c.ampel?.level === ampel)
-      && (zugriff === 'all' || c.interfaces?.access === zugriff) && (ent === 'all' || enterprise(c).level === ent) && (kom === 'all' || commercial(c).v === kom)
+      && (zugriff === 'all' || c.interfaces?.access === zugriff) && (ent === 'all' || (c.ent ?? enterprise(c).level) === ent) && (kom === 'all' || (c.kom ?? commercial(c).v) === kom)
       && capKey.split(',').filter(Boolean).every((x) => (x === 'shot' ? !!extra(c).shot : capOn(c, x)))), sortKey, dir);
   })();
   const pages = Math.max(1, Math.ceil(list.length / PAGE)); const pg = Math.min(page, pages - 1);

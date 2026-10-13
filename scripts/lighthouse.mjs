@@ -8,8 +8,11 @@ import desktopConfig from 'lighthouse/core/config/desktop-config.js';
 import * as chromeLauncher from 'chrome-launcher';
 import { chromium } from 'playwright';
 
-const PORT = 4180, url = `http://127.0.0.1:${PORT}/`;
-const srv = spawn('node', ['scripts/static-gzip.mjs', 'dist', String(PORT)], { stdio: 'ignore' }); // gzip wie GitHub Pages
+const PORT = Number(process.env.LH_PORT || 4180), url = `http://127.0.0.1:${PORT}/`;
+// Guard: a stale server on PORT would make Lighthouse silently measure a foreign/old build.
+try { await fetch(url); console.error(`Port ${PORT} ist bereits belegt – Lighthouse würde einen fremden Build messen. LH_PORT=<frei> setzen.`); process.exit(2); } catch { /* free */ }
+const srv = spawn('node', ['scripts/static-gzip.mjs', 'dist', String(PORT)], { stdio: ['ignore', 'ignore', 'inherit'] }); // gzip wie GitHub Pages
+srv.on('exit', (code) => { if (code) { console.error(`static-gzip beendet (code ${code})`); process.exit(2); } });
 for (let i = 0; i < 50; i++) { try { await fetch(url); break; } catch { await new Promise((r) => setTimeout(r, 300)); } }
 const chrome = await chromeLauncher.launch({ chromePath: chromium.executablePath(), chromeFlags: ['--headless=new', '--no-sandbox'] });
 const min = { performance: 90, accessibility: 90, 'best-practices': 90, seo: 90 };
