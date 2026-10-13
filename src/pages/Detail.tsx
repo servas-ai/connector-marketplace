@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { LiveCard } from '@/components/LiveCard';
 import { ConnectorLogo } from '@/components/ConnectorLogo';
-import { FlagBadges, RobotsBadge, StatusBadge } from '@/components/StatusBadges';
+import { FlagBadges, LlmsBadge, RobotsBadge, StatusBadge } from '@/components/StatusBadges';
 import { dataset } from '@/lib/data';
 import { connectorToOpenUI, library } from '@/openui/library';
 
@@ -26,7 +26,7 @@ export function Detail() {
           <h1 className="text-2xl font-semibold">{c.id}</h1>
           <div className="text-sm text-muted-foreground">{c.domain} · {c.category} · {c.country}</div>
           <p className="mt-2 max-w-3xl text-sm">{c.description}</p>
-          <div className="mt-2 flex flex-wrap gap-1"><StatusBadge c={c} /><RobotsBadge c={c} /><FlagBadges c={c} />
+          <div className="mt-2 flex flex-wrap gap-1"><StatusBadge c={c} /><RobotsBadge c={c} /><LlmsBadge c={c} link /><FlagBadges c={c} />
             <Badge variant="outline" title="Paperclip #55: Vertrauensklasse 1">Klasse 1 · read-only Katalog</Badge>
             {c.paperclip && <Badge variant="secondary">Paperclip-Manifest</Badge>}</div>
         </div>

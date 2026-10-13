@@ -10,5 +10,7 @@ export interface Connector {
   apiAvailable: boolean | null; apiVersion: string | null; robots: Robots; robotsNote: string | null; incidents: string[];
   links: { skill: string | null; protocol: string | null; samples: string | null }; source: string | null;
   live?: LiveInfo | null;
+  llms?: LlmsInfo | null;
 }
 export interface Dataset { generatedAt: string; sourceRepo: string; sourceGeneratedAt: string; count: number; connectors: Connector[]; }
+export interface LlmsInfo { llmsTxt: string | null; llmsFull: string | null; openapi: string | null; mcp: string | null; aiPolicy: string | null }

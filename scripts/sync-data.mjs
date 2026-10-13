@@ -109,6 +109,7 @@ export function build(src) {
       incidents: c.status !== 'passing' ? [c.note || 'Status nicht grün'] : [],
       links: { skill: null, protocol: null, samples: c.proofs?.log ? `${GH}/${c.proofs.log}` : null },
       source: c.source_url || null,
+      llms: c.llms_checked ? { llmsTxt: c.llms_txt || null, llmsFull: c.llms_full || null, openapi: c.openapi || null, mcp: c.mcp_endpoint || null, aiPolicy: c.ai_policy || null } : null,
     });
   }
 
@@ -149,6 +150,7 @@ export function build(src) {
       },
       source: p.source || prev.source || null,
       live: liveInfo(dir, id),
+      llms: prev.llms ?? null,
     });
   }
   const logoDir = path.join(src, 'assets/logos');
