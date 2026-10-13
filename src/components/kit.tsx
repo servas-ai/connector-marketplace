@@ -10,10 +10,10 @@ import { absTime, relTime } from '@/lib/kpi';
 
 export const titleOf = (c: Connector) => (c.domain && /\./.test(c.domain) ? c.domain.replace(/^www\./, '') : c.id);
 
-export function Logo({ c, size = 48, className }: { c: Connector; size?: number; className?: string }) {
+export function Logo({ c, size = 48, className, eager = false }: { c: Connector; size?: number; className?: string; eager?: boolean }) {
   const [err, setErr] = useState(false);
   const cat = categoryOf(c); const Icon = cat.icon; const r = Math.round(size * 0.22);
-  if (c.logo && !err) return <img src={`${import.meta.env.BASE_URL}logos/${c.logo}`} alt="" width={size} height={size} loading="lazy" onError={() => setErr(true)} data-testid="logo"
+  if (c.logo && !err) return <img src={`${import.meta.env.BASE_URL}logos/${c.logo}`} alt="" width={size} height={size} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : undefined} onError={() => setErr(true)} data-testid="logo"
     className={cn('shrink-0 border bg-white object-contain', className)} style={{ width: size, height: size, borderRadius: r, padding: size * 0.12 }} />;
   return <div aria-hidden data-testid="logo-fallback" className={cn('flex shrink-0 items-center justify-center border text-white', className)} style={{ width: size, height: size, borderRadius: r, background: cat.hue }}><Icon size={size * 0.45} /></div>;
 }

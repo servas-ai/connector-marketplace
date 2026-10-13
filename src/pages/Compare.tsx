@@ -1,7 +1,7 @@
-import type { ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Plus, Trophy, X } from 'lucide-react';
-import { dataset } from '@/lib/data';
+import { dataset, ensureFullDataset } from '@/lib/data';
 import type { Connector } from '@/lib/types';
 import { capabilities } from '@/lib/capabilities';
 import { categoryOf } from '@/lib/taxonomy';
@@ -43,6 +43,12 @@ const GROUPS: [string, RowDef[]][] = [
 ];
 
 export function Compare() {
+  const [ready, setReady] = useState(false);
+  useEffect(() => { ensureFullDataset().then(() => setReady(true)).catch(() => setReady(true)); }, []);
+  if (!ready) return <div className="p-10 text-center text-muted-foreground">Vergleich lädt …</div>;
+  return <CompareInner />;
+}
+function CompareInner() {
   const [sp, setSp] = useSearchParams();
   const ids = (sp.get('ids') ?? '').split(',').filter(Boolean).slice(0, 4);
   const list = ids.map((id) => dataset.connectors.find((c) => c.id === id)).filter(Boolean) as Connector[];

@@ -2,6 +2,9 @@ import { INTERFACE_KEYS } from './interfaceKeys';
 import type { Connector, Dataset } from './types';
 
 let _ds: Dataset | null = null;
+let _full: Dataset | null = null;
+let _fullPromise: Promise<Dataset> | null = null;
+let _isListOnly = false;
 
 export function getDataset(): Dataset {
   if (!_ds) throw new Error('dataset not loaded — call loadDataset() first');
@@ -13,7 +16,7 @@ export const dataset: Dataset = new Proxy({} as Dataset, {
   get(_t, prop) {
     const d = getDataset();
     const v = Reflect.get(d, prop, d);
-    return typeof v === 'function' ? (v as Function).bind(d) : v;
+    return typeof v === 'function' ? (v as (...a: never[]) => unknown).bind(d) : v;
   },
 });
 
@@ -22,23 +25,76 @@ function normalizeDataset(d: Dataset): Dataset {
   for (const c of d.connectors) {
     if (!Array.isArray(c.incidents)) c.incidents = [];
     if (!Array.isArray(c.commands)) c.commands = [];
+    if (!c.links) c.links = { skill: null, protocol: null, samples: null };
   }
   return d;
 }
 
 export function setDataset(d: Dataset): void {
   _ds = normalizeDataset(d);
+  _full = _ds;
+  _isListOnly = false;
 }
 
-/** Browser: load connectors.json as separate (gzip-friendly) asset — not bundled into JS. */
+function baseUrl(): string {
+  return import.meta.env.BASE_URL || './';
+}
+
+async function fetchJson<T>(url: string): Promise<T> {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`${url} HTTP ${res.status}`);
+  return (await res.json()) as T;
+}
+
+/** Load compact list.json for first paint (Home). Falls back to full connectors.json. */
 export async function loadDataset(): Promise<Dataset> {
   if (_ds) return _ds;
-  const base = import.meta.env.BASE_URL || './';
-  const url = `${base}data/connectors.json`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`connectors.json HTTP ${res.status} (${url})`);
-  _ds = normalizeDataset((await res.json()) as Dataset);
-  return _ds;
+  const base = baseUrl();
+  try {
+    const list = await fetchJson<Dataset>(`${base}data/list.json`);
+    _ds = normalizeDataset(list);
+    _isListOnly = true;
+    return _ds;
+  } catch {
+    const full = await fetchJson<Dataset>(`${base}data/connectors.json`);
+    _ds = normalizeDataset(full);
+    _full = _ds;
+    _isListOnly = false;
+    return _ds;
+  }
+}
+
+/** Boot helper: always load full connectors.json (Detail deep-links). */
+export async function loadFullDataset(): Promise<Dataset> {
+  if (_full) { _ds = _full; _isListOnly = false; return _full; }
+  return ensureFullDataset();
+}
+
+/** Ensure full connectors.json is loaded (Detail, Dashboard, Compare). Merges into live dataset. */
+export async function ensureFullDataset(): Promise<Dataset> {
+  if (_full) {
+    _ds = _full;
+    _isListOnly = false;
+    return _full;
+  }
+  if (_fullPromise) return _fullPromise;
+  _fullPromise = (async () => {
+    const full = normalizeDataset(await fetchJson<Dataset>(`${baseUrl()}data/connectors.json`));
+    _full = full;
+    _ds = full;
+    _isListOnly = false;
+    return full;
+  })();
+  try {
+    return await _fullPromise;
+  } catch (e) {
+    _fullPromise = null;
+    throw e;
+  }
+}
+
+export function isListOnly(): boolean {
+  return _isListOnly;
 }
 
 export type Tri = 'all' | 'yes' | 'no';
