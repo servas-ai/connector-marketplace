@@ -2,19 +2,20 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { App } from './App';
 import { dataset } from '@/lib/data';
+import { PAGE_SIZE } from '@/lib/catalog';
 
 const at = (path: string) => render(<MemoryRouter initialEntries={[path]}><App /></MemoryRouter>);
 
 describe('App', () => {
-  it('zeigt alle Karten und filtert per Suche', () => {
+  it('zeigt eine begrenzte Ergebnisseite und filtert per Suche', () => {
     at('/');
-    expect(screen.getAllByTestId('connector-card')).toHaveLength(dataset.count);
+    expect(screen.getAllByTestId('connector-card')).toHaveLength(Math.min(PAGE_SIZE, dataset.connectors.length));
     fireEvent.change(screen.getByLabelText('Suche'), { target: { value: 'zzzz-nichts' } });
     expect(screen.getByText('Keine Connectoren für diese Filter.')).toBeInTheDocument();
   });
   it('filtert per Status-Select', () => {
     at('/');
-    fireEvent.change(screen.getByLabelText('Status'), { target: { value: 'failing' } });
+    fireEvent.change(screen.getByLabelText('Status'), { target: { value: 'v:failing' } });
     const n = dataset.connectors.filter((c) => c.status === 'failing').length;
     expect(screen.getByTestId('result-count')).toHaveTextContent(`${n} von`);
   });
@@ -43,19 +44,49 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('tab', { name: 'Qualität/Gates' }));
     expect(screen.getAllByTestId('fact').length).toBeGreaterThan(0);
   });
-  it('Vergleich von 2–3 Connectoren', async () => {
+  it('Vergleich von bis zu vier Connectoren', async () => {
     const [a, b, c, d] = dataset.connectors;
     at(`/compare?ids=${a.id},${b.id},${c.id},${d.id}`);
     const t = await screen.findByTestId('compare-table');
-    expect(t.querySelectorAll('thead th')).toHaveLength(4);
+    expect(t.querySelectorAll('thead th')).toHaveLength(5);
     fireEvent.click(screen.getByLabelText(`${a.id} entfernen`));
-    expect(screen.getByTestId('compare-table').querySelectorAll('thead th')).toHaveLength(3);
+    expect(screen.getByTestId('compare-table').querySelectorAll('thead th')).toHaveLength(4);
   });
   it('Grid: Auswahl führt zum Vergleich', () => {
     at('/');
-    const [a, b] = dataset.connectors;
-    fireEvent.click(screen.getByLabelText(`${a.id} vergleichen`)); fireEvent.click(screen.getByLabelText(`${b.id} vergleichen`));
+    const [a, b] = screen.getAllByRole('checkbox');
+    fireEvent.click(a); fireEvent.click(b);
     expect(screen.getByTestId('compare-link')).toHaveTextContent('2 vergleichen');
+  });
+  it('Grid: fünfte Auswahl ist gesperrt, Entfernen bleibt möglich', () => {
+    at('/');
+    const boxes = screen.getAllByRole('checkbox');
+    boxes.slice(0, 4).forEach(box => fireEvent.click(box));
+    expect(boxes[4]).toBeDisabled();
+    expect(boxes[0]).not.toBeDisabled();
+    fireEvent.click(boxes[0]);
+    expect(boxes[4]).not.toBeDisabled();
+    expect(screen.getByTestId('compare-link')).toHaveTextContent('3 vergleichen');
+  });
+  it('Grid: gefilterte Auswahl bleibt im Vergleich erhalten', () => {
+    at('/');
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+    fireEvent.change(screen.getByLabelText('Suche'), { target: { value: 'zzzz-nichts' } });
+    expect(screen.getByText('Keine Connectoren für diese Filter.')).toBeInTheDocument();
+    expect(screen.getByTestId('compare-link')).toHaveTextContent('1 vergleichen');
+    fireEvent.click(screen.getByRole('button', { name: 'Filter zurücksetzen' }));
+    expect(screen.getAllByRole('checkbox').filter(box => (box as HTMLInputElement).checked)).toHaveLength(1);
+  });
+  it('Grid: unbekannter Login ist nicht nein', () => {
+    at('/?login=unknown');
+    const n = dataset.connectors.filter(c => c.loginRequired == null).length;
+    expect(screen.getByTestId('result-count')).toHaveTextContent(`${n} von`);
+  });
+  it('Vergleich ignoriert unbekannte und doppelte IDs vor dem Limit', async () => {
+    const [a, b, c, d] = dataset.connectors;
+    at(`/compare?ids=missing-worker-306,${a.id},${a.id},${b.id},${c.id},${d.id}`);
+    expect((await screen.findByTestId('compare-table')).querySelectorAll('thead th')).toHaveLength(5);
+    expect(screen.getByText(/Ungültige, doppelte oder überzählige/)).toBeInTheDocument();
   });
   it('Dashboard zeigt Ampel-, KPI- und Server-/Gate-Charts', async () => {
     at('/dashboard'); expect(await screen.findAllByTestId('chart')).toHaveLength(8); expect(screen.getAllByTestId('ampel-stat')).toHaveLength(12);

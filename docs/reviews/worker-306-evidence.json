@@ -1,0 +1,74 @@
+{
+  "worker": "worker-306",
+  "issue": 8,
+  "epic": 6,
+  "date": "2026-10-13",
+  "baseCommit": "70d1ab490ce1db3fd9d06d60766d140307f1fcf7",
+  "baseTree": "bbfbbaebf1c4736b1ecd95b50cd9955e3b3c3b5f",
+  "tests": {
+    "command": "npm run test:catalog",
+    "node": "22.16.0",
+    "pass": 38,
+    "fail": 0,
+    "skipped": 0,
+    "fixtures": "synthetic; no live requests"
+  },
+  "benchmark": {
+    "synthetic": true,
+    "records": 1500,
+    "measuredQueries": 100,
+    "buildMs": 10.507452999999998,
+    "p95Ms": 1.3107960000000105,
+    "maxMs": 2.5368399999999838,
+    "compareLimit": 4
+  },
+  "moduleTypecheck": {
+    "result": "pass",
+    "typescript": "5.8.3",
+    "scope": "src/lib/catalog.ts and unchanged types.ts",
+    "contractBlob": "6eb7bfcddf9bb637fdc013cc0b047094f7f68b53",
+    "projectTypecheck": false
+  },
+  "syntax": {
+    "diagnostics": 0,
+    "files": [
+      "src/lib/catalog.ts",
+      "src/pages/Marketplace.tsx",
+      "src/pages/Compare.tsx",
+      "src/App.test.tsx",
+      "e2e/catalog.spec.ts"
+    ]
+  },
+  "authoredNotRun": {
+    "reactTestsAdded": 4,
+    "playwrightCases": 16
+  },
+  "notRun": [
+    "full npm test/Vitest",
+    "project typecheck with locked TypeScript 6.0.3",
+    "ESLint",
+    "Vite build",
+    "Playwright/axe",
+    "Lighthouse",
+    "gitleaks"
+  ],
+  "screenshots": {
+    "captured": false,
+    "reason": "No executable full React checkout; terminal connector unreachable, container npm/GitHub DNS unavailable"
+  },
+  "upstreamHeadChecks": {
+    "commit": "70d1ab490ce1db3fd9d06d60766d140307f1fcf7",
+    "checkRuns": 0,
+    "commitStatuses": 0,
+    "mergeApproved": false
+  },
+  "sha256": {
+    "src/lib/catalog.ts": "f8dae4dce9c5b07755dbd59cbe8b54bcbe7a76960e615bd0b7cdaed3a424adb6",
+    "src/pages/Marketplace.tsx": "c8b31c4e2f5341ec9c67eb9101d8902bba885184bd07ff6cfad42d8ea515be74",
+    "src/pages/Compare.tsx": "91cf9743b15f5303bd7dfe2f028517fa64983e67eb0578d848d06fa9de217742",
+    "src/App.test.tsx": "1ea9467e0062e530bab12dd66acde5a778655a790985a320a3b3ded82124ef91",
+    "e2e/catalog.spec.ts": "2726d66c143cd3529836b33aa8a6ff36a1cfb347665437a3390c11c5a80daab6",
+    "package.json": "3fef9093bb30eed4d2044bbf8afa512443352e8f0494a927896ff6831dd61f3d",
+    "tests/catalog.node.mjs": "bf43176dcf1ab149f5da35c8aa929b9387c83adb781b9a244802c7b3f023f06c"
+  }
+}
