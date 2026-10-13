@@ -2,11 +2,11 @@ import { NavLink, Route, Routes, Link } from 'react-router-dom';
 import { lazy, Suspense, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { Today } from '@/pages/Today';
-import { Marketplace } from '@/pages/Marketplace';
 import { AppDetail } from '@/pages/AppDetail';
 import { cn } from '@/lib/utils';
 import { dataset } from "@/lib/data";
 
+const Marketplace = lazy(() => import('@/pages/Marketplace').then((m) => ({ default: m.Marketplace })));
 const Compare = lazy(() => import('@/pages/Compare').then((m) => ({ default: m.Compare })));
 const Detail = lazy(() => import('@/pages/Detail').then((m) => ({ default: m.Detail })));
 const Dashboard = lazy(() => import('@/pages/Dashboard').then((m) => ({ default: m.Dashboard })));

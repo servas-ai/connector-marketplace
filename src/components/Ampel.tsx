@@ -1,10 +1,9 @@
 import { Badge } from '@/components/ui/badge';
 import { Bot, Building2, Cloud, Globe2, KeyRound, Landmark, Scale, ShoppingBag, Smartphone, Store, Network, ShieldAlert, ShieldCheck, ShieldQuestion, Shield, Unlock } from 'lucide-react';
-import type { Ampel, AmpelLevel, Connector } from '@/lib/types';
+import type { Ampel, Connector } from '@/lib/types';
 import { cn } from '@/lib/utils';
-
-export const AMPEL_COLOR: Record<AmpelLevel, string> = { green: '#22c55e', yellow: '#eab308', red: '#ef4444' };
-export const AMPEL_LABEL: Record<AmpelLevel, string> = { green: 'grün', yellow: 'gelb', red: 'rot' };
+export { AMPEL_COLOR, AMPEL_LABEL } from './ampelMeta';
+import { AMPEL_COLOR, AMPEL_LABEL } from './ampelMeta';
 
 /** Dreifach-Ampel (rot/gelb/grün) mit aktivem Licht. */
 export function AmpelLight({ a, size = 10 }: { a?: Ampel; size?: number }) {

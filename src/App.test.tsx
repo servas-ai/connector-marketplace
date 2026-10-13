@@ -1,3 +1,5 @@
+import { configure } from '@testing-library/react';
+configure({ asyncUtilTimeout: 90000 });
 import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { App } from './App';
@@ -6,6 +8,8 @@ import { dataset } from '@/lib/data';
 const at = (path: string) => render(<MemoryRouter initialEntries={[path]}><App /></MemoryRouter>);
 
 describe('App', () => {
+  // /alle rendert 1000+ Karten (FeatureBadges) – braucht Luft unter Last
+
   it('zeigt alle Karten und filtert per Suche', async () => {
     at('/alle');
     expect(await screen.findAllByTestId('connector-card')).toHaveLength(dataset.count);

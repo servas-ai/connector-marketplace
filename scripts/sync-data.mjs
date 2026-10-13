@@ -199,6 +199,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const data = build(src);
   fs.mkdirSync(path.join(ROOT, 'src/data'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'src/data/connectors.json'), JSON.stringify(data, null, 2) + '\n');
+  fs.mkdirSync(path.join(ROOT, 'public/data'), { recursive: true });
+  fs.writeFileSync(path.join(ROOT, 'public/data/connectors.json'), JSON.stringify(data, null, 2) + '\n');
   const logos = path.join(src, 'assets/logos');
   if (fs.existsSync(logos)) {
     fs.mkdirSync(path.join(ROOT, 'public/logos'), { recursive: true });
