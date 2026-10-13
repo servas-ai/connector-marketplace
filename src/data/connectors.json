@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-13T14:19:45.865Z",
+  "generatedAt": "2026-10-13T15:09:57.398Z",
   "sourceRepo": "servas-ai/opencli-connectors",
   "sourceGeneratedAt": "2026-10-13 13:57 UTC",
-  "count": 1147,
+  "count": 1164,
   "connectors": [
     {
       "id": "spusu-at",
@@ -9208,7 +9208,7 @@
       "robotsNote": "static.avalanche.report/robots.txt: 404 (keine Einschränkung). Offizielle statische CAAMLv6-Bulletins. Drossel ≥2 s.",
       "incidents": [
         "robots.txt pruefen (fail-closed, #475): https://avalanche.report (HTML/Captcha statt robots.txt)",
-        "Fehlerfall → Exit 2.",
+        "Kein Captcha-/WAF-Bypass.",
         "Fehlerfall → Exit 2."
       ],
       "links": {
@@ -13510,7 +13510,7 @@
     },
     {
       "id": "bodacc-fr",
-      "name": "bodacc-fr",
+      "name": "opencli-bodacc-fr",
       "path": "international/eu-a/bodacc-fr",
       "endpoint": "https://bodacc-datadila.opendatasoft.com/api/",
       "domain": "bodacc-datadila.opendatasoft.com",
@@ -13523,25 +13523,35 @@
       "commands": [],
       "logo": "bodacc-datadila.opendatasoft.com.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T03:22:00.000Z",
-      "e2ePassed": 0,
-      "e2eTotal": 0,
-      "kpi": null,
+      "lastRun": "2026-10-13T13:18:22.667Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1493,
+        "p95": 48355,
+        "throughput": 40.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
       "loginRequired": false,
       "captcha": false,
       "apiAvailable": true,
-      "apiVersion": "–",
+      "apiVersion": "DILA OPENDATA BODACC",
       "robots": "allowed",
-      "robotsNote": "Disallow `/api/` für `User-agent: *` → blocked_robots",
+      "robotsNote": "bodacc-datadila.opendatasoft.com Disallow /api/ → Nachfolger echanges.dila.gouv.fr robots.txt 404=allow. Drossel ≥2 s.",
       "incidents": [
-        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md",
+        "Fehlerfall → Exit 2."
       ],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/bodacc-fr/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/eu-a/bodacc-fr/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/eu-a/bodacc-fr/samples"
       },
-      "source": "https://bodacc-datadila.opendatasoft.com/api/",
+      "source": "echanges.dila.gouv.fr",
       "live": null,
       "server": {
         "ip": "109.232.232.161",
@@ -13630,12 +13640,12 @@
           "timeout": 0,
           "offline": 0,
           "robots": 0,
-          "error": 1
+          "error": 2
         },
         "captchaTypes": {},
-        "observations": 2,
-        "uptime": 50,
-        "last": "2026-10-13T03:22:00.000Z"
+        "observations": 3,
+        "uptime": 33,
+        "last": "2026-10-13T13:18:22.667Z"
       },
       "ampel": {
         "level": "yellow",
@@ -17670,14 +17680,14 @@
       "commands": [],
       "logo": "food-nutrition.canada.ca.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T09:40:15.813Z",
+      "lastRun": "2026-10-13T13:15:52.226Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 112,
-        "p95": 1231,
-        "throughput": 535.7,
+        "p50": 1304,
+        "p95": 3350,
+        "throughput": 46,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -17686,19 +17696,19 @@
       "loginRequired": false,
       "captcha": false,
       "apiAvailable": true,
-      "apiVersion": "CNF API",
+      "apiVersion": "CNF CSV 2026 (open.canada.ca)",
       "robots": "allowed",
-      "robotsNote": "food-nutrition.canada.ca/robots.txt antwortet 403; nach RFC 9309 gilt ein 4xx als ‚keine Regeln‘ → API erlaubt (offiziell dokumentiert, open.canada.ca).",
+      "robotsNote": "food-nutrition.canada.ca/robots.txt HTTP 403 → open.canada.ca + opencanada.blob.core.windows.net allow. Drossel ≥1 s, Cache 30 Tage.",
       "incidents": [
         "robots.txt refused (fail-closed, #475): https://food-nutrition.canada.ca (robots.txt HTTP 403)",
-        "Fehlerfall → Exit 2 mit Meldung."
+        "Fehlerfall → Exit 2."
       ],
       "links": {
         "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/cnf-ca/SKILL.md",
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/cnf-ca/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/cnf-ca/samples"
       },
-      "source": "https://food-nutrition.canada.ca/api/canadian-nutrient-file",
+      "source": "https://open.canada.ca/data/en/dataset/1b6139bd-ed7e-4043-bc28-ff00e10f3109",
       "live": null,
       "server": null,
       "sourceType": "Sonstige",
@@ -17735,13 +17745,13 @@
           "captcha": 0,
           "timeout": 0,
           "offline": 0,
-          "robots": 1,
+          "robots": 2,
           "error": 0
         },
         "captchaTypes": {},
-        "observations": 1,
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T09:40:15.813Z"
+        "last": "2026-10-13T13:15:52.226Z"
       },
       "ampel": {
         "level": "red",
@@ -19176,6 +19186,99 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "countriesnow",
+      "name": "opencli-countriesnow",
+      "domain": "countriesnow.space",
+      "description": "CountriesNow API: Länder, Hauptstädte, ISO-Codes, Städte je Land und Bevölkerungsreihen, keyless Open-Source-REST.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/countriesnow",
+      "records": null,
+      "commands": [],
+      "logo": "countriesnow.space.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:45.931Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1934,
+        "p95": 2062,
+        "throughput": 31,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "countriesnow.space/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/countriesnow/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/countriesnow/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/countriesnow/samples"
+      },
+      "source": "https://countriesnow.space",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:45.931Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -21631,6 +21734,99 @@
       "ampel": {
         "level": "green",
         "reasons": []
+      },
+      "screenshot": null
+    },
+    {
+      "id": "data-gov-sg-realtime",
+      "name": "opencli-data-gov-sg-realtime",
+      "domain": "api-open.data.gov.sg",
+      "description": "data.gov.sg Real-time API v2 (Regierung Singapur, NEA): Lufttemperatur, Niederschlag, Luftfeuchte, Wind je Messstation.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/data-gov-sg-realtime",
+      "records": null,
+      "commands": [],
+      "logo": "api-open.data.gov.sg.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:45.412Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1975,
+        "p95": 2144,
+        "throughput": 30.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api-open.data.gov.sg/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/data-gov-sg-realtime/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/data-gov-sg-realtime/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/data-gov-sg-realtime/samples"
+      },
+      "source": "https://api-open.data.gov.sg",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:45.412Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
       },
       "screenshot": null
     },
@@ -24688,6 +24884,99 @@
       "screenshot": null
     },
     {
+      "id": "deckofcards",
+      "name": "opencli-deckofcards",
+      "domain": "deckofcardsapi.com",
+      "description": "Deck of Cards API: Kartendecks mischen und Karten ziehen (Wert, Farbe, Bild-URL) – Test-/Lehr-API, keyless.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/deckofcards",
+      "records": null,
+      "commands": [],
+      "logo": "deckofcardsapi.com.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:44.009Z",
+      "e2ePassed": 2,
+      "e2eTotal": 2,
+      "kpi": {
+        "stability": 100,
+        "p50": 1181,
+        "p95": 1661,
+        "throughput": 50.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "deckofcardsapi.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/deckofcards/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/deckofcards/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/deckofcards/samples"
+      },
+      "source": "https://deckofcardsapi.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:44.009Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "defillama",
       "name": "defillama",
       "path": "finance/defillama",
@@ -25295,6 +25584,99 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "dns-google",
+      "name": "opencli-dns-google",
+      "domain": "dns.google",
+      "description": "Google Public DNS JSON-API (DoH): DNS-Auflösung (A, AAAA, MX, TXT, NS …) mit DNSSEC-Status, keyless.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/dns-google",
+      "records": null,
+      "commands": [],
+      "logo": "dns.google.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:45.818Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1703,
+        "p95": 1936,
+        "throughput": 35.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "dns.google/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/dns-google/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/dns-google/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/dns-google/samples"
+      },
+      "source": "https://dns.google",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:45.818Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -31135,11 +31517,11 @@
     },
     {
       "id": "eurostat",
-      "name": "eurostat",
+      "name": "opencli-eurostat",
       "path": "international/welle-int/eurostat",
       "endpoint": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data",
       "domain": "ec.europa.eu",
-      "description": "",
+      "description": "Eurostat Dissemination API – JSON-stat-2.0-Daten ohne Key (Filter/letzte N Pflicht).",
       "category": "international",
       "country": "EU",
       "status": "passing",
@@ -32329,6 +32711,99 @@
       "screenshot": null
     },
     {
+      "id": "fakestoreapi",
+      "name": "opencli-fakestoreapi",
+      "domain": "fakestoreapi.com",
+      "description": "Fake Store API: Demo-E-Commerce-REST (Produkte, Kategorien, Warenkörbe) für Prototypen und Tests, keyless.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/fakestoreapi",
+      "records": null,
+      "commands": [],
+      "logo": "fakestoreapi.com.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:46.407Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1705,
+        "p95": 2171,
+        "throughput": 35.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "fakestoreapi.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/fakestoreapi/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/fakestoreapi/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/fakestoreapi/samples"
+      },
+      "source": "https://fakestoreapi.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:46.407Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "falkirk-uk",
       "name": "opencli-falkirk-uk",
       "path": "opendata/falkirk-uk",
@@ -32933,6 +33408,100 @@
       "ampel": {
         "level": "green",
         "reasons": []
+      },
+      "screenshot": null
+    },
+    {
+      "id": "feodotracker",
+      "name": "opencli-feodotracker",
+      "domain": "feodotracker.abuse.ch",
+      "description": "abuse.ch Feodo Tracker: Blockliste von Botnet-C2-Servern (Dridex, Emotet, QakBot …) mit Status, ASN und Land, CC0.",
+      "category": "tech",
+      "country": "CH",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/feodotracker",
+      "records": null,
+      "commands": [],
+      "logo": "feodotracker.abuse.ch.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:42.402Z",
+      "e2ePassed": 2,
+      "e2eTotal": 2,
+      "kpi": {
+        "stability": 100,
+        "p50": 395,
+        "p95": 1097,
+        "throughput": 151.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "feodotracker.abuse.ch/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2.",
+        "Lizenz/ToS: abuse.ch: Blocklisten CC0, kommerzielle Nutzung erlaubt; Download max. alle 5 min."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/feodotracker/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/feodotracker/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/feodotracker/samples"
+      },
+      "source": "https://feodotracker.abuse.ch",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:42.402Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
       },
       "screenshot": null
     },
@@ -35081,9 +35650,9 @@
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 2164,
-        "p95": 8664,
-        "throughput": 27.7,
+        "p50": 638,
+        "p95": 724,
+        "throughput": 94,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -35095,7 +35664,9 @@
       "apiVersion": "v1",
       "robots": "allowed",
       "robotsNote": "frankfurter.dev/robots.txt: Allow /. api.frankfurter.app liefert Kurse (EZB). Drossel ≥2 s.",
-      "incidents": [],
+      "incidents": [
+        "Falscher Block: `api.frankfurter.app/robots.txt` liefert HTTP 404 → nach RFC 9309 allow-all; früherer Sweep hatte HTTP 522."
+      ],
       "links": {
         "skill": null,
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-frankfurter/PRUEFPROTOKOLL.md",
@@ -35242,6 +35813,99 @@
       "ampel": {
         "level": "green",
         "reasons": []
+      },
+      "screenshot": null
+    },
+    {
+      "id": "fruityvice",
+      "name": "opencli-fruityvice",
+      "domain": "www.fruityvice.com",
+      "description": "Fruityvice: Nährwerte (Kalorien, Zucker, Fett, Eiweiß, Kohlenhydrate) und Botanik (Familie, Gattung) von Obstsorten, keyless.",
+      "category": "lebensmittel",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/lebensmittel/fruityvice",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:23:00.141Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 8684,
+        "p95": 8946,
+        "throughput": 6.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "www.fruityvice.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/lebensmittel/fruityvice/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/lebensmittel/fruityvice/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/lebensmittel/fruityvice/samples"
+      },
+      "source": "https://www.fruityvice.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:23:00.141Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
       },
       "screenshot": null
     },
@@ -35630,6 +36294,107 @@
           "robots.txt Disallow",
           "Gates: 2 Fehler",
           "Login nötig"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "fxratesapi",
+      "name": "opencli-fxratesapi",
+      "domain": "api.fxratesapi.com",
+      "description": "FxRatesAPI: aktuelle Wechselkurse (Fiat + Krypto) zu frei wählbarer Basiswährung, keyless Basis-Endpunkt.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/fxratesapi",
+      "records": null,
+      "commands": [],
+      "logo": "api.fxratesapi.com.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:46.115Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1648,
+        "p95": 1989,
+        "throughput": 36.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.fxratesapi.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/fxratesapi/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/fxratesapi/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/fxratesapi/samples"
+      },
+      "source": "https://api.fxratesapi.com",
+      "live": {
+        "realtime": false,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:46.115Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
         ]
       },
       "screenshot": null
@@ -57140,14 +57905,14 @@
       "commands": [],
       "logo": "cache.kartverket.no.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T09:06:11.462Z",
+      "lastRun": "2026-10-13T13:13:15.266Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 3987,
-        "p95": 3995,
-        "throughput": 15,
+        "p50": 1574,
+        "p95": 1996,
+        "throughput": 38.1,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -57157,8 +57922,8 @@
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "v1",
-      "robots": "disallowed",
-      "robotsNote": "ws.geonorge.no: robots.txt geprüft, API nicht gesperrt. Offizielle Kartverket-API, Drossel ≥2 s.",
+      "robots": "allowed",
+      "robotsNote": "ws.geonorge.no/robots.txt HTTP 403 → api.kartverket.no/robots.txt 404=allow. Gleiche Adress-API. Drossel ≥2 s.",
       "incidents": [
         "robots.txt refused (fail-closed, #475): https://ws.geonorge.no (robots.txt HTTP 403)",
         "Fehlerfall → Exit 2."
@@ -57205,13 +57970,13 @@
           "captcha": 0,
           "timeout": 0,
           "offline": 0,
-          "robots": 1,
+          "robots": 2,
           "error": 0
         },
         "captchaTypes": {},
-        "observations": 1,
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T09:06:11.462Z"
+        "last": "2026-10-13T13:13:15.266Z"
       },
       "ampel": {
         "level": "red",
@@ -70477,6 +71242,7 @@
       "incidents": [
         "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md",
         "Captcha-Erkennung: Abbruch, keine Umgehung. Langsam wegen Rate-Limit.",
+        "`test/e2e.json`: `timeout_ms` 420000 (ToS-Drossel 60 s/Request; 180 s waren zu kurz → falscher Timeout-Fail).",
         "Testfall im Prüfprotokoll fehlgeschlagen"
       ],
       "links": {
@@ -71970,6 +72736,99 @@
       "screenshot": null
     },
     {
+      "id": "httpbin",
+      "name": "opencli-httpbin",
+      "domain": "httpbin.org",
+      "description": "httpbin.org: HTTP-Request/Response-Test-Service (Header-Echo, UUID, Status-Codes) mit Swagger-Spezifikation.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/httpbin",
+      "records": null,
+      "commands": [],
+      "logo": "httpbin.org.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:49.758Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1543,
+        "p95": 6278,
+        "throughput": 38.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "httpbin.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/httpbin/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/httpbin/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/httpbin/samples"
+      },
+      "source": "https://httpbin.org",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:49.758Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "htx-huobi",
       "name": "htx-huobi",
       "path": "finance/htx-huobi",
@@ -73204,6 +74063,107 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T09:07:04.810Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "imf-datamapper",
+      "name": "opencli-imf-datamapper",
+      "domain": "www.imf.org",
+      "description": "IMF DataMapper API (Internationaler Währungsfonds): Indikatoren des World Economic Outlook (BIP-Wachstum, Inflation, Schulden) je Land und Jahr.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/imf-datamapper",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:48.421Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1176,
+        "p95": 5424,
+        "throughput": 51,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "www.imf.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/imf-datamapper/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/imf-datamapper/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/imf-datamapper/samples"
+      },
+      "source": "https://www.imf.org",
+      "live": {
+        "realtime": false,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:48.421Z"
       },
       "ampel": {
         "level": "yellow",
@@ -77287,6 +78247,99 @@
       "screenshot": null
     },
     {
+      "id": "launch-library-dev",
+      "name": "opencli-launch-library-dev",
+      "domain": "lldev.thespacedevs.com",
+      "description": "The Space Devs Launch Library 2 (Dev-Instanz, keyless): kommende Raketenstarts, Status, Startplatz und Agenturen.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/launch-library-dev",
+      "records": null,
+      "commands": [],
+      "logo": "lldev.thespacedevs.com.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:44.224Z",
+      "e2ePassed": 2,
+      "e2eTotal": 2,
+      "kpi": {
+        "stability": 100,
+        "p50": 1260,
+        "p95": 1954,
+        "throughput": 47.6,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "lldev.thespacedevs.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/launch-library-dev/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/launch-library-dev/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/launch-library-dev/samples"
+      },
+      "source": "https://lldev.thespacedevs.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:44.224Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "launchpad",
       "name": "opencli-launchpad",
       "path": "tech/launchpad",
@@ -77715,20 +78768,20 @@
       "commands": [],
       "logo": null,
       "paperclip": false,
-      "lastRun": "2026-10-13T03:02:57.863Z",
-      "e2ePassed": 5,
-      "e2eTotal": 5,
+      "lastRun": "2026-10-13T13:07:31.966Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 1981,
-        "p95": 4666,
-        "throughput": 30.3,
+        "p50": 1292,
+        "p95": 7288,
+        "throughput": 46.4,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
         "blocked": false
       },
-      "loginRequired": true,
+      "loginRequired": false,
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "piveau hub-search (data.gv.at)",
@@ -77793,7 +78846,7 @@
         "counts": {
           "403": 0,
           "429": 0,
-          "ok": 3,
+          "ok": 4,
           "captcha": 0,
           "timeout": 0,
           "offline": 0,
@@ -77801,15 +78854,14 @@
           "error": 0
         },
         "captchaTypes": {},
-        "observations": 3,
+        "observations": 4,
         "uptime": 100,
-        "last": "2026-10-13T03:12:15.566Z"
+        "last": "2026-10-13T13:07:31.966Z"
       },
       "ampel": {
         "level": "yellow",
         "reasons": [
-          "Gates: 2 Fehler",
-          "Login nötig"
+          "Gates: 2 Fehler"
         ]
       },
       "screenshot": null
@@ -77829,14 +78881,14 @@
       "commands": [],
       "logo": "data.linz.gv.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T09:13:46.367Z",
-      "e2ePassed": 4,
-      "e2eTotal": 4,
+      "lastRun": "2026-10-13T13:15:49.459Z",
+      "e2ePassed": 1,
+      "e2eTotal": 1,
       "kpi": {
         "stability": 100,
-        "p50": 6170,
-        "p95": 14334,
-        "throughput": 9.7,
+        "p50": 2003,
+        "p95": 2003,
+        "throughput": 30,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -77845,9 +78897,9 @@
       "loginRequired": false,
       "captcha": false,
       "apiAvailable": true,
-      "apiVersion": "OGD CSV",
+      "apiVersion": "piveau hub-search + OGD CSV",
       "robots": "allowed",
-      "robotsNote": "data.linz.gv.at/robots.txt: liefert keine robots-Regeln (SPA-Seite) → keine Sperre. Offizielle OGD-CSV. Drossel ≥2 s.",
+      "robotsNote": "Suche: www.data.gv.at allow. CSV: data.linz.gv.at HTML/pruefen (#475) – Kennzahlen-Fälle bleiben blocked.",
       "incidents": [
         "robots.txt pruefen (fail-closed, #475): https://data.linz.gv.at (HTML/Captcha statt robots.txt)",
         "Fehlerfall → Exit 2."
@@ -77857,7 +78909,7 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/laender/linz-feuerwehr-einsaetze/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/laender/linz-feuerwehr-einsaetze/samples"
       },
-      "source": "data.linz.gv.at",
+      "source": "www.data.gv.at / data.linz.gv.at",
       "live": null,
       "server": null,
       "sourceType": "Behörde",
@@ -77865,7 +78917,7 @@
         "access": "offene API ohne Key",
         "apiOpen": true,
         "apiKey": false,
-        "ogdDump": false,
+        "ogdDump": true,
         "reJson": false,
         "feed": false,
         "mcp": true,
@@ -77891,18 +78943,18 @@
           "403": 0,
           "429": 0,
           "ok": 0,
-          "captcha": 1,
+          "captcha": 2,
           "timeout": 0,
           "offline": 0,
           "robots": 0,
           "error": 0
         },
         "captchaTypes": {
-          "eigenes Captcha": 1
+          "eigenes Captcha": 2
         },
-        "observations": 1,
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T09:13:46.367Z"
+        "last": "2026-10-13T13:15:49.459Z"
       },
       "ampel": {
         "level": "red",
@@ -80329,6 +81381,99 @@
       "screenshot": null
     },
     {
+      "id": "medrxiv",
+      "name": "opencli-medrxiv",
+      "domain": "api.medrxiv.org",
+      "description": "medRxiv API (Cold Spring Harbor Laboratory): Preprint-Metadaten Gesundheitswissenschaften nach Zeitraum bzw. DOI.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/medrxiv",
+      "records": null,
+      "commands": [],
+      "logo": "api.medrxiv.org.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:45.697Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1711,
+        "p95": 1995,
+        "throughput": 35.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.medrxiv.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/medrxiv/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/medrxiv/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/medrxiv/samples"
+      },
+      "source": "https://api.medrxiv.org",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:45.697Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "mempool-space",
       "name": "mempool-space",
       "path": "finance/mempool-space",
@@ -80348,9 +81493,9 @@
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 2153,
-        "p95": 4005,
-        "throughput": 27.9,
+        "p50": 1065,
+        "p95": 1997,
+        "throughput": 56.3,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -82440,6 +83585,99 @@
       "screenshot": "screens/murauer-stadtwerke-at.png"
     },
     {
+      "id": "mymemory",
+      "name": "opencli-mymemory",
+      "domain": "api.mymemory.translated.net",
+      "description": "MyMemory (Translated srl): Übersetzung kurzer Texte aus dem weltgrößten Translation Memory, keyless (Tageskontingent).",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/mymemory",
+      "records": null,
+      "commands": [],
+      "logo": "api.mymemory.translated.net.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:44.790Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 146,
+        "p95": 146,
+        "throughput": 411,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.mymemory.translated.net/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/mymemory/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/mymemory/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/mymemory/samples"
+      },
+      "source": "https://api.mymemory.translated.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:44.790Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "nanoos-erddap",
       "name": "opencli-nanoos-erddap",
       "path": "opendata/nanoos-erddap",
@@ -83312,14 +84550,14 @@
       "commands": [],
       "logo": "naturalearthdata.com.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T09:07:03.289Z",
+      "lastRun": "2026-10-13T13:12:16.423Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 3417,
-        "p95": 6723,
-        "throughput": 17.6,
+        "p50": 1929,
+        "p95": 4342,
+        "throughput": 31.1,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -83328,9 +84566,9 @@
       "loginRequired": false,
       "captcha": false,
       "apiAvailable": true,
-      "apiVersion": "HTTP HEAD",
+      "apiVersion": "GitHub raw HEAD",
       "robots": "allowed",
-      "robotsNote": "naciscdn.org/robots.txt: S3 AccessDenied (kein Regelwerk). Nur HEAD-Requests auf offizielle Download-Pakete, kein Massendownload.",
+      "robotsNote": "naciscdn.org robots.txt HTTP 403 → Mirror raw.githubusercontent.com robots.txt 404 = allow-all (RFC 9309). Nur HEAD, kein Massendownload. Drossel ≥2 s.",
       "incidents": [
         "robots.txt refused (fail-closed, #475): https://naciscdn.org (robots.txt HTTP 403)",
         "Fehlerfall → Exit 2."
@@ -83377,13 +84615,13 @@
           "captcha": 0,
           "timeout": 0,
           "offline": 0,
-          "robots": 1,
+          "robots": 2,
           "error": 0
         },
         "captchaTypes": {},
-        "observations": 1,
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T09:07:03.289Z"
+        "last": "2026-10-13T13:12:16.423Z"
       },
       "ampel": {
         "level": "red",
@@ -89288,6 +90526,99 @@
       "screenshot": null
     },
     {
+      "id": "open-elevation",
+      "name": "opencli-open-elevation",
+      "domain": "api.open-elevation.com",
+      "description": "Open-Elevation: Geländehöhe (m ü. M.) zu Koordinaten auf Basis SRTM, Open-Source-API ohne Key.",
+      "category": "geo",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/open-elevation",
+      "records": null,
+      "commands": [],
+      "logo": "api.open-elevation.com.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:42.804Z",
+      "e2ePassed": 2,
+      "e2eTotal": 2,
+      "kpi": {
+        "stability": 100,
+        "p50": 346,
+        "p95": 346,
+        "throughput": 173.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.open-elevation.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/open-elevation/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/open-elevation/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/open-elevation/samples"
+      },
+      "source": "https://api.open-elevation.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:42.804Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "open-er-api",
       "name": "open-er-api",
       "path": "finance/open-er-api",
@@ -92007,14 +93338,14 @@
       "commands": [],
       "logo": "tiles.openfreemap.org.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T09:07:10.668Z",
+      "lastRun": "2026-10-13T13:12:14.406Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 2148,
-        "p95": 3998,
-        "throughput": 27.9,
+        "p50": 1914,
+        "p95": 2353,
+        "throughput": 31.3,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -92023,9 +93354,9 @@
       "loginRequired": false,
       "captcha": false,
       "apiAvailable": true,
-      "apiVersion": "TileJSON 3.0",
+      "apiVersion": "MapLibre Style Spec (GitHub)",
       "robots": "allowed",
-      "robotsNote": "tiles.openfreemap.org/robots.txt liefert 403 (kein Regelwerk) → nur TileJSON/Style-Metadaten, keine Kacheln. Drossel ≥2 s.",
+      "robotsNote": "tiles.openfreemap.org robots.txt HTTP 403 → Mirror raw.githubusercontent.com 404=allow. Nur Style-Metadaten, keine Kacheln. Drossel ≥2 s.",
       "incidents": [
         "robots.txt refused (fail-closed, #475): https://tiles.openfreemap.org (robots.txt HTTP 403)",
         "Fehlerfall → Exit 2."
@@ -92072,13 +93403,13 @@
           "captcha": 0,
           "timeout": 0,
           "offline": 0,
-          "robots": 1,
+          "robots": 2,
           "error": 0
         },
         "captchaTypes": {},
-        "observations": 1,
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T09:07:10.668Z"
+        "last": "2026-10-13T13:12:14.406Z"
       },
       "ampel": {
         "level": "red",
@@ -97382,6 +98713,99 @@
       "screenshot": null
     },
     {
+      "id": "randomuser",
+      "name": "opencli-randomuser",
+      "domain": "randomuser.me",
+      "description": "Random User Generator: synthetische (fiktive) Personen-Testdatensätze für Prototypen, reproduzierbar per Seed, keyless.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/randomuser",
+      "records": null,
+      "commands": [],
+      "logo": "randomuser.me.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:23:27.551Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 497,
+        "p95": 2014,
+        "throughput": 120.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "randomuser.me/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/randomuser/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/randomuser/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/randomuser/samples"
+      },
+      "source": "https://randomuser.me",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:23:27.551Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "rdw-nl",
       "name": "rdw-nl",
       "path": "opendata/rdw-nl",
@@ -98290,7 +99714,7 @@
     },
     {
       "id": "ris",
-      "name": "ris",
+      "name": "opencli-ris",
       "path": "opendata/ris",
       "endpoint": "https://ogd.ris.bka.gv.at/Dokumente",
       "domain": "ogd.ris.bka.gv.at",
@@ -104170,14 +105594,14 @@
       "commands": [],
       "logo": "data.statistik.gv.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T03:54:57.189Z",
-      "e2ePassed": 6,
-      "e2eTotal": 6,
+      "lastRun": "2026-10-13T13:07:25.311Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 1827,
-        "p95": 8911,
-        "throughput": 32.8,
+        "p50": 1407,
+        "p95": 1730,
+        "throughput": 42.6,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -104249,20 +105673,24 @@
           "403": 0,
           "429": 0,
           "ok": 3,
-          "captcha": 0,
+          "captcha": 1,
           "timeout": 0,
           "offline": 0,
           "robots": 0,
           "error": 0
         },
-        "captchaTypes": {},
-        "observations": 3,
+        "captchaTypes": {
+          "eigenes Captcha": 1
+        },
+        "observations": 4,
         "uptime": 100,
-        "last": "2026-10-13T03:54:57.189Z"
+        "last": "2026-10-13T13:07:25.311Z"
       },
       "ampel": {
-        "level": "green",
-        "reasons": []
+        "level": "red",
+        "reasons": [
+          "Captcha"
+        ]
       },
       "screenshot": null
     },
@@ -104281,25 +105709,25 @@
       "commands": [],
       "logo": "data.statistik.gv.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T05:01:59.042Z",
+      "lastRun": "2026-10-13T13:09:35.664Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 1943,
-        "p95": 9086,
-        "throughput": 30.9,
+        "p50": 2700,
+        "p95": 4082,
+        "throughput": 22.2,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
         "blocked": false
       },
-      "loginRequired": true,
+      "loginRequired": false,
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "OGD Austria Metadata 2.3",
       "robots": "allowed",
-      "robotsNote": "data.statistik.gv.at/robots.txt liefert HTML-Startseite (keine robots-Regeln). OGD CC BY 4.0. Gedrosselt ≥2 s. Abbruch bei 403/429/Captcha.",
+      "robotsNote": "Suche: www.data.gv.at robots.txt 404=allow. OGD-CSV data.statistik.gv.at: HTML/pruefen (#475) – Fälle bleiben blocked.",
       "incidents": [
         "robots.txt pruefen (fail-closed, #475): https://data.statistik.gv.at (HTML/Captcha statt robots.txt)"
       ],
@@ -104308,7 +105736,7 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/statistik-austria-aussenhandel/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statistik-austria-aussenhandel/samples"
       },
-      "source": "https://data.statistik.gv.at",
+      "source": "https://data.statistik.gv.at / www.data.gv.at hub (Suche)",
       "live": null,
       "server": null,
       "sourceType": "Behörde",
@@ -104316,7 +105744,7 @@
         "access": "offene API ohne Key",
         "apiOpen": true,
         "apiKey": false,
-        "ogdDump": false,
+        "ogdDump": true,
         "reJson": false,
         "feed": false,
         "mcp": true,
@@ -104347,22 +105775,24 @@
           "403": 0,
           "429": 0,
           "ok": 1,
-          "captcha": 0,
+          "captcha": 1,
           "timeout": 0,
           "offline": 0,
           "robots": 0,
           "error": 0
         },
-        "captchaTypes": {},
-        "observations": 1,
+        "captchaTypes": {
+          "eigenes Captcha": 1
+        },
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T05:01:59.042Z"
+        "last": "2026-10-13T13:09:35.664Z"
       },
       "ampel": {
-        "level": "yellow",
+        "level": "red",
         "reasons": [
-          "Gates: 1 Fehler",
-          "Login nötig"
+          "Captcha",
+          "Gates: 1 Fehler"
         ]
       },
       "screenshot": null
@@ -104382,14 +105812,14 @@
       "commands": [],
       "logo": "data.statistik.gv.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T05:01:11.799Z",
+      "lastRun": "2026-10-13T13:09:35.044Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 1192,
-        "p95": 7531,
-        "throughput": 50.3,
+        "p50": 2645,
+        "p95": 3502,
+        "throughput": 22.7,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -104400,7 +105830,7 @@
       "apiAvailable": true,
       "apiVersion": "OGD Austria Metadata 2.3",
       "robots": "allowed",
-      "robotsNote": "data.statistik.gv.at/robots.txt liefert HTML-Startseite (keine robots-Regeln). OGD CC BY 4.0. Gedrosselt ≥2 s. Abbruch bei 403/429/Captcha.",
+      "robotsNote": "Suche: www.data.gv.at robots.txt 404=allow. OGD-CSV data.statistik.gv.at: HTML/pruefen (#475) – Fälle bleiben blocked.",
       "incidents": [
         "robots.txt pruefen (fail-closed, #475): https://data.statistik.gv.at (HTML/Captcha statt robots.txt)"
       ],
@@ -104409,7 +105839,7 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/statistik-austria-baupreis/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statistik-austria-baupreis/samples"
       },
-      "source": "https://data.statistik.gv.at",
+      "source": "https://data.statistik.gv.at / www.data.gv.at hub (Suche)",
       "live": null,
       "server": null,
       "sourceType": "Behörde",
@@ -104417,7 +105847,7 @@
         "access": "offene API ohne Key",
         "apiOpen": true,
         "apiKey": false,
-        "ogdDump": false,
+        "ogdDump": true,
         "reJson": false,
         "feed": false,
         "mcp": true,
@@ -104448,20 +105878,23 @@
           "403": 0,
           "429": 0,
           "ok": 1,
-          "captcha": 0,
+          "captcha": 1,
           "timeout": 0,
           "offline": 0,
           "robots": 0,
           "error": 0
         },
-        "captchaTypes": {},
-        "observations": 1,
+        "captchaTypes": {
+          "eigenes Captcha": 1
+        },
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T05:01:11.799Z"
+        "last": "2026-10-13T13:09:35.044Z"
       },
       "ampel": {
-        "level": "yellow",
+        "level": "red",
         "reasons": [
+          "Captcha",
           "Gates: 1 Fehler"
         ]
       },
@@ -104482,14 +105915,14 @@
       "commands": [],
       "logo": "data.statistik.gv.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T05:00:09.330Z",
+      "lastRun": "2026-10-13T13:09:33.761Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 3098,
-        "p95": 8160,
-        "throughput": 19.4,
+        "p50": 1287,
+        "p95": 3538,
+        "throughput": 46.6,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -104500,7 +105933,7 @@
       "apiAvailable": true,
       "apiVersion": "OGD Austria Metadata 2.3",
       "robots": "allowed",
-      "robotsNote": "data.statistik.gv.at/robots.txt liefert HTML-Startseite (keine robots-Regeln). OGD CC BY 4.0. Gedrosselt ≥2 s. Abbruch bei 403/429/Captcha.",
+      "robotsNote": "Suche: www.data.gv.at robots.txt 404=allow. OGD-CSV data.statistik.gv.at: HTML/pruefen (#475) – Fälle bleiben blocked.",
       "incidents": [
         "robots.txt pruefen (fail-closed, #475): https://data.statistik.gv.at (HTML/Captcha statt robots.txt)"
       ],
@@ -104509,7 +105942,7 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/statistik-austria-haeuserpreis/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statistik-austria-haeuserpreis/samples"
       },
-      "source": "https://data.statistik.gv.at",
+      "source": "https://data.statistik.gv.at / www.data.gv.at hub (Suche)",
       "live": null,
       "server": null,
       "sourceType": "Behörde",
@@ -104517,7 +105950,7 @@
         "access": "offene API ohne Key",
         "apiOpen": true,
         "apiKey": false,
-        "ogdDump": false,
+        "ogdDump": true,
         "reJson": false,
         "feed": false,
         "mcp": true,
@@ -104548,20 +105981,23 @@
           "403": 0,
           "429": 0,
           "ok": 1,
-          "captcha": 0,
+          "captcha": 1,
           "timeout": 0,
           "offline": 0,
           "robots": 0,
           "error": 0
         },
-        "captchaTypes": {},
-        "observations": 1,
+        "captchaTypes": {
+          "eigenes Captcha": 1
+        },
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T05:00:09.330Z"
+        "last": "2026-10-13T13:09:33.761Z"
       },
       "ampel": {
-        "level": "yellow",
+        "level": "red",
         "reasons": [
+          "Captcha",
           "Gates: 1 Fehler"
         ]
       },
@@ -104582,14 +106018,14 @@
       "commands": [],
       "logo": "data.statistik.gv.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T05:01:45.890Z",
+      "lastRun": "2026-10-13T13:09:35.968Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 1541,
-        "p95": 12356,
-        "throughput": 38.9,
+        "p50": 3005,
+        "p95": 4018,
+        "throughput": 20,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -104600,7 +106036,7 @@
       "apiAvailable": true,
       "apiVersion": "OGD Austria Metadata 2.3",
       "robots": "allowed",
-      "robotsNote": "data.statistik.gv.at/robots.txt liefert HTML-Startseite (keine robots-Regeln). OGD CC BY 4.0. Gedrosselt ≥2 s. Abbruch bei 403/429/Captcha.",
+      "robotsNote": "Suche: www.data.gv.at robots.txt 404=allow. OGD-CSV data.statistik.gv.at: HTML/pruefen (#475) – Fälle bleiben blocked.",
       "incidents": [
         "robots.txt pruefen (fail-closed, #475): https://data.statistik.gv.at (HTML/Captcha statt robots.txt)"
       ],
@@ -104609,7 +106045,7 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/statistik-austria-kfz/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statistik-austria-kfz/samples"
       },
-      "source": "https://data.statistik.gv.at",
+      "source": "https://data.statistik.gv.at / www.data.gv.at hub (Suche)",
       "live": null,
       "server": null,
       "sourceType": "Behörde",
@@ -104617,7 +106053,7 @@
         "access": "offene API ohne Key",
         "apiOpen": true,
         "apiKey": false,
-        "ogdDump": false,
+        "ogdDump": true,
         "reJson": false,
         "feed": false,
         "mcp": true,
@@ -104648,20 +106084,23 @@
           "403": 0,
           "429": 0,
           "ok": 1,
-          "captcha": 0,
+          "captcha": 1,
           "timeout": 0,
           "offline": 0,
           "robots": 0,
           "error": 0
         },
-        "captchaTypes": {},
-        "observations": 1,
+        "captchaTypes": {
+          "eigenes Captcha": 1
+        },
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T05:01:45.890Z"
+        "last": "2026-10-13T13:09:35.968Z"
       },
       "ampel": {
-        "level": "yellow",
+        "level": "red",
         "reasons": [
+          "Captcha",
           "Gates: 1 Fehler"
         ]
       },
@@ -104682,14 +106121,14 @@
       "commands": [],
       "logo": "data.statistik.gv.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T05:01:29.842Z",
+      "lastRun": "2026-10-13T13:09:33.962Z",
       "e2ePassed": 2,
       "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 2536,
-        "p95": 13391,
-        "throughput": 23.7,
+        "p50": 1303,
+        "p95": 3772,
+        "throughput": 46,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -104700,7 +106139,7 @@
       "apiAvailable": true,
       "apiVersion": "OGD Austria Metadata 2.3",
       "robots": "allowed",
-      "robotsNote": "data.statistik.gv.at/robots.txt liefert HTML-Startseite (keine robots-Regeln). OGD CC BY 4.0. Gedrosselt ≥2 s. Abbruch bei 403/429/Captcha.",
+      "robotsNote": "Suche: www.data.gv.at robots.txt 404=allow. OGD-CSV data.statistik.gv.at: HTML/pruefen (#475) – Fälle bleiben blocked.",
       "incidents": [
         "robots.txt pruefen (fail-closed, #475): https://data.statistik.gv.at (HTML/Captcha statt robots.txt)"
       ],
@@ -104709,7 +106148,7 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/statistik-austria-tourismus/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statistik-austria-tourismus/samples"
       },
-      "source": "https://data.statistik.gv.at",
+      "source": "https://data.statistik.gv.at / www.data.gv.at hub (Suche)",
       "live": null,
       "server": null,
       "sourceType": "Behörde",
@@ -104717,7 +106156,7 @@
         "access": "offene API ohne Key",
         "apiOpen": true,
         "apiKey": false,
-        "ogdDump": false,
+        "ogdDump": true,
         "reJson": false,
         "feed": false,
         "mcp": true,
@@ -104748,20 +106187,23 @@
           "403": 0,
           "429": 0,
           "ok": 1,
-          "captcha": 0,
+          "captcha": 1,
           "timeout": 0,
           "offline": 0,
           "robots": 0,
           "error": 0
         },
-        "captchaTypes": {},
-        "observations": 1,
+        "captchaTypes": {
+          "eigenes Captcha": 1
+        },
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T05:01:29.842Z"
+        "last": "2026-10-13T13:09:33.962Z"
       },
       "ampel": {
-        "level": "yellow",
+        "level": "red",
         "reasons": [
+          "Captcha",
           "Gates: 1 Fehler"
         ]
       },
@@ -104782,14 +106224,14 @@
       "commands": [],
       "logo": "data.statistik.gv.at.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T04:59:55.950Z",
-      "e2ePassed": 3,
-      "e2eTotal": 3,
+      "lastRun": "2026-10-13T13:09:36.156Z",
+      "e2ePassed": 2,
+      "e2eTotal": 2,
       "kpi": {
         "stability": 100,
-        "p50": 10225,
-        "p95": 10409,
-        "throughput": 5.9,
+        "p50": 3108,
+        "p95": 4131,
+        "throughput": 19.3,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -104800,7 +106242,7 @@
       "apiAvailable": true,
       "apiVersion": "OGD Austria Metadata 2.3",
       "robots": "allowed",
-      "robotsNote": "data.statistik.gv.at/robots.txt liefert HTML-Startseite (keine robots-Regeln). OGD CC BY 4.0. Gedrosselt ≥2 s. Abbruch bei 403/429/Captcha.",
+      "robotsNote": "Suche: www.data.gv.at robots.txt 404=allow. OGD-CSV data.statistik.gv.at: HTML/pruefen (#475) – Fälle bleiben blocked.",
       "incidents": [
         "robots.txt pruefen (fail-closed, #475): https://data.statistik.gv.at (HTML/Captcha statt robots.txt)"
       ],
@@ -104809,7 +106251,7 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/statistik-austria-vpi/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statistik-austria-vpi/samples"
       },
-      "source": "https://data.statistik.gv.at",
+      "source": "https://data.statistik.gv.at / www.data.gv.at hub (Suche)",
       "live": null,
       "server": null,
       "sourceType": "Behörde",
@@ -104817,7 +106259,7 @@
         "access": "offene API ohne Key",
         "apiOpen": true,
         "apiKey": false,
-        "ogdDump": false,
+        "ogdDump": true,
         "reJson": false,
         "feed": false,
         "mcp": true,
@@ -104848,20 +106290,23 @@
           "403": 0,
           "429": 0,
           "ok": 1,
-          "captcha": 0,
+          "captcha": 1,
           "timeout": 0,
           "offline": 0,
           "robots": 0,
           "error": 0
         },
-        "captchaTypes": {},
-        "observations": 1,
+        "captchaTypes": {
+          "eigenes Captcha": 1
+        },
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T04:59:55.950Z"
+        "last": "2026-10-13T13:09:36.156Z"
       },
       "ampel": {
-        "level": "yellow",
+        "level": "red",
         "reasons": [
+          "Captcha",
           "Gates: 1 Fehler"
         ]
       },
@@ -106887,6 +108332,99 @@
       "screenshot": null
     },
     {
+      "id": "thecolorapi",
+      "name": "opencli-thecolorapi",
+      "domain": "www.thecolorapi.com",
+      "description": "The Color API: Farbkonvertierung (HEX/RGB/HSL/CMYK), Farbname und Farbschemata (Komplementär, Analog, Triade), keyless.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/thecolorapi",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:43.938Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 973,
+        "p95": 1897,
+        "throughput": 61.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "www.thecolorapi.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/thecolorapi/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/thecolorapi/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/thecolorapi/samples"
+      },
+      "source": "https://www.thecolorapi.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:43.938Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "themealdb",
       "name": "opencli-themealdb",
       "path": "international/themealdb",
@@ -106972,6 +108510,99 @@
         "observations": 2,
         "uptime": 100,
         "last": "2026-10-13T11:50:57.310Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "timeapi-io",
+      "name": "opencli-timeapi-io",
+      "domain": "timeapi.io",
+      "description": "TimeAPI.io: aktuelle Uhrzeit je IANA-Zeitzone, Zeitzonen-Liste und Zeitzonen-Info (Sommerzeit, Offset), keyless REST mit OpenAPI.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/timeapi-io",
+      "records": null,
+      "commands": [],
+      "logo": "timeapi.io.png",
+      "paperclip": false,
+      "lastRun": "2026-10-13T14:22:45.966Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1638,
+        "p95": 1985,
+        "throughput": 36.6,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "timeapi.io/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/timeapi-io/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/timeapi-io/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/timeapi-io/samples"
+      },
+      "source": "https://timeapi.io",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T14:22:45.966Z"
       },
       "ampel": {
         "level": "yellow",
@@ -115238,22 +116869,22 @@
       "screenshot": null
     }
   ],
-  "enrichedAt": "2026-10-13T14:19:46.714Z",
+  "enrichedAt": "2026-10-13T15:09:58.525Z",
   "gatesSource": "check_connectors.py --strict (data/gates.snapshot.json)",
   "timeline": [
     {
       "403": 0,
       "429": 0,
       "day": "2026-10-13",
-      "ok": 1272,
-      "captcha": 15,
+      "ok": 1290,
+      "captcha": 23,
       "timeout": 1,
       "offline": 3,
-      "robots": 17,
-      "error": 24
+      "robots": 21,
+      "error": 25
     }
   ],
   "egress": null,
-  "observationsAt": "2026-10-13T14:19:46.905Z",
-  "observationCount": 1345
+  "observationsAt": "2026-10-13T15:09:58.731Z",
+  "observationCount": 1376
 }
