@@ -155,6 +155,11 @@ const listGz = gzipSync(fs.readFileSync(listPath));
 const restPath = path.join(destDir, 'list-rest.json');
 fs.writeFileSync(restPath, JSON.stringify(rest));
 const restGz = gzipSync(fs.readFileSync(restPath));
+// Deep-Link auf eine Detailseite braucht nur die Restfelder dieses einen Connectors (~0,3 KB statt list-rest.json).
+const rDir = path.join(destDir, 'r');
+fs.rmSync(rDir, { recursive: true, force: true });
+fs.mkdirSync(rDir, { recursive: true });
+for (const o of list.connectors) fs.writeFileSync(path.join(rDir, `${o.id}.json`), JSON.stringify(rest.connectors[o.id] || {}));
 
 const extrasOut = {
   growth: extras.growth || [],

@@ -10,11 +10,11 @@ import { absTime, relTime } from '@/lib/kpi';
 
 export const titleOf = (c: Connector) => (c.domain && /\./.test(c.domain) ? c.domain.replace(/^www\./, '') : c.id);
 
-/** Logo-URL: ≤48 px → 96-px-WebP-Thumbnail (scripts/build-logo-thumbs.py), sonst Original. stage 1 = Original (Thumb fehlt). */
+/** Logo-URL: ≤48 px → t/ (96-px-WebP), größer → w/ (≤256-px-WebP), beide aus scripts/build-logo-thumbs.py. stage 1 = Original (WebP fehlt). */
 export function logoSrc(logo: string, size: number, stage = 0): string {
   const base = `${import.meta.env.BASE_URL}logos/`;
   const m = /^(.+)\.(png|jpe?g|webp|ico)$/i.exec(logo);
-  return stage === 0 && size <= 48 && m ? `${base}t/${m[1]}.webp` : `${base}${logo}`;
+  return stage === 0 && m ? `${base}${size <= 48 ? 't' : 'w'}/${m[1]}.webp` : `${base}${logo}`;
 }
 
 /** Nur nahe am Viewport laden: natives loading=lazy holt mobil ~45 Tabellen-Logos (Schwelle 1250–2500 px) und konkurriert mit Daten/LCP. */
