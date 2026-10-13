@@ -4,10 +4,13 @@ import type { Connector } from './types';
 
 export interface ExtraSummary { shot?: string; v?: string; verdict?: string; liveOk?: string; auditAt?: string; llms?: boolean; openapi?: boolean; lic?: string; rc?: number; cmds?: string[]; codeLic?: string }
 export interface AuditRun { case: string; args: string; ok: boolean; exit: number | null; ms: number | null; records: number | null; latestDate: string | null; schemaOk: boolean; schemaErrors: number }
-export interface Sample { name: string; input: unknown; fields: string[]; rows: number | null; body: string }
+export interface Sample { name: string; input: unknown; fields: string[]; types?: Record<string, string>; rows: number | null; body: string }
 export interface Detail {
   audit?: { at: string; verdict: string; liveOk: string; flags: string[]; sourceUrl: string | null; sourceStatus: number | null; sourceMs: number | null; protocolLastRun: string | null; mockFree: boolean; network: boolean; runs: AuditRun[] };
-  version?: string; codeLicense?: string; commit?: { sha: string; at: string; msg: string; repo: string }; changelog?: { sha: string; at: string; msg: string }[];
+  version?: string; codeLicense?: string; deps?: Record<string, string>; engines?: Record<string, string> | null; pkgName?: string; licenseFrom?: string;
+  mx?: { rate_limit?: string; login?: boolean; robots_status?: string; robots?: string; tos?: string; access_chain?: string[]; access_used?: string; schema?: string; data_license?: string; license?: string; license_url?: string; license_evidence?: string; realtime?: boolean };
+  tools?: { name: string; displayName?: string; description?: string; command?: string; parametersSchema?: { properties?: Record<string, { type?: string; description?: string; enum?: unknown[]; default?: unknown }>; required?: string[] } }[];
+  commit?: { sha: string; at: string; msg: string; repo: string }; changelog?: { sha: string; at: string; msg: string }[];
   manifest?: boolean; routes?: { method: string; url: string; kind: string }[]; license?: string; homepage?: string;
   llms?: { host: string; checkedAt: string; robots: string; llmsTxt: string | null; llmsFull: string | null; openapi: string | null; openapiPaths: number | null; mcp: string | null };
   screenshot?: string; screenshotAt?: string; samples?: Sample[]; index?: Record<string, unknown>;

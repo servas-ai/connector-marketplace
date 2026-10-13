@@ -5,3 +5,7 @@ coverage
 reports/
 test-results/
 playwright-report/
+# Aus scripts/build-extras.py (lokal aus Audit/Index/llms erzeugt; vor Build laufen lassen)
+public/x/
+public/manifests/
+*.tsbuildinfo

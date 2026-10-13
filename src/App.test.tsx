@@ -11,9 +11,9 @@ beforeEach(() => { globalThis.fetch = (() => Promise.resolve({ ok: false, json: 
 describe('App v5', () => {
   it('Start: KPI-Leiste mit echter Anzahl, Karten, Suche', async () => {
     at('/');
-    expect(screen.getByTestId('kpi-total')).toHaveTextContent(dataset.count.toLocaleString('de-AT'));
+    expect(screen.getByTestId('kpi-total')).toHaveTextContent(String(dataset.count));
     expect(screen.getByTestId('result-count')).toHaveTextContent(String(dataset.count));
-    expect(screen.getAllByTestId('connector-card')).toHaveLength(48);
+    expect(screen.getAllByTestId('connector-card')).toHaveLength(50);
     fireEvent.change(screen.getByLabelText('Suche'), { target: { value: 'zzzz-nichts' } });
     expect(screen.getByText('Keine Connectoren für diese Filter.')).toBeInTheDocument();
   });
@@ -23,8 +23,7 @@ describe('App v5', () => {
     expect(screen.queryByText(/Live-Märkte/)).toBeNull();
   });
   it('Filter Ampel grün', () => {
-    at('/');
-    fireEvent.change(screen.getByLabelText('Ampel'), { target: { value: 'green' } });
+    at('/?ampel=green');
     expect(screen.getByTestId('result-count')).toHaveTextContent(String(dataset.connectors.filter((c) => c.ampel?.level === 'green').length));
   });
   it('Taxonomie: jede Karte hat eine definierte Kategorie, kaum Sonstige', () => {

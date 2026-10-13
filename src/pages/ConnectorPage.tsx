@@ -10,13 +10,14 @@ import { VERDICT, absTime, fmtMs, lastCheck, relTime, routeCount, successRate } 
 import { agentPrompt, snippets, source } from '@/lib/prompt';
 import { Tabs } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
-import { Table, TBody, TD, TH, THead, TR } from '@/components/ui/table';
 import { AmpelPill, CapIcon, CopyBlock, Kpi, KpiBar, Logo, SectionTitle, When, capWord, titleOf } from '@/components/kit';
 import { Tile } from '@/components/Tile';
+import { ApiReference, buildRoutes } from '@/components/ApiReference';
 import { CommercialBadge, CompliancePanel, EnterpriseBadge } from '@/components/Compliance';
 
 const Row = ({ k, children }: { k: string; children: ReactNode }) => <div className="grid grid-cols-[minmax(8rem,14rem)_1fr] gap-4 border-b py-2.5 text-sm last:border-0"><dt className="text-muted-foreground">{k}</dt><dd className="font-medium">{children ?? '–'}</dd></div>;
 const Ext = ({ href, children }: { href?: string | null; children?: ReactNode }) => (href ? <a href={href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[color:var(--link)] hover:underline">{children ?? href}<ExternalLink size={12} aria-hidden /></a> : <span className="text-muted-foreground">–</span>);
+const P = <span className="text-muted-foreground">— prüfen</span>;
 const Panel = ({ title, children, action }: { title: string; children: ReactNode; action?: ReactNode }) => <section className="rounded-xl border bg-card p-5"><SectionTitle action={action}>{title}</SectionTitle>{children}</section>;
 const origin = (c: Connector) => { try { return new URL(c.source || c.endpoint || `https://${c.domain}`).origin; } catch { return null; } };
 
@@ -30,45 +31,10 @@ function Overview({ c, d }: { c: Connector; d: Detail | null }) {
     <div className="flex flex-col gap-5">
       <Panel title="Auf einen Blick"><dl>
         <Row k="Anbieter">{titleOf(c)}</Row><Row k="Kategorie">{categoryOf(c).label}</Row><Row k="Land">{c.country || '–'}</Row><Row k="Zugriff">{c.interfaces?.access}</Row>
-        <Row k="Version">{d?.version ?? '–'}</Row><Row k="Lizenz">{d?.license ?? 'unbekannt'}</Row><Row k="Quellentyp">{c.sourceType}</Row>
+        <Row k="Version">{d?.version ?? '–'}</Row><Row k="Lizenz">{d?.license ?? '— prüfen'}</Row><Row k="Quellentyp">{c.sourceType}</Row>
       </dl></Panel>
       {(c.covered?.length || c.gaps?.length) ? <Panel title="Abdeckung"><div className="flex flex-wrap gap-1.5">{c.covered?.map((x) => <Badge key={x} variant="success">{x}</Badge>)}{c.gaps?.map((x) => <Badge key={x} variant="outline" className="text-muted-foreground">Lücke: {x}</Badge>)}</div></Panel> : null}
     </div>
-  </div>;
-}
-
-function callOf(x: { name: string; input: unknown }) {
-  const cmd = x.input && typeof x.input === 'object' && 'command' in x.input ? String((x.input as { command: unknown }).command) : '';
-  const base = cmd && !cmd.includes('/') ? cmd : x.name;
-  const full = base.startsWith('node ') ? base : `node bin/cli.js ${base}`;
-  return /--format/.test(full) ? full : `${full} --format json`;
-}
-
-function Routes({ c, d }: { c: Connector; d: Detail | null }) {
-  const runs = d?.audit?.runs ?? [];
-  const smp = d?.samples ?? [];
-  const s = source(c);
-  return <div className="flex flex-col gap-5">
-    <Panel title={`Befehle (${runs.length || c.commands.length})`}>
-      {runs.length ? <Table aria-label="Befehle mit Live-Ergebnis"><THead><TR><TH>Befehl</TH><TH>Status</TH><TH>Zuletzt getestet</TH><TH>Latenz</TH><TH>Datensätze</TH><TH>Datenstand</TH><TH>Schema</TH></TR></THead>
-        <TBody>{runs.map((r) => <TR key={r.case}><TD><code className="text-xs">{r.args}</code></TD><TD><Badge variant={r.ok ? 'success' : 'destructive'}>{r.ok ? 'ok' : `Fehler${r.exit != null ? ` (exit ${r.exit})` : ''}`}</Badge></TD>
-          <TD><When iso={d?.audit?.at} /></TD><TD className="tabular-nums">{fmtMs(r.ms)}</TD><TD className="tabular-nums">{r.records ?? '–'}</TD><TD>{r.latestDate ?? '–'}</TD>
-          <TD>{r.schemaOk ? <Badge variant="success">servas.record.v1</Badge> : <Badge variant="warning">{r.schemaErrors} Abweichungen</Badge>}</TD></TR>)}</TBody></Table>
-        : c.commands.length ? <ul className="flex flex-wrap gap-2">{c.commands.map((x) => <li key={x}><code className="rounded bg-muted px-2 py-1 text-xs">{x}</code></li>)}</ul> : <p className="text-sm text-muted-foreground">Keine einzeln geprüften Befehle gespeichert.</p>}
-      {runs.length > 0 && <p className="mt-3 text-xs text-muted-foreground">Erfolgsquote dieses Audits: {d?.audit?.liveOk} · Quelle {d?.audit?.sourceStatus ?? '–'} in {fmtMs(d?.audit?.sourceMs)}. Eine Tageshistorie je Route gibt es noch nicht.</p>}
-    </Panel>
-    {smp.length > 0 && <Panel title="Beispieldaten je Route">
-      <div className="flex flex-col gap-6">{smp.map((x) => <div key={x.name} data-testid="sample" className="flex flex-col gap-2">
-        <div className="flex flex-wrap items-center gap-2"><h3 className="font-medium">{x.name}</h3>{x.rows != null && <Badge variant="secondary">{x.rows} Zeilen</Badge>}</div>
-        <p className="text-xs text-muted-foreground">Aufruf</p>
-        <CopyBlock label={`Aufruf ${x.name}`} text={`cd ${s.dir}\n${callOf(x)}`} />
-        {x.fields.length > 0 && <><p className="text-xs text-muted-foreground">Felder</p><div className="flex flex-wrap gap-1">{x.fields.map((f) => <code key={f} className="rounded border bg-muted/50 px-1.5 py-0.5 text-xs">{f}</code>)}</div></>}
-        <p className="text-xs text-muted-foreground">Echte Beispielantwort (samples/{x.name}.json, gekürzt)</p>
-        <CopyBlock label={`Beispielantwort ${x.name}`} text={x.body} />
-      </div>)}</div>
-    </Panel>}
-    {(d?.routes?.length ?? 0) > 0 && <Panel title={`HTTP-Routen der Quelle (${d!.routes!.length})`}><Table aria-label="HTTP-Routen"><THead><TR><TH>Methode</TH><TH>URL</TH><TH>Art</TH></TR></THead>
-      <TBody>{d!.routes!.map((r, i) => <TR key={i}><TD><Badge variant="outline">{r.method}</Badge></TD><TD className="font-mono text-xs break-all">{r.url}</TD><TD className="text-xs">{r.kind}</TD></TR>)}</TBody></Table></Panel>}
   </div>;
 }
 
@@ -110,7 +76,22 @@ function Dev({ c, d }: { c: Connector; d: Detail | null }) {
       <Row k="Webserver / CMS">{[srv?.webserver, srv?.cms, srv?.poweredBy].filter(Boolean).join(' · ') || '–'}</Row><Row k="Technik">{srv?.tech?.join(', ') || '–'}</Row>
       <Row k="TLS">{srv?.tlsIssuer ? `${srv.tlsIssuer}, gültig bis ${srv.tlsNotAfter?.slice(0, 10)}` : '–'}</Row><Row k="HSTS / CSP">{srv ? `${capWord(srv.hsts)} / ${capWord(srv.csp)}` : '–'}</Row>
     </dl></Panel>
-    <Panel title="Manifest">{d?.manifest ? (man.data ? <CopyBlock label="Manifest-JSON" text={JSON.stringify(man.data, null, 2)} /> : <p className="text-sm text-muted-foreground">Lädt …</p>) : <p className="text-sm text-muted-foreground">Kein Manifest gespeichert.</p>}</Panel>
+    <Panel title="Auth, Limits & robots"><dl>
+      <Row k="Auth">{d?.mx?.login != null ? (d.mx.login ? 'Login nötig' : 'keine (ohne Login/Key)') : c.loginRequired != null ? (c.loginRequired ? 'Login nötig' : 'keine') : P}</Row>
+      <Row k="Rate-Limit">{d?.mx?.rate_limit ?? P}</Row>
+      <Row k="robots-Status">{d?.mx?.robots_status ?? c.robots}</Row><Row k="robots-Notiz">{d?.mx?.robots ?? c.robotsNote ?? P}</Row>
+      <Row k="Terms (ToS)">{d?.mx?.tos ?? P}</Row>
+      <Row k="Zugriffskette">{d?.mx?.access_chain?.length ? <span className="flex flex-wrap gap-1">{d.mx.access_chain.map((x) => <Badge key={x} variant={x === d.mx?.access_used ? 'default' : 'outline'} className="font-mono">{x}</Badge>)}</span> : P}</Row>
+      <Row k="Echtzeit">{d?.mx?.realtime != null ? (d.mx.realtime ? 'ja' : 'nein') : P}</Row>
+    </dl></Panel>
+    <Panel title="Versionen & Abhängigkeiten"><dl>
+      <Row k="Paket">{d?.pkgName ? <code className="text-xs">{d.pkgName}</code> : P}</Row><Row k="Version">{d?.version ? `v${d.version}` : P}</Row>
+      <Row k="Manifest-apiVersion">{man.data && 'apiVersion' in man.data ? String(man.data.apiVersion) : P}</Row><Row k="Ausgabeschema">{d?.mx?.schema ?? 'servas.record.v1'}</Row>
+      <Row k="Node">{d?.engines?.node ?? P}</Row>
+      <Row k="Dependencies">{d?.deps ? (Object.keys(d.deps).length ? <span className="flex flex-wrap gap-1">{Object.entries(d.deps).map(([n, v]) => <Badge key={n} variant="secondary" className="font-mono">{n}@{v}</Badge>)}</span> : 'keine (nur Node-Standardbibliothek)') : P}</Row>
+      <Row k="Changelog">{d?.changelog?.length ? <ol className="flex flex-col gap-1 text-xs font-normal">{d.changelog.slice(0, 5).map((x) => <li key={x.sha}><code className="text-muted-foreground">{x.sha}</code> {x.msg}</li>)}</ol> : P}</Row>
+    </dl></Panel>
+    <section className="rounded-xl border bg-card p-5 lg:col-span-2"><details><summary className="cursor-pointer font-semibold">Manifest-Rohdaten (JSON)</summary><div className="mt-3">{d?.manifest ? (man.data ? <CopyBlock label="Manifest-JSON" text={JSON.stringify(man.data, null, 2)} /> : <p className="text-sm text-muted-foreground">Lädt …</p>) : <p className="text-sm text-muted-foreground">— prüfen: kein Manifest gespeichert.</p>}</div></details></section>
   </div>;
 }
 
@@ -160,7 +141,7 @@ function ConnectorView({ id }: { id: string }) {
   const similar = dataset.connectors.filter((x) => x.id !== c.id && categoryOf(x).id === cat.id && x.ampel?.level === 'green').slice(0, 3);
   const tabs = [
     { id: 'overview', label: 'Übersicht', icon: <LayoutGrid size={15} aria-hidden />, content: <Overview c={c} d={d} /> },
-    { id: 'routes', label: 'Routes', icon: <RouteIcon size={15} aria-hidden />, content: <Routes c={c} d={d} /> },
+    { id: 'routes', label: 'Routes', icon: <RouteIcon size={15} aria-hidden />, content: <ApiReference c={c} d={d} /> },
     ...(d?.screenshot ? [{ id: 'shots', label: 'Screenshots', icon: <Camera size={15} aria-hidden />, content: <Shots c={c} d={d} /> }] : []),
     { id: 'install', label: 'Installieren', icon: <Bot size={15} aria-hidden />, content: <Install c={c} d={d} /> },
     { id: 'dev', label: 'Dev', icon: <Code2 size={15} aria-hidden />, content: <Dev c={c} d={d} /> },
@@ -188,7 +169,7 @@ function ConnectorView({ id }: { id: string }) {
         <Kpi label="Latenz p50 / p95" value={fmtMs(c.kpi?.p50)} sub={`p95 ${fmtMs(c.kpi?.p95)}`} />
         <Kpi label="Letzte Prüfung" value={relTime(lastCheck(c))} sub={absTime(lastCheck(c))} />
         <Kpi label="Datenfrische" value={d?.audit?.runs.map((r) => r.latestDate).filter(Boolean).sort().pop() ?? '–'} sub="jüngstes Datum in den Daten" />
-        <Kpi label="Routen" value={d?.routes?.length || routeCount(c) || '–'} sub={`${d?.audit?.runs.length || c.commands.length} Befehle geprüft`} />
+        <Kpi label="Routes" value={d ? buildRoutes(c, d).length + (d.routes?.length ?? 0) : routeCount(c) || '–'} sub={d ? `${buildRoutes(c, d).length} Commands · ${d.routes?.length ?? 0} HTTP` : 'lädt …'} />
       </KpiBar>
       <Tabs tabs={tabs} value={tab} onChange={setTab} />
       {similar.length > 0 && <section><SectionTitle>Mehr aus {cat.label}</SectionTitle><div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">{similar.map((x) => <Tile key={x.id} c={x} />)}</div></section>}

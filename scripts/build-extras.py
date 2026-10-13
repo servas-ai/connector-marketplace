@@ -8,7 +8,7 @@ Quellen (alle lokal, keine Netzabfragen):
   --mono    Checkout opencli-connectors (Version + Commit für Mono-Repo-Connectoren, git origin/main)
 Nur echte Werte: Fehlt eine Quelle, bleibt das Feld weg (UI zeigt dann "–" bzw. blendet aus).
 """
-import argparse, json, os, shutil, subprocess, glob
+import argparse, re, json, os, shutil, subprocess, glob
 from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -59,7 +59,7 @@ for cid, c in ids.items():
     if rel and os.path.isdir(a.mono):
         pk = git(a.mono, 'show', f'origin/main:{rel}/package.json')
         if pk:
-            try: e['version'] = json.loads(pk).get('version'); e['codeLicense'] = json.loads(pk).get('license')
+            try: pj = json.loads(pk); e['version'] = pj.get('version'); e['codeLicense'] = pj.get('license'); e['deps'] = pj.get('dependencies') or {}; e['engines'] = pj.get('engines'); e['pkgName'] = pj.get('name')
             except Exception: pass
         lg = git(a.mono, 'log', '-1', '--format=%H|%cI|%s', 'origin/main', '--', rel)
         if lg:
@@ -71,7 +71,7 @@ for cid, c in ids.items():
         rd = repo_dir if repo_dir and os.path.isdir(repo_dir) else f'/workspace/opencli-{cid}'
         man = None
         if os.path.isdir(rd):
-            try: pj = json.load(open(os.path.join(rd, 'package.json'))); e['version'] = pj.get('version'); e['codeLicense'] = pj.get('license')
+            try: pj = json.load(open(os.path.join(rd, 'package.json'))); e['version'] = pj.get('version'); e['codeLicense'] = pj.get('license'); e['deps'] = pj.get('dependencies') or {}; e['engines'] = pj.get('engines'); e['pkgName'] = pj.get('name')
             except Exception: pass
             lg = git(rd, 'log', '-1', '--format=%H|%cI|%s')
             if lg:
@@ -83,6 +83,9 @@ for cid, c in ids.items():
                 if os.path.exists(p): man = open(p).read(); break
     if man:
         try:
+            mj = json.loads(man); xs = mj.get('x-servas') or {}
+            e['mx'] = {k: xs.get(k) for k in ('rate_limit', 'login', 'robots_status', 'robots', 'tos', 'access_chain', 'access_used', 'schema', 'data_license', 'license', 'license_url', 'license_evidence', 'realtime') if xs.get(k) is not None}
+            e['tools'] = mj.get('tools') or []
             json.dump(json.loads(man), open(os.path.join(ROOT, 'public/manifests', cid + '.json'), 'w'), ensure_ascii=False, indent=2); e['manifest'] = True
         except Exception: pass
     # Beispielantworten aus samples/ (echte, im Test erzeugte Antworten), gekürzt
@@ -103,7 +106,7 @@ for cid, c in ids.items():
         first = rows[0] if isinstance(rows, list) and rows and isinstance(rows[0], dict) else (outp if isinstance(outp, dict) else {})
         if isinstance(rows, list): outp = {**outp, 'rows': rows[:2]} if isinstance(outp, dict) else rows[:2]
         body = json.dumps(outp, ensure_ascii=False, indent=2)
-        smp.append({'name': n[:-5], 'input': j.get('input') if isinstance(j, dict) else None, 'fields': list(first.keys())[:40],
+        smp.append({'name': n[:-5], 'input': j.get('input') if isinstance(j, dict) else None, 'fields': list(first.keys())[:40], 'types': {k: ('null' if v is None else 'array' if isinstance(v, list) else 'object' if isinstance(v, dict) else 'boolean' if isinstance(v, bool) else 'number' if isinstance(v, (int, float)) else 'string') for k, v in list(first.items())[:40]},
                     'rows': len(rows) if isinstance(rows, list) else None, 'body': body[:2500] + ('\n…' if len(body) > 2500 else '')})
     if smp: e['samples'] = smp
     # Index-Felder
@@ -112,6 +115,11 @@ for cid, c in ids.items():
     if x.get('routes'): e['routes'] = x['routes'][:60]
     for k in ('license', 'homepage'):
         if x.get(k): e[k] = x[k]
+    mx = e.get('mx') or {}
+    ml = mx.get('data_license') or mx.get('license')
+    if isinstance(ml, str) and re.match(r'^(unbekannt|unknown|pr[uü]fen|n/?a|-)$', ml.strip(), re.I): ml = None
+    if not e.get('license') and ml:
+        e['license'] = ml; e['licenseFrom'] = 'Manifest x-servas'
     # llms.txt je Host (Domain + Routen-Hosts)
     hosts = [c.get('domain')] + [host(u) for u in (c.get('urls') or []) + [r.get('url') for r in e.get('routes', [])]]
     for h in dict.fromkeys(filter(None, hosts)):

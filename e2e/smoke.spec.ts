@@ -34,9 +34,9 @@ for (const theme of ['light', 'dark'] as const) for (const [name, hash] of pages
 
 test('Start: keine fehlenden Logos auf den ersten Karten, KPI = count', async ({ page }) => {
   await page.goto('#/');
-  await expect(page.getByTestId('kpi-total')).toContainText(data.count.toLocaleString('de-AT'));
+  await expect(page.getByTestId('kpi-total')).toContainText(String(data.count));
   const cards = page.getByTestId('connector-card');
-  await expect(cards).toHaveCount(48);
+  await expect(cards).toHaveCount(50);
   for (const img of await page.getByTestId('logo').all()) { await img.scrollIntoViewIfNeeded(); expect(await img.evaluate((i: HTMLImageElement) => i.naturalWidth)).toBeGreaterThan(0); }
 });
 
