@@ -1,10 +1,10 @@
 import { NavLink, Navigate, Route, Routes, Link, useParams } from 'react-router-dom';
-import { lazy, Suspense, useState } from 'react';
+import { lazy, startTransition, Suspense, useEffect, useState, type ReactNode } from 'react';
 import { BarChart3, Blocks, Bot, Columns3, Compass, Moon, Sun } from 'lucide-react';
 import { Home } from '@/pages/Home';
 import { cn } from '@/lib/utils';
 import { CommandSearch } from '@/components/CommandSearch';
-import { dataset } from '@/lib/data';
+import { dataset, isRestReady, loadRest, onRest } from '@/lib/data';
 
 const ConnectorPage = lazy(() => import('@/pages/ConnectorPage').then((m) => ({ default: m.ConnectorPage })));
 const Compare = lazy(() => import('@/pages/Compare').then((m) => ({ default: m.Compare })));
@@ -20,7 +20,20 @@ function ThemeToggle() {
 const NAV = [['/', 'Entdecken', Compass], ['/compare', 'Vergleich', Columns3], ['/dashboard', 'Statistik', BarChart3], ['/agent', 'Für Agenten', Bot]] as const;
 const Old = () => { const { id } = useParams(); return <Navigate to={`/c/${id}`} replace />; };
 
+const Loading = () => <div className="p-10 text-center text-muted-foreground">Lädt …</div>;
+/** Seiten außer Home brauchen list-rest.json (Beschreibung, Detail-KPIs) — bis dahin derselbe Fallback wie Suspense. */
+function NeedRest({ children }: { children: ReactNode }) {
+  const ready = isRestReady();
+  useEffect(() => { if (!ready) void loadRest(); }, [ready]);
+  return ready ? children : <Loading />;
+}
+
 export function App() {
+  const [, setRestTick] = useState(0);
+  // Nachgeladene Restfelder (Suche/Tooltips) als unterbrechbare Transition rendern — kein Long Task nach dem ersten Paint.
+  useEffect(() => onRest(() => startTransition(() => setRestTick((n) => n + 1))), []);
+  // Startseite: Restfelder erst nach dem ersten Paint holen (Effekt läuft nach Commit, rAF+Timeout nach dem Frame) — konkurriert sonst mit LCP.
+  useEffect(() => { if (isRestReady()) return; const id = requestAnimationFrame(() => setTimeout(() => { void loadRest(); }, 0)); return () => cancelAnimationFrame(id); }, []);
   return (
     <div className="min-h-screen">
       <a href="#main" className="sr-only focus:not-sr-only">Zum Inhalt</a>
@@ -32,9 +45,9 @@ export function App() {
           <ThemeToggle />
         </div>
       </header>
-      <main id="main" className="mx-auto min-h-screen max-w-7xl px-4 py-8"><Suspense fallback={<div className="p-10 text-center text-muted-foreground">Lädt …</div>}><Routes>
-        <Route path="/" element={<Home />} /><Route path="/alle" element={<Navigate to="/" replace />} /><Route path="/c/:id" element={<ConnectorPage />} /><Route path="/c/:id/technik" element={<Old />} />
-        <Route path="/dashboard" element={<Dashboard />} /><Route path="/compare" element={<Compare />} /><Route path="/agent" element={<Agent />} /></Routes></Suspense></main>
+      <main id="main" className="mx-auto min-h-screen max-w-7xl px-4 py-8"><Suspense fallback={<Loading />}><Routes>
+        <Route path="/" element={<Home />} /><Route path="/alle" element={<Navigate to="/" replace />} /><Route path="/c/:id" element={<NeedRest><ConnectorPage /></NeedRest>} /><Route path="/c/:id/technik" element={<Old />} />
+        <Route path="/dashboard" element={<NeedRest><Dashboard /></NeedRest>} /><Route path="/compare" element={<NeedRest><Compare /></NeedRest>} /><Route path="/agent" element={<NeedRest><Agent /></NeedRest>} /></Routes></Suspense></main>
       <footer className="mx-auto max-w-7xl border-t px-4 py-6 text-xs text-muted-foreground">servas-ai · read-only Katalog · Daten aus <a className="underline" href={`https://github.com/${dataset.sourceRepo}`}>opencli-connectors</a> · Stand {dataset.sourceGeneratedAt} · <a className="underline" href={`${import.meta.env.BASE_URL}llms.txt`}>llms.txt</a> · Lizenz- und Compliance-Angaben automatisch abgeleitet, keine Rechtsberatung</footer>
     </div>
   );

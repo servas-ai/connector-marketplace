@@ -1,3 +1,4 @@
+import { extra } from '@/lib/extras';
 import { configure } from '@testing-library/react';
 configure({ asyncUtilTimeout: 90000 });
 import { fireEvent, render, screen } from '@testing-library/react';
@@ -38,7 +39,9 @@ describe('App v5', () => {
     at(`/c/${c.id}`);
     expect(await screen.findByTestId('ampel-badge')).toBeInTheDocument();
     expect(screen.getAllByRole('tab').map((t) => t.textContent)).toEqual(expect.arrayContaining(['Übersicht', 'Routes', 'Installieren', 'Dev', 'Tests & Verlauf', 'Compliance & Lizenz', 'Alle Felder']));
-    expect(screen.queryByRole('tab', { name: 'Screenshots' })).toBeNull(); // ohne geladene Detaildaten kein Screenshot-Tab
+    // Screenshot-Tab hängt am extras-Flag (nicht an x/<id>.json) → Tab-Leiste verschiebt sich nicht beim Nachladen (CLS).
+    if (extra(c).shot) expect(screen.getByRole('tab', { name: 'Screenshots' })).toBeInTheDocument();
+    else expect(screen.queryByRole('tab', { name: 'Screenshots' })).toBeNull();
     expect(screen.getByTestId('capabilities').querySelectorAll('li')).toHaveLength(10);
     fireEvent.click(screen.getByRole('button', { name: /Installieren/ }));
     expect(screen.getByTestId('agent-prompt')).toHaveTextContent('servas.record.v1');
