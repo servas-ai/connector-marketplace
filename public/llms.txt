@@ -1,6 +1,6 @@
 # servas-ai Connector Marketplace
 
-> Katalog von 1709 read-only Datenconnectoren (MCP, CLI, HTTP) für öffentliche Quellen, 163 mit grüner Ampel. Ausgabe einheitlich im Schema servas.record.v1. Stand 2026-10-13 22:56 UTC.
+> Katalog von 1779 read-only Datenconnectoren (MCP, CLI, HTTP) für öffentliche Quellen, 166 mit grüner Ampel. Ausgabe einheitlich im Schema servas.record.v1. Stand 2026-10-13 23:20 UTC.
 
 - Quelle: https://github.com/servas-ai/opencli-connectors
 - Katalog: https://servas-ai.github.io/connector-marketplace/
@@ -72,6 +72,7 @@
 - [fiscaldata](https://servas-ai.github.io/connector-marketplace/#/c/fiscaldata): Durchschnittszinsen der US-Staatsschulden, Treasury-Wechselkurse und Gesamtverschuldung (FiscalData-API). Ohne Key. (Ampel green, AT)
 - [frankfurter](https://servas-ai.github.io/connector-marketplace/#/c/frankfurter): Frankfurter API (EZB-Referenzkurse): aktuelle und historische FX-Kurse ohne Login/Key. Basis EUR. (Ampel green, AT)
 - [free-exercise-db](https://servas-ai.github.io/connector-marketplace/#/c/free-exercise-db): Offene Übungsdatenbank (~870 Kraft-/Fitnessübungen) mit Muskelgruppen, Equipment, Level, Anleitung und Bildern aus yuhonas/free-exercise-db. Ohne Login. Nutze d (Ampel green, AT)
+- [gateio](https://servas-ai.github.io/connector-marketplace/#/c/gateio): Krypto-Ticker und Kerzen von Gate.io über die öffentliche Spot-API v4. Ohne Login/Key. (Ampel green, AT)
 - [gbif](https://servas-ai.github.io/connector-marketplace/#/c/gbif): GBIF API v1: Artnamens-Match und Occurrence-Suche (z. B. Land AT). Ohne Login/Key. (Ampel green, AT)
 - [gdacs](https://servas-ai.github.io/connector-marketplace/#/c/gdacs): GDACS (Global Disaster Alert and Coordination System, UN OCHA + EU JRC): aktuelle Ereignisse je Typ (Erdbeben, Zyklone, Überschwemmungen, Vulkane, Dürren, Waldb (Ampel green, AT)
 - [gemini](https://servas-ai.github.io/connector-marketplace/#/c/gemini): Krypto-Ticker und Kerzen der US-Börse Gemini über die öffentliche Market-Data-API. Ohne Login/Key. (Ampel green, AT)
@@ -102,6 +103,7 @@
 - [mfapi](https://servas-ai.github.io/connector-marketplace/#/c/mfapi): MFAPI.in: Suche nach indischen Investmentfonds (AMFI), aktueller NAV und NAV-Historie je Scheme. Ohne Login/Key. (Ampel green, AT)
 - [nasa-eonet](https://servas-ai.github.io/connector-marketplace/#/c/nasa-eonet): NASA EONET API v3: aktuelle Naturereignisse (Waldbrände, Stürme, Vulkane, Eis) mit Koordinaten und Kategorien. Ohne Login/Key. (Ampel green, AT)
 - [nasa-images](https://servas-ai.github.io/connector-marketplace/#/c/nasa-images): NASA Image and Video Library API (images-api.nasa.gov): Bilder/Videos/Audio der NASA suchen und Asset-Dateien je NASA-ID abrufen. Ohne Login/Key. (Ampel green, AT)
+- [nbp](https://servas-ai.github.io/connector-marketplace/#/c/nbp): Tabellen-Kurse (A/B/C), Kurshistorie je Währung und Goldpreis der polnischen Nationalbank. Ohne Key. (Ampel green, PL)
 - [nbu-ua](https://servas-ai.github.io/connector-marketplace/#/c/nbu-ua): NBU NBUStatService: amtliche Hrywnja-Wechselkurse (alle Währungen oder je Code, optional Stichtag) und Kurse ausgewählter Währungen über einen Zeitraum. Ohne Lo (Ampel green, AT)
 - [nhtsa-vpic](https://servas-ai.github.io/connector-marketplace/#/c/nhtsa-vpic): NHTSA vPIC API: Fahrzeugmarken je Typ, Modelle je Marke und VIN-Dekodierung (US-Fahrzeugdatenbank). Ohne Login/Key. (Ampel green, AT)
 - [nina-warnung](https://servas-ai.github.io/connector-marketplace/#/c/nina-warnung): NINA-API des BBK (warnung.bund.de): aktuelle Warnungen aus MoWaS, DWD, KATWARN, BIWAPP, Hochwasser (LHP) und Polizei sowie Übersicht je Quelle. Ohne Login/Key. (Ampel green, DE)
@@ -159,6 +161,7 @@
 - [tvmaze](https://servas-ai.github.io/connector-marketplace/#/c/tvmaze): TVmaze API: TV-Serien suchen, Detail je Serie, Episodenliste und tagesaktuelles TV-Programm je Land. Ohne Login/Key. (Ampel green, AT)
 - [uk-parliament-members](https://servas-ai.github.io/connector-marketplace/#/c/uk-parliament-members): UK Parliament Members API: Abgeordnete (Commons) und Lords suchen, Detail je Mitglied (Partei, Wahlkreis, Status). Ohne Login/Key. (Ampel green, AT)
 - [unhcr](https://servas-ai.github.io/connector-marketplace/#/c/unhcr): api.unhcr.org population/v1: Länderliste und Flüchtlings-/Vertriebenenzahlen nach Herkunftsland und Jahr. Ohne Login/Key. (Ampel green, AT)
+- [upbit](https://servas-ai.github.io/connector-marketplace/#/c/upbit): Krypto-Ticker und Minutenkerzen der koreanischen Börse Upbit (KRW-Märkte). Ohne Login/Key. (Ampel green, AT)
 - [usaspending](https://servas-ai.github.io/connector-marketplace/#/c/usaspending): api.usaspending.gov: Toptier-Agencies und Award-Suche (öffentliche Endpunkte). Ohne Login/Key. (Ampel green, AT)
 - [usgs-earthquakes](https://servas-ai.github.io/connector-marketplace/#/c/usgs-earthquakes): USGS Earthquake Hazards FDSN Event API 1: aktuelle Erdbeben weltweit (Magnitude, Ort, Tiefe, Tsunami-Flag) und Einzel-Events. Ohne Login/Key. (Ampel green, AT)
 - [usgs-volcanoes](https://servas-ai.github.io/connector-marketplace/#/c/usgs-volcanoes): USGS Volcano Hazards Program (HANS Public API): Vulkane mit erhöhter Warnstufe, alle überwachten US-Vulkane, aktuelle Meldungen und Vulkan-Details per Nummer. O (Ampel green, AT)
