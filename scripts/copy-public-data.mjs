@@ -82,9 +82,11 @@ function stripFull(c) {
 function lean(c) {
   const e = extras.connectors?.[c.id] || {};
   const o = {};
-  for (const k of ['id', 'name', 'domain', 'category', 'country', 'logo', 'status', 'loginRequired', 'captcha', 'robots', 'paperclip', 'endpoint', 'sourceType', 'e2ePassed', 'e2eTotal', 'lastRun', 'records']) {
+  for (const k of ['id', 'domain', 'category', 'country', 'logo', 'status', 'loginRequired', 'captcha', 'robots', 'paperclip', 'endpoint', 'sourceType', 'e2ePassed', 'e2eTotal', 'lastRun', 'records']) {
     if (c[k] != null) o[k] = c[k];
   }
+  // Verlustfrei verschlankt: name nur wenn ≠ id; leere incidents/links/signals.counts stellt normalizeDataset() wieder her.
+  if (c.name != null && c.name !== c.id) o.name = c.name;
   const desc = c.description || '';
   if (desc) o.description = desc.length <= 100 ? desc : `${desc.slice(0, 97)}…`;
   if (c.ampel) o.ampel = { level: c.ampel.level, reasons: (c.ampel.reasons || []).slice(0, 2) };
@@ -101,10 +103,8 @@ function lean(c) {
   if (c.server?.country) o.server = { country: c.server.country };
   const n429 = c.signals?.counts?.['429'];
   if (n429) o.signals = { counts: { '429': n429 }, last: c.signals.last ?? null };
-  else if (c.signals) o.signals = { counts: {}, last: c.signals.last ?? null };
+  else if (c.signals) o.signals = { last: c.signals.last ?? null };
   if (Array.isArray(c.commands) && c.commands.length) o.commands = c.commands.slice(0, 3);
-  o.incidents = [];
-  o.links = { skill: null, protocol: null, samples: null };
   o.ent = enterpriseLevel(c, e);
   o.kom = commercial(e.lic);
   return o;

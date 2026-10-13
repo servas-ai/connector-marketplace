@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, CheckCircle2, CircleDashed, Copy, XCircle } from 'lucide-react';
 import type { Connector } from '@/lib/types';
@@ -10,10 +10,34 @@ import { absTime, relTime } from '@/lib/kpi';
 
 export const titleOf = (c: Connector) => (c.domain && /\./.test(c.domain) ? c.domain.replace(/^www\./, '') : c.id);
 
+/** Logo-URL: ≤48 px → 96-px-WebP-Thumbnail (scripts/build-logo-thumbs.py), sonst Original. stage 1 = Original (Thumb fehlt). */
+export function logoSrc(logo: string, size: number, stage = 0): string {
+  const base = `${import.meta.env.BASE_URL}logos/`;
+  const m = /^(.+)\.(png|jpe?g|webp|ico)$/i.exec(logo);
+  return stage === 0 && size <= 48 && m ? `${base}t/${m[1]}.webp` : `${base}${logo}`;
+}
+
+/** Nur nahe am Viewport laden: natives loading=lazy holt mobil ~45 Tabellen-Logos (Schwelle 1250–2500 px) und konkurriert mit Daten/LCP. */
+function useNearViewport(on: boolean) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [near, setNear] = useState(!on || typeof IntersectionObserver === 'undefined');
+  useEffect(() => {
+    if (near || !ref.current) return;
+    const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { setNear(true); io.disconnect(); } }, { rootMargin: '300px 0px' });
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, [near]);
+  return [ref, near] as const;
+}
+
 export function Logo({ c, size = 48, className, eager = false }: { c: Connector; size?: number; className?: string; eager?: boolean }) {
-  const [err, setErr] = useState(false);
+  const [stage, setStage] = useState(0); // 0 Thumb/Original · 1 Original · 2 Fallback-Icon
+  const [ref, near] = useNearViewport(!eager && !!c.logo);
   const cat = categoryOf(c); const Icon = cat.icon; const r = Math.round(size * 0.22);
-  if (c.logo && !err) return <img src={`${import.meta.env.BASE_URL}logos/${c.logo}`} alt="" width={size} height={size} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : undefined} onError={() => setErr(true)} data-testid="logo"
+  const src = c.logo ? logoSrc(c.logo, size, stage) : '';
+  const onError = () => setStage((s) => (s === 0 && src !== logoSrc(c.logo!, size, 1) ? 1 : 2));
+  if (c.logo && !near) return <div ref={ref} aria-hidden data-testid="logo-pending" className={cn('shrink-0 border bg-white', className)} style={{ width: size, height: size, borderRadius: r }} />;
+  if (c.logo && stage < 2) return <img src={src} alt="" width={size} height={size} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : undefined} onError={onError} data-testid="logo"
     className={cn('shrink-0 border bg-white object-contain', className)} style={{ width: size, height: size, borderRadius: r, padding: size * 0.12 }} />;
   return <div aria-hidden data-testid="logo-fallback" className={cn('flex shrink-0 items-center justify-center border text-white', className)} style={{ width: size, height: size, borderRadius: r, background: cat.hue }}><Icon size={size * 0.45} /></div>;
 }

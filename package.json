@@ -6,7 +6,7 @@
   "scripts": {
     "sync": "node scripts/sync-data.mjs",
     "dev": "vite",
-    "build": "node scripts/copy-public-data.mjs && python3 scripts/build-extras.py && node scripts/gen-llms.mjs && tsc -b && vite build",
+    "build": "node scripts/copy-public-data.mjs && python3 scripts/build-extras.py && python3 scripts/build-logo-thumbs.py && node scripts/gen-llms.mjs && tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint . --max-warnings 0",
     "test": "vitest run",
