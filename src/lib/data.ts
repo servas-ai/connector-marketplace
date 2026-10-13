@@ -27,7 +27,7 @@ function normalizeDataset(d: Dataset): Dataset {
     if (!Array.isArray(c.commands)) c.commands = [];
     if (!c.links) c.links = { skill: null, protocol: null, samples: null };
     if (c.name == null) c.name = c.id;
-    if (c.signals && !c.signals.counts) c.signals.counts = {};
+    if (c.signals) { c.signals.counts ??= {}; c.signals.captchaTypes ??= {}; } // Liste trägt nur counts['429']/last
     if (c.ampel && !Array.isArray(c.ampel.reasons)) c.ampel.reasons = [];
   }
   return d;
