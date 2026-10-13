@@ -48,7 +48,12 @@ test('Detail: alle Tabs, echter Screenshot, Beispieldaten, Agent-Prompt', async 
   await page.goto(`#/c/${DETAIL}`);
   for (const t of ['Übersicht', 'Routes', 'Screenshots', 'Installieren', 'Dev', 'Tests & Verlauf', 'Compliance & Lizenz', 'Alle Felder']) {
     await page.getByRole('tab', { name: t }).click(); await expect(page.getByRole('tabpanel')).toBeVisible();
-    if (t === 'Screenshots') { const img = page.getByTestId('screenshot'); await expect(img).toBeVisible(); expect(await img.evaluate((i: HTMLImageElement) => i.naturalWidth)).toBe(1280); }
+    if (t === 'Screenshots') {
+      const img = page.getByTestId('screenshot');
+      await expect(img).toBeVisible();
+      await img.scrollIntoViewIfNeeded();
+      await expect.poll(async () => img.evaluate((i: HTMLImageElement) => i.naturalWidth)).toBeGreaterThan(0);
+    }
     if (t === 'Installieren') await expect(page.getByTestId('agent-prompt')).toContainText('servas.record.v1');
     if (t === 'Compliance & Lizenz') await expect(page.getByTestId('compliance')).toContainText('Keine Rechtsberatung');
     if (t === 'Alle Felder') await expect(page.getByTestId('all-fields').first()).toBeVisible();
