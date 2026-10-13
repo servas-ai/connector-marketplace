@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-13T20:21:53.940Z",
+  "generatedAt": "2026-10-13T20:57:02.698Z",
   "sourceRepo": "servas-ai/opencli-connectors",
-  "sourceGeneratedAt": "2026-10-13 20:04 UTC",
-  "count": 1509,
+  "sourceGeneratedAt": "2026-10-13 20:49 UTC",
+  "count": 1532,
   "connectors": [
     {
       "id": "spusu-at",
@@ -7491,16 +7491,18 @@
     {
       "id": "amiibo-api",
       "name": "opencli-amiibo-api",
+      "path": "tech/amiibo-api",
+      "endpoint": "https://www.amiiboapi.org",
       "domain": "www.amiiboapi.org",
       "description": "AmiiboAPI: Nintendo-Amiibo-Figuren nach Name oder Spielserie (Serie, Charakter, Bild), keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/amiibo-api",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/amiibo-api",
+      "records": 65,
       "commands": [],
-      "logo": null,
-      "paperclip": false,
+      "logo": "www.amiiboapi.org.png",
+      "paperclip": true,
       "lastRun": "2026-10-13T19:49:59.773Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -7542,7 +7544,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -11015,16 +11017,18 @@
     {
       "id": "baconipsum",
       "name": "opencli-baconipsum",
+      "path": "tech/baconipsum",
+      "endpoint": "https://baconipsum.com",
       "domain": "baconipsum.com",
       "description": "Bacon Ipsum: generiert Fleisch-/Bacon-Platzhaltertexte (meat-and-filler), keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/baconipsum",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/baconipsum",
+      "records": 3,
       "commands": [],
       "logo": "baconipsum.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:05.704Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -11066,7 +11070,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -12004,7 +12008,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/international/bcferries-capacity",
       "records": 29,
       "commands": [],
-      "logo": null,
+      "logo": "www.bcferriesapi.ca.png",
       "paperclip": true,
       "lastRun": "2026-10-13T18:59:35.428Z",
       "e2ePassed": 3,
@@ -12192,16 +12196,18 @@
     {
       "id": "bdapis-geo",
       "name": "opencli-bdapis-geo",
+      "path": "geo/bdapis-geo",
+      "endpoint": "https://bdapis.com",
       "domain": "bdapis.com",
       "description": "BD APIs: Divisionen und Distrikte Bangladeschs mit Koordinaten und bengalischen Namen, keyless JSON.",
       "category": "geo",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/bdapis-geo",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/geo/bdapis-geo",
+      "records": 72,
       "commands": [],
       "logo": "bdapis.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:49:52.438Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -12243,7 +12249,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -12285,16 +12291,18 @@
     {
       "id": "beeceptor-echo",
       "name": "opencli-beeceptor-echo",
+      "path": "tech/beeceptor-echo",
+      "endpoint": "https://echo.free.beeceptor.com",
       "domain": "echo.free.beeceptor.com",
       "description": "Beeceptor Free Echo: spiegelt Methode, Pfad, Headers und Body der Anfrage, keyless JSON; llms.txt vorhanden.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/beeceptor-echo",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/beeceptor-echo",
+      "records": 2,
       "commands": [],
       "logo": "echo.free.beeceptor.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:09.996Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -12336,7 +12344,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -12954,18 +12962,16 @@
     {
       "id": "bikeshare-toronto",
       "name": "opencli-bikeshare-toronto",
-      "path": "opendata/bikeshare-toronto",
-      "endpoint": "https://tor.publicbikesystem.net",
       "domain": "tor.publicbikesystem.net",
       "description": "GBFS-Feed (Bike Share Toronto – GBFS): Stationen mit Standort/Kapazität und Echtzeit-Verfügbarkeit von Rädern und freien Stellplätzen. Ohne Login/Key.",
-      "category": "verkehr",
+      "category": "opendata",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/bikeshare-toronto",
-      "records": 2154,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/bikeshare-toronto",
+      "records": null,
       "commands": [],
       "logo": "tor.publicbikesystem.net.png",
-      "paperclip": true,
+      "paperclip": false,
       "lastRun": "2026-10-13T11:51:24.981Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
@@ -12996,7 +13002,7 @@
       "source": "https://tor.publicbikesystem.net",
       "live": null,
       "server": null,
-      "sourceType": "Sonstige",
+      "sourceType": "Behörde",
       "interfaces": {
         "access": "offene API ohne Key",
         "apiOpen": true,
@@ -13007,7 +13013,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": true,
+        "paperclip": false,
         "playwright": false,
         "pdf": false
       },
@@ -15328,6 +15334,102 @@
       "screenshot": null
     },
     {
+      "id": "blocklottos",
+      "name": "opencli-blocklottos",
+      "path": "tech/blocklottos",
+      "endpoint": "https://blocklottos.com",
+      "domain": "blocklottos.com",
+      "description": "Block Lottos API: Jackpot/Stats/Draw-History und Agent-Capabilities (Polygon/Base), OpenAPI 3.1, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/blocklottos",
+      "records": 2,
+      "commands": [],
+      "logo": "blocklottos.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:45.487Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 9541,
+        "p95": 11370,
+        "throughput": 6.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "blocklottos.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2.",
+        "Lizenz/ToS: Block Lottos: öffentliche Lottery-Stats-API, Fair-Use."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/blocklottos/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/blocklottos/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/blocklottos/samples"
+      },
+      "source": "https://blocklottos.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:45.487Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "blockstream",
       "name": "blockstream",
       "path": "finance/blockstream",
@@ -16672,6 +16774,101 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T16:14:13.217Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "bored-appbrewery",
+      "name": "opencli-bored-appbrewery",
+      "path": "tech/bored-appbrewery",
+      "endpoint": "https://bored-api.appbrewery.com",
+      "domain": "bored-api.appbrewery.com",
+      "description": "Bored API (App Brewery Mirror): zufällige Aktivitätsideen und Filter nach Typ, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/bored-appbrewery",
+      "records": 31,
+      "commands": [],
+      "logo": "bored-api.appbrewery.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:47.417Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 407,
+        "p95": 1980,
+        "throughput": 147.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "bored-api.appbrewery.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/bored-appbrewery/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/bored-appbrewery/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/bored-appbrewery/samples"
+      },
+      "source": "https://bored-api.appbrewery.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:47.417Z"
       },
       "ampel": {
         "level": "yellow",
@@ -18388,16 +18585,18 @@
     {
       "id": "bvg-transport",
       "name": "opencli-bvg-transport",
+      "path": "mobility/bvg-transport",
+      "endpoint": "https://v6.bvg.transport.rest",
       "domain": "v6.bvg.transport.rest",
       "description": "BVG HAFAS-Wrapper (transport.rest): Haltestellen-Suche und Stationsdetails für Berlin, keyless JSON.",
       "category": "mobility",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/bvg-transport",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/mobility/bvg-transport",
+      "records": 4,
       "commands": [],
       "logo": "v6.bvg.transport.rest.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:49:55.553Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -18439,7 +18638,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -19240,6 +19439,109 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "cbr-daily-fx",
+      "name": "opencli-cbr-daily-fx",
+      "path": "finance/cbr-daily-fx",
+      "endpoint": "https://www.cbr-xml-daily.ru",
+      "domain": "www.cbr-xml-daily.ru",
+      "description": "CBR XML Daily: tägliche Wechselkurse der russischen Zentralbank als JSON, keyless.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/finance/cbr-daily-fx",
+      "records": 55,
+      "commands": [],
+      "logo": "www.cbr-xml-daily.ru.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:34.519Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1073,
+        "p95": 1987,
+        "throughput": 55.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "daily-json",
+      "robots": "allowed",
+      "robotsNote": "www.cbr-xml-daily.ru/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/cbr-daily-fx/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/cbr-daily-fx/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/cbr-daily-fx/samples"
+      },
+      "source": "https://www.cbr-xml-daily.ru",
+      "live": {
+        "realtime": false,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:34.519Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -22203,6 +22505,101 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "cnpj-ws",
+      "name": "opencli-cnpj-ws",
+      "path": "international/cnpj-ws",
+      "endpoint": "https://cnpj.ws",
+      "domain": "cnpj.ws",
+      "description": "CNPJ.ws Publica API: Firmendaten Brasiliens nach CNPJ (Name, Adresse, CNAE, Kapital), keyless JSON, llms.txt.",
+      "category": "international",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/cnpj-ws",
+      "records": 2,
+      "commands": [],
+      "logo": "cnpj.ws.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:24:57.035Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 796,
+        "p95": 1616,
+        "throughput": 75.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "publica-v1",
+      "robots": "allowed",
+      "robotsNote": "cnpj.ws/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/cnpj-ws/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/cnpj-ws/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/cnpj-ws/samples"
+      },
+      "source": "https://cnpj.ws",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:24:57.035Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -31430,6 +31827,109 @@
       "screenshot": null
     },
     {
+      "id": "dexpaprika-networks",
+      "name": "opencli-dexpaprika-networks",
+      "path": "finance/dexpaprika-networks",
+      "endpoint": "https://api.dexpaprika.com",
+      "domain": "api.dexpaprika.com",
+      "description": "DexPaprika API: DEX-Netzwerke und DEXes mit 24h-Volumen/Txns (Ethereum u.a.), keyless JSON, llms.txt.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/finance/dexpaprika-networks",
+      "records": 56,
+      "commands": [],
+      "logo": "api.dexpaprika.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:25.146Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 978,
+        "p95": 1866,
+        "throughput": 61.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.dexpaprika.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/dexpaprika-networks/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/dexpaprika-networks/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/dexpaprika-networks/samples"
+      },
+      "source": "https://api.dexpaprika.com",
+      "live": {
+        "realtime": false,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:25.146Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "dft-roadtraffic",
       "name": "opencli-dft-roadtraffic",
       "path": "opendata/dft-roadtraffic",
@@ -32036,16 +32536,18 @@
     {
       "id": "disney-characters",
       "name": "opencli-disney-characters",
+      "path": "tech/disney-characters",
+      "endpoint": "https://api.disneyapi.dev",
       "domain": "api.disneyapi.dev",
       "description": "Disney API: Disney-Figuren mit Filmen, Kurzfilmen und TV-Shows, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/disney-characters",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/disney-characters",
+      "records": 6,
       "commands": [],
       "logo": "api.disneyapi.dev.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:03.322Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -32087,7 +32589,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -32322,21 +32824,19 @@
     {
       "id": "dns",
       "name": "opencli-dns",
-      "path": "webintel/dns",
-      "endpoint": null,
-      "domain": "dns",
+      "domain": null,
       "description": "DNS-over-HTTPS via dns.google. Ohne Login, nur GET, 1 Req/1,5 s.",
       "category": "webintel",
       "country": "AT",
-      "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/webintel/dns",
-      "records": 5,
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/webintel/dns",
+      "records": null,
       "commands": [],
-      "logo": "dns.google.png",
-      "paperclip": true,
+      "logo": null,
+      "paperclip": false,
       "lastRun": null,
-      "e2ePassed": 1,
-      "e2eTotal": 1,
+      "e2ePassed": null,
+      "e2eTotal": null,
       "kpi": null,
       "loginRequired": null,
       "captcha": null,
@@ -32364,7 +32864,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": true,
+        "paperclip": false,
         "playwright": false,
         "pdf": false
       },
@@ -32396,8 +32896,9 @@
         "last": null
       },
       "ampel": {
-        "level": "yellow",
+        "level": "red",
         "reasons": [
+          "e2e rot",
           "Gates nicht geprüft"
         ]
       },
@@ -33186,7 +33687,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/tech/drupal-projects",
       "records": 2,
       "commands": [],
-      "logo": null,
+      "logo": "www.drupal.org.png",
       "paperclip": true,
       "lastRun": "2026-10-13T18:57:55.503Z",
       "e2ePassed": 3,
@@ -33463,16 +33964,18 @@
     {
       "id": "dummyjson",
       "name": "opencli-dummyjson",
+      "path": "tech/dummyjson",
+      "endpoint": "https://dummyjson.com",
       "domain": "dummyjson.com",
       "description": "DummyJSON: Demo-Produkte und Rezepte für Tests/Prototypen, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/dummyjson",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/dummyjson",
+      "records": 244,
       "commands": [],
       "logo": "dummyjson.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:04.528Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -33514,7 +34017,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -37838,16 +38341,18 @@
     {
       "id": "epa-tri-facilities",
       "name": "opencli-epa-tri-facilities",
+      "path": "opendata/epa-tri-facilities",
+      "endpoint": "https://data.epa.gov",
       "domain": "data.epa.gov",
       "description": "U.S. EPA Envirofacts: Toxics-Release-Inventory-Anlagen je Bundesstaat (Name, Adresse, Koordinaten), keyless JSON.",
       "category": "opendata",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/epa-tri-facilities",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/epa-tri-facilities",
+      "records": 7,
       "commands": [],
       "logo": "data.epa.gov.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:49:57.706Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -37889,7 +38394,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -42073,6 +42578,101 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T18:57:55.950Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "finalspace-api",
+      "name": "opencli-finalspace-api",
+      "path": "tech/finalspace-api",
+      "endpoint": "https://finalspaceapi.com",
+      "domain": "finalspaceapi.com",
+      "description": "Final Space API: Charaktere und Episoden der Serie, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/finalspace-api",
+      "records": 4,
+      "commands": [],
+      "logo": "finalspaceapi.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:41.831Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 454,
+        "p95": 1919,
+        "throughput": 132.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v0",
+      "robots": "allowed",
+      "robotsNote": "finalspaceapi.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/finalspace-api/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/finalspace-api/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/finalspace-api/samples"
+      },
+      "source": "https://finalspaceapi.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:41.831Z"
       },
       "ampel": {
         "level": "yellow",
@@ -70362,16 +70962,18 @@
     {
       "id": "genshin-jmp",
       "name": "opencli-genshin-jmp",
+      "path": "tech/genshin-jmp",
+      "endpoint": "https://genshin.jmp.blue",
       "domain": "genshin.jmp.blue",
       "description": "genshin.jmp.blue (genshin.dev): Listen und Details zu Genshin-Impact-Figuren und -Waffen, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/genshin-jmp",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/genshin-jmp",
+      "records": 93,
       "commands": [],
       "logo": "genshin.jmp.blue.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:02.924Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -70413,7 +71015,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -70933,16 +71535,18 @@
     {
       "id": "geofon-quakes",
       "name": "opencli-geofon-quakes",
+      "path": "opendata/geofon-quakes",
+      "endpoint": "https://geofon.gfz-potsdam.de",
       "domain": "geofon.gfz-potsdam.de",
       "description": "GEOFON FDSN Event-Service (GFZ Potsdam): globale Erdbeben nach Zeit und Magnitude, keyless Text/CSV.",
       "category": "opendata",
       "country": "DE",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/geofon-quakes",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/geofon-quakes",
+      "records": 10,
       "commands": [],
       "logo": "geofon.gfz-potsdam.de.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:49:55.647Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -70984,7 +71588,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -73955,6 +74559,101 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T09:10:38.059Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "greenlit-books",
+      "name": "opencli-greenlit-books",
+      "path": "opendata/greenlit-books",
+      "endpoint": "https://greenlitbooks.com",
+      "domain": "greenlitbooks.com",
+      "description": "Greenlit Books API: offener Buchkatalog (Titel, Meta), keyless JSON, llms.txt + llms-full.txt.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/greenlit-books",
+      "records": 83,
+      "commands": [],
+      "logo": "greenlitbooks.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:30.358Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 441,
+        "p95": 2149,
+        "throughput": 136.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "greenlitbooks.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/greenlit-books/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/greenlit-books/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/greenlit-books/samples"
+      },
+      "source": "https://greenlitbooks.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:30.358Z"
       },
       "ampel": {
         "level": "yellow",
@@ -89791,6 +90490,109 @@
       "screenshot": "screens/hex-pm.webp"
     },
     {
+      "id": "hgbrasil-finance",
+      "name": "opencli-hgbrasil-finance",
+      "path": "finance/hgbrasil-finance",
+      "endpoint": "https://api.hgbrasil.com",
+      "domain": "api.hgbrasil.com",
+      "description": "HG Brasil Finance API: Währungen/Börsen-Snapshot (BRL-Basis), keyless Default-Key mit Limit, llms.txt.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/finance/hgbrasil-finance",
+      "records": 10,
+      "commands": [],
+      "logo": "api.hgbrasil.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:30.665Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 467,
+        "p95": 1973,
+        "throughput": 128.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "finance-v1",
+      "robots": "allowed",
+      "robotsNote": "api.hgbrasil.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/hgbrasil-finance/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/hgbrasil-finance/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/hgbrasil-finance/samples"
+      },
+      "source": "https://api.hgbrasil.com",
+      "live": {
+        "realtime": false,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:30.665Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "hgnc-genenames",
       "name": "opencli-hgnc-genenames",
       "path": "opendata/hgnc-genenames",
@@ -93654,16 +94456,18 @@
     {
       "id": "imgflip-memes",
       "name": "opencli-imgflip-memes",
+      "path": "tech/imgflip-memes",
+      "endpoint": "https://api.imgflip.com",
       "domain": "api.imgflip.com",
       "description": "Imgflip API: populäre Meme-Templates (Name, URL, Box-Count), keyless JSON (get_memes).",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/imgflip-memes",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/imgflip-memes",
+      "records": 102,
       "commands": [],
       "logo": "api.imgflip.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:08.116Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -93705,7 +94509,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -96222,16 +97026,18 @@
     {
       "id": "jsonplaceholder",
       "name": "opencli-jsonplaceholder",
+      "path": "tech/jsonplaceholder",
+      "endpoint": "https://jsonplaceholder.typicode.com",
       "domain": "jsonplaceholder.typicode.com",
       "description": "JSONPlaceholder: Fake-REST-API mit Posts und Users für Prototypen, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/jsonplaceholder",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/jsonplaceholder",
+      "records": 15,
       "commands": [],
       "logo": "jsonplaceholder.typicode.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:07.120Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -96273,7 +97079,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -103315,6 +104121,101 @@
       "screenshot": null
     },
     {
+      "id": "mathjs-api",
+      "name": "opencli-mathjs-api",
+      "path": "tech/mathjs-api",
+      "endpoint": "https://api.mathjs.org",
+      "domain": "api.mathjs.org",
+      "description": "Math.js HTTP API: mathematische Ausdrücke auswerten (expr=...), keyless Text.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/mathjs-api",
+      "records": 2,
+      "commands": [],
+      "logo": "api.mathjs.org.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:36.161Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 610,
+        "p95": 1883,
+        "throughput": 98.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v4",
+      "robots": "allowed",
+      "robotsNote": "api.mathjs.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/mathjs-api/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/mathjs-api/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/mathjs-api/samples"
+      },
+      "source": "https://api.mathjs.org",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:36.161Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "matvaretabellen-no",
       "name": "matvaretabellen-no",
       "path": "international/matvaretabellen-no",
@@ -103604,16 +104505,18 @@
     {
       "id": "mcsrvstat",
       "name": "opencli-mcsrvstat",
+      "path": "tech/mcsrvstat",
+      "endpoint": "https://api.mcsrvstat.us",
       "domain": "api.mcsrvstat.us",
       "description": "Minecraft Server Status API: Online-Status, Spieler, Version und MOTD öffentlicher Server, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/mcsrvstat",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/mcsrvstat",
+      "records": 2,
       "commands": [],
       "logo": "api.mcsrvstat.us.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:49:56.494Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -103655,7 +104558,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -105021,6 +105924,101 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T08:43:10.729Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "mf-wl-nip",
+      "name": "opencli-mf-wl-nip",
+      "path": "international/mf-wl-nip",
+      "endpoint": "https://wl-api.mf.gov.pl",
+      "domain": "wl-api.mf.gov.pl",
+      "description": "Polnisches Finanzministerium Biała Lista API: VAT-Status und Firmendaten nach NIP, keyless JSON.",
+      "category": "international",
+      "country": "PL",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/mf-wl-nip",
+      "records": 2,
+      "commands": [],
+      "logo": "wl-api.mf.gov.pl.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:25:00.170Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1057,
+        "p95": 1831,
+        "throughput": 56.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "wl-v1",
+      "robots": "allowed",
+      "robotsNote": "wl-api.mf.gov.pl/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/mf-wl-nip/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/mf-wl-nip/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/mf-wl-nip/samples"
+      },
+      "source": "https://wl-api.mf.gov.pl",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:25:00.170Z"
       },
       "ampel": {
         "level": "yellow",
@@ -106852,6 +107850,101 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "myfaceshape-guides",
+      "name": "opencli-myfaceshape-guides",
+      "path": "tech/myfaceshape-guides",
+      "endpoint": "https://myfaceshapechart.com",
+      "domain": "myfaceshapechart.com",
+      "description": "My Face Shape Chart: read-only Lookup veröffentlichter Face-Shape-Guides (Slug/Query), OpenAPI 3.1, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/myfaceshape-guides",
+      "records": 7,
+      "commands": [],
+      "logo": "myfaceshapechart.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:24.206Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 563,
+        "p95": 1936,
+        "throughput": 106.6,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "0.2.0",
+      "robots": "allowed",
+      "robotsNote": "myfaceshapechart.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/myfaceshape-guides/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/myfaceshape-guides/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/myfaceshape-guides/samples"
+      },
+      "source": "https://myfaceshapechart.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:24.206Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -108878,18 +109971,115 @@
       "screenshot": null
     },
     {
+      "id": "nekos-best",
+      "name": "opencli-nekos-best",
+      "path": "tech/nekos-best",
+      "endpoint": "https://nekos.best",
+      "domain": "nekos.best",
+      "description": "nekos.best API v2: Anime-Bilder/GIFs und Endpoint-Katalog, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/nekos-best",
+      "records": 64,
+      "commands": [],
+      "logo": "nekos.best.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:48.712Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 607,
+        "p95": 2356,
+        "throughput": 98.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v2",
+      "robots": "allowed",
+      "robotsNote": "nekos.best/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/nekos-best/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/nekos-best/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/nekos-best/samples"
+      },
+      "source": "https://nekos.best",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:48.712Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "nekos-life",
       "name": "opencli-nekos-life",
+      "path": "tech/nekos-life",
+      "endpoint": "https://nekos.life",
       "domain": "nekos.life",
       "description": "Nekos.life API: zufällige SFW-Anime-/Neko-Bild-URLs, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/nekos-life",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/nekos-life",
+      "records": 2,
       "commands": [],
       "logo": "nekos.life.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:08.396Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -108931,7 +110121,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -108961,6 +110151,101 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T19:50:08.396Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "nekosapi",
+      "name": "opencli-nekosapi",
+      "path": "tech/nekosapi",
+      "endpoint": "https://api.nekosapi.com",
+      "domain": "api.nekosapi.com",
+      "description": "Nekos API v4: zufällige kuratierte Anime-Bilder mit Rating, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/nekosapi",
+      "records": 3,
+      "commands": [],
+      "logo": "api.nekosapi.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:24:23.744Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 13626,
+        "p95": 24030,
+        "throughput": 4.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v4",
+      "robots": "allowed",
+      "robotsNote": "api.nekosapi.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/nekosapi/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/nekosapi/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/nekosapi/samples"
+      },
+      "source": "https://api.nekosapi.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:24:23.744Z"
       },
       "ampel": {
         "level": "yellow",
@@ -109303,7 +110588,7 @@
       "description": "nextbike by TIER: alle Bikesharing-Systeme/Städte weltweit mit verfügbaren Rädern und Stationen sowie Live-Belegung der Stationen einer Stadt (Räder, freie Plätze, Koordinaten) aus dem öffentlichen Live-Feed. Ohne Login/Key.",
       "category": "verkehr",
       "country": "AT",
-      "status": "blocked",
+      "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/opendata/nextbike",
       "records": 126,
       "commands": [],
@@ -109314,9 +110599,9 @@
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 1619,
-        "p95": 1983,
-        "throughput": 37.1,
+        "p50": 1632,
+        "p95": 1981,
+        "throughput": 36.8,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -109329,7 +110614,6 @@
       "robots": "disallowed",
       "robotsNote": "maps.nextbike.net/robots.txt: /maps/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
       "incidents": [
-        "robots.txt pruefen (fail-closed, #475): https://maps.nextbike.net (robots.txt HTTP 502)",
         "Fehlerfall → Exit 2.",
         "Fehlerfall → Exit 2."
       ],
@@ -114189,16 +115473,18 @@
     {
       "id": "official-jokes",
       "name": "opencli-official-jokes",
+      "path": "tech/official-jokes",
+      "endpoint": "https://official-joke-api.appspot.com",
       "domain": "official-joke-api.appspot.com",
       "description": "Official Joke API: Zufallswitze und Programmierer-Witze (Setup/Punchline), keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/official-jokes",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/official-jokes",
+      "records": 11,
       "commands": [],
       "logo": "official-joke-api.appspot.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:07.215Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -114240,7 +115526,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -116722,13 +118008,13 @@
       "description": "Open Brewery DB API v1: Brauereien suchen (Name, Typ, Adresse, Koordinaten, Website), nach Land/Stadt filtern und Statistik je Land (Anzahl nach Bundesland/Typ). Ohne Login/Key.",
       "category": "tech",
       "country": "AT",
-      "status": "blocked",
+      "status": "passing",
       "repo": "https://github.com/servas-ai/opencli-connectors/tech/openbrewerydb",
       "records": 28,
       "commands": [],
       "logo": "api.openbrewerydb.org.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T08:05:19.920Z",
+      "lastRun": "2026-10-13T20:28:17.090Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
@@ -116741,14 +118027,13 @@
         "score": null,
         "blocked": false
       },
-      "loginRequired": true,
+      "loginRequired": false,
       "captcha": false,
       "apiAvailable": true,
       "apiVersion": "v1",
       "robots": "allowed",
       "robotsNote": "api.openbrewerydb.org/robots.txt: Allow / für alle. Freie Open-Data-API. Drossel ≥2 s.",
       "incidents": [
-        "robots.txt pruefen (fail-closed, #475): https://api.openbrewerydb.org (robots.txt nicht erreichbar: UND_ERR_CONNECT_TIMEOUT)",
         "Fehlerfall → Exit 2.",
         "Fehlerfall → Exit 2."
       ],
@@ -116757,7 +118042,7 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/openbrewerydb/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/openbrewerydb/samples"
       },
-      "source": "https://api.openbrewerydb.org",
+      "source": "api.openbrewerydb.org",
       "live": null,
       "server": null,
       "sourceType": "Sonstige",
@@ -116791,7 +118076,7 @@
         "counts": {
           "403": 0,
           "429": 0,
-          "ok": 1,
+          "ok": 2,
           "captcha": 0,
           "timeout": 0,
           "offline": 0,
@@ -116799,15 +118084,13 @@
           "error": 0
         },
         "captchaTypes": {},
-        "observations": 1,
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T08:05:19.920Z"
+        "last": "2026-10-13T20:28:17.090Z"
       },
       "ampel": {
-        "level": "yellow",
-        "reasons": [
-          "Login nötig"
-        ]
+        "level": "green",
+        "reasons": []
       },
       "screenshot": "screens/openbrewerydb.webp"
     },
@@ -121000,6 +122283,101 @@
       "screenshot": null
     },
     {
+      "id": "otwarteapi-catalog",
+      "name": "opencli-otwarteapi-catalog",
+      "path": "opendata/otwarteapi-catalog",
+      "endpoint": "https://otwarteapi.pl",
+      "domain": "otwarteapi.pl",
+      "description": "otwarteAPI.pl: maschinenlesbarer Katalog öffentlicher Regierungs-APIs (ARD ai-catalog.json) plus Suche, keyless JSON/MCP.",
+      "category": "opendata",
+      "country": "PL",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/otwarteapi-catalog",
+      "records": 93,
+      "commands": [],
+      "logo": "otwarteapi.pl.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:24.317Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 514,
+        "p95": 2105,
+        "throughput": 116.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "ard-1.0",
+      "robots": "allowed",
+      "robotsNote": "otwarteapi.pl/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/otwarteapi-catalog/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/otwarteapi-catalog/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/otwarteapi-catalog/samples"
+      },
+      "source": "https://otwarteapi.pl",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:24.317Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "ourairports",
       "name": "opencli-ourairports",
       "path": "opendata/ourairports",
@@ -121607,16 +122985,18 @@
     {
       "id": "packagist-repo",
       "name": "opencli-packagist-repo",
+      "path": "tech/packagist-repo",
+      "endpoint": "https://repo.packagist.org",
       "domain": "repo.packagist.org",
       "description": "Packagist Composer-Repository: Paketmetadaten (Name, Beschreibung, Versionen) keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/packagist-repo",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/packagist-repo",
+      "records": 781,
       "commands": [],
       "logo": "repo.packagist.org.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:10.051Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -121658,7 +123038,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -124393,18 +125773,115 @@
       "screenshot": "screens/postcodes-io.webp"
     },
     {
+      "id": "postman-echo",
+      "name": "opencli-postman-echo",
+      "path": "tech/postman-echo",
+      "endpoint": "https://postman-echo.com",
+      "domain": "postman-echo.com",
+      "description": "Postman Echo: HTTP-GET-Echo und Header-Spiegelung für Tests, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/postman-echo",
+      "records": 2,
+      "commands": [],
+      "logo": "postman-echo.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:45.799Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 428,
+        "p95": 1901,
+        "throughput": 140.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "echo-v1",
+      "robots": "allowed",
+      "robotsNote": "postman-echo.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/postman-echo/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/postman-echo/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/postman-echo/samples"
+      },
+      "source": "https://postman-echo.com",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:45.799Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "potterdb",
       "name": "opencli-potterdb",
+      "path": "tech/potterdb",
+      "endpoint": "https://api.potterdb.com",
       "domain": "api.potterdb.com",
       "description": "Potter DB API: Zaubersprüche und Figuren aus dem Harry-Potter-Universum (JSON:API), keyless.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/potterdb",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/potterdb",
+      "records": 10,
       "commands": [],
       "logo": "api.potterdb.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:01.118Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -124446,7 +125923,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -125412,16 +126889,18 @@
     {
       "id": "raiderio-affixes",
       "name": "opencli-raiderio-affixes",
+      "path": "tech/raiderio-affixes",
+      "endpoint": "https://raider.io",
       "domain": "raider.io",
       "description": "Raider.IO API: aktuelle WoW-Mythic+-Affixe je Region (Titel, Leaderboard-URL), keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/raiderio-affixes",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/raiderio-affixes",
+      "records": 3,
       "commands": [],
       "logo": "raider.io.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:01.153Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -125463,7 +126942,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -125695,16 +127174,18 @@
     {
       "id": "random-dog",
       "name": "opencli-random-dog",
+      "path": "tech/random-dog",
+      "endpoint": "https://random.dog",
       "domain": "random.dog",
       "description": "random.dog: liefert URL zu einem zufälligen Hundebild/-video, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/random-dog",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/random-dog",
+      "records": 2,
       "commands": [],
       "logo": "random.dog.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:49.738Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -125746,7 +127227,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -125776,6 +127257,196 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T19:50:49.738Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "random-duck",
+      "name": "opencli-random-duck",
+      "path": "tech/random-duck",
+      "endpoint": "https://random-d.uk",
+      "domain": "random-d.uk",
+      "description": "random-d.uk API v2: zufällige Enten-Bilder und Bildliste, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/random-duck",
+      "records": 2,
+      "commands": [],
+      "logo": "random-d.uk.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:44.745Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 617,
+        "p95": 2034,
+        "throughput": 97.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v2",
+      "robots": "allowed",
+      "robotsNote": "random-d.uk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/random-duck/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/random-duck/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/random-duck/samples"
+      },
+      "source": "https://random-d.uk",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:44.745Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "randomfox",
+      "name": "opencli-randomfox",
+      "path": "tech/randomfox",
+      "endpoint": "https://randomfox.ca",
+      "domain": "randomfox.ca",
+      "description": "RandomFox: zufällige Fuchs-Bild-URL als JSON, keyless.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/randomfox",
+      "records": 2,
+      "commands": [],
+      "logo": "randomfox.ca.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:43.213Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 756,
+        "p95": 1945,
+        "throughput": 79.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "floof-v1",
+      "robots": "allowed",
+      "robotsNote": "randomfox.ca/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/randomfox/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/randomfox/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/randomfox/samples"
+      },
+      "source": "https://randomfox.ca",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:43.213Z"
       },
       "ampel": {
         "level": "yellow",
@@ -126683,16 +128354,18 @@
     {
       "id": "refuge-restrooms",
       "name": "opencli-refuge-restrooms",
+      "path": "opendata/refuge-restrooms",
+      "endpoint": "https://www.refugerestrooms.org",
       "domain": "www.refugerestrooms.org",
       "description": "Refuge Restrooms API: inklusiv/unisex/barrierefreie Toiletten weltweit (Ort, Zugang, Hinweise), keyless JSON.",
       "category": "opendata",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/refuge-restrooms",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/refuge-restrooms",
+      "records": 10,
       "commands": [],
-      "logo": null,
-      "paperclip": false,
+      "logo": "www.refugerestrooms.org.png",
+      "paperclip": true,
       "lastRun": "2026-10-13T19:49:58.004Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -126734,7 +128407,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -131502,6 +133175,101 @@
       "screenshot": null
     },
     {
+      "id": "skanfirmy-pl",
+      "name": "opencli-skanfirmy-pl",
+      "path": "international/skanfirmy-pl",
+      "endpoint": "https://skanfirmy.pl",
+      "domain": "skanfirmy.pl",
+      "description": "skanfirmy.pl: keyless REST/MCP zur Firmenprüfung (NIP/Biała Lista, VIES), llms.txt.",
+      "category": "international",
+      "country": "PL",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/skanfirmy-pl",
+      "records": 2,
+      "commands": [],
+      "logo": "skanfirmy.pl.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:27.504Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1238,
+        "p95": 1802,
+        "throughput": 48.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "skanfirmy.pl/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/skanfirmy-pl/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/skanfirmy-pl/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/skanfirmy-pl/samples"
+      },
+      "source": "https://skanfirmy.pl",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:27.504Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "slo-county-data",
       "name": "opencli-slo-county-data",
       "path": "opendata/slo-county-data",
@@ -132739,16 +134507,18 @@
     {
       "id": "spacetraders-status",
       "name": "opencli-spacetraders-status",
+      "path": "tech/spacetraders-status",
+      "endpoint": "https://api.spacetraders.io",
       "domain": "api.spacetraders.io",
       "description": "SpaceTraders v2: öffentlicher Status-Endpunkt (Version, Reset-Datum, Beschreibung), keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/spacetraders-status",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/spacetraders-status",
+      "records": 2,
       "commands": [],
       "logo": "api.spacetraders.io.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:04.476Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -132790,7 +134560,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -137011,16 +138781,18 @@
     {
       "id": "swapi-py4e",
       "name": "opencli-swapi-py4e",
+      "path": "tech/swapi-py4e",
+      "endpoint": "https://swapi.py4e.com",
       "domain": "swapi.py4e.com",
       "description": "SWAPI-Spiegel (py4e): Star-Wars-Personen und Raumschiffe, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/swapi-py4e",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/swapi-py4e",
+      "records": 38,
       "commands": [],
       "logo": "swapi.py4e.com.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:02.828Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -137062,7 +138834,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -137981,16 +139753,18 @@
     {
       "id": "tetrio-stats",
       "name": "opencli-tetrio-stats",
+      "path": "tech/tetrio-stats",
+      "endpoint": "https://ch.tetr.io",
       "domain": "ch.tetr.io",
       "description": "TETR.IO ch.tetr.io API: globale Nutzer-/Ranked-Statistiken der Community, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/tetrio-stats",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/tetrio-stats",
+      "records": 2,
       "commands": [],
       "logo": "ch.tetr.io.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:47.113Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -138032,7 +139806,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -139128,16 +140902,18 @@
     {
       "id": "tle-ivan",
       "name": "opencli-tle-ivan",
+      "path": "opendata/tle-ivan",
+      "endpoint": "https://tle.ivanstanojevic.me",
       "domain": "tle.ivanstanojevic.me",
       "description": "TLE API (ivanstanojevic): Satelliten-Zweizeilenelemente (Celestrak/Space-Track-Daten) nach NORAD-ID oder Suche, keyless JSON-LD.",
       "category": "opendata",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/tle-ivan",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/tle-ivan",
+      "records": 12383,
       "commands": [],
       "logo": "tle.ivanstanojevic.me.png",
-      "paperclip": false,
+      "paperclip": true,
       "lastRun": "2026-10-13T20:13:07.249Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -139179,7 +140955,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -141312,6 +143088,101 @@
       "screenshot": null
     },
     {
+      "id": "uk-legislation-feed",
+      "name": "opencli-uk-legislation-feed",
+      "path": "international/uk-legislation-feed",
+      "endpoint": "https://www.legislation.gov.uk",
+      "domain": "www.legislation.gov.uk",
+      "description": "legislation.gov.uk: Atom-Feeds neuer UK-Rechtsakte und UK Statutory Instruments, keyless XML.",
+      "category": "international",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/uk-legislation-feed",
+      "records": 10,
+      "commands": [],
+      "logo": "www.legislation.gov.uk.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:33.407Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 881,
+        "p95": 1896,
+        "throughput": 68.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "atom-v1",
+      "robots": "allowed",
+      "robotsNote": "www.legislation.gov.uk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/uk-legislation-feed/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/uk-legislation-feed/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/uk-legislation-feed/samples"
+      },
+      "source": "https://www.legislation.gov.uk",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:33.407Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "uk-parliament-members",
       "name": "uk-parliament-members",
       "path": "international/uk-parliament-members",
@@ -142283,6 +144154,101 @@
       "screenshot": null
     },
     {
+      "id": "universalis-ffxiv",
+      "name": "opencli-universalis-ffxiv",
+      "path": "tech/universalis-ffxiv",
+      "endpoint": "https://universalis.app",
+      "domain": "universalis.app",
+      "description": "Universalis API: Final-Fantasy-XIV Marktplätze – Data Centers und Worlds, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/universalis-ffxiv",
+      "records": 146,
+      "commands": [],
+      "logo": "universalis.app.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:40.231Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 582,
+        "p95": 1993,
+        "throughput": 103.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v2",
+      "robots": "allowed",
+      "robotsNote": "universalis.app/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/universalis-ffxiv/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/universalis-ffxiv/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/universalis-ffxiv/samples"
+      },
+      "source": "https://universalis.app",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:40.231Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "unpaywall",
       "name": "unpaywall",
       "path": "international/unpaywall",
@@ -143247,6 +145213,101 @@
       "screenshot": null
     },
     {
+      "id": "uselessfacts",
+      "name": "opencli-uselessfacts",
+      "path": "tech/uselessfacts",
+      "endpoint": "https://uselessfacts.jsph.pl",
+      "domain": "uselessfacts.jsph.pl",
+      "description": "Useless Facts API: zufällige und tägliche Fun Facts, keyless JSON.",
+      "category": "tech",
+      "country": "PL",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/uselessfacts",
+      "records": 2,
+      "commands": [],
+      "logo": "uselessfacts.jsph.pl.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:39.168Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1043,
+        "p95": 1703,
+        "throughput": 57.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v2",
+      "robots": "allowed",
+      "robotsNote": "uselessfacts.jsph.pl/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/uselessfacts/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/uselessfacts/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/uselessfacts/samples"
+      },
+      "source": "https://uselessfacts.jsph.pl",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:39.168Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "usgs-earthquakes",
       "name": "usgs-earthquakes",
       "path": "international/usgs-earthquakes",
@@ -143723,18 +145784,115 @@
       "screenshot": null
     },
     {
+      "id": "uuid-rocks",
+      "name": "opencli-uuid-rocks",
+      "path": "tech/uuid-rocks",
+      "endpoint": "https://uuid.rocks",
+      "domain": "uuid.rocks",
+      "description": "uuid.rocks: UUID v4 JSON und Plaintext sowie ULID, keyless.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/uuid-rocks",
+      "records": 2,
+      "commands": [],
+      "logo": "uuid.rocks.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:37.409Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 999,
+        "p95": 1620,
+        "throughput": 60.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1.3",
+      "robots": "allowed",
+      "robotsNote": "uuid.rocks/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/uuid-rocks/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/uuid-rocks/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/uuid-rocks/samples"
+      },
+      "source": "https://uuid.rocks",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:37.409Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "uuidtools",
       "name": "opencli-uuidtools",
+      "path": "tech/uuidtools",
+      "endpoint": "https://www.uuidtools.com",
       "domain": "www.uuidtools.com",
       "description": "UUID Tools API: erzeugt UUIDv4 in gewünschter Anzahl, keyless JSON.",
       "category": "tech",
       "country": "AT",
       "status": "passing",
-      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/uuidtools",
-      "records": null,
+      "repo": "https://github.com/servas-ai/opencli-connectors/tech/uuidtools",
+      "records": 4,
       "commands": [],
-      "logo": null,
-      "paperclip": false,
+      "logo": "www.uuidtools.com.png",
+      "paperclip": true,
       "lastRun": "2026-10-13T19:50:05.528Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
@@ -143776,7 +145934,7 @@
         "mcp": true,
         "cli": false,
         "opencli": true,
-        "paperclip": false,
+        "paperclip": true,
         "playwright": false,
         "pdf": false
       },
@@ -146359,6 +148517,109 @@
         "reasons": []
       },
       "screenshot": "screens/who-gho.webp"
+    },
+    {
+      "id": "why21million-halving",
+      "name": "opencli-why21million-halving",
+      "path": "finance/why21million-halving",
+      "endpoint": "https://why21million.com",
+      "domain": "why21million.com",
+      "description": "Why21Million Halving API: Bitcoin-Halving-Arithmetik nach Blockhöhe (Reward, Era, nächstes Halving), keyless JSON, llms.txt.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/finance/why21million-halving",
+      "records": 2,
+      "commands": [],
+      "logo": "why21million.com.png",
+      "paperclip": true,
+      "lastRun": "2026-10-13T20:23:27.911Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 495,
+        "p95": 2010,
+        "throughput": 121.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "why21million.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/why21million-halving/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/why21million-halving/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/why21million-halving/samples"
+      },
+      "source": "https://why21million.com",
+      "live": {
+        "realtime": false,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T20:23:27.911Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
     },
     {
       "id": "wien",
@@ -149734,14 +151995,14 @@
       "screenshot": "screens/zippopotam.webp"
     }
   ],
-  "enrichedAt": "2026-10-13T20:21:55.061Z",
+  "enrichedAt": "2026-10-13T20:57:03.697Z",
   "gatesSource": "check_connectors.py --strict (data/gates.snapshot.json)",
   "timeline": [
     {
       "403": 0,
       "429": 0,
       "day": "2026-10-13",
-      "ok": 1629,
+      "ok": 1653,
       "captcha": 25,
       "timeout": 1,
       "offline": 3,
@@ -149750,6 +152011,6 @@
     }
   ],
   "egress": null,
-  "observationsAt": "2026-10-13T20:21:55.270Z",
-  "observationCount": 1719
+  "observationsAt": "2026-10-13T20:57:03.894Z",
+  "observationCount": 1743
 }
