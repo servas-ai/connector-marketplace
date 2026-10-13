@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T03:30:06.570Z",
+  "generatedAt": "2026-10-13T03:33:18.234Z",
   "sourceRepo": "servas-ai/opencli-connectors",
   "sourceGeneratedAt": "2026-10-13 03:26 UTC",
   "count": 126,
@@ -2182,14 +2182,14 @@
       "commands": [],
       "logo": "data-api.binance.vision.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:29:30.791Z",
+      "lastRun": "2026-10-13T03:32:37.223Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 1216,
-        "p95": 1263,
-        "throughput": 49.3,
+        "p50": 1206,
+        "p95": 1209,
+        "throughput": 49.8,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2309,7 +2309,7 @@
           },
           {
             "t": "2026-10-13T03:00:00.000Z",
-            "v": 74110.05
+            "v": 74286.35
           }
         ],
         "endpoint": "binance-klines"
@@ -2328,14 +2328,14 @@
       "commands": [],
       "logo": "api.bitpanda.com.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:29:29.779Z",
+      "lastRun": "2026-10-13T03:32:41.962Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 818,
+        "p50": 799,
         "p95": 1034,
-        "throughput": 73.3,
+        "throughput": 75.1,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2358,7 +2358,7 @@
         "realtime": true,
         "label": "BTC/EUR",
         "unit": "EUR",
-        "view": "value",
+        "view": "sparkline",
         "refreshS": 60,
         "series": [],
         "endpoint": null
@@ -2487,14 +2487,14 @@
       "commands": [],
       "logo": "api.exchange.coinbase.com.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:29:32.288Z",
+      "lastRun": "2026-10-13T03:32:49.464Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 809,
-        "p95": 2434,
-        "throughput": 74.2,
+        "p50": 841,
+        "p95": 2438,
+        "throughput": 71.3,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2614,7 +2614,7 @@
           },
           {
             "t": "2026-10-13T03:00:00.000Z",
-            "v": 74138.54
+            "v": 74174.5
           }
         ],
         "endpoint": "coinbase-candles"
@@ -2776,14 +2776,14 @@
       "commands": [],
       "logo": "www.ecb.europa.eu.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:29:31.042Z",
+      "lastRun": "2026-10-13T03:32:55.666Z",
       "e2ePassed": 3,
       "e2eTotal": 3,
       "kpi": {
         "stability": 100,
-        "p50": 1192,
-        "p95": 1563,
-        "throughput": 50.3,
+        "p50": 1437,
+        "p95": 1486,
+        "throughput": 41.8,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -2808,8 +2808,8 @@
         "realtime": false,
         "label": "EUR/USD",
         "unit": "USD",
-        "view": "line",
-        "refreshS": 86400,
+        "view": "sparkline",
+        "refreshS": 60,
         "series": [
           {
             "t": "2026-09-01",
@@ -3621,14 +3621,14 @@
       "commands": [],
       "logo": "api.kraken.com.png",
       "paperclip": false,
-      "lastRun": "2026-10-13T03:29:31.125Z",
+      "lastRun": "2026-10-13T03:33:01.375Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 929,
-        "p95": 1266,
-        "throughput": 64.6,
+        "p50": 890,
+        "p95": 925,
+        "throughput": 67.4,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -3748,7 +3748,7 @@
           },
           {
             "t": "2026-10-13T03:00:00.000Z",
-            "v": 74135.2
+            "v": 74512.4
           }
         ],
         "endpoint": "kraken-ohlc"
