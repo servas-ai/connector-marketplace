@@ -16,3 +16,15 @@ describe('sync-data', () => {
     expect(countryOf('gleif', 'api.gleif.org', 'international/welle-int/gleif')).toBe('INT');
   });
 });
+
+import { normalizeCategory } from './categories.mjs';
+describe('categories', () => {
+  it('ordnet Telekom/Energie/Colo zu', () => {
+    expect(normalizeCategory({ id: 'peeringdb-at', category: 'sonstige' })).toBe('colocation');
+    expect(normalizeCategory({ id: 'x', category: 'sonstige', description: 'Stromtarife von X' })).toBe('strom');
+    expect(normalizeCategory({ id: 'x', category: 'sonstige', description: 'Gas und Fernwärmetarife von Y' })).toBe('gas-fernwaerme');
+    expect(normalizeCategory({ id: 'x', category: 'sonstige', description: 'Strom und Gastarife von Z' })).toBe('energie');
+    expect(normalizeCategory({ id: 'x', category: 'sonstige', description: 'Heizölpreise Österreich' })).toBe('heizen');
+    expect(normalizeCategory({ id: 'x', category: 'mobil', description: 'Internet' })).toBe('mobil');
+  });
+});

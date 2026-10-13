@@ -2,6 +2,7 @@
 // Erzeugt src/data/connectors.json aus servas-ai/opencli-connectors.
 // Quelle: --src <pfad> | CONNECTORS_SRC | ../opencli-connectors (sonst: git clone via gh/git).
 // Liest index.json, kpi/ranking.csv, SKILL.md-Frontmatter und PRUEFPROTOKOLL.md. Keine Netzwerk-Abfragen ausser optionalem Clone.
+import { normalizeCategory } from './categories.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
@@ -153,6 +154,7 @@ export function build(src) {
   const logoDir = path.join(src, 'assets/logos');
   for (const c of out.values()) if (!c.logo && c.domain && fs.existsSync(path.join(logoDir, `${c.domain}.png`))) c.logo = `${c.domain}.png`;
   const connectors = [...out.values()].sort((a, b) => (b.kpi?.score ?? -1) - (a.kpi?.score ?? -1) || a.id.localeCompare(b.id));
+  for (const c of connectors) c.category = normalizeCategory(c);
   return { generatedAt: new Date().toISOString(), sourceRepo: REPO, sourceGeneratedAt: index.generated_at, count: connectors.length, connectors };
 }
 
