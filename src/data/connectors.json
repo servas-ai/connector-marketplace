@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-13T13:14:29.175Z",
+  "generatedAt": "2026-10-13T13:23:29.529Z",
   "sourceRepo": "servas-ai/opencli-connectors",
   "sourceGeneratedAt": "2026-10-13 13:01 UTC",
-  "count": 988,
+  "count": 1024,
   "connectors": [
     {
       "id": "spusu-at",
@@ -10191,14 +10191,14 @@
       "commands": [],
       "logo": "api.bcb.gov.br.png",
       "paperclip": true,
-      "lastRun": "2026-10-13T08:04:08.144Z",
+      "lastRun": "2026-10-13T12:45:01.168Z",
       "e2ePassed": 4,
       "e2eTotal": 4,
       "kpi": {
         "stability": 100,
-        "p50": 3657,
-        "p95": 4211,
-        "throughput": 16.4,
+        "p50": 9235,
+        "p95": 55558,
+        "throughput": 6.5,
         "captchaRate": 0,
         "dataQuality": null,
         "score": null,
@@ -10219,7 +10219,7 @@
         "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/proofs/opencli-bcb-sgs/PRUEFPROTOKOLL.md",
         "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/bcb-sgs/samples"
       },
-      "source": "https://api.bcb.gov.br",
+      "source": "api.bcb.gov.br",
       "live": null,
       "server": null,
       "sourceType": "Behörde",
@@ -10253,7 +10253,7 @@
         "counts": {
           "403": 0,
           "429": 0,
-          "ok": 1,
+          "ok": 2,
           "captcha": 0,
           "timeout": 0,
           "offline": 0,
@@ -10261,9 +10261,9 @@
           "error": 0
         },
         "captchaTypes": {},
-        "observations": 1,
+        "observations": 2,
         "uptime": 100,
-        "last": "2026-10-13T08:04:08.144Z"
+        "last": "2026-10-13T12:45:01.168Z"
       },
       "ampel": {
         "level": "green",
@@ -36440,6 +36440,100 @@
       "screenshot": null
     },
     {
+      "id": "gbfs-bilbao",
+      "name": "opencli-gbfs-bilbao",
+      "domain": null,
+      "description": "Bilbao Bizi in Bilbao (Spanien): offener GBFS-Feed 1.1 ; 2.3 ; 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/es/gbfs-bilbao",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:52:39.033Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 5966,
+        "p95": 5998,
+        "throughput": 10.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "bilbao.publicbikesystem.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/es/gbfs-bilbao/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/es/gbfs-bilbao/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/es/gbfs-bilbao/samples"
+      },
+      "source": "bilbao.publicbikesystem.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:52:39.033Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gbfs-bluebike",
       "name": "opencli-gbfs-bluebike",
       "path": "mobility/gbfs/be/gbfs-bluebike",
@@ -39879,6 +39973,100 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T10:19:01.030Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-donkey-store-heddinge",
+      "name": "opencli-gbfs-donkey-store-heddinge",
+      "domain": null,
+      "description": "Donkey Republic Store Heddinge in Store Heddinge (Dänemark): offener GBFS-Feed 1.0 ; 2.3 ; 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/dk/gbfs-donkey-store-heddinge",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:51:53.901Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3995,
+        "p95": 6027,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "stables.donkey.bike/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/dk/gbfs-donkey-store-heddinge/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/dk/gbfs-donkey-store-heddinge/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/dk/gbfs-donkey-store-heddinge/samples"
+      },
+      "source": "stables.donkey.bike",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:51:53.901Z"
       },
       "ampel": {
         "level": "red",
@@ -43411,6 +43599,194 @@
       "screenshot": null
     },
     {
+      "id": "gbfs-nextbike-cq",
+      "name": "opencli-gbfs-nextbike-cq",
+      "domain": null,
+      "description": "nextbike Pelhřimov in Pelhřimov (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-cq",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:40:35.858Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3990,
+        "p95": 6025,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-cq/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-cq/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-cq/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:40:35.858Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-cu",
+      "name": "opencli-gbfs-nextbike-cu",
+      "domain": null,
+      "description": "nextbike OlbramoviceVotice in Olbramovice, CZ (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-cu",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:40:56.896Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4000,
+        "p95": 5999,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-cu/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-cu/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-cu/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:40:56.896Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gbfs-nextbike-hf",
       "name": "opencli-gbfs-nextbike-hf",
       "domain": null,
@@ -43601,6 +43977,194 @@
       "screenshot": null
     },
     {
+      "id": "gbfs-nextbike-ko",
+      "name": "opencli-gbfs-nextbike-ko",
+      "domain": null,
+      "description": "nextbike Klášterec nad Ohří in Klášterec nad Ohří (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ko",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:41:17.919Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3994,
+        "p95": 6006,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ko/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ko/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ko/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:41:17.919Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-ky",
+      "name": "opencli-gbfs-nextbike-ky",
+      "domain": null,
+      "description": "nextbike Kyjov in Kyjov (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ky",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:41:38.983Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4009,
+        "p95": 6002,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ky/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ky/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ky/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:41:38.983Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gbfs-nextbike-la",
       "name": "opencli-gbfs-nextbike-la",
       "path": "mobility/gbfs/at/gbfs-nextbike-la",
@@ -43697,6 +44261,100 @@
       "screenshot": null
     },
     {
+      "id": "gbfs-nextbike-lb",
+      "name": "opencli-gbfs-nextbike-lb",
+      "domain": null,
+      "description": "nextbike Lipník nad Bečvou in Lipník nad Bečvou (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-lb",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:42:00.025Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3997,
+        "p95": 5998,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-lb/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-lb/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-lb/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:42:00.025Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gbfs-nextbike-lh",
       "name": "opencli-gbfs-nextbike-lh",
       "path": "mobility/gbfs/at/gbfs-nextbike-lh",
@@ -43782,6 +44440,100 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T10:11:19.359Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-lo",
+      "name": "opencli-gbfs-nextbike-lo",
+      "domain": null,
+      "description": "nextbike Lovosice in Lovosice (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-lo",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:42:22.027Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4028,
+        "p95": 6004,
+        "throughput": 14.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-lo/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-lo/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-lo/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:42:22.027Z"
       },
       "ampel": {
         "level": "red",
@@ -44175,6 +44927,100 @@
       "screenshot": null
     },
     {
+      "id": "gbfs-nextbike-ne",
+      "name": "opencli-gbfs-nextbike-ne",
+      "domain": null,
+      "description": "nextbike Neratovice in Neratovice (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ne",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:42:44.041Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3991,
+        "p95": 6015,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ne/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ne/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ne/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:42:44.041Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gbfs-nextbike-nh",
       "name": "opencli-gbfs-nextbike-nh",
       "path": "mobility/gbfs/cz/gbfs-nextbike-nh",
@@ -44260,6 +45106,664 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T12:04:59.434Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-ni",
+      "name": "opencli-gbfs-nextbike-ni",
+      "domain": null,
+      "description": "nextbike Kolín in Kolin (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ni",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:43:05.100Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3990,
+        "p95": 6017,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ni/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ni/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ni/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:43:05.100Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-nl",
+      "name": "opencli-gbfs-nextbike-nl",
+      "domain": null,
+      "description": "nextbike Litovel in Litovel (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-nl",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:43:26.130Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4017,
+        "p95": 6033,
+        "throughput": 14.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-nl/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-nl/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-nl/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:43:26.130Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-nr",
+      "name": "opencli-gbfs-nextbike-nr",
+      "domain": null,
+      "description": "nextbike Přerov in Přerov (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-nr",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:43:47.145Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3942,
+        "p95": 6027,
+        "throughput": 15.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-nr/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-nr/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-nr/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:43:47.145Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-ns",
+      "name": "opencli-gbfs-nextbike-ns",
+      "domain": null,
+      "description": "nextbike Šumperk in Šumperk (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ns",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:44:08.204Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4000,
+        "p95": 6007,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ns/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ns/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ns/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:44:08.204Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-nt",
+      "name": "opencli-gbfs-nextbike-nt",
+      "domain": null,
+      "description": "nextbike Jičín in Jičín, CZ (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-nt",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:44:29.223Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4010,
+        "p95": 6000,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-nt/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-nt/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-nt/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:44:29.223Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-nu",
+      "name": "opencli-gbfs-nextbike-nu",
+      "domain": null,
+      "description": "nextbike Uničov in Uničov (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-nu",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:44:50.299Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3974,
+        "p95": 6038,
+        "throughput": 15.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-nu/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-nu/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-nu/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:44:50.299Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-ot",
+      "name": "opencli-gbfs-nextbike-ot",
+      "domain": null,
+      "description": "nextbike Otrokovice in Otrokovice (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ot",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:45:11.392Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3996,
+        "p95": 6005,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ot/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ot/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ot/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:45:11.392Z"
       },
       "ampel": {
         "level": "red",
@@ -44751,6 +46255,288 @@
       "screenshot": null
     },
     {
+      "id": "gbfs-nextbike-tg",
+      "name": "opencli-gbfs-nextbike-tg",
+      "domain": null,
+      "description": "nextbike Praha in Czechia (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tg",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:45:32.467Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4027,
+        "p95": 6009,
+        "throughput": 14.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tg/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tg/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tg/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:45:32.467Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-tj",
+      "name": "opencli-gbfs-nextbike-tj",
+      "domain": null,
+      "description": "nextbike Opava in Opava (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tj",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:45:53.558Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3871,
+        "p95": 6093,
+        "throughput": 15.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tj/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tj/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tj/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:45:53.558Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-tk",
+      "name": "opencli-gbfs-nextbike-tk",
+      "domain": null,
+      "description": "nextbike Kladno in Kladno (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tk",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:46:14.582Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4014,
+        "p95": 6007,
+        "throughput": 14.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tk/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tk/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tk/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:46:14.582Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gbfs-nextbike-tl",
       "name": "opencli-gbfs-nextbike-tl",
       "path": "mobility/gbfs/cz/gbfs-nextbike-tl",
@@ -44847,6 +46633,194 @@
       "screenshot": null
     },
     {
+      "id": "gbfs-nextbike-to",
+      "name": "opencli-gbfs-nextbike-to",
+      "domain": null,
+      "description": "nextbike Ostrava in Czechia (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-to",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:46:35.619Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4023,
+        "p95": 6008,
+        "throughput": 14.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-to/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-to/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-to/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:46:35.619Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-tq",
+      "name": "opencli-gbfs-nextbike-tq",
+      "domain": null,
+      "description": "nextbike Mladoboleslavsko in Czechia (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tq",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:46:56.794Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4019,
+        "p95": 6000,
+        "throughput": 14.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tq/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tq/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tq/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:46:56.794Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gbfs-nextbike-ts",
       "name": "opencli-gbfs-nextbike-ts",
       "path": "mobility/gbfs/cz/gbfs-nextbike-ts",
@@ -44932,6 +46906,570 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T12:06:44.652Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-tt",
+      "name": "opencli-gbfs-nextbike-tt",
+      "domain": null,
+      "description": "nextbike Uherské Hradiště in Uherské Hradiště (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tt",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:47:17.814Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3991,
+        "p95": 5996,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tt/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tt/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tt/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:47:17.814Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-tu",
+      "name": "opencli-gbfs-nextbike-tu",
+      "domain": null,
+      "description": "nextbike Třebíč in Třebíč (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tu",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:47:38.830Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3994,
+        "p95": 6009,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tu/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tu/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tu/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:47:38.830Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-tv",
+      "name": "opencli-gbfs-nextbike-tv",
+      "domain": null,
+      "description": "nextbike Zlín in Zlín (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tv",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:47:59.861Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4015,
+        "p95": 5991,
+        "throughput": 14.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tv/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tv/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tv/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:47:59.861Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-tw",
+      "name": "opencli-gbfs-nextbike-tw",
+      "domain": null,
+      "description": "nextbike Krnov in Krnov (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tw",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:48:20.904Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3997,
+        "p95": 6005,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tw/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tw/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tw/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:48:20.904Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-tx",
+      "name": "opencli-gbfs-nextbike-tx",
+      "domain": null,
+      "description": "nextbike Rychnovsko in Rychnovsko (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tx",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:48:41.922Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4005,
+        "p95": 5996,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tx/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-tx/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-tx/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:48:41.922Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-ty",
+      "name": "opencli-gbfs-nextbike-ty",
+      "domain": null,
+      "description": "nextbike Písek in Písek (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ty",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:49:03.135Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4000,
+        "p95": 6006,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ty/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-ty/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-ty/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:49:03.135Z"
       },
       "ampel": {
         "level": "red",
@@ -45135,6 +47673,194 @@
       "screenshot": null
     },
     {
+      "id": "gbfs-nextbike-uo",
+      "name": "opencli-gbfs-nextbike-uo",
+      "domain": null,
+      "description": "nextbike Most in Most, CZ (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-uo",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:49:24.239Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3999,
+        "p95": 6001,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-uo/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-uo/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-uo/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:49:24.239Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-vm",
+      "name": "opencli-gbfs-nextbike-vm",
+      "domain": null,
+      "description": "nextbike Valašsko in CZ (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-vm",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:49:45.408Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4003,
+        "p95": 6145,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-vm/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-vm/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-vm/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:49:45.408Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gbfs-nextbike-vo",
       "name": "opencli-gbfs-nextbike-vo",
       "path": "mobility/gbfs/at/gbfs-nextbike-vo",
@@ -45220,6 +47946,100 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T10:12:16.182Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-vr",
+      "name": "opencli-gbfs-nextbike-vr",
+      "domain": null,
+      "description": "nextbike Vrchlabí in Vrchlabí (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-vr",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:50:06.401Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4017,
+        "p95": 5999,
+        "throughput": 14.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-vr/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-vr/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-vr/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:50:06.401Z"
       },
       "ampel": {
         "level": "red",
@@ -45508,6 +48328,382 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T10:13:13.022Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-xa",
+      "name": "opencli-gbfs-nextbike-xa",
+      "domain": null,
+      "description": "nextbike Liberec in Liberec (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-xa",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:50:27.479Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4009,
+        "p95": 6002,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-xa/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-xa/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-xa/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:50:27.479Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-xb",
+      "name": "opencli-gbfs-nextbike-xb",
+      "domain": null,
+      "description": "nextbike Trutnov in Trutnov, CZ (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-xb",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:50:49.469Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3995,
+        "p95": 6011,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-xb/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-xb/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-xb/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:50:49.469Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-xc",
+      "name": "opencli-gbfs-nextbike-xc",
+      "domain": null,
+      "description": "nextbike Moravská Třebová in Moravská Třebová (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-xc",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:51:11.469Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3998,
+        "p95": 6006,
+        "throughput": 15,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-xc/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-xc/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-xc/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:51:11.469Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-nextbike-zs",
+      "name": "opencli-gbfs-nextbike-zs",
+      "domain": null,
+      "description": "nextbike Ždár nad Sázavou in Ždár nad Sázavou (Tschechien): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-zs",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:51:32.535Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 3982,
+        "p95": 6016,
+        "throughput": 15.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "gbfs.nextbike.net/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-zs/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/cz/gbfs-nextbike-zs/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/cz/gbfs-nextbike-zs/samples"
+      },
+      "source": "gbfs.nextbike.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:51:32.535Z"
       },
       "ampel": {
         "level": "red",
@@ -46183,6 +49379,100 @@
       "screenshot": null
     },
     {
+      "id": "gbfs-velospot-ch",
+      "name": "opencli-gbfs-velospot-ch",
+      "domain": null,
+      "description": "Velospot in Switzerland (Schweiz): offener GBFS-Feed 2.3 ; 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "CH",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/ch/gbfs-velospot-ch",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:39:52.866Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4429,
+        "p95": 6187,
+        "throughput": 13.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "api.mobidata-bw.de/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/ch/gbfs-velospot-ch/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/ch/gbfs-velospot-ch/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/ch/gbfs-velospot-ch/samples"
+      },
+      "source": "api.mobidata-bw.de",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:39:52.866Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gbfs-voi-antwerp",
       "name": "opencli-gbfs-voi-antwerp",
       "domain": null,
@@ -46266,6 +49556,100 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T12:28:45.040Z"
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gbfs-voi-ch",
+      "name": "opencli-gbfs-voi-ch",
+      "domain": null,
+      "description": "Voi Switzerland in Switzerland (Schweiz): offener GBFS-Feed 2.3 ; 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+      "category": "mobility",
+      "country": "CH",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/ch/gbfs-voi-ch",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-13T12:40:14.801Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 4135,
+        "p95": 6323,
+        "throughput": 14.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "GBFS",
+      "robots": "disallowed",
+      "robotsNote": "api.mobidata-bw.de/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/ch/gbfs-voi-ch/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/gbfs/ch/gbfs-voi-ch/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/gbfs/ch/gbfs-voi-ch/samples"
+      },
+      "source": "api.mobidata-bw.de",
+      "live": null,
+      "server": null,
+      "sourceType": "Shop/Anbieter",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-13T12:40:14.801Z"
       },
       "ampel": {
         "level": "red",
@@ -100094,14 +103478,14 @@
       "screenshot": null
     }
   ],
-  "enrichedAt": "2026-10-13T13:14:30.006Z",
+  "enrichedAt": "2026-10-13T13:23:30.368Z",
   "gatesSource": "check_connectors.py --strict (data/gates.snapshot.json)",
   "timeline": [
     {
       "403": 0,
       "429": 0,
       "day": "2026-10-13",
-      "ok": 1090,
+      "ok": 1127,
       "captcha": 15,
       "timeout": 1,
       "offline": 3,
@@ -100110,6 +103494,6 @@
     }
   ],
   "egress": null,
-  "observationsAt": "2026-10-13T13:14:30.174Z",
-  "observationCount": 1160
+  "observationsAt": "2026-10-13T13:23:30.613Z",
+  "observationCount": 1197
 }
