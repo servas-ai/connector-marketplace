@@ -42,5 +42,4 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 
 /* Gate: kein horizontaler Overflow auf Mobil */
 .as-scroll, pre { max-width: 100%; min-width: 0; }
-main, main * { min-width: 0; }
 h1, h2, h3, dd, td { overflow-wrap: anywhere; }
