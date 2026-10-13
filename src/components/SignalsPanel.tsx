@@ -34,7 +34,7 @@ export function SignalsPanel({ c }: { c: Connector }) {
         </tbody></table>
       </CardContent></Card>
       <Card><CardHeader><CardTitle>Screenshot der Quelle</CardTitle></CardHeader><CardContent>
-        {c.screenshot ? <img src={c.screenshot} alt={`Screenshot ${c.domain ?? c.id}`} width={320} height={120} loading="lazy" decoding="async" className="h-auto w-52 max-w-full rounded-md border object-contain" /> : <p className="text-sm text-muted-foreground">Noch kein Screenshot (Proof-Lauf fehlt).</p>}
+        {c.screenshot ? <img src={c.screenshot} alt={`Screenshot ${c.domain ?? c.id}`} width={320} height={120} loading="lazy" decoding="async" className="h-72 w-auto max-w-full rounded-md border object-contain" /> : <p className="text-sm text-muted-foreground">Noch kein Screenshot (Proof-Lauf fehlt).</p>}
       </CardContent></Card>
     </div>
   );
