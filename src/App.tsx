@@ -60,7 +60,7 @@ export function App() {
       <main id="main" className="mx-auto min-h-screen max-w-7xl px-4 py-8"><Suspense fallback={<Loading />}><Routes>
         <Route path="/" element={<Home />} /><Route path="/alle" element={<Navigate to="/" replace />} /><Route path="/c/:id" element={<DetailRoute />} /><Route path="/c/:id/technik" element={<Old />} />
         <Route path="/dashboard" element={<NeedRest><Dashboard /></NeedRest>} /><Route path="/compare" element={<NeedRest><Compare /></NeedRest>} /><Route path="/agent" element={<NeedRest><Agent /></NeedRest>} /></Routes></Suspense></main>
-      <footer className="mx-auto max-w-7xl border-t px-4 py-6 text-xs text-muted-foreground">servas-ai · read-only Katalog · Daten aus <a className="underline" href={`https://github.com/${dataset.sourceRepo}`}>opencli-connectors</a> · Stand {dataset.sourceGeneratedAt} · <a className="underline" href={`${import.meta.env.BASE_URL}llms.txt`}>llms.txt</a> · Lizenz- und Compliance-Angaben automatisch abgeleitet, keine Rechtsberatung</footer>
+      <footer className="mx-auto max-w-7xl border-t px-4 py-6 text-xs text-muted-foreground">servas-ai · read-only Katalog · Daten aus <a className="underline" href={`https://github.com/${dataset.sourceRepo}`}>opencli-connectors</a> · Stand {dataset.sourceGeneratedAt} · <a className="underline" href="https://github.com/servas-ai/opencli-connectors/blob/main/docs/WEBSITES.md">Alle Webseiten (Liste)</a> · <a className="underline" href={`${import.meta.env.BASE_URL}llms.txt`}>llms.txt</a> · Lizenz- und Compliance-Angaben automatisch abgeleitet, keine Rechtsberatung</footer>
     </div>
   );
 }

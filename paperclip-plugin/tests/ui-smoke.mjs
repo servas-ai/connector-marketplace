@@ -1,0 +1,26 @@
+import { chromium } from "playwright";
+const O = process.env.OUT ?? "./screenshots/";
+const BASE = process.env.PAPERCLIP_URL ?? "http://127.0.0.1:3100";
+const CO = process.env.COMPANY_PREFIX ?? "SER";
+const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1440, height: 1000 } });
+const log = [];
+p.on("pageerror", (e) => log.push("pageerror " + e.message));
+await p.goto(`${BASE}/${CO}/connectors`, { waitUntil: "networkidle" });
+await p.waitForSelector('[data-testid="list"] tbody tr', { timeout: 60000 });
+const rows = await p.locator('[data-testid="list"] tbody tr').count(); log.push("rows " + rows);
+await p.screenshot({ path: O + "paperclip-1-liste.png" });
+await p.fill('[data-testid="search"]', "linz"); await p.waitForTimeout(1500);
+log.push("search linz rows " + await p.locator('[data-testid="list"] tbody tr').count());
+await p.screenshot({ path: O + "paperclip-2-suche-linz.png" });
+await p.locator('[data-testid="list"] tbody tr').first().click();
+await p.waitForSelector('[data-testid="connector-detail"]', { timeout: 30000 }); await p.waitForTimeout(1500);
+log.push("detail " + (await p.locator("h2").first().textContent()) + " routes=" + await p.locator('[data-testid="routes"] tbody tr').count());
+await p.screenshot({ path: O + "paperclip-3-detail-routes.png", fullPage: true });
+const ib = p.locator('[data-testid="install"]');
+if (await ib.count()) { await ib.click(); await p.waitForSelector('[data-testid="uninstall"]', { timeout: 15000 }); log.push("install click → installiert"); }
+await p.waitForTimeout(800); await p.screenshot({ path: O + "paperclip-4-installiert.png" });
+await p.click('[data-testid="back"]'); await p.waitForTimeout(1000);
+await p.goto(`${BASE}/${CO}/dashboard`, { waitUntil: "networkidle" }); await p.waitForTimeout(3000);
+await p.screenshot({ path: O + "paperclip-5-dashboard-widget.png" });
+log.push("widget visible " + await p.getByText("Connector Marketplace").count());
+console.log(log.join("\n")); await b.close();
