@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-14T04:27:51.161Z",
+  "generatedAt": "2026-10-14T04:49:34.377Z",
   "sourceRepo": "servas-ai/opencli-connectors",
-  "sourceGeneratedAt": "2026-10-14 04:23 UTC",
-  "count": 2266,
+  "sourceGeneratedAt": "2026-10-14 04:39 UTC",
+  "count": 2327,
   "connectors": [
     {
       "id": "spusu-at",
@@ -11630,6 +11630,93 @@
       "screenshot": null
     },
     {
+      "id": "arsat-datos-ckan",
+      "name": "opencli-arsat-datos-ckan",
+      "path": "opendata/arsat-datos-ckan",
+      "endpoint": null,
+      "domain": "datos.arsat.com.ar",
+      "description": "datos.arsat.com.ar – ARSAT (Empresa Argentina de Soluciones Satelitales): CKAN-Katalog: Dataset-Suche und Dataset-Details (Organisation, Ressourcen, Formate, Lizenz). Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/arsat-datos-ckan",
+      "records": 16,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/arsat-datos-ckan/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/arsat-datos-ckan/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/arsat-datos-ckan/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "artic",
       "name": "artic",
       "path": "international/artic",
@@ -13392,6 +13479,93 @@
       "screenshot": "screens/auri-at.webp"
     },
     {
+      "id": "austin-datahub-socrata",
+      "name": "opencli-austin-datahub-socrata",
+      "path": "opendata/austin-datahub-socrata",
+      "endpoint": null,
+      "domain": "datahub.austintexas.gov",
+      "description": "datahub.austintexas.gov – City of Austin: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/austin-datahub-socrata",
+      "records": 761,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/austin-datahub-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/austin-datahub-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/austin-datahub-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "auswaertiges-amt",
       "name": "auswaertiges-amt",
       "path": "opendata/auswaertiges-amt",
@@ -15152,6 +15326,93 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "baton-rouge-data-socrata",
+      "name": "opencli-baton-rouge-data-socrata",
+      "path": "opendata/baton-rouge-data-socrata",
+      "endpoint": null,
+      "domain": "data.brla.gov",
+      "description": "data.brla.gov – City of Baton Rouge / East Baton Rouge Parish: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/baton-rouge-data-socrata",
+      "records": 270,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/baton-rouge-data-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/baton-rouge-data-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/baton-rouge-data-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
           "Gates nicht geprüft"
         ]
       },
@@ -22683,6 +22944,93 @@
       "screenshot": null
     },
     {
+      "id": "boulder-county-socrata",
+      "name": "opencli-boulder-county-socrata",
+      "path": "opendata/boulder-county-socrata",
+      "endpoint": null,
+      "domain": "boulderco.data.socrata.com",
+      "description": "boulderco.data.socrata.com – Boulder County Colorado: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/boulder-county-socrata",
+      "records": 12,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/boulder-county-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/boulder-county-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/boulder-county-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "boulder-hub",
       "name": "opencli-boulder-hub",
       "path": "opendata/boulder-hub",
@@ -28074,6 +28422,93 @@
       "screenshot": null
     },
     {
+      "id": "celebrating-cities-socrata",
+      "name": "opencli-celebrating-cities-socrata",
+      "path": "opendata/celebrating-cities-socrata",
+      "endpoint": null,
+      "domain": "celebratingcities.data.socrata.com",
+      "description": "celebratingcities.data.socrata.com – Celebrating Cities (Socrata community catalog): Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/celebrating-cities-socrata",
+      "records": 101,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/celebrating-cities-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/celebrating-cities-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/celebrating-cities-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "cellosaurus",
       "name": "opencli-cellosaurus",
       "path": "opendata/cellosaurus",
@@ -31714,6 +32149,93 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "clatsop-county-socrata",
+      "name": "opencli-clatsop-county-socrata",
+      "path": "opendata/clatsop-county-socrata",
+      "endpoint": null,
+      "domain": "clatsop.data.socrata.com",
+      "description": "clatsop.data.socrata.com – Clatsop County Oregon: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/clatsop-county-socrata",
+      "records": 14,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/clatsop-county-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/clatsop-county-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/clatsop-county-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
           "Gates nicht geprüft"
         ]
       },
@@ -35645,6 +36167,93 @@
       "screenshot": null
     },
     {
+      "id": "columbia-sc-socrata",
+      "name": "opencli-columbia-sc-socrata",
+      "path": "opendata/columbia-sc-socrata",
+      "endpoint": null,
+      "domain": "columbiasc.data.socrata.com",
+      "description": "columbiasc.data.socrata.com – City of Columbia South Carolina: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/columbia-sc-socrata",
+      "records": 18,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/columbia-sc-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/columbia-sc-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/columbia-sc-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "columbus-hub",
       "name": "opencli-columbus-hub",
       "path": "opendata/columbus-hub",
@@ -36013,6 +36622,101 @@
         "level": "yellow",
         "reasons": [
           "Login nötig",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "compras-gov-br",
+      "name": "opencli-compras-gov-br",
+      "path": "vergabe/compras-gov-br",
+      "endpoint": "https://dadosabertos.compras.gov.br",
+      "domain": "dadosabertos.compras.gov.br",
+      "description": "Compras.gov.br Dados Abertos API (Ministério da Gestão): Lieferantenregister (SICAF-Fornecedor nach CNPJ, CNAE, Rechtsform, Größe, Vergabe-Zulassung), Vergabestellen (UASG) je Bundesstaat und Vergabe-Indikatoren – keyless JSON.",
+      "category": "vergabe",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/compras-gov-br",
+      "records": 6,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:31.790Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 4369,
+        "p95": 6125,
+        "throughput": 13.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v3",
+      "robots": "allowed",
+      "robotsNote": "dadosabertos.compras.gov.br/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/compras-gov-br/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/compras-gov-br/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/compras-gov-br/samples"
+      },
+      "source": "https://dadosabertos.compras.gov.br",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:31.790Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -41845,6 +42549,99 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "data-gov-my",
+      "name": "opencli-data-gov-my",
+      "domain": "api.data.gov.my",
+      "description": "Malaysia Official Open Data API (data.gov.my / OpenDOSM): Datensätze aus dem Katalog (z. B. Kraftstoffpreise), MET-Wettervorhersage, Wetterwarnungen und DOSM-Statistiken, keyless JSON.",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/data-gov-my",
+      "records": null,
+      "commands": [],
+      "logo": "api.data.gov.my.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:05.780Z",
+      "e2ePassed": 6,
+      "e2eTotal": 6,
+      "kpi": {
+        "stability": 100,
+        "p50": 2059,
+        "p95": 2743,
+        "throughput": 29.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.data.gov.my/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/data-gov-my/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/data-gov-my/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/data-gov-my/samples"
+      },
+      "source": "https://api.data.gov.my",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:05.780Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -48695,6 +49492,101 @@
       "screenshot": null
     },
     {
+      "id": "diavgeia-gr",
+      "name": "opencli-diavgeia-gr",
+      "path": "international/diavgeia-gr",
+      "endpoint": "https://diavgeia.gov.gr",
+      "domain": "diavgeia.gov.gr",
+      "description": "Δι@ύγεια OpenData API: veröffentlichte Entscheidungen griechischer Behörden (u.a. Direktvergaben, Zahlungsanweisungen mit Beträgen), Organisationen (inkl. Steuernummer) und Entscheidungstypen – keyless JSON.",
+      "category": "international",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/diavgeia-gr",
+      "records": 14,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:26.223Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1306,
+        "p95": 1999,
+        "throughput": 45.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "opendata",
+      "robots": "allowed",
+      "robotsNote": "diavgeia.gov.gr/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/diavgeia-gr/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/diavgeia-gr/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/diavgeia-gr/samples"
+      },
+      "source": "https://diavgeia.gov.gr",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:26.223Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "dicebear",
       "name": "opencli-dicebear",
       "path": "tech/dicebear",
@@ -49691,6 +50583,99 @@
       "screenshot": null
     },
     {
+      "id": "dmi-opendata",
+      "name": "opencli-dmi-opendata",
+      "domain": "opendataapi.dmi.dk",
+      "description": "DMI Open Data API (Dänisches Meteorologisches Institut): meteorologische Stationen, aktuelle Beobachtungen (z. B. Temperatur, Wind) und Klimadaten je Station, keyless OGC-API-Features/GeoJSON.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/dmi-opendata",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:06.236Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1096,
+        "p95": 1986,
+        "throughput": 54.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v2",
+      "robots": "allowed",
+      "robotsNote": "opendataapi.dmi.dk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/dmi-opendata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/dmi-opendata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/dmi-opendata/samples"
+      },
+      "source": "https://opendataapi.dmi.dk",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": true,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:06.236Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "dnb-katalog",
       "name": "dnb-katalog",
       "path": "opendata/dnb-katalog",
@@ -50346,6 +51331,101 @@
       "screenshot": null
     },
     {
+      "id": "dof-mx",
+      "name": "opencli-dof-mx",
+      "path": "international/dof-mx",
+      "endpoint": "https://sidof.segob.gob.mx",
+      "domain": "sidof.segob.gob.mx",
+      "description": "SIDOF Web Service (Secretaría de Gobernación): Ausgaben des mexikanischen Amtsblatts (Diario Oficial) je Tag und amtliche Indikatoren (u.a. FIX-Wechselkurs, TIIE, UDIS) – keyless JSON.",
+      "category": "international",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/dof-mx",
+      "records": 7,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:24.247Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1069,
+        "p95": 1921,
+        "throughput": 56.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "sidof",
+      "robots": "allowed",
+      "robotsNote": "sidof.segob.gob.mx/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/dof-mx/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/dof-mx/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/dof-mx/samples"
+      },
+      "source": "https://sidof.segob.gob.mx",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:24.247Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "dog-ceo",
       "name": "dog-ceo",
       "path": "opendata/dog-ceo",
@@ -50432,6 +51512,108 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T11:21:33.485Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "dogechain",
+      "name": "opencli-dogechain",
+      "domain": "dogechain.com",
+      "description": "Dogechain API v3 (Block.io): Dogecoin-Netzwerkstatus, Blöcke, Adressen, Gebühren, Umlaufmenge, Rich-List und Suche, keyless JSON; llms.txt + OpenAPI 3.1 + MCP vorhanden.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/dogechain",
+      "records": null,
+      "commands": [],
+      "logo": "dogechain.com.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:06.333Z",
+      "e2ePassed": 9,
+      "e2eTotal": 9,
+      "kpi": {
+        "stability": 100,
+        "p50": 1984,
+        "p95": 2041,
+        "throughput": 30.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v3",
+      "robots": "allowed",
+      "robotsNote": "dogechain.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2.",
+        "Lizenz/ToS: Dogechain Terms: öffentliche JSON-API ohne Key, Quelle dogechain.com nennen; Drossel 1 req/2 s, bei 429 Abbruch."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/dogechain/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/dogechain/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/dogechain/samples"
+      },
+      "source": "https://dogechain.com",
+      "live": {
+        "realtime": true,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:06.333Z"
       },
       "ampel": {
         "level": "yellow",
@@ -54138,6 +55320,101 @@
       "screenshot": null
     },
     {
+      "id": "ecfr-us",
+      "name": "opencli-ecfr-us",
+      "path": "international/ecfr-us",
+      "endpoint": "https://ecfr.gov",
+      "domain": "ecfr.gov",
+      "description": "eCFR API (Office of the Federal Register): Titel des Code of Federal Regulations mit Aktualitätsstand, Volltextsuche über Abschnitte (z.B. beneficial ownership, SEC/FinCEN-Regeln) und Bundesbehörden mit CFR-Referenzen – keyless JSON.",
+      "category": "international",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/ecfr-us",
+      "records": 58,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:56.701Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 390,
+        "p95": 1987,
+        "throughput": 153.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "ecfr.gov/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ecfr-us/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ecfr-us/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ecfr-us/samples"
+      },
+      "source": "https://ecfr.gov",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:56.701Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "ecmwf-opendata",
       "name": "opencli-ecmwf-opendata",
       "path": "opendata/ecmwf-opendata",
@@ -56070,6 +57347,99 @@
       "screenshot": null
     },
     {
+      "id": "emojihub",
+      "name": "opencli-emojihub",
+      "domain": "emojihub.yurace.pro",
+      "description": "EmojiHub API: Emojis mit Name, Kategorie, Gruppe, HTML-Code und Unicode – Zufallsemoji, nach Kategorie, nach Gruppe und Gesamtliste, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/emojihub",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:15.791Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 998,
+        "p95": 1889,
+        "throughput": 60.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "emojihub.yurace.pro/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/emojihub/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/emojihub/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/emojihub/samples"
+      },
+      "source": "https://emojihub.yurace.pro",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:15.791Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "emso-erddap",
       "name": "opencli-emso-erddap",
       "path": "opendata/emso-erddap",
@@ -57103,6 +58473,99 @@
         ]
       },
       "screenshot": "screens/energyagency-at.webp"
+    },
+    {
+      "id": "energyzero",
+      "name": "opencli-energyzero",
+      "domain": "api.energyzero.nl",
+      "description": "EnergyZero API: dynamische Strompreise (stündlich, EUR/kWh) und Gaspreise (EUR/m³) Niederlande für ein Datum, optional inkl. BTW, keyless JSON.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/energyzero",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:04.405Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 954,
+        "p95": 1730,
+        "throughput": 62.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.energyzero.nl/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/energyzero/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/energyzero/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/energyzero/samples"
+      },
+      "source": "https://api.energyzero.nl",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:04.405Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
     },
     {
       "id": "england-peat-map-hub",
@@ -59008,6 +60471,101 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "etenders-za",
+      "name": "opencli-etenders-za",
+      "path": "vergabe/etenders-za",
+      "endpoint": "https://ocds-api.etenders.gov.za",
+      "domain": "ocds-api.etenders.gov.za",
+      "description": "eTender Publication Portal OCDS API (National Treasury South Africa): Vergabe-Releases nach Zeitraum und Einzel-Release nach OCID mit Auftraggeber, Kategorie, Status und Fristen – keyless JSON, PDDL.",
+      "category": "vergabe",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/etenders-za",
+      "records": 6,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:27.164Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1988,
+        "p95": 3827,
+        "throughput": 30.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "ocds-1.1",
+      "robots": "allowed",
+      "robotsNote": "ocds-api.etenders.gov.za/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/etenders-za/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/etenders-za/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/etenders-za/samples"
+      },
+      "source": "https://ocds-api.etenders.gov.za",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:27.164Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -61510,6 +63068,99 @@
       "screenshot": "screens/f-droid.webp"
     },
     {
+      "id": "faa-nas-status",
+      "name": "opencli-faa-nas-status",
+      "domain": "nasstatus.faa.gov",
+      "description": "FAA National Airspace System Status: aktuelle Verzögerungen, Ground Stops/Delays und Flughafen-Schließungen in den USA (Airport Status Information), keyless XML.",
+      "category": "mobility",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/faa-nas-status",
+      "records": null,
+      "commands": [],
+      "logo": "nasstatus.faa.gov.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:03.756Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 409,
+        "p95": 1937,
+        "throughput": 146.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "airport-status-information",
+      "robots": "allowed",
+      "robotsNote": "nasstatus.faa.gov/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/faa-nas-status/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/mobility/faa-nas-status/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/mobility/faa-nas-status/samples"
+      },
+      "source": "https://nasstatus.faa.gov",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:03.756Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "fabricmc-meta",
       "name": "opencli-fabricmc-meta",
       "path": "tech/fabricmc-meta",
@@ -62689,6 +64340,99 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-14T00:00:58.974Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "fcc-census-geo",
+      "name": "opencli-fcc-census-geo",
+      "domain": "geo.fcc.gov",
+      "description": "FCC Area API: US-Koordinate → Census Block (FIPS), County, Bundesstaat und FCC-Marktgebiete (BEA, CMA, MTA …) inkl. Blockbevölkerung 2020, keyless JSON.",
+      "category": "geo",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/fcc-census-geo",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:34:54.475Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 705,
+        "p95": 1783,
+        "throughput": 85.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "census",
+      "robots": "allowed",
+      "robotsNote": "geo.fcc.gov/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/fcc-census-geo/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/fcc-census-geo/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/fcc-census-geo/samples"
+      },
+      "source": "https://geo.fcc.gov",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:34:54.475Z"
       },
       "ampel": {
         "level": "yellow",
@@ -64487,6 +66231,101 @@
       "screenshot": null
     },
     {
+      "id": "find-tender-gb",
+      "name": "opencli-find-tender-gb",
+      "path": "vergabe/find-tender-gb",
+      "endpoint": "https://find-tender.service.gov.uk",
+      "domain": "find-tender.service.gov.uk",
+      "description": "Find a Tender Service (Cabinet Office) OCDS API 1.0: aktuelle Vergabebekanntmachungen (Releases) und Vergabe-Records nach OCID mit Auftraggeber, Wert und Status – keyless JSON.",
+      "category": "vergabe",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/find-tender-gb",
+      "records": 6,
+      "commands": [],
+      "logo": "find-tender.service.gov.uk.png",
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:38.427Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 8463,
+        "p95": 8542,
+        "throughput": 7.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "1.0",
+      "robots": "allowed",
+      "robotsNote": "find-tender.service.gov.uk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/find-tender-gb/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/find-tender-gb/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/find-tender-gb/samples"
+      },
+      "source": "https://find-tender.service.gov.uk",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:38.427Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "findok-bmf",
       "name": "opencli-findok-bmf",
       "path": "opendata/findok-bmf",
@@ -64579,6 +66418,99 @@
         "reasons": []
       },
       "screenshot": "screens/findok-bmf.webp"
+    },
+    {
+      "id": "findthatpostcode",
+      "name": "opencli-findthatpostcode",
+      "domain": "findthatpostcode.uk",
+      "description": "Find that Postcode: britische Postleitzahlen (ONS Postcode Directory) mit Koordinaten, Verwaltungs-/Wahlkreis-Zuordnung, IMD, Gebiets-Lookup per GSS-Code und nächste Postleitzahl zu einem Punkt, keyless JSON.",
+      "category": "geo",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/findthatpostcode",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:34:58.020Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1529,
+        "p95": 2770,
+        "throughput": 39.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "findthatpostcode.uk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/findthatpostcode/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/findthatpostcode/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/findthatpostcode/samples"
+      },
+      "source": "https://findthatpostcode.uk",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:34:58.020Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
     },
     {
       "id": "fingal-ie",
@@ -70423,6 +72355,186 @@
       "screenshot": null
     },
     {
+      "id": "ga-earthquakes",
+      "name": "opencli-ga-earthquakes",
+      "domain": "earthquakes.ga.gov.au",
+      "description": "Geoscience Australia Earthquakes (GeoServer WFS): Erdbeben der letzten 7 Tage weltweit/Australien (ohne Platzhalter-Testereignisse) mit Magnitude, Tiefe, Herdzeit, Ort und Koordinaten, keyless GeoJSON.",
+      "category": "geo",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/ga-earthquakes",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:34:56.990Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1405,
+        "p95": 2130,
+        "throughput": 42.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "wfs-2.0",
+      "robots": "allowed",
+      "robotsNote": "earthquakes.ga.gov.au/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/ga-earthquakes/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/ga-earthquakes/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/ga-earthquakes/samples"
+      },
+      "source": "https://earthquakes.ga.gov.au",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:34:56.990Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gainesville-data-socrata",
+      "name": "opencli-gainesville-data-socrata",
+      "path": "opendata/gainesville-data-socrata",
+      "endpoint": null,
+      "domain": "data.cityofgainesville.org",
+      "description": "data.cityofgainesville.org – City of Gainesville: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/gainesville-data-socrata",
+      "records": 97,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/gainesville-data-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/gainesville-data-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/gainesville-data-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "galway-city-hub",
       "name": "opencli-galway-city-hub",
       "path": "opendata/galway-city-hub",
@@ -70810,6 +72922,101 @@
       "ampel": {
         "level": "green",
         "reasons": []
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gazette-insolvency-uk",
+      "name": "opencli-gazette-insolvency-uk",
+      "path": "international/gazette-insolvency-uk",
+      "endpoint": "https://thegazette.co.uk",
+      "domain": "thegazette.co.uk",
+      "description": "The Gazette (amtliches Bekanntmachungsblatt UK, TSO/National Archives) Linked-Data-API: aktuelle Insolvenz-Bekanntmachungen (Liquidationen, Verwalterbestellungen, Winding-up) und Einzel-Notices nach ID – keyless JSON.",
+      "category": "international",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/gazette-insolvency-uk",
+      "records": 8,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:32.138Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 762,
+        "p95": 10019,
+        "throughput": 78.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "linked-data-api-0.2",
+      "robots": "allowed",
+      "robotsNote": "thegazette.co.uk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/10 s (robots Crawl-delay).",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/gazette-insolvency-uk/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/gazette-insolvency-uk/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/gazette-insolvency-uk/samples"
+      },
+      "source": "https://thegazette.co.uk",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:32.138Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
       },
       "screenshot": null
     },
@@ -94888,6 +97095,101 @@
       "screenshot": null
     },
     {
+      "id": "gcis-tw",
+      "name": "opencli-gcis-tw",
+      "path": "international/gcis-tw",
+      "endpoint": "https://data.gcis.nat.gov.tw",
+      "domain": "data.gcis.nat.gov.tw",
+      "description": "GCIS Open Data API (Ministry of Economic Affairs, Taiwan): Firmenregister nach Unified Business Number und Namenssuche – Status, Kapital, Sitz, Registerbehörde, Gründungsdatum; keyless JSON.",
+      "category": "international",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/gcis-tw",
+      "records": 4,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:29.156Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 2277,
+        "p95": 5667,
+        "throughput": 26.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "od",
+      "robots": "allowed",
+      "robotsNote": "data.gcis.nat.gov.tw/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/gcis-tw/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/gcis-tw/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/gcis-tw/samples"
+      },
+      "source": "https://data.gcis.nat.gov.tw",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:29.156Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gcoos-erddap",
       "name": "opencli-gcoos-erddap",
       "path": "opendata/gcoos-erddap",
@@ -98962,6 +101264,109 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "gleif-mapping",
+      "name": "opencli-gleif-mapping",
+      "path": "finance/gleif-mapping",
+      "endpoint": "https://mapping.gleif.org",
+      "domain": "mapping.gleif.org",
+      "description": "GLEIF Mapping API v2: aktuelle und historische Zuordnungsdateien LEI↔ISIN, LEI↔BIC, LEI↔MIC und LEI↔OpenCorporates-ID (Dateiname, Datum, Download-Link) – keyless JSON:API.",
+      "category": "finance",
+      "country": "INT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/finance/gleif-mapping",
+      "records": 10,
+      "commands": [],
+      "logo": "mapping.gleif.org.png",
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:33.308Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1963,
+        "p95": 7618,
+        "throughput": 30.6,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v2",
+      "robots": "allowed",
+      "robotsNote": "mapping.gleif.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/gleif-mapping/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/gleif-mapping/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/gleif-mapping/samples"
+      },
+      "source": "https://mapping.gleif.org",
+      "live": {
+        "realtime": false,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Register",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:33.308Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -117875,6 +120280,93 @@
       "screenshot": null
     },
     {
+      "id": "hawaii-campaign-socrata",
+      "name": "opencli-hawaii-campaign-socrata",
+      "path": "opendata/hawaii-campaign-socrata",
+      "endpoint": null,
+      "domain": "hicscdata.hawaii.gov",
+      "description": "hicscdata.hawaii.gov – Hawaii Campaign Spending Commission: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/hawaii-campaign-socrata",
+      "records": 38,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/hawaii-campaign-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/hawaii-campaign-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/hawaii-campaign-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "hawkesbay-rc-opendata-hub",
       "name": "opencli-hawkesbay-rc-opendata-hub",
       "path": "opendata/hawkesbay-rc-opendata-hub",
@@ -124974,6 +127466,99 @@
       "screenshot": null
     },
     {
+      "id": "ietf-datatracker",
+      "name": "opencli-ietf-datatracker",
+      "domain": "datatracker.ietf.org",
+      "description": "IETF Datatracker REST-API: Dokumente (Internet-Drafts, RFCs, Minutes) suchen und abrufen, Arbeitsgruppen und IETF-Meetings, keyless JSON (Tastypie).",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/ietf-datatracker",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:20.635Z",
+      "e2ePassed": 5,
+      "e2eTotal": 5,
+      "kpi": {
+        "stability": 100,
+        "p50": 1824,
+        "p95": 2019,
+        "throughput": 32.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "datatracker.ietf.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/ietf-datatracker/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/ietf-datatracker/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/ietf-datatracker/samples"
+      },
+      "source": "https://datatracker.ietf.org",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:20.635Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "ifconfig",
       "name": "opencli-ifconfig",
       "path": "tech/ifconfig",
@@ -128110,6 +130695,99 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-14T03:53:59.237Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "iplocation-net",
+      "name": "opencli-iplocation-net",
+      "domain": "api.iplocation.net",
+      "description": "IPLocation.net API: öffentliche IPv4/IPv6-Adresse → Land (ISO-2), Ländername und ISP/Netzbetreiber, keyless JSON.",
+      "category": "tech",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/iplocation-net",
+      "records": null,
+      "commands": [],
+      "logo": "api.iplocation.net.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:18.540Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 545,
+        "p95": 1999,
+        "throughput": 110.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.iplocation.net/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/iplocation-net/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/tech/iplocation-net/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/tech/iplocation-net/samples"
+      },
+      "source": "https://api.iplocation.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:18.540Z"
       },
       "ampel": {
         "level": "yellow",
@@ -131570,6 +134248,101 @@
       "screenshot": null
     },
     {
+      "id": "justice-laws-ca",
+      "name": "opencli-justice-laws-ca",
+      "path": "international/justice-laws-ca",
+      "endpoint": "https://laws-lois.justice.gc.ca",
+      "domain": "laws-lois.justice.gc.ca",
+      "description": "Justice Laws Website (Department of Justice Canada): konsolidierte Bundesgesetze und Verordnungen – Verzeichnis (Legis.xml) mit Suche nach Titel und Akt-Metadaten, keyless XML.",
+      "category": "international",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/justice-laws-ca",
+      "records": 6,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:26.238Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1981,
+        "p95": 2154,
+        "throughput": 30.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "xml",
+      "robots": "allowed",
+      "robotsNote": "laws-lois.justice.gc.ca/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/justice-laws-ca/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/justice-laws-ca/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/justice-laws-ca/samples"
+      },
+      "source": "https://laws-lois.justice.gc.ca",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:26.238Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "k8s-release",
       "name": "opencli-k8s-release",
       "path": "tech/k8s-release",
@@ -131895,6 +134668,93 @@
       "ampel": {
         "level": "yellow",
         "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "kansas-city-mo-socrata",
+      "name": "opencli-kansas-city-mo-socrata",
+      "path": "opendata/kansas-city-mo-socrata",
+      "endpoint": null,
+      "domain": "data.kcmo.org",
+      "description": "data.kcmo.org – City of Kansas City Missouri: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/kansas-city-mo-socrata",
+      "records": 247,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/kansas-city-mo-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/kansas-city-mo-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/kansas-city-mo-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
           "Gates nicht geprüft"
         ]
       },
@@ -138628,6 +141488,99 @@
       "screenshot": null
     },
     {
+      "id": "libris-xsearch",
+      "name": "opencli-libris-xsearch",
+      "domain": "libris.kb.se",
+      "description": "LIBRIS Xsearch (Kungliga biblioteket): Suche im schwedischen Verbundkatalog nach Titel/Autor/ISBN mit Titel, Urheber, ISBN, Typ, Verlag, Jahr und Sprache, keyless JSON.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/libris-xsearch",
+      "records": null,
+      "commands": [],
+      "logo": "libris.kb.se.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:08.856Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 767,
+        "p95": 2072,
+        "throughput": 78.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "xsearch",
+      "robots": "allowed",
+      "robotsNote": "libris.kb.se/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/libris-xsearch/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/libris-xsearch/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/libris-xsearch/samples"
+      },
+      "source": "https://libris.kb.se",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:08.856Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "lida-lt",
       "name": "opencli-lida-lt",
       "path": "opendata/lida-lt",
@@ -144361,6 +147314,93 @@
       "screenshot": null
     },
     {
+      "id": "massachusetts-cthru-socrata",
+      "name": "opencli-massachusetts-cthru-socrata",
+      "path": "opendata/massachusetts-cthru-socrata",
+      "endpoint": null,
+      "domain": "cthru.data.socrata.com",
+      "description": "cthru.data.socrata.com – Commonwealth of Massachusetts Comptroller: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/massachusetts-cthru-socrata",
+      "records": 32,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/massachusetts-cthru-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/massachusetts-cthru-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/massachusetts-cthru-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "massgis-hub",
       "name": "opencli-massgis-hub",
       "path": "opendata/massgis-hub",
@@ -146372,6 +149412,93 @@
       "ampel": {
         "level": "yellow",
         "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "mesa-citydata-socrata",
+      "name": "opencli-mesa-citydata-socrata",
+      "path": "opendata/mesa-citydata-socrata",
+      "endpoint": null,
+      "domain": "citydata.mesaaz.gov",
+      "description": "citydata.mesaaz.gov – City of Mesa: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/mesa-citydata-socrata",
+      "records": 330,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/mesa-citydata-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/mesa-citydata-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/mesa-citydata-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
           "Gates nicht geprüft"
         ]
       },
@@ -150857,6 +153984,101 @@
       "screenshot": "screens/mtel-at.webp"
     },
     {
+      "id": "mtender-md",
+      "name": "opencli-mtender-md",
+      "path": "vergabe/mtender-md",
+      "endpoint": "https://public.mtender.gov.md",
+      "domain": "public.mtender.gov.md",
+      "description": "MTender Public API (Republik Moldau, OCDS 1.1): Feed neuer Vergabeverfahren und Budgets sowie Vergabe-Records nach OCID mit Titel, Status, Wert und Beteiligten – keyless JSON.",
+      "category": "vergabe",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/mtender-md",
+      "records": 6,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:26.171Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1450,
+        "p95": 3341,
+        "throughput": 41.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "ocds-1.1",
+      "robots": "allowed",
+      "robotsNote": "public.mtender.gov.md/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/mtender-md/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/mtender-md/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/mtender-md/samples"
+      },
+      "source": "https://public.mtender.gov.md",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:26.171Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "multiversx-api",
       "name": "opencli-multiversx-api",
       "path": "finance/multiversx-api",
@@ -153386,6 +156608,99 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T20:46:28.087Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "nb-catalog",
+      "name": "opencli-nb-catalog",
+      "domain": "api.nb.no",
+      "description": "Nasjonalbiblioteket (Norwegische Nationalbibliothek) Catalog API: Suche über Bücher, Zeitungen, Zeitschriften, Bilder u. a. mit Titel, Urheber, Medientyp, Jahr, Lizenz/Zugang und Item-Details, keyless JSON.",
+      "category": "opendata",
+      "country": "NO",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/nb-catalog",
+      "records": null,
+      "commands": [],
+      "logo": "api.nb.no.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:10.012Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1531,
+        "p95": 2029,
+        "throughput": 39.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "catalog-v1",
+      "robots": "allowed",
+      "robotsNote": "api.nb.no/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nb-catalog/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nb-catalog/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/nb-catalog/samples"
+      },
+      "source": "https://api.nb.no",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:10.012Z"
       },
       "ampel": {
         "level": "yellow",
@@ -158901,6 +162216,93 @@
       "screenshot": null
     },
     {
+      "id": "norfolk-va-socrata",
+      "name": "opencli-norfolk-va-socrata",
+      "path": "opendata/norfolk-va-socrata",
+      "endpoint": null,
+      "domain": "data.norfolk.gov",
+      "description": "data.norfolk.gov – City of Norfolk: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/norfolk-va-socrata",
+      "records": 118,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/norfolk-va-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/norfolk-va-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/norfolk-va-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "norges-bank",
       "name": "opencli-norges-bank",
       "path": "finance/norges-bank",
@@ -160812,6 +164214,93 @@
       "screenshot": null
     },
     {
+      "id": "nvof-open-socrata",
+      "name": "opencli-nvof-open-socrata",
+      "path": "opendata/nvof-open-socrata",
+      "endpoint": null,
+      "domain": "nvof-open.data.socrata.com",
+      "description": "nvof-open.data.socrata.com – NVOF Open Data: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/nvof-open-socrata",
+      "records": 18,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nvof-open-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nvof-open-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/nvof-open-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "nwt-geological-survey-hub",
       "name": "opencli-nwt-geological-survey-hub",
       "path": "opendata/nwt-geological-survey-hub",
@@ -160999,6 +164488,93 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "nyc-scgc-socrata",
+      "name": "opencli-nyc-scgc-socrata",
+      "path": "opendata/nyc-scgc-socrata",
+      "endpoint": null,
+      "domain": "nyc-scgc.data.socrata.com",
+      "description": "nyc-scgc.data.socrata.com – NYC Spatial Data / SCGC: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/nyc-scgc-socrata",
+      "records": 16,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nyc-scgc-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/nyc-scgc-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/nyc-scgc-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
         ]
       },
       "screenshot": null
@@ -163522,6 +167098,93 @@
       "ampel": {
         "level": "yellow",
         "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "ohio-court-claims-socrata",
+      "name": "opencli-ohio-court-claims-socrata",
+      "path": "opendata/ohio-court-claims-socrata",
+      "endpoint": null,
+      "domain": "data.ohiocourtofclaims.gov",
+      "description": "data.ohiocourtofclaims.gov – Ohio Court of Claims: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/ohio-court-claims-socrata",
+      "records": 23,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/ohio-court-claims-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/ohio-court-claims-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/ohio-court-claims-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
           "Gates nicht geprüft"
         ]
       },
@@ -173167,6 +176830,192 @@
       "screenshot": null
     },
     {
+      "id": "owid-grapher",
+      "name": "opencli-owid-grapher",
+      "domain": "ourworldindata.org",
+      "description": "Our World in Data Grapher-API: Zeitreihen jedes OWID-Charts als CSV (gefiltert nach Land, ISO3) und Chart-Metadaten (Einheit, Zeitraum, Quellen, Aktualisierung), keyless.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/owid-grapher",
+      "records": null,
+      "commands": [],
+      "logo": "ourworldindata.org.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:10.764Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 495,
+        "p95": 2175,
+        "throughput": 121.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "grapher-v1",
+      "robots": "allowed",
+      "robotsNote": "ourworldindata.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/owid-grapher/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/owid-grapher/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/owid-grapher/samples"
+      },
+      "source": "https://ourworldindata.org",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:10.764Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "oyez",
+      "name": "opencli-oyez",
+      "domain": "api.oyez.org",
+      "description": "Oyez API (Cornell LII / Justia): Fälle des US Supreme Court je Amtsperiode (Term) und Falldetails mit Parteien, Zitat, Gericht, Rechtsfrage und Ergebnis, keyless JSON.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/oyez",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:26.907Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 437,
+        "p95": 19950,
+        "throughput": 137.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.oyez.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/oyez/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/oyez/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/oyez/samples"
+      },
+      "source": "https://api.oyez.org",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:26.907Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "p2pquake-jp",
       "name": "opencli-p2pquake-jp",
       "path": "opendata/p2pquake-jp",
@@ -178190,6 +182039,99 @@
       "screenshot": null
     },
     {
+      "id": "porssisahko",
+      "name": "opencli-porssisahko",
+      "domain": "api.porssisahko.net",
+      "description": "Pörssisähkö.net API: Day-Ahead-Strompreise Finnland (c/kWh inkl. MwSt.) – die letzten/nächsten 48 h und Preis für Datum+Stunde, keyless JSON.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/porssisahko",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:09.006Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 437,
+        "p95": 1933,
+        "throughput": 137.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.porssisahko.net/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/porssisahko/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/porssisahko/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/porssisahko/samples"
+      },
+      "source": "https://api.porssisahko.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": true,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:09.006Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "port-amsterdam-hub",
       "name": "opencli-port-amsterdam-hub",
       "path": "opendata/port-amsterdam-hub",
@@ -179802,6 +183744,188 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T18:08:22.249Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "providence-ri-socrata",
+      "name": "opencli-providence-ri-socrata",
+      "path": "opendata/providence-ri-socrata",
+      "endpoint": null,
+      "domain": "data.providenceri.gov",
+      "description": "data.providenceri.gov – City of Providence: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/providence-ri-socrata",
+      "records": 129,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/providence-ri-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/providence-ri-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/providence-ri-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "prozorro-ua",
+      "name": "opencli-prozorro-ua",
+      "path": "vergabe/prozorro-ua",
+      "endpoint": "https://public.api.openprocurement.org",
+      "domain": "public.api.openprocurement.org",
+      "description": "Prozorro / OpenProcurement Public API 2.5: aktuelle Ausschreibungen, Verträge und Vergabedetails der Ukraine inkl. Auftraggeber (EDRPOU), Wert, Status – keyless JSON.",
+      "category": "vergabe",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/vergabe/prozorro-ua",
+      "records": 10,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:24.644Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1464,
+        "p95": 1783,
+        "throughput": 41,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "2.5",
+      "robots": "allowed",
+      "robotsNote": "public.api.openprocurement.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/prozorro-ua/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/vergabe/prozorro-ua/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/vergabe/prozorro-ua/samples"
+      },
+      "source": "https://public.api.openprocurement.org",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:24.644Z"
       },
       "ampel": {
         "level": "yellow",
@@ -183238,6 +187362,109 @@
       "screenshot": null
     },
     {
+      "id": "registeruz-sk",
+      "name": "opencli-registeruz-sk",
+      "path": "finance/registeruz-sk",
+      "endpoint": "https://registeruz.sk",
+      "domain": "registeruz.sk",
+      "description": "Register účtovných závierok (RÚZ) Open API: Rechnungslegungseinheiten (IČO, Rechtsform, SK NACE, Sitz), Jahresabschlüsse und Berichte der Slowakei – keyless JSON.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/finance/registeruz-sk",
+      "records": 4,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:30.409Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1068,
+        "p95": 6010,
+        "throughput": 56.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "registeruz.sk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/registeruz-sk/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/registeruz-sk/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/registeruz-sk/samples"
+      },
+      "source": "https://registeruz.sk",
+      "live": {
+        "realtime": false,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Register",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:30.409Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "release-monitoring",
       "name": "opencli-release-monitoring",
       "path": "tech/release-monitoring",
@@ -183513,6 +187740,101 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T18:57:53.773Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "retsinformation-dk",
+      "name": "opencli-retsinformation-dk",
+      "path": "international/retsinformation-dk",
+      "endpoint": "https://api.retsinformation.dk",
+      "domain": "api.retsinformation.dk",
+      "description": "Retsinformation API (Civilstyrelsen): tägliche Änderungen an dänischen Rechtsdokumenten (Gesetze LOV/LBK, Verordnungen BEK, Vejledninger) mit Dokumenttyp und ELI-Link – keyless JSON.",
+      "category": "international",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/retsinformation-dk",
+      "records": 11,
+      "commands": [],
+      "logo": "api.retsinformation.dk.png",
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:24.408Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1369,
+        "p95": 1647,
+        "throughput": 43.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.retsinformation.dk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/retsinformation-dk/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/retsinformation-dk/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/retsinformation-dk/samples"
+      },
+      "source": "https://api.retsinformation.dk",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:24.408Z"
       },
       "ampel": {
         "level": "yellow",
@@ -188647,6 +192969,93 @@
       "screenshot": null
     },
     {
+      "id": "seattle-cos-data-socrata",
+      "name": "opencli-seattle-cos-data-socrata",
+      "path": "opendata/seattle-cos-data-socrata",
+      "endpoint": null,
+      "domain": "cos-data.seattle.gov",
+      "description": "cos-data.seattle.gov – City of Seattle: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/seattle-cos-data-socrata",
+      "records": 158,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/seattle-cos-data-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/seattle-cos-data-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/seattle-cos-data-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "seattle-data",
       "name": "opencli-seattle-data",
       "path": "opendata/seattle-data",
@@ -189034,6 +193443,101 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T20:46:20.203Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "sejm-eli-pl",
+      "name": "opencli-sejm-eli-pl",
+      "path": "international/sejm-eli-pl",
+      "endpoint": "https://api.sejm.gov.pl",
+      "domain": "api.sejm.gov.pl",
+      "description": "Sejm ELI API: polnische Rechtsakte (Gesetze, Verordnungen) aus Dziennik Ustaw und Monitor Polski – Suche nach Titel, Jahreslisten, Akt-Details mit Status und Inkrafttreten; keyless JSON.",
+      "category": "international",
+      "country": "PL",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/sejm-eli-pl",
+      "records": 6,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T04:30:28.224Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1086,
+        "p95": 3260,
+        "throughput": 55.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "eli",
+      "robots": "allowed",
+      "robotsNote": "api.sejm.gov.pl/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/sejm-eli-pl/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/sejm-eli-pl/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/sejm-eli-pl/samples"
+      },
+      "source": "https://api.sejm.gov.pl",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:30:28.224Z"
       },
       "ampel": {
         "level": "yellow",
@@ -193157,6 +197661,93 @@
       "screenshot": null
     },
     {
+      "id": "somerville-ma-socrata",
+      "name": "opencli-somerville-ma-socrata",
+      "path": "opendata/somerville-ma-socrata",
+      "endpoint": null,
+      "domain": "data.somervillema.gov",
+      "description": "data.somervillema.gov – City of Somerville: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/somerville-ma-socrata",
+      "records": 43,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/somerville-ma-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/somerville-ma-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/somerville-ma-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "sonomacounty-data",
       "name": "opencli-sonomacounty-data",
       "path": "opendata/sonomacounty-data",
@@ -193917,6 +198508,99 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "spot-hinta",
+      "name": "opencli-spot-hinta",
+      "domain": "api.spot-hinta.fi",
+      "description": "Spot-hinta.fi API: aktueller Strompreis, heutige und morgige Viertelstundenpreise Finnland (EUR/kWh mit/ohne MwSt., Rang), keyless JSON.",
+      "category": "opendata",
+      "country": "FI",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/spot-hinta",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:13.959Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1068,
+        "p95": 1978,
+        "throughput": 56.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.spot-hinta.fi/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/spot-hinta/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/spot-hinta/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/spot-hinta/samples"
+      },
+      "source": "https://api.spot-hinta.fi",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:13.959Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -197783,6 +202467,99 @@
       "screenshot": "screens/statistik-austria-vpi.webp"
     },
     {
+      "id": "statnett-driftsdata",
+      "name": "opencli-statnett-driftsdata",
+      "domain": "driftsdata.statnett.no",
+      "description": "Statnett Driftsdata (norwegischer Übertragungsnetzbetreiber): aktuelle Erzeugung nach Quelle und Verbrauch je nordischem Land, Tageswerte Produktion/Verbrauch, physischer Austausch und Netzfrequenz, keyless JSON.",
+      "category": "opendata",
+      "country": "NO",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statnett-driftsdata",
+      "records": null,
+      "commands": [],
+      "logo": "driftsdata.statnett.no.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:22.047Z",
+      "e2ePassed": 5,
+      "e2eTotal": 5,
+      "kpi": {
+        "stability": 100,
+        "p50": 1631,
+        "p95": 7796,
+        "throughput": 36.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "restapi",
+      "robots": "allowed",
+      "robotsNote": "driftsdata.statnett.no/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/statnett-driftsdata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/statnett-driftsdata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/statnett-driftsdata/samples"
+      },
+      "source": "https://driftsdata.statnett.no",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:22.047Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "steam-store",
       "name": "opencli-steam-store",
       "path": "finance/steam-store",
@@ -197876,6 +202653,99 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-14T00:01:44.781Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "steamcmd-info",
+      "name": "opencli-steamcmd-info",
+      "domain": "api.steamcmd.net",
+      "description": "SteamCMD.net API: Steam-App-Metadaten (PICS) je AppID – Name, Typ, Plattformen, Release, Metacritic, Review-Anteil, Entwickler/Publisher und aktueller Public-Build, keyless JSON.",
+      "category": "media",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/media/steamcmd-info",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:01.131Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1120,
+        "p95": 1718,
+        "throughput": 53.6,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.steamcmd.net/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/media/steamcmd-info/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/media/steamcmd-info/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/media/steamcmd-info/samples"
+      },
+      "source": "https://api.steamcmd.net",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:01.131Z"
       },
       "ampel": {
         "level": "yellow",
@@ -207435,6 +212305,192 @@
       "screenshot": null
     },
     {
+      "id": "uk-lords-votes",
+      "name": "opencli-uk-lords-votes",
+      "domain": "lordsvotes-api.parliament.uk",
+      "description": "House of Lords Votes API: Abstimmungen (Divisions) suchen, Details mit Content/Not-Content-Zahlen und Regierungssieg sowie Gesamtzahl, keyless JSON (OpenAPI 3.0).",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/uk-lords-votes",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:01.462Z",
+      "e2ePassed": 5,
+      "e2eTotal": 5,
+      "kpi": {
+        "stability": 100,
+        "p50": 1454,
+        "p95": 2800,
+        "throughput": 41.3,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "lordsvotes-api.parliament.uk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/uk-lords-votes/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/uk-lords-votes/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/uk-lords-votes/samples"
+      },
+      "source": "https://lordsvotes-api.parliament.uk",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:01.462Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "uk-parliament-committees",
+      "name": "opencli-uk-parliament-committees",
+      "domain": "committees-api.parliament.uk",
+      "description": "UK Parliament Committees API: Ausschüsse von Commons/Lords (Liste, Details mit Zweck), Termine/Sitzungen und Publikationen, keyless JSON (OpenAPI 3.0).",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/uk-parliament-committees",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:01.112Z",
+      "e2ePassed": 5,
+      "e2eTotal": 5,
+      "kpi": {
+        "stability": 100,
+        "p50": 1939,
+        "p95": 2014,
+        "throughput": 30.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "committees-api.parliament.uk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/uk-parliament-committees/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/uk-parliament-committees/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/uk-parliament-committees/samples"
+      },
+      "source": "https://committees-api.parliament.uk",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:01.112Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "uk-parliament-members",
       "name": "uk-parliament-members",
       "path": "international/uk-parliament-members",
@@ -207528,6 +212584,99 @@
         "reasons": []
       },
       "screenshot": "screens/uk-parliament-members.webp"
+    },
+    {
+      "id": "uk-parliament-questions",
+      "name": "opencli-uk-parliament-questions",
+      "domain": "questions-statements-api.parliament.uk",
+      "description": "UK Parliament Written Questions and Statements API: schriftliche Anfragen (Suche, Einzelfrage mit Antwort) und schriftliche Ministererklärungen von Commons/Lords, keyless JSON (OpenAPI 3.0).",
+      "category": "international",
+      "country": "EU",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/international/uk-parliament-questions",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:19.045Z",
+      "e2ePassed": 5,
+      "e2eTotal": 5,
+      "kpi": {
+        "stability": 100,
+        "p50": 4087,
+        "p95": 11447,
+        "throughput": 14.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "questions-statements-api.parliament.uk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/uk-parliament-questions/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/uk-parliament-questions/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/uk-parliament-questions/samples"
+      },
+      "source": "https://questions-statements-api.parliament.uk",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:19.045Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
     },
     {
       "id": "ulisboa-fuelsat-hub",
@@ -214588,6 +219737,93 @@
       "screenshot": null
     },
     {
+      "id": "washoe-county-socrata",
+      "name": "opencli-washoe-county-socrata",
+      "path": "opendata/washoe-county-socrata",
+      "endpoint": null,
+      "domain": "washoe.data.socrata.com",
+      "description": "washoe.data.socrata.com – Washoe County Nevada: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/washoe-county-socrata",
+      "records": 10,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/washoe-county-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/washoe-county-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/washoe-county-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "washoe-opendata-hub",
       "name": "opencli-washoe-opendata-hub",
       "path": "opendata/washoe-opendata-hub",
@@ -218439,6 +223675,93 @@
       "screenshot": null
     },
     {
+      "id": "winnipeg-data-socrata",
+      "name": "opencli-winnipeg-data-socrata",
+      "path": "opendata/winnipeg-data-socrata",
+      "endpoint": null,
+      "domain": "data.winnipeg.ca",
+      "description": "data.winnipeg.ca – City of Winnipeg: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+      "category": "opendata",
+      "country": "AT",
+      "status": "failing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/opendata/winnipeg-data-socrata",
+      "records": 244,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": null,
+      "e2ePassed": 0,
+      "e2eTotal": 0,
+      "kpi": null,
+      "loginRequired": null,
+      "captcha": null,
+      "apiAvailable": null,
+      "apiVersion": null,
+      "robots": "unknown",
+      "robotsNote": null,
+      "incidents": [
+        "In-Repo-Connector, Status aus PRUEFPROTOKOLL.md"
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/winnipeg-data-socrata/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/winnipeg-data-socrata/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/winnipeg-data-socrata/samples"
+      },
+      "source": null,
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "OpenCLI (HTML)",
+        "apiOpen": false,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 0,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 0,
+        "uptime": null,
+        "last": null
+      },
+      "ampel": {
+        "level": "red",
+        "reasons": [
+          "e2e rot",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "wisdot-opendata-hub",
       "name": "opencli-wisdot-opendata-hub",
       "path": "opendata/wisdot-opendata-hub",
@@ -219997,6 +225320,99 @@
       "screenshot": null
     },
     {
+      "id": "wortschatz-leipzig",
+      "name": "opencli-wortschatz-leipzig",
+      "domain": "api.wortschatz-leipzig.de",
+      "description": "Leipzig Corpora Collection REST-API (Universität Leipzig): Wortfrequenz/Häufigkeitsklasse, Beispielsätze mit Quelle und verfügbare Korpora in >250 Sprachen, keyless JSON.",
+      "category": "opendata",
+      "country": "DE",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/wortschatz-leipzig",
+      "records": null,
+      "commands": [],
+      "logo": null,
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:35:15.728Z",
+      "e2ePassed": 4,
+      "e2eTotal": 4,
+      "kpi": {
+        "stability": 100,
+        "p50": 1369,
+        "p95": 2085,
+        "throughput": 43.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "ws",
+      "robots": "allowed",
+      "robotsNote": "api.wortschatz-leipzig.de/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/wortschatz-leipzig/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/opendata/wortschatz-leipzig/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/opendata/wortschatz-leipzig/samples"
+      },
+      "source": "https://api.wortschatz-leipzig.de",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:35:15.728Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "wpdx-data",
       "name": "opencli-wpdx-data",
       "path": "opendata/wpdx-data",
@@ -221253,6 +226669,108 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-14T03:38:21.167Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "xrpscan",
+      "name": "opencli-xrpscan",
+      "domain": "api.xrpscan.com",
+      "description": "XRPSCAN API: XRP-Ledger-Konten (Saldo, Sequenz, Name/Verifizierung) und Ledger-Details (Hash, Schlusszeit, Transaktionen, Gesamtmenge), keyless JSON.",
+      "category": "finance",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/xrpscan",
+      "records": null,
+      "commands": [],
+      "logo": "api.xrpscan.com.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:34:54.423Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 448,
+        "p95": 1996,
+        "throughput": 133.9,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "api.xrpscan.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2.",
+        "Lizenz/ToS: XRPSCAN: öffentliche API ohne Key; Drossel 1 req/2 s, bei 429 Abbruch."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/xrpscan/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/finance/xrpscan/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/finance/xrpscan/samples"
+      },
+      "source": "https://api.xrpscan.com",
+      "live": {
+        "realtime": true,
+        "label": "BTC/EUR",
+        "unit": "EUR",
+        "view": "sparkline",
+        "refreshS": 60,
+        "series": [],
+        "endpoint": null
+      },
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:34:54.423Z"
       },
       "ampel": {
         "level": "yellow",
@@ -222725,6 +228243,99 @@
       "screenshot": null
     },
     {
+      "id": "zipcloud-jp",
+      "name": "opencli-zipcloud-jp",
+      "domain": "zipcloud.ibsnet.co.jp",
+      "description": "zipcloud Postleitzahlen-API: japanische 7-stellige Postleitzahl → Präfektur, Stadt, Ortsteil (Kanji + Kana) und Präfekturcode, Daten der Japan Post, keyless JSON.",
+      "category": "geo",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/zipcloud-jp",
+      "records": null,
+      "commands": [],
+      "logo": "zipcloud.ibsnet.co.jp.png",
+      "paperclip": false,
+      "lastRun": "2026-10-14T04:34:54.469Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 467,
+        "p95": 1980,
+        "throughput": 128.5,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "v1",
+      "robots": "allowed",
+      "robotsNote": "zipcloud.ibsnet.co.jp/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/zipcloud-jp/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/geo/zipcloud-jp/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/geo/zipcloud-jp/samples"
+      },
+      "source": "https://zipcloud.ibsnet.co.jp",
+      "live": null,
+      "server": null,
+      "sourceType": "Sonstige",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": false,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T04:34:54.469Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "zippopotam",
       "name": "zippopotam",
       "path": "opendata/zippopotam",
@@ -223305,7 +228916,7 @@
       "screenshot": null
     }
   ],
-  "enrichedAt": "2026-10-14T04:27:52.663Z",
+  "enrichedAt": "2026-10-14T04:49:35.729Z",
   "gatesSource": "check_connectors.py --strict (data/gates.snapshot.json)",
   "timeline": [
     {
@@ -223323,7 +228934,7 @@
       "403": 0,
       "429": 0,
       "day": "2026-10-14",
-      "ok": 443,
+      "ok": 483,
       "captcha": 0,
       "timeout": 0,
       "offline": 0,
@@ -223332,6 +228943,6 @@
     }
   ],
   "egress": null,
-  "observationsAt": "2026-10-14T04:27:52.917Z",
-  "observationCount": 2622
+  "observationsAt": "2026-10-14T04:49:35.972Z",
+  "observationCount": 2662
 }
