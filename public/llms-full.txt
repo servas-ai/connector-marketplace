@@ -1,6 +1,6 @@
 # servas-ai Connector Marketplace
 
-> Katalog von 2177 read-only Datenconnectoren (MCP, CLI, HTTP) für öffentliche Quellen, 169 mit grüner Ampel. Ausgabe einheitlich im Schema servas.record.v1. Stand 2026-10-14 03:07 UTC.
+> Katalog von 2183 read-only Datenconnectoren (MCP, CLI, HTTP) für öffentliche Quellen, 169 mit grüner Ampel. Ausgabe einheitlich im Schema servas.record.v1. Stand 2026-10-14 03:37 UTC.
 
 - Quelle: https://github.com/servas-ai/opencli-connectors
 - Katalog: https://servas-ai.github.io/connector-marketplace/
@@ -1057,6 +1057,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/essex-county-opendata-hub (opendata/essex-county-opendata-hub)
 - [essex-opendata-datapress](https://servas-ai.github.io/connector-marketplace/#/c/essex-opendata-datapress): data.essex.gov.uk – Essex County Council: DataPress-Open-Data-Katalog (CKAN-kompatible API, llms.txt): Dataset-Liste/Filter und Dataset-Details mit Ressourcen u (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/essex-opendata-datapress (opendata/essex-opendata-datapress)
+- [etk-fi](https://servas-ai.github.io/connector-marketplace/#/c/etk-fi): tilastot.etk.fi PxWeb: Finnish Centre for Pensions (ETK) statistics (PxWeb-Katalog) – ohne Login (Ampel yellow, FI)
+  Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/etk-fi (international/etk-fi)
 - [eu-cellar](https://servas-ai.github.io/connector-marketplace/#/c/eu-cellar): Amt für Veröffentlichungen der EU (CELLAR): SPARQL-Endpunkt – EU-Normtabellen (Länder, Körperschaften, Sprachen) und freie SELECT-Abfragen auf EUR-Lex-Metadaten (Ampel yellow, EU)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/eu-cellar (international/eu-cellar)
 - [eu-funding-tenders](https://servas-ai.github.io/connector-marketplace/#/c/eu-funding-tenders): EU Funding & Tenders – offene Förderaufrufe. Ohne Login, nur lesend. (Ampel yellow, EU)
@@ -1847,6 +1849,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/geosphere-at (opendata/geosphere-at)
 - [geosphere-warnungen](https://servas-ai.github.io/connector-marketplace/#/c/geosphere-warnungen): GeoSphere Austria (ehem. ZAMG) Wetterwarnungen: Warnstatus Österreich und Warnungen für Koordinaten/Gemeinde – ohne Login. Nutze diesen Skill, wenn ein Agent We (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/geosphere-warnungen (opendata/geosphere-warnungen)
+- [geostat-ge](https://servas-ai.github.io/connector-marketplace/#/c/geostat-ge): pc-axis.geostat.ge PxWeb: National Statistics Office of Georgia (Geostat) PxWeb-Katalog – ohne Login (Ampel yellow, AT)
+  Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/geostat-ge (international/geostat-ge)
 - [gesetze-im-internet](https://servas-ai.github.io/connector-marketplace/#/c/gesetze-im-internet): Gesetze im Internet (Bundesministerium der Justiz): Inhaltsverzeichnis aller Bundesgesetze und -verordnungen (gii-toc.xml) – Suche nach Titel/Abkürzung, Links z (Ampel yellow, DE)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/gesetze-im-internet (opendata/gesetze-im-internet)
 - [getthedata-bng](https://servas-ai.github.io/connector-marketplace/#/c/getthedata-bng): GetTheData bng2latlong: wandelt OSGB36-Rechts-/Hochwerte (British National Grid) in WGS84-Lat/Lon um, keyless JSON, llms-full.txt vorhanden. (Ampel yellow, AT)
@@ -1909,6 +1913,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/finance/gopax (finance/gopax)
 - [gore-losrios-ide-hub](https://servas-ai.github.io/connector-marketplace/#/c/gore-losrios-ide-hub): ide-gorelosrios.hub.arcgis.com – Gobierno Regional de Los Ríos: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Ei (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/gore-losrios-ide-hub (opendata/gore-losrios-ide-hub)
+- [goteborg-px](https://servas-ai.github.io/connector-marketplace/#/c/goteborg-px): statistikdatabas.goteborg.se PxWeb: Göteborgs Stad statistikdatabas (PxWeb-Katalog) – ohne Login (Ampel yellow, AT)
+  Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/goteborg-px (international/goteborg-px)
 - [gotland-hub](https://servas-ai.github.io/connector-marketplace/#/c/gotland-hub): dataportal-gotland.opendata.arcgis.com – Region Gotland: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Da (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/gotland-hub (opendata/gotland-hub)
 - [govuk](https://servas-ai.github.io/connector-marketplace/#/c/govuk): GOV.UK (Government Digital Service): Search-API (Seiten, Publikationen, Leitfäden) und Content-API (Metadaten einer Seite, Organisationen). Ohne Login/Key. (Ampel red, AT)
@@ -2443,6 +2449,8 @@
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/opendata/indianapolis-mpo-hub (opendata/indianapolis-mpo-hub)
 - [ine-es](https://servas-ai.github.io/connector-marketplace/#/c/ine-es): servicios.ine.es wstempus: statistische Operationen und Tabellen des Instituto Nacional de Estadística. Ohne Login/Key. (Ampel green, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/ine-es (international/ine-es)
+- [ined-ggp-fr](https://servas-ai.github.io/connector-marketplace/#/c/ined-ggp-fr): px.web.ined.fr PxWeb: INED Generations and Gender Contextual Database (PxWeb-Katalog) – ohne Login (Ampel yellow, FR)
+  Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/ined-ggp-fr (international/ined-ggp-fr)
 - [insee-bdm](https://servas-ai.github.io/connector-marketplace/#/c/insee-bdm): bdm.insee.fr SDMX: amtliche Statistik-Zeitreihen (INSEE BDM SDMX). Ohne Login/Key. (Ampel yellow, FR)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/insee-bdm (international/insee-bdm)
 - [inspirehep](https://servas-ai.github.io/connector-marketplace/#/c/inspirehep): INSPIRE-HEP REST API (CERN/DESY/Fermilab/SLAC/IHEP): Literatursuche in der Hochenergiephysik mit Zitationen, Detail je Record und Autorensuche. Ohne Login/Key. (Ampel red, AT)
@@ -3483,6 +3491,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/finance/privatbank-kurse (finance/privatbank-kurse)
 - [prnewswire](https://servas-ai.github.io/connector-marketplace/#/c/prnewswire): PR Newswire (Cision): neueste Unternehmens-Pressemitteilungen über den offiziellen RSS-Feed „All News Releases“. Titel, Datum, Teaser und Link, ohne Login. (Ampel red, AT)
   Befehle: – · robots: disallowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/firmendaten/prnewswire (international/firmendaten/prnewswire)
+- [prognos-konj-se](https://servas-ai.github.io/connector-marketplace/#/c/prognos-konj-se): prognos.konj.se PxWeb: Konjunkturinstitutet Prognosdatabas (PxWeb-Katalog) – ohne Login (Ampel yellow, AT)
+  Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/prognos-konj-se (international/prognos-konj-se)
 - [propellets-at](https://servas-ai.github.io/connector-marketplace/#/c/propellets-at): Pelletpreisindex PPI06 von proPellets Austria: Monatswerte und Jahresdurchschnitte seit 2006 (lose Pellets, 6 t) – abfragen, wenn aktuelle öffentliche Daten von (Ampel yellow, AT)
   Befehle: index, jahresschnitt, aktuell · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-propellets-at
 - [proteinatlas](https://servas-ai.github.io/connector-marketplace/#/c/proteinatlas): Human Protein Atlas JSON-Suche: Gen-Metadaten (Ensembl, Beschreibung), keyless. (Ampel yellow, AT)
@@ -3723,6 +3733,8 @@
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/sjv-se (international/sjv-se)
 - [skanfirmy-pl](https://servas-ai.github.io/connector-marketplace/#/c/skanfirmy-pl): skanfirmy.pl: keyless REST/MCP zur Firmenprüfung (NIP/Biała Lista, VIES), llms.txt. (Ampel yellow, PL)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/skanfirmy-pl (international/skanfirmy-pl)
+- [skogsstatistik-slu](https://servas-ai.github.io/connector-marketplace/#/c/skogsstatistik-slu): skogsstatistik.slu.se PxWeb: SLU Skogsstatistik / Swedish University of Agricultural Sciences forest statistics (PxWeb-Katalog) – ohne Login (Ampel yellow, AT)
+  Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/skogsstatistik-slu (international/skogsstatistik-slu)
 - [skogsstyrelsen-se](https://servas-ai.github.io/connector-marketplace/#/c/skogsstyrelsen-se): pxweb.skogsstyrelsen.se PxWeb: Skogsstyrelsen: Forst-/Waldstatistik (PxWeb-Katalog) – ohne Login (Ampel yellow, AT)
   Befehle: – · robots: allowed · Login: false · Repo: https://github.com/servas-ai/opencli-connectors/international/skogsstyrelsen-se (international/skogsstyrelsen-se)
 - [slack-status](https://servas-ai.github.io/connector-marketplace/#/c/slack-status): Slack Status API v2.0.0: aktueller Dienststatus mit aktiven Incidents und Incident-Historie (Typ, Status, betroffene Dienste), keyless JSON. (Ampel yellow, AT)

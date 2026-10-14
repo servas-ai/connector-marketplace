@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-14T03:19:25.552Z",
+  "generatedAt": "2026-10-14T03:44:07.682Z",
   "sourceRepo": "servas-ai/opencli-connectors",
-  "sourceGeneratedAt": "2026-10-14 03:07 UTC",
-  "count": 2177,
+  "sourceGeneratedAt": "2026-10-14 03:37 UTC",
+  "count": 2183,
   "connectors": [
     {
       "id": "spusu-at",
@@ -6032,7 +6032,7 @@
       "name": "opencli-salzburg-ag-at",
       "path": "adapters/opencli-salzburg-ag-at",
       "endpoint": "https://opencli-salzburg-ag-at",
-      "domain": "salzburg.ag.at",
+      "domain": "www.salzburg-ag.at",
       "description": "OpenCLI plugin + standalone CLI for Salzburg AG CableLink Austria tariffs (salzburg-ag.at) – abfragen, wenn aktuelle öffentliche Daten von salzburg-ag.at gebraucht werden.",
       "category": "adapters",
       "country": "AT",
@@ -6040,7 +6040,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/adapters/opencli-salzburg-ag-at",
       "records": 10,
       "commands": [],
-      "logo": null,
+      "logo": "salzburg-ag.at.png",
       "paperclip": true,
       "lastRun": "2026-10-14T01:08:28.329Z",
       "e2ePassed": 2,
@@ -6911,7 +6911,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/tech/adoptopenjdk",
       "records": 3,
       "commands": [],
-      "logo": null,
+      "logo": "api.adoptopenjdk.net.png",
       "paperclip": true,
       "lastRun": "2026-10-14T02:01:29.990Z",
       "e2ePassed": 2,
@@ -14692,7 +14692,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/opendata/barnet-opendata-datapress",
       "records": 429,
       "commands": [],
-      "logo": null,
+      "logo": "open.barnet.gov.uk.png",
       "paperclip": true,
       "lastRun": "2026-10-14T02:40:42.486Z",
       "e2ePassed": 4,
@@ -17347,7 +17347,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/finance/bingx",
       "records": 2286,
       "commands": [],
-      "logo": null,
+      "logo": "open-api.bingx.com.png",
       "paperclip": true,
       "lastRun": "2026-10-14T01:12:54.183Z",
       "e2ePassed": 3,
@@ -19976,7 +19976,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/finance/blazephoenix",
       "records": 2,
       "commands": [],
-      "logo": null,
+      "logo": "blazephoenix.xyz.png",
       "paperclip": true,
       "lastRun": "2026-10-14T02:00:43.930Z",
       "e2ePassed": 3,
@@ -57085,6 +57085,101 @@
       "screenshot": null
     },
     {
+      "id": "etk-fi",
+      "name": "opencli-etk-fi",
+      "path": "international/etk-fi",
+      "endpoint": "https://tilastot.etk.fi/api/v1/en/",
+      "domain": "tilastot.etk.fi",
+      "description": "tilastot.etk.fi PxWeb: Finnish Centre for Pensions (ETK) statistics (PxWeb-Katalog) – ohne Login",
+      "category": "opendata",
+      "country": "FI",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/etk-fi",
+      "records": 14,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T03:14:06.310Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1956,
+        "p95": 2138,
+        "throughput": 30.7,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "pxweb-v1",
+      "robots": "allowed",
+      "robotsNote": "tilastot.etk.fi/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/etk-fi/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/etk-fi/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/etk-fi/samples"
+      },
+      "source": "https://tilastot.etk.fi/api/v1/en/",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T03:14:06.310Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "eu-cellar",
       "name": "eu-cellar",
       "path": "international/eu-cellar",
@@ -60306,7 +60401,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/tech/favicon-im",
       "records": 2,
       "commands": [],
-      "logo": null,
+      "logo": "favicon.im.png",
       "paperclip": true,
       "lastRun": "2026-10-14T01:12:31.461Z",
       "e2ePassed": 3,
@@ -95154,6 +95249,101 @@
       "screenshot": null
     },
     {
+      "id": "geostat-ge",
+      "name": "opencli-geostat-ge",
+      "path": "international/geostat-ge",
+      "endpoint": "https://pc-axis.geostat.ge/PXweb/api/v1/en/Database/",
+      "domain": "pc-axis.geostat.ge",
+      "description": "pc-axis.geostat.ge PxWeb: National Statistics Office of Georgia (Geostat) PxWeb-Katalog – ohne Login",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/geostat-ge",
+      "records": 24,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T03:15:42.886Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 3446,
+        "p95": 4402,
+        "throughput": 17.4,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "pxweb-v1",
+      "robots": "allowed",
+      "robotsNote": "pc-axis.geostat.ge/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/geostat-ge/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/geostat-ge/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/geostat-ge/samples"
+      },
+      "source": "https://pc-axis.geostat.ge/PXweb/api/v1/en/Database/",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T03:15:42.886Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "gesetze-im-internet",
       "name": "gesetze-im-internet",
       "path": "opendata/gesetze-im-internet",
@@ -98123,6 +98313,101 @@
         "level": "red",
         "reasons": [
           "robots.txt Disallow",
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "goteborg-px",
+      "name": "opencli-goteborg-px",
+      "path": "international/goteborg-px",
+      "endpoint": "https://statistikdatabas.goteborg.se/api/v1/sv/",
+      "domain": "statistikdatabas.goteborg.se",
+      "description": "statistikdatabas.goteborg.se PxWeb: Göteborgs Stad statistikdatabas (PxWeb-Katalog) – ohne Login",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/goteborg-px",
+      "records": 8,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T03:13:45.490Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1930,
+        "p95": 2018,
+        "throughput": 31.1,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "pxweb-v1",
+      "robots": "allowed",
+      "robotsNote": "statistikdatabas.goteborg.se/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/goteborg-px/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/goteborg-px/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/goteborg-px/samples"
+      },
+      "source": "https://statistikdatabas.goteborg.se/api/v1/sv/",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T03:13:45.490Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
           "Gates nicht geprüft"
         ]
       },
@@ -123430,6 +123715,101 @@
       "screenshot": null
     },
     {
+      "id": "ined-ggp-fr",
+      "name": "opencli-ined-ggp-fr",
+      "path": "international/ined-ggp-fr",
+      "endpoint": "https://px.web.ined.fr/GGP/api/v1/en/",
+      "domain": "px.web.ined.fr",
+      "description": "px.web.ined.fr PxWeb: INED Generations and Gender Contextual Database (PxWeb-Katalog) – ohne Login",
+      "category": "opendata",
+      "country": "FR",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/ined-ggp-fr",
+      "records": 17,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T03:14:00.159Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 2752,
+        "p95": 2755,
+        "throughput": 21.8,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "pxweb-v1",
+      "robots": "allowed",
+      "robotsNote": "px.web.ined.fr/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ined-ggp-fr/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/ined-ggp-fr/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/ined-ggp-fr/samples"
+      },
+      "source": "https://px.web.ined.fr/GGP/api/v1/en/",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T03:14:00.159Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "insee-bdm",
       "name": "opencli-insee-bdm",
       "path": "international/insee-bdm",
@@ -133355,7 +133735,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/finance/lbank",
       "records": 1347,
       "commands": [],
-      "logo": null,
+      "logo": "api.lbank.info.png",
       "paperclip": true,
       "lastRun": "2026-10-14T01:10:46.412Z",
       "e2ePassed": 3,
@@ -153446,7 +153826,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/international/nordic-stat-px",
       "records": 20,
       "commands": [],
-      "logo": null,
+      "logo": "pxweb.nordicstatistics.org.png",
       "paperclip": true,
       "lastRun": "2026-10-14T02:30:08.960Z",
       "e2ePassed": 3,
@@ -173154,6 +173534,101 @@
       "screenshot": null
     },
     {
+      "id": "prognos-konj-se",
+      "name": "opencli-prognos-konj-se",
+      "path": "international/prognos-konj-se",
+      "endpoint": "https://prognos.konj.se/PXWeb/api/v1/sv/",
+      "domain": "prognos.konj.se",
+      "description": "prognos.konj.se PxWeb: Konjunkturinstitutet Prognosdatabas (PxWeb-Katalog) – ohne Login",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/prognos-konj-se",
+      "records": 15,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T03:13:52.005Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 2145,
+        "p95": 2176,
+        "throughput": 28,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "pxweb-v1",
+      "robots": "allowed",
+      "robotsNote": "prognos.konj.se/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/prognos-konj-se/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/prognos-konj-se/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/prognos-konj-se/samples"
+      },
+      "source": "https://prognos.konj.se/PXWeb/api/v1/sv/",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T03:13:52.005Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
       "id": "propellets-at",
       "name": "opencli-propellets-at",
       "path": null,
@@ -177272,7 +177747,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/finance/ripio-trade",
       "records": 26,
       "commands": [],
-      "logo": null,
+      "logo": "api.ripio.com.png",
       "paperclip": true,
       "lastRun": "2026-10-13T23:25:45.646Z",
       "e2ePassed": 3,
@@ -184398,6 +184873,101 @@
         "observations": 1,
         "uptime": 100,
         "last": "2026-10-13T20:23:27.504Z"
+      },
+      "ampel": {
+        "level": "yellow",
+        "reasons": [
+          "Gates nicht geprüft"
+        ]
+      },
+      "screenshot": null
+    },
+    {
+      "id": "skogsstatistik-slu",
+      "name": "opencli-skogsstatistik-slu",
+      "path": "international/skogsstatistik-slu",
+      "endpoint": "https://skogsstatistik.slu.se/api/v1/sv/",
+      "domain": "skogsstatistik.slu.se",
+      "description": "skogsstatistik.slu.se PxWeb: SLU Skogsstatistik / Swedish University of Agricultural Sciences forest statistics (PxWeb-Katalog) – ohne Login",
+      "category": "opendata",
+      "country": "AT",
+      "status": "passing",
+      "repo": "https://github.com/servas-ai/opencli-connectors/international/skogsstatistik-slu",
+      "records": 5,
+      "commands": [],
+      "logo": null,
+      "paperclip": true,
+      "lastRun": "2026-10-14T03:14:11.887Z",
+      "e2ePassed": 3,
+      "e2eTotal": 3,
+      "kpi": {
+        "stability": 100,
+        "p50": 1924,
+        "p95": 1941,
+        "throughput": 31.2,
+        "captchaRate": 0,
+        "dataQuality": null,
+        "score": null,
+        "blocked": false
+      },
+      "loginRequired": false,
+      "captcha": false,
+      "apiAvailable": true,
+      "apiVersion": "pxweb-v1",
+      "robots": "allowed",
+      "robotsNote": "skogsstatistik.slu.se/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+      "incidents": [
+        "Fehlerfall → Exit 2."
+      ],
+      "links": {
+        "skill": "https://github.com/servas-ai/opencli-connectors/blob/main/international/skogsstatistik-slu/SKILL.md",
+        "protocol": "https://github.com/servas-ai/opencli-connectors/blob/main/international/skogsstatistik-slu/PRUEFPROTOKOLL.md",
+        "samples": "https://github.com/servas-ai/opencli-connectors/tree/main/international/skogsstatistik-slu/samples"
+      },
+      "source": "https://skogsstatistik.slu.se/api/v1/sv/",
+      "live": null,
+      "server": null,
+      "sourceType": "Behörde",
+      "interfaces": {
+        "access": "offene API ohne Key",
+        "apiOpen": true,
+        "apiKey": false,
+        "ogdDump": false,
+        "reJson": false,
+        "feed": false,
+        "mcp": true,
+        "cli": false,
+        "opencli": true,
+        "paperclip": true,
+        "playwright": false,
+        "pdf": false
+      },
+      "features": [],
+      "covered": [],
+      "gaps": [],
+      "urls": [],
+      "gates": {
+        "state": "extern",
+        "errors": 0,
+        "codes": [],
+        "note": "eigenes Repo, nicht im Mono-Repo-Gate-Lauf"
+      },
+      "net": null,
+      "signals": {
+        "counts": {
+          "403": 0,
+          "429": 0,
+          "ok": 1,
+          "captcha": 0,
+          "timeout": 0,
+          "offline": 0,
+          "robots": 0,
+          "error": 0
+        },
+        "captchaTypes": {},
+        "observations": 1,
+        "uptime": 100,
+        "last": "2026-10-14T03:14:11.887Z"
       },
       "ampel": {
         "level": "yellow",
@@ -196078,7 +196648,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/opendata/togo-opendata-udata",
       "records": 2923,
       "commands": [],
-      "logo": null,
+      "logo": "opendata.gouv.tg.png",
       "paperclip": true,
       "lastRun": "2026-10-14T02:40:58.521Z",
       "e2ePassed": 4,
@@ -205651,7 +206221,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/international/visitfinland-fi",
       "records": 8,
       "commands": [],
-      "logo": null,
+      "logo": "visitfinland.fi.png",
       "paperclip": true,
       "lastRun": "2026-10-14T02:30:44.136Z",
       "e2ePassed": 3,
@@ -210954,7 +211524,7 @@
       "repo": "https://github.com/servas-ai/opencli-connectors/finance/woo-org",
       "records": 309,
       "commands": [],
-      "logo": null,
+      "logo": "api.woo.org.png",
       "paperclip": true,
       "lastRun": "2026-10-14T01:20:08.935Z",
       "e2ePassed": 2,
@@ -214725,7 +215295,7 @@
       "screenshot": null
     }
   ],
-  "enrichedAt": "2026-10-14T03:19:26.843Z",
+  "enrichedAt": "2026-10-14T03:44:09.132Z",
   "gatesSource": "check_connectors.py --strict (data/gates.snapshot.json)",
   "timeline": [
     {
@@ -214743,7 +215313,7 @@
       "403": 0,
       "429": 0,
       "day": "2026-10-14",
-      "ok": 354,
+      "ok": 360,
       "captcha": 0,
       "timeout": 0,
       "offline": 0,
@@ -214752,6 +215322,6 @@
     }
   ],
   "egress": null,
-  "observationsAt": "2026-10-14T03:19:27.116Z",
-  "observationCount": 2532
+  "observationsAt": "2026-10-14T03:44:09.372Z",
+  "observationCount": 2538
 }
