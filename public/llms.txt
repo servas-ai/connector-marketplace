@@ -1,6 +1,6 @@
 # servas-ai Connector Marketplace
 
-> Katalog von 1864 read-only Datenconnectoren (MCP, CLI, HTTP) für öffentliche Quellen, 166 mit grüner Ampel. Ausgabe einheitlich im Schema servas.record.v1. Stand 2026-10-13 23:43 UTC.
+> Katalog von 1898 read-only Datenconnectoren (MCP, CLI, HTTP) für öffentliche Quellen, 169 mit grüner Ampel. Ausgabe einheitlich im Schema servas.record.v1. Stand 2026-10-14 00:15 UTC.
 
 - Quelle: https://github.com/servas-ai/opencli-connectors
 - Katalog: https://servas-ai.github.io/connector-marketplace/
@@ -98,6 +98,7 @@
 - [kraken](https://servas-ai.github.io/connector-marketplace/#/c/kraken): Krypto-Kurse in Echtzeit (Ticker, OHLC-Kerzen, Paare) von der öffentlichen Kraken-REST-API. Ohne Login/Key. (Ampel green, AT)
 - [kucoin](https://servas-ai.github.io/connector-marketplace/#/c/kucoin): Krypto-24h-Statistik und Kerzen von KuCoin über die öffentliche Market-API. Ohne Login/Key. (Ampel green, AT)
 - [launchpad](https://servas-ai.github.io/connector-marketplace/#/c/launchpad): Launchpad API 1.0: Projekt-/Distributionsdaten und Release-Serien (z. B. Ubuntu-Versionen). Ohne Login (anonymer Lesezugriff). (Ampel green, AT)
+- [luftdaten-at](https://servas-ai.github.io/connector-marketplace/#/c/luftdaten-at): Citizen-Science-Luftqualität (PM2.5, PM10, Temperatur, Feuchte) als Stadtmittelwerte für Österreich über die offizielle Luftdaten.at-API. Ohne Login/Key, Ausgab (Ampel green, AT)
 - [mempool-space](https://servas-ai.github.io/connector-marketplace/#/c/mempool-space): mempool.space REST-API: empfohlene Bitcoin-Gebühren, letzte Blöcke und Mining-Pools. Ohne Login/Key. (Ampel green, AT)
 - [meteo-lt](https://servas-ai.github.io/connector-marketplace/#/c/meteo-lt): Meteo.lt API (Litauischer Hydrometeorologischer Dienst): Ortsliste, Langfrist-Prognose je Ort und Messstationen. Ohne Login/Key. (Ampel green, AT)
 - [mfapi](https://servas-ai.github.io/connector-marketplace/#/c/mfapi): MFAPI.in: Suche nach indischen Investmentfonds (AMFI), aktueller NAV und NAV-Historie je Scheme. Ohne Login/Key. (Ampel green, AT)
@@ -140,6 +141,8 @@
 - [ree-es](https://servas-ai.github.io/connector-marketplace/#/c/ree-es): Spanische Strompreise (PVPC-Endkundenpreis und Spot) stündlich sowie Erzeugungsstruktur je Technologie vom Netzbetreiber Red Eléctrica. Ohne Login/Key. (Ampel green, AT)
 - [release-monitoring](https://servas-ai.github.io/connector-marketplace/#/c/release-monitoring): Anitya / release-monitoring.org API v2 (Fedora): Projekte nach Name/Ökosystem, Versionen je Projekt (neueste, stabile) und Distributions-Paketzuordnungen. Ohne  (Ampel green, AT)
 - [riksbank](https://servas-ai.github.io/connector-marketplace/#/c/riksbank): SEK-Wechselkurse, Leitzins und Zeitreihen der schwedischen Riksbank (SWEA-API). Ohne Key. (Ampel green, AT)
+- [rpo-sk](https://servas-ai.github.io/connector-marketplace/#/c/rpo-sk): Firmen-Stammdaten aus dem slowakischen Register juristischer Personen (Statistikamt, offene API): Name, IČO, Rechtsform, Sitz, Status. Keine Personendaten. Ohne (Ampel green, AT)
+- [rxnorm](https://servas-ai.github.io/connector-marketplace/#/c/rxnorm): Arzneimittel-Normvokabular RxNorm: Konzepte/RxCUI, Wirkstoffe und Marken, ATC-Klassen und NDC-Codes über die offizielle RxNav-API der NLM. Ohne Login/Key, Ausga (Ampel green, AT)
 - [series-tiempo-ar](https://servas-ai.github.io/connector-marketplace/#/c/series-tiempo-ar): apis.datos.gob.ar: Suche in ~30.000 Zeitreihen der argentinischen Verwaltung (INDEC, BCRA …) und Abruf der Werte. Ohne Login/Key. (Ampel green, AT)
 - [singstat-sg](https://servas-ai.github.io/connector-marketplace/#/c/singstat-sg): tablebuilder.singstat.gov.sg: Tabellensuche und Tabellen-Metadaten (Singapore Department of Statistics). Ohne Login/Key. (Ampel green, AT)
 - [smard](https://servas-ai.github.io/connector-marketplace/#/c/smard): Day-Ahead-Großhandelspreise für AT und DE-LU sowie Erzeugung (Wind, PV) und Netzlast in Stundenwerten von der Bundesnetzagentur. Ohne Login/Key. (Ampel green, DE)
