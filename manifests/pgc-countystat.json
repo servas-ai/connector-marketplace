@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-pgc-countystat",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CountyStat – Prince George's County MD Performance (Socrata)",
+  "description": "CountyStat: Leistungskennzahlen und Zielerreichung der Verwaltung von Prince George's County (Maryland) je Behörde und Haushaltsjahr. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Maryland",
+    "Prince George's County Government"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Maryland",
+    "Prince George's County Government"
+  ],
+  "homepage": "https://www.princegeorgescountymd.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Maryland",
+    "city": "Prince George's County",
+    "scope": "county"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "pgc-countystat datasets",
+      "command": "pgc-countystat-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "pgc-countystat dataset",
+      "command": "pgc-countystat-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "pgc-countystat rows",
+      "command": "pgc-countystat-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://performance.princegeorgescountymd.gov/api/catalog/v1",
+    "homepage": "https://www.princegeorgescountymd.gov/",
+    "portal": "https://performance.princegeorgescountymd.gov/",
+    "provider": "Prince George's County Government, Maryland",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Kennzahlen",
+      "Performance",
+      "Maryland",
+      "Prince George's County Government"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Maryland",
+      "city": "Prince George's County",
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "performance.princegeorgescountymd.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Prince George's County Government, Maryland Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "performance.princegeorgescountymd.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:Seal_of_Prince_George%27s_County,_Maryland.svg",
+      "fallback": "initials",
+      "file": "assets/logos/performance.princegeorgescountymd.gov.png",
+      "source": "wikimedia",
+      "license": "Public domain"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "CountyStat – Prince George's County MD Performance (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von Prince George's County Government, Maryland; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von Prince George's County Government, Maryland; je Dataset im Feld license",
+    "logo_source": "wikimedia",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:59.382Z",
+      "robots": "allowed"
+    }
+  }
+}

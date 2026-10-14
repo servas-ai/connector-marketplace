@@ -1,0 +1,150 @@
+{
+  "id": "servas-ai.opencli-gtfs-es-railways-of-the-generalitat-of-catalonia-1856",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Railways of the Generalitat of Catalonia (Ferrocarrils de la (GTFS-Fahrplan)",
+  "description": "Railways of the Generalitat of Catalonia (Ferrocarrils de la: offizieller GTFS-Soll-Fahrplan (Barcelona, Catalonia, Spanien) aus dem Mobility-Database-Katalog (mdb-1856), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten (Mobility-Database-Katalog, Gültigkeit aus feed_info/calendar)",
+      "command": "gtfs-es-railways-of-the-generalitat-of-catalonia-1856-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt, --q Filter)",
+      "command": "gtfs-es-railways-of-the-generalitat-of-catalonia-1856-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt, --q Filter)",
+      "command": "gtfs-es-railways-of-the-generalitat-of-catalonia-1856-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id (<id>)",
+      "command": "gtfs-es-railways-of-the-generalitat-of-catalonia-1856-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_timetable",
+    "realtime": false,
+    "source_url": "https://www.fgc.cat/google/google_transit.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.fgc.cat/robots.txt geprüft: Download-URL nicht gesperrt. Feed im Mobility Database Katalog ohne Auth gelistet (files.mobilitydatabase.org selbst ist per robots gesperrt und wird nicht genutzt).",
+    "tos": "Offene Fahrplandaten, Lizenz: https://dadesobertes.fgc.cat/explore/?q=gtfs_zip.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "barcelona",
+      "railways of the generalitat of catalonia",
+      "spanien",
+      "spain"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Catalonia",
+      "city": "Barcelona",
+      "bbox": [
+        0.633672,
+        41.34856143,
+        2.1721241533237,
+        42.397328515116
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "fgc.cat",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=fgc.cat&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/fgc.cat.png",
+      "brand_domain": "www.fgc.cat"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 131,
+      "throughput_rps": 7.634,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": "2026-10-13T09:56:05.363Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Railways of the Generalitat of Catalonia (Ferrocarrils de la (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.fgc.cat/"
+  }
+}

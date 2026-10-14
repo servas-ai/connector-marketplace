@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-razorpay-ifsc",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Razorpay IFSC – Bankfilialen Indien",
+  "description": "Razorpay IFSC API: Bankfiliale zu einem indischen IFSC-Code (Bank, Filiale, Adresse, MICR, Zahlungsarten UPI/NEFT/RTGS/IMPS), Daten aus RBI-Listen, keyless, MIT.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "indien",
+    "ifsc",
+    "bank",
+    "filiale",
+    "rbi",
+    "zahlungsverkehr",
+    "upi",
+    "neft"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://ifsc.razorpay.com/",
+    "homepage": "https://ifsc.razorpay.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "ifsc.razorpay.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Razorpay IFSC: Open-Source-Datensatz (MIT), öffentliche keyless API.",
+    "license": "MIT (Datensatz razorpay/ifsc, Quelle RBI)",
+    "country": "IN",
+    "keywords": [
+      "indien",
+      "ifsc",
+      "bank",
+      "filiale",
+      "rbi",
+      "zahlungsverkehr",
+      "upi",
+      "neft"
+    ],
+    "geo": {
+      "country": "IN",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-9",
+    "worker": "open-apis-9-1506",
+    "logo": {
+      "domain": "ifsc.razorpay.com",
+      "file": "assets/logos/ifsc.razorpay.com.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://razorpay.com/favicon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T15:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "MIT (Datensatz razorpay/ifsc, Quelle RBI)",
+        "url": "https://github.com/razorpay/ifsc",
+        "evidence": "https://github.com/razorpay/ifsc",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "no",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Razorpay IFSC – Bankfilialen Indien",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "ifsc",
+          "bank",
+          "filiale"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

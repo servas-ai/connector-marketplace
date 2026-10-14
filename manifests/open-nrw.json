@@ -1,0 +1,169 @@
+{
+  "id": "servas-ai.opencli-open-nrw",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open.NRW – Open-Government-Portal Nordrhein-Westfalen (CKAN)",
+  "description": "Open.NRW: Open-Data-Portal des Landes Nordrhein-Westfalen mit Daten von Land, Kreisen und Kommunen (Bekanntmachungen, Geodaten, Statistik). Zugriff über die offizielle CKAN-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "NRW",
+    "Deutschland",
+    "Kommunen",
+    "Land Nordrhein-Westfalen"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "NRW",
+    "Deutschland",
+    "Kommunen",
+    "Land Nordrhein-Westfalen"
+  ],
+  "homepage": "https://open.nrw/",
+  "license": "MIT",
+  "geo": {
+    "country": "DE",
+    "region": "Nordrhein-Westfalen",
+    "city": null,
+    "scope": "state"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "open-nrw datasets",
+      "command": "open-nrw-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "open-nrw dataset",
+      "command": "open-nrw-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://open.nrw/api/3/action/package_search",
+    "homepage": "https://open.nrw/",
+    "portal": "https://open.nrw/dataset",
+    "provider": "Land Nordrhein-Westfalen (Ministerium des Innern / IT.NRW)",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "CKAN",
+      "Datenkatalog",
+      "datasets",
+      "NRW",
+      "Deutschland",
+      "Kommunen",
+      "Land Nordrhein-Westfalen"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Nordrhein-Westfalen",
+      "city": null,
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "open.nrw/robots.txt (HTTP 200): /api/3/action/package_search und package_show nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "Land Nordrhein-Westfalen (Ministerium des Innern / IT.NRW): öffentliche CKAN-Action-API v3 ohne Key/Login; Fair Use.",
+    "logo": {
+      "domain": "open.nrw",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://open.nrw/themes/custom/on_theme/source/images/opennrw_logo.png",
+      "fallback": "initials",
+      "file": "assets/logos/open.nrw.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Open.NRW – Open-Government-Portal Nordrhein-Westfalen (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "ampel": "grün",
+    "license": "Datenlizenz Deutschland – Zero – Version 2.0 (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "data_license": "Datenlizenz Deutschland – Zero – Version 2.0 (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "official-site",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:20:12.865Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-noaa-nefsc-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NOAA Northeast Fisheries Science Center – NEFSC (ERDDAP)",
+  "description": "NOAA NEFSC ERDDAP: Fischerei-Ozeanografie Nordost-USA, u. a. eMOLT-Bodentemperaturen von Fischereifahrzeugen und Profildaten. Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Fischerei",
+    "Bodentemperatur",
+    "NOAA Fisheries",
+    "NOAA Northeast Fisheries Science Center"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Fischerei",
+    "Bodentemperatur",
+    "NOAA Fisheries",
+    "NOAA Northeast Fisheries Science Center"
+  ],
+  "homepage": "https://www.fisheries.noaa.gov/about/northeast-fisheries-science-center",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Massachusetts",
+    "city": "Woods Hole",
+    "scope": "regional"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "noaa-nefsc-erddap datasets",
+      "command": "noaa-nefsc-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "noaa-nefsc-erddap suche",
+      "command": "noaa-nefsc-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "noaa-nefsc-erddap info",
+      "command": "noaa-nefsc-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://comet.nefsc.noaa.gov/erddap/info/index.json",
+    "homepage": "https://www.fisheries.noaa.gov/about/northeast-fisheries-science-center",
+    "portal": "https://comet.nefsc.noaa.gov/erddap/index.html",
+    "provider": "NOAA Northeast Fisheries Science Center (NEFSC)",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Fischerei",
+      "Bodentemperatur",
+      "NOAA Fisheries",
+      "NOAA Northeast Fisheries Science Center"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Massachusetts",
+      "city": "Woods Hole",
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "comet.nefsc.noaa.gov/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "NOAA Northeast Fisheries Science Center (NEFSC): öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "comet.nefsc.noaa.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.fisheries.noaa.gov/themes/custom/noaa_components/images/NOAA_FISHERIES_logoH.png",
+      "fallback": "initials",
+      "file": "assets/logos/comet.nefsc.noaa.gov.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "NOAA Northeast Fisheries Science Center – NEFSC (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site",
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:24.254Z",
+      "robots": "allowed"
+    }
+  }
+}

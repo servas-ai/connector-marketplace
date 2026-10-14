@@ -1,0 +1,159 @@
+{
+  "id": "servas-ai.opencli-data-gov-sg",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "data.gov.sg – Singapore Open Data API",
+  "description": "api-production.data.gov.sg v2: Dataset-Liste und Dataset-Metadaten des Singapore Open Data Portals. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-gov-sg datasets",
+      "command": "data-gov-sg-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-gov-sg dataset",
+      "command": "data-gov-sg-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api-production.data.gov.sg/v2/public/api/datasets",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api-production.data.gov.sg/robots.txt: 404 (keine Sperre) – öffentliche data.gov.sg v2 Public API. Drossel ≥2 s.",
+    "tos": "data.gov.sg: Singapore Open Data Licence; Fair Use (anonyme Rate-Limits).",
+    "logo": {
+      "domain": "api-production.data.gov.sg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.gov.sg/",
+      "fallback": "initials",
+      "file": "assets/logos/api-production.data.gov.sg.png",
+      "source": "official-site",
+      "source_kind": "header-svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2-public",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "data.gov.sg – Singapore Open Data API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "SG",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "data-gov-sg",
+      "api-production",
+      "gov",
+      "dataset-liste",
+      "dataset-metadaten",
+      "singapore",
+      "open",
+      "portals",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "SG",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:19:06Z",
+      "host": "api-production.data.gov.sg",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 404,
+      "ip": "104.20.45.103",
+      "server_header": "cloudflare",
+      "tls_issuer": "Google Trust Services",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://api-production.data.gov.sg",
+      "country": "SG"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.899Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://data.gov.sg/"
+  }
+}

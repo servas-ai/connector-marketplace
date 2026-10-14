@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-exchangerate-api",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ExchangeRate-API Open Access",
+  "description": "ExchangeRate-API Open Access v4: aktuelle Wechselkurse ohne API-Key (Rate-Limits der Free-Tier beachten).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "Wechselkurs",
+    "FX",
+    "ExchangeRate",
+    "currency",
+    "EUR"
+  ],
+  "keywords": [
+    "Wechselkurs",
+    "FX",
+    "ExchangeRate",
+    "currency",
+    "EUR"
+  ],
+  "homepage": "https://www.exchangerate-api.com/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "aktuell",
+      "displayName": "aktuell",
+      "description": "exchangerate-api aktuell",
+      "command": "exchangerate-api-cli aktuell"
+    },
+    {
+      "name": "codes",
+      "displayName": "codes",
+      "description": "exchangerate-api codes",
+      "command": "exchangerate-api-cli codes"
+    },
+    {
+      "name": "paar",
+      "displayName": "paar",
+      "description": "exchangerate-api paar",
+      "command": "exchangerate-api-cli paar"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://api.exchangerate-api.com/v4/latest/EUR",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.exchangerate-api.com/robots.txt: 404/allow-all für API (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "ExchangeRate-API Open Access Terms; Fair Use.",
+    "provider": "ExchangeRate-API",
+    "homepage": "https://www.exchangerate-api.com/",
+    "data_license": "ExchangeRate-API Open Access Terms",
+    "keywords": [
+      "Wechselkurs",
+      "FX",
+      "ExchangeRate",
+      "currency",
+      "EUR"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null,
+      "scope": "global"
+    },
+    "country": "INT",
+    "logo": {
+      "domain": "api.exchangerate-api.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.exchangerate-api.com/img/logo.png",
+      "fallback": "initials",
+      "brand_domain": "exchangerate-api.com",
+      "file": "assets/logos/api.exchangerate-api.com.png",
+      "source": "official-site",
+      "source_kind": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "ExchangeRate-API Open Access",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:40.752Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-fema-disasters",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "FEMA – Disaster Declarations",
+  "description": "FEMA OpenFEMA API v2: Disaster Declarations Summaries (US-Katastrophenerklärungen), keyless OData JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "usa",
+    "fema",
+    "katastrophe",
+    "disaster",
+    "open data",
+    "verwaltung"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.fema.gov/",
+    "homepage": "https://www.fema.gov/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.fema.gov/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "OpenFEMA: öffentliche US-Behördendaten, keyless; Fair-Use.",
+    "license": "public-domain (USGov)",
+    "country": "US",
+    "keywords": [
+      "usa",
+      "fema",
+      "katastrophe",
+      "disaster",
+      "open data",
+      "verwaltung"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-11",
+    "worker": "open-apis-11-1620",
+    "logo": {
+      "domain": "www.fema.gov",
+      "file": "assets/logos/www.fema.gov.png",
+      "source": "og:image",
+      "source_kind": "og:image",
+      "resolved": "https://www.fema.gov/sites/default/files/2020-04/fema_logo_horizontal.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:49.611Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "public-domain (USGov)",
+        "url": "https://www.fema.gov/about/openfema/data-sets",
+        "evidence": "https://www.fema.gov/about/openfema/data-sets",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T16:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "FEMA – Disaster Declarations",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

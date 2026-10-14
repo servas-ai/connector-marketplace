@@ -1,0 +1,198 @@
+{
+  "id": "servas-ai.opencli-jccm-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Junta de Comunidades de Castilla-La Mancha – Open Data (ArcGIS Hub)",
+  "description": "datos-abiertos-mapasjccm.opendata.arcgis.com – Junta de Comunidades de Castilla-La Mancha: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "jccm-data suche",
+      "command": "jccm-data-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "jccm-data neu",
+      "command": "jccm-data-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "jccm-data datensatz",
+      "command": "jccm-data-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://datos-abiertos-mapasjccm.opendata.arcgis.com/search",
+    "homepage": "https://datos-abiertos-mapasjccm.opendata.arcgis.com/",
+    "country": "ES",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "datos-abiertos-mapasjccm.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow nur /sites/ /admin/ /sessions/ /groups/ /people/ /workspace/ – /api/search/v1 nicht gesperrt; Crawl-delay 60 (Hub-Standard) → nur Einzelabfragen, kein Bulk-Crawl. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Junta de Comunidades de Castilla-La Mancha: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "logo": {
+      "domain": "datos-abiertos-mapasjccm.opendata.arcgis.com",
+      "brand_domain": "castillalamancha.es",
+      "chain": [
+        "official-site",
+        "wikimedia"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:Escudo_de_Castilla-La_Mancha.svg",
+      "fallback": "initials",
+      "file": "assets/logos/datos-abiertos-mapasjccm.opendata.arcgis.com.png",
+      "source": "wikimedia",
+      "kind": "wikimedia",
+      "license": "CC BY-SA 4.0",
+      "note": "Wappen/Hoheitszeichen der Organisation (Wikimedia Commons)"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Junta de Comunidades de Castilla-La Mancha – Open Data (ArcGIS Hub)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "operator": {
+      "name": "Junta de Comunidades de Castilla-La Mancha",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "ES",
+      "source": "Portal-Impressum/Domain"
+    },
+    "geo": {
+      "country": "ES",
+      "scope": "region",
+      "region": "Castilla-La Mancha"
+    },
+    "llms_txt": {
+      "llms_txt": false,
+      "llms_full_txt": false,
+      "openapi": null,
+      "api_kind": "OGC API Records (ArcGIS Hub Search v1)",
+      "checked_at": "2026-10-13T14:30:00Z"
+    },
+    "ampel": "gelb",
+    "license": "überwiegend ohne Lizenzangabe, teils CC BY 4.0 / Haftungshinweise (je Datensatz prüfen)",
+    "logo_source": "wikimedia",
+    "connector_meta": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "unknown",
+        "url": null,
+        "evidence": "https://datos-abiertos-mapasjccm.opendata.arcgis.com/api/search/v1/collections/dataset/items (properties.licenseInfo), Stand 2026-10-13",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Offene Verwaltungsdaten (EU-Richtlinie 2019/1024 Open Data/PSI) – Lizenz je Datensatz",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "keine durchgängige Lizenzangabe",
+          "offizielle Behördenquelle",
+          "robots.txt beachtet (fail-closed)",
+          "kein Login, keine Umgehung",
+          "nur Katalog-Metadaten, keine personenbezogenen Felder",
+          "Hosting Esri ArcGIS Online (Server-Region nicht belegt)"
+        ]
+      },
+      "checked_at": "2026-10-13T14:30:00Z"
+    },
+    "keywords": [
+      "jccm data",
+      "opendata",
+      "arcgis",
+      "open data",
+      "hub",
+      "es",
+      "jccm",
+      "data",
+      "datos",
+      "abiertos",
+      "mapasjccm",
+      "com",
+      "junta",
+      "comunidades"
+    ],
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:10:48.411Z",
+      "robots": "allowed"
+    }
+  }
+}

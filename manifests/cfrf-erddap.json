@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-cfrf-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Commercial Fisheries Research Foundation – CFRF (ERDDAP)",
+  "description": "Commercial Fisheries Research Foundation: Ozeandaten aus der kooperativen Fischereiforschung (Bodentemperaturen, Demersal-Glider, Fangfahrten). Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Fischerei",
+    "Bodentemperatur",
+    "Rhode Island",
+    "Commercial Fisheries Research Foundation"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Fischerei",
+    "Bodentemperatur",
+    "Rhode Island",
+    "Commercial Fisheries Research Foundation"
+  ],
+  "homepage": "https://www.cfrfoundation.org/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Rhode Island",
+    "city": null,
+    "scope": "regional"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "cfrf-erddap datasets",
+      "command": "cfrf-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "cfrf-erddap suche",
+      "command": "cfrf-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "cfrf-erddap info",
+      "command": "cfrf-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://erddap.ondeckdata.com/erddap/info/index.json",
+    "homepage": "https://www.cfrfoundation.org/",
+    "portal": "https://erddap.ondeckdata.com/erddap/index.html",
+    "provider": "Commercial Fisheries Research Foundation (CFRF)",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Fischerei",
+      "Bodentemperatur",
+      "Rhode Island",
+      "Commercial Fisheries Research Foundation"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Rhode Island",
+      "city": null,
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "erddap.ondeckdata.com/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Commercial Fisheries Research Foundation (CFRF): öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "erddap.ondeckdata.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://images.squarespace-cdn.com/content/v1/5669f27fa128e6a7fba76540/1fc9a284-12d5-4ef9-a538-a61fbd9462a9/CFRF-Logo-RGB-Full-Color-500px.png?format=1500w",
+      "fallback": "initials",
+      "file": "assets/logos/erddap.ondeckdata.com.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Commercial Fisheries Research Foundation – CFRF (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site",
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T20:10:41.855Z",
+      "robots": "allowed"
+    }
+  }
+}

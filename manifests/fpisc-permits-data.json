@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-fpisc-permits-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Federal Permitting Dashboard – Permitting Council Open Data (Socrata)",
+  "description": "Federal Permitting Dashboard: offene Daten des Federal Permitting Improvement Steering Council zu Genehmigungsverfahren, Categorical Exclusions und Infrastrukturprojekten der US-Bundesbehörden. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Genehmigungen",
+    "Infrastruktur",
+    "USA",
+    "Federal Permitting Improvement Steering Council (Permitting Council)"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Genehmigungen",
+    "Infrastruktur",
+    "USA",
+    "Federal Permitting Improvement Steering Council (Permitting Council)"
+  ],
+  "homepage": "https://www.permits.performance.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": null,
+    "city": null,
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "fpisc-permits-data datasets",
+      "command": "fpisc-permits-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "fpisc-permits-data dataset",
+      "command": "fpisc-permits-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "fpisc-permits-data rows",
+      "command": "fpisc-permits-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.permits.performance.gov/api/catalog/v1",
+    "homepage": "https://www.permits.performance.gov/",
+    "portal": "https://data.permits.performance.gov/",
+    "provider": "Federal Permitting Improvement Steering Council (Permitting Council)",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Genehmigungen",
+      "Infrastruktur",
+      "USA",
+      "Federal Permitting Improvement Steering Council (Permitting Council)"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.permits.performance.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Federal Permitting Improvement Steering Council (Permitting Council) Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "data.permits.performance.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.permitting.gov/themes/custom/uswds_permitting_council/assets/img/icons/fav/favicon.svg",
+      "fallback": "initials",
+      "file": "assets/logos/data.permits.performance.gov.png",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Federal Permitting Dashboard – Permitting Council Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von Federal Permitting Improvement Steering Council (Permitting Council); je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von Federal Permitting Improvement Steering Council (Permitting Council); je Dataset im Feld license",
+    "logo_source": "favicon",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:16.735Z",
+      "robots": "allowed"
+    }
+  }
+}

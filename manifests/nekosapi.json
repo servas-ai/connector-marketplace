@@ -1,0 +1,170 @@
+{
+  "id": "servas-ai.opencli-nekosapi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Nekos API – Random Images",
+  "description": "Nekos API v4: zufällige kuratierte Anime-Bilder mit Rating, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "anime",
+    "images",
+    "nekosapi",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "one",
+      "displayName": "one",
+      "description": "nekosapi one",
+      "command": "nekosapi-cli one"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.nekosapi.com/",
+    "homepage": "https://api.nekosapi.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.nekosapi.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Nekos API: öffentliche Image-API, Fair-Use.",
+    "license": "terms-of-source (Nekos API)",
+    "country": "INT",
+    "keywords": [
+      "anime",
+      "images",
+      "nekosapi",
+      "tech"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-15",
+    "worker": "open-apis-15-2002",
+    "logo": {
+      "domain": "api.nekosapi.com",
+      "file": "assets/logos/api.nekosapi.com.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://nekosapi.com/branding/logo/logo.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v4",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:20:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Nekos API)",
+        "url": "https://nekosapi.com/",
+        "evidence": "https://nekosapi.com/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T20:20:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Nekos API – Random Images",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "url"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

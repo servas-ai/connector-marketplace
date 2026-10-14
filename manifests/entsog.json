@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-entsog",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ENTSOG Transparency Platform – Gasnetz Europa",
+  "description": "ENTSOG Transparency Platform API: Gasnetzbetreiber (TSOs) je Land, Bilanzierungszonen und Netzpunkte (Interconnection Points, Speicher, LNG) des europäischen Gasnetzes. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "betreiber",
+      "displayName": "betreiber",
+      "description": "entsog betreiber",
+      "command": "entsog-cli betreiber"
+    },
+    {
+      "name": "bilanzzonen",
+      "displayName": "bilanzzonen",
+      "description": "entsog bilanzzonen",
+      "command": "entsog-cli bilanzzonen"
+    },
+    {
+      "name": "punkte",
+      "displayName": "punkte",
+      "description": "entsog punkte",
+      "command": "entsog-cli punkte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://transparency.entsog.eu/api/v1/operators",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "transparency.entsog.eu/robots.txt: kein Disallow für /api/. Offizielle Transparenz-API (EU-Verordnung 715/2009). Drossel ≥2 s.",
+    "tos": "ENTSOG Transparency Platform: öffentliche Daten, Nutzung mit Quellenangabe „ENTSOG“.",
+    "logo": {
+      "domain": "transparency.entsog.eu",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.entsog.eu/themes/custom/entsog_theme/logo.png",
+      "fallback": "initials",
+      "file": "assets/logos/transparency.entsog.eu.png",
+      "brand_domain": "entsog.eu",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4002,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:04:36.846Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "ENTSOG Transparency Platform – Gasnetz Europa",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "entsog",
+      "transparency",
+      "platform",
+      "gasnetzbetreiber",
+      "tsos",
+      "land",
+      "bilanzierungszonen",
+      "netzpunkte",
+      "interconnection",
+      "points",
+      "speicher",
+      "lng",
+      "europäischen",
+      "gasnetzes",
+      "gasnetz",
+      "europa",
+      "opendata",
+      "betreiber",
+      "bilanzzonen",
+      "punkte",
+      "network quality",
+      "netzqualität",
+      "telecom",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "EU",
+      "scope": "eu"
+    },
+    "infra": {
+      "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn": 8075,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:20:41Z",
+      "host": "transparency.entsog.eu",
+      "hoster": "Microsoft Corporation",
+      "http_status": 200,
+      "ip": "20.76.183.136",
+      "server_header": "nginx/1.24.0 (Ubuntu)",
+      "tls_issuer": "GoDaddy.com, Inc.",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://transparency.entsog.eu"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:48.060Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://transparency.entsog.eu/"
+  }
+}

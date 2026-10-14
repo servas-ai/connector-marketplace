@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-datacenter-nola",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "The Data Center – New Orleans Region Data (Socrata)",
+  "description": "The Data Center: unabhängige Forschungsdaten zur Region New Orleans (Louisiana) mit historischer Bevölkerung, Demografie, Wirtschaft und Wohnen. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "New Orleans",
+    "Demografie",
+    "Louisiana",
+    "The Data Center (New Orleans)"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "New Orleans",
+    "Demografie",
+    "Louisiana",
+    "The Data Center (New Orleans)"
+  ],
+  "homepage": "https://www.datacenterresearch.org/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Louisiana",
+    "city": "New Orleans",
+    "scope": "city"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "datacenter-nola datasets",
+      "command": "datacenter-nola-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "datacenter-nola dataset",
+      "command": "datacenter-nola-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "datacenter-nola rows",
+      "command": "datacenter-nola-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.datacenterresearch.org/api/catalog/v1",
+    "homepage": "https://www.datacenterresearch.org/",
+    "portal": "https://data.datacenterresearch.org/",
+    "provider": "The Data Center (New Orleans)",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "New Orleans",
+      "Demografie",
+      "Louisiana",
+      "The Data Center (New Orleans)"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Louisiana",
+      "city": "New Orleans",
+      "scope": "city"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.datacenterresearch.org/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "The Data Center (New Orleans) Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "data.datacenterresearch.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.datacenterresearch.org/a/wp-content/themes/DataCenter/datacenter-114.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.datacenterresearch.org.png",
+      "source": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "The Data Center – New Orleans Region Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Public Domain (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "data_license": "Public Domain (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "apple-touch-icon",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:11:34.235Z",
+      "robots": "allowed"
+    }
+  }
+}

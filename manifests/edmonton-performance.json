@@ -1,0 +1,167 @@
+{
+  "id": "servas-ai.opencli-edmonton-performance",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "City of Edmonton Open Performance (Socrata)",
+  "description": "Edmonton Open Performance: Kennzahlen der City of Edmonton (Alberta) zu Inflation, Wirtschaft, Mobilität und städtischen Diensten. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Kanada",
+    "City of Edmonton"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Kanada",
+    "City of Edmonton"
+  ],
+  "homepage": "https://www.edmonton.ca/",
+  "license": "MIT",
+  "geo": {
+    "country": "CA",
+    "region": "Alberta",
+    "city": "Edmonton",
+    "scope": "city"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "edmonton-performance datasets",
+      "command": "edmonton-performance-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "edmonton-performance dataset",
+      "command": "edmonton-performance-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "edmonton-performance rows",
+      "command": "edmonton-performance-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://openperformance.edmonton.ca/api/catalog/v1",
+    "homepage": "https://www.edmonton.ca/",
+    "portal": "https://openperformance.edmonton.ca/",
+    "provider": "City of Edmonton",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Kennzahlen",
+      "Performance",
+      "Kanada",
+      "City of Edmonton"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": "Alberta",
+      "city": "Edmonton",
+      "scope": "city"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "openperformance.edmonton.ca/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "City of Edmonton Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "openperformance.edmonton.ca",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://openperformance.edmonton.ca/api/assets/ED340BA6-DEB3-430A-823A-246D977739D5?edmonton-logo.png",
+      "fallback": "initials",
+      "file": "assets/logos/openperformance.edmonton.ca.png",
+      "source": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "City of Edmonton Open Performance (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CA",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von City of Edmonton; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von City of Edmonton; je Dataset im Feld license",
+    "logo_source": "header-logo"
+  }
+}

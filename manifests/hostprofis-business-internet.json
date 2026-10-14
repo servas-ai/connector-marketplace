@@ -1,0 +1,170 @@
+{
+  "id": "servas-ai.opencli-hostprofis-business-internet",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "HostProfis Business-Internet (fixe IP) – Preise",
+  "description": "Öffentliche Preise der HostProfis xDSL-Business-Pakete (12–300 Mbit) mit statischer IP-Adresse: Monatspreis, regulärer Preis, Down/Up, Datenvolumen. Ohne Login.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "telekom"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "alle-preise",
+      "displayName": "preise",
+      "description": "HostProfis Business-Internet (fixe IP) – Preise: preise",
+      "command": "hostprofis-business-internet-cli preise --format json"
+    },
+    {
+      "name": "ab-100-mbit",
+      "displayName": "preise",
+      "description": "HostProfis Business-Internet (fixe IP) – Preise: preise",
+      "command": "hostprofis-business-internet-cli preise --min-down 100 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "telekom",
+    "realtime": false,
+    "source_url": "https://www.hostprofis.com/web/xdsl",
+    "homepage": "https://www.hostprofis.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "html",
+    "login": false,
+    "rate_limit": "20 req/min/IP (anonym, PeeringDB) – CLI ≥3,1 s Pause + Cache: identische Anfragen höchstens 2x/Minute",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-aa-0002",
+    "logo": {
+      "domain": "www.hostprofis.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.hostprofis.com/web/relaunch/assets/logo-header.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.hostprofis.com.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1100,
+      "throughput_rps": 0.32,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "html",
+      "last_scrape": "2026-10-13T03:50:59Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "HostProfis Business-Internet (fixe IP) – Preise",
+        "subtitle": "telekom",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ],
+        "footer": "Daten: PeeringDB"
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "preis_monat_eur",
+          "regulaer_monat_eur",
+          "down_mbit",
+          "up_mbit",
+          "statische_ip"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      },
+      "chart": {
+        "type": "bar",
+        "x": "title",
+        "y": "preis_monat_eur"
+      }
+    },
+    "attribution": "Daten: PeeringDB",
+    "usage_policy": {
+      "zweck": [
+        "Netzbetrieb",
+        "Fehlersuche",
+        "Forschung"
+      ],
+      "verboten": [
+        "Vollexport",
+        "Kontaktabfragen (poc)",
+        "Marketing"
+      ],
+      "quelle": "https://www.peeringdb.com/aup"
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "hostprofis",
+      "business",
+      "internet",
+      "hostprofis-business-internet",
+      "preise",
+      "xdsl-business-pakete",
+      "mbit",
+      "statischer",
+      "ip-adresse",
+      "monatspreis",
+      "regulärer",
+      "preis",
+      "down",
+      "datenvolumen",
+      "business-internet",
+      "fixe",
+      "telekom",
+      "alle-preise",
+      "ab-100-mbit",
+      "telecom",
+      "telekommunikation"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:43.703Z",
+      "robots": "allowed"
+    }
+  }
+}

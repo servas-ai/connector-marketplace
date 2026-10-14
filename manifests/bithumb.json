@@ -1,0 +1,167 @@
+{
+  "id": "servas-ai.opencli-bithumb",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Bithumb – Krypto-Börse Korea (KRW)",
+  "description": "Bithumb Public API: Ticker je Coin in KRW, alle Ticker nach 24h-Umsatz und Orderbuch. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "bithumb ticker",
+      "command": "bithumb-cli ticker"
+    },
+    {
+      "name": "alle",
+      "displayName": "alle",
+      "description": "bithumb alle",
+      "command": "bithumb-cli alle"
+    },
+    {
+      "name": "orderbuch",
+      "displayName": "orderbuch",
+      "description": "bithumb orderbuch",
+      "command": "bithumb-cli orderbuch"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.bithumb.com/public/ticker/ALL_KRW",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.bithumb.com/robots.txt: 404 (keine Einschränkung). Öffentliche Public-API ohne Key. Drossel ≥2 s.",
+    "tos": "Bithumb Public API: öffentliche Marktdaten ohne Authentifizierung, Rate-Limit beachten.",
+    "logo": {
+      "domain": "api.bithumb.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c2/13/c1/c213c143-7a3f-6c94-db32-979bbf701434/Placeholder.mill/512x512bb.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.bithumb.com.png",
+      "brand_domain": "bithumb.com",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "app": "빗썸 앱",
+      "developer": "Bithumb Co., Ltd."
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3893,
+      "throughput_rps": 0.257,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "public-v1",
+      "last_scrape": "2026-10-13T08:04:07.964Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Bithumb – Krypto-Börse Korea (KRW)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "bithumb",
+      "ticker",
+      "coin",
+      "krw",
+      "h-umsatz",
+      "orderbuch",
+      "krypto-börse",
+      "korea",
+      "finance",
+      "crypto",
+      "cryptocurrency",
+      "kryptowährung",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:48:18Z",
+      "host": "api.bithumb.com",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "13.209.192.200",
+      "server_header": "nginx",
+      "tls_issuer": "Sectigo Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://bithumb.com"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:33.384Z",
+      "robots": "allowed"
+    }
+  }
+}

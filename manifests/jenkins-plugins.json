@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-jenkins-plugins",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Jenkins Plugins – Plugin-Index",
+  "description": "plugins.jenkins.io API: Jenkins-Plugin-Katalog (Name, Version, Release-Datum, Installationen, Kategorien, Security-Warnungen) und Plugin-Details, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "jenkins",
+    "ci",
+    "plugin",
+    "devops",
+    "automation",
+    "package-registry"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "plugin",
+      "displayName": "plugin",
+      "description": "jenkins-plugins plugin",
+      "command": "jenkins-plugins-cli plugin"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://plugins.jenkins.io/",
+    "homepage": "https://plugins.jenkins.io/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "plugins.jenkins.io/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "plugins.jenkins.io: öffentliche Plugin-Metadaten ohne Key; nur Lesen.",
+    "license": "terms-of-source (Jenkins Project)",
+    "country": "INT",
+    "keywords": [
+      "jenkins",
+      "ci",
+      "plugin",
+      "devops",
+      "automation",
+      "package-registry"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-27",
+    "worker": "open-apis-27-0132",
+    "logo": {
+      "domain": "plugins.jenkins.io",
+      "file": "assets/logos/plugins.jenkins.io.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://plugins.jenkins.io/static/790a737a02c060d98e922c9432a12de3/cbf2c/jenkins-voltron-271x294x24.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:00:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Jenkins Project)",
+        "url": "https://www.jenkins.io/",
+        "evidence": "https://www.jenkins.io/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Jenkins Plugins – Plugin-Index (plugins.jenkins.io)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T02:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Jenkins Plugins – Plugin-Index",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "version"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

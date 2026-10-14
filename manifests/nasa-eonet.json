@@ -1,0 +1,157 @@
+{
+  "id": "servas-ai.opencli-nasa-eonet",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NASA EONET – Naturereignisse",
+  "description": "NASA EONET API v3: aktuelle Naturereignisse (Waldbrände, Stürme, Vulkane, Eis) mit Koordinaten und Kategorien. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "events",
+      "displayName": "events",
+      "description": "nasa-eonet events",
+      "command": "nasa-eonet-cli events"
+    },
+    {
+      "name": "kategorien",
+      "displayName": "kategorien",
+      "description": "nasa-eonet kategorien",
+      "command": "nasa-eonet-cli kategorien"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "umwelt",
+    "realtime": true,
+    "source_url": "https://eonet.gsfc.nasa.gov/api/v3/events",
+    "homepage": "https://eonet.gsfc.nasa.gov/",
+    "keywords": [
+      "nasa",
+      "eonet",
+      "nasa-eonet",
+      "naturereignisse",
+      "waldbrände",
+      "stürme",
+      "vulkane",
+      "eis",
+      "koordinaten",
+      "kategorien",
+      "international",
+      "events"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "eonet.gsfc.nasa.gov/robots.txt: User-agent * Disallow leer (alles erlaubt). Offizielle NASA-API ohne Key. Drossel ≥2 s.",
+    "tos": "NASA EONET: US-Government Open Data, frei nutzbar; Fair Use.",
+    "logo": {
+      "domain": "eonet.gsfc.nasa.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://eonet.gsfc.nasa.gov/img/nasa-logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/eonet.gsfc.nasa.gov.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2179,
+      "throughput_rps": 0.459,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": "2026-10-13T06:38:46.700Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "NASA EONET – Naturereignisse",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AS270 - National Aeronautics and Space Administration",
+      "asn": 270,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:38:30Z",
+      "host": "eonet.gsfc.nasa.gov",
+      "hoster": "National Aeronautics and Space Administration",
+      "http_status": 200,
+      "ip": "129.164.142.189",
+      "server_header": "Apache",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://eonet.gsfc.nasa.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:37.852Z",
+      "robots": "allowed"
+    }
+  }
+}

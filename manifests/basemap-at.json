@@ -1,0 +1,142 @@
+{
+  "id": "servas-ai.opencli-basemap-at",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "basemap.at – Verwaltungsgrundkarte Österreich (WMTS)",
+  "description": "basemap.at: WMTS-Layer (Grundkarte, Orthofoto, Overlays) der österreichischen Länder. Nur GetCapabilities-Metadaten, ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "layer",
+      "displayName": "layer",
+      "description": "Alle Layer aus GetCapabilities",
+      "command": "basemap-at-cli layer"
+    },
+    {
+      "name": "detail",
+      "displayName": "detail",
+      "description": "Layer per Identifier",
+      "command": "basemap-at-cli detail"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "geo",
+    "realtime": false,
+    "source_url": "https://mapsneu.wien.gv.at/basemapneu/1.0.0/WMTSCapabilities.xml",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "mapsneu.wien.gv.at/robots.txt geprüft: GetCapabilities nicht gesperrt. Nur Metadaten, keine Kachel-Massendownloads.",
+    "tos": "Offener Geodienst (OGC), nur Metadaten/GetCapabilities.",
+    "keywords": [
+      "basemap",
+      "basemap-at",
+      "wmts-layer",
+      "grundkarte",
+      "orthofoto",
+      "overlays",
+      "österreichischen",
+      "länder",
+      "getcapabilities-metadaten",
+      "verwaltungsgrundkarte",
+      "österreich",
+      "wmts",
+      "geo",
+      "layer",
+      "karte",
+      "karten",
+      "geodata",
+      "map",
+      "maps",
+      "geodaten"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "logo": {
+      "domain": "mapsneu.wien.gv.at",
+      "resolved": "https://basemap.at/wp-content/uploads/sites/53/2019/06/cropped-logo-basemap512x512-opaque-192x192.png",
+      "file": "assets/logos/basemap.at.png",
+      "brand_domain": "basemap.at",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3993,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "OGC",
+      "last_scrape": "2026-10-13T09:05:02.530Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "basemap.at – Verwaltungsgrundkarte Österreich (WMTS)",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "AT",
+    "homepage": "https://basemap.at",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:04.710Z",
+      "robots": "allowed"
+    }
+  }
+}

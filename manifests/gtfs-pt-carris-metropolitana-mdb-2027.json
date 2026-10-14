@@ -1,0 +1,157 @@
+{
+  "id": "servas-ai.opencli-gtfs-pt-carris-metropolitana-mdb-2027",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Carris Metropolitana (GTFS-Fahrplan)",
+  "description": "Carris Metropolitana: offizieller GTFS-Soll-Fahrplan (Agualva e Mira-Sintra, Portugal) aus dem Mobility-Database-Katalog (mdb-2027), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-pt-carris-metropolitana-mdb-2027-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-pt-carris-metropolitana-mdb-2027-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-pt-carris-metropolitana-mdb-2027-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-pt-carris-metropolitana-mdb-2027-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://api.carrismetropolitana.pt/gtfs",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.carrismetropolitana.pt/robots.txt 2xx no matching group → allow",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://github.com/carrismetropolitana/gtfs.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "agualva e mira sintr",
+      "carris metropolitana",
+      "portugal"
+    ],
+    "geo": {
+      "country": "PT",
+      "region": "Lisbon",
+      "city": "Agualva e Mira-Sintra",
+      "bbox": [
+        -9.497247,
+        38.419378,
+        -8.457528,
+        39.079196
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "api.carrismetropolitana.pt",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ef/e3/a9/efe3a901-1de8-7202-edaa-efc887072253/ios-icon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/api.carrismetropolitana.pt.png",
+      "brand_domain": "carrismetropolitana.pt"
+    },
+    "license": "https://github.com/carrismetropolitana/gtfs",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Carris Metropolitana (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.carrismetropolitana.pt/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:14:26.063Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "id": "servas-ai.opencli-ndbc-buoys",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NOAA NDBC – Bojenbeobachtungen",
+  "description": "NOAA National Data Buoy Center: aktuelle Beobachtungen aller Bojen (Wind, Wellen, Druck, Temperatur) als tabellarischer Latest-Obs-Feed, keyless.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "tags": [
+    "wetter",
+    "ozean",
+    "boje",
+    "noaa",
+    "wind",
+    "wellen",
+    "marine",
+    "beobachtung"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "realtime": true,
+    "source_url": "https://www.ndbc.noaa.gov/",
+    "homepage": "https://www.ndbc.noaa.gov/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.ndbc.noaa.gov/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "NDBC: US Government Work (public domain), Quellenangabe NOAA/NDBC; keyless.",
+    "license": "Public Domain (US Government Work)",
+    "country": "US",
+    "keywords": [
+      "wetter",
+      "ozean",
+      "boje",
+      "noaa",
+      "wind",
+      "wellen",
+      "marine",
+      "beobachtung"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-10",
+    "worker": "open-apis-10-1539",
+    "logo": {
+      "domain": "www.ndbc.noaa.gov",
+      "file": "assets/logos/www.ndbc.noaa.gov.png",
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": "initials:NN",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:44.929Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "Public Domain (US Government Work)",
+        "url": "https://www.ndbc.noaa.gov/disclaimer.shtml",
+        "evidence": "https://www.ndbc.noaa.gov/disclaimer.shtml",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: NOAA NDBC – Bojenbeobachtungen (www.ndbc.noaa.gov)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T16:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "NOAA NDBC – Bojenbeobachtungen",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "station",
+          "lat",
+          "lon"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

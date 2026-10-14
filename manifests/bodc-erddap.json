@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-bodc-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "British Oceanographic Data Centre – BODC (ERDDAP)",
+  "description": "British Oceanographic Data Centre: archivierte ozeanografische Messungen (CTD-Profile, Fahrten, Bojen) des NOC/BODC. Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Großbritannien",
+    "CTD",
+    "Archiv",
+    "British Oceanographic Data Centre"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Großbritannien",
+    "CTD",
+    "Archiv",
+    "British Oceanographic Data Centre"
+  ],
+  "homepage": "https://www.bodc.ac.uk/",
+  "license": "MIT",
+  "geo": {
+    "country": "GB",
+    "region": null,
+    "city": "Liverpool",
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "bodc-erddap datasets",
+      "command": "bodc-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "bodc-erddap suche",
+      "command": "bodc-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "bodc-erddap info",
+      "command": "bodc-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://erddap.bodc.ac.uk/erddap/info/index.json",
+    "homepage": "https://www.bodc.ac.uk/",
+    "portal": "https://erddap.bodc.ac.uk/erddap/index.html",
+    "provider": "British Oceanographic Data Centre (BODC), National Oceanography Centre",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Großbritannien",
+      "CTD",
+      "Archiv",
+      "British Oceanographic Data Centre"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": null,
+      "city": "Liverpool",
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "erddap.bodc.ac.uk/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "British Oceanographic Data Centre (BODC), National Oceanography Centre: öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "erddap.bodc.ac.uk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.bodc.ac.uk/assets/img/bodc-logo-colour-white.png",
+      "fallback": "initials",
+      "file": "assets/logos/erddap.bodc.ac.uk.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "British Oceanographic Data Centre – BODC (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "GB",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site"
+  }
+}

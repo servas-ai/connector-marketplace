@@ -1,0 +1,148 @@
+{
+  "id": "servas-ai.opencli-gtfs-pl-zdmikp-w-bydgoszczy-mdb-1009",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ZDMiKP w Bydgoszczy (GTFS-Fahrplan)",
+  "description": "ZDMiKP w Bydgoszczy: offizieller GTFS-Soll-Fahrplan (Bydgoszcz, Polen) aus dem Mobility-Database-Katalog (mdb-1009), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-pl-zdmikp-w-bydgoszczy-mdb-1009-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-pl-zdmikp-w-bydgoszczy-mdb-1009-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-pl-zdmikp-w-bydgoszczy-mdb-1009-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-pl-zdmikp-w-bydgoszczy-mdb-1009-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://mkuran.pl/gtfs/bydgoszcz.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "mkuran.pl/robots.txt geprüft: Pfad nicht gesperrt",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://mkuran.pl/gtfs/.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "bydgoszcz",
+      "zdmikp w bydgoszczy",
+      "polen",
+      "poland"
+    ],
+    "geo": {
+      "country": "PL",
+      "region": "Kuyavian-Pomeranian Voivodeship",
+      "city": "Bydgoszcz",
+      "bbox": [
+        17.795347646,
+        52.951134547,
+        18.331733,
+        53.323854154
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "mkuran.pl",
+      "chain": [
+        "official",
+        "favicon",
+        "initials"
+      ],
+      "resolved": "https://mkuran.pl/assets/img/favicon.png",
+      "fallback": "initials",
+      "file": "assets/logos/mkuran.pl.png",
+      "brand_domain": "mkuran.pl"
+    },
+    "license": "https://mkuran.pl/gtfs/",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "ZDMiKP w Bydgoszczy (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.zdmikp.bydgoszcz.pl/"
+  }
+}

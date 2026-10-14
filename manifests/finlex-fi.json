@@ -1,0 +1,169 @@
+{
+  "id": "servas-ai.opencli-finlex-fi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Finlex Open Data – Finnische Gesetzessammlung (AKN)",
+  "description": "Finlex Avoin data (Justizministerium FI): neueste Gesetze/Verordnungen der finnischen Gesetzessammlung als Akoma-Ntoso-URIs (Jahr, Nummer, Sprache), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "recht",
+    "gesetze",
+    "finnland",
+    "finlex",
+    "akoma-ntoso",
+    "legal",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://opendata.finlex.fi/",
+    "homepage": "https://opendata.finlex.fi/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.finlex.fi/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Finlex Avoin data: offene API ohne Registrierung, CC BY 4.0, Fair-Use.",
+    "license": "CC-BY-4.0 (Finlex Avoin data)",
+    "country": "FI",
+    "keywords": [
+      "recht",
+      "gesetze",
+      "finnland",
+      "finlex",
+      "akoma-ntoso",
+      "legal",
+      "opendata"
+    ],
+    "geo": {
+      "country": "FI",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Intl-Legal-Finanz-A",
+    "worker": "intl-legal-a-2236",
+    "logo": {
+      "domain": "opendata.finlex.fi",
+      "file": "assets/logos/opendata.finlex.fi.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://www.finlex.fi/icon.svg?icon.03x81pt3r0o0y.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:30:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC-BY-4.0 (Finlex Avoin data)",
+        "url": "https://www.finlex.fi/fi/avoin-data",
+        "evidence": "https://www.finlex.fi/fi/avoin-data",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Finlex Open Data – Finnische Gesetzessammlung (AKN) (opendata.finlex.fi)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "FI",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T23:30:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Finlex Open Data – Finnische Gesetzessammlung (AKN)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "jahr",
+          "uri"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

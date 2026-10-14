@@ -1,0 +1,209 @@
+{
+  "id": "servas-ai.opencli-meteoalarm",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Meteoalarm – Unwetterwarnungen Europa (EUMETNET CAP)",
+  "description": "Meteoalarm (EUMETNET): amtliche Unwetterwarnungen (CAP) von 38 europäischen Wetterdiensten – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Unwetterwarnung",
+    "Wetterwarnung",
+    "Meteoalarm",
+    "EUMETNET",
+    "CAP",
+    "Sturmwarnung",
+    "Gewitterwarnung",
+    "Hitzewarnung",
+    "Europa",
+    "severe weather warning",
+    "weather alert",
+    "storm warning",
+    "heat warning",
+    "Europe",
+    "awareness level"
+  ],
+  "keywords": [
+    "Unwetterwarnung",
+    "Wetterwarnung",
+    "Meteoalarm",
+    "EUMETNET",
+    "CAP",
+    "Sturmwarnung",
+    "Gewitterwarnung",
+    "Hitzewarnung",
+    "Europa",
+    "severe weather warning",
+    "weather alert",
+    "storm warning",
+    "heat warning",
+    "Europe",
+    "awareness level"
+  ],
+  "geo": {
+    "country": "EU",
+    "region": "Europa (38 Länder)",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -31.3,
+      27.6,
+      40.2,
+      71.2
+    ],
+    "centroid": {
+      "lat": 49.4,
+      "lon": 4.45
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "laender",
+      "displayName": "laender",
+      "description": "meteoalarm laender",
+      "command": "meteoalarm-cli laender"
+    },
+    {
+      "name": "warnungen",
+      "displayName": "warnungen",
+      "description": "meteoalarm warnungen",
+      "command": "meteoalarm-cli warnungen"
+    },
+    {
+      "name": "zusammenfassung",
+      "displayName": "zusammenfassung",
+      "description": "meteoalarm zusammenfassung",
+      "command": "meteoalarm-cli zusammenfassung"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "status": "gruen",
+    "realtime": true,
+    "source_url": "https://feeds.meteoalarm.org/api/v1/warnings/feeds-austria",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "feeds.meteoalarm.org/robots.txt: keine Disallow-Regel (nur auskommentiertes Beispiel). Offizielle JSON-Feeds. Drossel ≥2 s.",
+    "tos": "Meteoalarm/EUMETNET: Warnungen der nationalen Wetterdienste, Weiterverwendung mit Quellenangabe (meteoalarm.org, jeweiliger Dienst); keine Veränderung des Warninhalts.",
+    "keywords": [
+      "meteoalarm",
+      "eumetnet",
+      "amtliche",
+      "unwetterwarnungen",
+      "cap",
+      "europäischen",
+      "wetterdiensten",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "wetter",
+      "warndaten",
+      "live",
+      "braucht",
+      "europa",
+      "opendata",
+      "laender",
+      "warnungen",
+      "zusammenfassung",
+      "weather",
+      "forecast",
+      "prognose",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "EU",
+      "scope": "eu"
+    },
+    "logo": {
+      "domain": "meteoalarm.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://meteoalarm.org/assets/favicon.svg",
+      "fallback": "initials",
+      "brand_domain": "meteoalarm.org",
+      "file": "assets/logos/meteoalarm.org.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3835,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "api/v1",
+      "last_scrape": "2026-10-13T09:14:18Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Meteoalarm – Unwetterwarnungen Europa (EUMETNET CAP)",
+        "subtitle": "opendata · Europa (38 Länder)",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "geo"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "keywords",
+          "geo"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:47.654Z",
+      "robots": "allowed"
+    }
+  }
+}

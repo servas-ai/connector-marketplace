@@ -1,0 +1,149 @@
+{
+  "id": "servas-ai.opencli-gtfs-it-azienda-trasporti-automobilistici-pubbli-854",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Azienda Trasporti Automobilistici Pubblici delle Province di (GTFS-Fahrplan)",
+  "description": "Azienda Trasporti Automobilistici Pubblici delle Province di: offizieller GTFS-Soll-Fahrplan (Biella, Piemont, Italien) aus dem Mobility-Database-Katalog (mdb-854), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten (Mobility-Database-Katalog, Gültigkeit aus feed_info/calendar)",
+      "command": "gtfs-it-azienda-trasporti-automobilistici-pubbli-854-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt, --q Filter)",
+      "command": "gtfs-it-azienda-trasporti-automobilistici-pubbli-854-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt, --q Filter)",
+      "command": "gtfs-it-azienda-trasporti-automobilistici-pubbli-854-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id (<id>)",
+      "command": "gtfs-it-azienda-trasporti-automobilistici-pubbli-854-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_timetable",
+    "realtime": false,
+    "source_url": "http://www.magellanoprogetti.it/atap/google_transit.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.magellanoprogetti.it/robots.txt geprüft: Download-URL nicht gesperrt. Feed im Mobility Database Katalog ohne Auth gelistet (files.mobilitydatabase.org selbst ist per robots gesperrt und wird nicht genutzt).",
+    "tos": "Offene Fahrplandaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "biella",
+      "azienda trasporti automobilistici pubbli",
+      "italien",
+      "italy"
+    ],
+    "geo": {
+      "country": "IT",
+      "region": "Piemont",
+      "city": "Biella",
+      "bbox": [
+        7.6672446355116,
+        45.071667,
+        9.0938958624267,
+        45.854201329886
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "magellanoprogetti.it",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=magellanoprogetti.it&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/magellanoprogetti.it.png",
+      "brand_domain": "www.magellanoprogetti.it"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 140,
+      "throughput_rps": 7.143,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": "2026-10-13T09:52:25.025Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Azienda Trasporti Automobilistici Pubblici delle Province di (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

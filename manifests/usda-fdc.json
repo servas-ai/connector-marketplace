@@ -1,0 +1,137 @@
+{
+  "id": "servas-ai.opencli-usda-fdc",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "USDA FoodData Central",
+  "description": "USDA FoodData Central: Lebensmittelsuche (Foundation, SR Legacy, Branded, FNDDS) und alle Nährwerte je fdcId über die offizielle API mit öffentlichem DEMO_KEY.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "naehrwerte",
+    "usa"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "naehrwerte",
+      "displayName": "naehrwerte",
+      "description": "usda-fdc naehrwerte",
+      "command": "usda-fdc-cli naehrwerte"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "usda-fdc suche",
+      "command": "usda-fdc-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://api.nal.usda.gov/fdc/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/s je Host; DEMO_KEY 30 Req/h/IP",
+    "robots_status": "ok",
+    "robots": "api.nal.usda.gov/robots.txt: 404 (keine Regeln). Offizielle API; DEMO_KEY ist der öffentlich dokumentierte api.data.gov-Testschlüssel (30 Req/h/IP, 50/Tag), kein Secret. Fallback ohne Key: offizielle Bulk-Downloads (fdc.nal.usda.gov/download-datasets).",
+    "license": "Public Domain / CC0 1.0",
+    "license_url": "https://fdc.nal.usda.gov/data-documentation",
+    "logo": {
+      "domain": "fdc.nal.usda.gov",
+      "resolved": "https://www.nal.usda.gov/themes/custom/nal_global/images/favicons/favicon-144.png",
+      "file": "assets/logos/api.nal.usda.gov.png",
+      "source": "favicon"
+    },
+    "keywords": [
+      "usda",
+      "fdc",
+      "usda-fdc",
+      "fooddata",
+      "central",
+      "lebensmittelsuche",
+      "foundation",
+      "legacy",
+      "branded",
+      "fndds",
+      "nährwerte",
+      "fdcid",
+      "öffentlichem",
+      "demo",
+      "food",
+      "naehrwerte",
+      "lebensmittel",
+      "nahrung",
+      "ernährung",
+      "groceries"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2037,
+      "throughput_rps": 0.008,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "FDC API v1",
+      "last_scrape": "2026-10-13T09:26:36.401Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "USDA FoodData Central",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "fdc_id",
+          "datentyp"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "country": "US",
+    "homepage": "https://fdc.nal.usda.gov",
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:16.840Z",
+      "robots": "allowed"
+    }
+  }
+}

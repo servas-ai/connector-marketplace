@@ -1,0 +1,171 @@
+{
+  "id": "servas-ai.opencli-btcmarkets",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BTC Markets – Krypto-Börse Australien (AUD)",
+  "description": "BTC Markets API v3 (öffentlich): Marktliste, Ticker je Markt und Sammel-Ticker in AUD. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "maerkte",
+      "displayName": "maerkte",
+      "description": "btcmarkets maerkte",
+      "command": "btcmarkets-cli maerkte"
+    },
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "btcmarkets ticker",
+      "command": "btcmarkets-cli ticker"
+    },
+    {
+      "name": "tickers",
+      "displayName": "tickers",
+      "description": "btcmarkets tickers",
+      "command": "btcmarkets-cli tickers"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.btcmarkets.net/v3/markets",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.btcmarkets.net/robots.txt: 404 (keine Einschränkung). Öffentliche Marktdaten ohne Key. Drossel ≥2 s.",
+    "tos": "BTC Markets API v3: öffentliche Marktdaten-Endpunkte ohne Authentifizierung, Rate-Limits laut Doku.",
+    "logo": {
+      "domain": "api.btcmarkets.net",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ca/21/ae/ca21ae60-3435-3776-f5ae-90e17cce9ec9/Placeholder.mill/512x512bb.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.btcmarkets.net.png",
+      "brand_domain": "btcmarkets.net",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "app": "BTC Markets - Store",
+      "developer": "BTC Markets"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3989,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": "2026-10-13T08:04:07.978Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "BTC Markets – Krypto-Börse Australien (AUD)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "btcmarkets",
+      "btc",
+      "markets",
+      "marktliste",
+      "ticker",
+      "markt",
+      "sammel-ticker",
+      "aud",
+      "krypto-börse",
+      "australien",
+      "finance",
+      "maerkte",
+      "tickers",
+      "crypto",
+      "cryptocurrency",
+      "kryptowährung",
+      "finanzen",
+      "märkte"
+    ],
+    "geo": {
+      "country": "AU",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:49:12Z",
+      "host": "api.btcmarkets.net",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 200,
+      "ip": "172.66.159.101",
+      "server_header": "cloudflare",
+      "tls_issuer": "Google Trust Services",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://btcmarkets.net",
+      "country": "AU"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:44.195Z",
+      "robots": "allowed"
+    }
+  }
+}

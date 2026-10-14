@@ -1,0 +1,171 @@
+{
+  "id": "servas-ai.opencli-elprisetjustnu",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Elpriset just nu – Strompreise Schweden",
+  "description": "Elpriset just nu: Day-Ahead-Strompreise für die schwedischen Preiszonen SE1–SE4 (Viertelstunden, SEK und EUR je kWh, aus ENTSO-E), keyless statisches JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "strompreis",
+    "schweden",
+    "elpris",
+    "energie",
+    "day-ahead",
+    "entsoe",
+    "spotpreis",
+    "se3"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://www.elprisetjustnu.se/",
+    "homepage": "https://www.elprisetjustnu.se/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.elprisetjustnu.se/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Elpriset just nu: offenes, kostenloses API „für jeden, für alles“; Quellenangabe erbeten. Daten von ENTSO-E (ohne MwSt./Abgaben).",
+    "license": "frei nutzbar („för vem som helst, för vad som helst“)",
+    "country": "SE",
+    "keywords": [
+      "strompreis",
+      "schweden",
+      "elpris",
+      "energie",
+      "day-ahead",
+      "entsoe",
+      "spotpreis",
+      "se3"
+    ],
+    "geo": {
+      "country": "SE",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-9",
+    "worker": "open-apis-9-1506",
+    "logo": {
+      "domain": "www.elprisetjustnu.se",
+      "file": "assets/logos/www.elprisetjustnu.se.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://www.elprisetjustnu.se/apple-touch-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T15:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "frei nutzbar („för vem som helst, för vad som helst“)",
+        "url": "https://www.elprisetjustnu.se/elpris-api",
+        "evidence": "https://www.elprisetjustnu.se/elpris-api",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Elpriset just nu – Strompreise Schweden",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "start",
+          "sek_kwh",
+          "eur_kwh"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

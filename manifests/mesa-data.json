@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-mesa-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "City of Mesa AZ Open Data (Socrata)",
+  "description": "City of Mesa AZ Open Data (Mesa, Arizona, USA): Datensatz-Katalog der Socrata-Instanz data.mesaaz.gov – Dataset-Suche und Dataset-Metadaten über die Discovery API. Ohne Login/Key (App-Token optional, nicht genutzt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "mesa-data datasets",
+      "command": "mesa-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "mesa-data dataset",
+      "command": "mesa-data-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.mesaaz.gov/api/catalog/v1",
+    "homepage": "https://data.mesaaz.gov/",
+    "keywords": [
+      "mesa",
+      "mesa-data",
+      "mesaaz",
+      "gov",
+      "socrata",
+      "discovery",
+      "dataset-suche",
+      "dataset-metadaten",
+      "app-token",
+      "optional",
+      "nicht",
+      "genutzt",
+      "city",
+      "open",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.mesaaz.gov/robots.txt: Disallow nur /browse?…-Facetten (HTML) – Discovery-API /api/catalog/v1 und /api/views/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "City of Mesa Open Data Terms; Fair Use.",
+    "logo": {
+      "domain": "data.mesaaz.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.mesaaz.gov/api/assets/72FE4CB3-45D3-4037-A673-8D699343BE33?MESA-AZ_3_PMS.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/data.mesaaz.gov.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "City of Mesa AZ Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon",
+    "infra": {
+      "as_org": "AMAZON-AES - Amazon.com, Inc.",
+      "asn": 14618,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:24:16Z",
+      "host": "data.mesaaz.gov",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "52.206.68.26",
+      "server_header": "nginx",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://mesaaz.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:18.842Z",
+      "robots": "allowed"
+    }
+  }
+}

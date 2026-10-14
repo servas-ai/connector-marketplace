@@ -1,0 +1,179 @@
+{
+  "id": "servas-ai.opencli-ncei-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NOAA National Centers for Environmental Information – NCEI (ERDDAP)",
+  "description": "NOAA NCEI ERDDAP: archivierte Umwelt- und Ozeandaten der National Centers for Environmental Information (u. a. BEDI-Datenrettung, Primärproduktion). Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Archiv",
+    "Klima",
+    "NOAA",
+    "NOAA National Centers for Environmental Information"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Archiv",
+    "Klima",
+    "NOAA",
+    "NOAA National Centers for Environmental Information"
+  ],
+  "homepage": "https://www.ncei.noaa.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": null,
+    "city": null,
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "ncei-erddap datasets",
+      "command": "ncei-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "ncei-erddap suche",
+      "command": "ncei-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "ncei-erddap info",
+      "command": "ncei-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.ncei.noaa.gov/erddap/info/index.json",
+    "homepage": "https://www.ncei.noaa.gov/",
+    "portal": "https://www.ncei.noaa.gov/erddap/index.html",
+    "provider": "NOAA National Centers for Environmental Information (NCEI)",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Archiv",
+      "Klima",
+      "NOAA",
+      "NOAA National Centers for Environmental Information"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.ncei.noaa.gov/robots.txt (HTTP 200): /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "NOAA National Centers for Environmental Information (NCEI): öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "www.ncei.noaa.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:Ncei-round-icon.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.ncei.noaa.gov.png",
+      "source": "wikimedia",
+      "kind": "wikimedia",
+      "license": "Public domain"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "NOAA National Centers for Environmental Information – NCEI (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "wikimedia",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:48.395Z",
+      "robots": "allowed"
+    }
+  }
+}

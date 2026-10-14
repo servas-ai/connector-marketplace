@@ -1,0 +1,158 @@
+{
+  "id": "servas-ai.opencli-nasa-images",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NASA Image and Video Library",
+  "description": "NASA Image and Video Library API (images-api.nasa.gov): Bilder/Videos/Audio der NASA suchen und Asset-Dateien je NASA-ID abrufen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "nasa-images suche",
+      "command": "nasa-images-cli suche"
+    },
+    {
+      "name": "asset",
+      "displayName": "asset",
+      "description": "nasa-images asset",
+      "command": "nasa-images-cli asset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://images-api.nasa.gov/search",
+    "homepage": "https://images.nasa.gov/",
+    "keywords": [
+      "nasa",
+      "images",
+      "nasa-images",
+      "image",
+      "video",
+      "library",
+      "images-api",
+      "gov",
+      "bilder",
+      "videos",
+      "audio",
+      "suchen",
+      "asset-dateien",
+      "nasa-id",
+      "abrufen",
+      "international",
+      "asset"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "images-api.nasa.gov/robots.txt: 404 (keine Einschränkung). Offizielle API ohne Key. Drossel ≥2 s.",
+    "tos": "NASA Media: i. d. R. nicht urheberrechtlich geschützt (NASA Media Usage Guidelines), keine Werbung mit NASA-Logo.",
+    "logo": {
+      "domain": "images-api.nasa.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo@2x.png",
+      "fallback": "initials",
+      "file": "assets/logos/images-api.nasa.gov.png",
+      "brand_domain": "nasa.gov",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3977,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "1.1",
+      "last_scrape": "2026-10-13T07:27:28.607Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "NASA Image and Video Library",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "Amazon CloudFront",
+      "checked_at": "2026-10-13T09:38:34Z",
+      "host": "images-api.nasa.gov",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "3.174.46.100",
+      "server_header": "nginx/1.29.8",
+      "tls_issuer": "Amazon",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://images-api.nasa.gov",
+      "country": "US"
+    },
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:28.523Z",
+      "robots": "allowed"
+    }
+  }
+}

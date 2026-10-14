@@ -1,0 +1,141 @@
+{
+  "id": "servas-ai.opencli-poloniex",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Poloniex – Krypto-Marktdaten",
+  "description": "Poloniex Public API: 24h-Ticker, Märkte, Orderbuch, letzte Trades. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "poloniex ticker",
+      "command": "poloniex-cli ticker"
+    },
+    {
+      "name": "orderbuch",
+      "displayName": "orderbuch",
+      "description": "poloniex orderbuch",
+      "command": "poloniex-cli orderbuch"
+    },
+    {
+      "name": "maerkte",
+      "displayName": "maerkte",
+      "description": "poloniex maerkte",
+      "command": "poloniex-cli maerkte"
+    },
+    {
+      "name": "trades",
+      "displayName": "trades",
+      "description": "poloniex trades",
+      "command": "poloniex-cli trades"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.poloniex.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "refused",
+    "robots": "api.poloniex.com/robots.txt: keine robots-Datei (HTTP 400) – keine Einschränkung. Öffentliche Marktdaten-API. Drossel ≥2 s.",
+    "tos": "Poloniex – öffentliche REST-API (Market Data); Fair Use.",
+    "logo": {
+      "domain": "api.poloniex.com",
+      "resolved": "https://www.poloniex.com/favicon.ico",
+      "file": "assets/logos/api.poloniex.com.png",
+      "source": "favicon.ico"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Poloniex – Krypto-Marktdaten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "license": "proprietär – Poloniex API Terms (öffentliche Marktdaten, Fair Use)",
+    "keywords": [
+      "poloniex",
+      "h-ticker",
+      "märkte",
+      "orderbuch",
+      "letzte",
+      "trades",
+      "krypto-marktdaten",
+      "finance",
+      "ticker",
+      "maerkte",
+      "crypto",
+      "cryptocurrency",
+      "kryptowährung",
+      "finanzen",
+      "markets"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:32.253Z",
+      "robots": "refused"
+    }
+  }
+}

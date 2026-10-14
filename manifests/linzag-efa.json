@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-linzag-efa",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "LINZ AG LINIEN – EFA Fahrplanauskunft (OGD-Schnittstelle)",
+  "description": "LINZ AG LINIEN: offizielle OGD-EFA-Schnittstelle (data.linz.gv.at) – Haltestellensuche, Echtzeit-Abfahrtsmonitor (Bim, Bus, O-Bus) und Störungsmeldungen für Linz. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellensuche (--q NAME)",
+      "command": "linzag-efa-cli haltestellen"
+    },
+    {
+      "name": "abfahrten",
+      "displayName": "abfahrten",
+      "description": "Echtzeit-Abfahrten einer Haltestelle (<stopID>, --limit N)",
+      "command": "linzag-efa-cli abfahrten"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Aktuelle Störungs-/Verkehrsmeldungen (ICS, --limit N)",
+      "command": "linzag-efa-cli meldungen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://www.linzag.at/static/XML_DM_REQUEST",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "linzag.at/robots.txt: kein Disallow für * auf /static/. Schnittstelle offiziell als OGD auf data.linz.gv.at dokumentiert.",
+    "tos": "Open Government Data Linz (CC BY 4.0), Parameter stateless=1 laut Doku.",
+    "keywords": [
+      "linzag",
+      "efa",
+      "linzag-efa",
+      "linz",
+      "linien",
+      "ogd-efa-schnittstelle",
+      "haltestellensuche",
+      "echtzeit-abfahrtsmonitor",
+      "bim",
+      "bus",
+      "o-bus",
+      "störungsmeldungen",
+      "fahrplanauskunft",
+      "ogd-schnittstelle",
+      "verkehr",
+      "haltestellen",
+      "abfahrten",
+      "meldungen",
+      "transport",
+      "traffic",
+      "mobility"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Oberösterreich",
+      "city": "Linz",
+      "lat": 48.3069,
+      "lon": 14.2858,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "linzag.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/56/df/7656dffe-903d-06b6-2331-3dc4030c9a12/Placeholder.mill/512x512bb.png",
+      "fallback": "initials",
+      "file": "assets/logos/linzag.at_linzmobil.png",
+      "brand_domain": "linzag.at",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "app": "LinzMobil",
+      "developer": "LINZ LINIEN GmbH"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4018,
+      "throughput_rps": 0.249,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "EFA-XML (JSON)",
+      "last_scrape": "2026-10-13T09:20:06.916Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "LINZ AG LINIEN – EFA Fahrplanauskunft (OGD-Schnittstelle)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "LINZAG-AS LINZ STROM GAS WAERME GmbH fuer Energiedienstleistungen und Telekommunikation",
+      "asn": 42061,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:11:05Z",
+      "host": "www.linzag.at",
+      "hoster": "LINZAG-AS LINZ STROM GAS WAERME GmbH fuer Energiedienstleistungen und Telekommun",
+      "http_status": 200,
+      "ip": "195.8.213.85",
+      "server_header": "LINZ AG App Sever",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.linzag.at/portal/footer/impressum",
+      "legal_form": "AG",
+      "name": "LINZ AG",
+      "register_id": "FN 198666g",
+      "source": "imprint",
+      "website": "https://www.linzag.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:42.921Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://linzag.at/portal/de/home"
+  }
+}

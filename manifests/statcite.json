@@ -1,0 +1,189 @@
+{
+  "id": "servas-ai.opencli-statcite",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "StatCite – Wirtschaftskennzahlen mit Zitation",
+  "description": "StatCite: offizielle Wirtschaftskennzahlen (World Bank, IMF, ECB, BIS) mit voller Zitation und Verify-API, keyless REST + MCP, llms.txt und OpenAPI 3.1.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "statistik",
+    "wirtschaft",
+    "weltbank",
+    "imf",
+    "gdp",
+    "inflation",
+    "zitation",
+    "open data"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "indicator",
+      "displayName": "indicator",
+      "description": "statcite indicator",
+      "command": "statcite-cli indicator"
+    },
+    {
+      "name": "sources",
+      "displayName": "sources",
+      "description": "statcite sources",
+      "command": "statcite-cli sources"
+    },
+    {
+      "name": "verify",
+      "displayName": "verify",
+      "description": "statcite verify",
+      "command": "statcite-cli verify"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://statcite.com/",
+    "homepage": "https://statcite.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "statcite.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "StatCite: kostenlos, keyless, nur Lesen; Quellenangabe aus citation_text; FRED deaktiviert (AI-Terms).",
+    "license": "CC-BY-4.0 (World Bank WDI) / Terms der Quelle je Indikator",
+    "country": "INT",
+    "keywords": [
+      "statistik",
+      "wirtschaft",
+      "weltbank",
+      "imf",
+      "gdp",
+      "inflation",
+      "zitation",
+      "open data"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-10",
+    "worker": "open-apis-10-1539",
+    "logo": {
+      "domain": "statcite.com",
+      "file": "assets/logos/statcite.com.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://statcite.com/favicon.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "1.14",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://statcite.com/llms.txt",
+      "llms_full": "https://statcite.com/llms-full.txt",
+      "openapi": "https://statcite.com/openapi.json",
+      "mcp_endpoint": "https://statcite.com/mcp",
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T16:00:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC-BY-4.0 (World Bank WDI) / Terms der Quelle je Indikator",
+        "url": "https://statcite.com/terms",
+        "evidence": "https://statcite.com/terms",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: StatCite – Wirtschaftskennzahlen mit Zitation (statcite.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T16:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "StatCite – Wirtschaftskennzahlen mit Zitation",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "key",
+          "label"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

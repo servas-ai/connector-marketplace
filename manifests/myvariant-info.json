@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-myvariant-info",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "MyVariant.info – Genom-Varianten",
+  "description": "MyVariant.info: Annotation genomischer Varianten (dbSNP u. a.), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "genom",
+    "varianten",
+    "dbsnp",
+    "biotech",
+    "myvariant",
+    "bioinformatik"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "meta",
+      "displayName": "meta",
+      "description": "myvariant-info meta",
+      "command": "myvariant-info-cli meta"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://myvariant.info/",
+    "homepage": "https://myvariant.info/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "myvariant.info/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "MyVariant.info: öffentliche BioThings-API, Fair-Use, Quellenangabe.",
+    "license": "terms-of-source (MyVariant / BioThings)",
+    "country": "US",
+    "keywords": [
+      "genom",
+      "varianten",
+      "dbsnp",
+      "biotech",
+      "myvariant",
+      "bioinformatik"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-12",
+    "worker": "open-apis-12-1700",
+    "logo": {
+      "domain": "myvariant.info",
+      "file": "assets/logos/myvariant.info.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://myvariant.info/static/img/MyVariant.info/favicon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T17:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (MyVariant / BioThings)",
+        "url": "https://myvariant.info/",
+        "evidence": "https://myvariant.info/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: MyVariant.info – Genom-Varianten (myvariant.info)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T17:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "MyVariant.info – Genom-Varianten",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

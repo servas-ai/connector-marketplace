@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-hebcal",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Hebcal – Jüdischer Kalender",
+  "description": "Hebcal API: jüdische Feiertage und Datumskonverter, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "kalender",
+    "feiertage",
+    "juedisch",
+    "hebcal",
+    "religion"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "convert",
+      "displayName": "convert",
+      "description": "hebcal convert",
+      "command": "hebcal-cli convert"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.hebcal.com/",
+    "homepage": "https://www.hebcal.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.hebcal.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Hebcal: Attribution erbeten, Fair-Use.",
+    "license": "terms-of-source (Hebcal)",
+    "country": "US",
+    "keywords": [
+      "kalender",
+      "feiertage",
+      "juedisch",
+      "hebcal",
+      "religion"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-12",
+    "worker": "open-apis-12-1700",
+    "logo": {
+      "domain": "www.hebcal.com",
+      "file": "assets/logos/www.hebcal.com.png",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1a/2b/c1/1a2bc12d-a649-885f-5874-4243e3c88bd6/AppIcon-0-0-1x_U007emarketing-0-14-85-220.png/512x512bb.jpg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T17:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Hebcal)",
+        "url": "https://www.hebcal.com/home/about",
+        "evidence": "https://www.hebcal.com/home/about",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Hebcal – Jüdischer Kalender (www.hebcal.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T17:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Hebcal – Jüdischer Kalender",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "date",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

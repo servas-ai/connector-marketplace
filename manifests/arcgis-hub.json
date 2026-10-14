@@ -1,0 +1,149 @@
+{
+  "id": "servas-ai.opencli-arcgis-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ArcGIS Hub (global) – ArcGIS Hub",
+  "description": "ArcGIS Hub (global) (Welt): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "arcgis-hub suche",
+      "command": "arcgis-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "arcgis-hub neu",
+      "command": "arcgis-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "arcgis-hub datensatz",
+      "command": "arcgis-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://hub.arcgis.com/search",
+    "homepage": "https://hub.arcgis.com/",
+    "country": "INT",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "hub.arcgis.com/robots.txt geprüft: /api/search nicht gesperrt. Öffentliche OGC-API-Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "ArcGIS-Hub-Open-Data-Portal; Lizenz je Datensatz (Feld lizenz), Quelle nennen.",
+    "logo": {
+      "domain": "hub.arcgis.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:ArcGIS_Logo_2026.svg",
+      "fallback": "initials",
+      "file": "assets/logos/hub.arcgis.com.png",
+      "brand_domain": "hub.arcgis.com",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3705,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": "2026-10-13T09:01:59.214Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "ArcGIS Hub (global) – ArcGIS Hub",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "arcgis",
+      "hub",
+      "arcgis-hub",
+      "global",
+      "welt",
+      "datensatz-katalog",
+      "arcgis-hub-instanz",
+      "volltextsuche",
+      "zuletzt",
+      "geänderte",
+      "datensätze",
+      "einzel-datensatz",
+      "lizenz",
+      "service-url",
+      "opendata",
+      "neu",
+      "datensatz",
+      "open data",
+      "offene daten",
+      "datasets"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:21.978Z",
+      "robots": "allowed"
+    }
+  }
+}

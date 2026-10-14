@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-openbrewerydb",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open Brewery DB – Brauereien weltweit",
+  "description": "Open Brewery DB API v1: Brauereien suchen (Name, Typ, Adresse, Koordinaten, Website), nach Land/Stadt filtern und Statistik je Land (Anzahl nach Bundesland/Typ). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "openbrewerydb suche",
+      "command": "openbrewerydb-cli suche"
+    },
+    {
+      "name": "land",
+      "displayName": "land",
+      "description": "openbrewerydb land",
+      "command": "openbrewerydb-cli land"
+    },
+    {
+      "name": "statistik",
+      "displayName": "statistik",
+      "description": "openbrewerydb statistik",
+      "command": "openbrewerydb-cli statistik"
+    },
+    {
+      "name": "brauerei",
+      "displayName": "brauerei",
+      "description": "openbrewerydb brauerei",
+      "command": "openbrewerydb-cli brauerei"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.openbrewerydb.org/v1/breweries",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.openbrewerydb.org/robots.txt: Allow / für alle. Freie Open-Data-API. Drossel ≥2 s.",
+    "tos": "Open Brewery DB: freie Daten (CC0/Open Data), ohne Key.",
+    "logo": {
+      "domain": "api.openbrewerydb.org",
+      "brand_domain": "openbrewerydb.org",
+      "file": "assets/logos/api.openbrewerydb.org.png",
+      "source": "header-logo",
+      "resolved": "https://openbrewerydb.org/_app/immutable/assets/obdb-logo-sm.o1JT-K_U.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3957,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:05:19.920Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Open Brewery DB – Brauereien weltweit",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "header-logo",
+    "keywords": [
+      "openbrewerydb",
+      "open",
+      "brewery",
+      "brauereien",
+      "suchen",
+      "name",
+      "typ",
+      "adresse",
+      "koordinaten",
+      "website",
+      "land",
+      "stadt",
+      "filtern",
+      "statistik",
+      "anzahl",
+      "bundesland",
+      "weltweit",
+      "tech",
+      "brauerei",
+      "statistics",
+      "zeitreihen",
+      "time series",
+      "technology",
+      "technik",
+      "Open Brewery DB",
+      "USA"
+    ],
+    "geo": {
+      "country": "DE",
+      "scope": "country",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ]
+    },
+    "homepage": "https://www.openbrewerydb.org",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "blocks:GPTBot,ClaudeBot,anthropic-ai,Google-Extended,CCBot,PerplexityBot,ChatGPT-User,Applebot-Extended,Bytespider; content-signal:search=yes,ai-train=no,use=reference",
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:20.504Z",
+      "robots": "allowed"
+    }
+  }
+}

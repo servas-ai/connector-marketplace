@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-salzburg-stadt-ogd",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Stadt Salzburg – Open Government Data",
+  "description": "Offene Verwaltungsdaten von der Stadt Salzburg (Katalog gga-50101 auf data.gv.at, offizielle piveau-Hub-Such-API): Datensätze suchen, Themen, Formate, Lizenz und Download-Links. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "salzburg-stadt-ogd suche",
+      "command": "salzburg-stadt-ogd-cli suche"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "salzburg-stadt-ogd datensatz",
+      "command": "salzburg-stadt-ogd-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.data.gv.at/api/hub/search/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.data.gv.at/robots.txt: keine Disallow-Regel für /api/. Offizielle Such-API des Bundes-OGD-Portals.",
+    "tos": "data.gv.at: Metadaten CC0, Datensätze meist CC BY 4.0 (je Datensatz angegeben).",
+    "keywords": [
+      "salzburg",
+      "stadt",
+      "ogd",
+      "salzburg-stadt-ogd",
+      "offene",
+      "verwaltungsdaten",
+      "katalog",
+      "gga-50101",
+      "piveau-hub-such-api",
+      "datensätze",
+      "suchen",
+      "themen",
+      "formate",
+      "lizenz",
+      "download-links",
+      "open",
+      "government",
+      "opendata",
+      "datensatz",
+      "open data",
+      "offene daten",
+      "datasets"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Salzburg",
+      "city": "Salzburg",
+      "lat": 47.8095,
+      "lon": 13.055,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "www.data.gv.at",
+      "brand_domain": "gv.at",
+      "file": "assets/logos/data.salzburg.gv.at.png",
+      "source": "header-logo",
+      "resolved": "https://www.salzburg.gv.at/_assets/a5fcb4114d80f72354dd58b06946f105/Images/SVGs/Logos/logo_main.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "official",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Stadt Salzburg – Open Government Data",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "BRZ Bundesrechenzentrum GmbH",
+      "asn": 8692,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:16:47Z",
+      "host": "www.data.gv.at",
+      "hoster": "BRZ Bundesrechenzentrum GmbH",
+      "http_status": 200,
+      "ip": "85.158.227.13",
+      "server_header": "Apache",
+      "tls_issuer": "Hellenic Academic and Research Institutions CA",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://www.data.gv.at",
+      "country": "AT"
+    },
+    "logo_source": "header-logo",
+    "country": "AT",
+    "homepage": "https://data.salzburg.gv.at",
+    "license": "CC-BY-4.0",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:25.983Z",
+      "robots": "allowed"
+    }
+  }
+}

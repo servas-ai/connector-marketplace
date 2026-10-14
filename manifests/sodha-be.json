@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-sodha-be",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SODHA – Belgisches Datenarchiv für Sozial- und Geisteswissenschaften (Dataverse)",
+  "description": "SODHA: föderales belgisches Datenarchiv für Sozialwissenschaften und Digital Humanities (CESSDA) mit Umfragen wie European/World Values Survey und Wahlstudien. Zugriff über die offizielle Dataverse-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Belgien",
+    "Umfragen",
+    "CESSDA",
+    "SODHA – Belgian federal data archive"
+  ],
+  "keywords": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Belgien",
+    "Umfragen",
+    "CESSDA",
+    "SODHA – Belgian federal data archive"
+  ],
+  "homepage": "https://www.sodha.be/",
+  "license": "MIT",
+  "geo": {
+    "country": "BE",
+    "region": null,
+    "city": "Brüssel",
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "sodha-be neu",
+      "command": "sodha-be-cli neu"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "sodha-be suche",
+      "command": "sodha-be-cli suche"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "sodha-be dataset",
+      "command": "sodha-be-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.sodha.be/api/search",
+    "homepage": "https://www.sodha.be/",
+    "portal": "https://www.sodha.be/",
+    "provider": "SODHA – Belgian federal data archive (BELSPO / Königliche Bibliotheken)",
+    "keywords": [
+      "Dataverse",
+      "Forschungsdaten",
+      "research data",
+      "open data",
+      "Repositorium",
+      "DOI",
+      "Belgien",
+      "Umfragen",
+      "CESSDA",
+      "SODHA – Belgian federal data archive"
+    ],
+    "geo": {
+      "country": "BE",
+      "region": null,
+      "city": "Brüssel",
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.sodha.be/robots.txt (HTTP 200): /api/search und /api/datasets/:persistentId nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "SODHA – Belgian federal data archive (BELSPO / Königliche Bibliotheken): öffentliche Dataverse Native/Search API ohne Key/Login (nur veröffentlichte Datensätze); Fair Use.",
+    "logo": {
+      "domain": "www.sodha.be",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.sodha.be/logos/1/SODHA-logo-v1.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.sodha.be.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dataverse-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "SODHA – Belgisches Datenarchiv für Sozial- und Geisteswissenschaften (Dataverse)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "BE",
+    "ampel": "grün",
+    "license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "data_license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "logo_source": "official-site",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T21:20:20.016Z",
+      "robots": "pruefen"
+    }
+  }
+}

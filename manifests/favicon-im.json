@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-favicon-im",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Favicon.im – Site-Icon",
+  "description": "Favicon.im: Favicon/SVG-Icon je Domain (github.com), keyless, llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "favicon",
+    "icon",
+    "logo",
+    "domain",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://favicon.im/",
+    "homepage": "https://favicon.im/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "favicon.im/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Favicon.im: öffentliche Icon-Abrufe ohne Key; nur Lesen.",
+    "license": "terms-of-source (Favicon.im)",
+    "country": "INT",
+    "keywords": [
+      "favicon",
+      "icon",
+      "logo",
+      "domain",
+      "tech"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-25",
+    "worker": "open-apis-25-0043",
+    "logo": {
+      "domain": "favicon.im",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://favicon.im/llms.txt",
+      "llms_full": "https://favicon.im/llms-full.txt",
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "has-llms-txt",
+      "checked": true,
+      "checked_at": "2026-10-14T01:05:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Favicon.im)",
+        "url": "https://favicon.im/",
+        "evidence": "https://favicon.im/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Favicon.im – Site-Icon (favicon.im)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T01:05:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Favicon.im – Site-Icon",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "bytes"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

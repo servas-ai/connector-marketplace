@@ -1,0 +1,197 @@
+{
+  "id": "servas-ai.opencli-oeiras-geodados",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Geodados – Câmara Municipal de Oeiras",
+  "description": "geodados-cmo.hub.arcgis.com – Câmara Municipal de Oeiras: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "hub",
+    "pt",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "oeiras-geodados suche",
+      "command": "oeiras-geodados-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "oeiras-geodados neu",
+      "command": "oeiras-geodados-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "oeiras-geodados datensatz",
+      "command": "oeiras-geodados-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://geodados-cmo.hub.arcgis.com/search",
+    "homepage": "https://geodados-cmo.hub.arcgis.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "geodados-cmo.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Câmara Municipal de Oeiras: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "PT",
+    "keywords": [
+      "opendata",
+      "hub",
+      "katalog",
+      "pt"
+    ],
+    "geo": {
+      "country": "PT",
+      "scope": "city",
+      "region": "Lisboa",
+      "city": "Oeiras"
+    },
+    "operator": {
+      "name": "Câmara Municipal de Oeiras",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "PT",
+      "url": "https://www.oeiras.pt/",
+      "source": "Portal-Header/Impressum, ArcGIS-Org"
+    },
+    "logo": {
+      "domain": "geodados-cmo.hub.arcgis.com",
+      "file": "assets/logos/geodados-cmo.hub.arcgis.com.png",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d8/ac/b9/d8acb917-aca4-c7c2-2fc6-429f2e38265b/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/512x512bb.jpg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "hub-site-logo",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials",
+      "app": "VisitOEIRAS",
+      "developer": "Municipio de Oeiras"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://geodados-cmo.hub.arcgis.com/api/search/definition/?f=json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:10:32.697Z",
+      "robots": "allowed",
+      "access_chain_hints": [
+        "openapi: https://geodados-cmo.hub.arcgis.com/api/search/definition/?f=json",
+        "dcat: https://geodados-cmo.hub.arcgis.com/api/feed/dcat-ap/2.1.1.json",
+        "ogc-api-records: https://geodados-cmo.hub.arcgis.com/api/search/v1/collections"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://geodados-cmo.hub.arcgis.com/",
+        "evidence": "https://geodados-cmo.hub.arcgis.com/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Geodados – Câmara Municipal de Oeiras (geodados-cmo.hub.arcgis.com)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Hosting Esri ArcGIS Online/Hub (Cloud), Server-Region nicht belegt – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T19:45:00Z"
+    },
+    "wave": "opendata-wave-1918",
+    "worker": "opendata-wave-1918",
+    "openui": {
+      "card": {
+        "title": "Geodados – Câmara Municipal de Oeiras",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

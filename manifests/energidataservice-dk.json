@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-energidataservice-dk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Energinet Energi Data Service – Day-Ahead-Preise",
+  "description": "Day-Ahead-Strompreise (Viertelstunde) für DK1/DK2, DE, NO, SE u. a. vom dänischen Netzbetreiber Energinet. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dayahead-dk1",
+      "displayName": "dayahead",
+      "description": "Energinet Energi Data Service – Day-Ahead-Preise: dayahead",
+      "command": "energidataservice-dk-cli dayahead --zone DK1 --format json"
+    },
+    {
+      "name": "zonen-tag",
+      "displayName": "zonen",
+      "description": "Energinet Energi Data Service – Day-Ahead-Preise: zonen",
+      "command": "energidataservice-dk-cli zonen --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "energie",
+    "realtime": false,
+    "source_url": "https://api.energidataservice.dk",
+    "homepage": "https://www.energidataservice.dk/",
+    "keywords": [
+      "energidataservice",
+      "energidataservice-dk",
+      "day-ahead-strompreise",
+      "viertelstunde",
+      "dk1",
+      "dk2",
+      "vom",
+      "dänischen",
+      "netzbetreiber",
+      "energinet",
+      "energi",
+      "service",
+      "day-ahead-preise",
+      "international",
+      "dayahead-dk1",
+      "zonen-tag",
+      "electricity",
+      "power",
+      "energie",
+      "energy",
+      "network quality",
+      "netzqualität",
+      "telecom"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "logo": {
+      "domain": "api.energidataservice.dk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://energidataservice.dk/images/favicon-512.ico",
+      "fallback": "initials",
+      "file": "assets/logos/api.energidataservice.dk.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1149,
+      "throughput_rps": 0.9,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Energi Data Service API (DayAheadPrices)",
+      "last_scrape": "2026-10-13T04:07:38Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Energinet Energi Data Service – Day-Ahead-Preise",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "zone",
+          "zeit_utc",
+          "eur_mwh",
+          "dkk_mwh"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DK",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "geo": {
+      "country": "DK",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn": 8075,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:37:05Z",
+      "host": "api.energidataservice.dk",
+      "hoster": "Microsoft Corporation",
+      "http_status": 404,
+      "ip": "135.236.141.38",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://energidataservice.dk",
+      "country": "DK"
+    },
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:49.159Z",
+      "robots": "allowed"
+    }
+  }
+}

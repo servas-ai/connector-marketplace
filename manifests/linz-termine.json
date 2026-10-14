@@ -1,0 +1,215 @@
+{
+  "id": "servas-ai.opencli-linz-termine",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Linztermine – Veranstaltungen in Linz (OGD)",
+  "description": "Linztermine (OGD Stadt Linz): Veranstaltungen in Linz mit Terminen, Ort, Veranstalter, Kategorien, gratis/kinderfreundlich – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Linz",
+    "Veranstaltungen",
+    "Termine",
+    "Events",
+    "Konzerte",
+    "Märkte",
+    "Ausstellungen",
+    "Kinder",
+    "gratis",
+    "Oberösterreich",
+    "events",
+    "what’s on",
+    "city events",
+    "Upper Austria",
+    "Linztermine"
+  ],
+  "keywords": [
+    "Linz",
+    "Veranstaltungen",
+    "Termine",
+    "Events",
+    "Konzerte",
+    "Märkte",
+    "Ausstellungen",
+    "Kinder",
+    "gratis",
+    "Oberösterreich",
+    "events",
+    "what’s on",
+    "city events",
+    "Upper Austria",
+    "Linztermine"
+  ],
+  "geo": {
+    "country": "AT",
+    "region": "Oberösterreich",
+    "city": "Linz",
+    "coverage": "local",
+    "bbox": [
+      14.22,
+      48.23,
+      14.38,
+      48.38
+    ],
+    "centroid": {
+      "lat": 48.3069,
+      "lon": 14.2858
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kommend",
+      "displayName": "kommend",
+      "description": "linz-termine kommend",
+      "command": "linz-termine-cli kommend"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "linz-termine suche",
+      "command": "linz-termine-cli suche"
+    },
+    {
+      "name": "kategorien",
+      "displayName": "kategorien",
+      "description": "linz-termine kategorien",
+      "command": "linz-termine-cli kategorien"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "status": "gruen",
+    "realtime": false,
+    "source_url": "https://www.linztermine.at/schnittstelle/downloads/events_xml.php",
+    "license": "CC-BY-4.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.linztermine.at/robots.txt: sperrt nur einzelne SEO-Bots (Ahrefs, Semrush …), nicht User-agent *. Offizielle OGD-Schnittstelle (events_xml.php), 6-h-Cache, Drossel ≥2 s.",
+    "tos": "OGD Stadt Linz, CC BY 4.0 (data.linz.gv.at), Quellenangabe „Stadt Linz – data.linz.gv.at“.",
+    "keywords": [
+      "linz",
+      "termine",
+      "linz-termine",
+      "linztermine",
+      "ogd",
+      "stadt",
+      "veranstaltungen",
+      "terminen",
+      "ort",
+      "veranstalter",
+      "kategorien",
+      "gratis",
+      "kinderfreundlich",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "kommunale",
+      "live",
+      "braucht",
+      "opendata",
+      "kommend",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Oberösterreich",
+      "city": "Linz",
+      "lat": 48.3069,
+      "lon": 14.2858,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "linztermine.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.linztermine.at/assets/favicons/2022/favicon-180x180.png",
+      "fallback": "initials",
+      "brand_domain": "linztermine.at",
+      "file": "assets/logos/linztermine.at.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 169,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "events_xml",
+      "last_scrape": "2026-10-13T09:14:18Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Linztermine – Veranstaltungen in Linz (OGD)",
+        "subtitle": "opendata · Linz",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "geo"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "keywords",
+          "geo"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:47.730Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.linztermine.at/index"
+  }
+}

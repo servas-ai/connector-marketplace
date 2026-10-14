@@ -1,0 +1,203 @@
+{
+  "id": "servas-ai.opencli-kaunas-atvirasgis-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Kaunas Atviras GIS (Open Data)",
+  "description": "atvirasgis.kaunas.lt – Kauno miesto savivaldybė: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "hub",
+    "lt",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "kaunas-atvirasgis-hub suche",
+      "command": "kaunas-atvirasgis-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "kaunas-atvirasgis-hub neu",
+      "command": "kaunas-atvirasgis-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "kaunas-atvirasgis-hub datensatz",
+      "command": "kaunas-atvirasgis-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://atvirasgis.kaunas.lt/search",
+    "homepage": "https://atvirasgis.kaunas.lt/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "atvirasgis.kaunas.lt/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Kauno miesto savivaldybė: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "LT",
+    "keywords": [
+      "opendata",
+      "hub",
+      "katalog",
+      "lt"
+    ],
+    "geo": {
+      "country": "LT",
+      "scope": "city",
+      "region": "Kauno apskritis",
+      "city": "Kaunas"
+    },
+    "operator": {
+      "name": "Kauno miesto savivaldybė",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "LT",
+      "url": "https://www.kaunas.lt/",
+      "source": "Portal-Header/Impressum, ArcGIS-Org"
+    },
+    "logo": {
+      "domain": "atvirasgis.kaunas.lt",
+      "file": "assets/logos/atvirasgis.kaunas.lt.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/4/45/Coat_of_Arms_of_Kaunas.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "hub-site-logo",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials",
+      "note": "Infobox en.wikipedia.org/wiki/Kaunas",
+      "page": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Kaunas.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://atvirasgis.kaunas.lt/api/search/definition/?f=json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:45:00Z",
+      "robots": "allowed",
+      "api_kind": "OGC API Records (ArcGIS Hub Search v1)",
+      "openapi_version": "3.0.0",
+      "openapi_paths": 17,
+      "dcat": "https://atvirasgis.kaunas.lt/api/feed/dcat-ap/2.1.1.json",
+      "dcat_profile": "DCAT-AP 2.1.1 (JSON-LD)",
+      "ogc_api": "https://atvirasgis.kaunas.lt/api/search/v1",
+      "access_chain_hints": [
+        "openapi: https://atvirasgis.kaunas.lt/api/search/definition/?f=json",
+        "dcat: https://atvirasgis.kaunas.lt/api/feed/dcat-ap/2.1.1.json",
+        "ogc-api-records: https://atvirasgis.kaunas.lt/api/search/v1/collections"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://atvirasgis.kaunas.lt/",
+        "evidence": "https://atvirasgis.kaunas.lt/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Kaunas Atviras GIS (Open Data) (atvirasgis.kaunas.lt)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Hosting Esri ArcGIS Online/Hub (Cloud), Server-Region nicht belegt – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T21:45:00Z"
+    },
+    "wave": "opendata-wave-2119",
+    "worker": "opendata-wave-2119",
+    "openui": {
+      "card": {
+        "title": "Kaunas Atviras GIS (Open Data)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

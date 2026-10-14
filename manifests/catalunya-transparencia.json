@@ -1,0 +1,167 @@
+{
+  "id": "servas-ai.opencli-catalunya-transparencia",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Dades obertes de Catalunya – Generalitat de Catalunya (Socrata)",
+  "description": "Dades obertes de Catalunya: offener Datenkatalog der Generalitat de Catalunya mit Luftqualität, Verkehr, Gesundheit, Bildung und Verwaltung in Katalonien. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Katalonien",
+    "Spanien",
+    "Generalitat",
+    "Generalitat de Catalunya"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Katalonien",
+    "Spanien",
+    "Generalitat",
+    "Generalitat de Catalunya"
+  ],
+  "homepage": "https://governobert.gencat.cat/",
+  "license": "MIT",
+  "geo": {
+    "country": "ES",
+    "region": "Katalonien",
+    "city": null,
+    "scope": "region"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "catalunya-transparencia datasets",
+      "command": "catalunya-transparencia-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "catalunya-transparencia dataset",
+      "command": "catalunya-transparencia-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "catalunya-transparencia rows",
+      "command": "catalunya-transparencia-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://analisi.transparenciacatalunya.cat/api/catalog/v1",
+    "homepage": "https://governobert.gencat.cat/",
+    "portal": "https://analisi.transparenciacatalunya.cat/",
+    "provider": "Generalitat de Catalunya",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Katalonien",
+      "Spanien",
+      "Generalitat",
+      "Generalitat de Catalunya"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Katalonien",
+      "city": null,
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "analisi.transparenciacatalunya.cat/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Generalitat de Catalunya Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "analisi.transparenciacatalunya.cat",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://analisi.transparenciacatalunya.cat/api/assets/F28998AB-B856-4C08-8888-E8BA432E1CDF?logo_dades_obertes_transparent.png",
+      "fallback": "initials",
+      "file": "assets/logos/analisi.transparenciacatalunya.cat.png",
+      "source": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Dades obertes de Catalunya – Generalitat de Catalunya (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "ES",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von Generalitat de Catalunya; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von Generalitat de Catalunya; je Dataset im Feld license",
+    "logo_source": "header-logo"
+  }
+}

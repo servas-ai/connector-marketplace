@@ -1,0 +1,144 @@
+{
+  "id": "servas-ai.opencli-dane-gov-pl",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "dane.gov.pl – Polnisches Open-Data-Portal",
+  "description": "dane.gov.pl (Polen, Digitalministerium) API 1.4: Datensätze suchen, Dataset-Details mit Ressourcen, Institutionen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "dane-gov-pl datasets",
+      "command": "dane-gov-pl-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "dane-gov-pl dataset",
+      "command": "dane-gov-pl-cli dataset"
+    },
+    {
+      "name": "institutionen",
+      "displayName": "institutionen",
+      "description": "dane-gov-pl institutionen",
+      "command": "dane-gov-pl-cli institutionen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.dane.gov.pl/1.4/datasets",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.dane.gov.pl/robots.txt: 404 (keine Einschränkung). Offizielle JSON:API. Drossel ≥2 s.",
+    "tos": "dane.gov.pl – Open Data, Wiederverwendung gemäss Gesetz über offene Daten (PL).",
+    "logo": {
+      "domain": "api.dane.gov.pl",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://dane.gov.pl/assets/icons/icon-192x192-apple.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.dane.gov.pl.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "1.4",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "dane.gov.pl – Polnisches Open-Data-Portal",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "dane",
+      "dane-gov-pl",
+      "gov",
+      "polen",
+      "digitalministerium",
+      "datensätze",
+      "suchen",
+      "dataset-details",
+      "ressourcen",
+      "institutionen",
+      "polnisches",
+      "open-data-portal",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten"
+    ],
+    "geo": {
+      "country": "PL",
+      "scope": "country"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:46.271Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://dane.gov.pl/"
+  }
+}

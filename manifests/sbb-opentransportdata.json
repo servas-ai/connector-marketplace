@@ -1,0 +1,144 @@
+{
+  "id": "servas-ai.opencli-sbb-opentransportdata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "opentransportdata.swiss – OJP/Formation (opt-in)",
+  "description": "Schweizer Open-Data-Plattform Mobilität (SBB/SKI): APIs nur mit eigenem Token.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "abfrage",
+      "displayName": "abfrage",
+      "description": "Generische Abfrage eines API-Pfads (--path, Standard /)",
+      "command": "sbb-opentransportdata-cli abfrage"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://api.opentransportdata.swiss",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": true,
+    "opt_in": {
+      "env": "OTD_API_KEY",
+      "required": true,
+      "never_in_repo": true
+    },
+    "status": "pruefen",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "none",
+    "robots": "opentransportdata.swiss: offizielle API, Zugriff nur mit eigenem Key.",
+    "tos": "opentransportdata.swiss Nutzungsbedingungen (Token-Pflicht).",
+    "keywords": [
+      "sbb",
+      "opentransportdata",
+      "sbb-opentransportdata",
+      "schweizer",
+      "open-data-plattform",
+      "mobilität",
+      "ski",
+      "apis",
+      "eigenem",
+      "token",
+      "swiss",
+      "ojp",
+      "formation",
+      "opt-in",
+      "verkehr",
+      "abfrage",
+      "mobile",
+      "handytarife",
+      "mobile tariffs",
+      "telecom",
+      "transport",
+      "traffic",
+      "mobility"
+    ],
+    "geo": {
+      "country": "CH",
+      "scope": "country",
+      "bbox": [
+        5.96,
+        45.82,
+        10.49,
+        47.81
+      ]
+    },
+    "logo": {
+      "domain": "opentransportdata.swiss",
+      "resolved": "https://opentransportdata.swiss/wp-content/uploads/2025/03/241210_LOGO_opentransportdata-swiss_blau-grau_alignedjoined_Official_FONT_1000x300_transparent_ohne-Schatten-1.png",
+      "file": "assets/logos/opentransportdata.swiss.png",
+      "brand_domain": "opentransportdata.swiss",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": true,
+      "api_version": "opt-in",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "opentransportdata.swiss – OJP/Formation (opt-in)",
+        "subtitle": "verkehr · opt-in",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "opt_in"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "CH",
+    "homepage": "https://opentransportdata.swiss",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:44.325Z",
+      "robots": "allowed"
+    }
+  }
+}

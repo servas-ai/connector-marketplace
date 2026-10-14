@@ -1,0 +1,133 @@
+{
+  "id": "servas-ai.opencli-kartverket-wmts",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Kartverket Topografisk WMTS (Norwegen)",
+  "description": "Kartverket (Norwegen): offene WMTS-Kartenlayer (Topo, Graustufen, Seekarte). Nur GetCapabilities, ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "layer",
+      "displayName": "layer",
+      "description": "Alle Layer aus GetCapabilities",
+      "command": "kartverket-wmts-cli layer"
+    },
+    {
+      "name": "detail",
+      "displayName": "detail",
+      "description": "Layer per Identifier",
+      "command": "kartverket-wmts-cli detail"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "geo",
+    "realtime": false,
+    "source_url": "https://cache.kartverket.no/v1/wmts/1.0.0/WMTSCapabilities.xml",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "cache.kartverket.no/robots.txt geprüft: GetCapabilities nicht gesperrt. Nur Metadaten, keine Kachel-Massendownloads.",
+    "tos": "Offener Geodienst (OGC), nur Metadaten/GetCapabilities.",
+    "keywords": [
+      "kartverket",
+      "wmts",
+      "kartverket-wmts",
+      "norwegen",
+      "offene",
+      "wmts-kartenlayer",
+      "topo",
+      "graustufen",
+      "seekarte",
+      "getcapabilities",
+      "topografisk",
+      "geo",
+      "layer",
+      "map",
+      "maps",
+      "geodaten",
+      "geodata"
+    ],
+    "geo": {
+      "country": "NO",
+      "scope": "country"
+    },
+    "logo": {
+      "domain": "cache.kartverket.no",
+      "resolved": "https://kartverket.no/public/images/logo/kartverket-logo-150px.svg",
+      "file": "assets/logos/cache.kartverket.no.png",
+      "brand_domain": "kartverket.no",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3401,
+      "throughput_rps": 0.294,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "OGC",
+      "last_scrape": "2026-10-13T09:09:52.969Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Kartverket Topografisk WMTS (Norwegen)",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "NO",
+    "homepage": "https://www.kartverket.no",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:34.788Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "servas-ai.opencli-fma",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "FMA Unternehmensdatenbank (AT)",
+  "description": "Öffentliche Unternehmensdatenbank der österreichischen Finanzmarktaufsicht (FMA) durchsuchen. Ohne Login.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "register-at",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "fma suche",
+      "command": "opencli-fma-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "adapters",
+    "country": "AT",
+    "ampel": "grün",
+    "realtime": false,
+    "source_url": "https://www.fma.gv.at/unternehmensdatenbank-suche/",
+    "access_chain": [
+      "html"
+    ],
+    "access_used": "html",
+    "login": false,
+    "rate_limit": "1 Request / 1,5 s pro Host",
+    "robots_status": "ok",
+    "robots": "robots.txt sperrt nur print.php/csvexport.php; Suche erlaubt. Gedrosselt 1,5 s.",
+    "logo": {
+      "domain": "www.fma.gv.at",
+      "chain": [
+        "direct",
+        "official-site"
+      ],
+      "resolved": "assets/logos/www.fma.gv.at.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.fma.gv.at.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2000,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "HTML-Formular",
+      "last_scrape": "2026-10-13T09:19:50.978Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "FMA Unternehmensdatenbank",
+        "subtitle": "register-at",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "kategorie"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "homepage": "https://www.fma.gv.at/",
+    "keywords": [
+      "fma",
+      "adapters",
+      "at",
+      "opencli",
+      "connector",
+      "für",
+      "die",
+      "unternehmensdatenbank",
+      "beaufsichtigte",
+      "unternehmen"
+    ],
+    "llms": {
+      "llms_txt": "https://www.fma.gv.at/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:36.527Z",
+      "robots": "allowed",
+      "access_chain_hints": [
+        {
+          "title": "CSDR",
+          "url": "https://www.fma.gv.at/kapitalmaerkte/csdr/"
+        },
+        {
+          "title": "Wertpapierprospekt",
+          "url": "https://www.fma.gv.at/glossar/wertpapierprospekt/"
+        }
+      ]
+    }
+  }
+}

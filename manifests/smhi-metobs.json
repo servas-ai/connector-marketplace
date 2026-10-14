@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-smhi-metobs",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SMHI – Meteorologische Beobachtungen Schweden",
+  "description": "SMHI Open Data Meteorological Observations: Parameterliste (Temperatur, Wind, Niederschlag …), Stationen je Parameter und aktuelle Messwerte (letzte Stunde/letzter Tag) je Station. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "parameter",
+      "displayName": "parameter",
+      "description": "smhi-metobs parameter",
+      "command": "smhi-metobs-cli parameter"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "smhi-metobs stationen",
+      "command": "smhi-metobs-cli stationen"
+    },
+    {
+      "name": "messwerte",
+      "displayName": "messwerte",
+      "description": "smhi-metobs messwerte",
+      "command": "smhi-metobs-cli messwerte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://opendata-download-metobs.smhi.se/api/version/1.0.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata-download-metobs.smhi.se/robots.txt: 404 (keine Einschränkung). Offizielle Open-Data-API des SMHI. Drossel ≥2 s.",
+    "tos": "SMHI Open Data: Lizenz CC BY 4.0, Quellenangabe „SMHI“.",
+    "logo": {
+      "domain": "opendata-download-metobs.smhi.se",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.smhi.se/favicon.svg",
+      "fallback": "initials",
+      "file": "assets/logos/opendata-download-metobs.smhi.se.png",
+      "brand_domain": "smhi.se",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3896,
+      "throughput_rps": 0.257,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "1.0",
+      "last_scrape": "2026-10-13T08:04:40.670Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "SMHI – Meteorologische Beobachtungen Schweden",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "SE",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "smhi",
+      "metobs",
+      "smhi-metobs",
+      "open",
+      "meteorological",
+      "observations",
+      "parameterliste",
+      "temperatur",
+      "wind",
+      "niederschlag",
+      "stationen",
+      "parameter",
+      "messwerte",
+      "letzte",
+      "stunde",
+      "letzter",
+      "tag",
+      "station",
+      "meteorologische",
+      "beobachtungen",
+      "schweden",
+      "opendata",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "SE",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "SMHI-AS Sveriges Meteorologiska och Hydrologiska Institut",
+      "asn": 42307,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:33:38Z",
+      "host": "opendata-download-metobs.smhi.se",
+      "hoster": "SMHI-AS Sveriges Meteorologiska och Hydrologiska Institut",
+      "http_status": 404,
+      "ip": "91.192.30.40",
+      "server_header": "Varnish",
+      "tls_issuer": "Hellenic Academic and Research Institutions CA",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://opendata-download-metobs.smhi.se",
+      "country": "SE"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:19.893Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.smhi.se/"
+  }
+}

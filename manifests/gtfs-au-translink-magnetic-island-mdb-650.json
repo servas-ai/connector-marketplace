@@ -1,0 +1,148 @@
+{
+  "id": "servas-ai.opencli-gtfs-au-translink-magnetic-island-mdb-650",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Translink Magnetic Island (GTFS-Fahrplan)",
+  "description": "Translink Magnetic Island: offizieller GTFS-Soll-Fahrplan (Townsville City, Australien) aus dem Mobility-Database-Katalog (mdb-650), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-au-translink-magnetic-island-mdb-650-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-au-translink-magnetic-island-mdb-650-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-au-translink-magnetic-island-mdb-650-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-au-translink-magnetic-island-mdb-650-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://gtfsrt.api.translink.com.au/GTFS/MAG_GTFS.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gtfsrt.api.translink.com.au/robots.txt 404 → allow-all (RFC 9309)",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://www.data.qld.gov.au/dataset/general-transit-feed-specification-gtfs-qconnect/resource/81030a70-b1e1-4cb1-b7ae-67051d1368e5.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "townsville city",
+      "translink magnetic islan",
+      "australien",
+      "australia"
+    ],
+    "geo": {
+      "country": "AU",
+      "region": "Queensland",
+      "city": "Townsville City",
+      "bbox": [
+        146.837611,
+        -19.180021,
+        146.868939,
+        -19.117024
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "gtfsrt.api.translink.com.au",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e0/56/b2/e056b231-68d7-68c1-e1af-a74e4658f11f/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/gtfsrt.api.translink.com.au.png",
+      "brand_domain": "translink.com.au"
+    },
+    "license": "https://www.data.qld.gov.au/dataset/general-transit-feed-specification-gtfs-qconnect/resource/81030a70-b1e1-4cb1-b7ae-67051d1368e5",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Translink Magnetic Island (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://translink.com.au/"
+  }
+}

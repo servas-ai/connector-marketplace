@@ -1,0 +1,189 @@
+{
+  "id": "servas-ai.opencli-dailymed",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DailyMed Fachinformationen (NLM)",
+  "description": "US-Arzneimittel-Fachinformationen (SPL): Suche nach Produkt, NDC-Packungen und pharmakologische Klassen über die offiziellen DailyMed Web Services.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "health"
+  ],
+  "tags": [
+    "gesundheit",
+    "arzneimittel",
+    "global",
+    "spl"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "klassen",
+      "displayName": "klassen",
+      "description": "dailymed klassen",
+      "command": "dailymed-cli klassen"
+    },
+    {
+      "name": "packungen",
+      "displayName": "packungen",
+      "description": "dailymed packungen",
+      "command": "dailymed-cli packungen"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "dailymed suche",
+      "command": "dailymed-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "health",
+    "realtime": false,
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1,1 s",
+    "robots_status": "pruefen",
+    "robots": "dailymed.nlm.nih.gov/robots.txt: HTML/Captcha statt robots.txt → fail-closed (#475): Datenabruf über kanonisches lib/robots.js gesperrt, Retry später (Audit quality-w-2215). Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "dailymed.nlm.nih.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://dailymed.nlm.nih.gov/public/dailymed-cf/images/favicons/favicon-196x196.72e09c75d674.png",
+      "fallback": "initials",
+      "file": "assets/logos/dailymed.nlm.nih.gov.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 900,
+      "throughput_rps": 1.111,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "DailyMed Web Services v2",
+      "last_scrape": "2026-10-13T04:27:18.798Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "DailyMed Fachinformationen (NLM)",
+        "subtitle": "health",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "title",
+          "setid",
+          "veroeffentlicht"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "dailymed",
+      "us-arzneimittel-fachinformationen",
+      "spl",
+      "produkt",
+      "ndc-packungen",
+      "pharmakologische",
+      "klassen",
+      "offiziellen",
+      "web",
+      "services",
+      "ausgabe",
+      "servas",
+      "record",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "diese",
+      "gesundheitsdaten",
+      "live",
+      "braucht",
+      "fachinformationen",
+      "nlm",
+      "international",
+      "health",
+      "packungen",
+      "medizin",
+      "medicine",
+      "gesundheit"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AMAZON-AES - Amazon.com, Inc.",
+      "asn": 14618,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:36:24Z",
+      "host": "dailymed.nlm.nih.gov",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "54.152.204.35",
+      "server_header": "nginx + Phusion Passenger(R)",
+      "tls_issuer": "Amazon",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://dailymed.nlm.nih.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:27.648Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://dailymed.nlm.nih.gov/dailymed/"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "id": "servas-ai.opencli-oireachtas",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Houses of the Oireachtas – Open Data API (Irland)",
+  "description": "Houses of the Oireachtas (irisches Parlament): Gesetzesvorhaben (Bills), Abgeordnete (Dáil/Seanad) und Plenardebatten über die offizielle Open-Data-API. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "Oireachtas",
+    "Dáil",
+    "Seanad",
+    "Parlament",
+    "Irland",
+    "Gesetze",
+    "Bills",
+    "Abgeordnete",
+    "Debatten",
+    "parliament",
+    "Ireland",
+    "legislation"
+  ],
+  "keywords": [
+    "Oireachtas",
+    "Dáil",
+    "Seanad",
+    "Parlament",
+    "Irland",
+    "Gesetze",
+    "Bills",
+    "Abgeordnete",
+    "Debatten",
+    "parliament",
+    "Ireland",
+    "legislation"
+  ],
+  "homepage": "https://www.oireachtas.ie/en/open-data/",
+  "license": "MIT",
+  "geo": {
+    "country": "IE",
+    "region": "Irland",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      -10.48,
+      51.42,
+      -5.99,
+      55.39
+    ],
+    "centroid": {
+      "lat": 53.41,
+      "lon": -8.24
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "gesetze",
+      "displayName": "gesetze",
+      "description": "oireachtas gesetze",
+      "command": "oireachtas-cli gesetze"
+    },
+    {
+      "name": "abgeordnete",
+      "displayName": "abgeordnete",
+      "description": "oireachtas abgeordnete",
+      "command": "oireachtas-cli abgeordnete"
+    },
+    {
+      "name": "debatten",
+      "displayName": "debatten",
+      "description": "oireachtas debatten",
+      "command": "oireachtas-cli debatten"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "politik",
+    "realtime": false,
+    "source_url": "https://api.oireachtas.ie/v1/legislation",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.oireachtas.ie/robots.txt: kein Disallow für /v1/ (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Oireachtas (Open Data) PSI Licence – entspricht CC BY 4.0, Quellenangabe Houses of the Oireachtas.",
+    "provider": "Houses of the Oireachtas Service",
+    "homepage": "https://www.oireachtas.ie/en/open-data/",
+    "data_license": "Oireachtas (Open Data) PSI Licence (CC BY 4.0)",
+    "keywords": [
+      "Oireachtas",
+      "Dáil",
+      "Seanad",
+      "Parlament",
+      "Irland",
+      "Gesetze",
+      "Bills",
+      "Abgeordnete",
+      "Debatten",
+      "parliament",
+      "Ireland",
+      "legislation"
+    ],
+    "geo": {
+      "country": "IE",
+      "region": "Irland",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        -10.48,
+        51.42,
+        -5.99,
+        55.39
+      ],
+      "centroid": {
+        "lat": 53.41,
+        "lon": -8.24
+      }
+    },
+    "logo": {
+      "domain": "api.oireachtas.ie",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/40/75/d1/4075d173-bb40-01a9-69a4-f562b7d0ff8f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "brand_domain": "oireachtas.ie",
+      "file": "assets/logos/api.oireachtas.ie.png",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "app": "Houses of the Oireachtas",
+      "developer": "Houses of the Oireachtas Service"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Houses of the Oireachtas – Open Data API (Irland)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "IE",
+    "operator": {
+      "name": "Houses of the Oireachtas Service",
+      "country": "IE",
+      "source": "x-servas.operator (vorher String; quality-v-2146 als Objekt normalisiert)"
+    },
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:19.823Z",
+      "robots": "allowed"
+    }
+  }
+}

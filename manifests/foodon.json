@@ -1,0 +1,159 @@
+{
+  "id": "servas-ai.opencli-foodon",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "FoodOn Lebensmittel-Ontologie (EBI OLS4)",
+  "description": "FoodOn, die offene Lebensmittel-Ontologie: Begriffssuche, Definitionen, Synonyme und Oberbegriffe über die offizielle EMBL-EBI-OLS4-API mit 10 s Crawl-Delay.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "ontologie",
+    "semantik"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "begriff",
+      "displayName": "begriff",
+      "description": "foodon begriff",
+      "command": "foodon-cli begriff"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "foodon suche",
+      "command": "foodon-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://www.ebi.ac.uk/ols4/api",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "html"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/10 s prozessübergreifend (Lockfile /tmp, Crawl-Delay 10)",
+    "robots_status": "ok",
+    "robots": "www.ebi.ac.uk/robots.txt: User-agent * Crawl-Delay 10, /ols4 nicht gesperrt → Connector hält 10 s Abstand prozessübergreifend (Lockfile /tmp).",
+    "license": "CC BY 4.0 – FoodOn Consortium",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "logo": {
+      "domain": "foodon.org",
+      "file": "assets/logos/www.foodon.org.png",
+      "source": "apple-touch-icon",
+      "resolved": "https://foodon.org/wp-content/uploads/2018/12/cropped-wheat-180x180.png"
+    },
+    "keywords": [
+      "foodon",
+      "offene",
+      "lebensmittel-ontologie",
+      "begriffssuche",
+      "definitionen",
+      "synonyme",
+      "oberbegriffe",
+      "embl-ebi-ols4-api",
+      "crawl-delay",
+      "ebi",
+      "ols4",
+      "food",
+      "begriff",
+      "lebensmittel",
+      "nahrung",
+      "ernährung",
+      "groceries"
+    ],
+    "geo": {
+      "country": "GB",
+      "scope": "country"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 12278,
+      "throughput_rps": 0.1,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "OLS4 REST API",
+      "last_scrape": "2026-10-13T09:36:28.920Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "FoodOn Lebensmittel-Ontologie (EBI OLS4)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "obo_id",
+          "iri"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "JANET Jisc Services Limited",
+      "asn": 786,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:35:50Z",
+      "host": "www.ebi.ac.uk",
+      "hoster": "JANET Jisc Services Limited",
+      "http_status": 200,
+      "ip": "193.62.193.80",
+      "server_header": "Apache",
+      "tls_issuer": "Sectigo Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://www.ebi.ac.uk",
+      "country": "GB"
+    },
+    "logo_source": "apple-touch-icon",
+    "country": "INT",
+    "homepage": "https://foodon.org",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:31.906Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "id": "servas-ai.opencli-stat-gov-lv",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Official Statistics Latvia – PxWeb API",
+  "description": "data.stat.gov.lv PxWeb: Statistikkatalog und Tabellen-Metadaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "stat-gov-lv katalog",
+      "command": "stat-gov-lv-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "stat-gov-lv info",
+      "command": "stat-gov-lv-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.stat.gov.lv/api/v1/en/OSP_PUB",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.stat.gov.lv/robots.txt: 404 (keine Sperre) – öffentliche PxWeb API. Drossel ≥2 s.",
+    "tos": "Official Statistics Portal Latvia PxWeb API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "data.stat.gov.lv",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.stat.gov.lv/Resources/Images/apple-touch-icon.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.stat.gov.lv.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Official Statistics Latvia – PxWeb API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "LV",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "stat",
+      "stat-gov-lv",
+      "gov",
+      "pxweb",
+      "statistikkatalog",
+      "tabellen-metadaten",
+      "statistics",
+      "latvia",
+      "international",
+      "opendata",
+      "katalog",
+      "info",
+      "zeitreihen",
+      "time series",
+      "statistik",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "LV",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "LATNET-AS SIA \"BITE Latvija\"",
+      "asn": 2588,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:41:54Z",
+      "host": "data.stat.gov.lv",
+      "hoster": "LATNET-AS SIA \"BITE Latvija\"",
+      "http_status": 200,
+      "ip": "159.148.117.60",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://stat.gov.lv",
+      "country": "LV"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:55.254Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://data.stat.gov.lv/pxweb/lv/"
+  }
+}

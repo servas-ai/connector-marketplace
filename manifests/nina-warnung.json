@@ -1,0 +1,182 @@
+{
+  "id": "servas-ai.opencli-nina-warnung",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NINA – Bevölkerungswarnungen (BBK)",
+  "description": "NINA-API des BBK (warnung.bund.de): aktuelle Warnungen aus MoWaS, DWD, KATWARN, BIWAPP, Hochwasser (LHP) und Polizei sowie Übersicht je Quelle. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "uebersicht",
+      "displayName": "uebersicht",
+      "description": "nina-warnung uebersicht",
+      "command": "nina-warnung-cli uebersicht"
+    },
+    {
+      "name": "warnungen",
+      "displayName": "warnungen",
+      "description": "nina-warnung warnungen",
+      "command": "nina-warnung-cli warnungen"
+    },
+    {
+      "name": "dashboard",
+      "displayName": "dashboard",
+      "description": "nina-warnung dashboard",
+      "command": "nina-warnung-cli dashboard"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://warnung.bund.de/api31/mowas/mapData.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "warnung.bund.de/robots.txt: 404 (keine Einschränkung). Offizielle NINA-JSON-Endpunkte (dokumentiert auf bund.dev). Drossel ≥2 s.",
+    "tos": "BBK NINA-API: öffentliche Warnmeldungen, Nutzung gemäß bund.dev-Dokumentation; Quellenangabe BBK.",
+    "logo": {
+      "domain": "warnung.bund.de",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://warnung.bund.de/assets/images/logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/warnung.bund.de.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 6182,
+      "throughput_rps": 0.162,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "api31",
+      "last_scrape": "2026-10-13T07:27:05.158Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "NINA – Bevölkerungswarnungen (BBK)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "nina",
+      "warnung",
+      "nina-warnung",
+      "nina-api",
+      "bbk",
+      "bund",
+      "warnungen",
+      "mowas",
+      "dwd",
+      "katwarn",
+      "biwapp",
+      "hochwasser",
+      "lhp",
+      "polizei",
+      "übersicht",
+      "quelle",
+      "bevölkerungswarnungen",
+      "opendata",
+      "uebersicht",
+      "dashboard",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "DE",
+      "scope": "country",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ]
+    },
+    "infra": {
+      "as_org": "SOPRADO-ANY SOPRADO GmbH",
+      "asn": 20546,
+      "cdn": "pruefen",
+      "checked_at": "2026-10-13T09:24:59Z",
+      "host": "warnung.bund.de",
+      "hoster": "SOPRADO-ANY SOPRADO GmbH",
+      "http_status": 200,
+      "ip": "80.90.16.153",
+      "server_header": "myracloud",
+      "tls_issuer": "Sectigo Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://warnung.bund.de/impressum",
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://warnung.bund.de",
+      "country": "DE"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:01.570Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://warnung.bund.de/"
+  }
+}

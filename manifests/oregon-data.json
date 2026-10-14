@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-oregon-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Oregon Open Data (Socrata)",
+  "description": "Oregon Open Data (Oregon, USA): Datensatz-Katalog der Socrata-Instanz data.oregon.gov – Dataset-Suche und Dataset-Metadaten über die Discovery API. Ohne Login/Key (App-Token optional, nicht genutzt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "oregon-data datasets",
+      "command": "oregon-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "oregon-data dataset",
+      "command": "oregon-data-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.oregon.gov/api/catalog/v1",
+    "homepage": "https://data.oregon.gov/",
+    "keywords": [
+      "oregon",
+      "oregon-data",
+      "gov",
+      "socrata",
+      "discovery",
+      "dataset-suche",
+      "dataset-metadaten",
+      "app-token",
+      "optional",
+      "nicht",
+      "genutzt",
+      "open",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "data.oregon.gov/robots.txt: Disallow nur /browse?…-Facetten (HTML) – Discovery-API /api/catalog/v1 und /api/views/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "State of Oregon Open Data Terms; Fair Use.",
+    "logo": {
+      "domain": "data.oregon.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.oregon.gov/PublishingImages/oregon-logo-no-path-reverse.svg",
+      "fallback": "initials",
+      "file": "assets/logos/data.oregon.gov.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Oregon Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "svg",
+    "infra": {
+      "as_org": "AMAZON-AES - Amazon.com, Inc.",
+      "asn": 14618,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:31:43Z",
+      "host": "data.oregon.gov",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 0,
+      "ip": "52.206.140.205",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://oregon.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:33.728Z",
+      "robots": "allowed"
+    }
+  }
+}

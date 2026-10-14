@@ -1,0 +1,186 @@
+{
+  "id": "servas-ai.opencli-folketing-oda",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Folketinget ODA – Dänisches Parlament Open Data",
+  "description": "Folketinget (Dänemark): parlamentarische Sachen (Sag), Dokumente und Akteure über die offizielle ODA OData-API. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "Folketinget",
+    "Dänemark",
+    "Parlament",
+    "ODA",
+    "OData",
+    "Denmark",
+    "parliament"
+  ],
+  "keywords": [
+    "Folketinget",
+    "Dänemark",
+    "Parlament",
+    "ODA",
+    "OData",
+    "Denmark",
+    "parliament"
+  ],
+  "homepage": "https://oda.ft.dk/",
+  "license": "MIT",
+  "geo": {
+    "country": "DK",
+    "region": "Dänemark",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      8.07,
+      54.56,
+      15.16,
+      57.75
+    ],
+    "centroid": {
+      "lat": 56.0,
+      "lon": 10.0
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "sachen",
+      "displayName": "sachen",
+      "description": "folketing-oda sachen",
+      "command": "folketing-oda-cli sachen"
+    },
+    {
+      "name": "dokumente",
+      "displayName": "dokumente",
+      "description": "folketing-oda dokumente",
+      "command": "folketing-oda-cli dokumente"
+    },
+    {
+      "name": "akteure",
+      "displayName": "akteure",
+      "description": "folketing-oda akteure",
+      "command": "folketing-oda-cli akteure"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://oda.ft.dk/api/Sag",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "oda.ft.dk/robots.txt: /api/ nicht gesperrt bzw. allow-all (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Folketinget ODA Open Data; öffentliche OData-Nutzung, Quellenangabe Folketinget.",
+    "provider": "Folketinget",
+    "homepage": "https://oda.ft.dk/",
+    "data_license": "Folketinget ODA Open Data",
+    "keywords": [
+      "Folketinget",
+      "Dänemark",
+      "Parlament",
+      "ODA",
+      "OData",
+      "Denmark",
+      "parliament"
+    ],
+    "geo": {
+      "country": "DK",
+      "region": "Dänemark",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        8.07,
+        54.56,
+        15.16,
+        57.75
+      ],
+      "centroid": {
+        "lat": 56.0,
+        "lon": 10.0
+      }
+    },
+    "country": "DK",
+    "logo": {
+      "domain": "oda.ft.dk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://oda.ft.dk/Content/OdaImages/folketinget_logo.gif",
+      "fallback": "initials",
+      "brand_domain": "ft.dk",
+      "file": "assets/logos/oda.ft.dk.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Folketinget ODA – Dänisches Parlament Open Data",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:40.831Z",
+      "robots": "allowed"
+    }
+  }
+}

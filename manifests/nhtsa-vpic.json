@@ -1,0 +1,164 @@
+{
+  "id": "servas-ai.opencli-nhtsa-vpic",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NHTSA vPIC – Fahrzeugdaten & VIN-Decoder",
+  "description": "NHTSA vPIC API: Fahrzeugmarken je Typ, Modelle je Marke und VIN-Dekodierung (US-Fahrzeugdatenbank). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "marken",
+      "displayName": "marken",
+      "description": "nhtsa-vpic marken",
+      "command": "nhtsa-vpic-cli marken"
+    },
+    {
+      "name": "modelle",
+      "displayName": "modelle",
+      "description": "nhtsa-vpic modelle",
+      "command": "nhtsa-vpic-cli modelle"
+    },
+    {
+      "name": "vin",
+      "displayName": "vin",
+      "description": "nhtsa-vpic vin",
+      "command": "nhtsa-vpic-cli vin"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "mobilitaet",
+    "realtime": false,
+    "source_url": "https://vpic.nhtsa.dot.gov/api/",
+    "homepage": "https://vpic.nhtsa.dot.gov/",
+    "keywords": [
+      "nhtsa",
+      "vpic",
+      "nhtsa-vpic",
+      "fahrzeugmarken",
+      "typ",
+      "modelle",
+      "marke",
+      "vin-dekodierung",
+      "us-fahrzeugdatenbank",
+      "fahrzeugdaten",
+      "vin-decoder",
+      "international",
+      "marken",
+      "vin"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "vpic.nhtsa.dot.gov/robots.txt: 404 (keine Einschränkung). Offizielle US-DOT-API ohne Key. Drossel ≥2 s.",
+    "tos": "NHTSA vPIC: US-Government Open Data, frei nutzbar; Fair Use.",
+    "logo": {
+      "domain": "vpic.nhtsa.dot.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:Logo_of_the_United_States_National_Highway_Traffic_Safety_Administration.svg",
+      "fallback": "initials",
+      "file": "assets/logos/vpic.nhtsa.dot.gov.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2310,
+      "throughput_rps": 0.433,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "vpic",
+      "last_scrape": "2026-10-13T06:36:35.416Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "NHTSA vPIC – Fahrzeugdaten & VIN-Decoder",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AKAMAI-AS - Akamai Technologies, Inc.",
+      "asn": 16625,
+      "cdn": "Akamai",
+      "checked_at": "2026-10-13T09:38:37Z",
+      "host": "vpic.nhtsa.dot.gov",
+      "hoster": "Akamai Technologies, Inc.",
+      "http_status": 200,
+      "ip": "104.96.135.152",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "Akamai (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://vpic.nhtsa.dot.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:01.145Z",
+      "robots": "allowed"
+    }
+  }
+}

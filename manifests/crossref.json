@@ -1,0 +1,157 @@
+{
+  "id": "servas-ai.opencli-crossref",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Crossref – DOI / Works API",
+  "description": "Crossref Works API: Literatur-Metadaten per DOI und Volltextsuche (Titel, Autoren, Verlag). Ohne Login; höflicher User-Agent mit Kontakt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "research"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "crossref suche",
+      "command": "crossref-cli suche"
+    },
+    {
+      "name": "doi",
+      "displayName": "doi",
+      "description": "crossref doi",
+      "command": "crossref-cli doi"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "realtime": false,
+    "source_url": "https://api.crossref.org/works",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.crossref.org/robots.txt: Route-not-found JSON (keine Disallow-Regeln). www.crossref.org Allow /. Offizielle öffentliche API; Mailto im UA empfohlen. Drossel ≥2 s.",
+    "tos": "Crossref REST API: öffentlich, Attribution, Rate-Limits / höflicher UA.",
+    "logo": {
+      "domain": "api.crossref.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:Crossref_Logo_Stacked_RGB_SMALL.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.crossref.org.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2162,
+      "throughput_rps": 0.463,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T06:01:48.090Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Crossref – DOI / Works API",
+        "subtitle": "research",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "wikimedia",
+    "keywords": [
+      "crossref",
+      "works",
+      "literatur-metadaten",
+      "doi",
+      "volltextsuche",
+      "titel",
+      "autoren",
+      "verlag",
+      "höflicher",
+      "user-agent",
+      "kontakt",
+      "international",
+      "research"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "AMAZON-AES - Amazon.com, Inc.",
+      "asn": 14618,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:36:05Z",
+      "host": "api.crossref.org",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "34.226.73.113",
+      "server_header": "Jetty(9.4.40.v20210413)",
+      "tls_issuer": "Amazon",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://crossref.org"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:45.804Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.crossref.org/"
+  }
+}

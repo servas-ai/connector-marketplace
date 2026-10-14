@@ -1,0 +1,161 @@
+{
+  "id": "servas-ai.opencli-smk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SMK – Statens Museum for Kunst (Dänische Nationalgalerie)",
+  "description": "SMK Open API: Sammlung der Dänischen Nationalgalerie durchsuchen (Werke, Künstler, Datierung, Technik, Public Domain, Bild-URL) und Werk per Inventarnummer. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "smk suche",
+      "command": "smk-cli suche"
+    },
+    {
+      "name": "werk",
+      "displayName": "werk",
+      "description": "smk werk",
+      "command": "smk-cli werk"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://api.smk.dk/api/v1/art/search/",
+    "homepage": "https://open.smk.dk/",
+    "keywords": [
+      "smk",
+      "open",
+      "sammlung",
+      "dänischen",
+      "nationalgalerie",
+      "durchsuchen",
+      "werke",
+      "künstler",
+      "datierung",
+      "technik",
+      "domain",
+      "bild-url",
+      "werk",
+      "inventarnummer",
+      "statens",
+      "museum",
+      "kunst",
+      "dänische",
+      "international",
+      "technology"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.smk.dk/robots.txt: 404 (keine Einschränkung). Offizielle Open API des SMK. Drossel ≥2 s.",
+    "tos": "SMK Open: Daten CC0, Public-Domain-Bilder frei nutzbar.",
+    "logo": {
+      "domain": "api.smk.dk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.smk.dk/static/icons/apple-icon-180x180.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.smk.dk.png",
+      "brand_domain": "smk.dk",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3944,
+      "throughput_rps": 0.254,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:05:02.908Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "SMK – Statens Museum for Kunst (Dänische Nationalgalerie)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DK",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "favicon",
+    "geo": {
+      "country": "DK",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "STATENSIT Statens IT",
+      "asn": 58282,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:41:11Z",
+      "host": "api.smk.dk",
+      "hoster": "STATENSIT Statens IT",
+      "http_status": 404,
+      "ip": "185.153.153.33",
+      "server_header": "nginx/1.15.6",
+      "tls_issuer": "SSL Corporation",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://smk.dk",
+      "country": "DK"
+    },
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:34.939Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "id": "servas-ai.opencli-gtfs-es-tram-barcelona-tranvia-metro-mdb-1003",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "TRAM Barcelona (Tranvía Metropolitano Barcelona) (GTFS-Fahrplan)",
+  "description": "TRAM Barcelona (Tranvía Metropolitano Barcelona): offizieller GTFS-Soll-Fahrplan (Barcelona, Spanien) aus dem Mobility-Database-Katalog (mdb-1003), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-es-tram-barcelona-tranvia-metro-mdb-1003-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-es-tram-barcelona-tranvia-metro-mdb-1003-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-es-tram-barcelona-tranvia-metro-mdb-1003-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-es-tram-barcelona-tranvia-metro-mdb-1003-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://opendata.tram.cat/GTFS/zip/TBX.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.tram.cat/robots.txt geprüft (kanonisches robots.js, fail-closed): GTFS-Download nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "barcelona",
+      "tram barcelona tranvia m",
+      "spanien",
+      "spain"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Catalonia",
+      "city": "Barcelona",
+      "bbox": [
+        2.0533518,
+        41.3566534,
+        2.1432882,
+        41.3922223
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "opendata.tram.cat",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/af/4d/b9/af4db9e4-b88a-83a2-eebe-5c9b9151e33b/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.png",
+      "fallback": "initials",
+      "file": "assets/logos/tram.cat.png",
+      "brand_domain": "tram.cat"
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "TRAM Barcelona (Tranvía Metropolitano Barcelona) (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": null,
+        "evidence": "https://mobilitydatabase.org/feeds/mdb-1003 – urls.license leer (feeds_v2.csv); offener Download ohne Authentifizierung (authentication_type 0)",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": "Fahrplandaten: TRAM Barcelona (Trambaix) (GTFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GTFS-Download des Betreibers (Mobility Database, ohne Auth); Terms der Quelle: check",
+      "source_kind": "official",
+      "server_country": "ES",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Datenlizenz nicht maschinenlesbar belegt – Nutzungsbedingungen des Betreibers vor kommerzieller Nutzung prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T15:28:53Z"
+    },
+    "homepage": "https://www.tram.cat/",
+    "operator": {
+      "name": "TRAM Barcelona (Trambaix)",
+      "legal_form": "pruefen",
+      "country": "ES",
+      "website": "https://www.tram.cat/",
+      "source": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T15:37:56.383Z",
+      "robots": "allowed"
+    }
+  }
+}

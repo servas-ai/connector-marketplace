@@ -1,0 +1,169 @@
+{
+  "id": "servas-ai.opencli-datamx",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "datamx.io – Mexiko Open Data Community (CKAN)",
+  "description": "datamx.io: zivilgesellschaftliches Open-Data-Portal Mexikos mit Datensätzen von NGOs, Medien und Behörden (Gesellschaft, Kindheit, Umwelt, Haushalt). Zugriff über die offizielle CKAN-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Mexiko",
+    "Zivilgesellschaft",
+    "Community",
+    "datamx.io"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Mexiko",
+    "Zivilgesellschaft",
+    "Community",
+    "datamx.io"
+  ],
+  "homepage": "https://datamx.io/",
+  "license": "MIT",
+  "geo": {
+    "country": "MX",
+    "region": null,
+    "city": null,
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "datamx datasets",
+      "command": "datamx-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "datamx dataset",
+      "command": "datamx-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://datamx.io/api/3/action/package_search",
+    "homepage": "https://datamx.io/",
+    "portal": "https://datamx.io/dataset",
+    "provider": "datamx.io (Codeando México / Comunidad de Datos Abiertos)",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "CKAN",
+      "Datenkatalog",
+      "datasets",
+      "Mexiko",
+      "Zivilgesellschaft",
+      "Community",
+      "datamx.io"
+    ],
+    "geo": {
+      "country": "MX",
+      "region": null,
+      "city": null,
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "datamx.io/robots.txt (HTTP 200): /api/3/action/package_search und package_show nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "datamx.io (Codeando México / Comunidad de Datos Abiertos): öffentliche CKAN-Action-API v3 ohne Key/Login; Fair Use.",
+    "logo": {
+      "domain": "datamx.io",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://datamx.io/base/images/cmx-logo.png",
+      "fallback": "initials",
+      "file": "assets/logos/datamx.io.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "datamx.io – Mexiko Open Data Community (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "MX",
+    "ampel": "grün",
+    "license": "Creative Commons Attribution (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "data_license": "Creative Commons Attribution (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "official-site",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "blocks:GPTBot,ClaudeBot,anthropic-ai,Google-Extended,CCBot,PerplexityBot,ChatGPT-User,Applebot-Extended,Bytespider",
+      "checked": true,
+      "checked_at": "2026-10-13T21:19:54.045Z",
+      "robots": "allowed"
+    }
+  }
+}

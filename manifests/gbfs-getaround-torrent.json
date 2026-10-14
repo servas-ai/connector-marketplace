@@ -1,0 +1,154 @@
+{
+  "id": "servas-ai.opencli-gbfs-getaround-torrent",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Getaround Torrent – Sharing Torrent (GBFS)",
+  "description": "Getaround Torrent in Torrent (Spanien): offener GBFS-Feed 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-getaround-torrent-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-getaround-torrent-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-getaround-torrent-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-getaround-torrent-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://getaround.com/gbfs/v3/torrent/gbfs",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "getaround.com/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+    "tos": "Öffentlicher GBFS-Feed (Lizenz laut system_information/Betreiber), keine Personendaten.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "torrent",
+      "getaround",
+      "spanien",
+      "spain"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": null,
+      "city": "Torrent",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "getaround.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=getaround.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/getaround.com.png",
+      "brand_domain": "getaround.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3945,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS",
+      "last_scrape": "2026-10-13T12:49:37.253Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Getaround Torrent – Sharing Torrent (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://getaround.com/car-rental/torrent",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:06.415Z",
+      "robots": "allowed"
+    }
+  }
+}

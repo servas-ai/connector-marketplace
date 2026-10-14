@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-geocoding-open-meteo",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open-Meteo Geocoding API",
+  "description": "Open-Meteo Geocoding: Ortsuche (Koordinaten, Land, Bevölkerung) ohne API-Key. Forecast-Host separat (dort robots oft restriktiv).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Geocoding",
+    "Open-Meteo",
+    "Ort",
+    "Koordinaten",
+    "Wetter"
+  ],
+  "keywords": [
+    "Geocoding",
+    "Open-Meteo",
+    "Ort",
+    "Koordinaten",
+    "Wetter"
+  ],
+  "homepage": "https://open-meteo.com/en/docs/geocoding-api",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "geocoding-open-meteo suche",
+      "command": "geocoding-open-meteo-cli suche"
+    },
+    {
+      "name": "id",
+      "displayName": "id",
+      "description": "geocoding-open-meteo id",
+      "command": "geocoding-open-meteo-cli id"
+    },
+    {
+      "name": "laender",
+      "displayName": "laender",
+      "description": "geocoding-open-meteo laender",
+      "command": "geocoding-open-meteo-cli laender"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://geocoding-api.open-meteo.com/v1/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "geocoding-api.open-meteo.com/robots.txt: 404 → allow-all (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Open-Meteo CC-BY 4.0; Quellenangabe Open-Meteo.",
+    "provider": "Open-Meteo",
+    "homepage": "https://open-meteo.com/en/docs/geocoding-api",
+    "data_license": "CC BY 4.0 (Open-Meteo)",
+    "keywords": [
+      "Geocoding",
+      "Open-Meteo",
+      "Ort",
+      "Koordinaten",
+      "Wetter"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "geocoding-api.open-meteo.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://open-meteo.com/",
+      "fallback": "initials",
+      "brand_domain": "open-meteo.com",
+      "file": "assets/logos/geocoding-api.open-meteo.com.png",
+      "source": "official-site",
+      "source_kind": "header-svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Open-Meteo Geocoding API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:55.315Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "id": "servas-ai.opencli-geo-api-gouv",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "API Géo – Gemeinden & Départements Frankreich",
+  "description": "API Géo (geo.api.gouv.fr): französische Gemeinden (Suche nach Name/PLZ, mit Einwohnerzahl), Départements und Regionen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "gemeinden",
+      "displayName": "gemeinden",
+      "description": "geo-api-gouv gemeinden",
+      "command": "geo-api-gouv-cli gemeinden"
+    },
+    {
+      "name": "departements",
+      "displayName": "departements",
+      "description": "geo-api-gouv departements",
+      "command": "geo-api-gouv-cli departements"
+    },
+    {
+      "name": "regionen",
+      "displayName": "regionen",
+      "description": "geo-api-gouv regionen",
+      "command": "geo-api-gouv-cli regionen"
+    },
+    {
+      "name": "gemeinde",
+      "displayName": "gemeinde",
+      "description": "geo-api-gouv gemeinde",
+      "command": "geo-api-gouv-cli gemeinde"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://geo.api.gouv.fr/communes",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "geo.api.gouv.fr/robots.txt: kein Disallow für /communes, /departements, /regions. Offizielle API (DINUM/Etalab). Drossel ≥2 s.",
+    "tos": "API Géo: offene API des französischen Staates (Licence Ouverte), Fair Use (≈50 Req/s Limit).",
+    "logo": {
+      "domain": "geo.api.gouv.fr",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://geo.api.gouv.fr/static/images/logos/logo-marianne.svg",
+      "fallback": "initials",
+      "file": "assets/logos/geo.api.gouv.fr.png",
+      "brand_domain": "api.gouv.fr",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3660,
+      "throughput_rps": 0.273,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:26:53.560Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "API Géo – Gemeinden & Départements Frankreich",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "FR",
+    "ampel": "grün",
+    "license": "Etalab-2.0",
+    "logo_source": "svg",
+    "keywords": [
+      "geo",
+      "gouv",
+      "geo-api-gouv",
+      "französische",
+      "gemeinden",
+      "name",
+      "plz",
+      "einwohnerzahl",
+      "partements",
+      "regionen",
+      "frankreich",
+      "opendata",
+      "departements",
+      "gemeinde",
+      "geodaten",
+      "geodata",
+      "maps",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "FR",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "OVH OVH SAS",
+      "asn": 16276,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:21:35Z",
+      "host": "geo.api.gouv.fr",
+      "hoster": "OVH OVH SAS",
+      "http_status": 200,
+      "ip": "37.59.183.65",
+      "server_header": "nginx/1.31.3",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://geo.api.gouv.fr/cgu",
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://geo.api.gouv.fr",
+      "country": "FR"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:02.677Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://geo.api.gouv.fr/"
+  }
+}

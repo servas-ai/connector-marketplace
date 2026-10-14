@@ -1,0 +1,134 @@
+{
+  "id": "servas-ai.opencli-pdok-ogc",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "PDOK OGC API – Bestuurlijke gebieden",
+  "description": "PDOK/Kadaster (Niederlande): OGC API Features für Verwaltungsgebiete (Gemeinden, Provinzen) – Collections und Features. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "collections",
+      "displayName": "collections",
+      "description": "Collections",
+      "command": "pdok-ogc-cli collections"
+    },
+    {
+      "name": "features",
+      "displayName": "features",
+      "description": "Features einer Collection (<id>, --limit), ohne Geometrie",
+      "command": "pdok-ogc-cli features"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "geo",
+    "realtime": false,
+    "source_url": "https://api.pdok.nl/kadaster/brk-bestuurlijke-gebieden/ogc/v1",
+    "license": "CC-BY-4.0 / CC0-1.0 (je Datensatz)",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.pdok.nl/robots.txt: Allow /, nur /bzk/locatieserver/* gesperrt (deshalb nicht genutzt). Drossel ≥2 s.",
+    "tos": "PDOK: CC BY 4.0 / CC0.",
+    "keywords": [
+      "pdok",
+      "ogc",
+      "pdok-ogc",
+      "kadaster",
+      "niederlande",
+      "features",
+      "verwaltungsgebiete",
+      "gemeinden",
+      "provinzen",
+      "collections",
+      "bestuurlijke",
+      "gebieden",
+      "geo",
+      "geodaten",
+      "geodata",
+      "maps"
+    ],
+    "geo": {
+      "country": "NL",
+      "scope": "country"
+    },
+    "logo": {
+      "domain": "api.pdok.nl",
+      "resolved": "https://www.pdok.nl/o/iv-pdok-theme/images/logos/pdok_logo_20230126.png",
+      "file": "assets/logos/api.pdok.nl.png",
+      "brand_domain": "pdok.nl",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2290,
+      "throughput_rps": 0.437,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "OGC API Features",
+      "last_scrape": "2026-10-13T09:07:56.745Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "PDOK OGC API – Bestuurlijke gebieden",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "NL",
+    "homepage": "https://www.pdok.nl",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:46.710Z",
+      "robots": "allowed"
+    }
+  }
+}

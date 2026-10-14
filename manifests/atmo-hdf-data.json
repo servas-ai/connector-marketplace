@@ -1,0 +1,193 @@
+{
+  "id": "servas-ai.opencli-atmo-hdf-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Atmo Hauts-de-France – Luftqualität Open Data (ArcGIS Hub)",
+  "description": "data-atmo-hdf.opendata.arcgis.com – Atmo Hauts-de-France: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "atmo-hdf-data suche",
+      "command": "atmo-hdf-data-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "atmo-hdf-data neu",
+      "command": "atmo-hdf-data-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "atmo-hdf-data datensatz",
+      "command": "atmo-hdf-data-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data-atmo-hdf.opendata.arcgis.com/search",
+    "homepage": "https://data-atmo-hdf.opendata.arcgis.com/",
+    "country": "FR",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data-atmo-hdf.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow nur /sites/ /admin/ /sessions/ /groups/ /people/ /workspace/ – /api/search/v1 nicht gesperrt; Crawl-delay 60 (Hub-Standard) → nur Einzelabfragen, kein Bulk-Crawl. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Atmo Hauts-de-France: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "logo": {
+      "domain": "data-atmo-hdf.opendata.arcgis.com",
+      "brand_domain": "atmo-hautsdefrance.fr",
+      "chain": [
+        "official-site",
+        "wikimedia"
+      ],
+      "resolved": "https://www.atmo-hdf.fr/sites/hdf/files/Logo_50ans_AtmoHDF_web.png",
+      "fallback": "initials",
+      "file": "assets/logos/data-atmo-hdf.opendata.arcgis.com.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Atmo Hauts-de-France – Luftqualität Open Data (ArcGIS Hub)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "operator": {
+      "name": "Atmo Hauts-de-France",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "FR",
+      "source": "Portal-Impressum/Domain"
+    },
+    "geo": {
+      "country": "FR",
+      "scope": "region",
+      "region": "Hauts-de-France"
+    },
+    "llms_txt": {
+      "llms_txt": false,
+      "llms_full_txt": false,
+      "openapi": null,
+      "api_kind": "OGC API Records (ArcGIS Hub Search v1)",
+      "checked_at": "2026-10-13T14:30:00Z"
+    },
+    "ampel": "gelb",
+    "license": "ODbL 1.0 (Portal-Metadaten)",
+    "logo_source": "official-site",
+    "connector_meta": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "ODbL-1.0",
+        "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+        "evidence": "https://data-atmo-hdf.opendata.arcgis.com/api/search/v1/collections/dataset/items (properties.licenseInfo), Stand 2026-10-13",
+        "per_dataset": false
+      },
+      "commercial_use": "attribution",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Atmo Hauts-de-France – https://data-atmo-hdf.opendata.arcgis.com/",
+      "personal_data": "none",
+      "legal_basis": "Offene Verwaltungsdaten (EU-Richtlinie 2019/1024 Open Data/PSI) – Lizenz je Datensatz",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "ODbL: Share-Alike für abgeleitete Datenbanken",
+          "offizielle Behördenquelle",
+          "robots.txt beachtet (fail-closed)",
+          "kein Login, keine Umgehung",
+          "nur Katalog-Metadaten, keine personenbezogenen Felder",
+          "Hosting Esri ArcGIS Online (Server-Region nicht belegt)"
+        ]
+      },
+      "checked_at": "2026-10-13T14:30:00Z"
+    },
+    "keywords": [
+      "atmo hdf data",
+      "opendata",
+      "arcgis",
+      "open data",
+      "hub",
+      "fr",
+      "atmo",
+      "hdf",
+      "data",
+      "com",
+      "hauts"
+    ],
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:19:38.763Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "id": "servas-ai.opencli-wko-lehrbetriebe",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI wko-lehrbetriebe",
+  "description": "WKO Lehrbetriebsübersicht: Lehrbetriebe nach Suchbegriff/Standort (ohne Login)",
+  "author": "servas-ai (OpenCLI-Squad)",
+  "categories": [
+    "connector",
+    "opendata",
+    "company"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.dashboardWidget.register"
+  ],
+  "tools": [
+    {
+      "name": "wko-lehrbetriebe-suche",
+      "displayName": "Lehrbetriebe suchen",
+      "description": "node bin/cli.js suche --q BEGRIFF --standort ORT --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "standort": {
+            "type": "string"
+          },
+          "seiten": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "status": "cli-ready",
+    "category": "opendata",
+    "cli_commands": [
+      "suche"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "access_chain": [
+      "html_public"
+    ],
+    "robots_status": "ok",
+    "rate_limit": "≥ 2 s Abstand pro Prozess (OPENCLI_DELAY_MS, Minimum 2000), ein Worker pro Host; 2 Anfragen + 1 je Folgeseite (max. 5 Seiten)",
+    "source_url": "https://lehrbetriebsuebersicht.wko.at/SearchLehrbetrieb.aspx",
+    "login": "none",
+    "openui": "paperclip/openui.txt",
+    "logo": {
+      "domain": "lehrbetriebsuebersicht.wko.at",
+      "chain": [
+        "https://lehrbetriebsuebersicht.wko.at/favicon.ico",
+        "https://www.google.com/s2/favicons?domain=lehrbetriebsuebersicht.wko.at&sz=64"
+      ],
+      "fallback": "https://www.google.com/s2/favicons?domain=wko.at&sz=64",
+      "file": "assets/logos/lehrbetriebsuebersicht.wko.at.png",
+      "source": "official-site",
+      "resolved": "https://lehrbetriebsuebersicht.wko.at/library/assets/img/wko-logo.svg",
+      "source_kind": "header-logo"
+    },
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 8067,
+      "throughput_rps": 0.12,
+      "captcha_rate": 0,
+      "login": "none",
+      "api_version": "ASP.NET WebForms",
+      "last_scrape": "2026-10-13T05:12:18.057Z",
+      "datenqualitaet": 1.0
+    },
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "host": "lehrbetriebsuebersicht.wko.at",
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "wko",
+      "lehrbetriebe",
+      "wko-lehrbetriebe",
+      "lehrbetriebsübersicht",
+      "lehrbetriebsuebersicht",
+      "österreich",
+      "suchbegriff",
+      "firma",
+      "lehrberuf",
+      "standort",
+      "lehrberufen",
+      "adresse",
+      "veröffentlichten",
+      "kontaktdaten",
+      "opendata",
+      "company",
+      "wko-lehrbetriebe-suche",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze",
+      "unternehmen"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "WKO-AS Wirtschaftskammer Oesterreich",
+      "asn": 49014,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:34:54Z",
+      "host": "lehrbetriebsuebersicht.wko.at",
+      "hoster": "WKO-AS Wirtschaftskammer Oesterreich",
+      "http_status": 200,
+      "ip": "194.107.236.184",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.wko.at/offenlegung-oesterreich",
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://lehrbetriebsuebersicht.wko.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:38.491Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://lehrbetriebsuebersicht.wko.at/SearchLehrbetrieb.aspx"
+  }
+}

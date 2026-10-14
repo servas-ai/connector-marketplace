@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-ipapi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ipapi.co – IP Geolocation",
+  "description": "ipapi.co: IP-Geolokation (Land, Region, Stadt, ASN) über die öffentliche JSON-API. Ohne Login/Key (Free-Tier-Limits).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "IP",
+    "Geolocation",
+    "ASN",
+    "Land",
+    "Stadt"
+  ],
+  "keywords": [
+    "IP",
+    "Geolocation",
+    "ASN",
+    "Land",
+    "Stadt"
+  ],
+  "homepage": "https://ipapi.co/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "lookup",
+      "displayName": "lookup",
+      "description": "ipapi lookup",
+      "command": "ipapi-cli lookup"
+    },
+    {
+      "name": "land",
+      "displayName": "land",
+      "description": "ipapi land",
+      "command": "ipapi-cli land"
+    },
+    {
+      "name": "felder",
+      "displayName": "felder",
+      "description": "ipapi felder",
+      "command": "ipapi-cli felder"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://ipapi.co/json/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "ipapi.co/robots.txt: /json/ erlaubt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "ipapi.co Free Tier Terms; Fair Use.",
+    "provider": "ipapi.co",
+    "homepage": "https://ipapi.co/",
+    "data_license": "ipapi.co Free Tier Terms",
+    "keywords": [
+      "IP",
+      "Geolocation",
+      "ASN",
+      "Land",
+      "Stadt"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "ipapi.co",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=ipapi.co&sz=128",
+      "fallback": "initials",
+      "brand_domain": "ipapi.co",
+      "file": "assets/logos/ipapi.co.png",
+      "source": "official-site",
+      "source_kind": "official-site-favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "ipapi.co – IP Geolocation",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:55.416Z",
+      "robots": "allowed"
+    }
+  }
+}

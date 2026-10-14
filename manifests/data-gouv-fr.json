@@ -1,0 +1,160 @@
+{
+  "id": "servas-ai.opencli-data-gouv-fr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "data.gouv.fr – Open-Data-Katalog",
+  "description": "data.gouv.fr API v1: Dataset-Liste und Dataset-Details (Titel, Organisation, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-gouv-fr datasets",
+      "command": "data-gouv-fr-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-gouv-fr dataset",
+      "command": "data-gouv-fr-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.data.gouv.fr/api/1/datasets/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.data.gouv.fr/robots.txt: Disallow Admin- und HTML-Suchpfade – /api/1/datasets/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "data.gouv.fr: Open Data Etalab / Licence Ouverte; Fair Use der API.",
+    "logo": {
+      "domain": "www.data.gouv.fr",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.data.gouv.fr/nuxt_images/favicon.svg",
+      "fallback": "initials",
+      "file": "assets/logos/www.data.gouv.fr.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2407,
+      "throughput_rps": 0.415,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T06:02:13.630Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "data.gouv.fr – Open-Data-Katalog",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "FR",
+    "ampel": "grün",
+    "license": "Etalab-2.0",
+    "logo_source": "svg",
+    "keywords": [
+      "gouv",
+      "data-gouv-fr",
+      "dataset-liste",
+      "dataset-details",
+      "titel",
+      "organisation",
+      "ressourcen",
+      "open-data-katalog",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "FR",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "OVH OVH SAS",
+      "asn": 16276,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:19:00Z",
+      "host": "www.data.gouv.fr",
+      "hoster": "OVH OVH SAS",
+      "http_status": 200,
+      "ip": "37.59.183.91",
+      "server_header": "nginx/1.30.1",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.data.gouv.fr/pages/legal/legal-notice",
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://www.data.gouv.fr",
+      "country": "FR"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:23.677Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.data.gouv.fr/"
+  }
+}

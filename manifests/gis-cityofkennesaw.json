@@ -1,0 +1,186 @@
+{
+  "id": "servas-ai.opencli-gis-cityofkennesaw",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "City of Kennesaw GIS Hub",
+  "description": "gis-cityofkennesaw.hub.arcgis.com – City of Kennesaw: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "hub",
+    "us",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "gis-cityofkennesaw suche",
+      "command": "gis-cityofkennesaw-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "gis-cityofkennesaw neu",
+      "command": "gis-cityofkennesaw-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "gis-cityofkennesaw datensatz",
+      "command": "gis-cityofkennesaw-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://gis-cityofkennesaw.hub.arcgis.com/search",
+    "homepage": "https://gis-cityofkennesaw.hub.arcgis.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gis-cityofkennesaw.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "City of Kennesaw: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "US",
+    "keywords": [
+      "opendata",
+      "hub",
+      "katalog",
+      "us"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "operator": {
+      "name": "City of Kennesaw",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "US",
+      "source": "Portal-Impressum/Domain"
+    },
+    "logo": {
+      "domain": "gis-cityofkennesaw.hub.arcgis.com",
+      "file": "assets/logos/gis-cityofkennesaw.hub.arcgis.com.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://www.arcgis.com/favicon.ico",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:10:12.942Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://gis-cityofkennesaw.hub.arcgis.com/",
+        "evidence": "https://gis-cityofkennesaw.hub.arcgis.com/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: City of Kennesaw GIS Hub (gis-cityofkennesaw.hub.arcgis.com)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T18:35:00Z"
+    },
+    "wave": "opendata-wave-1800",
+    "worker": "opendata-wave-1800",
+    "openui": {
+      "card": {
+        "title": "City of Kennesaw GIS Hub",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

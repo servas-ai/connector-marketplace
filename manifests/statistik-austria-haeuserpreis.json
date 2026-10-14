@@ -1,0 +1,169 @@
+{
+  "id": "servas-ai.opencli-statistik-austria-haeuserpreis",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Statistik Austria – Häuserpreisindex",
+  "description": "Häuserpreisindex 2025 (OGD) als dekodierte Tabelle. Ohne Login.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "hpi",
+      "displayName": "hpi",
+      "description": "Statistik Austria – Häuserpreisindex: hpi",
+      "command": "statistik-austria-haeuserpreis-cli hpi --limit 15 --format json"
+    },
+    {
+      "name": "meta",
+      "displayName": "meta",
+      "description": "Statistik Austria – Häuserpreisindex: meta",
+      "command": "statistik-austria-haeuserpreis-cli meta --datensatz hpi --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.statistik.gv.at",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host (OPENCLI_DELAY_MS, nicht unterschreiten)",
+    "robots_status": "pruefen",
+    "robots": "data.statistik.gv.at/robots.txt liefert HTML-Startseite (keine robots-Regeln). OGD CC BY 4.0. Gedrosselt ≥2 s. Abbruch bei 403/429/Captcha.",
+    "logo": {
+      "domain": "data.statistik.gv.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.statistik.gv.at/web/assets/logo_openData.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.statistik.gv.at.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "0.1.0",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Statistik Austria – Häuserpreisindex",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "statistik",
+      "austria",
+      "haeuserpreis",
+      "statistik-austria-haeuserpreis",
+      "häuserpreisindex",
+      "ogd",
+      "dekodierte",
+      "tabelle",
+      "opendata",
+      "hpi",
+      "meta",
+      "statistics",
+      "zeitreihen",
+      "time series",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "ACOnet - ACONET",
+      "asn": 1853,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:33:56Z",
+      "host": "data.statistik.gv.at",
+      "hoster": "ACONET",
+      "http_status": 200,
+      "ip": "193.170.163.105",
+      "tls_issuer": "Hellenic Academic and Research Institutions CA",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.statistik.at/ueber-uns/aufgaben-und-grundsaetze/rechtsgrundlagen/impressum",
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "register_id": "FN 191155k",
+      "source": "imprint",
+      "website": "https://statistik.gv.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:55.465Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://data.statistik.gv.at/web/"
+  }
+}

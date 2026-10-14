@@ -1,0 +1,130 @@
+{
+  "id": "servas-ai.opencli-ign-geoplateforme-wmts",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "IGN Géoplateforme WMTS-Katalog",
+  "description": "IGN Géoplateforme (Frankreich): Katalog aller WMTS-Layer (Plan IGN, Orthophotos, Kataster …). Nur GetCapabilities, ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "layer",
+      "displayName": "layer",
+      "description": "Alle Layer aus GetCapabilities",
+      "command": "ign-geoplateforme-wmts-cli layer"
+    },
+    {
+      "name": "detail",
+      "displayName": "detail",
+      "description": "Layer per Identifier",
+      "command": "ign-geoplateforme-wmts-cli detail"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "geo",
+    "realtime": false,
+    "source_url": "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetCapabilities",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.geopf.fr/robots.txt geprüft: GetCapabilities nicht gesperrt. Nur Metadaten, keine Kachel-Massendownloads.",
+    "tos": "Offener Geodienst (OGC), nur Metadaten/GetCapabilities.",
+    "keywords": [
+      "ign",
+      "geoplateforme",
+      "wmts",
+      "ign-geoplateforme-wmts",
+      "oplateforme",
+      "frankreich",
+      "katalog",
+      "aller",
+      "wmts-layer",
+      "plan",
+      "orthophotos",
+      "kataster",
+      "getcapabilities",
+      "wmts-katalog",
+      "geo",
+      "layer",
+      "geodaten",
+      "geodata",
+      "maps"
+    ],
+    "geo": {
+      "country": "FR",
+      "scope": "country"
+    },
+    "logo": {
+      "domain": "data.geopf.fr",
+      "resolved": "https://commons.wikimedia.org/wiki/File:IGN_logo_2012.svg",
+      "file": "assets/logos/data.geopf.fr.png",
+      "brand_domain": "geopf.fr",
+      "source": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3093,
+      "throughput_rps": 0.323,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "OGC",
+      "last_scrape": "2026-10-13T09:08:50.902Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "IGN Géoplateforme WMTS-Katalog",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "FR",
+    "homepage": "https://geoservices.ign.fr",
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:04.224Z",
+      "robots": "pruefen"
+    }
+  }
+}

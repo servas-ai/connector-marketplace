@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-cioos-atlantic-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CIOOS Atlantic – Canadian Integrated Ocean Observing System (ERDDAP)",
+  "description": "CIOOS Atlantic: Ozean- und Wetterdaten der kanadischen Atlantikküste (Küstenwetter, Wassertemperatur, Bojen). Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Atlantik",
+    "Kanada",
+    "CIOOS",
+    "Canadian Integrated Ocean Observing System Atlantic"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Atlantik",
+    "Kanada",
+    "CIOOS",
+    "Canadian Integrated Ocean Observing System Atlantic"
+  ],
+  "homepage": "https://cioosatlantic.ca/",
+  "license": "MIT",
+  "geo": {
+    "country": "CA",
+    "region": "Nova Scotia",
+    "city": null,
+    "scope": "regional"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "cioos-atlantic-erddap datasets",
+      "command": "cioos-atlantic-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "cioos-atlantic-erddap suche",
+      "command": "cioos-atlantic-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "cioos-atlantic-erddap info",
+      "command": "cioos-atlantic-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://cioosatlantic.ca/erddap/info/index.json",
+    "homepage": "https://cioosatlantic.ca/",
+    "portal": "https://cioosatlantic.ca/erddap/index.html",
+    "provider": "Canadian Integrated Ocean Observing System Atlantic (CIOOS Atlantic)",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Atlantik",
+      "Kanada",
+      "CIOOS",
+      "Canadian Integrated Ocean Observing System Atlantic"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": "Nova Scotia",
+      "city": null,
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "cioosatlantic.ca/robots.txt (HTTP 200): /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "Canadian Integrated Ocean Observing System Atlantic (CIOOS Atlantic): öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "cioosatlantic.ca",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://cioosatlantic.ca/wp-content/uploads/cioos_atlantic_en.png",
+      "fallback": "initials",
+      "file": "assets/logos/cioosatlantic.ca.png",
+      "source": "official-site",
+      "kind": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "CIOOS Atlantic – Canadian Integrated Ocean Observing System (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CA",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:19:52.069Z",
+      "robots": "allowed"
+    }
+  }
+}

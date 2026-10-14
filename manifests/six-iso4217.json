@@ -1,0 +1,149 @@
+{
+  "id": "servas-ai.opencli-six-iso4217",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SIX – ISO 4217 Währungscodes (List One)",
+  "description": "SIX – ISO 4217 Währungscodes (List One): offizielle Gesamtdatei (XML) als Datensätze – Liste, Volltextsuche, Dump-Metadaten. Download höchstens 1× pro Tag (Cache 24 h). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "six-iso4217 liste",
+      "command": "six-iso4217-cli liste"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "six-iso4217 suche",
+      "command": "six-iso4217-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "six-iso4217 info",
+      "command": "six-iso4217-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host, Dump ≤1×/Tag",
+    "robots_status": "ok",
+    "robots": "www.six-group.com/robots.txt geprüft: Dump-Pfad nicht gesperrt (zusätzlich Laufzeitprüfung). Kein Key. Drossel ≥2 s/Host, Dump-Cache 24 h.",
+    "tos": "Lizenz: SIX Financial Information (ISO 4217 Maintenance Agency), öffentlich. Quelle nennen.",
+    "logo": {
+      "domain": "www.six-group.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.six-group.com/etc/designs/sixwebv2/build/images/logos/six-logo.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.six-group.com.png",
+      "brand_domain": "www.six-group.com",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 120,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dump",
+      "last_scrape": "2026-10-13T09:25:32.645Z",
+      "datenqualitaet": 1.0
+    },
+    "keywords": [
+      "six",
+      "iso4217",
+      "six-iso4217",
+      "iso",
+      "währungscodes",
+      "one",
+      "gesamtdatei",
+      "xml",
+      "datensätze",
+      "liste",
+      "volltextsuche",
+      "dump-metadaten",
+      "download",
+      "höchstens",
+      "tag",
+      "cache",
+      "opendata",
+      "info",
+      "open data",
+      "offene daten",
+      "datasets"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "openui": {
+      "card": {
+        "title": "SIX – ISO 4217 Währungscodes (List One)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": "https://www.six-group.com/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:18:04.255Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.six-group.com/en/home.html"
+  }
+}

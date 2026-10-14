@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-edikte-insolvenz",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Ediktsdatei – Insolvenzdatei (AT)",
+  "description": "Insolvenzverfahren der österreichischen Ediktsdatei nach Schuldner suchen und Edikt-Details lesen. Ohne Login. Personenbezogene Daten nur zweckgebunden (§ 256 IO).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata",
+    "justiz"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "insolvenzen",
+      "displayName": "insolvenzen",
+      "description": "edikte-insolvenz insolvenzen",
+      "command": "edikte-insolvenz-cli insolvenzen"
+    },
+    {
+      "name": "edikt",
+      "displayName": "edikt",
+      "description": "edikte-insolvenz edikt",
+      "command": "edikte-insolvenz-cli edikt"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "country": "AT",
+    "ampel": "grün",
+    "realtime": false,
+    "source_url": "https://edikte.justiz.gv.at/edikte/id/idedi8.nsf/suche!OpenForm",
+    "access_chain": [
+      "html"
+    ],
+    "access_used": "html",
+    "login": false,
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS)",
+    "robots_status": "pruefen",
+    "robots": "/robots.txt liefert nur eine HTML-Ladeseite (keine Regeln). Seiten-Meta noindex – nur gezielte Abfragen, keine Link-Verfolgung. Gedrosselt 1,5 s.",
+    "logo": {
+      "domain": "justiz.gv.at",
+      "chain": [
+        "google",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=justiz.gv.at&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/edikte.justiz.gv.at.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2500,
+      "throughput_rps": 0.4,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "keine API (Lotus Domino HTML)",
+      "last_scrape": "2026-10-13T09:16:36.376Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Ediktsdatei – Insolvenzdatei (AT)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "gericht"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "edikte",
+      "insolvenz",
+      "edikte-insolvenz",
+      "insolvenzverfahren",
+      "ediktsdatei",
+      "justiz",
+      "schuldnername",
+      "finden",
+      "edikttext",
+      "lesen",
+      "insolvenzdatei",
+      "österreichischen",
+      "schuldner",
+      "suchen",
+      "edikt-details",
+      "personenbezogene",
+      "zweckgebunden",
+      "opendata",
+      "insolvenzen",
+      "edikt",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "BRZ Bundesrechenzentrum GmbH",
+      "asn": 8692,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:20:12Z",
+      "host": "edikte.justiz.gv.at",
+      "hoster": "BRZ Bundesrechenzentrum GmbH",
+      "http_status": 200,
+      "ip": "85.158.225.14",
+      "server_header": "Lotus-Domino",
+      "tls_issuer": "Hellenic Academic and Research Institutions CA",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://edikte.justiz.gv.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:27.035Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://edikte.justiz.gv.at/"
+  }
+}

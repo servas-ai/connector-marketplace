@@ -1,0 +1,199 @@
+{
+  "id": "servas-ai.opencli-ladadi-darmstadt-dieburg-piveau",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "LaDaDi Datenplattform – Landkreis Darmstadt-Dieburg (piveau)",
+  "description": "data.ladadi.de – Landkreis Darmstadt-Dieburg: DCAT-AP-Datenkatalog (piveau hub-search, OpenAPI 3): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Distributionen und Lizenz. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "piveau",
+    "de",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "ladadi-darmstadt-dieburg-piveau suche",
+      "command": "ladadi-darmstadt-dieburg-piveau-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "ladadi-darmstadt-dieburg-piveau neu",
+      "command": "ladadi-darmstadt-dieburg-piveau-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "ladadi-darmstadt-dieburg-piveau datensatz",
+      "command": "ladadi-darmstadt-dieburg-piveau-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://piveau-search.ladadi.civora.org/search",
+    "homepage": "https://data.ladadi.de/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "piveau-search.ladadi.civora.org/robots.txt geprüft (fail-closed, RFC 9309 via tools/robots/robots.js): HTTP 404 → keine Einschränkung (RFC 9309 §2.3.1.3); die piveau hub-search API (/search, /datasets/<id>) erlaubt. Portal-Frontend data.ladadi.de (SPA) liefert robots.txt als HTML → dort wird nichts abgerufen; Zugriff ausschließlich über den API-Host. Drossel ≥2 s/Host.",
+    "tos": "Landkreis Darmstadt-Dieburg: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "DE",
+    "keywords": [
+      "opendata",
+      "piveau",
+      "katalog",
+      "de"
+    ],
+    "geo": {
+      "country": "DE",
+      "scope": "region",
+      "region": "Hessen",
+      "city": "Darmstadt"
+    },
+    "operator": {
+      "name": "Landkreis Darmstadt-Dieburg",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "DE",
+      "url": "https://www.ladadi.de/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "data.ladadi.de",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "piveau-hub-search",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://piveau-search.ladadi.civora.org/openapi.yaml",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:30:00Z",
+      "robots": "allowed",
+      "api_kind": "piveau hub-search (OpenAPI 3)",
+      "openapi_version": "3.0.3",
+      "openapi_paths": 26,
+      "dcat": "https://piveau-repo.ladadi.civora.org/datasets/<id>",
+      "dcat_profile": "DCAT-AP (piveau-repo, RDF je Datensatz)",
+      "ogc_api": null,
+      "access_chain_hints": [
+        "openapi: https://piveau-search.ladadi.civora.org/openapi.yaml",
+        "dcat: https://piveau-repo.ladadi.civora.org/datasets/<id>",
+        "piveau-hub-search: https://piveau-search.ladadi.civora.org/search"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://data.ladadi.de/",
+        "evidence": "https://data.ladadi.de/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: LaDaDi Datenplattform – Landkreis Darmstadt-Dieburg (piveau) (data.ladadi.de)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Hosting-Land nicht öffentlich belegt (Portal-Land DE) – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-14T02:30:00Z"
+    },
+    "wave": "opendata-wave-0156",
+    "worker": "opendata-wave-0156",
+    "openui": {
+      "card": {
+        "title": "LaDaDi Datenplattform – Landkreis Darmstadt-Dieburg (piveau)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

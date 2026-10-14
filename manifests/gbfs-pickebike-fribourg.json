@@ -1,0 +1,154 @@
+{
+  "id": "servas-ai.opencli-gbfs-pickebike-fribourg",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "PickeBike Fribourg – Sharing Fribourg (GBFS)",
+  "description": "PickeBike Fribourg in Fribourg (Schweiz): offener GBFS-Feed 2.3 ; 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-pickebike-fribourg-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-pickebike-fribourg-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-pickebike-fribourg-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-pickebike-fribourg-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://api.mobidata-bw.de/sharing/gbfs/v3/pickebike_fribourg/gbfs",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.mobidata-bw.de/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+    "tos": "Öffentlicher GBFS-Feed (Lizenz laut system_information/Betreiber), keine Personendaten.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "fribourg",
+      "pickebike",
+      "schweiz",
+      "switzerland"
+    ],
+    "geo": {
+      "country": "CH",
+      "region": null,
+      "city": "Fribourg",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "pickebike.ch",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=pickebike.ch&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/pickebike.ch.png",
+      "brand_domain": "api.mobidata-bw.de"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 6000,
+      "throughput_rps": 0.167,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS",
+      "last_scrape": "2026-10-13T12:21:17.475Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "PickeBike Fribourg – Sharing Fribourg (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.pickebike.ch/de/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:16.693Z",
+      "robots": "allowed"
+    }
+  }
+}

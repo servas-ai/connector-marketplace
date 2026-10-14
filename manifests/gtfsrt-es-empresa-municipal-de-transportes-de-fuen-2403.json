@@ -1,0 +1,164 @@
+{
+  "id": "servas-ai.opencli-gtfsrt-es-empresa-municipal-de-transportes-de-fuen-2403",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Empresa Municipal de Transportes de Fuenlabrada (EMTF) (GTFS-Realtime)",
+  "description": "Empresa Municipal de Transportes de Fuenlabrada (EMTF): offizieller GTFS-Realtime-Feed (Fuenlabrada, Community of Madrid, Spanien; sa) aus dem Mobility-Database-Katalog (mdb-2403). Status, Fahrzeugpositionen, Prognosen, Störungen. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "Feed-Status: Zeitstempel und Anzahl Fahrten/Fahrzeuge/Meldungen",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-fuen-2403-cli status"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Fahrzeugpositionen (VehiclePosition, --limit N)",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-fuen-2403-cli fahrzeuge"
+    },
+    {
+      "name": "updates",
+      "displayName": "updates",
+      "description": "Fahrt-Prognosen (TripUpdate, --limit N)",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-fuen-2403-cli updates"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Störungsmeldungen (Alert, --limit N)",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-fuen-2403-cli meldungen"
+    },
+    {
+      "name": "entity",
+      "displayName": "entity",
+      "description": "Ein Entity per ID (<id>)",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-fuen-2403-cli entity"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_realtime",
+    "realtime": true,
+    "source_url": "https://api.control.optibus.co/opendata/v1/gtfs-rt/alerts?uid=c-5cfcd2d1",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.control.optibus.co/robots.txt per kanonischem robots.js geprüft (fail-closed). Feed im Mobility Database Katalog ohne Auth gelistet.",
+    "tos": "Offene Echtzeitdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "echtzeit",
+      "realtime",
+      "gtfs-rt",
+      "gtfs realtime",
+      "öffis",
+      "public transport",
+      "verspätung",
+      "delay",
+      "fahrzeugposition",
+      "vehicle position",
+      "störung",
+      "alert",
+      "fuenlabrada",
+      "empresa municipal de transportes de fuen",
+      "spanien",
+      "spain"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Community of Madrid",
+      "city": "Fuenlabrada",
+      "bbox": [
+        -3.841137,
+        40.275674,
+        -3.764138,
+        40.314138
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "api.control.optibus.co",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=api.control.optibus.co&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.control.optibus.co.png",
+      "brand_domain": "api.control.optibus.co"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2577,
+      "throughput_rps": 0.388,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS-RT 2.0",
+      "last_scrape": "2026-10-13T13:18:05.784Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Empresa Municipal de Transportes de Fuenlabrada (EMTF) (GTFS-Realtime)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T20:14:22.493Z",
+      "robots": "allowed"
+    }
+  }
+}

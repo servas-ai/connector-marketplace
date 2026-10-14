@@ -1,0 +1,167 @@
+{
+  "id": "servas-ai.opencli-polygon-gasstation",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Polygon Gas Station – Gas-Preise",
+  "description": "Polygon (MATIC) Gas Station v2: empfohlene maxPriorityFee/maxFee für safeLow, standard und fast, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "polygon",
+    "gas",
+    "fees",
+    "matic",
+    "ethereum-l2",
+    "web3"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://gasstation.polygon.technology/",
+    "homepage": "https://gasstation.polygon.technology/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gasstation.polygon.technology/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Polygon Gas Station: öffentlich, keyless; nur Lesen, Drossel.",
+    "license": "terms-of-source (Polygon Technology)",
+    "country": "INT",
+    "keywords": [
+      "polygon",
+      "gas",
+      "fees",
+      "matic",
+      "ethereum-l2",
+      "web3"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-31",
+    "worker": "open-apis-31-0318",
+    "logo": {
+      "domain": "gasstation.polygon.technology",
+      "file": "assets/logos/gasstation.polygon.technology.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://polygon.technology/favicon.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:50:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Polygon Technology)",
+        "url": "https://polygon.technology/",
+        "evidence": "https://polygon.technology/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Polygon Gas Station – Gas-Preise (gasstation.polygon.technology)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T03:50:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Polygon Gas Station – Gas-Preise",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "maxFee"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

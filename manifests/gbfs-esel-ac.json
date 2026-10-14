@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-gbfs-esel-ac",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "esel.ac (GBFS)",
+  "description": "esel.ac in Aachen (Deutschland): offener GBFS-Feed 2.1 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-esel-ac-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-esel-ac-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-esel-ac-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-esel-ac-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://di.esel.ac/gbfs/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "di.esel.ac/robots.txt per kanonischem robots.js geprüft (fail-closed): Feed nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "aachen",
+      "esel ac",
+      "deutschland",
+      "germany"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": null,
+      "city": "Aachen",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "di.esel.ac",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c3/41/0c/c3410cd2-d74a-1eee-ddf9-77c57eefd460/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/esel.ac.png",
+      "brand_domain": "esel.ac",
+      "source_kind": "appstore"
+    },
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS 2.1",
+      "last_scrape": "2026-10-13T14:25:16.390Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "esel.ac (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "evidence": "https://di.esel.ac/gbfs/gbfs.json → system_information.license_id/license_url",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "no",
+      "attribution_text": "Daten: esel.ac (GBFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GBFS-Feed des Betreibers (MobilityData systems.csv, ohne Auth); Lizenz CC0-1.0",
+      "source_kind": "official",
+      "server_country": "DE",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Offene Lizenz CC0-1.0 im Feed belegt, keine personenbezogenen Daten, kein Login, robots.txt erlaubt"
+        ]
+      },
+      "checked_at": "2026-10-13T14:24:33Z"
+    },
+    "homepage": "https://esel.ac/"
+  }
+}

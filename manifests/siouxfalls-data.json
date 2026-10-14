@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-siouxfalls-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "City of Sioux Falls SD Open Data (Socrata)",
+  "description": "City of Sioux Falls (South Dakota): Open-Data-Katalog mit Stadtratsbezirken, Geodaten und städtischen Verwaltungsdaten. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Stadt",
+    "South Dakota",
+    "Verwaltung",
+    "City of Sioux Falls"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Stadt",
+    "South Dakota",
+    "Verwaltung",
+    "City of Sioux Falls"
+  ],
+  "homepage": "https://www.siouxfalls.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "South Dakota",
+    "city": "Sioux Falls",
+    "scope": "city"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "siouxfalls-data datasets",
+      "command": "siouxfalls-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "siouxfalls-data dataset",
+      "command": "siouxfalls-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "siouxfalls-data rows",
+      "command": "siouxfalls-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://siouxfalls.data.socrata.com/api/catalog/v1",
+    "homepage": "https://www.siouxfalls.gov/",
+    "portal": "https://siouxfalls.data.socrata.com/",
+    "provider": "City of Sioux Falls, South Dakota",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Stadt",
+      "South Dakota",
+      "Verwaltung",
+      "City of Sioux Falls"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "South Dakota",
+      "city": "Sioux Falls",
+      "scope": "city"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "siouxfalls.data.socrata.com/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "City of Sioux Falls, South Dakota Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "siouxfalls.data.socrata.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.siouxfalls.gov/files/templates/00000000-0000-0000-0000-000000000000/f0699977-4bae-4f0e-b5a2-2c9736b63a4d/v/498/print-header-logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/siouxfalls.data.socrata.com.png",
+      "source": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "City of Sioux Falls SD Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von City of Sioux Falls, South Dakota; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von City of Sioux Falls, South Dakota; je Dataset im Feld license",
+    "logo_source": "header-logo",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:54.064Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "servas-ai.opencli-pokeapi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "PokéAPI – Pokémon-Daten (RESTful)",
+  "description": "PokéAPI v2: Pokémon-Details (Typen, Basiswerte, Fähigkeiten, Größe/Gewicht), Pokémon-Liste und Typen inkl. Schadensbeziehungen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "pokemon",
+      "displayName": "pokemon",
+      "description": "pokeapi pokemon",
+      "command": "pokeapi-cli pokemon"
+    },
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "pokeapi liste",
+      "command": "pokeapi-cli liste"
+    },
+    {
+      "name": "typ",
+      "displayName": "typ",
+      "description": "pokeapi typ",
+      "command": "pokeapi-cli typ"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://pokeapi.co/api/v2/pokemon",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "pokeapi.co/robots.txt: kein Disallow für /api/. Freie Open-Source-API, Fair-Use-Richtlinie (Caching). Drossel ≥2 s.",
+    "tos": "PokéAPI: kostenlos, ohne Key; Fair Use (Ressourcen lokal cachen). Pokémon-Marken © Nintendo/Game Freak.",
+    "logo": {
+      "domain": "pokeapi.co",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://pokeapi.co/pokeapi_192_square.png",
+      "fallback": "initials",
+      "file": "assets/logos/pokeapi.co.png",
+      "brand_domain": "pokeapi.co",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3997,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T08:05:23.772Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "PokéAPI – Pokémon-Daten (RESTful)",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "pokeapi",
+      "pok",
+      "mon-details",
+      "typen",
+      "basiswerte",
+      "fähigkeiten",
+      "größe",
+      "gewicht",
+      "mon-liste",
+      "schadensbeziehungen",
+      "mon-daten",
+      "restful",
+      "tech",
+      "pokemon",
+      "liste",
+      "typ",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "CO",
+      "scope": "country"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:50.274Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://pokeapi.co/"
+  }
+}

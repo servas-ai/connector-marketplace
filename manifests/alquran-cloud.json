@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-alquran-cloud",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "AlQuran Cloud – Koran-Texte und Übersetzungen",
+  "description": "AlQuran Cloud API: Suren-Verzeichnis, Verse einer Sure in Originaltext oder Übersetzung (z. B. Deutsch) und verfügbare Ausgaben.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "koran",
+    "quran",
+    "religion",
+    "islam",
+    "sure",
+    "surah",
+    "vers",
+    "verse"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suren",
+      "displayName": "suren",
+      "description": "Alle 114 Suren",
+      "command": "alquran-cloud-cli suren"
+    },
+    {
+      "name": "sure",
+      "displayName": "sure",
+      "description": "Verse einer Sure (<nr>)",
+      "command": "alquran-cloud-cli sure"
+    },
+    {
+      "name": "ausgaben",
+      "displayName": "ausgaben",
+      "description": "Ausgaben/Übersetzungen einer Sprache (<code>)",
+      "command": "alquran-cloud-cli ausgaben"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://api.alquran.cloud/v1/surah",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.alquran.cloud/robots.txt: keine Sperren. Freie API, 1 req/2 s.",
+    "tos": "AlQuran Cloud (Islamic Network): freie Nutzung; Übersetzungen nach Lizenz der jeweiligen Ausgabe.",
+    "keywords": [
+      "koran",
+      "quran",
+      "religion",
+      "islam",
+      "sure",
+      "surah",
+      "vers",
+      "verse",
+      "übersetzung",
+      "translation",
+      "arabisch",
+      "arabic",
+      "kultur",
+      "culture",
+      "text",
+      "heilige schrift"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "api.alquran.cloud",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=api.alquran.cloud&sz=128",
+      "fallback": "initials",
+      "brand_domain": "api.alquran.cloud"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 4010,
+      "throughput_rps": 0.249,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:14:45.066Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "AlQuran Cloud – Koran-Texte und Übersetzungen",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "nr",
+          "name",
+          "verse"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://alquran.cloud",
+    "operator": {
+      "name": "Islamic Network (AlQuran Cloud)",
+      "source": "x-servas.operator (vorher String; quality-v-2146 als Objekt normalisiert)"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.903Z",
+      "robots": "allowed"
+    }
+  }
+}

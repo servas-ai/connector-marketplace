@@ -1,0 +1,195 @@
+{
+  "id": "servas-ai.opencli-bratislava-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenData Bratislava – Hauptstadt Bratislava (ArcGIS Hub)",
+  "description": "data.bratislava.sk – Hlavné mesto SR Bratislava: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "bratislava-data suche",
+      "command": "bratislava-data-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "bratislava-data neu",
+      "command": "bratislava-data-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "bratislava-data datensatz",
+      "command": "bratislava-data-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.bratislava.sk/search",
+    "homepage": "https://data.bratislava.sk/",
+    "country": "SK",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.bratislava.sk/robots.txt geprüft (fail-closed): Disallow nur /sites/ /admin/ /sessions/ /groups/ /people/ /workspace/ – /api/search/v1 nicht gesperrt; Crawl-delay 60 (Hub-Standard) → nur Einzelabfragen, kein Bulk-Crawl. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Hlavné mesto SR Bratislava: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "logo": {
+      "domain": "data.bratislava.sk",
+      "brand_domain": "bratislava.sk",
+      "chain": [
+        "official-site",
+        "wikimedia"
+      ],
+      "resolved": "https://bratislava.sk/apple-touch-icon.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.bratislava.sk.png",
+      "source": "official-site",
+      "kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "OpenData Bratislava – Hauptstadt Bratislava (ArcGIS Hub)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "operator": {
+      "name": "Hlavné mesto SR Bratislava",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "SK",
+      "source": "Portal-Impressum/Domain"
+    },
+    "geo": {
+      "country": "SK",
+      "scope": "city",
+      "region": "Bratislavský kraj",
+      "city": "Bratislava"
+    },
+    "llms_txt": {
+      "llms_txt": false,
+      "llms_full_txt": false,
+      "openapi": null,
+      "api_kind": "OGC API Records (ArcGIS Hub Search v1)",
+      "checked_at": "2026-10-13T14:30:00Z"
+    },
+    "ampel": "gelb",
+    "license": "überwiegend CC BY 4.0, einzelne Datensätze CC BY-NC-ND 4.0 (je Datensatz prüfen)",
+    "logo_source": "official-site",
+    "connector_meta": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "evidence": "https://data.bratislava.sk/api/search/v1/collections/dataset/items (properties.licenseInfo), Stand 2026-10-13",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Hlavné mesto SR Bratislava – https://data.bratislava.sk/",
+      "personal_data": "none",
+      "legal_basis": "Offene Verwaltungsdaten (EU-Richtlinie 2019/1024 Open Data/PSI) – Lizenz je Datensatz",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "einzelne Datensätze NC-ND (nicht kommerziell)",
+          "offizielle Behördenquelle",
+          "robots.txt beachtet (fail-closed)",
+          "kein Login, keine Umgehung",
+          "nur Katalog-Metadaten, keine personenbezogenen Felder",
+          "Hosting Esri ArcGIS Online (Server-Region nicht belegt)"
+        ]
+      },
+      "checked_at": "2026-10-13T14:30:00Z"
+    },
+    "keywords": [
+      "bratislava data",
+      "opendata",
+      "arcgis",
+      "open data",
+      "hub",
+      "sk",
+      "bratislava",
+      "data",
+      "hlavn",
+      "mesto",
+      "open",
+      "katalog"
+    ],
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:11:45.115Z",
+      "robots": "allowed"
+    }
+  }
+}

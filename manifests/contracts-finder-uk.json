@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-contracts-finder-uk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UK Contracts Finder – OCDS Notices",
+  "description": "contractsfinder.service.gov.uk OCDS API: Veröffentlichte Vergabebekanntmachungen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "notices",
+      "displayName": "notices",
+      "description": "contracts-finder-uk notices",
+      "command": "contracts-finder-uk-cli notices"
+    },
+    {
+      "name": "notice",
+      "displayName": "notice",
+      "description": "contracts-finder-uk notice",
+      "command": "contracts-finder-uk-cli notice"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.contractsfinder.service.gov.uk/robots.txt: 404 (keine Sperre) – öffentliche OCDS Search API. Drossel ≥2 s.",
+    "tos": "UK Contracts Finder OCDS: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "www.contractsfinder.service.gov.uk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.contractsfinder.service.gov.uk/libraries/base-noticing/images/styles/govuk/favicon/govuk-apple-touch-icon-180x180.png?v=MzIxMDU=",
+      "fallback": "initials",
+      "file": "assets/logos/www.contractsfinder.service.gov.uk.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ocds-1.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "UK Contracts Finder – OCDS Notices",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "GB",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "contracts",
+      "finder",
+      "contracts-finder-uk",
+      "contractsfinder",
+      "service",
+      "gov",
+      "ocds",
+      "veröffentlichte",
+      "vergabebekanntmachungen",
+      "notices",
+      "international",
+      "opendata",
+      "notice",
+      "procurement",
+      "ausschreibungen",
+      "tenders",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "GB",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:35:59Z",
+      "host": "www.contractsfinder.service.gov.uk",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "51.200.10.39",
+      "server_header": "http/s",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://www.contractsfinder.service.gov.uk",
+      "country": "GB"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:20.169Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.contractsfinder.service.gov.uk/Search"
+  }
+}

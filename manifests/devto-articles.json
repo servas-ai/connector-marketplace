@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-devto-articles",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DEV Community (Forem) – Artikel & Tags",
+  "description": "DEV Community Forem API v1: aktuelle Artikel nach Tag (Titel, Reaktionen, Lesezeit, Tags) und populäre Tags, keyless JSON, llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "developer",
+    "artikel",
+    "blog",
+    "tags",
+    "community",
+    "forem",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "tags",
+      "displayName": "tags",
+      "description": "devto-articles tags",
+      "command": "devto-articles-cli tags"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://dev.to/",
+    "homepage": "https://dev.to/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "dev.to/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "DEV/Forem API: öffentliche Lese-Endpunkte keyless; DEV Terms, Inhalte der Autor:innen nur verlinken/zitieren.",
+    "license": "terms-of-source (DEV Terms; Inhalte © Autor:innen)",
+    "country": "US",
+    "keywords": [
+      "developer",
+      "artikel",
+      "blog",
+      "tags",
+      "community",
+      "forem",
+      "tech"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-16",
+    "worker": "open-apis-16-2022",
+    "logo": {
+      "domain": "dev.to",
+      "file": "assets/logos/dev.to.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://media2.dev.to/dynamic/image/width=180,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://dev.to/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:00:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (DEV Terms; Inhalte © Autor:innen)",
+        "url": "https://dev.to/terms",
+        "evidence": "https://dev.to/terms",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: DEV Community (Forem) – Artikel & Tags (dev.to)",
+      "personal_data": "pseudonymous",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Personenbezug prüfen",
+          "kommerzieller Betreiber, Terms der Quelle"
+        ]
+      },
+      "checked_at": "2026-10-13T21:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "DEV Community (Forem) – Artikel & Tags",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "url"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

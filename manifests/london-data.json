@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-london-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "London Datastore (CKAN-kompatibel)",
+  "description": "data.london.gov.uk CKAN API: Dataset-Suche und Dataset-Details (Titel, Organisation, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "london-data datasets",
+      "command": "london-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "london-data dataset",
+      "command": "london-data-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.london.gov.uk/api/action/package_search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.london.gov.uk/robots.txt: Disallow nur /debug /manage/ /login /logout – /api/action/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "Greater London Authority Datastore; Open Government Licence, Fair Use.",
+    "logo": {
+      "domain": "data.london.gov.uk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://imagedelivery.net/8ju5BoFBMRsrFxMi037A-Q/7fca7612-f116-4066-1af4-0e698ddf2b00/content",
+      "fallback": "initials",
+      "file": "assets/logos/data.london.gov.uk.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "London Datastore (CKAN-kompatibel)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "GB",
+    "ampel": "grün",
+    "license": "OGL-UK-3.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "london",
+      "london-data",
+      "gov",
+      "ckan",
+      "dataset-suche",
+      "dataset-details",
+      "titel",
+      "organisation",
+      "ressourcen",
+      "datastore",
+      "ckan-kompatibel",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": "England",
+      "city": "London",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "scope": "city"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:23:56Z",
+      "host": "data.london.gov.uk",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 200,
+      "ip": "172.67.68.118",
+      "server_header": "cloudflare",
+      "tls_issuer": "SSL Corporation",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://london.gov.uk",
+      "country": "GB"
+    },
+    "llms": {
+      "llms_txt": "https://data.london.gov.uk/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:17.343Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.london.gov.uk/"
+  }
+}

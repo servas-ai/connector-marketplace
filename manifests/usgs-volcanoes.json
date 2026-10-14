@@ -1,0 +1,182 @@
+{
+  "id": "servas-ai.opencli-usgs-volcanoes",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "USGS Volcano Hazards – Vulkan-Warnstufen & Meldungen",
+  "description": "USGS Volcano Hazards Program (HANS Public API): Vulkane mit erhöhter Warnstufe, alle überwachten US-Vulkane, aktuelle Meldungen und Vulkan-Details per Nummer. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "erhoeht",
+      "displayName": "erhoeht",
+      "description": "usgs-volcanoes erhoeht",
+      "command": "usgs-volcanoes-cli erhoeht"
+    },
+    {
+      "name": "ueberwacht",
+      "displayName": "ueberwacht",
+      "description": "usgs-volcanoes ueberwacht",
+      "command": "usgs-volcanoes-cli ueberwacht"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "usgs-volcanoes meldungen",
+      "command": "usgs-volcanoes-cli meldungen"
+    },
+    {
+      "name": "vulkan",
+      "displayName": "vulkan",
+      "description": "usgs-volcanoes vulkan",
+      "command": "usgs-volcanoes-cli vulkan"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://volcanoes.usgs.gov/hans-public/api/volcano/getElevatedVolcanoes",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "volcanoes.usgs.gov/robots.txt: 404 (keine Einschränkung). Öffentliche HANS-API des USGS. Drossel ≥2 s.",
+    "tos": "USGS: Daten der US-Regierung, gemeinfrei, Quellenangabe „USGS“ erbeten.",
+    "logo": {
+      "domain": "volcanoes.usgs.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:USGS_logo_green.svg",
+      "fallback": "initials",
+      "file": "assets/logos/volcanoes.usgs.gov.png",
+      "brand_domain": "usgs.gov",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4006,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hans-public",
+      "last_scrape": "2026-10-13T08:04:43.024Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "USGS Volcano Hazards – Vulkan-Warnstufen & Meldungen",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "wikimedia",
+    "keywords": [
+      "usgs",
+      "volcanoes",
+      "usgs-volcanoes",
+      "volcano",
+      "hazards",
+      "program",
+      "hans",
+      "vulkane",
+      "erhöhter",
+      "warnstufe",
+      "überwachten",
+      "us-vulkane",
+      "meldungen",
+      "vulkan-details",
+      "nummer",
+      "vulkan-warnstufen",
+      "opendata",
+      "erhoeht",
+      "ueberwacht",
+      "vulkan",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AS22284-DOI-OPS - U.S. Department of the Interior",
+      "asn": 22284,
+      "cdn": "Amazon CloudFront",
+      "checked_at": "2026-10-13T09:34:37Z",
+      "host": "volcanoes.usgs.gov",
+      "hoster": "U.S. Department of the Interior",
+      "http_status": 200,
+      "ip": "137.227.239.158",
+      "server_header": "nginx",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://volcanoes.usgs.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:59.028Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.usgs.gov/natural-hazards/volcano-hazards/"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-ipma-pt",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "IPMA – Wetter Portugal",
+  "description": "IPMA Open Data (Instituto Português do Mar e da Atmosfera): Orte/Distrikte, 5-Tage-Prognose je Ort und aktuelle Wetterwarnungen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "orte",
+      "displayName": "orte",
+      "description": "ipma-pt orte",
+      "command": "ipma-pt-cli orte"
+    },
+    {
+      "name": "prognose",
+      "displayName": "prognose",
+      "description": "ipma-pt prognose",
+      "command": "ipma-pt-cli prognose"
+    },
+    {
+      "name": "warnungen",
+      "displayName": "warnungen",
+      "description": "ipma-pt warnungen",
+      "command": "ipma-pt-cli warnungen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://api.ipma.pt/open-data/distrits-islands.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.ipma.pt/robots.txt: 404 (keine Einschränkung). Offizielles Open-Data-Angebot (statische JSON). Drossel ≥2 s.",
+    "tos": "IPMA Open Data: frei nutzbar mit Quellenangabe IPMA.",
+    "logo": {
+      "domain": "api.ipma.pt",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.ipma.pt/opencms/system/modules/ipma.website/resources/images/logo-ipma-17.svg",
+      "fallback": "initials",
+      "file": "assets/logos/api.ipma.pt.png",
+      "brand_domain": "ipma.pt",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4000,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "open-data",
+      "last_scrape": "2026-10-13T07:26:39.132Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "IPMA – Wetter Portugal",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "PT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "ipma",
+      "ipma-pt",
+      "open",
+      "instituto",
+      "portugu",
+      "mar",
+      "atmosfera",
+      "orte",
+      "distrikte",
+      "tage-prognose",
+      "ort",
+      "wetterwarnungen",
+      "wetter",
+      "portugal",
+      "opendata",
+      "prognose",
+      "warnungen",
+      "weather",
+      "forecast",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "PT",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "RCCN Fundacao para a Ciencia e a Tecnologia, I.P.",
+      "asn": 1930,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:22:13Z",
+      "host": "api.ipma.pt",
+      "hoster": "RCCN Fundacao para a Ciencia e a Tecnologia, I.P.",
+      "http_status": 200,
+      "ip": "193.137.20.123",
+      "server_header": "nginx",
+      "tls_issuer": "Hellenic Academic and Research Institutions CA",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://ipma.pt",
+      "country": "PT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:02.614Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.ipma.pt/pt/index.html"
+  }
+}

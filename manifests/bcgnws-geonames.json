@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-bcgnws-geonames",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BC Geographical Names – amtliche Ortsnamen British Columbia",
+  "description": "BC Geographical Names Web Service (Province of British Columbia): amtliche geografische Namen mit Status, Objektart, Kategorie, Beschlussdatum, NTS-Kartenblatt und Koordinaten (EPSG:3005) per Suche oder Namens-ID, keyless GeoJSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "tags": [
+    "ortsnamen",
+    "gazetteer",
+    "british-columbia",
+    "kanada",
+    "geonames",
+    "toponyme",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "name",
+      "displayName": "name",
+      "description": "bcgnws-geonames name",
+      "command": "bcgnws-geonames-cli name"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "realtime": false,
+    "source_url": "https://apps.gov.bc.ca/",
+    "homepage": "https://apps.gov.bc.ca/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "apps.gov.bc.ca/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "BCGNWS: offene Verwaltungsdaten ohne Key unter OGL-BC, Quellenangabe.",
+    "license": "OGL-BC-2.0 (Open Government Licence – British Columbia)",
+    "country": "CA",
+    "keywords": [
+      "ortsnamen",
+      "gazetteer",
+      "british-columbia",
+      "kanada",
+      "geonames",
+      "toponyme",
+      "geo"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-22",
+    "worker": "open-apis-22-2302",
+    "logo": {
+      "domain": "apps.gov.bc.ca",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "bcgnws",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "OGL-BC-2.0 (Open Government Licence – British Columbia)",
+        "url": "https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc",
+        "evidence": "https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: BC Geographical Names – amtliche Ortsnamen British Columbia (apps.gov.bc.ca)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "CA",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T23:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "BC Geographical Names – amtliche Ortsnamen British Columbia",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "feature_type"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

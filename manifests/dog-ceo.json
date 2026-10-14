@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-dog-ceo",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Dog CEO – Dog API",
+  "description": "Dog CEO API: Hunderassen und Zufallsbilder. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Hund",
+    "Dog",
+    "Rassen",
+    "Bilder",
+    "API"
+  ],
+  "keywords": [
+    "Hund",
+    "Dog",
+    "Rassen",
+    "Bilder",
+    "API"
+  ],
+  "homepage": "https://dog.ceo/dog-api/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "rassen",
+      "displayName": "rassen",
+      "description": "dog-ceo rassen",
+      "command": "dog-ceo-cli rassen"
+    },
+    {
+      "name": "zufall",
+      "displayName": "zufall",
+      "description": "dog-ceo zufall",
+      "command": "dog-ceo-cli zufall"
+    },
+    {
+      "name": "rasse",
+      "displayName": "rasse",
+      "description": "dog-ceo rasse",
+      "command": "dog-ceo-cli rasse"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://dog.ceo/api/breeds/list/all",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "dog.ceo/robots.txt: API erlaubt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Dog CEO public API; Fair Use.",
+    "provider": "Dog CEO",
+    "homepage": "https://dog.ceo/dog-api/",
+    "data_license": "Dog CEO public API",
+    "keywords": [
+      "Hund",
+      "Dog",
+      "Rassen",
+      "Bilder",
+      "API"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "dog.ceo",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://dog.ceo/img/dog-api-logo.svg",
+      "fallback": "initials",
+      "brand_domain": "dog.ceo",
+      "file": "assets/logos/dog.ceo.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Dog CEO – Dog API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:53.541Z",
+      "robots": "allowed"
+    }
+  }
+}

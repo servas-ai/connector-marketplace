@@ -1,0 +1,180 @@
+{
+  "id": "servas-ai.opencli-climate-trace",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Climate TRACE – Emissionen je Land & Anlage",
+  "description": "Climate TRACE API v6: Treibhausgas-Emissionen je Land und Jahr (CO₂, CH₄, N₂O, CO₂e) mit Rang, emittierende Anlagen (Assets) je Land/Sektor und Sektor-Definitionen, keyless JSON, CC BY 4.0.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "climate-trace",
+    "emissions",
+    "ghg",
+    "co2",
+    "climate",
+    "esg"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "anlagen",
+      "displayName": "anlagen",
+      "description": "climate-trace anlagen",
+      "command": "climate-trace-cli anlagen"
+    },
+    {
+      "name": "sektoren",
+      "displayName": "sektoren",
+      "description": "climate-trace sektoren",
+      "command": "climate-trace-cli sektoren"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.climatetrace.org/",
+    "homepage": "https://api.climatetrace.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.climatetrace.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Climate TRACE: offene Daten CC BY 4.0, keyless API; Anlagen-Eigentümer sind Firmen (keine Privatpersonen).",
+    "license": "CC-BY-4.0 (Climate TRACE)",
+    "country": "INT",
+    "keywords": [
+      "climate-trace",
+      "emissions",
+      "ghg",
+      "co2",
+      "climate",
+      "esg"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-29",
+    "worker": "open-apis-29-0218",
+    "logo": {
+      "domain": "api.climatetrace.org",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v6",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:50:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC-BY-4.0 (Climate TRACE)",
+        "url": "https://climatetrace.org/data",
+        "evidence": "https://climatetrace.org/data",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Climate TRACE – Emissionen je Land & Anlage (api.climatetrace.org)",
+      "personal_data": "company",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Firmen-/Arbeitgeberangaben enthalten (keine Privatpersonen)",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T02:50:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Climate TRACE – Emissionen je Land & Anlage",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "co2"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

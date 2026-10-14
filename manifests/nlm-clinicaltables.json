@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-nlm-clinicaltables",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NLM Clinical Table Search – ICD-10, RxTerms, LOINC",
+  "description": "NLM Clinical Table Search Service (clinicaltables.nlm.nih.gov): Autocomplete-Suche in ICD-10-CM-Diagnosecodes, RxTerms-Medikamenten und LOINC-Labortests. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "icd10",
+      "displayName": "icd10",
+      "description": "nlm-clinicaltables icd10",
+      "command": "nlm-clinicaltables-cli icd10"
+    },
+    {
+      "name": "medikamente",
+      "displayName": "medikamente",
+      "description": "nlm-clinicaltables medikamente",
+      "command": "nlm-clinicaltables-cli medikamente"
+    },
+    {
+      "name": "loinc",
+      "displayName": "loinc",
+      "description": "nlm-clinicaltables loinc",
+      "command": "nlm-clinicaltables-cli loinc"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "health",
+    "realtime": false,
+    "source_url": "https://clinicaltables.nlm.nih.gov/api/icd10cm/v3/search",
+    "homepage": "https://clinicaltables.nlm.nih.gov/",
+    "keywords": [
+      "nlm",
+      "clinicaltables",
+      "nlm-clinicaltables",
+      "clinical",
+      "table",
+      "service",
+      "nih",
+      "gov",
+      "autocomplete-suche",
+      "icd-10-cm-diagnosecodes",
+      "rxterms-medikamenten",
+      "loinc-labortests",
+      "icd-10",
+      "rxterms",
+      "loinc",
+      "international",
+      "icd10",
+      "medikamente",
+      "drugs",
+      "medicines",
+      "arzneimittel"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "clinicaltables.nlm.nih.gov/robots.txt: 404 (keine Einschränkung). Offizieller NLM-Webservice. Drossel ≥2 s.",
+    "tos": "NLM Clinical Tables: frei nutzbar, Datenquellen-Lizenzen beachten (ICD-10-CM Public Domain, LOINC-Lizenz, RxTerms NLM).",
+    "logo": {
+      "domain": "clinicaltables.nlm.nih.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://clinicaltables.nlm.nih.gov/projectLogo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/clinicaltables.nlm.nih.gov.png",
+      "brand_domain": "nlm.nih.gov",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3998,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": "2026-10-13T07:27:17.600Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "NLM Clinical Table Search – ICD-10, RxTerms, LOINC",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "svg",
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "NLM-GW - National Library of Medicine",
+      "asn": 70,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:38:41Z",
+      "host": "clinicaltables.nlm.nih.gov",
+      "hoster": "National Library of Medicine",
+      "http_status": 200,
+      "ip": "130.14.65.58",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://clinicaltables.nlm.nih.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:19.762Z",
+      "robots": "allowed"
+    }
+  }
+}

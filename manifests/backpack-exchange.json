@@ -1,0 +1,181 @@
+{
+  "id": "servas-ai.opencli-backpack-exchange",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Backpack Exchange – Markt-Daten",
+  "description": "Backpack Exchange Public API: 24h-Ticker aller Spot-/Perp-Märkte, Kerzen (Klines) und Orderbuch-Tiefe je Symbol, keyless JSON (llms.txt vorhanden).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "backpack",
+    "crypto",
+    "exchange",
+    "ticker",
+    "klines",
+    "orderbook"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "klines",
+      "displayName": "klines",
+      "description": "backpack-exchange klines",
+      "command": "backpack-exchange-cli klines"
+    },
+    {
+      "name": "tiefe",
+      "displayName": "tiefe",
+      "description": "backpack-exchange tiefe",
+      "command": "backpack-exchange-cli tiefe"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.backpack.exchange/",
+    "homepage": "https://api.backpack.exchange/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.backpack.exchange/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Backpack Exchange: öffentliche Markt-Endpunkte ohne Key; nur Lesen, kein Trading, Drossel 1 req/2 s.",
+    "license": "terms-of-source (Backpack Exchange)",
+    "country": "INT",
+    "keywords": [
+      "backpack",
+      "crypto",
+      "exchange",
+      "ticker",
+      "klines",
+      "orderbook"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-29",
+    "worker": "open-apis-29-0218",
+    "logo": {
+      "domain": "api.backpack.exchange",
+      "file": "assets/logos/api.backpack.exchange.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://backpack.exchange/favicon-64x64.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://backpack.exchange/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:50:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Backpack Exchange)",
+        "url": "https://backpack.exchange/terms",
+        "evidence": "https://backpack.exchange/terms",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Backpack Exchange – Markt-Daten (api.backpack.exchange)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T02:50:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Backpack Exchange – Markt-Daten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "last"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

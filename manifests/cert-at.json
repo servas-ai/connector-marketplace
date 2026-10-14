@@ -1,0 +1,159 @@
+{
+  "id": "servas-ai.opencli-cert-at",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CERT.at – Warnungen",
+  "description": "CERT.at Sicherheitswarnungen (RSS)",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "warnungen",
+      "displayName": "warnungen",
+      "description": "CERT.at – Warnungen: warnungen",
+      "command": "cert-at-cli warnungen --limit 10 --format json"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "CERT.at – Warnungen: suche",
+      "command": "cert-at-cli suche --q Update --limit 5 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.cert.at/cert-at.de.warnings.rss_2.0.xml",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host (OPENCLI_DELAY_MS, nicht unterschreiten)",
+    "robots_status": "ok",
+    "robots": "www.cert.at/robots.txt erlaubt (* Disallow leer).",
+    "logo": {
+      "domain": "www.cert.at",
+      "file": "assets/logos/www.cert.at.png",
+      "source": "header-logo",
+      "resolved": "https://www.cert.at/img/web-logo.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "0.1.0",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "CERT.at – Warnungen",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "header-logo",
+    "keywords": [
+      "cert",
+      "cert-at",
+      "sicherheitswarnungen",
+      "öffentlichen",
+      "rss-2",
+      "feed",
+      "warnungen",
+      "rss",
+      "opendata",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze",
+      "Sicherheit",
+      "Österreich",
+      "Cyber"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "UniVie - Vienna University",
+      "asn": 760,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:18:03Z",
+      "host": "www.cert.at",
+      "hoster": "Vienna University",
+      "http_status": 200,
+      "ip": "131.130.249.234",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.cert.at/de/ueber-uns/impressum/",
+      "legal_form": "GmbH",
+      "name": "CERT.at GmbH",
+      "register_id": "FN 561772k",
+      "source": "imprint",
+      "website": "https://www.cert.at",
+      "country": "AT"
+    },
+    "homepage": "https://www.cert.at",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:19.055Z",
+      "robots": "allowed"
+    }
+  }
+}

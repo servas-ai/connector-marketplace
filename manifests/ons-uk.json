@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-ons-uk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ONS UK – Office for National Statistics API",
+  "description": "api.beta.ons.gov.uk v1: Datasets und Dataset-Details (Office for National Statistics). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "ons-uk datasets",
+      "command": "ons-uk-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "ons-uk dataset",
+      "command": "ons-uk-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.beta.ons.gov.uk/v1/datasets",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.beta.ons.gov.uk/robots.txt: 404 (keine Sperre) – öffentliche ONS API v1. Drossel ≥2 s.",
+    "tos": "ONS: Open Government Licence v3; Fair Use (Rate-Limits beachten).",
+    "logo": {
+      "domain": "api.beta.ons.gov.uk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://cdn.ons.gov.uk/assets/images/ons-logo/v2/ons-logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/api.beta.ons.gov.uk.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "ONS UK – Office for National Statistics API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "GB",
+    "ampel": "grün",
+    "license": "OGL-UK-3.0",
+    "logo_source": "svg",
+    "keywords": [
+      "ons",
+      "ons-uk",
+      "beta",
+      "gov",
+      "datasets",
+      "dataset-details",
+      "office",
+      "national",
+      "statistics",
+      "international",
+      "opendata",
+      "dataset",
+      "statistik",
+      "zeitreihen",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "GB",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:39:13Z",
+      "host": "api.beta.ons.gov.uk",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 200,
+      "ip": "104.16.69.85",
+      "server_header": "cloudflare",
+      "tls_issuer": "Google Trust Services",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://beta.ons.gov.uk",
+      "country": "GB"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.907Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.ons.gov.uk/"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "id": "servas-ai.opencli-diavgeia-gr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Diavgeia – Griechische Verwaltungsentscheidungen & Vergaben",
+  "description": "Δι@ύγεια OpenData API: veröffentlichte Entscheidungen griechischer Behörden (u.a. Direktvergaben, Zahlungsanweisungen mit Beträgen), Organisationen (inkl. Steuernummer) und Entscheidungstypen – keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "griechenland",
+    "diavgeia",
+    "verwaltung",
+    "vergabe",
+    "entscheidungen",
+    "transparenz",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "entscheidung",
+      "displayName": "entscheidung",
+      "description": "diavgeia-gr entscheidung",
+      "command": "diavgeia-gr-cli entscheidung"
+    },
+    {
+      "name": "organisation",
+      "displayName": "organisation",
+      "description": "diavgeia-gr organisation",
+      "command": "diavgeia-gr-cli organisation"
+    },
+    {
+      "name": "typen",
+      "displayName": "typen",
+      "description": "diavgeia-gr typen",
+      "command": "diavgeia-gr-cli typen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://diavgeia.gov.gr/",
+    "homepage": "https://diavgeia.gov.gr/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "diavgeia.gov.gr/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Diavgeia OpenData: öffentliche REST-API ohne Key; Fair-Use, kleine Seitengrößen.",
+    "license": "terms-of-source (Diavgeia Open Data, Gesetz 4210/2013 – freie Weiterverwendung)",
+    "country": "GR",
+    "keywords": [
+      "griechenland",
+      "diavgeia",
+      "verwaltung",
+      "vergabe",
+      "entscheidungen",
+      "transparenz",
+      "opendata"
+    ],
+    "geo": {
+      "country": "GR",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Company-Data-0404",
+    "worker": "company-data-0404",
+    "logo": {
+      "domain": "diavgeia.gov.gr",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "opendata",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T04:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Diavgeia Open Data, Gesetz 4210/2013 – freie Weiterverwendung)",
+        "url": "https://diavgeia.gov.gr/api/help",
+        "evidence": "https://diavgeia.gov.gr/api/help",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Diavgeia – Griechische Verwaltungsentscheidungen & Vergaben (diavgeia.gov.gr)",
+      "personal_data": "check",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "GR",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Entscheidungen können Namen natürlicher Personen (Unterzeichner, Begünstigte) enthalten – Personenbezug prüfen"
+        ]
+      },
+      "checked_at": "2026-10-14T04:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Diavgeia – Griechische Verwaltungsentscheidungen & Vergaben",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "datum"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

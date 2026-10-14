@@ -1,0 +1,155 @@
+{
+  "id": "servas-ai.opencli-gtfsrt-it-cotral-busone-3388",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Cotral - BusOne (GTFS-Realtime)",
+  "description": "Cotral - BusOne: offizieller GTFS-Realtime-Feed (Avezzano, Abruzzo, Italien; tu) aus dem Mobility-Database-Katalog (mdb-3388). Status, Fahrzeugpositionen, Prognosen, Störungen. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "Feed-Status: Zeitstempel und Anzahl Fahrten/Fahrzeuge/Meldungen",
+      "command": "gtfsrt-it-cotral-busone-3388-cli status"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Fahrzeugpositionen (VehiclePosition, --limit N)",
+      "command": "gtfsrt-it-cotral-busone-3388-cli fahrzeuge"
+    },
+    {
+      "name": "updates",
+      "displayName": "updates",
+      "description": "Fahrt-Prognosen (TripUpdate, --limit N)",
+      "command": "gtfsrt-it-cotral-busone-3388-cli updates"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Störungsmeldungen (Alert, --limit N)",
+      "command": "gtfsrt-it-cotral-busone-3388-cli meldungen"
+    },
+    {
+      "name": "entity",
+      "displayName": "entity",
+      "description": "Ein Entity per ID (<id>)",
+      "command": "gtfsrt-it-cotral-busone-3388-cli entity"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_realtime",
+    "realtime": true,
+    "source_url": "https://proxy.busone.app/cotral/gtfs-rt/trip-updates.pb",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "proxy.busone.app/robots.txt per kanonischem robots.js geprüft (fail-closed). Feed im Mobility Database Katalog ohne Auth gelistet.",
+    "tos": "Offene Echtzeitdaten, Lizenz: https://proxy.busone.app/cotral/readme.",
+    "keywords": [
+      "echtzeit",
+      "realtime",
+      "gtfs-rt",
+      "gtfs realtime",
+      "öffis",
+      "public transport",
+      "verspätung",
+      "delay",
+      "fahrzeugposition",
+      "vehicle position",
+      "störung",
+      "alert",
+      "avezzano",
+      "cotral - busone",
+      "italien",
+      "italy"
+    ],
+    "geo": {
+      "country": "IT",
+      "region": "Abruzzo",
+      "city": "Avezzano",
+      "bbox": [
+        11.3233823358,
+        41.2083834083,
+        13.9884722796,
+        43.3311428011
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "proxy.busone.app",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=proxy.busone.app&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/proxy.busone.app.png",
+      "brand_domain": "proxy.busone.app"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3483,
+      "throughput_rps": 0.287,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS-RT 2.0",
+      "last_scrape": "2026-10-13T13:14:29.501Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Cotral - BusOne (GTFS-Realtime)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.cotralspa.it/"
+  }
+}

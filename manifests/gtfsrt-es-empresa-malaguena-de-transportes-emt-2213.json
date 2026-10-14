@@ -1,0 +1,154 @@
+{
+  "id": "servas-ai.opencli-gtfsrt-es-empresa-malaguena-de-transportes-emt-2213",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Empresa Malagueña de Transportes (EMT) (GTFS-Realtime)",
+  "description": "Empresa Malagueña de Transportes (EMT): offizieller GTFS-Realtime-Feed (Málaga, Andalusia, Spanien; vp) aus dem Mobility-Database-Katalog (mdb-2213). Status, Fahrzeugpositionen, Prognosen, Störungen. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "Feed-Status: Zeitstempel und Anzahl Fahrten/Fahrzeuge/Meldungen",
+      "command": "gtfsrt-es-empresa-malaguena-de-transportes-emt-2213-cli status"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Fahrzeugpositionen (VehiclePosition, --limit N)",
+      "command": "gtfsrt-es-empresa-malaguena-de-transportes-emt-2213-cli fahrzeuge"
+    },
+    {
+      "name": "updates",
+      "displayName": "updates",
+      "description": "Fahrt-Prognosen (TripUpdate, --limit N)",
+      "command": "gtfsrt-es-empresa-malaguena-de-transportes-emt-2213-cli updates"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Störungsmeldungen (Alert, --limit N)",
+      "command": "gtfsrt-es-empresa-malaguena-de-transportes-emt-2213-cli meldungen"
+    },
+    {
+      "name": "entity",
+      "displayName": "entity",
+      "description": "Ein Entity per ID (<id>)",
+      "command": "gtfsrt-es-empresa-malaguena-de-transportes-emt-2213-cli entity"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_realtime",
+    "realtime": true,
+    "source_url": "https://gtfs.emtmalaga.es/GTFSRTapi/api/vehicleposition",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gtfs.emtmalaga.es/robots.txt per kanonischem robots.js geprüft (fail-closed). Feed im Mobility Database Katalog ohne Auth gelistet.",
+    "tos": "Offene Echtzeitdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "echtzeit",
+      "realtime",
+      "gtfs-rt",
+      "gtfs realtime",
+      "öffis",
+      "public transport",
+      "verspätung",
+      "delay",
+      "fahrzeugposition",
+      "vehicle position",
+      "störung",
+      "alert",
+      "málaga",
+      "empresa malagueña de transportes (emt)",
+      "spanien",
+      "spain"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Andalusia",
+      "city": "Málaga",
+      "bbox": [
+        -4.5761065131992,
+        36.64636358663,
+        -4.33577227570503,
+        36.7800300544653
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "gtfs.emtmalaga.es",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=gtfs.emtmalaga.es&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/gtfs.emtmalaga.es.png",
+      "brand_domain": "gtfs.emtmalaga.es"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4049,
+      "throughput_rps": 0.247,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS-RT 2.0",
+      "last_scrape": "2026-10-13T13:17:18.029Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Empresa Malagueña de Transportes (EMT) (GTFS-Realtime)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

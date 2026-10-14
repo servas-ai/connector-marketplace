@@ -1,0 +1,167 @@
+{
+  "id": "servas-ai.opencli-purescript-pursuit",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Pursuit – PureScript-API-Suche",
+  "description": "Pursuit (PureScript Package Database): Suche nach Funktionen/Typen/Modulen/Paketen mit Typsignatur, Paket und Version, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "pursuit",
+    "purescript",
+    "functional",
+    "search",
+    "package-registry",
+    "api-docs"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://pursuit.purescript.org/",
+    "homepage": "https://pursuit.purescript.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "pursuit.purescript.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Pursuit: öffentliche Such-JSON ohne Key; nur Lesen.",
+    "license": "terms-of-source (PureScript; Paket-Lizenzen per-item)",
+    "country": "INT",
+    "keywords": [
+      "pursuit",
+      "purescript",
+      "functional",
+      "search",
+      "package-registry",
+      "api-docs"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-27",
+    "worker": "open-apis-27-0132",
+    "logo": {
+      "domain": "pursuit.purescript.org",
+      "file": "assets/logos/pursuit.purescript.org.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://pursuit.purescript.org/static/res/favicon/apple-touch-icon.png?etag=8GZ6nNN9",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:00:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (PureScript; Paket-Lizenzen per-item)",
+        "url": "https://pursuit.purescript.org/help",
+        "evidence": "https://pursuit.purescript.org/help",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Pursuit – PureScript-API-Suche (pursuit.purescript.org)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T02:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Pursuit – PureScript-API-Suche",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "package"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

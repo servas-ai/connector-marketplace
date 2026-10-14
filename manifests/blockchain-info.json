@@ -1,0 +1,171 @@
+{
+  "id": "servas-ai.opencli-blockchain-info",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Blockchain.com Explorer-API – BTC-Kurse & letzter Block",
+  "description": "Blockchain.com (blockchain.info) Explorer-API: BTC-Kurse in über 20 Währungen, Umrechnung Fiat→BTC, letzter Block und aktuelle Mining-Difficulty. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "blockchain-info ticker",
+      "command": "blockchain-info-cli ticker"
+    },
+    {
+      "name": "umrechnen",
+      "displayName": "umrechnen",
+      "description": "blockchain-info umrechnen",
+      "command": "blockchain-info-cli umrechnen"
+    },
+    {
+      "name": "letzter-block",
+      "displayName": "letzter-block",
+      "description": "blockchain-info letzter-block",
+      "command": "blockchain-info-cli letzter-block"
+    },
+    {
+      "name": "difficulty",
+      "displayName": "difficulty",
+      "description": "blockchain-info difficulty",
+      "command": "blockchain-info-cli difficulty"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://blockchain.info/ticker",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "blockchain.info/robots.txt (→ blockchain.com): kein Disallow für /ticker, /tobtc, /latestblock, /q/. Öffentliche Explorer-API ohne Key. Drossel ≥2 s.",
+    "tos": "Blockchain.com Data API: öffentliche Endpunkte ohne Key, Fair Use (bei Massenabfrage Rate-Limit).",
+    "logo": {
+      "domain": "blockchain.info",
+      "brand_domain": "blockchain.com",
+      "file": "assets/logos/blockchain.info.png",
+      "source": "apple-touch-icon",
+      "resolved": "https://www.blockchain.com/static/apple-touch-icon.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3944,
+      "throughput_rps": 0.254,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:04:26.240Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Blockchain.com Explorer-API – BTC-Kurse & letzter Block",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "apple-touch-icon",
+    "keywords": [
+      "blockchain",
+      "info",
+      "blockchain-info",
+      "explorer-api",
+      "btc-kurse",
+      "währungen",
+      "umrechnung",
+      "fiat",
+      "btc",
+      "letzter",
+      "block",
+      "mining-difficulty",
+      "finance",
+      "ticker",
+      "umrechnen",
+      "letzter-block",
+      "difficulty",
+      "finanzen",
+      "markets",
+      "märkte",
+      "Bitcoin",
+      "Explorer"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:49:00Z",
+      "host": "blockchain.info",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 200,
+      "ip": "104.16.117.55",
+      "server_header": "cloudflare",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://blockchain.info"
+    },
+    "homepage": "https://www.blockchain.com",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:07.709Z",
+      "robots": "allowed"
+    }
+  }
+}

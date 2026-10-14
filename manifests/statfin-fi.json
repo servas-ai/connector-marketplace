@@ -1,0 +1,163 @@
+{
+  "id": "servas-ai.opencli-statfin-fi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Statistics Finland – StatFin PxWeb",
+  "description": "pxdata.stat.fi PxWeb: StatFin-Katalog und Tabellen-Metadaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "statfin-fi katalog",
+      "command": "statfin-fi-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "statfin-fi info",
+      "command": "statfin-fi-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://pxdata.stat.fi/PXWeb/api/v1/en/StatFin",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "pxdata.stat.fi/robots.txt: 404 (keine Sperre) – öffentliche PxWeb API. Drossel ≥2 s.",
+    "tos": "Statistics Finland PxWeb API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "pxdata.stat.fi",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://tkcdn.azureedge.net/icons/apple-touch-icon.png",
+      "fallback": "initials",
+      "file": "assets/logos/pxdata.stat.fi.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Statistics Finland – StatFin PxWeb",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "FI",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "statfin",
+      "statfin-fi",
+      "pxdata",
+      "stat",
+      "pxweb",
+      "statfin-katalog",
+      "tabellen-metadaten",
+      "statistics",
+      "finland",
+      "international",
+      "opendata",
+      "katalog",
+      "info",
+      "statistik",
+      "zeitreihen",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "FI",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "valtori-dc-as Valtion tieto - Ja viestintatekniikkakeskus Valtori",
+      "asn": 200630,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:42:36Z",
+      "host": "pxdata.stat.fi",
+      "hoster": "Ja viestintatekniikkakeskus Valtori",
+      "http_status": 200,
+      "ip": "109.69.36.165",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://pxdata.stat.fi",
+      "country": "FI"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:58.643Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://pxdata.stat.fi/"
+  }
+}

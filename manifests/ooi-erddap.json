@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-ooi-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Ocean Observatories Initiative – OOI Data Explorer (ERDDAP)",
+  "description": "Ocean Observatories Initiative: Messreihen der OOI-Arrays (Endurance, Pioneer, Irminger See, Station Papa) – Verankerungen, Profiler, Glider. Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "OOI",
+    "NSF",
+    "Verankerung",
+    "Ocean Observatories Initiative"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "OOI",
+    "NSF",
+    "Verankerung",
+    "Ocean Observatories Initiative"
+  ],
+  "homepage": "https://oceanobservatories.org/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": null,
+    "city": null,
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "ooi-erddap datasets",
+      "command": "ooi-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "ooi-erddap suche",
+      "command": "ooi-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "ooi-erddap info",
+      "command": "ooi-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://erddap.dataexplorer.oceanobservatories.org/erddap/info/index.json",
+    "homepage": "https://oceanobservatories.org/",
+    "portal": "https://erddap.dataexplorer.oceanobservatories.org/erddap/index.html",
+    "provider": "Ocean Observatories Initiative (OOI), U.S. National Science Foundation",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "OOI",
+      "NSF",
+      "Verankerung",
+      "Ocean Observatories Initiative"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "erddap.dataexplorer.oceanobservatories.org/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Ocean Observatories Initiative (OOI), U.S. National Science Foundation: öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "erddap.dataexplorer.oceanobservatories.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://oceanobservatories.org/wp-content/uploads/2024/05/NSF-OOI-RGB.png",
+      "fallback": "initials",
+      "file": "assets/logos/erddap.dataexplorer.oceanobservatories.org.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Ocean Observatories Initiative – OOI Data Explorer (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site"
+  }
+}

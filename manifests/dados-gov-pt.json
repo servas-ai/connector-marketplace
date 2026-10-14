@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-dados-gov-pt",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "dados.gov.pt – Dados Abertos Portugal",
+  "description": "dados.gov.pt udata API: Dataset-Suche und Dataset-Details (Titel, Organisation, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "dados-gov-pt datasets",
+      "command": "dados-gov-pt-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "dados-gov-pt dataset",
+      "command": "dados-gov-pt-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://dados.gov.pt/api/1/datasets/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "dados.gov.pt/robots.txt: HTTP 500 (keine Regeln lesbar, keine Sperre) – udata /api/1/ öffentlich. Drossel ≥2 s.",
+    "tos": "dados.gov.pt: Portugiesisches Open-Data-Portal (udata); Fair Use.",
+    "logo": {
+      "domain": "dados.gov.pt",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://dados.gov.pt/favicon.png",
+      "fallback": "initials",
+      "file": "assets/logos/dados.gov.pt.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "udata-1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "dados.gov.pt – Dados Abertos Portugal",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "PT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "dados",
+      "dados-gov-pt",
+      "gov",
+      "udata",
+      "dataset-suche",
+      "dataset-details",
+      "titel",
+      "organisation",
+      "ressourcen",
+      "abertos",
+      "portugal",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "PT",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "MEO-EMPRESAS MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.",
+      "asn": 15525,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:18:40Z",
+      "host": "dados.gov.pt",
+      "hoster": "SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.",
+      "http_status": 200,
+      "ip": "62.28.186.180",
+      "server_header": "GreenLeprechaun",
+      "tls_issuer": "Sectigo Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://dados.gov.pt",
+      "country": "PT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:26.184Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://dados.gov.pt/"
+  }
+}

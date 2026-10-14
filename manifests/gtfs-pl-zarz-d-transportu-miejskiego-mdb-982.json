@@ -1,0 +1,148 @@
+{
+  "id": "servas-ai.opencli-gtfs-pl-zarz-d-transportu-miejskiego-mdb-982",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Zarząd Transportu Miejskiego Poznań (ZTM Poznań) (GTFS-Fahrplan)",
+  "description": "Zarząd Transportu Miejskiego Poznań (ZTM Poznań): offizieller GTFS-Soll-Fahrplan (Poznań, Polen) aus dem Mobility-Database-Katalog (mdb-982), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-pl-zarz-d-transportu-miejskiego-mdb-982-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-pl-zarz-d-transportu-miejskiego-mdb-982-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-pl-zarz-d-transportu-miejskiego-mdb-982-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-pl-zarz-d-transportu-miejskiego-mdb-982-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://www.ztm.poznan.pl/pl/dla-deweloperow/getGTFSFile",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.ztm.poznan.pl/robots.txt geprüft: Pfad nicht gesperrt",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://www.ztm.poznan.pl/pl/dla-deweloperow/index.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "pozna",
+      "zarz d transportu miejsk",
+      "polen",
+      "poland"
+    ],
+    "geo": {
+      "country": "PL",
+      "region": "Greater Poland Voivodeship",
+      "city": "Poznań",
+      "bbox": [
+        16.4575328952,
+        52.15166197,
+        17.2811525082,
+        52.58722581
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "www.ztm.poznan.pl",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a6/1a/57/a61a574c-994c-6e06-2bef-3d168457754a/appicon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/www.ztm.poznan.pl.png",
+      "brand_domain": "ztm.poznan.pl"
+    },
+    "license": "https://www.ztm.poznan.pl/pl/dla-deweloperow/index",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Zarząd Transportu Miejskiego Poznań (ZTM Poznań) (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.ztm.poznan.pl/"
+  }
+}

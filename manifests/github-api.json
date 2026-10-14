@@ -1,0 +1,236 @@
+{
+  "id": "servas-ai.opencli-github-api",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GitHub REST API – öffentliche Repos",
+  "description": "GitHub REST API v3: öffentliche Repository-Metadaten, Suche und User-Profile ohne Login (strengere Rate-Limits ohne Token).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "GitHub",
+    "Git",
+    "Repository",
+    "Open Source",
+    "API"
+  ],
+  "keywords": [
+    "GitHub",
+    "Git",
+    "Repository",
+    "Open Source",
+    "API"
+  ],
+  "homepage": "https://docs.github.com/en/rest",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "repo",
+      "displayName": "repo",
+      "description": "github-api repo",
+      "command": "github-api-cli repo"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "github-api suche",
+      "command": "github-api-cli suche"
+    },
+    {
+      "name": "user",
+      "displayName": "user",
+      "description": "github-api user",
+      "command": "github-api-cli user"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.github.com/repos/torvalds/linux",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.github.com/robots.txt: API-Pfade für Agenten erlaubt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "GitHub Terms of Service / API; nur öffentliche Daten, Fair Use, Rate-Limits beachten.",
+    "provider": "GitHub, Inc.",
+    "homepage": "https://docs.github.com/en/rest",
+    "data_license": "GitHub ToS / öffentliche Metadaten",
+    "keywords": [
+      "GitHub",
+      "Git",
+      "Repository",
+      "Open Source",
+      "API"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "api.github.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://github.githubassets.com/favicons/favicon.svg",
+      "fallback": "initials",
+      "brand_domain": "github.com",
+      "file": "assets/logos/api.github.com.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "GitHub REST API – öffentliche Repos",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": "https://docs.github.com/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:55.358Z",
+      "robots": "allowed",
+      "access_chain_hints": [
+        {
+          "title": "Versions API",
+          "url": "https://docs.github.com/api/pagelist/versions"
+        },
+        {
+          "title": "Languages API",
+          "url": "https://docs.github.com/api/pagelist/languages"
+        },
+        {
+          "title": "Page List API",
+          "url": "https://docs.github.com/api/pagelist/en/free-pro-team@latest"
+        },
+        {
+          "title": "Article API",
+          "url": "https://docs.github.com/api/article"
+        },
+        {
+          "title": "Article Body API",
+          "url": "https://docs.github.com/api/article/body"
+        },
+        {
+          "title": "Search API",
+          "url": "https://docs.github.com/api/search/v1"
+        },
+        {
+          "title": "Extend Copilot Chat with MCP",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp"
+        },
+        {
+          "title": "Use the GitHub MCP Server",
+          "url": "https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/use-the-github-mcp-server"
+        },
+        {
+          "title": "Set up the GitHub MCP Server",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/set-up-the-github-mcp-server"
+        },
+        {
+          "title": "Copilot on GitHub.com",
+          "url": "https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github"
+        },
+        {
+          "title": "Create custom agents in your IDE",
+          "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-custom-agents-in-your-ide"
+        },
+        {
+          "title": "GitHub CLI",
+          "url": "https://docs.github.com/en/github-cli/github-cli"
+        },
+        {
+          "title": "Quickstart",
+          "url": "https://docs.github.com/en/github-cli/github-cli/quickstart"
+        },
+        {
+          "title": "REST API",
+          "url": "https://docs.github.com/en/rest"
+        },
+        {
+          "title": "GraphQL API",
+          "url": "https://docs.github.com/en/graphql"
+        }
+      ]
+    }
+  }
+}

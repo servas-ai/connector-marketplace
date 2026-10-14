@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-tle-ivan",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "TLE API – Satelliten-Zweizeilenelemente",
+  "description": "TLE API (ivanstanojevic): Satelliten-Zweizeilenelemente (Celestrak/Space-Track-Daten) nach NORAD-ID oder Suche, keyless JSON-LD.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "satelliten",
+    "orbit",
+    "tle",
+    "space",
+    "norad",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "search",
+      "displayName": "search",
+      "description": "tle-ivan search",
+      "command": "tle-ivan-cli search"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://tle.ivanstanojevic.me/",
+    "homepage": "https://tle.ivanstanojevic.me/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "tle.ivanstanojevic.me/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "TLE API: öffentliche Orbitdaten, Fair-Use; Quellenangabe.",
+    "license": "terms-of-source (TLE API; Orbitdaten Celestrak)",
+    "country": "INT",
+    "keywords": [
+      "satelliten",
+      "orbit",
+      "tle",
+      "space",
+      "norad",
+      "opendata"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-14",
+    "worker": "open-apis-14-1918",
+    "logo": {
+      "domain": "tle.ivanstanojevic.me",
+      "file": "assets/logos/tle.ivanstanojevic.me.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://tle.ivanstanojevic.me/logo192.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T19:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (TLE API; Orbitdaten Celestrak)",
+        "url": "https://tle.ivanstanojevic.me/",
+        "evidence": "https://tle.ivanstanojevic.me/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: TLE API – Satelliten-Zweizeilenelemente (tle.ivanstanojevic.me)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T19:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "TLE API – Satelliten-Zweizeilenelemente",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "name",
+          "satellite_id"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

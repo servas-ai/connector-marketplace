@@ -1,0 +1,150 @@
+{
+  "id": "servas-ai.opencli-gtfs-it-atp-nuoro-quadri-orari-atp-nuoro-991",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ATP Nuoro – Quadri orari ATP Nuoro (GTFS-Fahrplan)",
+  "description": "ATP Nuoro: offizieller GTFS-Soll-Fahrplan (Nùgoro/Nuoro, Sardinia, Italien) aus dem Mobility-Database-Katalog (mdb-991), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten (Mobility-Database-Katalog, Gültigkeit aus feed_info/calendar)",
+      "command": "gtfs-it-atp-nuoro-quadri-orari-atp-nuoro-991-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt, --q Filter)",
+      "command": "gtfs-it-atp-nuoro-quadri-orari-atp-nuoro-991-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt, --q Filter)",
+      "command": "gtfs-it-atp-nuoro-quadri-orari-atp-nuoro-991-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id (<id>)",
+      "command": "gtfs-it-atp-nuoro-quadri-orari-atp-nuoro-991-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_timetable",
+    "realtime": false,
+    "source_url": "https://www.atpnuoro.it/media/files/dati_atpnu.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.atpnuoro.it/robots.txt geprüft: Download-URL nicht gesperrt. Feed im Mobility Database Katalog ohne Auth gelistet (files.mobilitydatabase.org selbst ist per robots gesperrt und wird nicht genutzt).",
+    "tos": "Offene Fahrplandaten, Lizenz: https://creativecommons.org/licenses/by/4.0/deed.it.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "nùgoro/nuoro",
+      "atp nuoro",
+      "italien",
+      "italy"
+    ],
+    "geo": {
+      "country": "IT",
+      "region": "Sardinia",
+      "city": "Nùgoro/Nuoro",
+      "bbox": [
+        9.25938,
+        40.30734,
+        9.3863,
+        40.37074
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "atpnuoro.it",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=atpnuoro.it&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/atpnuoro.it.png",
+      "brand_domain": "www.atpnuoro.it"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 124,
+      "throughput_rps": 8.065,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": "2026-10-13T09:52:34.189Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "ATP Nuoro – Quadri orari ATP Nuoro (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.atpnuoro.it/"
+  }
+}

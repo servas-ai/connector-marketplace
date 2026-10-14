@@ -1,0 +1,159 @@
+{
+  "id": "servas-ai.opencli-nvd",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NIST NVD – CVE-Datenbank & Hersteller-Statistik",
+  "description": "CVE-Suche, CVSS-Details und Schweregrad-Statistik je Hersteller/Produkt aus der NIST National Vulnerability Database. Keine Personendaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "intel"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche-fortinet",
+      "displayName": "suche",
+      "description": "NIST NVD – CVE-Datenbank & Hersteller-Statistik: suche",
+      "command": "nvd-cli suche --q fortinet --limit 5 --format json"
+    },
+    {
+      "name": "cve-log4shell",
+      "displayName": "cve",
+      "description": "NIST NVD – CVE-Datenbank & Hersteller-Statistik: cve",
+      "command": "nvd-cli cve CVE-2021-44228 --format json"
+    },
+    {
+      "name": "statistik-cisco",
+      "displayName": "statistik",
+      "description": "NIST NVD – CVE-Datenbank & Hersteller-Statistik: statistik",
+      "command": "nvd-cli statistik --q cisco --tage 90 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "intel",
+    "realtime": false,
+    "source_url": "https://nvd.nist.gov/developers/vulnerabilities",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/6.5s (NVD-Limit ohne Key)",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-y-2302",
+    "logo": {
+      "domain": "nvd.nist.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.nist.gov/themes/custom/nist_www/favicon.ico",
+      "fallback": "initials",
+      "file": "assets/logos/nvd.nist.gov.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 5748,
+      "throughput_rps": 0.15,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "NVD CVE API 2.0",
+      "last_scrape": "2026-10-13T03:39:36Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "NIST NVD – CVE-Datenbank & Hersteller-Statistik",
+        "subtitle": "intel",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "cve",
+          "veroeffentlicht",
+          "status",
+          "cvss",
+          "schwere"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon",
+    "keywords": [
+      "nvd",
+      "cve-suche",
+      "cvss-details",
+      "schweregrad-statistik",
+      "hersteller",
+      "produkt",
+      "nist",
+      "national",
+      "vulnerability",
+      "database",
+      "keine",
+      "personendaten",
+      "cve-datenbank",
+      "hersteller-statistik",
+      "intel",
+      "suche-fortinet",
+      "cve-log4shell",
+      "statistik-cisco",
+      "statistics",
+      "zeitreihen",
+      "time series",
+      "intelligence",
+      "security",
+      "sicherheit"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:09.519Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://nvd.nist.gov/"
+  }
+}

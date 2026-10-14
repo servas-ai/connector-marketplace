@@ -1,0 +1,151 @@
+{
+  "id": "servas-ai.opencli-jsdelivr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "jsDelivr – CDN-Paketdaten & Statistiken",
+  "description": "jsDelivr Data API: Versionen/Tags von npm-Paketen auf dem CDN, Zugriffsstatistik je Paket und Top-Pakete nach Hits. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "paket",
+      "displayName": "paket",
+      "description": "jsdelivr paket",
+      "command": "jsdelivr-cli paket"
+    },
+    {
+      "name": "statistik",
+      "displayName": "statistik",
+      "description": "jsdelivr statistik",
+      "command": "jsdelivr-cli statistik"
+    },
+    {
+      "name": "top",
+      "displayName": "top",
+      "description": "jsdelivr top",
+      "command": "jsdelivr-cli top"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://data.jsdelivr.com/v1/packages/npm/jquery",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "refused",
+    "robots": "data.jsdelivr.com/robots.txt: kein klassisches robots.txt (HTTP 400) – Data API ist für programmatischen Zugriff gedacht. Drossel ≥2 s.",
+    "tos": "jsDelivr Data API: frei, ohne Key, Fair Use.",
+    "logo": {
+      "domain": "data.jsdelivr.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.jsdelivr.com/icons/favicon.svg",
+      "fallback": "initials",
+      "file": "assets/logos/data.jsdelivr.com.png",
+      "brand_domain": "jsdelivr.com",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3998,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:28:59.268Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "jsDelivr – CDN-Paketdaten & Statistiken",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "jsdelivr",
+      "versionen",
+      "tags",
+      "npm-paketen",
+      "cdn",
+      "zugriffsstatistik",
+      "paket",
+      "top-pakete",
+      "hits",
+      "cdn-paketdaten",
+      "statistiken",
+      "tech",
+      "statistik",
+      "top",
+      "statistics",
+      "zeitreihen",
+      "time series",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:15.102Z",
+      "robots": "refused"
+    },
+    "homepage": "https://www.jsdelivr.com/"
+  }
+}

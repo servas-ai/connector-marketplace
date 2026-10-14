@@ -1,0 +1,170 @@
+{
+  "id": "servas-ai.opencli-gdacs",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GDACS – Globale Katastrophenwarnungen (UN/EU JRC)",
+  "description": "GDACS (Global Disaster Alert and Coordination System, UN OCHA + EU JRC): aktuelle Ereignisse je Typ (Erdbeben, Zyklone, Überschwemmungen, Vulkane, Dürren, Waldbrände) mit Warnstufe sowie Ereignisdetails. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ereignisse",
+      "displayName": "ereignisse",
+      "description": "gdacs ereignisse",
+      "command": "gdacs-cli ereignisse"
+    },
+    {
+      "name": "ereignis",
+      "displayName": "ereignis",
+      "description": "gdacs ereignis",
+      "command": "gdacs-cli ereignis"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.gdacs.org/robots.txt: kein Disallow für /gdacsapi/. Offizielle öffentliche GDACS-API. Drossel ≥2 s.",
+    "tos": "GDACS: Daten frei nutzbar mit Quellenangabe „GDACS“ (Nutzungsbedingungen auf gdacs.org).",
+    "logo": {
+      "domain": "www.gdacs.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.gdacs.org/images/gdacs_logo_ecs_medium3.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.gdacs.org.png",
+      "brand_domain": "gdacs.org",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3878,
+      "throughput_rps": 0.258,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "gdacsapi",
+      "last_scrape": "2026-10-13T08:04:40.787Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "GDACS – Globale Katastrophenwarnungen (UN/EU JRC)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon",
+    "keywords": [
+      "gdacs",
+      "global",
+      "disaster",
+      "alert",
+      "coordination",
+      "system",
+      "ocha",
+      "jrc",
+      "ereignisse",
+      "typ",
+      "erdbeben",
+      "zyklone",
+      "überschwemmungen",
+      "vulkane",
+      "dürren",
+      "waldbrände",
+      "warnstufe",
+      "ereignisdetails",
+      "globale",
+      "katastrophenwarnungen",
+      "opendata",
+      "ereignis",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "INT",
+      "scope": "global"
+    },
+    "infra": {
+      "as_org": "JRC European Commission - Directorate General - Joint Research Centre",
+      "asn": 42165,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:21:25Z",
+      "host": "www.gdacs.org",
+      "hoster": "Joint Research Centre",
+      "http_status": 200,
+      "ip": "139.191.221.20",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://www.gdacs.org"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:36.952Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.gdacs.org/"
+  }
+}

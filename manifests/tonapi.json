@@ -1,0 +1,177 @@
+{
+  "id": "servas-ai.opencli-tonapi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "TonAPI – TON-Kurse & Masterchain",
+  "description": "TonAPI v2: Kurse von TON und Jettons in Fiat-Währungen (inkl. 24h/7d/30d-Änderung) sowie Masterchain-Kopf der TON-Blockchain, keyless JSON, OpenAPI 3.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "ton",
+    "telegram",
+    "blockchain",
+    "kurse",
+    "jetton",
+    "krypto",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "masterchain",
+      "displayName": "masterchain",
+      "description": "tonapi masterchain",
+      "command": "tonapi-cli masterchain"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://tonapi.io/",
+    "homepage": "https://tonapi.io/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "tonapi.io/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "TonAPI: freier Zugang ohne Key mit niedrigem Rate-Limit (Key nur für mehr), Fair-Use.",
+    "license": "terms-of-source (TonAPI / Ton Console Terms)",
+    "country": "INT",
+    "keywords": [
+      "ton",
+      "telegram",
+      "blockchain",
+      "kurse",
+      "jetton",
+      "krypto",
+      "finance"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-21",
+    "worker": "open-apis-21-2237",
+    "logo": {
+      "domain": "tonapi.io",
+      "file": "assets/logos/tonapi.io.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://tonapi.io/apple-touch-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://tonapi.io/v2/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:05:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (TonAPI / Ton Console Terms)",
+        "url": "https://tonconsole.com/terms",
+        "evidence": "https://tonconsole.com/terms",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: TonAPI – TON-Kurse & Masterchain (tonapi.io)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:05:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "TonAPI – TON-Kurse & Masterchain",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "price"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

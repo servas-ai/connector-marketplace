@@ -1,0 +1,136 @@
+{
+  "id": "servas-ai.opencli-worldbank-projects",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "World Bank Projects & Operations API",
+  "description": "Weltbank Projects API (search.worldbank.org/api/v2/projects): Projekte je Land/Suchbegriff, Projektdetails (Zusagen, Status, Sektor, Genehmigung). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "projekte",
+      "displayName": "projekte",
+      "description": "worldbank-projects projekte",
+      "command": "worldbank-projects-cli projekte"
+    },
+    {
+      "name": "projekt",
+      "displayName": "projekt",
+      "description": "worldbank-projects projekt",
+      "command": "worldbank-projects-cli projekt"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://search.worldbank.org/api/v2/projects",
+    "license": "CC-BY-4.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "homepage": "https://projects.worldbank.org/",
+    "country": "INT",
+    "keywords": [
+      "worldbank",
+      "projects",
+      "worldbank-projects",
+      "weltbank",
+      "projekte",
+      "land",
+      "suchbegriff",
+      "projektdetails",
+      "zusagen",
+      "status",
+      "sektor",
+      "genehmigung",
+      "world",
+      "bank",
+      "operations",
+      "international",
+      "projekt"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "search.worldbank.org/robots.txt: 404 (keine Einschränkung). Offizielle Projects API (World Bank Open Data). Drossel ≥2 s.",
+    "tos": "World Bank – CC BY 4.0 (Open Data Terms).",
+    "logo": {
+      "domain": "search.worldbank.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:The_World_Bank_logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/search.worldbank.org.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "World Bank Projects & Operations API",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "geo": {
+      "country": "INT",
+      "scope": "global"
+    },
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:17.434Z",
+      "robots": "allowed"
+    }
+  }
+}

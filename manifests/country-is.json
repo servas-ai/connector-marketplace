@@ -1,0 +1,197 @@
+{
+  "id": "servas-ai.opencli-country-is",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "country.is – IP Country Lookup",
+  "description": "country.is: schneller IP→Ländercode-Lookup als JSON. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "IP",
+    "Country",
+    "Geolocation",
+    "ISO"
+  ],
+  "keywords": [
+    "IP",
+    "Country",
+    "Geolocation",
+    "ISO"
+  ],
+  "homepage": "https://country.is/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "lookup",
+      "displayName": "lookup",
+      "description": "country-is lookup",
+      "command": "country-is-cli lookup"
+    },
+    {
+      "name": "bulk",
+      "displayName": "bulk",
+      "description": "country-is bulk",
+      "command": "country-is-cli bulk"
+    },
+    {
+      "name": "self",
+      "displayName": "self",
+      "description": "country-is self",
+      "command": "country-is-cli self"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.country.is/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.country.is/robots.txt: API erlaubt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "country.is public API; Fair Use.",
+    "provider": "country.is",
+    "homepage": "https://country.is/",
+    "data_license": "country.is public API",
+    "keywords": [
+      "IP",
+      "Country",
+      "Geolocation",
+      "ISO"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "api.country.is",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://country.is/favicon.svg?v=1781300628",
+      "fallback": "initials",
+      "brand_domain": "country.is",
+      "file": "assets/logos/api.country.is.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "country.is – IP Country Lookup",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": "https://country.is/llms.txt",
+      "llms_full": null,
+      "openapi": "https://api.country.is/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:14:20.345Z",
+      "robots": "allowed",
+      "access_chain_hints": [
+        {
+          "title": "GET /",
+          "url": "https://api.country.is/"
+        },
+        {
+          "title": "GET /{ip}",
+          "url": "https://api.country.is/8.8.8.8"
+        },
+        {
+          "title": "POST /",
+          "url": "https://api.country.is/"
+        },
+        {
+          "title": "GET /info",
+          "url": "https://api.country.is/info"
+        },
+        {
+          "title": "Docker image",
+          "url": "https://hub.docker.com/r/lineofflight/country"
+        },
+        {
+          "title": "OpenAPI spec",
+          "url": "https://api.country.is/openapi.json"
+        }
+      ]
+    }
+  }
+}

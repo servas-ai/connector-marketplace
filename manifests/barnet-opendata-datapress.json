@@ -1,0 +1,192 @@
+{
+  "id": "servas-ai.opencli-barnet-opendata-datapress",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Barnet Open Data – London Borough of Barnet (DataPress)",
+  "description": "open.barnet.gov.uk – London Borough of Barnet: DataPress-Open-Data-Katalog (CKAN-kompatible API, llms.txt): Dataset-Liste/Filter und Dataset-Details mit Ressourcen und Lizenz. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "datapress",
+    "gb",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "barnet-opendata-datapress datasets",
+      "command": "barnet-opendata-datapress-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "barnet-opendata-datapress dataset",
+      "command": "barnet-opendata-datapress-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://open.barnet.gov.uk/api/3/action/package_search",
+    "homepage": "https://open.barnet.gov.uk/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "open.barnet.gov.uk/robots.txt geprüft (fail-closed, RFC 9309 via tools/robots/robots.js): Gruppe '*' sperrt nur HTML-/Admin-/Facetten-Pfade – die CKAN-kompatible Action API unter /api/3/action (package_search, package_show) nicht gesperrt. KI-Bot-Gruppe sperrt nur /search, /dataset? und Facetten-Seiten (nicht /api/); Portal veröffentlicht llms.txt. Drossel ≥2 s/Host.",
+    "tos": "London Borough of Barnet: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "OGL-UK-3.0",
+    "country": "GB",
+    "keywords": [
+      "opendata",
+      "datapress",
+      "katalog",
+      "gb"
+    ],
+    "geo": {
+      "country": "GB",
+      "scope": "city",
+      "region": "England",
+      "city": "London"
+    },
+    "operator": {
+      "name": "London Borough of Barnet",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "GB",
+      "url": "https://www.barnet.gov.uk/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "open.barnet.gov.uk",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "datapress-ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://open.barnet.gov.uk/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "has-llms-txt",
+      "checked": true,
+      "checked_at": "2026-10-14T02:30:00Z",
+      "robots": "allowed",
+      "api_kind": "DataPress (CKAN Action API v3 kompatibel)",
+      "openapi_version": null,
+      "openapi_paths": null,
+      "dcat": "https://open.barnet.gov.uk/data.json",
+      "dcat_profile": "DCAT-US 1.1 (DataPress data.json)",
+      "ogc_api": null,
+      "access_chain_hints": [
+        "dcat: https://open.barnet.gov.uk/data.json",
+        "ckan-action-api: https://open.barnet.gov.uk/api/3/action",
+        "llms.txt: https://open.barnet.gov.uk/llms.txt"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "OGL-UK-3.0",
+        "url": "https://open.barnet.gov.uk/",
+        "evidence": "https://open.barnet.gov.uk/",
+        "per_dataset": true
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Barnet Open Data – London Borough of Barnet (DataPress) (open.barnet.gov.uk)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten",
+          "Hosting-Land nicht öffentlich belegt (Portal-Land GB) – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-14T02:30:00Z"
+    },
+    "wave": "opendata-wave-0156",
+    "worker": "opendata-wave-0156",
+    "openui": {
+      "card": {
+        "title": "Barnet Open Data – London Borough of Barnet (DataPress)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

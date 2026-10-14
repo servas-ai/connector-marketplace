@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-satnogs-network",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SatNOGS Network – Stationen",
+  "description": "SatNOGS Network API: Bodenstationen und Beobachtungen, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "satelliten",
+    "satnogs",
+    "bodenstation",
+    " Amateurfunk",
+    "space"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "observations",
+      "displayName": "observations",
+      "description": "satnogs-network observations",
+      "command": "satnogs-network-cli observations"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://network.satnogs.org/",
+    "homepage": "https://network.satnogs.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "network.satnogs.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "SatNOGS: Attribution Libre Space Foundation, Fair-Use.",
+    "license": "terms-of-source (Libre Space / CC BY-SA Daten)",
+    "country": "INT",
+    "keywords": [
+      "satelliten",
+      "satnogs",
+      "bodenstation",
+      " Amateurfunk",
+      "space"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-12",
+    "worker": "open-apis-12-1700",
+    "logo": {
+      "domain": "network.satnogs.org",
+      "file": "assets/logos/network.satnogs.org.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://network-satnogs.freetls.fastly.net/static/img/satnogs_net.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T17:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Libre Space / CC BY-SA Daten)",
+        "url": "https://network.satnogs.org/",
+        "evidence": "https://network.satnogs.org/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: SatNOGS Network – Stationen (network.satnogs.org)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T17:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "SatNOGS Network – Stationen",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "name"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "servas-ai.opencli-cofid-uk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UK CoFID 2021 (McCance & Widdowson)",
+  "description": "Britische Nährwerttabelle CoFID 2021 (McCance & Widdowson's): 2.887 Lebensmittel, Proximates, Mineralstoffe, Vitamine aus dem offiziellen gov.uk-Download (lokal gecacht, nicht im Repo).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "naehrwerte",
+    "uk"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "naehrwerte",
+      "displayName": "naehrwerte",
+      "description": "cofid-uk naehrwerte",
+      "command": "cofid-uk-cli naehrwerte"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "cofid-uk suche",
+      "command": "cofid-uk-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "access_chain": [
+      "dump",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 req/s je Host; Dump max. 1×/Jahr (Cache)",
+    "robots_status": "ok",
+    "robots": "www.gov.uk/robots.txt: nur /*/print$ und /search/all* gesperrt; assets.publishing.service.gov.uk ohne robots.txt (404) → Download erlaubt.",
+    "license": "Open Government Licence v3.0",
+    "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "logo": {
+      "domain": "gov.uk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=gov.uk&sz=128",
+      "fallback": "initials"
+    },
+    "keywords": [
+      "cofid",
+      "cofid-uk",
+      "britische",
+      "nährwerttabelle",
+      "mccance",
+      "widdowson",
+      "lebensmittel",
+      "proximates",
+      "mineralstoffe",
+      "vitamine",
+      "offiziellen",
+      "gov",
+      "uk-download",
+      "lokal",
+      "gecacht",
+      "nicht",
+      "repo",
+      "food",
+      "naehrwerte",
+      "groceries",
+      "nahrung",
+      "ernährung"
+    ],
+    "geo": {
+      "country": "GB",
+      "scope": "country"
+    },
+    "country": "GB",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 261,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "CoFID 2021 (xlsx)",
+      "last_scrape": "2026-10-13T09:26:31.431Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "UK CoFID 2021 (McCance & Widdowson)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "food_code",
+          "kcal_100g"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:38.813Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.gov.uk/"
+  }
+}

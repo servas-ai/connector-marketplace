@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-stadt-zuerich-ch",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Stadt Zürich – Open Data (CKAN)",
+  "description": "data.stadt-zuerich.ch CKAN API: Dataset-Suche und Dataset-Details (Titel, Organisation, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "stadt-zuerich-ch datasets",
+      "command": "stadt-zuerich-ch-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "stadt-zuerich-ch dataset",
+      "command": "stadt-zuerich-ch-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.stadt-zuerich.ch/api/3/action/package_search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.stadt-zuerich.ch/robots.txt: 404 (keine Sperre) – CKAN /api/3/action/ öffentlich. Drossel ≥2 s.",
+    "tos": "Stadt Zürich Open Data (CC0/CC-BY); Fair Use.",
+    "logo": {
+      "domain": "data.stadt-zuerich.ch",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.stadt-zuerich.ch/favicon.svg",
+      "fallback": "initials",
+      "file": "assets/logos/data.stadt-zuerich.ch.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Stadt Zürich – Open Data (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CH",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "stadt",
+      "zuerich",
+      "stadt-zuerich-ch",
+      "stadt-zuerich",
+      "ckan",
+      "dataset-suche",
+      "dataset-details",
+      "titel",
+      "organisation",
+      "ressourcen",
+      "zürich",
+      "open",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "CH",
+      "region": "Zürich",
+      "city": "Zürich",
+      "lat": 47.3769,
+      "lon": 8.5417,
+      "scope": "city"
+    },
+    "infra": {
+      "as_org": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn": 396982,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:33:42Z",
+      "host": "data.stadt-zuerich.ch",
+      "hoster": "Google LLC",
+      "http_status": 200,
+      "ip": "35.205.166.46",
+      "tls_issuer": "DigiCert, Inc.",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://stadt-zuerich.ch",
+      "country": "CH"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:53.661Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://data.stadt-zuerich.ch/"
+  }
+}

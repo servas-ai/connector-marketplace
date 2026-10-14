@@ -1,0 +1,163 @@
+{
+  "id": "servas-ai.opencli-owid-co2",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Our World in Data – CO₂- und Treibhausgas-Dump",
+  "description": "Our World in Data – CO₂- und Treibhausgas-Dump: offizielle Gesamtdatei (CSV) als Datensätze – Liste, Volltextsuche, Dump-Metadaten. Download höchstens 1× pro Tag (Cache 24 h). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "owid-co2 liste",
+      "command": "owid-co2-cli liste"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "owid-co2 suche",
+      "command": "owid-co2-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "owid-co2 info",
+      "command": "owid-co2-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host, Dump ≤1×/Tag",
+    "robots_status": "ok",
+    "robots": "raw.githubusercontent.com/robots.txt geprüft: Dump-Pfad nicht gesperrt (zusätzlich Laufzeitprüfung). Kein Key. Drossel ≥2 s/Host, Dump-Cache 24 h.",
+    "tos": "Lizenz: CC BY 4.0 (Our World in Data). Quelle nennen.",
+    "logo": {
+      "domain": "raw.githubusercontent.com",
+      "brand_domain": "raw.githubusercontent.com",
+      "file": "assets/logos/ourworldindata.org.png",
+      "source": "wikimedia",
+      "resolved": "https://commons.wikimedia.org/wiki/File:Our_World_in_Data_logo.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1279,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dump",
+      "last_scrape": "2026-10-13T09:25:27.254Z",
+      "datenqualitaet": 1.0
+    },
+    "keywords": [
+      "owid",
+      "co2",
+      "owid-co2",
+      "our",
+      "world",
+      "treibhausgas-dump",
+      "gesamtdatei",
+      "csv",
+      "datensätze",
+      "liste",
+      "volltextsuche",
+      "dump-metadaten",
+      "download",
+      "höchstens",
+      "tag",
+      "cache",
+      "opendata",
+      "info",
+      "open data",
+      "offene daten",
+      "datasets"
+    ],
+    "geo": {
+      "country": "INT",
+      "scope": "global"
+    },
+    "openui": {
+      "card": {
+        "title": "Our World in Data – CO₂- und Treibhausgas-Dump",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "FASTLY - Fastly, Inc.",
+      "asn": 54113,
+      "cdn": "GitHub Pages",
+      "checked_at": "2026-10-13T09:36:55Z",
+      "host": "raw.githubusercontent.com",
+      "hoster": "Fastly, Inc.",
+      "http_status": 200,
+      "ip": "185.199.109.133",
+      "server_header": "github.com",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://raw.githubusercontent.com"
+    },
+    "logo_source": "wikimedia",
+    "country": "INT",
+    "homepage": "https://ourworldindata.org",
+    "license": "CC-BY-4.0",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:03.217Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "id": "servas-ai.opencli-siegburg-civora-piveau",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CIVORA Datenkatalog Siegburg (piveau)",
+  "description": "siegburg.civora.org – Stadt Siegburg / CIVORA: DCAT-AP-Datenkatalog (piveau hub-search, OpenAPI 3): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Distributionen und Lizenz. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "piveau",
+    "de",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "siegburg-civora-piveau suche",
+      "command": "siegburg-civora-piveau-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "siegburg-civora-piveau neu",
+      "command": "siegburg-civora-piveau-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "siegburg-civora-piveau datensatz",
+      "command": "siegburg-civora-piveau-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://piveau-search.siegburg.civora.org/search",
+    "homepage": "https://siegburg.civora.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "ok/robots.txt geprüft (fail-closed, RFC 9309 via tools/robots/robots.js): Gruppe '*' sperrt nur HTML-/Admin-/Facetten-Pfade – die piveau hub-search API (/search, /datasets/<id>) nicht gesperrt. Portal-Frontend siegburg.civora.org (SPA) liefert robots.txt als HTML → dort wird nichts abgerufen; Zugriff ausschließlich über den API-Host. Drossel ≥2 s/Host.",
+    "tos": "Stadt Siegburg / CIVORA: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "DE",
+    "keywords": [
+      "opendata",
+      "piveau",
+      "katalog",
+      "de"
+    ],
+    "geo": {
+      "country": "DE",
+      "scope": "city",
+      "region": "Siegburg",
+      "city": "Siegburg"
+    },
+    "operator": {
+      "name": "Stadt Siegburg / CIVORA",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "DE",
+      "url": "https://siegburg.civora.org/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "siegburg.civora.org",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "piveau-hub-search",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:45:00Z",
+      "robots": "allowed",
+      "api_kind": "piveau hub-search (OpenAPI 3)",
+      "openapi_version": null,
+      "openapi_paths": null,
+      "dcat": null,
+      "dcat_profile": null,
+      "ogc_api": null,
+      "access_chain_hints": [
+        "piveau-hub-search: https://piveau-search.siegburg.civora.org/search"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://siegburg.civora.org/",
+        "evidence": "https://siegburg.civora.org/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: CIVORA Datenkatalog Siegburg (piveau) (siegburg.civora.org)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Hosting-Land nicht öffentlich belegt (Portal-Land DE) – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-14T03:45:00Z"
+    },
+    "wave": "opendata-wave-0318",
+    "worker": "opendata-wave-0318",
+    "openui": {
+      "card": {
+        "title": "CIVORA Datenkatalog Siegburg (piveau)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

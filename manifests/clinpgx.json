@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-clinpgx",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ClinPGx (PharmGKB) – Pharmakogenomik",
+  "description": "ClinPGx/PharmGKB API v1 (Stanford): Gene (Symbol, Chromosom, CPIC-/Allel-Infos) und Wirkstoffe (Chemicals) der Pharmakogenomik-Wissensbasis, keyless JSON, Daten CC BY-SA 4.0.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "clinpgx",
+    "pharmgkb",
+    "pharmacogenomics",
+    "genes",
+    "drugs",
+    "cpic"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "wirkstoff",
+      "displayName": "wirkstoff",
+      "description": "clinpgx wirkstoff",
+      "command": "clinpgx-cli wirkstoff"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.clinpgx.org/",
+    "homepage": "https://api.clinpgx.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.clinpgx.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "ClinPGx API: keyless, max. 2 req/s laut Doku (wir 0,5 req/s); CC BY-SA 4.0 mit Namensnennung.",
+    "license": "CC-BY-SA-4.0 (ClinPGx / PharmGKB)",
+    "country": "US",
+    "keywords": [
+      "clinpgx",
+      "pharmgkb",
+      "pharmacogenomics",
+      "genes",
+      "drugs",
+      "cpic"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-29",
+    "worker": "open-apis-29-0218",
+    "logo": {
+      "domain": "api.clinpgx.org",
+      "file": "assets/logos/api.clinpgx.org.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://api.clinpgx.org/apple-touch-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:50:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC-BY-SA-4.0 (ClinPGx / PharmGKB)",
+        "url": "https://www.clinpgx.org/page/dataUsagePolicy",
+        "evidence": "https://www.clinpgx.org/page/dataUsagePolicy",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: ClinPGx (PharmGKB) – Pharmakogenomik (api.clinpgx.org)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-14T02:50:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "ClinPGx (PharmGKB) – Pharmakogenomik",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "symbol"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

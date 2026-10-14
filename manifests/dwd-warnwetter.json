@@ -1,0 +1,186 @@
+{
+  "id": "servas-ai.opencli-dwd-warnwetter",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DWD WarnWetter – Stationsprognosen (Deutscher Wetterdienst)",
+  "description": "Deutscher Wetterdienst, WarnWetter-App-Schnittstelle (dwd.api.bund.dev): Tagesprognose (Min/Max, Niederschlag, Wind, Sonne) und stündliche Prognose je DWD-Station (z. B. 10865 München, 10382 Berlin). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "tage",
+      "displayName": "tage",
+      "description": "dwd-warnwetter tage",
+      "command": "dwd-warnwetter-cli tage"
+    },
+    {
+      "name": "stunden",
+      "displayName": "stunden",
+      "description": "dwd-warnwetter stunden",
+      "command": "dwd-warnwetter-cli stunden"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "dwd-warnwetter stationen",
+      "command": "dwd-warnwetter-cli stationen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://app-prod-ws.warnwetter.de/v30/stationOverviewExtended?stationIds=10865",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "json_endpoint",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "app-prod-ws.warnwetter.de/robots.txt: 404 (keine Einschränkung). Öffentlich dokumentiert unter dwd.api.bund.dev (bund.dev). Drossel ≥2 s.",
+    "tos": "DWD Open Data: Nutzung nach GeoNutzV mit Quellenvermerk „Deutscher Wetterdienst“.",
+    "logo": {
+      "domain": "app-prod-ws.warnwetter.de",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/15/c3/0b/15c30bc1-0c69-88b8-8562-83e951f0f40d/Placeholder.mill/512x512bb.png",
+      "fallback": "initials",
+      "file": "assets/logos/app-prod-ws.warnwetter.de.png",
+      "brand_domain": "dwd.de",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "app": "DWD WarnWetter‑App – Store",
+      "developer": "Deutscher Wetterdienst"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3059,
+      "throughput_rps": 0.327,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v30",
+      "last_scrape": "2026-10-13T08:07:29.933Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "DWD WarnWetter – Stationsprognosen (Deutscher Wetterdienst)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "dwd",
+      "warnwetter",
+      "dwd-warnwetter",
+      "deutscher",
+      "wetterdienst",
+      "warnwetter-app-schnittstelle",
+      "bund",
+      "dev",
+      "tagesprognose",
+      "min",
+      "max",
+      "niederschlag",
+      "wind",
+      "sonne",
+      "stündliche",
+      "prognose",
+      "dwd-station",
+      "münchen",
+      "berlin",
+      "stationsprognosen",
+      "opendata",
+      "tage",
+      "stunden",
+      "stationen",
+      "weather",
+      "forecast",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Berlin",
+      "city": "Berlin",
+      "lat": 52.52,
+      "lon": 13.405,
+      "scope": "city"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:20:02Z",
+      "host": "app-prod-ws.warnwetter.de",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 404,
+      "ip": "3.73.184.137",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://app-prod-ws.warnwetter.de",
+      "country": "DE"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:51.584Z",
+      "robots": "allowed"
+    }
+  }
+}

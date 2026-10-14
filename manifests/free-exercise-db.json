@@ -1,0 +1,167 @@
+{
+  "id": "servas-ai.opencli-free-exercise-db",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI free-exercise-db",
+  "description": "Fitnessübungen (Muskeln, Equipment, Level, Anleitung, Bilder) aus der offenen Free Exercise DB.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "fitness"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "free-exercise-db",
+      "description": "Fitnessübungen (Muskeln, Equipment, Level, Anleitung, Bilder) aus der offenen Free Exercise DB.",
+      "command": "node international/free-exercise-db/bin/cli.js suche --muskel chest --level beginner --format json"
+    },
+    {
+      "name": "uebung",
+      "displayName": "free-exercise-db",
+      "description": "Fitnessübungen (Muskeln, Equipment, Level, Anleitung, Bilder) aus der offenen Free Exercise DB.",
+      "command": "node international/free-exercise-db/bin/cli.js uebung --id 3_4_Sit-Up --format json"
+    },
+    {
+      "name": "muskeln",
+      "displayName": "free-exercise-db",
+      "description": "Fitnessübungen (Muskeln, Equipment, Level, Anleitung, Bilder) aus der offenen Free Exercise DB.",
+      "command": "node international/free-exercise-db/bin/cli.js muskeln --format json"
+    }
+  ],
+  "schema": "servas.record.v1",
+  "record_type": "generic",
+  "openui": {
+    "view": "table",
+    "columns": [
+      "title",
+      "url"
+    ],
+    "detail": "record"
+  },
+  "kpis": {
+    "e2e": "4/4",
+    "records": 876
+  },
+  "robots": "ok (keine robots.txt, 404)",
+  "logo": "https://github.githubassets.com/favicons/favicon.png",
+  "access_chain": [
+    "open_data_file"
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "alternatives": {
+    "wger": "blocked_robots (Disallow /api/v2)"
+  },
+  "x-servas": {
+    "logo": {
+      "domain": "raw.githubusercontent.com",
+      "file": "assets/logos/raw.githubusercontent.com.png",
+      "source": "official-site",
+      "resolved": "https://github.githubassets.com/favicons/favicon.svg",
+      "source_kind": "favicon"
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "svg",
+    "llms": {
+      "llms_txt": "https://github.com/llms.txt",
+      "llms_full": "https://github.com/llms-full.txt",
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "blocks:Bytespider",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:08.910Z",
+      "robots": "allowed",
+      "access_chain_hints": [
+        {
+          "title": "Versions API",
+          "url": "https://docs.github.com/api/pagelist/versions"
+        },
+        {
+          "title": "Languages API",
+          "url": "https://docs.github.com/api/pagelist/languages"
+        },
+        {
+          "title": "Page List API",
+          "url": "https://docs.github.com/api/pagelist/en/free-pro-team@latest"
+        },
+        {
+          "title": "Article API",
+          "url": "https://docs.github.com/api/article"
+        },
+        {
+          "title": "Article Body API",
+          "url": "https://docs.github.com/api/article/body"
+        },
+        {
+          "title": "Search API",
+          "url": "https://docs.github.com/api/search/v1"
+        },
+        {
+          "title": "Extend Copilot Chat with MCP",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp"
+        },
+        {
+          "title": "Use the GitHub MCP Server",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server"
+        },
+        {
+          "title": "Set up the GitHub MCP Server",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/set-up-the-github-mcp-server"
+        },
+        {
+          "title": "About cloud agent",
+          "url": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent"
+        },
+        {
+          "title": "Create custom agents in your IDE",
+          "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-custom-agents-in-your-ide"
+        },
+        {
+          "title": "GitHub CLI",
+          "url": "https://docs.github.com/en/github-cli/github-cli"
+        },
+        {
+          "title": "Quickstart",
+          "url": "https://docs.github.com/en/github-cli/github-cli/quickstart"
+        },
+        {
+          "title": "REST API",
+          "url": "https://docs.github.com/en/rest"
+        },
+        {
+          "title": "GraphQL API",
+          "url": "https://docs.github.com/en/graphql"
+        }
+      ]
+    },
+    "homepage": "https://github.com/yuhonas/free-exercise-db",
+    "keywords": [
+      "free",
+      "exercise",
+      "free-exercise-db",
+      "offene",
+      "übungsdatenbank",
+      "kraft",
+      "fitnessübungen",
+      "muskelgruppen",
+      "equipment",
+      "level",
+      "anleitung",
+      "bildern",
+      "yuhonas",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "suchen",
+      "muskel"
+    ]
+  }
+}

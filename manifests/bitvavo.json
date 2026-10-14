@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-bitvavo",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Bitvavo – öffentliche Marktdaten",
+  "description": "Krypto-Ticker (24h), Kerzen und Märkte der EU-Börse Bitvavo über die öffentliche REST-API. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "bitvavo ticker",
+      "command": "bitvavo-cli ticker"
+    },
+    {
+      "name": "kerzen",
+      "displayName": "kerzen",
+      "description": "bitvavo kerzen",
+      "command": "bitvavo-cli kerzen"
+    },
+    {
+      "name": "maerkte",
+      "displayName": "maerkte",
+      "description": "bitvavo maerkte",
+      "command": "bitvavo-cli maerkte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.bitvavo.com/v2",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-y-2302",
+    "logo": {
+      "domain": "api.bitvavo.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e6/0a/e3/e60ae3d9-776c-089c-0663-b038a638592d/Placeholder.mill/512x512bb.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.bitvavo.com.png",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "app": "Bitvavo | Buy Bitcoin (BTC)",
+      "developer": "Bitvavo B.V."
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 957,
+      "throughput_rps": 0.909,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T03:43:36.955Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Bitvavo – öffentliche Marktdaten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "preis"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "bitvavo",
+      "krypto-ticker",
+      "kerzen",
+      "märkte",
+      "eu-börse",
+      "rest-api",
+      "marktdaten",
+      "finance",
+      "ticker",
+      "maerkte",
+      "crypto",
+      "cryptocurrency",
+      "kryptowährung",
+      "finanzen",
+      "markets"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:48:52Z",
+      "host": "api.bitvavo.com",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 404,
+      "ip": "104.18.39.7",
+      "server_header": "cloudflare",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://bitvavo.com"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:43.361Z",
+      "robots": "allowed"
+    }
+  }
+}

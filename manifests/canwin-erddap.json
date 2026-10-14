@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-canwin-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CanWIN – Canadian Watershed Information Network, University of Manitoba (ERDDAP)",
+  "description": "CanWIN: Gewässer-, Arktis- und Hudson-Bay-Daten der University of Manitoba (z. B. Amundsen-Expeditionen, Seen, Flüsse). Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Arktis",
+    "Hudson Bay",
+    "Manitoba",
+    "Canadian Watershed Information Network"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Arktis",
+    "Hudson Bay",
+    "Manitoba",
+    "Canadian Watershed Information Network"
+  ],
+  "homepage": "https://canwin-datahub.ad.umanitoba.ca/",
+  "license": "MIT",
+  "geo": {
+    "country": "CA",
+    "region": "Manitoba",
+    "city": "Winnipeg",
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "canwin-erddap datasets",
+      "command": "canwin-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "canwin-erddap suche",
+      "command": "canwin-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "canwin-erddap info",
+      "command": "canwin-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://canwinerddap.ad.umanitoba.ca/erddap/info/index.json",
+    "homepage": "https://canwin-datahub.ad.umanitoba.ca/",
+    "portal": "https://canwinerddap.ad.umanitoba.ca/erddap/index.html",
+    "provider": "Canadian Watershed Information Network (CanWIN), University of Manitoba",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Arktis",
+      "Hudson Bay",
+      "Manitoba",
+      "Canadian Watershed Information Network"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": "Manitoba",
+      "city": "Winnipeg",
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "canwinerddap.ad.umanitoba.ca/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Canadian Watershed Information Network (CanWIN), University of Manitoba: öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "canwinerddap.ad.umanitoba.ca",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://canwin-datahub.ad.umanitoba.ca/themes/custom/unim/logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/canwinerddap.ad.umanitoba.ca.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "CanWIN – Canadian Watershed Information Network, University of Manitoba (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CA",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site"
+  }
+}

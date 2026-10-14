@@ -1,0 +1,169 @@
+{
+  "id": "servas-ai.opencli-corpstacking",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CorpStacking – Corporate Crypto Treasury Moves",
+  "description": "CorpStacking JSON Feed 1.1: aktuelle Corporate-/ETF-Treasury-Moves (BTC/ETH/SOL u.a.) mit Tags, keyless, llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "corpstacking",
+    "treasury",
+    "bitcoin",
+    "ethereum",
+    "etf",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://www.corpstacking.com/",
+    "homepage": "https://www.corpstacking.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.corpstacking.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "CorpStacking Feed: öffentlicher JSON-Feed ohne Key; Attribution erwünscht, nur Lesen.",
+    "license": "terms-of-source (CorpStacking)",
+    "country": "INT",
+    "keywords": [
+      "corpstacking",
+      "treasury",
+      "bitcoin",
+      "ethereum",
+      "etf",
+      "finance"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-23",
+    "worker": "open-apis-23-2334",
+    "logo": {
+      "domain": "www.corpstacking.com",
+      "file": "assets/logos/www.corpstacking.com.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://www.corpstacking.com/icons/180",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "feed-1.1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://www.corpstacking.com/llms.txt",
+      "llms_full": "https://www.corpstacking.com/llms-full.txt",
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:55:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (CorpStacking)",
+        "url": "https://www.corpstacking.com/",
+        "evidence": "https://www.corpstacking.com/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: CorpStacking – Corporate Crypto Treasury Moves (www.corpstacking.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:55:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "CorpStacking – Corporate Crypto Treasury Moves",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "date_published"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "id": "servas-ai.opencli-od-mekong",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open Development Mekong Datahub (CKAN)",
+  "description": "Open Development Mekong: Datenkatalog zu Kambodscha, Laos, Myanmar, Thailand und Vietnam (Gesetze, Landnutzung, Umwelt, Entwicklung). Zugriff über die offizielle CKAN-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Mekong",
+    "Südostasien",
+    "Entwicklung",
+    "Open Development Mekong"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Mekong",
+    "Südostasien",
+    "Entwicklung",
+    "Open Development Mekong"
+  ],
+  "homepage": "https://opendevelopmentmekong.net/",
+  "license": "MIT",
+  "geo": {
+    "country": "INT",
+    "region": "Mekong-Region",
+    "city": null,
+    "scope": "regional"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "od-mekong datasets",
+      "command": "od-mekong-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "od-mekong dataset",
+      "command": "od-mekong-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.opendevelopmentmekong.net/api/3/action/package_search",
+    "homepage": "https://opendevelopmentmekong.net/",
+    "portal": "https://data.opendevelopmentmekong.net/dataset",
+    "provider": "Open Development Mekong (East-West Management Institute)",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "CKAN",
+      "Datenkatalog",
+      "datasets",
+      "Mekong",
+      "Südostasien",
+      "Entwicklung",
+      "Open Development Mekong"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "Mekong-Region",
+      "city": null,
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.opendevelopmentmekong.net/robots.txt (HTTP 200): /api/3/action/package_search und package_show nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "Open Development Mekong (East-West Management Institute): öffentliche CKAN-Action-API v3 ohne Key/Login; Fair Use.",
+    "logo": {
+      "domain": "data.opendevelopmentmekong.net",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.opendevelopmentmekong.net/odm_logo_footer.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.opendevelopmentmekong.net.png",
+      "source": "official-site",
+      "kind": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Open Development Mekong Datahub (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Open Data gemäß Nutzungsbedingungen von Open Development Mekong (East-West Management Institute); je Dataset im Feld license",
+    "data_license": "Open Data gemäß Nutzungsbedingungen von Open Development Mekong (East-West Management Institute); je Dataset im Feld license",
+    "logo_source": "official-site",
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T20:11:10.334Z",
+      "robots": "allowed"
+    }
+  }
+}

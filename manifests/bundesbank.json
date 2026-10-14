@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-bundesbank",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Deutsche Bundesbank – Zeitreihen",
+  "description": "Euro-Referenzkurse, Zinsstruktur Bund 10J und beliebige Zeitreihen der Deutschen Bundesbank (SDMX-API). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kurse",
+      "displayName": "kurse",
+      "description": "bundesbank kurse",
+      "command": "bundesbank-cli kurse"
+    },
+    {
+      "name": "zinsen",
+      "displayName": "zinsen",
+      "description": "bundesbank zinsen",
+      "command": "bundesbank-cli zinsen"
+    },
+    {
+      "name": "serie",
+      "displayName": "serie",
+      "description": "bundesbank serie",
+      "command": "bundesbank-cli serie"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://api.statistiken.bundesbank.de/rest",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-y-2302",
+    "logo": {
+      "domain": "api.statistiken.bundesbank.de",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://statistiken.bundesbank.de/caas/v1/media/937088/data/31a110e66eacbbb01e0503d9c05372e4",
+      "fallback": "initials",
+      "file": "assets/logos/api.statistiken.bundesbank.de.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1381,
+      "throughput_rps": 0.724,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "SDMX REST",
+      "last_scrape": "2026-10-13T03:44:26.912Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Deutsche Bundesbank – Zeitreihen",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "kurs"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "bundesbank",
+      "euro-referenzkurse",
+      "zinsstruktur",
+      "bund",
+      "beliebige",
+      "zeitreihen",
+      "deutschen",
+      "sdmx-api",
+      "deutsche",
+      "finance",
+      "kurse",
+      "zinsen",
+      "serie",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "DE",
+      "scope": "country",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ]
+    },
+    "infra": {
+      "as_org": "BABIEL-NET CONET Deutschland GmbH",
+      "asn": 198913,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:49:28Z",
+      "host": "api.statistiken.bundesbank.de",
+      "hoster": "BABIEL-NET CONET Deutschland GmbH",
+      "http_status": 200,
+      "ip": "185.173.228.12",
+      "tls_issuer": "Deutsche Telekom Security GmbH",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.bundesbank.de/de/startseite/impressum",
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://statistiken.bundesbank.de",
+      "country": "DE"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:36.733Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://statistiken.bundesbank.de/statistiken-en"
+  }
+}

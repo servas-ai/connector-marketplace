@@ -1,0 +1,181 @@
+{
+  "id": "servas-ai.opencli-gbfs-optymo-fr-belfort",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Optymo Belfort (GBFS)",
+  "description": "Optymo Belfort in Belfort (Frankreich): offener GBFS-Feed 1.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-optymo-fr-belfort-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-optymo-fr-belfort-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-optymo-fr-belfort-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-optymo-fr-belfort-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://data.optymo.fr/vls/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.optymo.fr/robots.txt per kanonischem robots.js geprüft (fail-closed): Feed nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "belfort",
+      "optymo belfort",
+      "frankreich",
+      "france"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": "Belfort",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "data.optymo.fr",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/31/65/cc/3165cca3-dae9-c4d0-8485-6f96d4780d27/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/optymo.fr.png",
+      "brand_domain": "optymo.fr",
+      "source_kind": "appstore"
+    },
+    "license": "https://spdx.org/licenses/ODbL-1.0.html",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS 2.2",
+      "last_scrape": "2026-10-13T14:25:20.680Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Optymo Belfort (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "ODbL-1.0",
+        "url": "https://spdx.org/licenses/ODbL-1.0.html",
+        "evidence": "https://data.optymo.fr/vls/gbfs.json → system_information.license_id/license_url",
+        "per_dataset": false
+      },
+      "commercial_use": "attribution",
+      "attribution_required": "yes",
+      "attribution_text": "Daten: RTTB (GBFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GBFS-Feed des Betreibers (MobilityData systems.csv, ohne Auth); Lizenz ODbL-1.0",
+      "source_kind": "official",
+      "server_country": "DE",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Offene Lizenz ODbL-1.0 im Feed belegt, keine personenbezogenen Daten, kein Login, robots.txt erlaubt"
+        ]
+      },
+      "checked_at": "2026-10-13T14:24:33Z"
+    },
+    "homepage": "https://www.optymo.fr/",
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T20:11:04.181Z",
+      "robots": "allowed"
+    }
+  }
+}

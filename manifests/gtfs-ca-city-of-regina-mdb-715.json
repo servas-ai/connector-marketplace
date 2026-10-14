@@ -1,0 +1,148 @@
+{
+  "id": "servas-ai.opencli-gtfs-ca-city-of-regina-mdb-715",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "City of Regina (GTFS-Fahrplan)",
+  "description": "City of Regina: offizieller GTFS-Soll-Fahrplan (Regina, Kanada) aus dem Mobility-Database-Katalog (mdb-715), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-ca-city-of-regina-mdb-715-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-ca-city-of-regina-mdb-715-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-ca-city-of-regina-mdb-715-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-ca-city-of-regina-mdb-715-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://opengis.regina.ca/reginagtfs/google_transit.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opengis.regina.ca/robots.txt 404 → allow-all (RFC 9309)",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://open.regina.ca/pages/terms-of-use.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "regina",
+      "city of regina",
+      "kanada",
+      "canada"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": "Saskatchewan",
+      "city": "Regina",
+      "bbox": [
+        -104.751495,
+        50.40078,
+        -104.503773,
+        50.50887
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "opengis.regina.ca",
+      "chain": [
+        "official",
+        "favicon",
+        "initials"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": "assets/logos/opengis.regina.ca.png",
+      "brand_domain": "regina.ca"
+    },
+    "license": "https://open.regina.ca/pages/terms-of-use",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "City of Regina (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.regina.ca/"
+  }
+}

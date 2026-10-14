@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-data-gov-mk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "data.gov.mk – Offene Daten Nordmazedonien (CKAN)",
+  "description": "data.gov.mk: nationales Open-Data-Portal Nordmazedoniens mit Datensätzen von Ministerien und Gemeinden (Gastronomie, Verwaltung, Statistik). Zugriff über die offizielle CKAN-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Nordmazedonien",
+    "national",
+    "Balkan",
+    "Regierung der Republik Nordmazedonien – Ministerium für digitale Transformation"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Nordmazedonien",
+    "national",
+    "Balkan",
+    "Regierung der Republik Nordmazedonien – Ministerium für digitale Transformation"
+  ],
+  "homepage": "https://vlada.mk/",
+  "license": "MIT",
+  "geo": {
+    "country": "MK",
+    "region": null,
+    "city": null,
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-gov-mk datasets",
+      "command": "data-gov-mk-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-gov-mk dataset",
+      "command": "data-gov-mk-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.gov.mk/api/3/action/package_search",
+    "homepage": "https://vlada.mk/",
+    "portal": "https://data.gov.mk/dataset",
+    "provider": "Regierung der Republik Nordmazedonien – Ministerium für digitale Transformation",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "CKAN",
+      "Datenkatalog",
+      "datasets",
+      "Nordmazedonien",
+      "national",
+      "Balkan",
+      "Regierung der Republik Nordmazedonien – Ministerium für digitale Transformation"
+    ],
+    "geo": {
+      "country": "MK",
+      "region": null,
+      "city": null,
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.gov.mk/robots.txt (HTTP 200): /api/3/action/package_search und package_show nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "Regierung der Republik Nordmazedonien – Ministerium für digitale Transformation: öffentliche CKAN-Action-API v3 ohne Key/Login; Fair Use.",
+    "logo": {
+      "domain": "data.gov.mk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.gov.mk/base/images/ckan.ico",
+      "fallback": "initials",
+      "file": "assets/logos/data.gov.mk.png",
+      "source": "official-site",
+      "kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "data.gov.mk – Offene Daten Nordmazedonien (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "MK",
+    "ampel": "grün",
+    "license": "Creative Commons CCZero (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "data_license": "Creative Commons CCZero (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "official-site",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:11:24.819Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-police-uk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "data.police.uk – Polizei-Daten England/Wales",
+  "description": "data.police.uk API: Polizeibehörden, Detail je Force, Straftaten im Umkreis (monatlich) und verfügbare Datenstände. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "forces",
+      "displayName": "forces",
+      "description": "police-uk forces",
+      "command": "police-uk-cli forces"
+    },
+    {
+      "name": "force",
+      "displayName": "force",
+      "description": "police-uk force",
+      "command": "police-uk-cli force"
+    },
+    {
+      "name": "straftaten",
+      "displayName": "straftaten",
+      "description": "police-uk straftaten",
+      "command": "police-uk-cli straftaten"
+    },
+    {
+      "name": "datenstaende",
+      "displayName": "datenstaende",
+      "description": "police-uk datenstaende",
+      "command": "police-uk-cli datenstaende"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.police.uk/api/forces",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.police.uk/robots.txt: kein Disallow für /api/. Offizielle Open-Data-API (Home Office). Drossel ≥2 s (Limit 15 Req/s).",
+    "tos": "data.police.uk: Open Government Licence v3.0, Rate-Limit 15 Requests/s.",
+    "logo": {
+      "domain": "data.police.uk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=police.uk&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.police.uk.png",
+      "brand_domain": "police.uk"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3798,
+      "throughput_rps": 0.263,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:27:19.567Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "data.police.uk – Polizei-Daten England/Wales",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "GB",
+    "ampel": "grün",
+    "license": "OGL-UK-3.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "police",
+      "police-uk",
+      "polizeibehörden",
+      "force",
+      "straftaten",
+      "umkreis",
+      "monatlich",
+      "verfügbare",
+      "datenstände",
+      "polizei-daten",
+      "england",
+      "wales",
+      "opendata",
+      "forces",
+      "datenstaende",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "GB",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:32:45Z",
+      "host": "data.police.uk",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "108.128.8.7",
+      "tls_issuer": "Amazon",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://police.uk",
+      "country": "GB"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:34.381Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://data.police.uk/"
+  }
+}

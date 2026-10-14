@@ -1,0 +1,148 @@
+{
+  "id": "servas-ai.opencli-gtfs-jp-donan-bus-mdb-2871",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Donan Bus (GTFS-Fahrplan)",
+  "description": "Donan Bus: offizieller GTFS-Soll-Fahrplan (Tomakomai, Japan) aus dem Mobility-Database-Katalog (mdb-2871), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-jp-donan-bus-mdb-2871-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-jp-donan-bus-mdb-2871-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-jp-donan-bus-mdb-2871-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-jp-donan-bus-mdb-2871-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://ckan.hoda.jp/dataset/24d1dd70-5395-4d6b-b41f-0d83e8eabdb9/resource/a70d369c-405c-4c25-996c-c70aa53682bc/download/dounan_bus.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "ckan.hoda.jp/robots.txt geprüft: Pfad nicht gesperrt",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://github.com/aruneko/DonanbusGTFS/tree/master.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "tomakomai",
+      "donan bus",
+      "japan",
+      "japan"
+    ],
+    "geo": {
+      "country": "JP",
+      "region": "Hokkaido Prefecture",
+      "city": "Tomakomai",
+      "bbox": [
+        140.686050095238,
+        42.160562,
+        142.789346,
+        43.064733
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "ckan.hoda.jp",
+      "chain": [
+        "official",
+        "favicon",
+        "initials"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": "assets/logos/ckan.hoda.jp.png",
+      "brand_domain": "hoda.jp"
+    },
+    "license": "https://github.com/aruneko/DonanbusGTFS/tree/master",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Donan Bus (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.donanbus.co.jp/"
+  }
+}

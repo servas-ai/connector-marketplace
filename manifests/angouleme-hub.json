@@ -1,0 +1,199 @@
+{
+  "id": "servas-ai.opencli-angouleme-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open Data GrandAngoulême",
+  "description": "grandangouleme-data16.lacharente.fr – GrandAngoulême: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "hub",
+    "fr",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "angouleme-hub suche",
+      "command": "angouleme-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "angouleme-hub neu",
+      "command": "angouleme-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "angouleme-hub datensatz",
+      "command": "angouleme-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://grandangouleme-data16.lacharente.fr/search",
+    "homepage": "https://grandangouleme-data16.lacharente.fr/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "grandangouleme-data16.lacharente.fr/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "GrandAngoulême: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "Licence-Ouverte-2.0",
+    "country": "FR",
+    "keywords": [
+      "opendata",
+      "hub",
+      "katalog",
+      "fr"
+    ],
+    "geo": {
+      "country": "FR",
+      "scope": "city",
+      "region": "Nouvelle-Aquitaine",
+      "city": "Angoulême"
+    },
+    "operator": {
+      "name": "GrandAngoulême",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "FR",
+      "url": "https://www.grandangouleme.fr/",
+      "source": "Portal-Header/Impressum, ArcGIS-Org"
+    },
+    "logo": {
+      "domain": "grandangouleme-data16.lacharente.fr",
+      "file": "assets/logos/grandangouleme-data16.lacharente.fr.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://www.grandangouleme.fr/wp-content/uploads/2017/04/GA-Cartouche-gris_250x200.jpg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "hub-site-logo",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:20:00Z",
+      "robots": "allowed",
+      "api_kind": "OGC API Records (ArcGIS Hub Search v1)",
+      "openapi_version": null,
+      "openapi_paths": null,
+      "dcat": "https://grandangouleme-data16.lacharente.fr/api/feed/dcat-ap/2.1.1.json",
+      "dcat_profile": "DCAT-AP 2.1.1 (JSON-LD)",
+      "ogc_api": "https://grandangouleme-data16.lacharente.fr/api/search/v1",
+      "access_chain_hints": [
+        "dcat: https://grandangouleme-data16.lacharente.fr/api/feed/dcat-ap/2.1.1.json",
+        "ogc-api-records: https://grandangouleme-data16.lacharente.fr/api/search/v1/collections"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "Licence-Ouverte-2.0",
+        "url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+        "evidence": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+        "per_dataset": true
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Open Data GrandAngoulême (grandangouleme-data16.lacharente.fr)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten",
+          "Hosting Esri ArcGIS Online/Hub (Cloud), Server-Region nicht belegt – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T21:20:00Z"
+    },
+    "wave": "opendata-wave-2056",
+    "worker": "opendata-wave-2056",
+    "openui": {
+      "card": {
+        "title": "Open Data GrandAngoulême",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">IPLocation.net shield icon</title>
+  <desc id="desc">A blue shield icon.</desc>
+  <defs>
+    <filter id="shield-shadow" x="-18%" y="-16%" width="136%" height="146%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2.1" flood-color="#0f172a" flood-opacity="0.24"/>
+    </filter>
+    <linearGradient id="shield-outer" x1="20" y1="10" x2="108" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="0.48" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="shield-inner" x1="37" y1="24" x2="94" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="0.45" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <g aria-hidden="true" filter="url(#shield-shadow)">
+    <path d="M64 6 116 25l-10 57-42 39-42-39-10-57L64 6Z" fill="url(#shield-outer)"/>
+    <path d="M64 15c14.5 8.8 29 14.8 42 18.4L98.5 76C93 89.7 81.5 101 64 109.5 46.5 101 35 89.7 29.5 76L22 33.4C35 29.8 49.5 23.8 64 15Z" fill="url(#shield-inner)"/>
+    <path d="M64 15v94.5C46.5 101 35 89.7 29.5 76L22 33.4C35 29.8 49.5 23.8 64 15Z" fill="#ffffff" opacity="0.16"/>
+    <path d="M64 6 116 25l-5 8c-17-4-33-10-47-18-16 9.5-32 15.5-47 18l-5-8L64 6Z" fill="#ffffff" opacity="0.2"/>
+    <path d="M64 31c8.8 6.6 18.5 11.2 29 13.8l-5 28.4C84.7 82 77 89.4 64 95.8 51 89.4 43.3 82 40 73.2l-5-28.4C45.5 42.2 55.2 37.6 64 31Z" fill="#ffffff" opacity="0.3"/>
+  </g>
+</svg>

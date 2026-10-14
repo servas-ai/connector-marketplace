@@ -1,0 +1,191 @@
+{
+  "id": "servas-ai.opencli-togo-opendata-udata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Plateforme Open Data du Togo (udata)",
+  "description": "opendata.gouv.tg – République Togolaise – Ministère de l'Économie Numérique et de la Transformation Digitale: udata-Open-Data-Katalog (API v1, Swagger 2.0, DCAT-AP): Dataset-Suche und Dataset-Details mit Ressourcen und Lizenz. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "udata",
+    "tg",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "togo-opendata-udata datasets",
+      "command": "togo-opendata-udata-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "togo-opendata-udata dataset",
+      "command": "togo-opendata-udata-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://opendata.gouv.tg/api/1/datasets/",
+    "homepage": "https://opendata.gouv.tg/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.gouv.tg/robots.txt geprüft (fail-closed, RFC 9309 via tools/robots/robots.js): HTTP 404 → keine Einschränkung (RFC 9309 §2.3.1.3); die udata API unter /api/1 (datasets) erlaubt. Drossel ≥2 s/Host.",
+    "tos": "République Togolaise – Ministère de l'Économie Numérique et de la Transformation Digitale: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "PDDL-1.0",
+    "country": "TG",
+    "keywords": [
+      "opendata",
+      "udata",
+      "katalog",
+      "tg"
+    ],
+    "geo": {
+      "country": "TG",
+      "scope": "country",
+      "city": "Lomé"
+    },
+    "operator": {
+      "name": "République Togolaise – Ministère de l'Économie Numérique et de la Transformation Digitale",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "TG",
+      "url": "https://opendata.gouv.tg/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "opendata.gouv.tg",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "udata-api-1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://opendata.gouv.tg/api/1/swagger.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:30:00Z",
+      "robots": "allowed",
+      "api_kind": "udata API v1 (Swagger 2.0)",
+      "openapi_version": "2.0",
+      "openapi_paths": 137,
+      "dcat": "https://opendata.gouv.tg/api/1/site/catalog.json",
+      "dcat_profile": "DCAT-AP (udata Site-Katalog, JSON-LD)",
+      "ogc_api": null,
+      "access_chain_hints": [
+        "openapi: https://opendata.gouv.tg/api/1/swagger.json",
+        "dcat: https://opendata.gouv.tg/api/1/site/catalog.json",
+        "udata-api: https://opendata.gouv.tg/api/1"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "PDDL-1.0",
+        "url": "https://opendata.gouv.tg/",
+        "evidence": "https://opendata.gouv.tg/",
+        "per_dataset": true
+      },
+      "commercial_use": "yes",
+      "attribution_required": "no",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten",
+          "Hosting-Land nicht öffentlich belegt (Portal-Land TG) – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-14T02:30:00Z"
+    },
+    "wave": "opendata-wave-0156",
+    "worker": "opendata-wave-0156",
+    "openui": {
+      "card": {
+        "title": "Plateforme Open Data du Togo (udata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

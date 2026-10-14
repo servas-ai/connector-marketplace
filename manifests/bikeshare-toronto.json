@@ -1,0 +1,180 @@
+{
+  "id": "servas-ai.opencli-bikeshare-toronto",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Bike Share Toronto – GBFS",
+  "description": "GBFS-Feed (Bike Share Toronto – GBFS): Stationen mit Standort/Kapazität und Echtzeit-Verfügbarkeit von Rädern und freien Stellplätzen.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "bikesharing",
+    "bike sharing",
+    "leihrad",
+    "rental bike",
+    "fahrrad",
+    "bicycle",
+    "mobilität",
+    "mobility"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feeds",
+      "displayName": "feeds",
+      "description": "Verfügbare GBFS-Feeds",
+      "command": "bikeshare-toronto-cli feeds"
+    },
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Einzelnen Feed roh als Zeilen (<name>)",
+      "command": "bikeshare-toronto-cli feed"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen (station_information)",
+      "command": "bikeshare-toronto-cli stationen"
+    },
+    {
+      "name": "verfuegbarkeit",
+      "displayName": "verfuegbarkeit",
+      "description": "Echtzeit-Verfügbarkeit (station_status)",
+      "command": "bikeshare-toronto-cli verfuegbarkeit"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "realtime": true,
+    "source_url": "https://tor.publicbikesystem.net/ube/gbfs/v1/gbfs.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "tor.publicbikesystem.net/robots.txt: GBFS-Pfade nicht gesperrt. Offener GBFS-Feed (General Bikeshare Feed Specification), 1 req/2 s.",
+    "tos": "Toronto Parking Authority: Open Government Licence – Toronto.",
+    "keywords": [
+      "bikesharing",
+      "bike sharing",
+      "leihrad",
+      "rental bike",
+      "fahrrad",
+      "bicycle",
+      "mobilität",
+      "mobility",
+      "gbfs",
+      "station",
+      "verfügbarkeit",
+      "availability",
+      "verkehr",
+      "transport",
+      "toronto",
+      "echtzeit"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": null,
+      "city": "Toronto",
+      "bbox": [
+        -79.65,
+        43.58,
+        -79.12,
+        43.86
+      ],
+      "lat": 43.65,
+      "lon": -79.38,
+      "scope": "city"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "tor.publicbikesystem.net",
+      "file": "assets/logos/tor.publicbikesystem.net.png",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c8/89/fc/c889fca6-288e-6689-e689-71f71a35156e/Placeholder.mill/512x512bb.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials",
+      "app": "Bike Share Toronto",
+      "developer": "Lyft, Inc."
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 4376,
+      "throughput_rps": 0.229,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:24:33.206Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "Bike Share Toronto – GBFS",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "name",
+          "raeder",
+          "frei",
+          "kapazitaet"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "CA",
+    "homepage": "https://bikesharetoronto.com",
+    "operator": "Toronto Parking Authority (Bike Share Toronto)",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:47.247Z",
+      "robots": "allowed"
+    }
+  }
+}

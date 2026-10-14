@@ -1,0 +1,136 @@
+{
+  "id": "servas-ai.opencli-data-delaware-gov",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Delaware Open Data",
+  "description": "Delaware Open Data – Socrata Discovery API v1: Dataset-Suche und Dataset-Details (Titel, Herausgeber, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-delaware-gov datasets",
+      "command": "data-delaware-gov-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-delaware-gov dataset",
+      "command": "data-delaware-gov-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.delaware.gov/api/catalog/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.delaware.gov/robots.txt: keine robots.txt (bzw. HTML) – keine Disallow-Regeln; Laufzeit-Prüfung in lib/http.js. Drossel ≥2 s/Host.",
+    "tos": "Delaware Open Data: offenes Datenportal (Socrata Discovery API v1); Lizenz je Dataset, Fair Use.",
+    "logo": {
+      "domain": "data.delaware.gov",
+      "resolved": "https://data.delaware.gov/api/assets/BAE41679-F0D2-4070-9CB6-5BF5470D9E6C?header-logo_270x70.png",
+      "file": "assets/logos/data.delaware.gov.png",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "keywords": [
+      "Open Data",
+      "offene Daten",
+      "Datenportal",
+      "data portal",
+      "Datensätze",
+      "datasets",
+      "Katalog",
+      "catalog",
+      "Verwaltung",
+      "government",
+      "Behörde",
+      "public sector",
+      "Socrata",
+      "SODA",
+      "USA",
+      "Delaware",
+      "Bundesstaat"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Delaware",
+      "city": null,
+      "lat": 39.0,
+      "lon": -75.5,
+      "bbox": null,
+      "scope": "region"
+    },
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Delaware Open Data",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "homepage": "https://data.delaware.gov",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:52.818Z",
+      "robots": "allowed"
+    }
+  }
+}

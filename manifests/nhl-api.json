@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-nhl-api",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NHL Web API – Eishockey (Tabelle, Spielplan)",
+  "description": "NHL Web API: aktuelle Tabelle der National Hockey League, Spielplan mit Ergebnissen für einen Tag und Team-Spielplan einer Saison.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "eishockey",
+    "ice hockey",
+    "nhl",
+    "sport",
+    "sports",
+    "tabelle",
+    "standings",
+    "spielplan"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "tabelle",
+      "displayName": "tabelle",
+      "description": "Aktuelle Tabelle",
+      "command": "nhl-api-cli tabelle"
+    },
+    {
+      "name": "spielplan",
+      "displayName": "spielplan",
+      "description": "Spiele ab Datum (<YYYY-MM-DD>, eine Woche)",
+      "command": "nhl-api-cli spielplan"
+    },
+    {
+      "name": "team",
+      "displayName": "team",
+      "description": "Saison-Spielplan eines Teams (<abbrev> <saison>)",
+      "command": "nhl-api-cli team"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "sport",
+    "realtime": true,
+    "source_url": "https://api-web.nhle.com/v1/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api-web.nhle.com/robots.txt: keine Sperren. Öffentliche Web-API ohne Key, 1 req/2 s.",
+    "tos": "NHL: Daten © NHL, nur nichtkommerzielle Nutzung.",
+    "keywords": [
+      "eishockey",
+      "ice hockey",
+      "nhl",
+      "sport",
+      "sports",
+      "tabelle",
+      "standings",
+      "spielplan",
+      "schedule",
+      "ergebnisse",
+      "scores",
+      "teams",
+      "liga",
+      "league",
+      "nordamerika",
+      "north america"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Nordamerika",
+      "city": null,
+      "bbox": [
+        -125,
+        24,
+        -52,
+        60
+      ],
+      "scope": "multi-country"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "api-web.nhle.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=api-web.nhle.com&sz=128",
+      "fallback": "initials",
+      "brand_domain": "api-web.nhle.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 3811,
+      "throughput_rps": 0.262,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:38:14.827Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "NHL Web API – Eishockey (Tabelle, Spielplan)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "team",
+          "punkte",
+          "spiele",
+          "siege",
+          "niederlagen"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "US",
+    "homepage": "https://www.nhl.com",
+    "operator": {
+      "name": "National Hockey League (NHL)",
+      "country": "US",
+      "source": "x-servas.operator (vorher String; quality-v-2146 als Objekt normalisiert)"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.901Z",
+      "robots": "allowed"
+    }
+  }
+}

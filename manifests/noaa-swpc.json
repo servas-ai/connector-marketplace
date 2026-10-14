@@ -1,0 +1,192 @@
+{
+  "id": "servas-ai.opencli-noaa-swpc",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NOAA SWPC – Weltraumwetter (Kp, Alerts, Sonnenwind, Sonnenflecken)",
+  "description": "NOAA Space Weather Prediction Center: planetarer Kp-Index, Weltraumwetter-Meldungen (Alerts/Warnings), aktuelle Sonnenwindgeschwindigkeit und monatliche Sonnenfleckenzahl. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kp-index",
+      "displayName": "kp-index",
+      "description": "noaa-swpc kp-index",
+      "command": "noaa-swpc-cli kp-index"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "noaa-swpc meldungen",
+      "command": "noaa-swpc-cli meldungen"
+    },
+    {
+      "name": "sonnenwind",
+      "displayName": "sonnenwind",
+      "description": "noaa-swpc sonnenwind",
+      "command": "noaa-swpc-cli sonnenwind"
+    },
+    {
+      "name": "sonnenflecken",
+      "displayName": "sonnenflecken",
+      "description": "noaa-swpc sonnenflecken",
+      "command": "noaa-swpc-cli sonnenflecken"
+    },
+    {
+      "name": "produkt",
+      "displayName": "produkt",
+      "description": "noaa-swpc produkt",
+      "command": "noaa-swpc-cli produkt"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "services.swpc.noaa.gov/robots.txt: 404 (keine Einschränkung). Öffentliche JSON-Produkte der NOAA. Drossel ≥2 s.",
+    "tos": "NOAA SWPC: Daten der US-Regierung, gemeinfrei, Quellenangabe erbeten.",
+    "logo": {
+      "domain": "services.swpc.noaa.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.spaceweather.gov/themes/custom/swpc/images/logos/noaa_logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/services.swpc.noaa.gov.png",
+      "brand_domain": "swpc.noaa.gov",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4006,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "products",
+      "last_scrape": "2026-10-13T08:04:34.602Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "NOAA SWPC – Weltraumwetter (Kp, Alerts, Sonnenwind, Sonnenflecken)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "svg",
+    "keywords": [
+      "noaa",
+      "swpc",
+      "noaa-swpc",
+      "space",
+      "weather",
+      "prediction",
+      "center",
+      "planetarer",
+      "kp-index",
+      "weltraumwetter-meldungen",
+      "alerts",
+      "warnings",
+      "sonnenwindgeschwindigkeit",
+      "monatliche",
+      "sonnenfleckenzahl",
+      "weltraumwetter",
+      "sonnenwind",
+      "sonnenflecken",
+      "opendata",
+      "meldungen",
+      "produkt",
+      "wetter",
+      "prognose",
+      "forecast",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "Amazon CloudFront",
+      "checked_at": "2026-10-13T09:25:08Z",
+      "host": "services.swpc.noaa.gov",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "65.8.131.92",
+      "server_header": "Apache",
+      "tls_issuer": "Amazon",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://swpc.noaa.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:19.422Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.spaceweather.gov/"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "id": "servas-ai.opencli-wodonga-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Wodonga Council GIS Open Data – ArcGIS Hub",
+  "description": "Wodonga Council GIS Open Data (Australien): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "wodonga-hub suche",
+      "command": "wodonga-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "wodonga-hub neu",
+      "command": "wodonga-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "wodonga-hub datensatz",
+      "command": "wodonga-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://cow-open-data-hub-CityOfWodonga.hub.arcgis.com/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "cow-open-data-hub-CityOfWodonga.hub.arcgis.com/robots.txt geprüft: /api/search nicht gesperrt. Öffentliche OGC-API-Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "ArcGIS-Hub-Open-Data-Portal; Lizenz je Datensatz (Feld lizenz), Quelle nennen.",
+    "logo": {
+      "domain": "cow-open-data-hub-CityOfWodonga.hub.arcgis.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=cow-open-data-hub-CityOfWodonga.hub.arcgis.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/cow-open-data-hub-CityOfWodonga.hub.arcgis.com.png",
+      "brand_domain": "cow-open-data-hub-CityOfWodonga.hub.arcgis.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Wodonga Council GIS Open Data – ArcGIS Hub",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "ArcGIS Hub",
+      "Geodaten",
+      "geodata",
+      "GIS",
+      "Datenkatalog",
+      "data catalog",
+      "Datensätze",
+      "datasets",
+      "Karten",
+      "maps",
+      "Verwaltung",
+      "government",
+      "OGC API Records",
+      "Wodonga",
+      "Victoria",
+      "Australien"
+    ],
+    "geo": {
+      "country": "AU",
+      "region": "Victoria",
+      "city": "Wodonga",
+      "lat": -36.1218,
+      "lon": 146.8881,
+      "bbox": [
+        146.388,
+        -36.622,
+        147.388,
+        -35.622
+      ],
+      "scope": "city"
+    },
+    "homepage": "https://www.wodonga.vic.gov.au/"
+  }
+}

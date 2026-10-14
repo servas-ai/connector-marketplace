@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-rickandmorty",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Rick and Morty API",
+  "description": "Rick and Morty API: Charaktere, Orte und Episoden der Serie. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Rick",
+    "Morty",
+    "API",
+    "Charaktere",
+    "Episoden"
+  ],
+  "keywords": [
+    "Rick",
+    "Morty",
+    "API",
+    "Charaktere",
+    "Episoden"
+  ],
+  "homepage": "https://rickandmortyapi.com/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "charaktere",
+      "displayName": "charaktere",
+      "description": "rickandmorty charaktere",
+      "command": "rickandmorty-cli charaktere"
+    },
+    {
+      "name": "orte",
+      "displayName": "orte",
+      "description": "rickandmorty orte",
+      "command": "rickandmorty-cli orte"
+    },
+    {
+      "name": "episoden",
+      "displayName": "episoden",
+      "description": "rickandmorty episoden",
+      "command": "rickandmorty-cli episoden"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://rickandmortyapi.com/api/character",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "rickandmortyapi.com/robots.txt: API erlaubt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Rick and Morty API (public); Fair Use.",
+    "provider": "Rick and Morty API",
+    "homepage": "https://rickandmortyapi.com/",
+    "data_license": "Rick and Morty API public",
+    "keywords": [
+      "Rick",
+      "Morty",
+      "API",
+      "Charaktere",
+      "Episoden"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "rickandmortyapi.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://rickandmortyapi.com/icons/icon-512x512.png?v=1538abef51e33ef514e8fe1ab9aeab4e",
+      "fallback": "initials",
+      "brand_domain": "rickandmortyapi.com",
+      "file": "assets/logos/rickandmortyapi.com.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Rick and Morty API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:08:05.383Z",
+      "robots": "allowed"
+    }
+  }
+}

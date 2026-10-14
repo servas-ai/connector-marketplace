@@ -1,0 +1,154 @@
+{
+  "id": "servas-ai.opencli-nordic-stat-px",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Nordic Statistics Database (PxWeb)",
+  "description": "pxweb.nordicstatistics.org PxWeb: Nordic Statistics: gemeinsame Nordische Statistikdatenbank (PxWeb-Katalog) – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "nordic-stat-px katalog",
+      "command": "nordic-stat-px-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "nordic-stat-px info",
+      "command": "nordic-stat-px-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Nordic",
+    "Norden",
+    "Statistik",
+    "statistics",
+    "PxWeb",
+    "Open Data"
+  ],
+  "geo": {
+    "country": "INT",
+    "region": "Nordic countries",
+    "city": "Copenhagen",
+    "lat": 55.68,
+    "lon": 12.57,
+    "scope": "multi-country",
+    "bbox": null
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://pxweb.nordicstatistics.org/api/v1/en/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "pxweb.nordicstatistics.org/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+    "tos": "Nordic Statistics Database: öffentliche PxWeb-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe pxweb.nordicstatistics.org.",
+    "keywords": [
+      "Nordic",
+      "Norden",
+      "Statistik",
+      "statistics",
+      "PxWeb",
+      "Open Data"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "Nordic countries",
+      "city": "Copenhagen",
+      "lat": 55.68,
+      "lon": 12.57,
+      "scope": "multi-country",
+      "bbox": null
+    },
+    "country": "INT",
+    "logo": {
+      "domain": "pxweb.nordicstatistics.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Nordic Statistics Database (PxWeb)",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-14T02:20:00Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.nordicstatistics.org/",
+    "wave": "orch-wave-0030",
+    "worker": "orch-wave-0030"
+  }
+}

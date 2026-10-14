@@ -1,0 +1,159 @@
+{
+  "id": "servas-ai.opencli-usgs-water",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "USGS Water Services – Abfluss & Pegel USA",
+  "description": "USGS National Water Information System (waterservices.usgs.gov): aktuelle (Instantaneous) und tägliche Abfluss-/Pegelwerte je Messstelle. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "aktuell",
+      "displayName": "aktuell",
+      "description": "usgs-water aktuell",
+      "command": "usgs-water-cli aktuell"
+    },
+    {
+      "name": "tageswerte",
+      "displayName": "tageswerte",
+      "description": "usgs-water tageswerte",
+      "command": "usgs-water-cli tageswerte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "umwelt",
+    "realtime": true,
+    "source_url": "https://waterservices.usgs.gov/nwis/iv/",
+    "homepage": "https://waterdata.usgs.gov/",
+    "keywords": [
+      "usgs",
+      "water",
+      "usgs-water",
+      "national",
+      "information",
+      "system",
+      "waterservices",
+      "gov",
+      "instantaneous",
+      "tägliche",
+      "abfluss",
+      "pegelwerte",
+      "messstelle",
+      "services",
+      "pegel",
+      "usa",
+      "international",
+      "tageswerte"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "waterservices.usgs.gov/robots.txt: 404 (keine Einschränkung). Offizieller NWIS-Webservice (US-Bundesbehörde, Public Domain). Drossel ≥2 s.",
+    "tos": "USGS: Public Domain (US Government Work), Fair Use der Webservices.",
+    "logo": {
+      "domain": "waterservices.usgs.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:USGS_logo_green.svg",
+      "fallback": "initials",
+      "file": "assets/logos/waterservices.usgs.gov.png",
+      "brand_domain": "usgs.gov",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3992,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "nwis-1.1",
+      "last_scrape": "2026-10-13T07:26:59.167Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "USGS Water Services – Abfluss & Pegel USA",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "wikimedia",
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AS22284-DOI-OPS - U.S. Department of the Interior",
+      "asn": 22284,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:43:48Z",
+      "host": "waterservices.usgs.gov",
+      "hoster": "U.S. Department of the Interior",
+      "http_status": 200,
+      "ip": "137.227.241.74",
+      "server_header": "Apache",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://waterservices.usgs.gov",
+      "country": "US"
+    },
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:03.428Z",
+      "robots": "allowed"
+    }
+  }
+}

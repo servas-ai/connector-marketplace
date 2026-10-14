@@ -1,0 +1,158 @@
+{
+  "id": "servas-ai.opencli-sjv-se",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Jordbruksverket statistik (PxWeb)",
+  "description": "statistik.sjv.se PxWeb: amtliche Landwirtschaftsstatistik (Jordbruksverkets statistikdatabas). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "sjv-se katalog",
+      "command": "sjv-se-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "sjv-se info",
+      "command": "sjv-se-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "PxWeb",
+    "Jordbruksverket",
+    "Landwirtschaft",
+    "agriculture",
+    "Sweden",
+    "Sverige",
+    "Open Data"
+  ],
+  "geo": {
+    "country": "SE",
+    "region": "Sweden",
+    "city": "Jönköping",
+    "lat": 57.78,
+    "lon": 14.16,
+    "scope": "country",
+    "bbox": null
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://statistik.sjv.se/PXWeb/api/v1/sv/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "statistik.sjv.se/robots.txt: kein robots.txt (404) bzw. keine API-Sperre – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "Jordbruksverket statistik (PxWeb): öffentliche Schnittstelle ohne Login/Key, Fair Use; Quellenangabe statistik.sjv.se.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "PxWeb",
+      "Jordbruksverket",
+      "Landwirtschaft",
+      "agriculture",
+      "Sweden",
+      "Sverige",
+      "Open Data"
+    ],
+    "geo": {
+      "country": "SE",
+      "region": "Sweden",
+      "city": "Jönköping",
+      "lat": 57.78,
+      "lon": 14.16,
+      "scope": "country",
+      "bbox": null
+    },
+    "country": "SE",
+    "logo": {
+      "domain": "statistik.sjv.se",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": "assets/logos/statistik.sjv.se.png",
+      "source": "initials",
+      "source_kind": "fallback"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Jordbruksverket statistik (PxWeb)",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-14T01:54:00.000Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://statistik.sjv.se/"
+  }
+}

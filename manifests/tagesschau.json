@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-tagesschau",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "tagesschau – Nachrichten-API",
+  "description": "tagesschau.de api2u: Homepage- und News-Feed (Titel, Datum, Ressort, Teaser) der ARD-aktuell-Redaktion, keyless JSON. Nicht-kommerziell laut ToS.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "media"
+  ],
+  "tags": [
+    "tagesschau",
+    "ard",
+    "nachrichten",
+    "news",
+    "germany",
+    "journalism"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "news",
+      "displayName": "news",
+      "description": "tagesschau news",
+      "command": "tagesschau-cli news"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "media",
+    "realtime": true,
+    "source_url": "https://tagesschau.de/",
+    "homepage": "https://tagesschau.de/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "tagesschau.de/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "tagesschau api2u: öffentlich lesbar; Nutzung laut Impressum/ToS nicht kommerziell (Ampel rot); Drossel, Abbruch bei 403/429.",
+    "license": "terms-of-source (ARD-aktuell / tagesschau; nicht kommerziell)",
+    "country": "DE",
+    "keywords": [
+      "tagesschau",
+      "ard",
+      "nachrichten",
+      "news",
+      "germany",
+      "journalism"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-30",
+    "worker": "open-apis-30-0318",
+    "logo": {
+      "domain": "tagesschau.de",
+      "file": "assets/logos/tagesschau.de.png",
+      "source": "official-site",
+      "source_kind": "official-site",
+      "resolved": "logo/assets/logos/tagesschau.de.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "api2u",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:25:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (ARD-aktuell / tagesschau; nicht kommerziell)",
+        "url": "https://www.tagesschau.de/impressum",
+        "evidence": "https://www.tagesschau.de/impressum",
+        "per_dataset": false
+      },
+      "commercial_use": "no",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: tagesschau – Nachrichten-API (tagesschau.de)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "DE",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "red",
+        "reasons": [
+          "Lizenz erlaubt keine kommerzielle Nutzung"
+        ]
+      },
+      "checked_at": "2026-10-14T03:25:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "tagesschau – Nachrichten-API",
+        "subtitle": "media",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

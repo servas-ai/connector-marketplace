@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-sololuck",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SoloLuck – BTC Solo-Mining Pool Stats",
+  "description": "SoloLuck API: Solo-Mining-Pool-Statistik (Hashrate, Worker, Difficulty, Blocks) für Bitcoin, keyless JSON, llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "sololuck",
+    "bitcoin",
+    "mining",
+    "solo",
+    "hashrate",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://sololuck.io/",
+    "homepage": "https://sololuck.io/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "sololuck.io/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "SoloLuck: öffentliche Pool-Stats ohne Key; Terms der Quelle, nur Lesen.",
+    "license": "terms-of-source (SoloLuck)",
+    "country": "INT",
+    "keywords": [
+      "sololuck",
+      "bitcoin",
+      "mining",
+      "solo",
+      "hashrate",
+      "finance"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-23",
+    "worker": "open-apis-23-2334",
+    "logo": {
+      "domain": "sololuck.io",
+      "file": "assets/logos/sololuck.io.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://sololuck.io/favicon.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://sololuck.io/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:55:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (SoloLuck)",
+        "url": "https://sololuck.io/",
+        "evidence": "https://sololuck.io/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: SoloLuck – BTC Solo-Mining Pool Stats (sololuck.io)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:55:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "SoloLuck – BTC Solo-Mining Pool Stats",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

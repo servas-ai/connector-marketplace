@@ -1,0 +1,198 @@
+{
+  "id": "servas-ai.opencli-dvr-lt-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DVR LT – Valstybės duomenų ištekliai",
+  "description": "dvr.stat.gov.lt – Lietuvos statistikos departamentas: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "hub",
+    "lt",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "dvr-lt-hub suche",
+      "command": "dvr-lt-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "dvr-lt-hub neu",
+      "command": "dvr-lt-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "dvr-lt-hub datensatz",
+      "command": "dvr-lt-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://dvr.stat.gov.lt/search",
+    "homepage": "https://dvr.stat.gov.lt/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "dvr.stat.gov.lt/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Lietuvos statistikos departamentas: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "CC-BY-4.0",
+    "country": "LT",
+    "keywords": [
+      "opendata",
+      "hub",
+      "katalog",
+      "lt"
+    ],
+    "geo": {
+      "country": "LT",
+      "scope": "country"
+    },
+    "operator": {
+      "name": "Lietuvos statistikos departamentas",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "LT",
+      "url": "https://www.stat.gov.lt/",
+      "source": "Portal-Header/Impressum, ArcGIS-Org"
+    },
+    "logo": {
+      "domain": "dvr.stat.gov.lt",
+      "file": "assets/logos/dvr.stat.gov.lt.png",
+      "source": "official-site",
+      "source_kind": "official-site",
+      "resolved": "https://dvr.stat.gov.lt/",
+      "chain": [
+        "appstore",
+        "official-site",
+        "hub-site-logo",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://dvr.stat.gov.lt/api/search/definition/?f=json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:45:00Z",
+      "robots": "allowed",
+      "api_kind": "OGC API Records (ArcGIS Hub Search v1)",
+      "openapi_version": "3.0.0",
+      "openapi_paths": 17,
+      "dcat": "https://dvr.stat.gov.lt/api/feed/dcat-ap/2.1.1.json",
+      "dcat_profile": "DCAT-AP 2.1.1 (JSON-LD)",
+      "ogc_api": "https://dvr.stat.gov.lt/api/search/v1",
+      "access_chain_hints": [
+        "openapi: https://dvr.stat.gov.lt/api/search/definition/?f=json",
+        "dcat: https://dvr.stat.gov.lt/api/feed/dcat-ap/2.1.1.json",
+        "ogc-api-records: https://dvr.stat.gov.lt/api/search/v1/collections"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "evidence": "https://creativecommons.org/licenses/by/4.0/",
+        "per_dataset": true
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: DVR LT – Valstybės duomenų ištekliai (dvr.stat.gov.lt)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten",
+          "Hosting Esri ArcGIS Online/Hub (Cloud), Server-Region nicht belegt – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T20:45:00Z"
+    },
+    "wave": "opendata-wave-2022",
+    "worker": "opendata-wave-2022",
+    "openui": {
+      "card": {
+        "title": "DVR LT – Valstybės duomenų ištekliai",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

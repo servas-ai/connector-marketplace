@@ -1,0 +1,196 @@
+{
+  "id": "servas-ai.opencli-hsl-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "HSL Helsingin seudun liikenne – Open Data",
+  "description": "public-transport-hslhrt.opendata.arcgis.com – Helsingin seudun liikenne (HSL): Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "hub",
+    "fi",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "hsl-hub suche",
+      "command": "hsl-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "hsl-hub neu",
+      "command": "hsl-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "hsl-hub datensatz",
+      "command": "hsl-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://public-transport-hslhrt.opendata.arcgis.com/search",
+    "homepage": "https://public-transport-hslhrt.opendata.arcgis.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "public-transport-hslhrt.opendata.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Helsingin seudun liikenne (HSL): offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "CC-BY-4.0",
+    "country": "FI",
+    "keywords": [
+      "opendata",
+      "hub",
+      "katalog",
+      "fi"
+    ],
+    "geo": {
+      "country": "FI",
+      "scope": "region",
+      "region": "Uusimaa",
+      "city": "Helsinki"
+    },
+    "operator": {
+      "name": "Helsingin seudun liikenne (HSL)",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "FI",
+      "url": "https://www.hsl.fi/",
+      "source": "Portal-Header/Impressum, ArcGIS-Org"
+    },
+    "logo": {
+      "domain": "public-transport-hslhrt.opendata.arcgis.com",
+      "file": "assets/logos/public-transport-hslhrt.opendata.arcgis.com.png",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/20/14/65/20146530-b257-8594-e5a3-13d2a6d5b70c/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "hub-site-logo",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials",
+      "app": "HSL",
+      "developer": "Helsingin seudun liikenne"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://public-transport-hslhrt.opendata.arcgis.com/api/search/definition/?f=json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:08:08.934Z",
+      "robots": "allowed",
+      "access_chain_hints": [
+        "openapi: https://public-transport-hslhrt.opendata.arcgis.com/api/search/definition/?f=json",
+        "dcat: https://public-transport-hslhrt.opendata.arcgis.com/api/feed/dcat-ap/2.1.1.json",
+        "ogc-api-records: https://public-transport-hslhrt.opendata.arcgis.com/api/search/v1/collections"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "evidence": "https://creativecommons.org/licenses/by/4.0/",
+        "per_dataset": true
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: HSL Helsingin seudun liikenne – Open Data (public-transport-hslhrt.opendata.arcgis.com)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten",
+          "Hosting Esri ArcGIS Online/Hub (Cloud), Server-Region nicht belegt – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T19:45:00Z"
+    },
+    "wave": "opendata-wave-1918",
+    "worker": "opendata-wave-1918",
+    "openui": {
+      "card": {
+        "title": "HSL Helsingin seudun liikenne – Open Data",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

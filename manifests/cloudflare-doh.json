@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-cloudflare-doh",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Cloudflare DNS-over-HTTPS (JSON)",
+  "description": "Cloudflare 1.1.1.1 DNS-over-HTTPS JSON-API: A/AAAA/TXT u. a. Lookups ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "dns",
+    "doh",
+    "cloudflare",
+    "resolver",
+    "a-record",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "a",
+      "displayName": "a",
+      "description": "cloudflare-doh a",
+      "command": "cloudflare-doh-cli a"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://cloudflare-dns.com/",
+    "homepage": "https://cloudflare-dns.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "cloudflare-dns.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Cloudflare DoH: öffentliche JSON-API, Accept application/dns-json, Fair-Use.",
+    "license": "terms-of-source (Cloudflare)",
+    "country": "INT",
+    "keywords": [
+      "dns",
+      "doh",
+      "cloudflare",
+      "resolver",
+      "a-record",
+      "tech"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-17",
+    "worker": "open-apis-17-2119",
+    "logo": {
+      "domain": "cloudflare-dns.com",
+      "file": "assets/logos/cloudflare-dns.com.png",
+      "source": "og:image",
+      "source_kind": "og:image",
+      "resolved": "https://1.1.1.1/media/card-v2.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "doh-json",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:45:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Cloudflare)",
+        "url": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/",
+        "evidence": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "no",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "kommerzieller Betreiber, Terms der Quelle"
+        ]
+      },
+      "checked_at": "2026-10-13T21:45:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Cloudflare DNS-over-HTTPS (JSON)",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "data"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "id": "servas-ai.opencli-dataportal-se",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Sveriges dataportal (dataportal.se)",
+  "description": "Sveriges dataportal (DIGG): DCAT-Datensatzsuche über die EntryStore-Such-API – Titel, Herausgeber, Schlagworte, Änderungsdatum. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "dataportal-se suche",
+      "command": "dataportal-se-cli suche"
+    },
+    {
+      "name": "neueste",
+      "displayName": "neueste",
+      "description": "dataportal-se neueste",
+      "command": "dataportal-se-cli neueste"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://admin.dataportal.se/store/search",
+    "license": "CC0-1.0 (Metadaten)",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "admin.dataportal.se/robots.txt: 404 (keine Einschränkung). Öffentliche EntryStore-Such-API des Portals. Drossel ≥2 s.",
+    "tos": "DIGG – Sveriges dataportal, Metadaten CC0.",
+    "logo": {
+      "domain": "admin.dataportal.se",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=admin.dataportal.se&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/admin.dataportal.se.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "entrystore-solr",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Sveriges dataportal (dataportal.se)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "dataportal",
+      "dataportal-se",
+      "sveriges",
+      "digg",
+      "dcat-datensatzsuche",
+      "entrystore-such-api",
+      "titel",
+      "herausgeber",
+      "schlagworte",
+      "änderungsdatum",
+      "opendata",
+      "neueste",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "SE",
+      "scope": "country"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.889Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://admin.dataportal.se/"
+  }
+}

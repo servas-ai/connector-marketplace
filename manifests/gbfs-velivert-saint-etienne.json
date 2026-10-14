@@ -1,0 +1,181 @@
+{
+  "id": "servas-ai.opencli-gbfs-velivert-saint-etienne",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Vélivert (GBFS)",
+  "description": "Vélivert in Saint-Étienne (Frankreich): offener GBFS-Feed 2.2 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-velivert-saint-etienne-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-velivert-saint-etienne-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-velivert-saint-etienne-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-velivert-saint-etienne-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://api.saint-etienne-metropole.fr/velivert/api/gbfs/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.saint-etienne-metropole.fr/robots.txt per kanonischem robots.js geprüft (fail-closed): Feed nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "saint tienne",
+      "v livert",
+      "frankreich",
+      "france"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": "Saint-Étienne",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "api.saint-etienne-metropole.fr",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://storage.googleapis.com/velivert-customer-website/Frame_2608239_21ce6d7f22/Frame_2608239_21ce6d7f22.png",
+      "fallback": "initials",
+      "file": "assets/logos/velivert.fr.png",
+      "brand_domain": "velivert.fr",
+      "source_kind": "favicon"
+    },
+    "license": "https://spdx.org/licenses/ODbL-1.0.html",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS 2.2",
+      "last_scrape": "2026-10-13T14:25:24.544Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Vélivert (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "ODbL-1.0",
+        "url": "https://spdx.org/licenses/ODbL-1.0.html",
+        "evidence": "https://api.saint-etienne-metropole.fr/velivert/api/gbfs/gbfs.json → system_information.license_id/license_url",
+        "per_dataset": false
+      },
+      "commercial_use": "attribution",
+      "attribution_required": "yes",
+      "attribution_text": "Daten: Fifteen (GBFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GBFS-Feed des Betreibers (MobilityData systems.csv, ohne Auth); Lizenz ODbL-1.0",
+      "source_kind": "official",
+      "server_country": "FR",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Offene Lizenz ODbL-1.0 im Feed belegt, keine personenbezogenen Daten, kein Login, robots.txt erlaubt"
+        ]
+      },
+      "checked_at": "2026-10-13T14:24:33Z"
+    },
+    "homepage": "https://www.velivert.fr/",
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T20:13:26.303Z",
+      "robots": "allowed"
+    }
+  }
+}

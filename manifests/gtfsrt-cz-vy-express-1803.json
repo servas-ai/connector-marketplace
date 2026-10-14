@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-gtfsrt-cz-vy-express-1803",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Vy Express (GTFS-Realtime)",
+  "description": "Vy Express: offizieller GTFS-Realtime-Feed (Prague, Hlavní město Praha, Tschechien; vp) aus dem Mobility-Database-Katalog (mdb-1803). Status, Fahrzeugpositionen, Prognosen, Störungen. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "Feed-Status: Zeitstempel und Anzahl Fahrten/Fahrzeuge/Meldungen",
+      "command": "gtfsrt-cz-vy-express-1803-cli status"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Fahrzeugpositionen (VehiclePosition, --limit N)",
+      "command": "gtfsrt-cz-vy-express-1803-cli fahrzeuge"
+    },
+    {
+      "name": "updates",
+      "displayName": "updates",
+      "description": "Fahrt-Prognosen (TripUpdate, --limit N)",
+      "command": "gtfsrt-cz-vy-express-1803-cli updates"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Störungsmeldungen (Alert, --limit N)",
+      "command": "gtfsrt-cz-vy-express-1803-cli meldungen"
+    },
+    {
+      "name": "entity",
+      "displayName": "entity",
+      "description": "Ein Entity per ID (<id>)",
+      "command": "gtfsrt-cz-vy-express-1803-cli entity"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_realtime",
+    "realtime": true,
+    "source_url": "https://api.entur.io/realtime/v1/gtfs-rt/vehicle-positions?datasource=VYX",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.entur.io/robots.txt per kanonischem robots.js geprüft (fail-closed). Feed im Mobility Database Katalog ohne Auth gelistet.",
+    "tos": "Offene Echtzeitdaten, Lizenz: https://data.norge.no/nlod/en/.",
+    "keywords": [
+      "echtzeit",
+      "realtime",
+      "gtfs-rt",
+      "gtfs realtime",
+      "öffis",
+      "public transport",
+      "verspätung",
+      "delay",
+      "fahrzeugposition",
+      "vehicle position",
+      "störung",
+      "alert",
+      "prague",
+      "vy express",
+      "tschechien",
+      "czechia"
+    ],
+    "geo": {
+      "country": "CZ",
+      "region": "Hlavní město Praha",
+      "city": "Prague",
+      "bbox": [
+        4.51278,
+        47.263266,
+        31.11253,
+        78.246751
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "api.entur.io",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=api.entur.io&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.entur.io.png",
+      "brand_domain": "api.entur.io"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2000,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS-RT 2.0",
+      "last_scrape": "2026-10-13T13:12:15.373Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Vy Express (GTFS-Realtime)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.vy.no/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:49.574Z",
+      "robots": "allowed"
+    }
+  }
+}

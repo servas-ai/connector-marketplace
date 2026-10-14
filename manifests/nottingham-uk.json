@@ -1,0 +1,157 @@
+{
+  "id": "servas-ai.opencli-nottingham-uk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Nottingham City Council Open Data Geoportal – ArcGIS Hub",
+  "description": "Nottingham City Council Open Data Geoportal (UK): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "nottingham-uk suche",
+      "command": "nottingham-uk-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "nottingham-uk neu",
+      "command": "nottingham-uk-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "nottingham-uk datensatz",
+      "command": "nottingham-uk-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com/robots.txt geprüft: /api/search nicht gesperrt. Öffentliche OGC-API-Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "ArcGIS-Hub-Open-Data-Portal; Lizenz je Datensatz (Feld lizenz), Quelle nennen.",
+    "logo": {
+      "domain": "nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com.png",
+      "brand_domain": "nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Nottingham City Council Open Data Geoportal – ArcGIS Hub",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "ArcGIS Hub",
+      "Geodaten",
+      "geodata",
+      "GIS",
+      "Datenkatalog",
+      "data catalog",
+      "Datensätze",
+      "datasets",
+      "Karten",
+      "maps",
+      "Verwaltung",
+      "government",
+      "OGC API Records",
+      "Nottingham",
+      "England",
+      "UK"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": "England",
+      "city": "Nottingham",
+      "lat": 52.9548,
+      "lon": -1.1581,
+      "bbox": [
+        -1.658,
+        52.455,
+        -0.658,
+        53.455
+      ],
+      "scope": "city"
+    },
+    "license": "OGL-UK-3.0",
+    "homepage": "https://www.nottinghamcity.gov.uk/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:09:33.458Z",
+      "robots": "allowed"
+    }
+  }
+}

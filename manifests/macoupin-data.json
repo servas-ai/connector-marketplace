@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-macoupin-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Macoupin County IL Open Data (Socrata)",
+  "description": "Macoupin County (Illinois): Open-Data-Portal mit Volkszählungs-, Wahl-, Haushalts- und Verwaltungsdaten des Countys. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "County",
+    "Illinois",
+    "Verwaltung",
+    "Macoupin County Government"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "County",
+    "Illinois",
+    "Verwaltung",
+    "Macoupin County Government"
+  ],
+  "homepage": "https://www.macoupincountyil.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Illinois",
+    "city": "Macoupin County",
+    "scope": "county"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "macoupin-data datasets",
+      "command": "macoupin-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "macoupin-data dataset",
+      "command": "macoupin-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "macoupin-data rows",
+      "command": "macoupin-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.macoupincountyil.gov/api/catalog/v1",
+    "homepage": "https://www.macoupincountyil.gov/",
+    "portal": "https://data.macoupincountyil.gov/",
+    "provider": "Macoupin County Government, Illinois",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "County",
+      "Illinois",
+      "Verwaltung",
+      "Macoupin County Government"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Illinois",
+      "city": "Macoupin County",
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.macoupincountyil.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Macoupin County Government, Illinois Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "data.macoupincountyil.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://macoupincountyil.gov/wp-content/uploads/2020/12/logo3.gif",
+      "fallback": "initials",
+      "file": "assets/logos/data.macoupincountyil.gov.png",
+      "source": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Macoupin County IL Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von Macoupin County Government, Illinois; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von Macoupin County Government, Illinois; je Dataset im Feld license",
+    "logo_source": "header-logo",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:29.248Z",
+      "robots": "allowed"
+    }
+  }
+}

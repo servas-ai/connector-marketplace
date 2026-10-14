@@ -1,0 +1,164 @@
+{
+  "id": "servas-ai.opencli-hetzner-serverboerse",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Hetzner Serverbörse – Live-Angebote",
+  "description": "Hetzner Serverbörse (Server Auction): Live-Angebote gebrauchter Dedicated Server mit Preis, CPU, RAM, Disks und Rechenzentrum. Öffentlicher JSON-Feed der Serverbörsen-Seite, ohne Login/Key. Nutze den Skill für Preis-Leistungs-Vergleiche von Dedicated Servern.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "angebote",
+      "displayName": "angebote",
+      "description": "hetzner-serverboerse angebote",
+      "command": "hetzner-serverboerse-cli angebote"
+    },
+    {
+      "name": "statistik",
+      "displayName": "statistik",
+      "description": "hetzner-serverboerse statistik",
+      "command": "hetzner-serverboerse-cli statistik"
+    },
+    {
+      "name": "server",
+      "displayName": "server",
+      "description": "hetzner-serverboerse server",
+      "command": "hetzner-serverboerse-cli server"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": true,
+    "source_url": "https://www.hetzner.com/sb",
+    "homepage": "https://www.hetzner.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "json_endpoint",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host (ein Feed-Abruf pro Aufruf)",
+    "robots_status": "ok",
+    "robots": "www.hetzner.com/robots.txt: User-agent * Allow / (nur /*?search= und /*&search= gesperrt); Feed /_resources/app/data/app/live_data_sb.json erlaubt. Ein Request pro Aufruf, Drossel ≥2 s, Abbruch bei 403/429/Captcha.",
+    "tos": "Hetzner AGB/Serverbörse: öffentliche Angebotsliste, kein Login; Connector liest nur die Liste (keine Bestellung, keine Kundendaten).",
+    "logo": {
+      "domain": "www.hetzner.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.hetzner.com/_resources/themes/hetzner/images/favicons/apple-icon-180x180.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.hetzner.com.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2239,
+      "throughput_rps": 0.447,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "live_data_sb.json (Frontend-Feed)",
+      "last_scrape": "2026-10-13T05:05:09.012Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Hetzner Serverbörse – Live-Angebote",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "preis_monat"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon",
+    "keywords": [
+      "hetzner",
+      "serverboerse",
+      "hetzner-serverboerse",
+      "serverbörse",
+      "server",
+      "auction",
+      "live-angebote",
+      "gebrauchter",
+      "dedicated",
+      "preis",
+      "cpu",
+      "ram",
+      "disks",
+      "rechenzentrum",
+      "öffentlicher",
+      "json-feed",
+      "serverbörsen-seite",
+      "nutze",
+      "skill",
+      "preis-leistungs-vergleiche",
+      "servern",
+      "tech",
+      "angebote",
+      "statistik",
+      "comparison",
+      "preisvergleich",
+      "price comparison",
+      "technology",
+      "technik",
+      "statistics",
+      "zeitreihen",
+      "time series"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:42.156Z",
+      "robots": "allowed"
+    }
+  }
+}

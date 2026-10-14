@@ -1,0 +1,188 @@
+{
+  "id": "servas-ai.opencli-seattle-citygis-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Seattle City GIS Open Data (ArcGIS Hub)",
+  "description": "Seattle City GIS Open Data: Datensatz-Katalog der ArcGIS-Hub-Instanz (OGC API Records). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ArcGIS",
+    "Hub",
+    "Open Data",
+    "GIS",
+    "OGC",
+    "Katalog",
+    "US",
+    "City"
+  ],
+  "keywords": [
+    "ArcGIS",
+    "Hub",
+    "Open Data",
+    "GIS",
+    "OGC",
+    "Katalog",
+    "US",
+    "City"
+  ],
+  "homepage": "https://data-seattlecitygis.opendata.arcgis.com/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Vereinigte Staaten",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      -125.0,
+      24.4,
+      -66.9,
+      49.4
+    ],
+    "centroid": {
+      "lat": 39.8,
+      "lon": -98.6
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "seattle-citygis-hub suche",
+      "command": "seattle-citygis-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "seattle-citygis-hub neu",
+      "command": "seattle-citygis-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "seattle-citygis-hub datensatz",
+      "command": "seattle-citygis-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data-seattlecitygis.opendata.arcgis.com/api/search/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data-seattlecitygis.opendata.arcgis.com/robots.txt: /api/search nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "City of Seattle ArcGIS Hub Open Data, öffentliche OGC API Records ohne Key; Fair Use.",
+    "provider": "City of Seattle",
+    "homepage": "https://data-seattlecitygis.opendata.arcgis.com/",
+    "data_license": "Open Data (je Dataset / Terms of Use)",
+    "keywords": [
+      "ArcGIS",
+      "Hub",
+      "Open Data",
+      "GIS",
+      "OGC",
+      "Katalog",
+      "US",
+      "City"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Vereinigte Staaten",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        -125.0,
+        24.4,
+        -66.9,
+        49.4
+      ],
+      "centroid": {
+        "lat": 39.8,
+        "lon": -98.6
+      }
+    },
+    "logo": {
+      "domain": "data-seattlecitygis.opendata.arcgis.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.seattle.gov/Images/Council/Logos/City-of-Seattle-Logo_Color-on-White.png",
+      "fallback": "initials",
+      "brand_domain": "seattle.gov",
+      "file": "assets/logos/data-seattlecitygis.opendata.arcgis.com.png",
+      "source": "official-site",
+      "source_kind": "og:image"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Seattle City GIS Open Data (ArcGIS Hub)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:12:03.927Z",
+      "robots": "allowed"
+    }
+  }
+}

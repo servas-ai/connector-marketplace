@@ -1,0 +1,199 @@
+{
+  "id": "servas-ai.opencli-gtfs-de-rhein-neckar-verkehr-mdb-777",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Rhein-Neckar-Verkehr (GTFS-Fahrplan)",
+  "description": "Rhein-Neckar-Verkehr: offizieller GTFS-Soll-Fahrplan (Mannheim, Deutschland) aus dem Mobility-Database-Katalog (mdb-777), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-de-rhein-neckar-verkehr-mdb-777-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-de-rhein-neckar-verkehr-mdb-777-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-de-rhein-neckar-verkehr-mdb-777-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-de-rhein-neckar-verkehr-mdb-777-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://gtfs-sandbox-dds.rnv-online.de/latest/gtfs.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gtfs-sandbox-dds.rnv-online.de/robots.txt geprüft (kanonisches robots.js, fail-closed): GTFS-Download nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://opendata.rnv-online.de/dataset/gtfs-general-transit-feed-specification.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "mannheim",
+      "rhein neckar verkehr",
+      "deutschland",
+      "germany"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Baden-Württemberg",
+      "city": "Mannheim",
+      "bbox": [
+        8.1704019,
+        49.3432631,
+        8.811395,
+        49.5811911
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "gtfs-sandbox-dds.rnv-online.de",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c0/78/cf/c078cf97-bca5-d150-73f8-62b4e8d91d40/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.png",
+      "fallback": "initials",
+      "file": "assets/logos/rnv-online.de.png",
+      "brand_domain": "rnv-online.de"
+    },
+    "license": "https://opendata.rnv-online.de/dataset/gtfs-general-transit-feed-specification",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Rhein-Neckar-Verkehr (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://opendata.rnv-online.de/dataset/gtfs-general-transit-feed-specification",
+        "evidence": "https://mobilitydatabase.org/feeds/mdb-777 → urls.license = https://opendata.rnv-online.de/dataset/gtfs-general-transit-feed-specification",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": "Fahrplandaten: Rhein-Neckar-Verkehr GmbH (rnv) (GTFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GTFS-Download des Betreibers (Mobility Database, ohne Auth); Terms der Quelle: check",
+      "source_kind": "official",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Datenlizenz nicht maschinenlesbar belegt – Nutzungsbedingungen des Betreibers vor kommerzieller Nutzung prüfen (https://opendata.rnv-online.de/dataset/gtfs-general-transit-feed-specification)",
+          "Server außerhalb EU (US) – keine personenbezogenen Daten, daher DSGVO-unkritisch"
+        ]
+      },
+      "checked_at": "2026-10-13T15:28:53Z"
+    },
+    "homepage": "https://www.rnv-online.de/",
+    "operator": {
+      "name": "Rhein-Neckar-Verkehr GmbH (rnv)",
+      "legal_form": "pruefen",
+      "country": "DE",
+      "website": "https://www.rnv-online.de/",
+      "source": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://gtfs-sandbox-dds.rnv-online.de/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T15:37:56.273Z",
+      "robots": "allowed"
+    }
+  }
+}

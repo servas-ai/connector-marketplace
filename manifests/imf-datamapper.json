@@ -1,0 +1,179 @@
+{
+  "id": "servas-ai.opencli-imf-datamapper",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "IMF DataMapper – Makro-Indikatoren",
+  "description": "IMF DataMapper API (Internationaler Währungsfonds): Indikatoren des World Economic Outlook (BIP-Wachstum, Inflation, Schulden) je Land und Jahr.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "imf",
+    "iwf",
+    "makro",
+    "bip",
+    "gdp",
+    "inflation",
+    "weo",
+    "statistik"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "reihe",
+      "displayName": "reihe",
+      "description": "imf-datamapper reihe",
+      "command": "imf-datamapper-cli reihe"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://www.imf.org/",
+    "homepage": "https://www.imf.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.imf.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "IMF Terms: Datennutzung mit Quellenangabe erlaubt.",
+    "license": "IMF Copyright & Usage (Quellenangabe)",
+    "country": "INT",
+    "keywords": [
+      "imf",
+      "iwf",
+      "makro",
+      "bip",
+      "gdp",
+      "inflation",
+      "weo",
+      "statistik",
+      "wirtschaft"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-8",
+    "worker": "open-apis-8-1407",
+    "logo": {
+      "domain": "www.imf.org",
+      "file": "assets/logos/www.imf.org.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia",
+      "resolved": "https://commons.wikimedia.org/wiki/File:IMF-Seal_ENG_RGB.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T14:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "IMF Copyright & Usage (Quellenangabe)",
+        "url": "https://www.imf.org/external/terms.htm",
+        "evidence": "https://www.imf.org/external/terms.htm",
+        "per_dataset": false
+      },
+      "commercial_use": "attribution",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: IMF DataMapper – Makro-Indikatoren (www.imf.org)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T14:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "IMF DataMapper – Makro-Indikatoren",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "name"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    },
+    "logo_source": "wikimedia"
+  }
+}

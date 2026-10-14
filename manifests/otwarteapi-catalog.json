@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-otwarteapi-catalog",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "otwarteAPI.pl – Katalog öffentlicher Behörden-APIs",
+  "description": "otwarteAPI.pl: maschinenlesbarer Katalog öffentlicher Regierungs-APIs (ARD ai-catalog.json) plus Suche, keyless JSON/MCP.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "katalog",
+    "opendata",
+    "polen",
+    "behoerden",
+    "api",
+    "mcp",
+    "ard"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "search",
+      "displayName": "search",
+      "description": "otwarteapi-catalog search",
+      "command": "otwarteapi-catalog-cli search"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://otwarteapi.pl/",
+    "homepage": "https://otwarteapi.pl/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "otwarteapi.pl/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "otwarteAPI.pl: öffentlicher Katalog, Fair-Use, kein Tracking.",
+    "license": "terms-of-source (otwarteAPI.pl Katalog)",
+    "country": "PL",
+    "keywords": [
+      "katalog",
+      "opendata",
+      "polen",
+      "behoerden",
+      "api",
+      "mcp",
+      "ard"
+    ],
+    "geo": {
+      "country": "PL",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-15",
+    "worker": "open-apis-15-2002",
+    "logo": {
+      "domain": "otwarteapi.pl",
+      "file": "assets/logos/otwarteapi.pl.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://otwarteapi.pl/brand/apple-touch-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ard-1.0",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://otwarteapi.pl/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": "https://otwarteapi.pl/mcp",
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:20:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (otwarteAPI.pl Katalog)",
+        "url": "https://otwarteapi.pl/llms.txt",
+        "evidence": "https://otwarteapi.pl/llms.txt",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: otwarteAPI.pl – Katalog öffentlicher Behörden-APIs (otwarteapi.pl)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": "PL",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T20:20:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "otwarteAPI.pl – Katalog öffentlicher Behörden-APIs",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "identifier",
+          "displayName"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

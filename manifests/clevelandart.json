@@ -1,0 +1,167 @@
+{
+  "id": "servas-ai.opencli-clevelandart",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Cleveland Museum of Art – Open Access API",
+  "description": "Cleveland Museum of Art Open Access API: Kunstwerke suchen (Titel, Künstler, Datierung, Technik, CC0-Status, Bilder), Werk per ID und Künstler/Creators. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "clevelandart suche",
+      "command": "clevelandart-cli suche"
+    },
+    {
+      "name": "werk",
+      "displayName": "werk",
+      "description": "clevelandart werk",
+      "command": "clevelandart-cli werk"
+    },
+    {
+      "name": "kuenstler",
+      "displayName": "kuenstler",
+      "description": "clevelandart kuenstler",
+      "command": "clevelandart-cli kuenstler"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://openaccess-api.clevelandart.org/api/artworks/",
+    "homepage": "https://www.clevelandart.org/",
+    "keywords": [
+      "clevelandart",
+      "cleveland",
+      "museum",
+      "art",
+      "open",
+      "access",
+      "kunstwerke",
+      "suchen",
+      "titel",
+      "künstler",
+      "datierung",
+      "technik",
+      "cc0-status",
+      "bilder",
+      "werk",
+      "creators",
+      "international",
+      "kuenstler",
+      "technology"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "openaccess-api.clevelandart.org/robots.txt: kein Disallow für /api/. Offizielle Open-Access-API. Drossel ≥2 s.",
+    "tos": "CMA Open Access: Daten CC0, CC0-Bilder frei nutzbar.",
+    "logo": {
+      "domain": "openaccess-api.clevelandart.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.clevelandart.org/images/favicon-196x196.svg",
+      "fallback": "initials",
+      "file": "assets/logos/openaccess-api.clevelandart.org.png",
+      "brand_domain": "clevelandart.org",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3131,
+      "throughput_rps": 0.319,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:04:52.303Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Cleveland Museum of Art – Open Access API",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "svg",
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:35:54Z",
+      "host": "openaccess-api.clevelandart.org",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 200,
+      "ip": "172.66.154.89",
+      "server_header": "cloudflare",
+      "tls_issuer": "Google Trust Services",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://openaccess-api.clevelandart.org"
+    },
+    "llms": {
+      "openapi": "https://openaccess-api.clevelandart.org/openapi.json",
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:15.965Z",
+      "robots": "allowed"
+    }
+  }
+}

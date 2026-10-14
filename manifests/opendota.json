@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-opendota",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenDota – Dota-2-Statistik (Helden, Profi-Spiele)",
+  "description": "OpenDota API: Helden-Stammdaten und Pick/Win-Statistik, Profi-Teams und letzte Profi-Matches (ohne Spielerprofile).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "esport",
+    "esports",
+    "dota 2",
+    "gaming",
+    "videospiele",
+    "video games",
+    "helden",
+    "heroes"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "helden",
+      "displayName": "helden",
+      "description": "Alle Helden",
+      "command": "opendota-cli helden"
+    },
+    {
+      "name": "heldenstatistik",
+      "displayName": "heldenstatistik",
+      "description": "Profi-Picks/Siege je Held",
+      "command": "opendota-cli heldenstatistik"
+    },
+    {
+      "name": "profi-matches",
+      "displayName": "profi-matches",
+      "description": "Letzte Profi-Matches",
+      "command": "opendota-cli profi-matches"
+    },
+    {
+      "name": "match",
+      "displayName": "match",
+      "description": "Match-Zusammenfassung ohne Spielerdaten (<id>)",
+      "command": "opendota-cli match"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "sport",
+    "realtime": false,
+    "source_url": "https://api.opendota.com/api/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.opendota.com/robots.txt: keine Sperren. Freier Tarif ohne Key (60 req/min) – hier 1 req/2 s.",
+    "tos": "OpenDota: Daten CC BY-SA, freier Tarif ohne Key.",
+    "keywords": [
+      "esport",
+      "esports",
+      "dota 2",
+      "gaming",
+      "videospiele",
+      "video games",
+      "helden",
+      "heroes",
+      "statistik",
+      "statistics",
+      "teams",
+      "matches",
+      "turniere",
+      "tournaments",
+      "valve",
+      "meta"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "api.opendota.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=api.opendota.com&sz=128",
+      "fallback": "initials",
+      "brand_domain": "api.opendota.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 4054,
+      "throughput_rps": 0.247,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:38:29.651Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "OpenDota – Dota-2-Statistik (Helden, Profi-Spiele)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "name",
+          "attribut",
+          "rollen"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://www.opendota.com",
+    "operator": {
+      "name": "OpenDota (Open-Source-Projekt)",
+      "source": "x-servas.operator (vorher String; quality-v-2146 als Objekt normalisiert)"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:21.983Z",
+      "robots": "allowed"
+    }
+  }
+}

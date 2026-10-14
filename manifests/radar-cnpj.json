@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-radar-cnpj",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Radar CNPJ – Brasilianische Firmenstammdaten",
+  "description": "Radar CNPJ API: Firmendaten nach CNPJ (Razão Social, CNAE, Adresse, Status) aus öffentlichen Receita-Federal-Dumps, keyless JSON (llms.txt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "brasilien",
+    "cnpj",
+    "firmen",
+    "register",
+    "radar",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "health",
+      "displayName": "health",
+      "description": "radar-cnpj health",
+      "command": "radar-cnpj-cli health"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://radar-cnpj.com/",
+    "homepage": "https://radar-cnpj.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "radar-cnpj.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Radar CNPJ: keyless Basis-Endpunkte laut llms.txt; Fair-Use, Drossel; keine Login-Pflicht für /api/cnpj.",
+    "license": "terms-of-source (Radar CNPJ; öffentliche CNPJ-Daten)",
+    "country": "BR",
+    "keywords": [
+      "brasilien",
+      "cnpj",
+      "firmen",
+      "register",
+      "radar",
+      "opendata"
+    ],
+    "geo": {
+      "country": "BR",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Company-Data-0318",
+    "worker": "company-data-0318",
+    "logo": {
+      "domain": "radar-cnpj.com",
+      "file": "assets/logos/radar-cnpj.com.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://radar-cnpj.com/icon.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://radar-cnpj.com/llms.txt",
+      "llms_full": "https://radar-cnpj.com/llms-full.txt",
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:45:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Radar CNPJ; öffentliche CNPJ-Daten)",
+        "url": "https://radar-cnpj.com/api/",
+        "evidence": "https://radar-cnpj.com/api/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Radar CNPJ – Brasilianische Firmenstammdaten (radar-cnpj.com)",
+      "personal_data": "company",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Firmen-/Arbeitgeberangaben enthalten (keine Privatpersonen)",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T03:45:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Radar CNPJ – Brasilianische Firmenstammdaten",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "id": "servas-ai.opencli-kolada",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Kolada – Kennzahlen schwedischer Kommunen",
+  "description": "Kolada API v3 (RKA): über 6.000 Kennzahlen (KPI) für alle schwedischen Kommunen und Regionen – Kennzahlen suchen, Kommunen finden, Zeitreihen abrufen, keyless, OpenAPI 3.1.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "schweden",
+    "kommunen",
+    "kennzahlen",
+    "kpi",
+    "statistik",
+    "verwaltung",
+    "regionen",
+    "open data"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kommune",
+      "displayName": "kommune",
+      "description": "kolada kommune",
+      "command": "kolada-cli kommune"
+    },
+    {
+      "name": "werte",
+      "displayName": "werte",
+      "description": "kolada werte",
+      "command": "kolada-cli werte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://api.kolada.se/",
+    "homepage": "https://api.kolada.se/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.kolada.se/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Kolada: kostenlos, kein Vertrag, kommerzielle Nutzung erlaubt, Quellenangabe „Källa: Kolada“ (bei eigenen Bearbeitungen nicht).",
+    "license": "Kolada-Nutzungsbedingungen (frei, kommerziell erlaubt, Quelle „Källa: Kolada“)",
+    "country": "SE",
+    "keywords": [
+      "schweden",
+      "kommunen",
+      "kennzahlen",
+      "kpi",
+      "statistik",
+      "verwaltung",
+      "regionen",
+      "open data"
+    ],
+    "geo": {
+      "country": "SE",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-9",
+    "worker": "open-apis-9-1506",
+    "logo": {
+      "domain": "api.kolada.se",
+      "file": "assets/logos/api.kolada.se.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://kolada.se/assets/appicons/apple-touch-icon-152x152.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://api.kolada.se/v3/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:13:42.504Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "Kolada-Nutzungsbedingungen (frei, kommerziell erlaubt, Quelle „Källa: Kolada“)",
+        "url": "https://kolada.se/om-oss/api/",
+        "evidence": "https://kolada.se/om-oss/api/",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Kolada – Kennzahlen schwedischer Kommunen (api.kolada.se)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Kolada – Kennzahlen schwedischer Kommunen",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "titel"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

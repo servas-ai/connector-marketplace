@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-scb-se",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SCB Sweden – PxWeb API",
+  "description": "api.scb.se PxWeb: Statistikkatalog und Tabellen-Metadaten (Statistics Sweden). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "scb-se katalog",
+      "command": "scb-se-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "scb-se info",
+      "command": "scb-se-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.scb.se/OV0104/v1/doris/en/ssd",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.scb.se/robots.txt: 404 (keine Sperre) – öffentliche PxWeb API. Drossel ≥2 s.",
+    "tos": "Statistics Sweden PxWeb API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "api.scb.se",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.scb.se/img/scb-icon-192.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.scb.se.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "SCB Sweden – PxWeb API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "SE",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "scb",
+      "scb-se",
+      "pxweb",
+      "statistikkatalog",
+      "tabellen-metadaten",
+      "statistics",
+      "sweden",
+      "international",
+      "opendata",
+      "katalog",
+      "info",
+      "zeitreihen",
+      "time series",
+      "statistik",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "SE",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "SCB-AS Statistics Sweden",
+      "asn": 39658,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:40:38Z",
+      "host": "api.scb.se",
+      "hoster": "SCB-AS Statistics Sweden",
+      "http_status": 200,
+      "ip": "193.180.124.111",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://scb.se",
+      "country": "SE"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:33.499Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.scb.se/"
+  }
+}

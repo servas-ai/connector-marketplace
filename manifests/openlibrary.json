@@ -1,0 +1,167 @@
+{
+  "id": "servas-ai.opencli-openlibrary",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open Library – Bücherkatalog (Internet Archive)",
+  "description": "Open Library: Werke zu einem Thema (Titel, Autor:in, Erstveröffentlichung, Ausgaben), Werk-Details und Ausgabe per ISBN.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "bücher",
+    "books",
+    "bibliothek",
+    "library",
+    "katalog",
+    "catalogue",
+    "isbn",
+    "autor"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "thema",
+      "displayName": "thema",
+      "description": "Werke zu einem Thema (<thema>)",
+      "command": "openlibrary-cli thema"
+    },
+    {
+      "name": "werk",
+      "displayName": "werk",
+      "description": "Werk-Details (<OL…W>)",
+      "command": "openlibrary-cli werk"
+    },
+    {
+      "name": "isbn",
+      "displayName": "isbn",
+      "description": "Ausgabe per ISBN (<isbn>)",
+      "command": "openlibrary-cli isbn"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://openlibrary.org/subjects/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "openlibrary.org/robots.txt: /subjects, /works, /isbn nicht gesperrt (nur /api, /edit, /account …). Offizielle Such-API, 1 req/2 s.",
+    "tos": "Open Library (Internet Archive): Katalogdaten frei/CC0.",
+    "keywords": [
+      "bücher",
+      "books",
+      "bibliothek",
+      "library",
+      "katalog",
+      "catalogue",
+      "isbn",
+      "autor",
+      "author",
+      "werk",
+      "work",
+      "ausgabe",
+      "edition",
+      "internet archive",
+      "literatur",
+      "lesen"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "openlibrary.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=openlibrary.org&sz=128",
+      "fallback": "initials",
+      "brand_domain": "openlibrary.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 4766,
+      "throughput_rps": 0.21,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:19:05.854Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "Open Library – Bücherkatalog (Internet Archive)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "key",
+          "titel",
+          "autoren",
+          "jahr"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://openlibrary.org",
+    "operator": {
+      "name": "Internet Archive (Open Library)",
+      "source": "x-servas.operator (vorher String; quality-v-2146 als Objekt normalisiert)"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://openlibrary.org/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:42.309Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-fao-sdmx",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "FAO SDMX – SDMX",
+  "description": "nsi-release-ro-statsuite.fao.org SDMX: amtliche Statistik-Zeitreihen (FAO SDMX). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dataflows",
+      "displayName": "dataflows",
+      "description": "fao-sdmx dataflows",
+      "command": "fao-sdmx-cli dataflows"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "fao-sdmx info",
+      "command": "fao-sdmx-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "Zeitreihen",
+    "time series",
+    "SDMX",
+    "Datenfluss",
+    "dataflow",
+    "Amtliche Statistik",
+    "official statistics",
+    "Open Data",
+    "offene Daten",
+    "Indikatoren",
+    "indicators",
+    "FAO",
+    "Ernährung",
+    "food"
+  ],
+  "geo": {
+    "country": null,
+    "region": "World",
+    "city": "Rome",
+    "lat": 41.88,
+    "lon": 12.49,
+    "bbox": null,
+    "scope": "global"
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://nsi-release-ro-statsuite.fao.org/rest/dataflow/FAO",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "nsi-release-ro-statsuite.fao.org/robots.txt geprüft: keine Sperre für den API-Pfad – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "FAO SDMX: öffentliche SDMX-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe nsi-release-ro-statsuite.fao.org.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "Zeitreihen",
+      "time series",
+      "SDMX",
+      "Datenfluss",
+      "dataflow",
+      "Amtliche Statistik",
+      "official statistics",
+      "Open Data",
+      "offene Daten",
+      "Indikatoren",
+      "indicators",
+      "FAO",
+      "Ernährung",
+      "food"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "World",
+      "city": "Rome",
+      "lat": 41.88,
+      "lon": 12.49,
+      "bbox": null,
+      "scope": "global"
+    },
+    "country": "INT",
+    "logo": {
+      "domain": "nsi-release-ro-statsuite.fao.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.fao.org/images/corporatelibraries/logos/fao-logo-en.svg?sfvrsn=f64522b4_36",
+      "fallback": "initials",
+      "file": "assets/logos/nsi-release-ro-statsuite.fao.org.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sdmx-rest-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "FAO SDMX – SDMX",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:04.887Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.fao.org/"
+  }
+}

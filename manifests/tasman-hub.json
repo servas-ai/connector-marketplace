@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-tasman-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Tasman District Council GeoHUB – ArcGIS Hub",
+  "description": "Tasman District Council GeoHUB (Neuseeland): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "tasman-hub suche",
+      "command": "tasman-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "tasman-hub neu",
+      "command": "tasman-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "tasman-hub datensatz",
+      "command": "tasman-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://geohub.tasman.govt.nz/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "geohub.tasman.govt.nz/robots.txt geprüft: /api/search nicht gesperrt. Öffentliche OGC-API-Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "ArcGIS-Hub-Open-Data-Portal; Lizenz je Datensatz (Feld lizenz), Quelle nennen.",
+    "logo": {
+      "domain": "geohub.tasman.govt.nz",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=geohub.tasman.govt.nz&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/geohub.tasman.govt.nz.png",
+      "brand_domain": "geohub.tasman.govt.nz"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Tasman District Council GeoHUB – ArcGIS Hub",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "ArcGIS Hub",
+      "Geodaten",
+      "geodata",
+      "GIS",
+      "Datenkatalog",
+      "data catalog",
+      "Datensätze",
+      "datasets",
+      "Karten",
+      "maps",
+      "Verwaltung",
+      "government",
+      "OGC API Records",
+      "Richmond",
+      "Tasman",
+      "Neuseeland"
+    ],
+    "geo": {
+      "country": "NZ",
+      "region": "Tasman",
+      "city": "Richmond",
+      "lat": -41.3389,
+      "lon": 173.185,
+      "bbox": [
+        172.685,
+        -41.839,
+        173.685,
+        -40.839
+      ],
+      "scope": "region"
+    },
+    "homepage": "https://geohub.tasman.govt.nz/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:10:27.330Z",
+      "robots": "allowed"
+    }
+  }
+}

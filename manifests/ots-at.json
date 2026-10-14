@@ -1,0 +1,144 @@
+{
+  "id": "servas-ai.opencli-ots-at",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OTS.at – Presseaussendungen (APA-OTS, RSS)",
+  "description": "APA-OTS Originaltext-Service: aktuelle Presseaussendungen österreichischer Unternehmen und Organisationen über die offiziellen RSS-Feeds (gesamt oder nach Rubrik). Nur Titel, Datum, Aussender, Teaser und Link, ohne Login.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "firmendaten"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Aktuelle Presseaussendungen (--rubrik, --q filtert Titel/Teaser)",
+      "command": "ots-at-cli meldungen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "firmendaten",
+    "record_kind": "generic",
+    "realtime": false,
+    "source_url": "https://www.ots.at/rss/index",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.ots.at/robots.txt: /rss nicht gesperrt (nur /service/gui/, /app/, /verwaltung/, /disclaimer). Offizielle RSS-Feeds. Drossel ≥2 s.",
+    "tos": "Offizielle RSS-Feeds von APA-OTS zum Abonnieren; nur Metadaten + Link, kein Volltext-Nachdruck.",
+    "keywords": [
+      "ots",
+      "ots-at",
+      "apa-ots",
+      "originaltext-service",
+      "presseaussendungen",
+      "österreichischer",
+      "unternehmen",
+      "organisationen",
+      "offiziellen",
+      "rss-feeds",
+      "gesamt",
+      "rubrik",
+      "titel",
+      "datum",
+      "aussender",
+      "teaser",
+      "link",
+      "rss",
+      "international",
+      "firmendaten",
+      "meldungen"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "logo": {
+      "domain": "www.ots.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.ots.at/assets/apa-comm-favicon-180x180.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.ots.at.png",
+      "brand_domain": "ots.at",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4003,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "RSS 2.0",
+      "last_scrape": "2026-10-13T09:19:14.064Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "OTS.at – Presseaussendungen (APA-OTS, RSS)",
+        "subtitle": "generic",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:55.375Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.ots.at/"
+  }
+}

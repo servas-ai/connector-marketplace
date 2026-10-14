@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-eurostat-lebensmittelpreise",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Eurostat Lebensmittel-Teuerung (HICP)",
+  "description": "Lebensmittel-Teuerung in der EU: harmonisierter Verbraucherpreisindex (HICP, ECOICOP 2) je Land und Warengruppe (Brot, Fleisch, Milch …), Jahres-/Monatsraten und Indizes über die offizielle Eurostat-API.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "preise",
+    "inflation",
+    "eu"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "gruppen",
+      "displayName": "gruppen",
+      "description": "eurostat-lebensmittelpreise gruppen",
+      "command": "eurostat-lebensmittelpreise-cli gruppen"
+    },
+    {
+      "name": "teuerung",
+      "displayName": "teuerung",
+      "description": "eurostat-lebensmittelpreise teuerung",
+      "command": "eurostat-lebensmittelpreise-cli teuerung"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "html"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/s je Host",
+    "robots_status": "ok",
+    "robots": "ec.europa.eu/robots.txt: Abschnitt User-agent * sperrt /eurostat/api nicht.",
+    "license": "CC BY 4.0 – Eurostat",
+    "license_url": "https://ec.europa.eu/eurostat/about-us/policies/copyright",
+    "logo": {
+      "domain": "ec.europa.eu",
+      "file": "assets/logos/ec.europa.eu_eurostat.png",
+      "source": "wikimedia",
+      "resolved": "https://commons.wikimedia.org/wiki/File:Eurostat_Newlogo.png"
+    },
+    "keywords": [
+      "eurostat",
+      "lebensmittelpreise",
+      "eurostat-lebensmittelpreise",
+      "lebensmittel-teuerung",
+      "harmonisierter",
+      "verbraucherpreisindex",
+      "hicp",
+      "ecoicop",
+      "land",
+      "warengruppe",
+      "brot",
+      "fleisch",
+      "milch",
+      "jahres",
+      "monatsraten",
+      "indizes",
+      "eurostat-api",
+      "food",
+      "gruppen",
+      "teuerung",
+      "groceries",
+      "nahrung",
+      "lebensmittel",
+      "ernährung"
+    ],
+    "geo": {
+      "country": "EU",
+      "scope": "eu"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1477,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Eurostat Statistics API 1.0 (JSON-stat 2.0)",
+      "last_scrape": "2026-10-13T09:35:46.475Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Eurostat Lebensmittel-Teuerung (HICP)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "monat",
+          "wert"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "EC-AS European Commission",
+      "asn": 42848,
+      "cdn": "Amazon CloudFront",
+      "checked_at": "2026-10-13T09:37:27Z",
+      "host": "ec.europa.eu",
+      "hoster": "EC-AS European Commission",
+      "http_status": 200,
+      "ip": "147.67.34.30",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://ec.europa.eu"
+    },
+    "logo_source": "wikimedia",
+    "country": "EU",
+    "homepage": "https://ec.europa.eu/eurostat",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:27.018Z",
+      "robots": "allowed"
+    }
+  }
+}

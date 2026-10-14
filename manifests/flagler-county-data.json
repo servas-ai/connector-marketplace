@@ -1,0 +1,197 @@
+{
+  "id": "servas-ai.opencli-flagler-county-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Flagler County FL Open Data (Socrata)",
+  "description": "flaglercofl.data.socrata.com – Flagler County, Florida: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "socrata",
+    "us",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "flagler-county-data datasets",
+      "command": "flagler-county-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "flagler-county-data dataset",
+      "command": "flagler-county-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "flagler-county-data rows",
+      "command": "flagler-county-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://flaglercofl.data.socrata.com/api/catalog/v1",
+    "homepage": "https://flaglercofl.data.socrata.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "flaglercofl.data.socrata.com/robots.txt geprüft (fail-closed, Socrata-Standard, Crawl-delay 1): Disallow nur /browse?…- und /browse/*?…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt. Drossel ≥2 s/Host.",
+    "tos": "Flagler County, Florida: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "US",
+    "keywords": [
+      "opendata",
+      "socrata",
+      "katalog",
+      "us"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "region",
+      "region": "Florida",
+      "city": "Flagler County"
+    },
+    "operator": {
+      "name": "Flagler County, Florida",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "US",
+      "url": "https://www.flaglercounty.gov/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "flaglercofl.data.socrata.com",
+      "file": "assets/logos/flaglercofl.data.socrata.com.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://www.flaglercounty.gov/files/ocfavicon/County/favicon.svg",
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:05:00Z",
+      "robots": "allowed",
+      "api_kind": "Socrata Discovery API v1 + SODA 2.1",
+      "openapi_version": null,
+      "openapi_paths": null,
+      "dcat": null,
+      "dcat_profile": null,
+      "ogc_api": null,
+      "access_chain_hints": [
+        "soda: https://flaglercofl.data.socrata.com/resource/<id>.json"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://flaglercofl.data.socrata.com/",
+        "evidence": "https://flaglercofl.data.socrata.com/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Flagler County FL Open Data (Socrata) (flaglercofl.data.socrata.com)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Hosting Tyler Technologies Data & Insights (Socrata, US-Cloud), Server-Region nicht belegt – kein EU-Hosting, AVV/Drittlandtransfer prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T23:05:00Z"
+    },
+    "wave": "opendata-wave-2237",
+    "worker": "opendata-wave-2237",
+    "openui": {
+      "card": {
+        "title": "Flagler County FL Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

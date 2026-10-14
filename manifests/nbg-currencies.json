@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-nbg-currencies",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "National Bank of Georgia – offizielle Wechselkurse",
+  "description": "Nationalbank Georgiens: offizielle GEL-Wechselkurse aller Währungen (Kurs, Einheit, Veränderung, gültig ab), keyless JSON, optional historisch per Datum.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "wechselkurs",
+    "zentralbank",
+    "georgien",
+    "gel",
+    "waehrung",
+    "finanzen"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "rate",
+      "displayName": "rate",
+      "description": "nbg-currencies rate",
+      "command": "nbg-currencies-cli rate"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://nbg.gov.ge/",
+    "homepage": "https://nbg.gov.ge/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "nbg.gov.ge/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Nationalbank Georgiens: öffentliche Kursdaten, Quellenangabe; Terms der Quelle.",
+    "license": "terms-of-source (National Bank of Georgia)",
+    "country": "GE",
+    "keywords": [
+      "wechselkurs",
+      "zentralbank",
+      "georgien",
+      "gel",
+      "waehrung",
+      "finanzen"
+    ],
+    "geo": {
+      "country": "GE",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-13",
+    "worker": "open-apis-13-1834",
+    "logo": {
+      "domain": "nbg.gov.ge",
+      "file": "assets/logos/nbg.gov.ge.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://nbg.gov.ge/images/favicon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "gw-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:09:35.262Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (National Bank of Georgia)",
+        "url": "https://nbg.gov.ge/en/monetary-policy/currency",
+        "evidence": "https://nbg.gov.ge/en/monetary-policy/currency",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: National Bank of Georgia – offizielle Wechselkurse (nbg.gov.ge)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T18:55:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "National Bank of Georgia – offizielle Wechselkurse",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "code",
+          "rate"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

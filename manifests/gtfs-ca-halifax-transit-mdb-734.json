@@ -1,0 +1,198 @@
+{
+  "id": "servas-ai.opencli-gtfs-ca-halifax-transit-mdb-734",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Halifax Transit (GTFS-Fahrplan)",
+  "description": "Halifax Transit: offizieller GTFS-Soll-Fahrplan (Beaver Bank, Kanada) aus dem Mobility-Database-Katalog (mdb-734), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-ca-halifax-transit-mdb-734-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-ca-halifax-transit-mdb-734-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-ca-halifax-transit-mdb-734-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-ca-halifax-transit-mdb-734-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://gtfs.halifax.ca/static/google_transit.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gtfs.halifax.ca/robots.txt geprüft (kanonisches robots.js, fail-closed): GTFS-Download nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: http://www.halifax.ca/opendata/OD_TermsOfUse.php.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "beaver bank",
+      "halifax transit",
+      "kanada",
+      "canada"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": "Nova Scotia",
+      "city": "Beaver Bank",
+      "bbox": [
+        -63.858243,
+        44.565098,
+        -63.28321,
+        44.886253
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "gtfs.halifax.ca",
+      "chain": [
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://www.halifax.ca/themes/custom/halifax/favicons/android-icon-192x192.png",
+      "fallback": "initials",
+      "file": "assets/logos/halifax.ca.png",
+      "brand_domain": "halifax.ca"
+    },
+    "license": "http://www.halifax.ca/opendata/OD_TermsOfUse.php",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Halifax Transit (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "http://www.halifax.ca/opendata/OD_TermsOfUse.php",
+        "evidence": "https://mobilitydatabase.org/feeds/mdb-734 → urls.license = http://www.halifax.ca/opendata/OD_TermsOfUse.php",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": "Fahrplandaten: Halifax Transit (GTFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GTFS-Download des Betreibers (Mobility Database, ohne Auth); Terms der Quelle: check",
+      "source_kind": "official",
+      "server_country": "CA",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Datenlizenz nicht maschinenlesbar belegt – Nutzungsbedingungen des Betreibers vor kommerzieller Nutzung prüfen (http://www.halifax.ca/opendata/OD_TermsOfUse.php)",
+          "Server außerhalb EU (CA) – keine personenbezogenen Daten, daher DSGVO-unkritisch"
+        ]
+      },
+      "checked_at": "2026-10-13T15:28:53Z"
+    },
+    "homepage": "https://www.halifax.ca/transportation/halifax-transit",
+    "operator": {
+      "name": "Halifax Transit",
+      "legal_form": "pruefen",
+      "country": "CA",
+      "website": "https://www.halifax.ca/transportation/halifax-transit",
+      "source": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T15:38:28.921Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "id": "servas-ai.opencli-apicarto-codes-postaux",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "API Carto (IGN) – Postleitzahlen → Gemeinden (FR)",
+  "description": "API Carto des IGN, Modul codes-postaux: Gemeinden (INSEE-Code, Name, Zustellbezeichnung) zu französischen Postleitzahlen, OpenAPI-Beschreibung, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "tags": [
+    "postleitzahl",
+    "gemeinde",
+    "insee",
+    "frankreich",
+    "ign",
+    "adresse",
+    "geo",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "realtime": false,
+    "source_url": "https://apicarto.ign.fr/",
+    "homepage": "https://apicarto.ign.fr/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "apicarto.ign.fr/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "API Carto (IGN): offizielle offene API, keyless, Fair-Use.",
+    "license": "Licence-Ouverte-2.0 (Base officielle des codes postaux, La Poste / IGN)",
+    "country": "FR",
+    "keywords": [
+      "postleitzahl",
+      "gemeinde",
+      "insee",
+      "frankreich",
+      "ign",
+      "adresse",
+      "geo",
+      "opendata"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-19",
+    "worker": "open-apis-19-2215",
+    "logo": {
+      "domain": "apicarto.ign.fr",
+      "file": "assets/logos/apicarto.ign.fr.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://www.ign.fr/files/default/styles/thumbnail/public/2020-06/logoIGN_300x200.png?itok=V80_0fm-&v=742d4d49",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://apicarto.ign.fr/api/doc/codes-postaux.yml",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "Licence-Ouverte-2.0 (Base officielle des codes postaux, La Poste / IGN)",
+        "url": "https://apicarto.ign.fr/api/doc/codes-postaux",
+        "evidence": "https://apicarto.ign.fr/api/doc/codes-postaux",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: API Carto (IGN) – Postleitzahlen → Gemeinden (FR) (apicarto.ign.fr)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "FR",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T22:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "API Carto (IGN) – Postleitzahlen → Gemeinden (FR)",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "gemeinde",
+          "code_insee"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

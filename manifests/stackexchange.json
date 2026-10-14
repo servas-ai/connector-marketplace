@@ -1,0 +1,142 @@
+{
+  "id": "servas-ai.opencli-stackexchange",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Stack Exchange API 2.3",
+  "description": "Stack Exchange API 2.3: Fragen (nach Tag/Suche), beliebte Tags und Site-Liste (Stack Overflow, Super User …). Ohne Login/Key (anonymes Tageskontingent).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "fragen",
+      "displayName": "fragen",
+      "description": "stackexchange fragen",
+      "command": "stackexchange-cli fragen"
+    },
+    {
+      "name": "tags",
+      "displayName": "tags",
+      "description": "stackexchange tags",
+      "command": "stackexchange-cli tags"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "stackexchange suche",
+      "command": "stackexchange-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.stackexchange.com/2.3/questions",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "refused",
+    "robots": "api.stackexchange.com/robots.txt: 400 (kein robots, reine API-Domain). Offizielle API; anonym 300 Requests/Tag/IP. Drossel ≥2 s.",
+    "tos": "Stack Exchange API Terms: frei ohne Key mit Kontingent; Inhalte CC BY-SA, Attribution nötig.",
+    "logo": {
+      "domain": "api.stackexchange.com",
+      "file": "assets/logos/api.stackexchange.com.png",
+      "source": "apple-touch-icon",
+      "resolved": "https://cdn.sstatic.net/Sites/stackexchange/Img/apple-touch-icon.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2245,
+      "throughput_rps": 0.445,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "2.3",
+      "last_scrape": "2026-10-13T06:38:00.706Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Stack Exchange API 2.3",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC-BY",
+    "logo_source": "apple-touch-icon",
+    "keywords": [
+      "stackexchange",
+      "stack",
+      "exchange",
+      "fragen",
+      "tag",
+      "beliebte",
+      "tags",
+      "site-liste",
+      "overflow",
+      "super",
+      "user",
+      "anonymes",
+      "tageskontingent",
+      "tech",
+      "technology",
+      "technik",
+      "Stack Exchange",
+      "Q&A",
+      "Developer"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "homepage": "https://stackexchange.com",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:35.724Z",
+      "robots": "refused"
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "id": "servas-ai.opencli-marincounty-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "County of Marin CA Open Data (Socrata)",
+  "description": "data.marincounty.gov Socrata Discovery API + SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen (County of Marin, California). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "marincounty-data datasets",
+      "command": "marincounty-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "marincounty-data dataset",
+      "command": "marincounty-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "marincounty-data rows",
+      "command": "marincounty-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.marincounty.gov/api/catalog/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.marincounty.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "County of Marin, California Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "data.marincounty.gov",
+      "chain": [
+        "official-site",
+        "wikimedia"
+      ],
+      "resolved": "https://data.marincounty.gov/api/assets/D49F426C-B8EE-488A-A2E4-AFFC3A47B680?favicon.ico",
+      "fallback": "initials",
+      "file": "assets/logos/data.marincounty.gov.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "County of Marin CA Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data Commons Open Database License (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "apple-touch-icon",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:17.433Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://data.marincounty.gov/",
+    "geo": {},
+    "keywords": [
+      "marincounty data",
+      "opendata",
+      "socrata",
+      "open data",
+      "dataset",
+      "us",
+      "marincounty",
+      "data",
+      "gov",
+      "discovery",
+      "api",
+      "soda"
+    ]
+  }
+}

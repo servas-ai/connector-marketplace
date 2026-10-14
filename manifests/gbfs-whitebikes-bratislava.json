@@ -1,0 +1,142 @@
+{
+  "id": "servas-ai.opencli-gbfs-whitebikes-bratislava",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "White bikes (GBFS)",
+  "description": "White bikes in Bratislava (Slowakei): offener GBFS-Feed 2.3 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-whitebikes-bratislava-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-whitebikes-bratislava-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-whitebikes-bratislava-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-whitebikes-bratislava-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://whitebikes.info/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "whitebikes.info/robots.txt geprüft: Pfad nicht gesperrt",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "bratislava",
+      "white bikes",
+      "slowakei",
+      "slovakia"
+    ],
+    "geo": {
+      "country": "SK",
+      "region": null,
+      "city": "Bratislava",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "whitebikes.info",
+      "chain": [
+        "official",
+        "favicon",
+        "initials"
+      ],
+      "resolved": "https://whitebikes.info/favicon.svg",
+      "fallback": "initials",
+      "file": "assets/logos/whitebikes.info.png",
+      "brand_domain": "whitebikes.info"
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "White bikes (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://whitebikes.info/"
+  }
+}

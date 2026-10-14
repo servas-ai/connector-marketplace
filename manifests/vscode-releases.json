@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-vscode-releases",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "VS Code – Releases & Update-Feed",
+  "description": "Visual Studio Code Update-Service: Liste der Versionen je Kanal (stable/insider) und neuestes Build je Plattform mit Commit, SHA-256 und Download-URL, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "vscode",
+    "visual studio code",
+    "editor",
+    "release",
+    "microsoft",
+    "update"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "latest",
+      "displayName": "latest",
+      "description": "vscode-releases latest",
+      "command": "vscode-releases-cli latest"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://update.code.visualstudio.com/",
+    "homepage": "https://update.code.visualstudio.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "update.code.visualstudio.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "VS Code Update-API: öffentliche Versionsinformationen ohne Key; nur Lesen.",
+    "license": "terms-of-source (Microsoft)",
+    "country": "INT",
+    "keywords": [
+      "vscode",
+      "visual studio code",
+      "editor",
+      "release",
+      "microsoft",
+      "update"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-27",
+    "worker": "open-apis-27-0132",
+    "logo": {
+      "domain": "update.code.visualstudio.com",
+      "file": "assets/logos/update.code.visualstudio.com.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:00:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Microsoft)",
+        "url": "https://code.visualstudio.com/license",
+        "evidence": "https://code.visualstudio.com/license",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: VS Code – Releases & Update-Feed (update.code.visualstudio.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T02:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "VS Code – Releases & Update-Feed",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "version"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

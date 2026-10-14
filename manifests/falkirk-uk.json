@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-falkirk-uk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Falkirk Council Open Spatial Data Hub – ArcGIS Hub",
+  "description": "Falkirk Council Open Spatial Data Hub (UK): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "falkirk-uk suche",
+      "command": "falkirk-uk-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "falkirk-uk neu",
+      "command": "falkirk-uk-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "falkirk-uk datensatz",
+      "command": "falkirk-uk-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://spatial.falkirk.gov.uk/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "spatial.falkirk.gov.uk/robots.txt geprüft: /api/search nicht gesperrt. Öffentliche OGC-API-Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "ArcGIS-Hub-Open-Data-Portal; Lizenz je Datensatz (Feld lizenz), Quelle nennen.",
+    "logo": {
+      "domain": "spatial.falkirk.gov.uk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=spatial.falkirk.gov.uk&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/spatial.falkirk.gov.uk.png",
+      "brand_domain": "spatial.falkirk.gov.uk"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Falkirk Council Open Spatial Data Hub – ArcGIS Hub",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "ArcGIS Hub",
+      "Geodaten",
+      "geodata",
+      "GIS",
+      "Datenkatalog",
+      "data catalog",
+      "Datensätze",
+      "datasets",
+      "Karten",
+      "maps",
+      "Verwaltung",
+      "government",
+      "OGC API Records",
+      "Falkirk",
+      "Scotland",
+      "UK"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": "Scotland",
+      "city": "Falkirk",
+      "lat": 56.0019,
+      "lon": -3.7839,
+      "bbox": [
+        -4.284,
+        55.502,
+        -3.284,
+        56.502
+      ],
+      "scope": "city"
+    },
+    "homepage": "https://spatial.falkirk.gov.uk/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:00.236Z",
+      "robots": "allowed"
+    }
+  }
+}

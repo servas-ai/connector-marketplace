@@ -1,0 +1,149 @@
+{
+  "id": "servas-ai.opencli-vatcomply",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "VATComply – EZB-Kurse & Länderdaten",
+  "description": "VATComply API: EZB-Referenzkurse zu beliebiger Basis, Länderliste mit Währung/MwSt-Kontext und Währungsliste. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kurse",
+      "displayName": "kurse",
+      "description": "vatcomply kurse",
+      "command": "vatcomply-cli kurse"
+    },
+    {
+      "name": "laender",
+      "displayName": "laender",
+      "description": "vatcomply laender",
+      "command": "vatcomply-cli laender"
+    },
+    {
+      "name": "waehrungen",
+      "displayName": "waehrungen",
+      "description": "vatcomply waehrungen",
+      "command": "vatcomply-cli waehrungen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://api.vatcomply.com/rates",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.vatcomply.com/robots.txt: kein Disallow für /rates, /countries, /currencies. Freie API ohne Key. Drossel ≥2 s.",
+    "tos": "VATComply: kostenlose API ohne Key (Open Source), Kurse von der EZB.",
+    "logo": {
+      "domain": "api.vatcomply.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.vatcomply.com/",
+      "fallback": "initials",
+      "file": "assets/logos/api.vatcomply.com.png",
+      "brand_domain": "vatcomply.com",
+      "source": "official-site",
+      "source_kind": "header-svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3949,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:30:36.272Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "VATComply – EZB-Kurse & Länderdaten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "vatcomply",
+      "ezb-referenzkurse",
+      "beliebiger",
+      "basis",
+      "länderliste",
+      "währung",
+      "mwst-kontext",
+      "währungsliste",
+      "ezb-kurse",
+      "länderdaten",
+      "finance",
+      "kurse",
+      "laender",
+      "waehrungen",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://api.vatcomply.com/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:47.502Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.vatcomply.com/"
+  }
+}

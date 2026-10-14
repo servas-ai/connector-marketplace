@@ -1,0 +1,148 @@
+{
+  "id": "servas-ai.opencli-gtfs-nz-otago-regional-council-orc-mdb-983",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Otago Regional Council (ORC) (GTFS-Fahrplan)",
+  "description": "Otago Regional Council (ORC): offizieller GTFS-Soll-Fahrplan (Dunedin City, Neuseeland) aus dem Mobility-Database-Katalog (mdb-983), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-nz-otago-regional-council-orc-mdb-983-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-nz-otago-regional-council-orc-mdb-983-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-nz-otago-regional-council-orc-mdb-983-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-nz-otago-regional-council-orc-mdb-983-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://www.orc.govt.nz/transit/google_transit.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.orc.govt.nz/robots.txt geprüft: Pfad nicht gesperrt",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://creativecommons.org/licenses/by/4.0/.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "dunedin city",
+      "otago regional council o",
+      "neuseeland",
+      "new zealand"
+    ],
+    "geo": {
+      "country": "NZ",
+      "region": "Otago",
+      "city": "Dunedin City",
+      "bbox": [
+        168.625274,
+        -45.9503128,
+        170.993625,
+        -44.93829
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "www.orc.govt.nz",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/02/42/f6/0242f695-d38f-7e8b-6a6a-d0e2ec765392/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/www.orc.govt.nz.png",
+      "brand_domain": "orc.govt.nz"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Otago Regional Council (ORC) (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.orc.govt.nz/"
+  }
+}

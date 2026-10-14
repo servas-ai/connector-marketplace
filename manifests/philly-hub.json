@@ -1,0 +1,188 @@
+{
+  "id": "servas-ai.opencli-philly-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "City of Philadelphia Open Data (ArcGIS Hub)",
+  "description": "City of Philadelphia Open Data GIS: Datensatz-Katalog der ArcGIS-Hub-Instanz (OGC API Records). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ArcGIS",
+    "Hub",
+    "Open Data",
+    "GIS",
+    "OGC",
+    "Katalog",
+    "US",
+    "City"
+  ],
+  "keywords": [
+    "ArcGIS",
+    "Hub",
+    "Open Data",
+    "GIS",
+    "OGC",
+    "Katalog",
+    "US",
+    "City"
+  ],
+  "homepage": "https://data-phl.opendata.arcgis.com/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Vereinigte Staaten",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      -125.0,
+      24.4,
+      -66.9,
+      49.4
+    ],
+    "centroid": {
+      "lat": 39.8,
+      "lon": -98.6
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "philly-hub suche",
+      "command": "philly-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "philly-hub neu",
+      "command": "philly-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "philly-hub datensatz",
+      "command": "philly-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data-phl.opendata.arcgis.com/api/search/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data-phl.opendata.arcgis.com/robots.txt: /api/search nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "City of Philadelphia ArcGIS Hub Open Data, öffentliche OGC API Records ohne Key; Fair Use.",
+    "provider": "City of Philadelphia",
+    "homepage": "https://data-phl.opendata.arcgis.com/",
+    "data_license": "Open Data (je Dataset / Terms of Use)",
+    "keywords": [
+      "ArcGIS",
+      "Hub",
+      "Open Data",
+      "GIS",
+      "OGC",
+      "Katalog",
+      "US",
+      "City"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Vereinigte Staaten",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        -125.0,
+        24.4,
+        -66.9,
+        49.4
+      ],
+      "centroid": {
+        "lat": 39.8,
+        "lon": -98.6
+      }
+    },
+    "logo": {
+      "domain": "data-phl.opendata.arcgis.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://phl.maps.arcgis.com/sharing/rest/content/items/575dc4600b194f0da5da28bf90097695/data",
+      "fallback": "initials",
+      "brand_domain": "phila.gov",
+      "file": "assets/logos/data-phl.opendata.arcgis.com.png",
+      "source": "official-site",
+      "source_kind": "og:image"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "City of Philadelphia Open Data (ArcGIS Hub)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:12:05.787Z",
+      "robots": "allowed"
+    }
+  }
+}

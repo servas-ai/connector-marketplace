@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-maclookup",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "MACLookup – MAC-Adress-Datenbank (OUI, Blocktyp, Land)",
+  "description": "maclookup.app API v2: Hersteller, Adresse, Land, Blocktyp (MA-L/M/S) und Random/Private-Flags zu MAC-Präfixen, OpenAPI 3.1 und llms.txt, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "mac",
+    "oui",
+    "hersteller",
+    "netzwerk",
+    "ieee",
+    "hardware",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "firma",
+      "displayName": "firma",
+      "description": "maclookup firma",
+      "command": "maclookup-cli firma"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.maclookup.app/",
+    "homepage": "https://api.maclookup.app/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.maclookup.app/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "MACLookup: kostenlose API ohne Key (Rate-Limit laut Doku), API-Key nur für höhere Limits.",
+    "license": "terms-of-source (maclookup.app; Basis IEEE-Registry)",
+    "country": "INT",
+    "keywords": [
+      "mac",
+      "oui",
+      "hersteller",
+      "netzwerk",
+      "ieee",
+      "hardware",
+      "tech"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-19",
+    "worker": "open-apis-19-2215",
+    "logo": {
+      "domain": "api.maclookup.app",
+      "file": "assets/logos/api.maclookup.app.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://maclookup.app/img/ico/apple-touch-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://maclookup.app/llms.txt",
+      "llms_full": null,
+      "openapi": "https://maclookup.app/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (maclookup.app; Basis IEEE-Registry)",
+        "url": "https://maclookup.app/api-v2/documentation",
+        "evidence": "https://maclookup.app/api-v2/documentation",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "no",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T22:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "MACLookup – MAC-Adress-Datenbank (OUI, Blocktyp, Land)",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "company",
+          "block_type"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

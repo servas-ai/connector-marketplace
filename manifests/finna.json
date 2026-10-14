@@ -1,0 +1,193 @@
+{
+  "id": "servas-ai.opencli-finna",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Finna – Archive, Bibliotheken und Museen Finnlands (Finna API)",
+  "description": "Finna (Finnische Nationalbibliothek): Suche in über 20 Mio. Datensätzen finnischer Archive, Bibliotheken und Museen (Bücher, Karten, Bilder, Objekte) und Abruf eines Datensatzes per ID über die offizielle Finna-REST-API. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "Finna",
+    "Finnland",
+    "Bibliothek",
+    "Archiv",
+    "Museum",
+    "Kulturerbe",
+    "Digitalisate",
+    "cultural heritage",
+    "Finland"
+  ],
+  "keywords": [
+    "Finna",
+    "Finnland",
+    "Bibliothek",
+    "Archiv",
+    "Museum",
+    "Kulturerbe",
+    "Digitalisate",
+    "cultural heritage",
+    "Finland"
+  ],
+  "homepage": "https://www.finna.fi/",
+  "license": "MIT",
+  "geo": {
+    "country": "FI",
+    "region": "Finnland",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      20.55,
+      59.81,
+      31.59,
+      70.09
+    ],
+    "centroid": {
+      "lat": 64.5,
+      "lon": 26.0
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "finna suche",
+      "command": "finna-cli suche"
+    },
+    {
+      "name": "bilder",
+      "displayName": "bilder",
+      "description": "finna bilder",
+      "command": "finna-cli bilder"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "finna datensatz",
+      "command": "finna-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://api.finna.fi/v1/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.finna.fi/robots.txt: /v1/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Finna-Metadaten unter CC0 1.0; Bild-/Inhaltsrechte je Datensatz (Feld rechte).",
+    "provider": "Kansalliskirjasto – Nationalbibliothek Finnland (Finna)",
+    "homepage": "https://www.finna.fi/",
+    "data_license": "CC0 1.0 (Metadaten)",
+    "keywords": [
+      "Finna",
+      "Finnland",
+      "Bibliothek",
+      "Archiv",
+      "Museum",
+      "Kulturerbe",
+      "Digitalisate",
+      "cultural heritage",
+      "Finland"
+    ],
+    "geo": {
+      "country": "FI",
+      "region": "Finnland",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        20.55,
+        59.81,
+        31.59,
+        70.09
+      ],
+      "centroid": {
+        "lat": 64.5,
+        "lon": 26.0
+      }
+    },
+    "logo": {
+      "domain": "api.finna.fi",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://finna.fi/themes/custom/images/finna-logo.png?_=1790073340",
+      "fallback": "initials",
+      "brand_domain": "finna.fi",
+      "file": "assets/logos/api.finna.fi.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Finna – Archive, Bibliotheken und Museen Finnlands (Finna API)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "FI",
+    "operator": {
+      "name": "Nationalbibliothek Finnlands (Kansalliskirjasto)",
+      "country": "FI",
+      "source": "x-servas.operator (vorher String; quality-v-2146 als Objekt normalisiert)"
+    },
+    "llms": {
+      "ai_policy": "blocks:GPTBot,ClaudeBot,anthropic-ai,Google-Extended,CCBot,PerplexityBot,ChatGPT-User,Applebot-Extended,Bytespider; content-signal:search=yes,ai-train=no,use=reference",
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:58.305Z",
+      "robots": "allowed"
+    }
+  }
+}

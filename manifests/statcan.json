@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-statcan",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Statistics Canada – Web Data Service (WDS)",
+  "description": "www150.statcan.gc.ca WDS: zuletzt aktualisierte Tabellen (Cubes) und Cube-Metadaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "tabellen",
+      "displayName": "tabellen",
+      "description": "statcan tabellen",
+      "command": "statcan-cli tabellen"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "statcan info",
+      "command": "statcan-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www150.statcan.gc.ca/t1/wds/rest/getChangedCubeList",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www150.statcan.gc.ca/robots.txt: Disallow nur Framework/Admin-Pfade – /t1/wds/rest/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "Statistics Canada Open Licence; WDS öffentlich, Fair Use.",
+    "logo": {
+      "domain": "www150.statcan.gc.ca",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg",
+      "fallback": "initials",
+      "file": "assets/logos/www150.statcan.gc.ca.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "wds-rest",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Statistics Canada – Web Data Service (WDS)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CA",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "statcan",
+      "www150",
+      "wds",
+      "zuletzt",
+      "aktualisierte",
+      "tabellen",
+      "cubes",
+      "cube-metadaten",
+      "statistics",
+      "canada",
+      "web",
+      "service",
+      "international",
+      "opendata",
+      "info",
+      "statistik",
+      "zeitreihen",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "CA",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "CDAGOVN - Shared Services Canada",
+      "asn": 2675,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:42:31Z",
+      "host": "www150.statcan.gc.ca",
+      "hoster": "Shared Services Canada",
+      "http_status": 200,
+      "ip": "167.44.105.20",
+      "server_header": "nginx",
+      "tls_issuer": "Entrust Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://www150.statcan.gc.ca",
+      "country": "CA"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:18:13.331Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.statcan.gc.ca/"
+  }
+}

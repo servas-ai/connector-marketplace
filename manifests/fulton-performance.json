@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-fulton-performance",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Fulton County GA Performance Measures (Socrata)",
+  "description": "Fulton County Performance: Leistungskennzahlen der Behörden von Fulton County (Georgia) nach Quartal und Jahr. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Georgia",
+    "Fulton County Government"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Georgia",
+    "Fulton County Government"
+  ],
+  "homepage": "https://www.fultoncountyga.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Georgia",
+    "city": "Fulton County",
+    "scope": "county"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "fulton-performance datasets",
+      "command": "fulton-performance-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "fulton-performance dataset",
+      "command": "fulton-performance-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "fulton-performance rows",
+      "command": "fulton-performance-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://performance.fultoncountyga.gov/api/catalog/v1",
+    "homepage": "https://www.fultoncountyga.gov/",
+    "portal": "https://performance.fultoncountyga.gov/",
+    "provider": "Fulton County Government, Georgia",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Kennzahlen",
+      "Performance",
+      "Georgia",
+      "Fulton County Government"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Georgia",
+      "city": "Fulton County",
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "performance.fultoncountyga.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Fulton County Government, Georgia Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "performance.fultoncountyga.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://performance.fultoncountyga.gov/api/assets/0D51158D-1FD4-4321-A5E5-552D360E75F6?fultonnewlogoNoBckgrnd.png",
+      "fallback": "initials",
+      "file": "assets/logos/performance.fultoncountyga.gov.png",
+      "source": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Fulton County GA Performance Measures (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von Fulton County Government, Georgia; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von Fulton County Government, Georgia; je Dataset im Feld license",
+    "logo_source": "header-logo",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:01.388Z",
+      "robots": "allowed"
+    }
+  }
+}

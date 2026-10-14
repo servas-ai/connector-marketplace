@@ -1,0 +1,154 @@
+{
+  "id": "servas-ai.opencli-nbu-ua",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Nationalbank der Ukraine – amtliche Wechselkurse",
+  "description": "NBU NBUStatService: amtliche Hrywnja-Wechselkurse (alle Währungen oder je Code, optional Stichtag) und Kurse ausgewählter Währungen über einen Zeitraum. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kurse",
+      "displayName": "kurse",
+      "description": "nbu-ua kurse",
+      "command": "nbu-ua-cli kurse"
+    },
+    {
+      "name": "kurs",
+      "displayName": "kurs",
+      "description": "nbu-ua kurs",
+      "command": "nbu-ua-cli kurs"
+    },
+    {
+      "name": "verlauf",
+      "displayName": "verlauf",
+      "description": "nbu-ua verlauf",
+      "command": "nbu-ua-cli verlauf"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json",
+    "homepage": "https://bank.gov.ua/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "bank.gov.ua/robots.txt: kein Disallow für /NBUStatService/. Offizielle offene Daten-API der Nationalbank. Drossel ≥2 s.",
+    "tos": "NBU Open Data: amtliche Statistikdaten, freie Nutzung mit Quellenangabe.",
+    "logo": {
+      "domain": "bank.gov.ua",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://bank.gov.ua/frontend/content/logo.png?v=19",
+      "fallback": "initials",
+      "file": "assets/logos/bank.gov.ua.png",
+      "brand_domain": "bank.gov.ua",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4193,
+      "throughput_rps": 0.238,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:04:26.387Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Nationalbank der Ukraine – amtliche Wechselkurse",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "UA",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "nbu",
+      "nbu-ua",
+      "nbustatservice",
+      "amtliche",
+      "hrywnja-wechselkurse",
+      "währungen",
+      "code",
+      "optional",
+      "stichtag",
+      "kurse",
+      "ausgewählter",
+      "einen",
+      "zeitraum",
+      "nationalbank",
+      "ukraine",
+      "wechselkurse",
+      "finance",
+      "kurs",
+      "verlauf",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "UA",
+      "scope": "country"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:03.842Z",
+      "robots": "allowed"
+    }
+  }
+}

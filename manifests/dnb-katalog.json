@@ -1,0 +1,187 @@
+{
+  "id": "servas-ai.opencli-dnb-katalog",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Deutsche Nationalbibliothek – Katalog (SRU-Schnittstelle)",
+  "description": "Deutsche Nationalbibliothek (DNB): bibliografische Suche im DNB-Katalog (Titel, Personen, Schlagwörter) und Abfrage per ISBN über die offizielle SRU-Schnittstelle, Ausgabe Dublin Core. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Deutsche Nationalbibliothek",
+    "DNB",
+    "Bibliothekskatalog",
+    "ISBN",
+    "SRU",
+    "Bücher",
+    "Bibliografie",
+    "Dublin Core",
+    "library catalogue"
+  ],
+  "keywords": [
+    "Deutsche Nationalbibliothek",
+    "DNB",
+    "Bibliothekskatalog",
+    "ISBN",
+    "SRU",
+    "Bücher",
+    "Bibliografie",
+    "Dublin Core",
+    "library catalogue"
+  ],
+  "homepage": "https://www.dnb.de/sru",
+  "license": "MIT",
+  "geo": {
+    "country": "DE",
+    "region": "Deutschland",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      5.87,
+      47.27,
+      15.04,
+      55.06
+    ],
+    "centroid": {
+      "lat": 51.165,
+      "lon": 10.455
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "dnb-katalog suche",
+      "command": "dnb-katalog-cli suche"
+    },
+    {
+      "name": "isbn",
+      "displayName": "isbn",
+      "description": "dnb-katalog isbn",
+      "command": "dnb-katalog-cli isbn"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://services.dnb.de/sru/dnb",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "services.dnb.de/robots.txt: /sru/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "DNB-Metadaten unter CC0 1.0 (Open-Data-Angebot der DNB).",
+    "provider": "Deutsche Nationalbibliothek (DNB)",
+    "homepage": "https://www.dnb.de/sru",
+    "data_license": "CC0 1.0 (Metadaten)",
+    "keywords": [
+      "Deutsche Nationalbibliothek",
+      "DNB",
+      "Bibliothekskatalog",
+      "ISBN",
+      "SRU",
+      "Bücher",
+      "Bibliografie",
+      "Dublin Core",
+      "library catalogue"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Deutschland",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ],
+      "centroid": {
+        "lat": 51.165,
+        "lon": 10.455
+      }
+    },
+    "logo": {
+      "domain": "services.dnb.de",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.dnb.de/SiteGlobals/Frontend/DNBWeb/Images/logo.svg?__blob=square&v=3",
+      "fallback": "initials",
+      "brand_domain": "dnb.de",
+      "file": "assets/logos/services.dnb.de.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sru-1.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Deutsche Nationalbibliothek – Katalog (SRU-Schnittstelle)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "operator": {
+      "name": "Deutsche Nationalbibliothek",
+      "country": "DE",
+      "source": "x-servas.operator (vorher String; quality-v-2146 als Objekt normalisiert)"
+    },
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:19.273Z",
+      "robots": "allowed"
+    }
+  }
+}

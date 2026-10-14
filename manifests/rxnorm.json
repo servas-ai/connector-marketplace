@@ -1,0 +1,195 @@
+{
+  "id": "servas-ai.opencli-rxnorm",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "RxNorm (NLM RxNav)",
+  "description": "Arzneimittel-Normvokabular RxNorm: Konzepte/RxCUI, Wirkstoffe und Marken, ATC-Klassen und NDC-Codes über die offizielle RxNav-API der NLM.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "health"
+  ],
+  "tags": [
+    "gesundheit",
+    "arzneimittel",
+    "global",
+    "atc"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "atc",
+      "displayName": "atc",
+      "description": "rxnorm atc",
+      "command": "rxnorm-cli atc"
+    },
+    {
+      "name": "ndc",
+      "displayName": "ndc",
+      "description": "rxnorm ndc",
+      "command": "rxnorm-cli ndc"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "rxnorm suche",
+      "command": "rxnorm-cli suche"
+    },
+    {
+      "name": "wirkstoffe",
+      "displayName": "wirkstoffe",
+      "description": "rxnorm wirkstoffe",
+      "command": "rxnorm-cli wirkstoffe"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "health",
+    "realtime": false,
+    "source_url": "https://rxnav.nlm.nih.gov/REST",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1,1 s (Limit 20/s)",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "logo": {
+      "domain": "rxnav.nlm.nih.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://lhncbc.nlm.nih.gov/assets/images/logo-NIH-block.png",
+      "fallback": "initials",
+      "file": "assets/logos/rxnav.nlm.nih.gov.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1068,
+      "throughput_rps": 0.936,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "RxNav REST",
+      "last_scrape": "2026-10-13T04:27:13.053Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "RxNorm (NLM RxNav)",
+        "subtitle": "health",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "rxcui",
+          "title",
+          "tty"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "rxnorm",
+      "arzneimittel-normvokabular",
+      "konzepte",
+      "rxcui",
+      "wirkstoffe",
+      "marken",
+      "atc-klassen",
+      "ndc-codes",
+      "rxnav-api",
+      "nlm",
+      "ausgabe",
+      "servas",
+      "record",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "diese",
+      "gesundheitsdaten",
+      "live",
+      "braucht",
+      "rxnav",
+      "international",
+      "health",
+      "atc",
+      "ndc",
+      "medizin",
+      "medicine",
+      "gesundheit"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "NIH-NET - National Institutes of Health",
+      "asn": 3527,
+      "cdn": "Amazon CloudFront",
+      "checked_at": "2026-10-13T09:40:32Z",
+      "host": "rxnav.nlm.nih.gov",
+      "hoster": "National Institutes of Health",
+      "http_status": 200,
+      "ip": "156.40.156.46",
+      "server_header": "AmazonS3",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://rxnav.nlm.nih.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:12.334Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://lhncbc.nlm.nih.gov/RxNav/"
+  }
+}

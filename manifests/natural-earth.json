@@ -1,0 +1,130 @@
+{
+  "id": "servas-ai.opencli-natural-earth",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Natural Earth – Dump-Metadaten",
+  "description": "Natural Earth (naciscdn.org): Metadaten der offiziellen Gesamt-Downloads (Größe, Stand) per HEAD-Request – kein Download. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "pakete",
+      "displayName": "pakete",
+      "description": "HEAD-Metadaten der Dumps (--limit)",
+      "command": "natural-earth-cli pakete"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "geo",
+    "realtime": false,
+    "source_url": "https://naciscdn.org/naturalearth/packages/",
+    "license": "Public-Domain",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "refused",
+    "robots": "naciscdn.org/robots.txt: S3 AccessDenied (kein Regelwerk). Nur HEAD-Requests auf offizielle Download-Pakete, kein Massendownload.",
+    "tos": "Natural Earth: Public Domain.",
+    "keywords": [
+      "natural",
+      "earth",
+      "natural-earth",
+      "naciscdn",
+      "metadaten",
+      "offiziellen",
+      "gesamt-downloads",
+      "größe",
+      "stand",
+      "head-request",
+      "kein",
+      "download",
+      "dump-metadaten",
+      "geo",
+      "pakete",
+      "geodaten",
+      "geodata",
+      "maps"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "logo": {
+      "domain": "naciscdn.org",
+      "resolved": "assets/logos/naturalearthdata.com.png",
+      "file": "assets/logos/naturalearthdata.com.png",
+      "brand_domain": "naturalearthdata.com",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3417,
+      "throughput_rps": 0.293,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "HTTP HEAD",
+      "last_scrape": "2026-10-13T09:07:03.289Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Natural Earth – Dump-Metadaten",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://www.naturalearthdata.com",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:58.832Z",
+      "robots": "allowed"
+    }
+  }
+}

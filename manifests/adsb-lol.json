@@ -1,0 +1,152 @@
+{
+  "id": "servas-ai.opencli-adsb-lol",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "adsb.lol – offene ADS-B-Flugdaten",
+  "description": "adsb.lol (Community-ADS-B-Netz, ODbL): Flugzeuge im Umkreis einer Position, nächstes Flugzeug, Suche per Callsign/Hex. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "umkreis",
+      "displayName": "umkreis",
+      "description": "adsb-lol umkreis",
+      "command": "adsb-lol-cli umkreis"
+    },
+    {
+      "name": "naechstes",
+      "displayName": "naechstes",
+      "description": "adsb-lol naechstes",
+      "command": "adsb-lol-cli naechstes"
+    },
+    {
+      "name": "callsign",
+      "displayName": "callsign",
+      "description": "adsb-lol callsign",
+      "command": "adsb-lol-cli callsign"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://api.adsb.lol/v2/point/48.24/14.19/50",
+    "license": "ODbL-1.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.adsb.lol/robots.txt: 404 (keine Einschränkung). Offizielle offene API (ODbL). Drossel ≥2 s.",
+    "tos": "adsb.lol – Daten unter ODbL 1.0, API frei nutzbar.",
+    "logo": {
+      "domain": "api.adsb.lol",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://adsb.lol/images/adsblol-favicon.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.adsb.lol.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "adsb.lol – offene ADS-B-Flugdaten",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "adsb",
+      "lol",
+      "adsb-lol",
+      "community-ads-b-netz",
+      "odbl",
+      "flugzeuge",
+      "umkreis",
+      "position",
+      "nächstes",
+      "flugzeug",
+      "callsign",
+      "hex",
+      "offene",
+      "ads-b-flugdaten",
+      "opendata",
+      "naechstes",
+      "network quality",
+      "netzqualität",
+      "telecom",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.902Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://adsb.lol/"
+  }
+}

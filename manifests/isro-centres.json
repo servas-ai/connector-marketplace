@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-isro-centres",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ISRO – Zentren & Kundensatelliten",
+  "description": "Inoffizielle ISRO-Open-Data-API: Raumfahrtzentren (Ort, Bundesstaat) und Kundensatelliten (Land, Start, Masse, Launcher), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "research"
+  ],
+  "tags": [
+    "isro",
+    "raumfahrt",
+    "satelliten",
+    "indien",
+    "forschung",
+    "science"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "satellites",
+      "displayName": "satellites",
+      "description": "isro-centres satellites",
+      "command": "isro-centres-cli satellites"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "realtime": false,
+    "source_url": "https://isro.vercel.app/",
+    "homepage": "https://isro.vercel.app/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "isro.vercel.app/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "ISRO Community API: öffentlich, keyless; keine offizielle ISRO-Garantie.",
+    "license": "terms-of-source (Community-Spiegel öffentlicher ISRO-Angaben)",
+    "country": "IN",
+    "keywords": [
+      "isro",
+      "raumfahrt",
+      "satelliten",
+      "indien",
+      "forschung",
+      "science"
+    ],
+    "geo": {
+      "country": "IN",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-18",
+    "worker": "open-apis-18-2119",
+    "logo": {
+      "domain": "isro.vercel.app",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:45:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Community-Spiegel öffentlicher ISRO-Angaben)",
+        "url": "https://isro.vercel.app/",
+        "evidence": "https://isro.vercel.app/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: ISRO – Zentren & Kundensatelliten (isro.vercel.app)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": "IN",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T21:45:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "ISRO – Zentren & Kundensatelliten",
+        "subtitle": "research",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "name",
+          "place"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

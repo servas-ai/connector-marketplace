@@ -1,0 +1,189 @@
+{
+  "id": "servas-ai.opencli-openligadb",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenLigaDB – Fußball-Ergebnisse und Tabellen (Bundesliga u. a.)",
+  "description": "OpenLigaDB (Community-Sportdatenbank): Spiele und Ergebnisse des aktuellen Spieltags, Tabellen je Saison und verfügbare Ligen (1./2./3. Bundesliga, DFB-Pokal, Champions League …). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "OpenLigaDB",
+    "Fußball",
+    "Bundesliga",
+    "Ergebnisse",
+    "Tabelle",
+    "Spieltag",
+    "Sport",
+    "football"
+  ],
+  "keywords": [
+    "OpenLigaDB",
+    "Fußball",
+    "Bundesliga",
+    "Ergebnisse",
+    "Tabelle",
+    "Spieltag",
+    "Sport",
+    "football"
+  ],
+  "homepage": "https://www.openligadb.de/",
+  "license": "MIT",
+  "geo": {
+    "country": "DE",
+    "region": "Deutschland",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      5.87,
+      47.27,
+      15.04,
+      55.06
+    ],
+    "centroid": {
+      "lat": 51.165,
+      "lon": 10.455
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "spiele",
+      "displayName": "spiele",
+      "description": "openligadb spiele",
+      "command": "openligadb-cli spiele"
+    },
+    {
+      "name": "tabelle",
+      "displayName": "tabelle",
+      "description": "openligadb tabelle",
+      "command": "openligadb-cli tabelle"
+    },
+    {
+      "name": "ligen",
+      "displayName": "ligen",
+      "description": "openligadb ligen",
+      "command": "openligadb-cli ligen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "sport",
+    "realtime": false,
+    "source_url": "https://api.openligadb.de/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.openligadb.de/robots.txt: kein Disallow für API-Pfade (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "OpenLigaDB – frei nutzbare Community-Daten (Quellenangabe OpenLigaDB).",
+    "provider": "OpenLigaDB (Community-Projekt)",
+    "homepage": "https://www.openligadb.de/",
+    "data_license": "Freie Community-Daten (Quellenangabe OpenLigaDB)",
+    "keywords": [
+      "OpenLigaDB",
+      "Fußball",
+      "Bundesliga",
+      "Ergebnisse",
+      "Tabelle",
+      "Spieltag",
+      "Sport",
+      "football"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Deutschland",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ],
+      "centroid": {
+        "lat": 51.165,
+        "lon": 10.455
+      }
+    },
+    "logo": {
+      "domain": "api.openligadb.de",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.openligadb.de/images/apple-touch-icon.png",
+      "fallback": "initials",
+      "brand_domain": "openligadb.de",
+      "file": "assets/logos/api.openligadb.de.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "OpenLigaDB – Fußball-Ergebnisse und Tabellen (Bundesliga u. a.)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "operator": {
+      "name": "OpenLigaDB (Community-Projekt)",
+      "country": "DE",
+      "source": "x-servas.operator (vorher String; quality-v-2146 als Objekt normalisiert)"
+    },
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:23.225Z",
+      "robots": "allowed"
+    }
+  }
+}

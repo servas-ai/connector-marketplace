@@ -1,0 +1,152 @@
+{
+  "id": "servas-ai.opencli-gbif",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GBIF – Arten & Vorkommen",
+  "description": "GBIF API v1: Artnamens-Match und Occurrence-Suche (z. B. Land AT). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "research"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "art",
+      "displayName": "art",
+      "description": "gbif art",
+      "command": "gbif-cli art"
+    },
+    {
+      "name": "vorkommen",
+      "displayName": "vorkommen",
+      "description": "gbif vorkommen",
+      "command": "gbif-cli vorkommen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "realtime": false,
+    "source_url": "https://api.gbif.org/v1/species/match",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.gbif.org/robots.txt: Disallow nur /v1/image/unsafe – Species/Occurrence erlaubt. Drossel ≥2 s.",
+    "tos": "GBIF: offene Biodiversitätsdaten, Creative Commons / GBIF-Nutzungsbedingungen.",
+    "logo": {
+      "domain": "api.gbif.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://rs.gbif.org/style/logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/api.gbif.org.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2244,
+      "throughput_rps": 0.446,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T06:01:57.319Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "GBIF – Arten & Vorkommen",
+        "subtitle": "research",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "svg",
+    "keywords": [
+      "gbif",
+      "artnamens-match",
+      "occurrence-suche",
+      "land",
+      "arten",
+      "vorkommen",
+      "international",
+      "research",
+      "art"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "FSKNET-DK - IDDQD-AS",
+      "asn": 1835,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:37:37Z",
+      "host": "api.gbif.org",
+      "hoster": "IDDQD-AS",
+      "http_status": 200,
+      "ip": "130.225.43.2",
+      "server_header": "Apache/2.4.58 (Ubuntu)",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://gbif.org"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:00.280Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-cdc-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CDC data.cdc.gov (Socrata)",
+  "description": "CDC Open Data (data.cdc.gov, Centers for Disease Control and Prevention, USA): Datensatz-Katalog der Socrata-Instanz – Dataset-Suche und Dataset-Metadaten über die Discovery API. Ohne Login/Key (App-Token optional, nicht genutzt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "cdc-data datasets",
+      "command": "cdc-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "cdc-data dataset",
+      "command": "cdc-data-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.cdc.gov/api/catalog/v1",
+    "homepage": "https://data.cdc.gov/",
+    "keywords": [
+      "cdc",
+      "cdc-data",
+      "gov",
+      "socrata",
+      "discovery",
+      "dataset-suche",
+      "dataset-metadaten",
+      "app-token",
+      "optional",
+      "nicht",
+      "genutzt",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.cdc.gov/robots.txt: Disallow nur /browse?…-Facetten (HTML) – Discovery-API /api/catalog/v1 und /api/views/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "data.cdc.gov: US-Gov Public Domain; Fair Use.",
+    "logo": {
+      "domain": "data.cdc.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.cdc.gov/TemplatePackage/5.0/img/favicon/apple-touch-icon.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.cdc.gov.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "CDC data.cdc.gov (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "favicon",
+    "infra": {
+      "as_org": "AMAZON-AES - Amazon.com, Inc.",
+      "asn": 14618,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:17:53Z",
+      "host": "data.cdc.gov",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "52.206.68.26",
+      "server_header": "nginx",
+      "tls_issuer": "Entrust Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://cdc.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:44.364Z",
+      "robots": "allowed"
+    }
+  }
+}

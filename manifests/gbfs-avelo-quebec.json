@@ -1,0 +1,142 @@
+{
+  "id": "servas-ai.opencli-gbfs-avelo-quebec",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "àVélo (GBFS)",
+  "description": "àVélo in Ville de Québec (Kanada): offener GBFS-Feed 1.1 ; 2.3 ; 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-avelo-quebec-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-avelo-quebec-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-avelo-quebec-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-avelo-quebec-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://quebec.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "quebec.publicbikesystem.net/robots.txt 404 → allow-all (RFC 9309)",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "ville de qu bec",
+      "v lo",
+      "kanada",
+      "canada"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": null,
+      "city": "Ville de Québec",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "quebec.publicbikesystem.net",
+      "chain": [
+        "official",
+        "favicon",
+        "initials"
+      ],
+      "resolved": "https://aveloquebec.ca/wp-content/uploads/2026/05/Logo_aVelo_retina-1024x386.webp",
+      "fallback": "initials",
+      "file": "assets/logos/quebec.publicbikesystem.net.png",
+      "brand_domain": "aveloquebec.ca"
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "àVélo (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://aveloquebec.ca/"
+  }
+}

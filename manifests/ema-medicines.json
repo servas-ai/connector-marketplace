@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-ema-medicines",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI ema-medicines",
+  "description": "Zentral in der EU zugelassene Humanarzneimittel der EMA (EPAR) nach Name, Wirkstoff oder ATC-Code suchen, inkl. Status und Zulassungsinhaber. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+  "author": "servas-ai (Health Connector Builder)",
+  "categories": [
+    "connector",
+    "ui",
+    "gesundheit"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.page.register",
+    "ui.dashboardWidget.register"
+  ],
+  "entrypoints": {
+    "worker": "./dist/worker.js",
+    "ui": "./dist/ui"
+  },
+  "tools": [
+    {
+      "name": "ema-medicines-suche",
+      "displayName": "ema-medicines suche",
+      "description": "CLI-Befehl `suche` (node bin/cli.js suche --format json)",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "ui": {
+    "slots": [
+      {
+        "type": "page",
+        "id": "table",
+        "displayName": "ema-medicines",
+        "exportName": "RecordsPage",
+        "routePath": "opencli-ema-medicines"
+      },
+      {
+        "type": "dashboardWidget",
+        "id": "kpis",
+        "displayName": "ema-medicines KPIs",
+        "exportName": "KpiWidget",
+        "openui": "paperclip/openui.txt"
+      }
+    ]
+  },
+  "x-servas": {
+    "status": "cli-ready; worker/ui bundle noch nicht gebaut (dist/ fehlt)",
+    "category": "international",
+    "cli_commands": [
+      "suche"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "record_schema": {
+      "$id": "servas.record.v1",
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "name",
+        "source",
+        "source_url",
+        "fetched_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "const": "ema-medicines"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "fetched_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "raw": {
+          "type": "object",
+          "description": "Originalzeile des Connectors (CLI rows[])"
+        }
+      }
+    },
+    "kpis": {
+      "tests_passed": 3,
+      "tests_total": 3,
+      "last_live_run": "2026-10-13T03:22:38.383Z",
+      "median_ms": 1438,
+      "login": "none",
+      "captcha": false
+    },
+    "robots": {
+      "status": "allowed",
+      "note": "robots.txt von www.ema.europa.eu erlaubt /en/documents/ (geprüft per politeFetch); offizieller Download-Report der EMA, ein Request pro Aufruf."
+    },
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS, nicht unterschreiten)",
+    "access_chain": [
+      "official_api"
+    ],
+    "source_url": "https://www.ema.europa.eu/en/documents/report/medicines-output-medicines_json-report_en.json",
+    "logo": {
+      "favicon": "https://www.google.com/s2/favicons?domain=www.ema.europa.eu&sz=64",
+      "source_host": "www.ema.europa.eu",
+      "domain": "www.ema.europa.eu",
+      "file": "assets/logos/www.ema.europa.eu.png",
+      "source": "official-site",
+      "resolved": "https://www.ema.europa.eu/themes/custom/ema_theme/resources/images/logo_ema.svg",
+      "source_kind": "header-logo"
+    },
+    "login": "none",
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:33.972Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.ema.europa.eu/en/homepage",
+    "geo": {},
+    "keywords": [
+      "ema",
+      "medicines",
+      "ema-medicines",
+      "zentral",
+      "zugelassene",
+      "humanarzneimittel",
+      "epar",
+      "name",
+      "wirkstoff",
+      "atc-code",
+      "suchen",
+      "status",
+      "zulassungsinhaber",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "gesundheitsdaten",
+      "dieser"
+    ]
+  }
+}

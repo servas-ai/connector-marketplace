@@ -1,0 +1,184 @@
+{
+  "id": "servas-ai.opencli-nhl-stats",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NHL Stats API – Teams, Franchises, Saisons",
+  "description": "NHL Stats REST API: alle Teams (inkl. historische), Franchises und Saisons mit Spielanzahl und Regeln, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "sport",
+    "eishockey",
+    "nhl",
+    "teams",
+    "saison",
+    "statistik",
+    "usa",
+    "kanada"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "franchises",
+      "displayName": "franchises",
+      "description": "nhl-stats franchises",
+      "command": "nhl-stats-cli franchises"
+    },
+    {
+      "name": "saisons",
+      "displayName": "saisons",
+      "description": "nhl-stats saisons",
+      "command": "nhl-stats-cli saisons"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.nhle.com/",
+    "homepage": "https://api.nhle.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.nhle.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "NHL Stats API: öffentlich ohne Key, nicht offiziell dokumentiert; Terms der NHL beachten, nur Lesezugriff, Fair-Use.",
+    "license": "terms-of-source (NHL; Daten © NHL)",
+    "country": "US",
+    "keywords": [
+      "sport",
+      "eishockey",
+      "nhl",
+      "teams",
+      "saison",
+      "statistik",
+      "usa",
+      "kanada"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-19",
+    "worker": "open-apis-19-2215",
+    "logo": {
+      "domain": "api.nhle.com",
+      "file": "assets/logos/api.nhle.com.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://www.nhl.com/assets/icons/fav/nhl/favicon-apple-touch-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "stats-rest",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (NHL; Daten © NHL)",
+        "url": "https://www.nhl.com/info/terms-of-service",
+        "evidence": "https://www.nhl.com/info/terms-of-service",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: NHL Stats API – Teams, Franchises, Saisons (api.nhle.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle"
+        ]
+      },
+      "checked_at": "2026-10-13T22:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "NHL Stats API – Teams, Franchises, Saisons",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "full_name"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

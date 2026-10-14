@@ -1,0 +1,161 @@
+{
+  "id": "servas-ai.opencli-open-ny",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open NY – data.ny.gov (Socrata)",
+  "description": "Open NY – data.ny.gov (New York, USA): Datensatz-Katalog der Socrata-Instanz data.ny.gov – Dataset-Suche und Dataset-Metadaten über die Discovery API. Ohne Login/Key (App-Token optional, nicht genutzt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "open-ny datasets",
+      "command": "open-ny-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "open-ny dataset",
+      "command": "open-ny-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.ny.gov/api/catalog/v1",
+    "homepage": "https://data.ny.gov/",
+    "keywords": [
+      "open",
+      "open-ny",
+      "gov",
+      "socrata",
+      "discovery",
+      "dataset-suche",
+      "dataset-metadaten",
+      "app-token",
+      "optional",
+      "nicht",
+      "genutzt",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.ny.gov/robots.txt: Disallow nur /browse?…-Facetten (HTML) – Discovery-API /api/catalog/v1 und /api/views/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "data.ny.gov Terms of Use; Fair Use.",
+    "logo": {
+      "domain": "data.ny.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.ny.gov/api/assets/CC0177A8-993C-4383-AA8E-FDC41F2AF46F",
+      "fallback": "initials",
+      "file": "assets/logos/data.ny.gov.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Open NY – data.ny.gov (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon",
+    "infra": {
+      "asn": 14618,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:26:36Z",
+      "host": "data.ny.gov",
+      "hoster": "pruefen",
+      "http_status": 200,
+      "ip": "52.206.140.199",
+      "server_header": "nginx",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://ny.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:30.705Z",
+      "robots": "allowed"
+    }
+  }
+}

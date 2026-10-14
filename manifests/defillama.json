@@ -1,0 +1,134 @@
+{
+  "id": "servas-ai.opencli-defillama",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DefiLlama – DeFi TVL",
+  "description": "DefiLlama API: Total Value Locked (TVL) je Blockchain und je DeFi-Protokoll. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "chains",
+      "displayName": "chains",
+      "description": "defillama chains",
+      "command": "defillama-cli chains"
+    },
+    {
+      "name": "tvl",
+      "displayName": "tvl",
+      "description": "defillama tvl",
+      "command": "defillama-cli tvl"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.llama.fi/v2/chains",
+    "homepage": "https://defillama.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.llama.fi/robots.txt: 404 (keine Einschränkung). Offizielle Free-API ohne Key. Drossel ≥2 s.",
+    "tos": "DefiLlama: offene, kostenlose API (Open Source, keine Registrierung).",
+    "logo": {
+      "domain": "api.llama.fi",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=defillama.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.llama.fi.png",
+      "brand_domain": "defillama.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3658,
+      "throughput_rps": 0.273,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T07:26:24.752Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "DefiLlama – DeFi TVL",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "defillama",
+      "total",
+      "value",
+      "locked",
+      "tvl",
+      "blockchain",
+      "defi-protokoll",
+      "defi",
+      "finance",
+      "chains",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "FI",
+      "scope": "country"
+    },
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:13.332Z",
+      "robots": "allowed"
+    }
+  }
+}

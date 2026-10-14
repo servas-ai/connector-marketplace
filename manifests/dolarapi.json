@@ -1,0 +1,185 @@
+{
+  "id": "servas-ai.opencli-dolarapi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DolarApi – Dólar-Kurse Argentinien",
+  "description": "DolarApi.com: aktuelle Kurse des argentinischen Peso (Dólar oficial, blue, MEP, CCL, cripto, tarjeta) und weiterer Währungen, keyless REST mit OpenAPI und llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "dolar",
+    "argentinien",
+    "peso",
+    "ars",
+    "wechselkurs",
+    "blue",
+    "mep",
+    "finanzen"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dolar",
+      "displayName": "dolar",
+      "description": "dolarapi dolar",
+      "command": "dolarapi-cli dolar"
+    },
+    {
+      "name": "cotizaciones",
+      "displayName": "cotizaciones",
+      "description": "dolarapi cotizaciones",
+      "command": "dolarapi-cli cotizaciones"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://dolarapi.com/",
+    "homepage": "https://dolarapi.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "dolarapi.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "DolarApi.com: freie keyless API (Open-Source-Projekt esjs-dolar-api, MIT); Daten aus öffentlichen Quellen, Fair-Use.",
+    "license": "terms-of-source",
+    "country": "AR",
+    "keywords": [
+      "dolar",
+      "argentinien",
+      "peso",
+      "ars",
+      "wechselkurs",
+      "blue",
+      "mep",
+      "finanzen"
+    ],
+    "geo": {
+      "country": "AR",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-9",
+    "worker": "open-apis-9-1506",
+    "logo": {
+      "domain": "dolarapi.com",
+      "file": "assets/logos/dolarapi.com.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://dolarapi.com/docs/assets/logo.webp",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://dolarapi.com/llms.txt",
+      "llms_full": "https://dolarapi.com/llms-full.txt",
+      "openapi": "https://dolarapi.com/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T15:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://github.com/enzonotario/esjs-dolar-api",
+        "evidence": "https://github.com/enzonotario/esjs-dolar-api",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "DolarApi – Dólar-Kurse Argentinien",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "casa",
+          "compra",
+          "venta"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

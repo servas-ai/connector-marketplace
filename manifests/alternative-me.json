@@ -1,0 +1,185 @@
+{
+  "id": "servas-ai.opencli-alternative-me",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Alternative.me – Fear & Greed Index und Krypto-Ticker",
+  "description": "Alternative.me API: Crypto Fear & Greed Index (Historie), Top-Ticker, Einzel-Ticker (USD/EUR) und globale Marktwerte. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "angst-gier",
+      "displayName": "angst-gier",
+      "description": "alternative-me angst-gier",
+      "command": "alternative-me-cli angst-gier"
+    },
+    {
+      "name": "top",
+      "displayName": "top",
+      "description": "alternative-me top",
+      "command": "alternative-me-cli top"
+    },
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "alternative-me ticker",
+      "command": "alternative-me-cli ticker"
+    },
+    {
+      "name": "global",
+      "displayName": "global",
+      "description": "alternative-me global",
+      "command": "alternative-me-cli global"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.alternative.me/fng/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.alternative.me/robots.txt: 404 (keine Einschränkung). Öffentliche API ohne Key. Drossel ≥2 s.",
+    "tos": "Alternative.me Crypto API: frei, ohne Key, Attribution der Quelle erbeten (Fear & Greed Index).",
+    "logo": {
+      "domain": "api.alternative.me",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://alternative.me/images/alternative-me-logo.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.alternative.me.png",
+      "brand_domain": "alternative.me",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3998,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T08:07:19.533Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Alternative.me – Fear & Greed Index und Krypto-Ticker",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "alternative",
+      "alternative-me",
+      "crypto",
+      "fear",
+      "greed",
+      "index",
+      "historie",
+      "top-ticker",
+      "einzel-ticker",
+      "usd",
+      "eur",
+      "globale",
+      "marktwerte",
+      "krypto-ticker",
+      "finance",
+      "angst-gier",
+      "top",
+      "ticker",
+      "global",
+      "krypto",
+      "kryptowährung",
+      "cryptocurrency",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "ME",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "OVH OVH SAS",
+      "asn": 16276,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:47:30Z",
+      "host": "api.alternative.me",
+      "hoster": "OVH OVH SAS",
+      "http_status": 200,
+      "ip": "54.39.131.114",
+      "server_header": "nginx/1.14.2",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://alternative.me/imprint/",
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "register_id": "HRA 185155",
+      "source": "imprint",
+      "website": "https://alternative.me",
+      "country": "ME"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.904Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://alternative.me/"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "servas-ai.opencli-ct-certspotter",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI ct-certspotter",
+  "description": "SSLMate Cert Spotter API (CT-Logs). Ohne Login, nur GET, 1 Req/1,5 s.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "webintel"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ct-certspotter",
+      "displayName": "ct-certspotter",
+      "description": "ct-certspotter",
+      "command": "opencli-ct-certspotter"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "webintel",
+    "realtime": false,
+    "source_url": "https://api.certspotter.com",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 1,5 s",
+    "robots_status": "ok",
+    "robots": "robots via webintel/_lib.robots_ok",
+    "logo": {
+      "domain": "api.certspotter.com",
+      "chain": [
+        "direct"
+      ],
+      "resolved": "assets/logos/api.certspotter.com.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.certspotter.com.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2000,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "HTTP",
+      "last_scrape": "2026-10-13T15:49:05.115Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "ct-certspotter",
+        "subtitle": "webintel",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "source_url"
+        ]
+      }
+    },
+    "homepage": "https://sslmate.com/certspotter/",
+    "geo": {
+      "country": "INT",
+      "scope": "global"
+    },
+    "keywords": [
+      "ct certspotter",
+      "webintel",
+      "certspotter",
+      "sslmate",
+      "cert",
+      "spotter",
+      "api",
+      "logs",
+      "ohne",
+      "login",
+      "nur"
+    ]
+  }
+}

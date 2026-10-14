@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-noaa-coastwatch-caribbean",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NOAA CoastWatch Caribbean/Gulf of Mexico Node – AOML (ERDDAP)",
+  "description": "NOAA CoastWatch Karibik/Golf von Mexiko (AOML): Satellitenprodukte zu Sargassum (AFAI), Meeresoberflächentemperatur und Ozeanfarbe. Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Sargassum",
+    "Karibik",
+    "NOAA",
+    "NOAA Atlantic Oceanographic and Meteorological Laboratory"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Sargassum",
+    "Karibik",
+    "NOAA",
+    "NOAA Atlantic Oceanographic and Meteorological Laboratory"
+  ],
+  "homepage": "https://cwcgom.aoml.noaa.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Florida",
+    "city": "Miami",
+    "scope": "regional"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "noaa-coastwatch-caribbean datasets",
+      "command": "noaa-coastwatch-caribbean-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "noaa-coastwatch-caribbean suche",
+      "command": "noaa-coastwatch-caribbean-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "noaa-coastwatch-caribbean info",
+      "command": "noaa-coastwatch-caribbean-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://cwcgom.aoml.noaa.gov/erddap/info/index.json",
+    "homepage": "https://cwcgom.aoml.noaa.gov/",
+    "portal": "https://cwcgom.aoml.noaa.gov/erddap/index.html",
+    "provider": "NOAA Atlantic Oceanographic and Meteorological Laboratory (AOML), CoastWatch Caribbean/Gulf of Mexico",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Sargassum",
+      "Karibik",
+      "NOAA",
+      "NOAA Atlantic Oceanographic and Meteorological Laboratory"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Florida",
+      "city": "Miami",
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "cwcgom.aoml.noaa.gov/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "NOAA Atlantic Oceanographic and Meteorological Laboratory (AOML), CoastWatch Caribbean/Gulf of Mexico: öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "cwcgom.aoml.noaa.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.aoml.noaa.gov/wp-content/uploads/2024/01/400x100.png",
+      "fallback": "initials",
+      "file": "assets/logos/cwcgom.aoml.noaa.gov.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "NOAA CoastWatch Caribbean/Gulf of Mexico Node – AOML (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:22.660Z",
+      "robots": "allowed"
+    }
+  }
+}

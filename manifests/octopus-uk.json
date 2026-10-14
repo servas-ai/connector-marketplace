@@ -1,0 +1,164 @@
+{
+  "id": "servas-ai.opencli-octopus-uk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Octopus Energy UK – öffentliche Tarife",
+  "description": "Öffentliche Stromtarif-Produkte und Agile-Halbstundenpreise (dynamischer Tarif) von Octopus Energy UK. Nur öffentliche Endpunkte, kein Kundenkonto/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "produkte-haushalt",
+      "displayName": "produkte",
+      "description": "Octopus Energy UK – öffentliche Tarife: produkte",
+      "command": "octopus-uk-cli produkte --format json"
+    },
+    {
+      "name": "agile-region-c",
+      "displayName": "agile",
+      "description": "Octopus Energy UK – öffentliche Tarife: agile",
+      "command": "octopus-uk-cli agile --region C --limit 24 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "energie",
+    "realtime": false,
+    "source_url": "https://api.octopus.energy",
+    "homepage": "https://octopus.energy/",
+    "keywords": [
+      "octopus",
+      "octopus-uk",
+      "stromtarif-produkte",
+      "agile-halbstundenpreise",
+      "dynamischer",
+      "tarif",
+      "energy",
+      "endpunkte",
+      "kein",
+      "kundenkonto",
+      "tarife",
+      "international",
+      "produkte-haushalt",
+      "agile-region-c",
+      "electricity",
+      "power",
+      "energie",
+      "tariffs",
+      "prices",
+      "preise"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "logo": {
+      "domain": "api.octopus.energy",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://static.octopuscdn.com/favicons/android-chrome-512x512.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.octopus.energy.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 850,
+      "throughput_rps": 0.9,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Octopus REST API v1 (öffentlicher Teil)",
+      "last_scrape": "2026-10-13T04:25:42Z",
+      "datenqualitaet": 0.98
+    },
+    "openui": {
+      "card": {
+        "title": "Octopus Energy UK – öffentliche Tarife",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "code",
+          "name",
+          "voller_name",
+          "richtung",
+          "variabel"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "geo": {
+      "country": "GB",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "Amazon CloudFront",
+      "checked_at": "2026-10-13T09:38:58Z",
+      "host": "api.octopus.energy",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 404,
+      "ip": "65.9.130.76",
+      "server_header": "nginx",
+      "tls_issuer": "Amazon",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://octopus.energy",
+      "country": "GB"
+    },
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:19.393Z",
+      "robots": "allowed"
+    }
+  }
+}

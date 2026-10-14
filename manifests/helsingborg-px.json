@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-helsingborg-px",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Helsingborgs stads statistik (PxWeb)",
+  "description": "statistik.helsingborg.se PxWeb: kommunale Statistik (Helsingborgs stads statistikdatabas). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "helsingborg-px katalog",
+      "command": "helsingborg-px-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "helsingborg-px info",
+      "command": "helsingborg-px-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "PxWeb",
+    "Helsingborg",
+    "kommun",
+    "Sweden",
+    "Sverige",
+    "Open Data"
+  ],
+  "geo": {
+    "country": "SE",
+    "region": "Skåne",
+    "city": "Helsingborg",
+    "lat": 56.05,
+    "lon": 12.69,
+    "scope": "region",
+    "bbox": null
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://statistik.helsingborg.se/PXWeb/api/v1/sv/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "statistik.helsingborg.se/robots.txt: kein robots.txt (404) bzw. keine API-Sperre – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "Helsingborgs stads statistik (PxWeb): öffentliche Schnittstelle ohne Login/Key, Fair Use; Quellenangabe statistik.helsingborg.se.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "PxWeb",
+      "Helsingborg",
+      "kommun",
+      "Sweden",
+      "Sverige",
+      "Open Data"
+    ],
+    "geo": {
+      "country": "SE",
+      "region": "Skåne",
+      "city": "Helsingborg",
+      "lat": 56.05,
+      "lon": 12.69,
+      "scope": "region",
+      "bbox": null
+    },
+    "country": "SE",
+    "logo": {
+      "domain": "statistik.helsingborg.se",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": "assets/logos/statistik.helsingborg.se.png",
+      "source": "initials",
+      "source_kind": "fallback"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Helsingborgs stads statistik (PxWeb)",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-14T01:54:00.000Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://statistik.helsingborg.se/"
+  }
+}

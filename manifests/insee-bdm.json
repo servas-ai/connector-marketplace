@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-insee-bdm",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "INSEE BDM SDMX – SDMX",
+  "description": "bdm.insee.fr SDMX: amtliche Statistik-Zeitreihen (INSEE BDM SDMX). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dataflows",
+      "displayName": "dataflows",
+      "description": "insee-bdm dataflows",
+      "command": "insee-bdm-cli dataflows"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "insee-bdm info",
+      "command": "insee-bdm-cli info"
+    },
+    {
+      "name": "daten",
+      "displayName": "daten",
+      "description": "insee-bdm daten",
+      "command": "insee-bdm-cli daten"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "Zeitreihen",
+    "time series",
+    "SDMX",
+    "Datenfluss",
+    "dataflow",
+    "Amtliche Statistik",
+    "official statistics",
+    "Open Data",
+    "offene Daten",
+    "Indikatoren",
+    "indicators",
+    "INSEE",
+    "Frankreich",
+    "France"
+  ],
+  "geo": {
+    "country": "FR",
+    "region": "France",
+    "city": "Paris",
+    "lat": 48.86,
+    "lon": 2.35,
+    "bbox": null,
+    "scope": "national"
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://bdm.insee.fr/series/sdmx/dataflow",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "bdm.insee.fr/robots.txt geprüft: keine Sperre für den API-Pfad – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "INSEE BDM SDMX: öffentliche SDMX-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe bdm.insee.fr.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "Zeitreihen",
+      "time series",
+      "SDMX",
+      "Datenfluss",
+      "dataflow",
+      "Amtliche Statistik",
+      "official statistics",
+      "Open Data",
+      "offene Daten",
+      "Indikatoren",
+      "indicators",
+      "INSEE",
+      "Frankreich",
+      "France"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": "France",
+      "city": "Paris",
+      "lat": 48.86,
+      "lon": 2.35,
+      "bbox": null,
+      "scope": "country"
+    },
+    "country": "FR",
+    "logo": {
+      "domain": "bdm.insee.fr",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.insee.fr/static/img/favicon.svg",
+      "fallback": "initials",
+      "file": "assets/logos/bdm.insee.fr.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sdmx-rest-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "INSEE BDM SDMX – SDMX",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:05.021Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.insee.fr/"
+  }
+}

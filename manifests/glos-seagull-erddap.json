@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-glos-seagull-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GLOS Seagull – Great Lakes Observing System (ERDDAP)",
+  "description": "GLOS Seagull: Echtzeit- und Archivdaten der Großen Seen (Wetterstationen, Bojen, Wasserqualität) des Great Lakes Observing System. Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Große Seen",
+    "Bojen",
+    "IOOS",
+    "Great Lakes Observing System"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Große Seen",
+    "Bojen",
+    "IOOS",
+    "Great Lakes Observing System"
+  ],
+  "homepage": "https://glos.org/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Michigan",
+    "city": "Ann Arbor",
+    "scope": "regional"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "glos-seagull-erddap datasets",
+      "command": "glos-seagull-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "glos-seagull-erddap suche",
+      "command": "glos-seagull-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "glos-seagull-erddap info",
+      "command": "glos-seagull-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://seagull-erddap.glos.org/erddap/info/index.json",
+    "homepage": "https://glos.org/",
+    "portal": "https://seagull-erddap.glos.org/erddap/index.html",
+    "provider": "Great Lakes Observing System (GLOS)",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Große Seen",
+      "Bojen",
+      "IOOS",
+      "Great Lakes Observing System"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Michigan",
+      "city": "Ann Arbor",
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "seagull-erddap.glos.org/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Great Lakes Observing System (GLOS): öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "seagull-erddap.glos.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://glos.org/wp-content/uploads/2026/03/GLOS20_Logo_Test3.png",
+      "fallback": "initials",
+      "file": "assets/logos/seagull-erddap.glos.org.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "GLOS Seagull – Great Lakes Observing System (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site"
+  }
+}

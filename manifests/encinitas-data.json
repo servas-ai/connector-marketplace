@@ -1,0 +1,140 @@
+{
+  "id": "servas-ai.opencli-encinitas-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "City of Encinitas Data & Insights (Socrata)",
+  "description": "datainsights.encinitasca.gov Socrata Discovery API + SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen (City of Encinitas, California). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "encinitas-data datasets",
+      "command": "encinitas-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "encinitas-data dataset",
+      "command": "encinitas-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "encinitas-data rows",
+      "command": "encinitas-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://datainsights.encinitasca.gov/api/catalog/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "datainsights.encinitasca.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "City of Encinitas, California Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "datainsights.encinitasca.gov",
+      "chain": [
+        "official-site",
+        "wikimedia"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:Seal_of_Encinitas,_California.png",
+      "fallback": "initials",
+      "file": "assets/logos/datainsights.encinitasca.gov.png",
+      "source": "wikimedia",
+      "license": "Public domain"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "City of Encinitas Data & Insights (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Dataset (Feld license), sonst Terms of Use von City of Encinitas, California",
+    "logo_source": "wikimedia",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:11.525Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://datainsights.encinitasca.gov/",
+    "geo": {},
+    "keywords": [
+      "encinitas data",
+      "opendata",
+      "socrata",
+      "open data",
+      "dataset",
+      "us",
+      "encinitas",
+      "data",
+      "datainsights",
+      "encinitasca",
+      "gov",
+      "discovery",
+      "api",
+      "soda"
+    ]
+  }
+}

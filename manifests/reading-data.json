@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-reading-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open Reading – City of Reading PA Open Data (Socrata)",
+  "description": "Open Reading: Open-Data-Portal der City of Reading (Pennsylvania) mit Haushalt, Finanzen und städtischen Kennzahlen. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Stadt",
+    "Haushalt",
+    "Pennsylvania",
+    "City of Reading"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Stadt",
+    "Haushalt",
+    "Pennsylvania",
+    "City of Reading"
+  ],
+  "homepage": "https://www.readingpa.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Pennsylvania",
+    "city": "Reading",
+    "scope": "city"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "reading-data datasets",
+      "command": "reading-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "reading-data dataset",
+      "command": "reading-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "reading-data rows",
+      "command": "reading-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.readingpa.gov/api/catalog/v1",
+    "homepage": "https://www.readingpa.gov/",
+    "portal": "https://data.readingpa.gov/",
+    "provider": "City of Reading, Pennsylvania",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Stadt",
+      "Haushalt",
+      "Pennsylvania",
+      "City of Reading"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Pennsylvania",
+      "city": "Reading",
+      "scope": "city"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.readingpa.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "City of Reading, Pennsylvania Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "data.readingpa.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/73/3d/2f/733d2f3c-0090-bcbf-bbb8-f12df414c0b4/AppIconLive-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/data.readingpa.gov.png",
+      "source": "appstore",
+      "app": "Reading 311",
+      "developer": "City of Reading, Pennsylvania"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Open Reading – City of Reading PA Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data Commons Public Domain Dedication and License (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "data_license": "Open Data Commons Public Domain Dedication and License (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "appstore",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:40.232Z",
+      "robots": "allowed"
+    }
+  }
+}

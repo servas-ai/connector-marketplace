@@ -1,0 +1,138 @@
+{
+  "id": "servas-ai.opencli-homebrew",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Homebrew Formulae – Package Metadata",
+  "description": "formulae.brew.sh JSON API: Formula-Metadaten (Version, Lizenz, Dependencies). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "formula",
+      "displayName": "formula",
+      "description": "homebrew formula",
+      "command": "homebrew-cli formula"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "homebrew suche",
+      "command": "homebrew-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://formulae.brew.sh/api/formula/wget.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "formulae.brew.sh/robots.txt: nur Sitemap, keine Disallow – API erlaubt. Drossel ≥2 s; Einzelabrufe statt kompletter formula.json-Dump.",
+    "tos": "Homebrew formulae.brew.sh: öffentliche JSON-API der Formulae.",
+    "logo": {
+      "domain": "formulae.brew.sh",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://brew.sh/assets/img/homebrew.svg",
+      "fallback": "initials",
+      "file": "assets/logos/formulae.brew.sh.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2151,
+      "throughput_rps": 0.465,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "formulae-json",
+      "last_scrape": "2026-10-13T06:05:12.506Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Homebrew Formulae – Package Metadata",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "homebrew",
+      "formulae",
+      "brew",
+      "formula-metadaten",
+      "version",
+      "lizenz",
+      "dependencies",
+      "package",
+      "metadata",
+      "tech",
+      "formula",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:57.241Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://formulae.brew.sh/"
+  }
+}

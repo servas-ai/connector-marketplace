@@ -1,0 +1,161 @@
+{
+  "id": "servas-ai.opencli-unhcr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UNHCR – Refugee Population Statistics API",
+  "description": "api.unhcr.org population/v1: Länderliste und Flüchtlings-/Vertriebenenzahlen nach Herkunftsland und Jahr. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "laender",
+      "displayName": "laender",
+      "description": "unhcr laender",
+      "command": "unhcr-cli laender"
+    },
+    {
+      "name": "population",
+      "displayName": "population",
+      "description": "unhcr population",
+      "command": "unhcr-cli population"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.unhcr.org/population/v1/population/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.unhcr.org/robots.txt: 404 (keine Sperre) – öffentliche UNHCR Refugee Statistics API. Drossel ≥2 s.",
+    "tos": "UNHCR Refugee Data Finder API: CC BY 4.0; Fair Use.",
+    "logo": {
+      "domain": "api.unhcr.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=api.unhcr.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.unhcr.org.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "population-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "UNHCR – Refugee Population Statistics API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "unhcr",
+      "population",
+      "länderliste",
+      "flüchtlings",
+      "vertriebenenzahlen",
+      "herkunftsland",
+      "jahr",
+      "refugee",
+      "statistics",
+      "international",
+      "opendata",
+      "laender",
+      "statistik",
+      "zeitreihen",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:42:54Z",
+      "host": "api.unhcr.org",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 403,
+      "ip": "52.16.126.68",
+      "server_header": "cloudflare",
+      "tls_issuer": "Amazon",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://unhcr.org"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:46.513Z",
+      "robots": "allowed"
+    }
+  }
+}

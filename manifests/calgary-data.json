@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-calgary-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "City of Calgary Open Data (Socrata)",
+  "description": "City of Calgary Open Data (Calgary, Alberta, Kanada): Datensatz-Katalog der Socrata-Instanz data.calgary.ca – Dataset-Suche und Dataset-Metadaten über die Discovery API. Ohne Login/Key (App-Token optional, nicht genutzt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "calgary-data datasets",
+      "command": "calgary-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "calgary-data dataset",
+      "command": "calgary-data-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.calgary.ca/api/catalog/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.calgary.ca/robots.txt: Disallow nur /browse?…-Facetten (HTML) – Discovery-API /api/catalog/v1 und /api/views/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "Open Government Licence – City of Calgary; Fair Use.",
+    "logo": {
+      "domain": "data.calgary.ca",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.calgary.ca/api/assets/F800DEFD-0FBA-4CF6-8787-589654C1F799?coc-logo_1x.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.calgary.ca.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "City of Calgary Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CA",
+    "ampel": "grün",
+    "license": "OGL-UK-3.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "calgary",
+      "calgary-data",
+      "socrata",
+      "discovery",
+      "dataset-suche",
+      "dataset-metadaten",
+      "app-token",
+      "optional",
+      "nicht",
+      "genutzt",
+      "city",
+      "open",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "CA",
+      "scope": "country"
+    },
+    "infra": {
+      "asn": 14618,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:17:29Z",
+      "host": "data.calgary.ca",
+      "hoster": "pruefen",
+      "http_status": 200,
+      "ip": "52.206.140.199",
+      "server_header": "nginx",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://calgary.ca",
+      "country": "CA"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:40.178Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://data.calgary.ca/"
+  }
+}

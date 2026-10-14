@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-npmmirror",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "npmmirror – npm Package-Metadaten",
+  "description": "npmmirror (cnpm) Registry: Package-Latest-Metadaten (Version, Dist), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "npm",
+    "npmmirror",
+    "cnpm",
+    "registry",
+    "packages",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "versions",
+      "displayName": "versions",
+      "description": "npmmirror versions",
+      "command": "npmmirror-cli versions"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://registry.npmmirror.com/",
+    "homepage": "https://registry.npmmirror.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "registry.npmmirror.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "npmmirror Registry: öffentliche Package-Metadaten ohne Key; Fair-Use.",
+    "license": "terms-of-source (npmmirror)",
+    "country": "CN",
+    "keywords": [
+      "npm",
+      "npmmirror",
+      "cnpm",
+      "registry",
+      "packages",
+      "tech"
+    ],
+    "geo": {
+      "country": "CN",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-24",
+    "worker": "open-apis-24-0002",
+    "logo": {
+      "domain": "registry.npmmirror.com",
+      "file": "assets/logos/registry.npmmirror.com.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://npmmirror.com/cnpm.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "registry",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T00:25:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (npmmirror)",
+        "url": "https://npmmirror.com/",
+        "evidence": "https://npmmirror.com/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: npmmirror – npm Package-Metadaten (registry.npmmirror.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": "CN",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle"
+        ]
+      },
+      "checked_at": "2026-10-14T00:25:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "npmmirror – npm Package-Metadaten",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "version"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

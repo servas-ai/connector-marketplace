@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-bonndata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "bonndata – Forschungsdaten-Repositorium der Universität Bonn (Dataverse)",
+  "description": "bonndata: fachübergreifendes Forschungsdaten-Repositorium der Universität Bonn mit veröffentlichten Datensätzen (DOI) aus Agrar-, Entwicklungs-, Natur- und Geisteswissenschaften. Zugriff über die offizielle Dataverse-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Universität",
+    "Bonn",
+    "Rheinische Friedrich-Wilhelms-Universität Bonn"
+  ],
+  "keywords": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Universität",
+    "Bonn",
+    "Rheinische Friedrich-Wilhelms-Universität Bonn"
+  ],
+  "homepage": "https://www.uni-bonn.de/",
+  "license": "MIT",
+  "geo": {
+    "country": "DE",
+    "region": "Nordrhein-Westfalen",
+    "city": "Bonn",
+    "scope": "institution"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "bonndata neu",
+      "command": "bonndata-cli neu"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "bonndata suche",
+      "command": "bonndata-cli suche"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "bonndata dataset",
+      "command": "bonndata-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://bonndata.uni-bonn.de/api/search",
+    "homepage": "https://www.uni-bonn.de/",
+    "portal": "https://bonndata.uni-bonn.de/",
+    "provider": "Rheinische Friedrich-Wilhelms-Universität Bonn",
+    "keywords": [
+      "Dataverse",
+      "Forschungsdaten",
+      "research data",
+      "open data",
+      "Repositorium",
+      "DOI",
+      "Universität",
+      "Bonn",
+      "Rheinische Friedrich-Wilhelms-Universität Bonn"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Nordrhein-Westfalen",
+      "city": "Bonn",
+      "scope": "global"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "bonndata.uni-bonn.de/robots.txt (HTTP 200): /api/search und /api/datasets/:persistentId nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "Rheinische Friedrich-Wilhelms-Universität Bonn: öffentliche Dataverse Native/Search API ohne Key/Login (nur veröffentlichte Datensätze); Fair Use.",
+    "logo": {
+      "domain": "bonndata.uni-bonn.de",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.uni-bonn.de/de/++theme++unibonn.theme/images/logos/logo_desktop.svg",
+      "fallback": "initials",
+      "file": "assets/logos/bonndata.uni-bonn.de.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dataverse-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "bonndata – Forschungsdaten-Repositorium der Universität Bonn (Dataverse)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "ampel": "grün",
+    "license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "data_license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "logo_source": "official-site"
+  }
+}

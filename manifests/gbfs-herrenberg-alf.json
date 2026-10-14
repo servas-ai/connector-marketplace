@@ -1,0 +1,153 @@
+{
+  "id": "servas-ai.opencli-gbfs-herrenberg-alf",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ALF - das Affstätter Lastenfahrrad – Sharing Herrenberg (GBFS)",
+  "description": "ALF - das Affstätter Lastenfahrrad in Herrenberg (Deutschland): offener GBFS-Feed 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-herrenberg-alf-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-herrenberg-alf-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-herrenberg-alf-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-herrenberg-alf-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_alf/gbfs",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.mobidata-bw.de/robots.txt geprüft: Feed nicht gesperrt. GBFS ist zur öffentlichen Weiterverwendung gedacht (MobilityData systems.csv, ohne Auth).",
+    "tos": "Öffentlicher GBFS-Feed (Lizenz laut system_information/Betreiber), keine Personendaten.",
+    "keywords": [
+      "gbfs",
+      "herrenberg",
+      "alf",
+      "gbfs-herrenberg-alf",
+      "affstätter",
+      "lastenfahrrad",
+      "deutschland",
+      "offener",
+      "gbfs-feed",
+      "systeminfo",
+      "stationen",
+      "echtzeit-verfügbarkeit",
+      "freie",
+      "fahrzeuge",
+      "anonyme",
+      "ids",
+      "sharing",
+      "verkehr",
+      "info",
+      "station",
+      "transport",
+      "traffic",
+      "mobility"
+    ],
+    "geo": {
+      "country": "DE",
+      "scope": "country",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ]
+    },
+    "logo": {
+      "domain": "herrenberg.adfc.de",
+      "resolved": "https://herrenberg.adfc.de/_assets/635188b5a752f64ad5bf4923c12d1bd2/Logos/logo_herrenberg_oberes_g_u_86fd1b942163502e0d76c17dfcb4ad59.png",
+      "file": "assets/logos/herrenberg.adfc.de.png",
+      "brand_domain": "api.mobidata-bw.de",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 7997,
+      "throughput_rps": 0.125,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS",
+      "last_scrape": "2026-10-13T09:26:42.471Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "ALF - das Affstätter Lastenfahrrad – Sharing Herrenberg (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "DE",
+    "homepage": "https://herrenberg.adfc.de",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:16.693Z",
+      "robots": "allowed"
+    }
+  }
+}

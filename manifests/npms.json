@@ -1,0 +1,151 @@
+{
+  "id": "servas-ai.opencli-npms",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "npms.io – npm-Paketbewertung (Qualität, Popularität, Wartung)",
+  "description": "npms.io API v2: npm-Pakete suchen mit Score (final/Qualität/Popularität/Wartung) und Paket-Analyse (Version, Lizenz, Downloads, GitHub-Sterne). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "npms suche",
+      "command": "npms-cli suche"
+    },
+    {
+      "name": "paket",
+      "displayName": "paket",
+      "description": "npms paket",
+      "command": "npms-cli paket"
+    },
+    {
+      "name": "mehrere",
+      "displayName": "mehrere",
+      "description": "npms mehrere",
+      "command": "npms-cli mehrere"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.npms.io/v2/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.npms.io/robots.txt: kein robots.txt (Weiterleitung, keine Regeln). Öffentliche API ohne Key. Drossel ≥2 s.",
+    "tos": "npms.io: Open-Source-Projekt, freie API; Analysedaten können veraltet sein (Stand analyzedAt).",
+    "logo": {
+      "domain": "api.npms.io",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=npms.io&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.npms.io.png",
+      "brand_domain": "npms.io"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 12527,
+      "throughput_rps": 0.08,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T08:05:54.129Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "npms.io – npm-Paketbewertung (Qualität, Popularität, Wartung)",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "npms",
+      "npm-pakete",
+      "suchen",
+      "score",
+      "final",
+      "qualität",
+      "popularität",
+      "wartung",
+      "paket-analyse",
+      "version",
+      "lizenz",
+      "downloads",
+      "github-sterne",
+      "npm-paketbewertung",
+      "tech",
+      "paket",
+      "mehrere",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:18.595Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://npms.io/"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-drupal-projects",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Drupal.org – Projekte (Module/Themes)",
+  "description": "Drupal.org REST (api-d7): Projektdaten zu Modulen und Themes (Titel, Machine-Name, Nutzungszahlen, Security-Coverage, Lizenz), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "cms",
+    "drupal",
+    "module",
+    "opensource",
+    "php",
+    "projekte"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "theme",
+      "displayName": "theme",
+      "description": "drupal-projects theme",
+      "command": "drupal-projects-cli theme"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://www.drupal.org/",
+    "homepage": "https://www.drupal.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.drupal.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Drupal.org: api-d7 öffentlich lesbar, Fair-Use; Terms of Service Drupal.org.",
+    "license": "GPL-2.0-or-later (Drupal.org Inhalte/Code); Metadaten Terms Drupal.org",
+    "country": "INT",
+    "keywords": [
+      "cms",
+      "drupal",
+      "module",
+      "opensource",
+      "php",
+      "projekte"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-13",
+    "worker": "open-apis-13-1834",
+    "logo": {
+      "domain": "www.drupal.org",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "api-d7",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T18:55:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "GPL-2.0-or-later (Drupal.org Inhalte/Code); Metadaten Terms Drupal.org",
+        "url": "https://www.drupal.org/terms",
+        "evidence": "https://www.drupal.org/terms",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T18:55:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Drupal.org – Projekte (Module/Themes)",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "title",
+          "machine_name"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

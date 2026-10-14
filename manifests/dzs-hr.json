@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-dzs-hr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DZS Croatia statistics (PxWeb)",
+  "description": "web.dzs.hr PxWeb: official Croatian statistics catalogue (DZS). No login/key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "dzs-hr katalog",
+      "command": "dzs-hr-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "dzs-hr info",
+      "command": "dzs-hr-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "PxWeb",
+    "DZS",
+    "Croatia",
+    "Hrvatska",
+    "Open Data",
+    "prices"
+  ],
+  "geo": {
+    "country": "HR",
+    "region": "Croatia",
+    "city": "Zagreb",
+    "lat": 45.81,
+    "lon": 15.98,
+    "scope": "country",
+    "bbox": null
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://web.dzs.hr/PXWeb/api/v1/en/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "web.dzs.hr/robots.txt: kein robots.txt (404) bzw. keine API-Sperre – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "DZS Croatia statistics (PxWeb): öffentliche Schnittstelle ohne Login/Key, Fair Use; Quellenangabe web.dzs.hr.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "PxWeb",
+      "DZS",
+      "Croatia",
+      "Hrvatska",
+      "Open Data",
+      "prices"
+    ],
+    "geo": {
+      "country": "HR",
+      "region": "Croatia",
+      "city": "Zagreb",
+      "lat": 45.81,
+      "lon": 15.98,
+      "scope": "country",
+      "bbox": null
+    },
+    "country": "HR",
+    "logo": {
+      "domain": "web.dzs.hr",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": "assets/logos/web.dzs.hr.png",
+      "source": "initials",
+      "source_kind": "fallback"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "DZS Croatia statistics (PxWeb)",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-14T01:54:00.000Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://web.dzs.hr/"
+  }
+}

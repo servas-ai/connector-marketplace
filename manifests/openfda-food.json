@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-openfda-food",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "openFDA Lebensmittel (Rückrufe, CAERS)",
+  "description": "openFDA Lebensmittel: US-Lebensmittelrückrufe (Enforcement Reports mit Grund, Klasse, Firma) und CAERS-Verbrauchermeldungen zu Produkten über die offizielle API ohne Key (ohne Personenangaben).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "rueckrufe",
+    "lebensmittelsicherheit",
+    "usa"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ereignisse",
+      "displayName": "ereignisse",
+      "description": "openfda-food ereignisse",
+      "command": "openfda-food-cli ereignisse"
+    },
+    {
+      "name": "rueckrufe",
+      "displayName": "rueckrufe",
+      "description": "openfda-food rueckrufe",
+      "command": "openfda-food-cli rueckrufe"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://api.fda.gov/food",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "html"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/s je Host",
+    "robots_status": "ok",
+    "robots": "api.fda.gov/robots.txt: 404 (keine Regeln); offizielle API, ohne Key 240 Req/min, 1.000/Tag je IP.",
+    "license": "CC0 1.0 / Public Domain (openFDA Terms of Service)",
+    "license_url": "https://open.fda.gov/terms/",
+    "logo": {
+      "domain": "fda.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.fda.gov/themes/custom/preview/assets/images/FDA_Logo_Icon_White.svg",
+      "fallback": "initials",
+      "file": "assets/logos/api.fda.gov.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "keywords": [
+      "openfda",
+      "food",
+      "openfda-food",
+      "lebensmittel",
+      "us-lebensmittelrückrufe",
+      "enforcement",
+      "reports",
+      "grund",
+      "klasse",
+      "firma",
+      "caers-verbrauchermeldungen",
+      "produkten",
+      "personenangaben",
+      "rückrufe",
+      "caers",
+      "ereignisse",
+      "rueckrufe",
+      "nahrung",
+      "ernährung",
+      "groceries"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1200,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "openFDA food/enforcement, food/event",
+      "last_scrape": "2026-10-13T09:36:55.627Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "openFDA Lebensmittel (Rückrufe, CAERS)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "grund",
+          "klasse",
+          "firma"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "GOVCLOUD - Amazon",
+      "asn": 8987,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:39:19Z",
+      "host": "api.fda.gov",
+      "hoster": "Amazon",
+      "http_status": 404,
+      "ip": "3.31.133.129",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://fda.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:57.607Z",
+      "robots": "allowed"
+    }
+  }
+}

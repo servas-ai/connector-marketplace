@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-adoptium",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Eclipse Adoptium – Temurin-Releases",
+  "description": "Eclipse Adoptium API v3: verfügbare Java-Releases (LTS) und neueste Temurin-JDK/JRE-Binaries je Version, OS und Architektur mit Prüfsumme, keyless, OpenAPI 3.1.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "java",
+    "jdk",
+    "temurin",
+    "openjdk",
+    "adoptium",
+    "release",
+    "developer",
+    "eclipse"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "neueste",
+      "displayName": "neueste",
+      "description": "adoptium neueste",
+      "command": "adoptium-cli neueste"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.adoptium.net/",
+    "homepage": "https://api.adoptium.net/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.adoptium.net/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Eclipse Foundation Terms of Use; API-Code Apache-2.0 (adoptium/api.adoptium.net), keyless.",
+    "license": "terms-of-source",
+    "country": "INT",
+    "keywords": [
+      "java",
+      "jdk",
+      "temurin",
+      "openjdk",
+      "adoptium",
+      "release",
+      "developer",
+      "eclipse"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-9",
+    "worker": "open-apis-9-1506",
+    "logo": {
+      "domain": "api.adoptium.net",
+      "file": "assets/logos/api.adoptium.net.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://adoptium.net/images/adoptium-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://api.adoptium.net/q/openapi?format=json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:14:42.975Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://www.eclipse.org/legal/terms-of-use/",
+        "evidence": "https://www.eclipse.org/legal/terms-of-use/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Eclipse Adoptium – Temurin-Releases",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "version",
+          "lts"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

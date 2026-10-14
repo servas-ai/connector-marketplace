@@ -1,0 +1,198 @@
+{
+  "id": "servas-ai.opencli-luftdaten-at",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Luftdaten.at Stadt-Luftqualität",
+  "description": "Citizen-Science-Luftqualität (PM2.5, PM10, Temperatur, Feuchte) als Stadtmittelwerte für Österreich über die offizielle Luftdaten.at-API.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "health"
+  ],
+  "tags": [
+    "gesundheit",
+    "umwelt",
+    "feinstaub",
+    "at"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "stadt",
+      "displayName": "stadt",
+      "description": "luftdaten-at stadt",
+      "command": "luftdaten-at-cli stadt"
+    },
+    {
+      "name": "staedte",
+      "displayName": "staedte",
+      "description": "luftdaten-at staedte",
+      "command": "luftdaten-at-cli staedte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "health",
+    "realtime": true,
+    "source_url": "https://api.luftdaten.at/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1,1 s",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "logo": {
+      "domain": "api.luftdaten.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://luftdaten.at/wp-content/uploads/2022/12/cropped-logo-icon-2-192x192.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.luftdaten.at.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1136,
+      "throughput_rps": 0.88,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1 (OpenAPI 3.1)",
+      "last_scrape": "2026-10-13T04:26:58.321Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Luftdaten.at Stadt-Luftqualität",
+        "subtitle": "health",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "stadt",
+          "pm2_5",
+          "pm10",
+          "temperatur_c",
+          "zeit"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "luftdaten",
+      "luftdaten-at",
+      "citizen-science-luftqualität",
+      "pm2",
+      "pm10",
+      "temperatur",
+      "feuchte",
+      "stadtmittelwerte",
+      "österreich",
+      "at-api",
+      "ausgabe",
+      "servas",
+      "record",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "diese",
+      "gesundheitsdaten",
+      "live",
+      "braucht",
+      "stadt-luftqualität",
+      "opendata",
+      "health",
+      "stadt",
+      "staedte",
+      "air quality",
+      "luftqualität",
+      "medizin",
+      "medicine",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze",
+      "gesundheit"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "HETZNER-AS Hetzner Online GmbH",
+      "asn": 24940,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:24:06Z",
+      "host": "api.luftdaten.at",
+      "hoster": "HETZNER-AS Hetzner Online GmbH",
+      "http_status": 404,
+      "ip": "157.90.137.210",
+      "server_header": "uvicorn",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://luftdaten.at/impressum/",
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://luftdaten.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://api.luftdaten.at/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:15.582Z",
+      "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334"
+    },
+    "homepage": "https://luftdaten.at/"
+  }
+}

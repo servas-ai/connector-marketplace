@@ -1,0 +1,149 @@
+{
+  "id": "servas-ai.opencli-gtfs-it-trasporto-ferroviario-toscano-t7005",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Trasporto Ferroviario Toscano (GTFS-Fahrplan)",
+  "description": "Trasporto Ferroviario Toscano: offizieller GTFS-Soll-Fahrplan (Arezzo, Tuscany, Italien) aus dem Mobility-Database-Katalog (tld-7005), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten (Mobility-Database-Katalog, Gültigkeit aus feed_info/calendar)",
+      "command": "gtfs-it-trasporto-ferroviario-toscano-t7005-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt, --q Filter)",
+      "command": "gtfs-it-trasporto-ferroviario-toscano-t7005-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt, --q Filter)",
+      "command": "gtfs-it-trasporto-ferroviario-toscano-t7005-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id (<id>)",
+      "command": "gtfs-it-trasporto-ferroviario-toscano-t7005-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_timetable",
+    "realtime": false,
+    "source_url": "https://dati.toscana.it/dataset/8bb8f8fe-fe7d-41d0-90dc-49f2456180d1/resource/59aeacbc-99ee-410b-ac1e-622b5574a666/download/tft.gtfs",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "dati.toscana.it/robots.txt geprüft: Download-URL nicht gesperrt. Feed im Mobility Database Katalog ohne Auth gelistet (files.mobilitydatabase.org selbst ist per robots gesperrt und wird nicht genutzt).",
+    "tos": "Offene Fahrplandaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "arezzo",
+      "trasporto ferroviario toscano",
+      "italien",
+      "italy"
+    ],
+    "geo": {
+      "country": "IT",
+      "region": "Tuscany",
+      "city": "Arezzo",
+      "bbox": [
+        11.7152218526766,
+        43.2164037197541,
+        11.8754503071606,
+        43.7948855264239
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "dati.toscana.it",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=dati.toscana.it&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/dati.toscana.it.png",
+      "brand_domain": "dati.toscana.it"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 118,
+      "throughput_rps": 8.475,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": "2026-10-13T09:54:24.837Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Trasporto Ferroviario Toscano (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

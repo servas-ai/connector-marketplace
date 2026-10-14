@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-chrome-versionhistory",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Chrome VersionHistory API – Chrome-Versionen je Plattform/Kanal",
+  "description": "Google VersionHistory API: Chrome-Plattformen und Versionen je Kanal (stable/beta/dev/canary) inkl. Rollout-Releases, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "chrome",
+    "browser",
+    "version",
+    "release",
+    "google",
+    "software",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "versionen",
+      "displayName": "versionen",
+      "description": "chrome-versionhistory versionen",
+      "command": "chrome-versionhistory-cli versionen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://versionhistory.googleapis.com/",
+    "homepage": "https://versionhistory.googleapis.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "versionhistory.googleapis.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "VersionHistory API: öffentlich ohne Key laut Developer-Guide, Google API Terms, Fair-Use.",
+    "license": "terms-of-source (Google APIs Terms of Service)",
+    "country": "INT",
+    "keywords": [
+      "chrome",
+      "browser",
+      "version",
+      "release",
+      "google",
+      "software",
+      "tech"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-19",
+    "worker": "open-apis-19-2215",
+    "logo": {
+      "domain": "versionhistory.googleapis.com",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Google APIs Terms of Service)",
+        "url": "https://developer.chrome.com/docs/web-platform/versionhistory/guide",
+        "evidence": "https://developer.chrome.com/docs/web-platform/versionhistory/guide",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "no",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle"
+        ]
+      },
+      "checked_at": "2026-10-13T22:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Chrome VersionHistory API – Chrome-Versionen je Plattform/Kanal",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "platform_type"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

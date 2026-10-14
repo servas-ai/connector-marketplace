@@ -1,0 +1,180 @@
+{
+  "id": "servas-ai.opencli-openchainbench",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenChainBench – Crypto-Infra-Benchmarks",
+  "description": "OpenChainBench API (OpenAPI 3.1, CC-BY-4.0): zitierbare Benchmarks, Capital-Quellen und Featured-Suchen zu Crypto-Infrastruktur, keyless JSON, llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "openchainbench",
+    "benchmark",
+    "crypto",
+    "rpc",
+    "latency",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "featured",
+      "displayName": "featured",
+      "description": "openchainbench featured",
+      "command": "openchainbench-cli featured"
+    },
+    {
+      "name": "capital",
+      "displayName": "capital",
+      "description": "openchainbench capital",
+      "command": "openchainbench-cli capital"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://openchainbench.com/",
+    "homepage": "https://openchainbench.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "openchainbench.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "OpenChainBench: CC-BY-4.0, öffentliche JSON-API ohne Key; Attribution erforderlich.",
+    "license": "CC-BY-4.0",
+    "country": "INT",
+    "keywords": [
+      "openchainbench",
+      "benchmark",
+      "crypto",
+      "rpc",
+      "latency",
+      "finance"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-23",
+    "worker": "open-apis-23-2334",
+    "logo": {
+      "domain": "openchainbench.com",
+      "file": "assets/logos/openchainbench.com.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://openchainbench.com/apple-icon?a176c0d39ce7b342",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1.1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://openchainbench.com/llms.txt",
+      "llms_full": "https://openchainbench.com/llms-full.txt",
+      "openapi": "https://openchainbench.com/api/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:55:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "evidence": "https://creativecommons.org/licenses/by/4.0/",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: OpenChainBench – Crypto-Infra-Benchmarks (openchainbench.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:55:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "OpenChainBench – Crypto-Infra-Benchmarks",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "id": "servas-ai.opencli-artic",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Art Institute of Chicago – Sammlung",
+  "description": "Art Institute of Chicago Public API: Kunstwerke der Sammlung durchsuchen (Künstler, Datierung, Technik, Public-Domain-Status) und Detail je Werk inkl. IIIF-Bild. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "artic suche",
+      "command": "artic-cli suche"
+    },
+    {
+      "name": "werk",
+      "displayName": "werk",
+      "description": "artic werk",
+      "command": "artic-cli werk"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://api.artic.edu/api/v1/artworks/search",
+    "keywords": [
+      "artic",
+      "art",
+      "institute",
+      "chicago",
+      "kunstwerke",
+      "sammlung",
+      "durchsuchen",
+      "künstler",
+      "datierung",
+      "technik",
+      "public-domain-status",
+      "werk",
+      "iiif-bild",
+      "international",
+      "technology"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.artic.edu/robots.txt: kein Disallow für /api/v1/. Offizielle Public API (CC0-Metadaten). Drossel ≥2 s (Limit 60 Req/min).",
+    "tos": "Art Institute of Chicago API: Daten CC0 (Beschreibungen CC BY), Limit 60 Requests/Minute, AIC-User-Agent empfohlen.",
+    "logo": {
+      "domain": "api.artic.edu",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:Art_Institute_of_Chicago_Logo.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.artic.edu.png",
+      "brand_domain": "artic.edu",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3980,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:27:27.912Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Art Institute of Chicago – Sammlung",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "wikimedia",
+    "geo": {
+      "country": "US",
+      "region": "Illinois",
+      "city": "Chicago",
+      "lat": 41.8781,
+      "lon": -87.6298,
+      "scope": "city"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "Amazon CloudFront",
+      "checked_at": "2026-10-13T09:35:12Z",
+      "host": "api.artic.edu",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "52.222.236.108",
+      "server_header": "GitHub.com",
+      "tls_issuer": "Amazon",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://artic.edu",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.905Z",
+      "robots": "allowed"
+    }
+  }
+}

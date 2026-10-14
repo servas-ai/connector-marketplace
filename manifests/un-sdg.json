@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-un-sdg",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "UN SDG – Sustainable Development Goals API",
+  "description": "unstats.un.org SDG API: Goals und Indicators der UN Sustainable Development Goals. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "goals",
+      "displayName": "goals",
+      "description": "un-sdg goals",
+      "command": "un-sdg-cli goals"
+    },
+    {
+      "name": "indicators",
+      "displayName": "indicators",
+      "description": "un-sdg indicators",
+      "command": "un-sdg-cli indicators"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://unstats.un.org/sdgs/UNSDGAPIV5/v1/sdg/Goal/List",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "unstats.un.org/robots.txt: Disallow /wiki – /sdgs/UNSDGAPIV5/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "UN Stats SDG API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "unstats.un.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.un.org/en/img/splash/un-logo.png",
+      "fallback": "initials",
+      "file": "assets/logos/unstats.un.org.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "UNSDGAPIV5",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "UN SDG – Sustainable Development Goals API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "sdg",
+      "un-sdg",
+      "unstats",
+      "goals",
+      "indicators",
+      "sustainable",
+      "development",
+      "international",
+      "opendata",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "UN-UNLB United Nations Logistics Base",
+      "asn": 28977,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:42:49Z",
+      "host": "unstats.un.org",
+      "hoster": "UN-UNLB United Nations Logistics Base",
+      "http_status": 200,
+      "ip": "85.159.207.239",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://unstats.un.org"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:50.282Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://unstats.un.org/UNSDWebsite/"
+  }
+}

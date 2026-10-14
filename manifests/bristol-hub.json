@@ -1,0 +1,188 @@
+{
+  "id": "servas-ai.opencli-bristol-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Bristol Open Data (ArcGIS Hub)",
+  "description": "Bristol City Council Open Data: Datensatz-Katalog der ArcGIS-Hub-Instanz (OGC API Records). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ArcGIS",
+    "Hub",
+    "Open Data",
+    "GIS",
+    "OGC",
+    "Katalog",
+    "GB",
+    "Bristol"
+  ],
+  "keywords": [
+    "ArcGIS",
+    "Hub",
+    "Open Data",
+    "GIS",
+    "OGC",
+    "Katalog",
+    "GB",
+    "Bristol"
+  ],
+  "homepage": "https://opendata.bristol.gov.uk/",
+  "license": "MIT",
+  "geo": {
+    "country": "GB",
+    "region": "Vereinigtes Königreich",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      -8.65,
+      49.86,
+      1.77,
+      60.86
+    ],
+    "centroid": {
+      "lat": 54.0,
+      "lon": -2.0
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "bristol-hub suche",
+      "command": "bristol-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "bristol-hub neu",
+      "command": "bristol-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "bristol-hub datensatz",
+      "command": "bristol-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://opendata.bristol.gov.uk/api/search/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.bristol.gov.uk/robots.txt: /api/search nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Bristol City Council ArcGIS Hub Open Data, öffentliche OGC API Records ohne Key; Fair Use.",
+    "provider": "Bristol City Council",
+    "homepage": "https://opendata.bristol.gov.uk/",
+    "data_license": "Open Data (je Dataset / Terms of Use)",
+    "keywords": [
+      "ArcGIS",
+      "Hub",
+      "Open Data",
+      "GIS",
+      "OGC",
+      "Katalog",
+      "GB",
+      "Bristol"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": "Vereinigtes Königreich",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        -8.65,
+        49.86,
+        1.77,
+        60.86
+      ],
+      "centroid": {
+        "lat": 54.0,
+        "lon": -2.0
+      }
+    },
+    "logo": {
+      "domain": "opendata.bristol.gov.uk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.arcgis.com/sharing/rest/content/items/995b202235d54380a2f8d161f3c556fa/resources/logo.png",
+      "fallback": "initials",
+      "brand_domain": "bristol.gov.uk",
+      "file": "assets/logos/opendata.bristol.gov.uk.png",
+      "source": "official-site",
+      "source_kind": "og:image"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Bristol Open Data (ArcGIS Hub)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:00.324Z",
+      "robots": "allowed"
+    }
+  }
+}

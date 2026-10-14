@@ -1,0 +1,150 @@
+{
+  "id": "servas-ai.opencli-gtfs-it-alilaguna-891",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Alilaguna (GTFS-Fahrplan)",
+  "description": "Alilaguna: offizieller GTFS-Soll-Fahrplan (Venice, Veneto, Italien) aus dem Mobility-Database-Katalog (mdb-891), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten (Mobility-Database-Katalog, Gültigkeit aus feed_info/calendar)",
+      "command": "gtfs-it-alilaguna-891-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt, --q Filter)",
+      "command": "gtfs-it-alilaguna-891-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt, --q Filter)",
+      "command": "gtfs-it-alilaguna-891-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id (<id>)",
+      "command": "gtfs-it-alilaguna-891-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_timetable",
+    "realtime": false,
+    "source_url": "http://www.alilaguna.it/attuale/alilaguna.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.alilaguna.it/robots.txt geprüft: Download-URL nicht gesperrt. Feed im Mobility Database Katalog ohne Auth gelistet (files.mobilitydatabase.org selbst ist per robots gesperrt und wird nicht genutzt).",
+    "tos": "Offene Fahrplandaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "venice",
+      "alilaguna",
+      "italien",
+      "italy"
+    ],
+    "geo": {
+      "country": "IT",
+      "region": "Veneto",
+      "city": "Venice",
+      "bbox": [
+        12.306135,
+        45.417659,
+        12.368506,
+        45.500799
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "alilaguna.it",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=alilaguna.it&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/alilaguna.it.png",
+      "brand_domain": "www.alilaguna.it"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 113,
+      "throughput_rps": 8.85,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": "2026-10-13T09:52:26.265Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Alilaguna (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.alilaguna.it/"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-datos-gob-es",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "datos.gob.es – Datos Abiertos España",
+  "description": "datos.gob.es Linked-Data-API: Dataset-Katalog und Dataset-Details (Titel, Identifier, Themes). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "datos-gob-es datasets",
+      "command": "datos-gob-es-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "datos-gob-es dataset",
+      "command": "datos-gob-es-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://datos.gob.es/apidata/catalog/dataset",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "datos.gob.es/robots.txt: Disallow Drupal-Core/Admin – /apidata/catalog/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "datos.gob.es: Datos Abiertos; Fair Use der API.",
+    "logo": {
+      "domain": "datos.gob.es",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://datos.gob.es/sites/default/files/2024-03/logo_ministerio_cabecera_0.svg",
+      "fallback": "initials",
+      "file": "assets/logos/datos.gob.es.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "linked-data-api-0.2",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "datos.gob.es – Datos Abiertos España",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "ES",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "datos",
+      "gob",
+      "datos-gob-es",
+      "linked-data-api",
+      "dataset-katalog",
+      "dataset-details",
+      "titel",
+      "identifier",
+      "themes",
+      "abiertos",
+      "espa",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "ES",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "INCAPSULA - Incapsula Inc",
+      "asn": 19551,
+      "cdn": "Imperva",
+      "checked_at": "2026-10-13T09:19:53Z",
+      "host": "datos.gob.es",
+      "hoster": "Incapsula Inc",
+      "http_status": 200,
+      "ip": "45.223.177.253",
+      "server_header": "nginx",
+      "tls_issuer": "Hellenic Academic and Research Institutions CA",
+      "waf": "Imperva (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://datos.gob.es",
+      "country": "ES"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:15.106Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://datos.gob.es/es/"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-mojang-piston-meta",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Mojang Piston Meta – Minecraft Versionen",
+  "description": "Mojang Piston Meta CDN: Minecraft Version-Manifest v2 (Release/Snapshot-IDs, Typ, Zeitstempel, URL), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "minecraft",
+    "mojang",
+    "piston-meta",
+    "versions",
+    "gaming",
+    "launcher"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "latest",
+      "displayName": "latest",
+      "description": "mojang-piston-meta latest",
+      "command": "mojang-piston-meta-cli latest"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://piston-meta.mojang.com/",
+    "homepage": "https://piston-meta.mojang.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "piston-meta.mojang.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Mojang Piston Meta: öffentlicher CDN-Index ohne Key; nur Metadaten, Drossel 1 req/2 s.",
+    "license": "terms-of-source (Mojang / Microsoft; Minecraft IP)",
+    "country": "US",
+    "keywords": [
+      "minecraft",
+      "mojang",
+      "piston-meta",
+      "versions",
+      "gaming",
+      "launcher"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-32",
+    "worker": "open-apis-32-0343",
+    "logo": {
+      "domain": "piston-meta.mojang.com",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:25:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Mojang / Microsoft; Minecraft IP)",
+        "url": "https://www.minecraft.net/en-us/terms",
+        "evidence": "https://www.minecraft.net/en-us/terms",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Mojang Piston Meta – Minecraft Versionen (piston-meta.mojang.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle"
+        ]
+      },
+      "checked_at": "2026-10-14T03:25:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Mojang Piston Meta – Minecraft Versionen",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "type"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-go-downloads",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "go.dev – Go-Releases & Downloads",
+  "description": "go.dev Download-API: unterstützte und alle Go-Releases mit Dateien je OS/Architektur (Größe, SHA-256), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "go",
+    "golang",
+    "release",
+    "download",
+    "programmiersprache",
+    "software",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dateien",
+      "displayName": "dateien",
+      "description": "go-downloads dateien",
+      "command": "go-downloads-cli dateien"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://go.dev/",
+    "homepage": "https://go.dev/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "go.dev/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "go.dev: Download-JSON öffentlich (?mode=json), Inhalte CC BY 4.0, Fair-Use.",
+    "license": "CC-BY-4.0 (go.dev-Inhalte)",
+    "country": "INT",
+    "keywords": [
+      "go",
+      "golang",
+      "release",
+      "download",
+      "programmiersprache",
+      "software",
+      "tech"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-19",
+    "worker": "open-apis-19-2215",
+    "logo": {
+      "domain": "go.dev",
+      "file": "assets/logos/go.dev.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://go.dev/images/favicon-gopher.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dl",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC-BY-4.0 (go.dev-Inhalte)",
+        "url": "https://go.dev/copyright",
+        "evidence": "https://go.dev/copyright",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: go.dev – Go-Releases & Downloads (go.dev)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T22:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "go.dev – Go-Releases & Downloads",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "version",
+          "stable"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

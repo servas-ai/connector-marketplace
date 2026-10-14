@@ -1,0 +1,145 @@
+{
+  "id": "servas-ai.opencli-hex-pm",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Hex.pm – Elixir/Erlang Package Registry",
+  "description": "Hex.pm API: Paketsuche (nach Downloads), Paketmetadaten und Releases für Elixir/Erlang. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "hex-pm suche",
+      "command": "hex-pm-cli suche"
+    },
+    {
+      "name": "paket",
+      "displayName": "paket",
+      "description": "hex-pm paket",
+      "command": "hex-pm-cli paket"
+    },
+    {
+      "name": "releases",
+      "displayName": "releases",
+      "description": "hex-pm releases",
+      "command": "hex-pm-cli releases"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://hex.pm/api/packages",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "hex.pm/robots.txt: User-agent * nur Disallow /diff/ – /api/ erlaubt. Offizielle API (anonym 100 req/min). Drossel ≥2 s.",
+    "tos": "Hex.pm API: öffentlich, anonymes Rate-Limit; Fair Use.",
+    "logo": {
+      "domain": "hex.pm",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://hex.pm/images/hex-full-a8183c4f9adac71516516d107d402b18.svg?vsn=d",
+      "fallback": "initials",
+      "file": "assets/logos/hex.pm.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2152,
+      "throughput_rps": 0.465,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "api",
+      "last_scrape": "2026-10-13T06:37:04.272Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Hex.pm – Elixir/Erlang Package Registry",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "hex",
+      "hex-pm",
+      "paketsuche",
+      "downloads",
+      "paketmetadaten",
+      "releases",
+      "elixir",
+      "erlang",
+      "package",
+      "registry",
+      "tech",
+      "paket",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:20.250Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://hex.pm/"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-smard",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SMARD (Bundesnetzagentur) – Strommarktdaten DE/AT",
+  "description": "Day-Ahead-Großhandelspreise für AT und DE-LU sowie Erzeugung (Wind, PV) und Netzlast in Stundenwerten von der Bundesnetzagentur. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "preis-at",
+      "displayName": "reihe",
+      "description": "SMARD (Bundesnetzagentur) – Strommarktdaten DE/AT: reihe",
+      "command": "smard-cli reihe preis --region AT --format json"
+    },
+    {
+      "name": "pv-de",
+      "displayName": "reihe",
+      "description": "SMARD (Bundesnetzagentur) – Strommarktdaten DE/AT: reihe",
+      "command": "smard-cli reihe pv --region DE --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "energie",
+    "realtime": false,
+    "source_url": "https://www.smard.de",
+    "homepage": "https://www.smard.de/",
+    "keywords": [
+      "smard",
+      "day-ahead-großhandelspreise",
+      "de-lu",
+      "erzeugung",
+      "wind",
+      "netzlast",
+      "stundenwerten",
+      "bundesnetzagentur",
+      "strommarktdaten",
+      "international",
+      "preis-at",
+      "pv-de",
+      "network quality",
+      "netzqualität",
+      "telecom",
+      "electricity",
+      "power",
+      "energie",
+      "energy"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "logo": {
+      "domain": "www.smard.de",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.smard.de/resource/blob/195294/a39988d4354d23f27131716c96d188a7/smard-favicon-192x192-data.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.smard.de.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1937,
+      "throughput_rps": 0.9,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "SMARD chart_data (JSON)",
+      "last_scrape": "2026-10-13T04:08:31Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "SMARD (Bundesnetzagentur) – Strommarktdaten DE/AT",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "reihe",
+          "region",
+          "zeit",
+          "wert",
+          "einheit"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon",
+    "geo": {
+      "country": "DE",
+      "scope": "country",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ]
+    },
+    "infra": {
+      "as_org": "VERSATEL 1&1 Versatel GmbH",
+      "asn": 8881,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:40:59Z",
+      "host": "www.smard.de",
+      "hoster": "VERSATEL 1&1 Versatel GmbH",
+      "http_status": 200,
+      "ip": "194.156.220.77",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.smard.de/home/impressum",
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://www.smard.de",
+      "country": "DE"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:18:04.679Z",
+      "robots": "allowed"
+    }
+  }
+}

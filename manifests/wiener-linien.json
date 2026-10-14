@@ -1,0 +1,197 @@
+{
+  "id": "servas-ai.opencli-wiener-linien",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI wiener-linien",
+  "description": "Wiener Linien OGD-Echtzeit: Abfahrten, Störungen, Aufzüge, Haltepunkte (ohne Key)",
+  "author": "servas-ai (OpenCLI-Squad)",
+  "categories": [
+    "connector",
+    "opendata",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.dashboardWidget.register"
+  ],
+  "tools": [
+    {
+      "name": "wiener-linien-abfahrten",
+      "displayName": "Echtzeit-Abfahrten",
+      "description": "node bin/cli.js abfahrten --stop-id RBL|--haltestelle NAME --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "stop-id": {
+            "type": "string"
+          },
+          "haltestelle": {
+            "type": "string"
+          },
+          "linie": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "wiener-linien-haltestellen",
+      "displayName": "Haltepunkte suchen",
+      "description": "node bin/cli.js haltestellen --q NAME --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    },
+    {
+      "name": "wiener-linien-stoerungen",
+      "displayName": "Betriebsstörungen",
+      "description": "node bin/cli.js stoerungen --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "wiener-linien-aufzuege",
+      "displayName": "Aufzugsausfälle",
+      "description": "node bin/cli.js aufzuege --format json",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "status": "cli-ready",
+    "category": "opendata",
+    "cli_commands": [
+      "abfahrten",
+      "haltestellen",
+      "stoerungen",
+      "aufzuege"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "access_chain": [
+      "api_public"
+    ],
+    "robots_status": "ok",
+    "rate_limit": "≥ 2 s Abstand pro Prozess (OPENCLI_DELAY_MS, Minimum 2000), ein Worker pro Host",
+    "source_url": "https://www.wienerlinien.at/ogd_realtime",
+    "login": "none",
+    "openui": "paperclip/openui.txt",
+    "logo": {
+      "domain": "www.wienerlinien.at",
+      "chain": [
+        "https://www.wienerlinien.at/favicon.ico",
+        "https://www.google.com/s2/favicons?domain=www.wienerlinien.at&sz=64"
+      ],
+      "fallback": "https://www.google.com/s2/favicons?domain=wienerlinien.at&sz=64",
+      "file": "assets/logos/www.wienerlinien.at.png",
+      "source": "official-site",
+      "resolved": "https://www.wienerlinien.at/documents/2424499/7490319/wienerlinien-logo.svg/9040f5f3-8c6e-0867-d27f-acdbf1745658?t=1791880932648",
+      "source_kind": "header-logo"
+    },
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4510,
+      "throughput_rps": 0.22,
+      "captcha_rate": 0,
+      "login": "none",
+      "api_version": "ogd_realtime",
+      "last_scrape": "2026-10-13T05:12:12.566Z",
+      "datenqualitaet": 1.0
+    },
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "host": "www.wienerlinien.at",
+    "country": "AT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "svg",
+    "keywords": [
+      "wiener",
+      "linien",
+      "wiener-linien",
+      "echtzeitdaten",
+      "stadt",
+      "wien",
+      "ogd",
+      "abfahrten",
+      "haltepunkt",
+      "rbl",
+      "betriebsstörungen",
+      "aufzugsausfälle",
+      "haltepunkte",
+      "realtime-schnittstelle",
+      "nutze",
+      "diesen",
+      "skill",
+      "öpnv-abfahrten",
+      "störungen",
+      "ogd-echtzeit",
+      "aufzüge",
+      "opendata",
+      "wiener-linien-abfahrten",
+      "wiener-linien-haltestellen",
+      "wiener-linien-stoerungen",
+      "wiener-linien-aufzuege",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Wien",
+      "city": "Wien",
+      "lat": 48.2082,
+      "lon": 16.3738,
+      "scope": "city"
+    },
+    "infra": {
+      "as_org": "radware Radware Ltd",
+      "asn": 48851,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:23:44Z",
+      "host": "www.wienerlinien.at",
+      "hoster": "radware Radware Ltd",
+      "http_status": 200,
+      "ip": "167.86.50.133",
+      "tls_issuer": "EUNETIC GmbH",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.wienerlinien.at/impressum",
+      "legal_form": "GmbH & Co KG",
+      "name": "WIENER LINIEN GmbH & Co KG",
+      "register_id": "FN 181593z",
+      "source": "imprint",
+      "website": "https://www.wienerlinien.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:18:11.015Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.wienerlinien.at/"
+  }
+}

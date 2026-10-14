@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-usc-ndsc-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "USC Neighborhood Data for Social Change – Los Angeles (Socrata)",
+  "description": "USC Neighborhood Data for Social Change: Nachbarschaftsdaten für Los Angeles County (Census Tracts, Gesundheit, Bildung, Wohnen) des USC Price Center for Social Innovation. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Los Angeles",
+    "Nachbarschaft",
+    "Demografie",
+    "USC Sol Price Center for Social Innovation"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Los Angeles",
+    "Nachbarschaft",
+    "Demografie",
+    "USC Sol Price Center for Social Innovation"
+  ],
+  "homepage": "https://socialinnovation.usc.edu/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "California",
+    "city": "Los Angeles",
+    "scope": "city"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "usc-ndsc-data datasets",
+      "command": "usc-ndsc-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "usc-ndsc-data dataset",
+      "command": "usc-ndsc-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "usc-ndsc-data rows",
+      "command": "usc-ndsc-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://usc.data.socrata.com/api/catalog/v1",
+    "homepage": "https://socialinnovation.usc.edu/",
+    "portal": "https://usc.data.socrata.com/",
+    "provider": "USC Sol Price Center for Social Innovation",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Los Angeles",
+      "Nachbarschaft",
+      "Demografie",
+      "USC Sol Price Center for Social Innovation"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "California",
+      "city": "Los Angeles",
+      "scope": "city"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "usc.data.socrata.com/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "USC Sol Price Center for Social Innovation Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "usc.data.socrata.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://usc.data.socrata.com/api/assets/E8AE462B-18FD-4E76-A08B-9DD019643A1C?NDSC_Logo_3.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/usc.data.socrata.com.png",
+      "source": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "USC Neighborhood Data for Social Change – Los Angeles (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von USC Sol Price Center for Social Innovation; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von USC Sol Price Center for Social Innovation; je Dataset im Feld license",
+    "logo_source": "header-logo",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:39.171Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "servas-ai.opencli-manitoba-geoportal",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Manitoba GeoPortal / DataMB (ArcGIS Hub)",
+  "description": "geoportal.gov.mb.ca – Government of Manitoba: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "hub",
+    "ca",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "manitoba-geoportal suche",
+      "command": "manitoba-geoportal-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "manitoba-geoportal neu",
+      "command": "manitoba-geoportal-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "manitoba-geoportal datensatz",
+      "command": "manitoba-geoportal-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://geoportal.gov.mb.ca/search",
+    "homepage": "https://geoportal.gov.mb.ca/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "geoportal.gov.mb.ca/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Government of Manitoba: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "CA",
+    "keywords": [
+      "opendata",
+      "hub",
+      "katalog",
+      "ca"
+    ],
+    "geo": {
+      "country": "CA",
+      "scope": "region",
+      "region": "Manitoba"
+    },
+    "operator": {
+      "name": "Government of Manitoba",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "CA",
+      "source": "Portal-Impressum/Domain"
+    },
+    "logo": {
+      "domain": "geoportal.gov.mb.ca",
+      "file": "assets/logos/geoportal.gov.mb.ca.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://gov.mb.ca/templates/en/common/images/mb-logo.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:10:19.935Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://geoportal.gov.mb.ca/",
+        "evidence": "https://geoportal.gov.mb.ca/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Manitoba GeoPortal / DataMB (ArcGIS Hub) (geoportal.gov.mb.ca)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T17:30:00Z"
+    },
+    "wave": "opendata-wave-1700",
+    "worker": "opendata-wave-1700",
+    "openui": {
+      "card": {
+        "title": "Manitoba GeoPortal / DataMB (ArcGIS Hub)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

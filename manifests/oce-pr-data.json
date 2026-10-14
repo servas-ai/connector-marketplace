@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-oce-pr-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OCE Puerto Rico – Oficina del Contralor Electoral Open Data (Socrata)",
+  "description": "Oficina del Contralor Electoral (Puerto Rico): offene Wahlkampffinanzierungs-Daten – Wahlfonds der Parteien, Ausgaben, registrierte Komitees und eingereichte Berichte. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Wahlen",
+    "Wahlkampffinanzierung",
+    "Puerto Rico",
+    "Oficina del Contralor Electoral de Puerto Rico"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Wahlen",
+    "Wahlkampffinanzierung",
+    "Puerto Rico",
+    "Oficina del Contralor Electoral de Puerto Rico"
+  ],
+  "homepage": "https://oce.pr.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "PR",
+    "region": "Puerto Rico",
+    "city": null,
+    "scope": "territory"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "oce-pr-data datasets",
+      "command": "oce-pr-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "oce-pr-data dataset",
+      "command": "oce-pr-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "oce-pr-data rows",
+      "command": "oce-pr-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.oce.pr.gov/api/catalog/v1",
+    "homepage": "https://oce.pr.gov/",
+    "portal": "https://data.oce.pr.gov/",
+    "provider": "Oficina del Contralor Electoral de Puerto Rico",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Wahlen",
+      "Wahlkampffinanzierung",
+      "Puerto Rico",
+      "Oficina del Contralor Electoral de Puerto Rico"
+    ],
+    "geo": {
+      "country": "PR",
+      "region": "Puerto Rico",
+      "city": null,
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.oce.pr.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Oficina del Contralor Electoral de Puerto Rico Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "data.oce.pr.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.oce.pr.gov/api/assets/6779AE8C-6504-464F-B8A2-4C7742798B4A?logo2.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.oce.pr.gov.png",
+      "source": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "OCE Puerto Rico – Oficina del Contralor Electoral Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "PR",
+    "ampel": "grün",
+    "license": "Public Domain U.S. Government (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "data_license": "Public Domain U.S. Government (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "header-logo",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:17.951Z",
+      "robots": "allowed"
+    }
+  }
+}

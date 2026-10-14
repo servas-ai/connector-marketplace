@@ -1,0 +1,147 @@
+{
+  "id": "servas-ai.opencli-luno",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Luno – Krypto-Marktdaten",
+  "description": "Luno Public API: Ticker aller Märkte, Einzelticker, Orderbuch (Top) und Trades (z. B. XBT/ZAR, XBT/EUR). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "luno ticker",
+      "command": "luno-cli ticker"
+    },
+    {
+      "name": "orderbuch",
+      "displayName": "orderbuch",
+      "description": "luno orderbuch",
+      "command": "luno-cli orderbuch"
+    },
+    {
+      "name": "maerkte",
+      "displayName": "maerkte",
+      "description": "luno maerkte",
+      "command": "luno-cli maerkte"
+    },
+    {
+      "name": "trades",
+      "displayName": "trades",
+      "description": "luno trades",
+      "command": "luno-cli trades"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.luno.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.luno.com/robots.txt: 404 (keine Einschränkung). Öffentliche Marktdaten-Endpunkte (/api/1/ticker[s], orderbook_top, trades). Drossel ≥2 s.",
+    "tos": "Luno – öffentliche API, keine Authentifizierung für Marktdaten; Fair Use.",
+    "logo": {
+      "domain": "api.luno.com",
+      "resolved": "https://framerusercontent.com/images/V3ch9EE5AOAea8iGKidfFECyrI.png",
+      "file": "assets/logos/api.luno.com.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Luno – Krypto-Marktdaten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "license": "proprietär – Luno API Terms (öffentliche Marktdaten, Fair Use)",
+    "keywords": [
+      "luno",
+      "ticker",
+      "aller",
+      "märkte",
+      "einzelticker",
+      "orderbuch",
+      "top",
+      "trades",
+      "xbt",
+      "zar",
+      "eur",
+      "krypto-marktdaten",
+      "finance",
+      "maerkte",
+      "crypto",
+      "cryptocurrency",
+      "kryptowährung",
+      "finanzen",
+      "markets"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:15.606Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.luno.com/"
+  }
+}

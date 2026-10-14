@@ -1,0 +1,232 @@
+{
+  "id": "servas-ai.opencli-iso3166-regions",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ISO 3166 mit UN-M49-Regionen (lukes)",
+  "description": "ISO 3166 mit UN-M49-Regionen (lukes): offizielle Gesamtdatei (CSV) als Datensätze – Liste, Volltextsuche, Dump-Metadaten. Download höchstens 1× pro Tag (Cache 24 h). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "iso3166-regions liste",
+      "command": "iso3166-regions-cli liste"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "iso3166-regions suche",
+      "command": "iso3166-regions-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "iso3166-regions info",
+      "command": "iso3166-regions-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host, Dump ≤1×/Tag",
+    "robots_status": "ok",
+    "robots": "raw.githubusercontent.com/robots.txt geprüft: Dump-Pfad nicht gesperrt (zusätzlich Laufzeitprüfung). Kein Key. Drossel ≥2 s/Host, Dump-Cache 24 h.",
+    "tos": "Lizenz: CC BY-SA 4.0 (lukes/ISO-3166). Quelle nennen.",
+    "logo": {
+      "domain": "raw.githubusercontent.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=raw.githubusercontent.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/raw.githubusercontent.com.png",
+      "brand_domain": "raw.githubusercontent.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 159,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dump",
+      "last_scrape": "2026-10-13T09:25:12.599Z",
+      "datenqualitaet": 1.0
+    },
+    "keywords": [
+      "iso3166",
+      "regions",
+      "iso3166-regions",
+      "iso",
+      "un-m49-regionen",
+      "lukes",
+      "gesamtdatei",
+      "csv",
+      "datensätze",
+      "liste",
+      "volltextsuche",
+      "dump-metadaten",
+      "download",
+      "höchstens",
+      "tag",
+      "cache",
+      "opendata",
+      "info",
+      "open data",
+      "offene daten",
+      "datasets"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "openui": {
+      "card": {
+        "title": "ISO 3166 mit UN-M49-Regionen (lukes)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "FASTLY - Fastly, Inc.",
+      "asn": 54113,
+      "cdn": "GitHub Pages",
+      "checked_at": "2026-10-13T09:36:55Z",
+      "host": "raw.githubusercontent.com",
+      "hoster": "Fastly, Inc.",
+      "http_status": 200,
+      "ip": "185.199.109.133",
+      "server_header": "github.com",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://raw.githubusercontent.com"
+    },
+    "country": "INT",
+    "homepage": "https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes",
+    "license": "CC-BY-SA-4.0",
+    "llms": {
+      "llms_txt": "https://github.com/llms.txt",
+      "llms_full": "https://github.com/llms-full.txt",
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "blocks:Bytespider",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:08.910Z",
+      "robots": "allowed",
+      "access_chain_hints": [
+        {
+          "title": "Versions API",
+          "url": "https://docs.github.com/api/pagelist/versions"
+        },
+        {
+          "title": "Languages API",
+          "url": "https://docs.github.com/api/pagelist/languages"
+        },
+        {
+          "title": "Page List API",
+          "url": "https://docs.github.com/api/pagelist/en/free-pro-team@latest"
+        },
+        {
+          "title": "Article API",
+          "url": "https://docs.github.com/api/article"
+        },
+        {
+          "title": "Article Body API",
+          "url": "https://docs.github.com/api/article/body"
+        },
+        {
+          "title": "Search API",
+          "url": "https://docs.github.com/api/search/v1"
+        },
+        {
+          "title": "Extend Copilot Chat with MCP",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp"
+        },
+        {
+          "title": "Use the GitHub MCP Server",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server"
+        },
+        {
+          "title": "Set up the GitHub MCP Server",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/set-up-the-github-mcp-server"
+        },
+        {
+          "title": "About cloud agent",
+          "url": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent"
+        },
+        {
+          "title": "Create custom agents in your IDE",
+          "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-custom-agents-in-your-ide"
+        },
+        {
+          "title": "GitHub CLI",
+          "url": "https://docs.github.com/en/github-cli/github-cli"
+        },
+        {
+          "title": "Quickstart",
+          "url": "https://docs.github.com/en/github-cli/github-cli/quickstart"
+        },
+        {
+          "title": "REST API",
+          "url": "https://docs.github.com/en/rest"
+        },
+        {
+          "title": "GraphQL API",
+          "url": "https://docs.github.com/en/graphql"
+        }
+      ]
+    }
+  }
+}

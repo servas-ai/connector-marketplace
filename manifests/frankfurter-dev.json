@@ -1,0 +1,183 @@
+{
+  "id": "servas-ai.opencli-frankfurter-dev",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Frankfurter.dev – EZB-Referenzkurse",
+  "description": "Frankfurter.dev: tägliche EZB-Referenzwechselkurse (Nachfolger/Fork der Frankfurter-API). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "Wechselkurs",
+    "EZB",
+    "Frankfurter",
+    "FX",
+    "EUR",
+    "currency"
+  ],
+  "keywords": [
+    "Wechselkurs",
+    "EZB",
+    "Frankfurter",
+    "FX",
+    "EUR",
+    "currency"
+  ],
+  "homepage": "https://www.frankfurter.app/docs/",
+  "license": "MIT",
+  "geo": {
+    "country": "EU",
+    "region": "Europäische Union",
+    "city": null,
+    "coverage": "supranational",
+    "bbox": [
+      -31.27,
+      27.64,
+      34.6,
+      70.09
+    ],
+    "centroid": {
+      "lat": 50.0,
+      "lon": 10.0
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "aktuell",
+      "displayName": "aktuell",
+      "description": "frankfurter-dev aktuell",
+      "command": "frankfurter-dev-cli aktuell"
+    },
+    {
+      "name": "historisch",
+      "displayName": "historisch",
+      "description": "frankfurter-dev historisch",
+      "command": "frankfurter-dev-cli historisch"
+    },
+    {
+      "name": "waehrungen",
+      "displayName": "waehrungen",
+      "description": "frankfurter-dev waehrungen",
+      "command": "frankfurter-dev-cli waehrungen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://api.frankfurter.dev/v1/latest",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.frankfurter.dev/robots.txt: API erlaubt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "EZB-Referenzkurse via Frankfurter.dev; Fair Use.",
+    "provider": "Frankfurter.dev (EZB-Referenzkurse)",
+    "homepage": "https://www.frankfurter.app/docs/",
+    "data_license": "EZB-Referenzkurse / Frankfurter Fair Use",
+    "keywords": [
+      "Wechselkurs",
+      "EZB",
+      "Frankfurter",
+      "FX",
+      "EUR",
+      "currency"
+    ],
+    "geo": {
+      "country": "EU",
+      "region": "Europäische Union",
+      "city": null,
+      "coverage": "supranational",
+      "bbox": [
+        -31.27,
+        27.64,
+        34.6,
+        70.09
+      ],
+      "centroid": {
+        "lat": 50.0,
+        "lon": 10.0
+      }
+    },
+    "country": "EU",
+    "logo": {
+      "domain": "api.frankfurter.dev",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://frankfurter.dev/images/favicon.svg?v=1791849483",
+      "fallback": "initials",
+      "brand_domain": "frankfurter.app",
+      "file": "assets/logos/api.frankfurter.dev.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Frankfurter.dev – EZB-Referenzkurse",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": "https://www.frankfurter.app/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:40.830Z",
+      "robots": "allowed"
+    }
+  }
+}

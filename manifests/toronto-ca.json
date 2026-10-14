@@ -1,0 +1,167 @@
+{
+  "id": "servas-ai.opencli-toronto-ca",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "City of Toronto – Open Data (CKAN)",
+  "description": "ckan0.cf.opendata.inter.prod-toronto.ca CKAN API: Dataset-Suche und Dataset-Details (Titel, Organisation, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "toronto-ca datasets",
+      "command": "toronto-ca-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "toronto-ca dataset",
+      "command": "toronto-ca-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "ckan0.cf.opendata.inter.prod-toronto.ca/robots.txt: Allow /api/ (Disallow nur /dataset/ HTML + Downloads). Drossel ≥2 s.",
+    "tos": "City of Toronto Open Data Licence; Fair Use der CKAN API.",
+    "logo": {
+      "domain": "ckan0.cf.opendata.inter.prod-toronto.ca",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=ckan0.cf.opendata.inter.prod-toronto.ca&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/ckan0.cf.opendata.inter.prod-toronto.ca.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "City of Toronto – Open Data (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CA",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "toronto",
+      "toronto-ca",
+      "ckan0",
+      "opendata",
+      "inter",
+      "prod-toronto",
+      "ckan",
+      "dataset-suche",
+      "dataset-details",
+      "titel",
+      "organisation",
+      "ressourcen",
+      "city",
+      "open",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": "Ontario",
+      "city": "Toronto",
+      "lat": 43.6532,
+      "lon": -79.3832,
+      "scope": "city"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "Amazon CloudFront",
+      "checked_at": "2026-10-13T09:34:20Z",
+      "host": "ckan0.cf.opendata.inter.prod-toronto.ca",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "65.8.131.121",
+      "tls_issuer": "Amazon",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://cf.opendata.inter.prod-toronto.ca",
+      "country": "CA"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:18.415Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://ckan0.cf.opendata.inter.prod-toronto.ca/"
+  }
+}

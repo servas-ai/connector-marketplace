@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-wpdx-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Water Point Data Exchange – WPdx (Socrata)",
+  "description": "Water Point Data Exchange (WPdx): weltweite offene Daten zu Wasserstellen (Brunnen, Pumpen, Zapfstellen) mit Status, Lage und Quelle. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Wasser",
+    "WASH",
+    "weltweit",
+    "Water Point Data Exchange (WPdx)"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Wasser",
+    "WASH",
+    "weltweit",
+    "Water Point Data Exchange (WPdx)"
+  ],
+  "homepage": "https://www.waterpointdata.org/",
+  "license": "MIT",
+  "geo": {
+    "country": "INT",
+    "region": null,
+    "city": null,
+    "scope": "global"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "wpdx-data datasets",
+      "command": "wpdx-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "wpdx-data dataset",
+      "command": "wpdx-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "wpdx-data rows",
+      "command": "wpdx-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.waterpointdata.org/api/catalog/v1",
+    "homepage": "https://www.waterpointdata.org/",
+    "portal": "https://data.waterpointdata.org/",
+    "provider": "Water Point Data Exchange (WPdx)",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Wasser",
+      "WASH",
+      "weltweit",
+      "Water Point Data Exchange (WPdx)"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "scope": "global"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.waterpointdata.org/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Water Point Data Exchange (WPdx) Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "data.waterpointdata.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.waterpointdata.org/wp-content/uploads/2021/10/wpdx.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.waterpointdata.org.png",
+      "source": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Water Point Data Exchange – WPdx (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von Water Point Data Exchange (WPdx); je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von Water Point Data Exchange (WPdx); je Dataset im Feld license",
+    "logo_source": "header-logo",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:11:02.135Z",
+      "robots": "allowed"
+    }
+  }
+}

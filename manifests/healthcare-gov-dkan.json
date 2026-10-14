@@ -1,0 +1,204 @@
+{
+  "id": "servas-ai.opencli-healthcare-gov-dkan",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "HealthCare.gov Open Data – CMS Marketplace PUFs (DKAN)",
+  "description": "data.healthcare.gov – Centers for Medicare & Medicaid Services (CMS), U.S. Department of Health and Human Services: DKAN-Open-Data-Katalog (DCAT-US): Dataset-Liste/Filter, Volltextsuche, Dataset-Metadaten mit Distributionen und Datastore-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "dkan",
+    "us",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "healthcare-gov-dkan datasets",
+      "command": "healthcare-gov-dkan-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "healthcare-gov-dkan dataset",
+      "command": "healthcare-gov-dkan-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "healthcare-gov-dkan rows",
+      "command": "healthcare-gov-dkan-cli rows"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "healthcare-gov-dkan suche",
+      "command": "healthcare-gov-dkan-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.healthcare.gov/api/1/metastore/schemas/dataset/items",
+    "homepage": "https://data.healthcare.gov/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.healthcare.gov/robots.txt geprüft (fail-closed, RFC 9309 via tools/robots): Antwort 404 → keine Einschränkung; DKAN-API /api/1/metastore, /api/1/datastore/query und /api/1/search erlaubt. Drossel ≥2 s/Host. Öffentliche Bundesdaten ohne Key.",
+    "tos": "Centers for Medicare & Medicaid Services (CMS), U.S. Department of Health and Human Services: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "US",
+    "keywords": [
+      "opendata",
+      "dkan",
+      "katalog",
+      "us"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "operator": {
+      "name": "Centers for Medicare & Medicaid Services (CMS), U.S. Department of Health and Human Services",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "US",
+      "url": "https://www.healthcare.gov/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "data.healthcare.gov",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dkan-2 (api/1)",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://data.healthcare.gov/api/1",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:55:00Z",
+      "robots": "allowed",
+      "api_kind": "DKAN 2 REST API v1 (OpenAPI 3.0.2)",
+      "openapi_version": "3.0.2",
+      "openapi_paths": 22,
+      "dcat": "https://data.healthcare.gov/data.json",
+      "dcat_profile": "DCAT-US 1.1 (DKAN data.json)",
+      "ogc_api": null,
+      "access_chain_hints": [
+        "openapi: https://data.healthcare.gov/api/1",
+        "dcat: https://data.healthcare.gov/data.json",
+        "dkan-api: https://data.healthcare.gov/api/1"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://data.healthcare.gov/api/1/metastore/schemas/dataset/items?show-reference-ids=false",
+        "evidence": "https://data.healthcare.gov/api/1/metastore/schemas/dataset/items?show-reference-ids=false",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: HealthCare.gov Open Data – CMS Marketplace PUFs (DKAN) (data.healthcare.gov)",
+      "personal_data": "check",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Einzelne Datasets (z. B. Agent/Broker-Register mit NPN) betreffen Einzelpersonen – Rows nur aus nicht-personenbezogenen PUFs nutzen, Datenschutz je Dataset prüfen",
+          "Hosting-Land nicht öffentlich belegt (Portal-Land US) – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T23:55:00Z"
+    },
+    "wave": "opendata-wave-2302",
+    "worker": "opendata-wave-2302",
+    "openui": {
+      "card": {
+        "title": "HealthCare.gov Open Data – CMS Marketplace PUFs (DKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "id": "servas-ai.opencli-sustainablesm-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Santa Monica Sustainable City Plan Data (Socrata)",
+  "description": "data.sustainablesm.org Socrata Discovery API + SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen (City of Santa Monica, California). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "sustainablesm-data datasets",
+      "command": "sustainablesm-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "sustainablesm-data dataset",
+      "command": "sustainablesm-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "sustainablesm-data rows",
+      "command": "sustainablesm-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.sustainablesm.org/api/catalog/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.sustainablesm.org/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "City of Santa Monica, California Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "data.sustainablesm.org",
+      "chain": [
+        "official-site",
+        "wikimedia"
+      ],
+      "resolved": "https://data.sustainablesm.org/api/assets/47124A58-7842-4BA2-829A-36DEE79549D0?CSM_Brandmark_Stk_blk_80x80-01.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.sustainablesm.org.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Santa Monica Sustainable City Plan Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data Commons Attribution License (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "header-logo",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:56.686Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://data.sustainablesm.org/",
+    "geo": {},
+    "keywords": [
+      "sustainablesm data",
+      "opendata",
+      "socrata",
+      "open data",
+      "dataset",
+      "us",
+      "sustainablesm",
+      "data",
+      "org",
+      "discovery",
+      "api",
+      "soda"
+    ]
+  }
+}

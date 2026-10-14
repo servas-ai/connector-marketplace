@@ -1,0 +1,199 @@
+{
+  "id": "servas-ai.opencli-fortlauderdale-police-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Fort Lauderdale Police Department Open Data (Socrata)",
+  "description": "fortlauderdale.data.socrata.com – Fort Lauderdale Police Department, City of Fort Lauderdale, Florida: Socrata-Open-Data-Katalog: Dataset-Suche, Dataset-Metadaten (Spalten, Lizenz, Kategorie) und Dataset-Zeilen über SODA. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "socrata",
+    "us",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "fortlauderdale-police-data datasets",
+      "command": "fortlauderdale-police-data-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "fortlauderdale-police-data dataset",
+      "command": "fortlauderdale-police-data-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "fortlauderdale-police-data rows",
+      "command": "fortlauderdale-police-data-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://fortlauderdale.data.socrata.com/api/catalog/v1",
+    "homepage": "https://fortlauderdale.data.socrata.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "fortlauderdale.data.socrata.com/robots.txt geprüft (fail-closed, Socrata-Standard, Crawl-delay 1): Disallow nur /browse?…- und /browse/*?…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt. Drossel ≥2 s/Host.",
+    "tos": "Fort Lauderdale Police Department, City of Fort Lauderdale, Florida: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "US",
+    "keywords": [
+      "opendata",
+      "socrata",
+      "katalog",
+      "us"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "city",
+      "region": "Florida",
+      "city": "Fort Lauderdale"
+    },
+    "operator": {
+      "name": "Fort Lauderdale Police Department, City of Fort Lauderdale, Florida",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "US",
+      "url": "https://www.fortlauderdale.gov/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "fortlauderdale.data.socrata.com",
+      "file": "assets/logos/fortlauderdale.data.socrata.com.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://www.fortlauderdale.gov/files/ocfavicon/Public/favicon.svg",
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:05:00Z",
+      "robots": "allowed",
+      "api_kind": "Socrata Discovery API v1 + SODA 2.1",
+      "openapi_version": null,
+      "openapi_paths": null,
+      "dcat": "https://fortlauderdale.data.socrata.com/api/dcat.json",
+      "dcat_profile": "DCAT-US 1.1 (Socrata /api/dcat.json)",
+      "ogc_api": null,
+      "access_chain_hints": [
+        "dcat: https://fortlauderdale.data.socrata.com/api/dcat.json",
+        "soda: https://fortlauderdale.data.socrata.com/resource/<id>.json"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://fortlauderdale.data.socrata.com/",
+        "evidence": "https://fortlauderdale.data.socrata.com/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Fort Lauderdale Police Department Open Data (Socrata) (fortlauderdale.data.socrata.com)",
+      "personal_data": "check",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Polizei-/Einsatzdaten: Datensätze können personenbezogene Merkmale enthalten (z. B. Festnahmen) – Datenschutz je Dataset prüfen",
+          "Hosting Tyler Technologies Data & Insights (Socrata, US-Cloud), Server-Region nicht belegt – kein EU-Hosting, AVV/Drittlandtransfer prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T23:05:00Z"
+    },
+    "wave": "opendata-wave-2237",
+    "worker": "opendata-wave-2237",
+    "openui": {
+      "card": {
+        "title": "Fort Lauderdale Police Department Open Data (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

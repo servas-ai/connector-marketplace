@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-worldbank-documents",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "World Bank Documents & Reports",
+  "description": "World Bank Documents & Reports: Suche nach Studien, Papers und Publikationen (Metadaten: Titel, Autoren, Jahr, DOI, URL, Abstract wo erlaubt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "generic"
+  ],
+  "tags": [
+    "wissenschaft",
+    "publikationen",
+    "studien",
+    "papers"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "search",
+      "displayName": "search",
+      "description": "worldbank-documents search",
+      "command": "worldbank-documents-cli search"
+    },
+    {
+      "name": "get",
+      "displayName": "get",
+      "description": "worldbank-documents get",
+      "command": "worldbank-documents-cli get"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "kind": "publication",
+    "realtime": false,
+    "source_url": "https://documents.worldbank.org",
+    "homepage": "https://documents.worldbank.org/",
+    "country": "US",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1 s",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "keywords": [
+      "worldbank",
+      "documents",
+      "worldbank-documents",
+      "world",
+      "bank",
+      "reports",
+      "studien",
+      "paper-suche",
+      "titel",
+      "autoren",
+      "jahr",
+      "doi",
+      "url",
+      "abstract",
+      "erlaubt",
+      "ausgabe",
+      "servas",
+      "record",
+      "type",
+      "generic",
+      "kind",
+      "publication",
+      "nutze",
+      "diesen",
+      "skill",
+      "wissenschaftliche",
+      "literaturrecherche",
+      "papers",
+      "publikationen",
+      "metadaten",
+      "international",
+      "publications",
+      "research",
+      "wissenschaft"
+    ],
+    "geo": {
+      "country": "INT",
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "documents.worldbank.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:The_World_Bank_logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/documents.worldbank.org.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "WDS API v3",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "World Bank Documents & Reports",
+        "subtitle": "publication",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "authors",
+          "year",
+          "doi"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:21.093Z",
+      "robots": "allowed"
+    }
+  }
+}

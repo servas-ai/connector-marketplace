@@ -1,0 +1,149 @@
+{
+  "id": "servas-ai.opencli-cocoapods",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CocoaPods Trunk – iOS/macOS-Bibliotheken",
+  "description": "CocoaPods Trunk API v1: Pod-Infos (Versionen, Owner-Anzahl) und aktuelle Podspec (Lizenz, Plattformen, Homepage, Swift-Version). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "pod",
+      "displayName": "pod",
+      "description": "cocoapods pod",
+      "command": "cocoapods-cli pod"
+    },
+    {
+      "name": "versionen",
+      "displayName": "versionen",
+      "description": "cocoapods versionen",
+      "command": "cocoapods-cli versionen"
+    },
+    {
+      "name": "spec",
+      "displayName": "spec",
+      "description": "cocoapods spec",
+      "command": "cocoapods-cli spec"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://trunk.cocoapods.org/api/v1/pods/Alamofire",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "trunk.cocoapods.org/robots.txt: 404 (keine Einschränkung). Öffentliche Trunk-API (Lesen ohne Token). Drossel ≥2 s.",
+    "tos": "CocoaPods Trunk: öffentliche Lese-Endpunkte, Fair Use (Trunk ist seit 2026 read-only).",
+    "logo": {
+      "domain": "trunk.cocoapods.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://cocoapods.org/favicons/apple-touch-icon-152x152.png",
+      "fallback": "initials",
+      "file": "assets/logos/trunk.cocoapods.org.png",
+      "brand_domain": "cocoapods.org",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3906,
+      "throughput_rps": 0.256,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:05:11.390Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "CocoaPods Trunk – iOS/macOS-Bibliotheken",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "cocoapods",
+      "trunk",
+      "pod-infos",
+      "versionen",
+      "owner-anzahl",
+      "podspec",
+      "lizenz",
+      "plattformen",
+      "homepage",
+      "swift-version",
+      "ios",
+      "macos-bibliotheken",
+      "tech",
+      "pod",
+      "spec",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:49.402Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://trunk.cocoapods.org/disputes/"
+  }
+}

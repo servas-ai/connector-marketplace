@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-gazette-insolvency-uk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "The Gazette – UK Insolvenzbekanntmachungen",
+  "description": "The Gazette (amtliches Bekanntmachungsblatt UK, TSO/National Archives) Linked-Data-API: aktuelle Insolvenz-Bekanntmachungen (Liquidationen, Verwalterbestellungen, Winding-up) und Einzel-Notices nach ID – keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "uk",
+    "insolvenz",
+    "insolvency",
+    "gazette",
+    "liquidation",
+    "firmen",
+    "amtsblatt"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "gazette-insolvency-uk suche",
+      "command": "gazette-insolvency-uk-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://thegazette.co.uk/",
+    "homepage": "https://thegazette.co.uk/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 10 s pro Host",
+    "robots_status": "ok",
+    "robots": "thegazette.co.uk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/10 s (robots Crawl-delay).",
+    "tos": "The Gazette: Daten unter OGL v3 wiederverwendbar; robots Crawl-delay 10 s eingehalten (Drossel 10 s/Host), Einzel-Notice-Linked-Data-Pfade per robots gesperrt und nicht genutzt; kleine Seitengrößen, keine Massenabzüge.",
+    "license": "OGL-UK-3.0 (Gazette-Daten, Crown copyright)",
+    "country": "GB",
+    "keywords": [
+      "uk",
+      "insolvenz",
+      "insolvency",
+      "gazette",
+      "liquidation",
+      "firmen",
+      "amtsblatt"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Company-Data-0404",
+    "worker": "company-data-0404",
+    "logo": {
+      "domain": "thegazette.co.uk",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "linked-data-api-0.2",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T04:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "OGL-UK-3.0 (Gazette-Daten, Crown copyright)",
+        "url": "https://www.thegazette.co.uk/data",
+        "evidence": "https://www.thegazette.co.uk/data",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: The Gazette – UK Insolvenzbekanntmachungen (thegazette.co.uk)",
+      "personal_data": "personal",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "GB",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.1,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Insolvenzbekanntmachungen nennen auch natürliche Personen (Privatinsolvenzen, Insolvenzverwalter) – DSGVO/UK-GDPR-Zweckbindung beachten, keine Profilbildung"
+        ]
+      },
+      "checked_at": "2026-10-14T04:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "The Gazette – UK Insolvenzbekanntmachungen",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "notice_code"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

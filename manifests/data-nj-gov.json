@@ -1,0 +1,136 @@
+{
+  "id": "servas-ai.opencli-data-nj-gov",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "New Jersey Open Data",
+  "description": "New Jersey Open Data – Socrata Discovery API v1: Dataset-Suche und Dataset-Details (Titel, Herausgeber, Ressourcen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-nj-gov datasets",
+      "command": "data-nj-gov-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-nj-gov dataset",
+      "command": "data-nj-gov-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.nj.gov/api/catalog/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.nj.gov/robots.txt: keine robots.txt (bzw. HTML) – keine Disallow-Regeln; Laufzeit-Prüfung in lib/http.js. Drossel ≥2 s/Host.",
+    "tos": "New Jersey Open Data: offenes Datenportal (Socrata Discovery API v1); Lizenz je Dataset, Fair Use.",
+    "logo": {
+      "domain": "data.nj.gov",
+      "resolved": "https://data.nj.gov/api/assets/6C834B5A-C94B-4ADA-BEE4-C75ECD4612E1?data_nj_gov_header.jpg",
+      "file": "assets/logos/data.nj.gov.png",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "keywords": [
+      "Open Data",
+      "offene Daten",
+      "Datenportal",
+      "data portal",
+      "Datensätze",
+      "datasets",
+      "Katalog",
+      "catalog",
+      "Verwaltung",
+      "government",
+      "Behörde",
+      "public sector",
+      "Socrata",
+      "SODA",
+      "USA",
+      "New Jersey",
+      "Bundesstaat"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "New Jersey",
+      "city": null,
+      "lat": 40.1,
+      "lon": -74.5,
+      "bbox": null,
+      "scope": "region"
+    },
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "New Jersey Open Data",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "homepage": "https://data.nj.gov",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:26.758Z",
+      "robots": "allowed"
+    }
+  }
+}

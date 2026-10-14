@@ -1,0 +1,159 @@
+{
+  "id": "servas-ai.opencli-datacite",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DataCite – DOIs für Forschungsdaten",
+  "description": "DataCite REST API: DOIs für Forschungsdaten, Software und Publikationen suchen (Titel, Ersteller, Herausgeber, Jahr) und DOI-Metadaten abrufen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "datacite suche",
+      "command": "datacite-cli suche"
+    },
+    {
+      "name": "doi",
+      "displayName": "doi",
+      "description": "datacite doi",
+      "command": "datacite-cli doi"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "realtime": false,
+    "source_url": "https://api.datacite.org/dois",
+    "keywords": [
+      "datacite",
+      "rest",
+      "dois",
+      "forschungsdaten",
+      "software",
+      "publikationen",
+      "suchen",
+      "titel",
+      "ersteller",
+      "herausgeber",
+      "jahr",
+      "doi-metadaten",
+      "abrufen",
+      "international",
+      "doi"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.datacite.org/robots.txt: 404 (keine Einschränkung). Offizielle öffentliche REST-API. Drossel ≥2 s.",
+    "tos": "DataCite: Metadaten CC0, öffentliche API ohne Key, Fair Use (Rate-Limit ≈3000 Req/5 min).",
+    "logo": {
+      "domain": "api.datacite.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://files.readme.io/fb9347b-small-DataCite-Logo_secondary.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.datacite.org.png",
+      "brand_domain": "datacite.org",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3954,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": "2026-10-13T07:29:13.644Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "DataCite – DOIs für Forschungsdaten",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "favicon",
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:36:29Z",
+      "host": "api.datacite.org",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "52.31.8.57",
+      "server_header": "cloudflare",
+      "tls_issuer": "Amazon",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://datacite.org"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:46.493Z",
+      "robots": "allowed"
+    }
+  }
+}

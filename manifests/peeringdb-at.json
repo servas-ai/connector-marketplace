@@ -1,0 +1,201 @@
+{
+  "id": "servas-ai.opencli-peeringdb-at",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "PeeringDB AT – Colocation, IX, Netze",
+  "description": "Colocation-Rechenzentren, Internet Exchanges und Netze/Carrier je Standort in Österreich aus PeeringDB. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "rechenzentren-wien",
+      "displayName": "rechenzentren",
+      "description": "Colocation-Standorte in AT",
+      "command": "peeringdb-at-cli rechenzentren --stadt Vienna --format json"
+    },
+    {
+      "name": "ix-at",
+      "displayName": "ix",
+      "description": "Internet Exchanges in AT",
+      "command": "peeringdb-at-cli ix --format json"
+    },
+    {
+      "name": "netze-am-standort",
+      "displayName": "netze-am-standort",
+      "description": "Carrier/ISPs (ASN) an einem Standort",
+      "command": "peeringdb-at-cli netze-am-standort 67 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.peeringdb.com/api",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "20 req/min/IP (anonym, PeeringDB) – CLI ≥3,1 s Pause + Cache: identische Anfragen höchstens 2x/Minute",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-aa-0002",
+    "logo": {
+      "domain": "www.peeringdb.com",
+      "file": "assets/logos/peeringdb.com.png",
+      "source": "header-logo",
+      "resolved": "https://www.peeringdb.com/s/2.83.0/pdb-logo-coloured.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1100,
+      "throughput_rps": 0.32,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "2",
+      "last_scrape": "2026-10-13T03:41:43Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "PeeringDB AT – Colocation, IX, Netze",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ],
+        "footer": "Daten: PeeringDB"
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "betreiber",
+          "stadt",
+          "asn",
+          "netze",
+          "ix",
+          "carrier"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      },
+      "map": {
+        "lat": "lat",
+        "lon": "lon"
+      }
+    },
+    "attribution": "Daten: PeeringDB",
+    "usage_policy": {
+      "zweck": [
+        "Netzbetrieb",
+        "Fehlersuche",
+        "Forschung"
+      ],
+      "verboten": [
+        "Vollexport",
+        "Kontaktabfragen (poc)",
+        "Marketing"
+      ],
+      "quelle": "https://www.peeringdb.com/aup"
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "header-logo",
+    "keywords": [
+      "peeringdb",
+      "peeringdb-at",
+      "colocation-rechenzentren",
+      "internet",
+      "exchanges",
+      "netze",
+      "carrier",
+      "asn",
+      "standort",
+      "österreich",
+      "grundlage",
+      "business-internet",
+      "fix-ip",
+      "colocation-vergleiche",
+      "colocation",
+      "opendata",
+      "rechenzentren-wien",
+      "ix-at",
+      "netze-am-standort",
+      "network quality",
+      "netzqualität",
+      "telecom",
+      "comparison",
+      "preisvergleich",
+      "price comparison",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "AMAZON-AES - Amazon.com, Inc.",
+      "asn": 14618,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:12:38Z",
+      "host": "www.peeringdb.com",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "3.229.67.113",
+      "tls_issuer": "Amazon",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://www.peeringdb.com",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:55.978Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.peeringdb.com/"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "id": "servas-ai.opencli-govuk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GOV.UK Search & Content API",
+  "description": "GOV.UK (Government Digital Service): Search-API (Seiten, Publikationen, Leitfäden) und Content-API (Metadaten einer Seite, Organisationen). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "govuk suche",
+      "command": "govuk-cli suche"
+    },
+    {
+      "name": "inhalt",
+      "displayName": "inhalt",
+      "description": "govuk inhalt",
+      "command": "govuk-cli inhalt"
+    },
+    {
+      "name": "organisationen",
+      "displayName": "organisationen",
+      "description": "govuk organisationen",
+      "command": "govuk-cli organisationen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.gov.uk/api/search.json",
+    "license": "OGL-UK-3.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.gov.uk/robots.txt: Disallow nur /*/print$ und /search/all* – /api/search.json und /api/content/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "Crown Copyright, Open Government Licence v3.0.",
+    "logo": {
+      "domain": "www.gov.uk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=www.gov.uk&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/www.gov.uk.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "GOV.UK Search & Content API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "govuk",
+      "gov",
+      "government",
+      "digital",
+      "service",
+      "search-api",
+      "seiten",
+      "publikationen",
+      "leitfäden",
+      "content-api",
+      "metadaten",
+      "seite",
+      "organisationen",
+      "content",
+      "opendata",
+      "inhalt",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "GB",
+      "scope": "country"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:38.813Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.gov.uk/"
+  }
+}

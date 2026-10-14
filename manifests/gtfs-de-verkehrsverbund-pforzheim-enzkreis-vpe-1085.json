@@ -1,0 +1,150 @@
+{
+  "id": "servas-ai.opencli-gtfs-de-verkehrsverbund-pforzheim-enzkreis-vpe-1085",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Verkehrsverbund Pforzheim-Enzkreis (VPE) (GTFS-Fahrplan)",
+  "description": "Verkehrsverbund Pforzheim-Enzkreis (VPE): offizieller GTFS-Soll-Fahrplan (Enzkreis, Baden-Württemberg, Deutschland) aus dem Mobility-Database-Katalog (mdb-1085), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten (Mobility-Database-Katalog, Gültigkeit aus feed_info/calendar)",
+      "command": "gtfs-de-verkehrsverbund-pforzheim-enzkreis-vpe-1085-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt, --q Filter)",
+      "command": "gtfs-de-verkehrsverbund-pforzheim-enzkreis-vpe-1085-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt, --q Filter)",
+      "command": "gtfs-de-verkehrsverbund-pforzheim-enzkreis-vpe-1085-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id (<id>)",
+      "command": "gtfs-de-verkehrsverbund-pforzheim-enzkreis-vpe-1085-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_timetable",
+    "realtime": false,
+    "source_url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/vpe.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.nvbw.de/robots.txt geprüft: Download-URL nicht gesperrt. Feed im Mobility Database Katalog ohne Auth gelistet (files.mobilitydatabase.org selbst ist per robots gesperrt und wird nicht genutzt).",
+    "tos": "Offene Fahrplandaten, Lizenz: https://www.nvbw.de/open-data/fahrplandaten/fahrplandaten-mit-liniennetz.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "enzkreis",
+      "verkehrsverbund pforzheim-enzkreis (vpe)",
+      "deutschland",
+      "germany"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Baden-Württemberg",
+      "city": "Enzkreis",
+      "bbox": [
+        -1.6723306,
+        48.0174717,
+        13.2797229,
+        52.5076076
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "nvbw.de",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=nvbw.de&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/nvbw.de.png",
+      "brand_domain": "www.nvbw.de"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 169,
+      "throughput_rps": 5.917,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": "2026-10-13T09:51:26.078Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Verkehrsverbund Pforzheim-Enzkreis (VPE) (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.nvbw.de/"
+  }
+}

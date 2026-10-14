@@ -1,0 +1,158 @@
+{
+  "id": "servas-ai.opencli-gtfs-gb-transport-for-greater-manche-mdb-1103",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Transport for Greater Manchester Arriva in the North West, Atlantic Travel, Bestway Travel, Belle Vue Coaches, Blackburn Private Hire, The Burnley Bus Company, Bullocks Coaches, Cumfy Bus, D&G Bus, Don Fraser Coaches Ltd, Finch Coaches, First Halifax, Calder Valley & Huddersfield, First in Greater Manchester, Little Gem, Go North West, Diamond Bus North West, Harris Travel, Hattons Transport, Hiltons Travel, High Peak, Huyton Travel, Holmeswood Coaches, Link Network, The Blackburn Bus Company, Maghull Coaches, Metrolink, Olympia Travel UK Ltd, Preston Bus, Nexus Move, Rosso, Tyrers, Stagecoach Merseyside and South Lancashire, Stagecoach in Greater Manchester, Selwyn's Travel, South Pennine C.T., Stotts, Travel Assist, Team Pennine, Viking Coaches, Vision Bus, Warrington's Own Buses (GTFS-Fahrplan)",
+  "description": "Transport for Greater Manchester Arriva in the North West, Atlantic Travel, Bestway Travel, Belle Vue Coaches, Blackburn Private Hire, The Burnley Bus Company, Bullocks Coaches, Cumfy Bus, D&G Bus, Don Fraser Coaches Ltd, Finch Coaches, First Halifax, Calder Valley & Huddersfield, First in Greater Manchester, Little Gem, Go North West, Diamond Bus North West, Harris Travel, Hattons Transport, Hiltons Travel, High Peak, Huyton Travel, Holmeswood Coaches, Link Network, The Blackburn Bus Company, Maghull Coaches, Metrolink, Olympia Travel UK Ltd, Preston Bus, Nexus Move, Rosso, Tyrers, Stagecoach Merseyside and South Lancashire, Stagecoach in Greater Manchester, Selwyn's Travel, South Pennine C.T., Stotts, Travel Assist, Team Pennine, Viking Coaches, Vision Bus, Warrington's Own Buses: offizieller GTFS-Soll-Fahrplan (Manchester, Vereinigtes Königreich) aus dem Mobility-Database-Katalog (mdb-1103), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-gb-transport-for-greater-manche-mdb-1103-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-gb-transport-for-greater-manche-mdb-1103-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-gb-transport-for-greater-manche-mdb-1103-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-gb-transport-for-greater-manche-mdb-1103-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://odata.tfgm.com/opendata/downloads/TfGMgtfsnew.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "odata.tfgm.com/robots.txt 404 → allow-all (RFC 9309)",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "manchester",
+      "transport for greater ma",
+      "vereinigtes königreich",
+      "united kingdom"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": "England",
+      "city": "Manchester",
+      "bbox": [
+        -3.01183,
+        53.255187,
+        -1.782278,
+        53.835131337
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "odata.tfgm.com",
+      "chain": [
+        "official",
+        "favicon",
+        "initials"
+      ],
+      "resolved": "https://tfgm.com/favicon-194x194.png",
+      "fallback": "initials",
+      "file": "assets/logos/odata.tfgm.com.png",
+      "brand_domain": "tfgm.com"
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Transport for Greater Manchester Arriva in the North West, Atlantic Travel, Bestway Travel, Belle Vue Coaches, Blackburn Private Hire, The Burnley Bus Company, Bullocks Coaches, Cumfy Bus, D&G Bus, Don Fraser Coaches Ltd, Finch Coaches, First Halifax, Calder Valley & Huddersfield, First in Greater Manchester, Little Gem, Go North West, Diamond Bus North West, Harris Travel, Hattons Transport, Hiltons Travel, High Peak, Huyton Travel, Holmeswood Coaches, Link Network, The Blackburn Bus Company, Maghull Coaches, Metrolink, Olympia Travel UK Ltd, Preston Bus, Nexus Move, Rosso, Tyrers, Stagecoach Merseyside and South Lancashire, Stagecoach in Greater Manchester, Selwyn's Travel, South Pennine C.T., Stotts, Travel Assist, Team Pennine, Viking Coaches, Vision Bus, Warrington's Own Buses (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://tfgm.com/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T20:09:29.444Z",
+      "robots": "allowed"
+    }
+  }
+}

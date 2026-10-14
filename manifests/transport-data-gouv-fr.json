@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-transport-data-gouv-fr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "transport.data.gouv.fr – FR Verkehrs-Datensätze",
+  "description": "Französisches nationales Verkehrs-Open-Data-Portal: Katalog der Datensätze (Titel, Typ, Lizenz, Ressourcen), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "mobility"
+  ],
+  "tags": [
+    "verkehr",
+    "frankreich",
+    "opendata",
+    "gtfs",
+    "katalog",
+    "mobility"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "transport-data-gouv-fr dataset",
+      "command": "transport-data-gouv-fr-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "mobility",
+    "realtime": false,
+    "source_url": "https://transport.data.gouv.fr/",
+    "homepage": "https://transport.data.gouv.fr/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "transport.data.gouv.fr/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "transport.data.gouv.fr: öffentlich, keyless; Lizenz je Datensatz beachten.",
+    "license": "per-item (Lizenz je Datensatz, oft ODbL/Licence Ouverte)",
+    "country": "FR",
+    "keywords": [
+      "verkehr",
+      "frankreich",
+      "opendata",
+      "gtfs",
+      "katalog",
+      "mobility"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-18",
+    "worker": "open-apis-18-2119",
+    "logo": {
+      "domain": "transport.data.gouv.fr",
+      "file": "assets/logos/transport.data.gouv.fr.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://transport.data.gouv.fr/images/logo-ministere-transports-2026-03.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:45:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "per-item (Lizenz je Datensatz, oft ODbL/Licence Ouverte)",
+        "url": "https://transport.data.gouv.fr",
+        "evidence": "https://transport.data.gouv.fr",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: transport.data.gouv.fr – FR Verkehrs-Datensätze (transport.data.gouv.fr)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "FR",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T21:45:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "transport.data.gouv.fr – FR Verkehrs-Datensätze",
+        "subtitle": "mobility",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "type"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

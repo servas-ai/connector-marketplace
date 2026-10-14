@@ -1,0 +1,186 @@
+{
+  "id": "servas-ai.opencli-parlament-ch",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Schweizer Parlament – OData Web Services",
+  "description": "Parlamentsdienste Schweiz: Personen (National-/Ständerat), Parteien und Ratsmitglieder über die offizielle OData-API. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "Parlament",
+    "Schweiz",
+    "Nationalrat",
+    "Ständerat",
+    "OData",
+    "Switzerland",
+    "parliament"
+  ],
+  "keywords": [
+    "Parlament",
+    "Schweiz",
+    "Nationalrat",
+    "Ständerat",
+    "OData",
+    "Switzerland",
+    "parliament"
+  ],
+  "homepage": "https://www.parlament.ch/de/services/open-data-webservices",
+  "license": "MIT",
+  "geo": {
+    "country": "CH",
+    "region": "Schweiz",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      5.96,
+      45.82,
+      10.49,
+      47.81
+    ],
+    "centroid": {
+      "lat": 46.8,
+      "lon": 8.2
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "personen",
+      "displayName": "personen",
+      "description": "parlament-ch personen",
+      "command": "parlament-ch-cli personen"
+    },
+    {
+      "name": "parteien",
+      "displayName": "parteien",
+      "description": "parlament-ch parteien",
+      "command": "parlament-ch-cli parteien"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "parlament-ch suche",
+      "command": "parlament-ch-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://ws.parlament.ch/odata.svc/Person",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "ws.parlament.ch/robots.txt: OData-Pfade nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Parlamentsdienste / Swiss Open Government Data; Fair Use der OData-API.",
+    "provider": "Parlamentsdienste der Schweizerischen Bundesversammlung",
+    "homepage": "https://www.parlament.ch/de/services/open-data-webservices",
+    "data_license": "Open Government Data Schweiz / Fair Use OData",
+    "keywords": [
+      "Parlament",
+      "Schweiz",
+      "Nationalrat",
+      "Ständerat",
+      "OData",
+      "Switzerland",
+      "parliament"
+    ],
+    "geo": {
+      "country": "CH",
+      "region": "Schweiz",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        5.96,
+        45.82,
+        10.49,
+        47.81
+      ],
+      "centroid": {
+        "lat": 46.8,
+        "lon": 8.2
+      }
+    },
+    "country": "CH",
+    "logo": {
+      "domain": "ws.parlament.ch",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.parlament.ch/_layouts/15/itsystems.Pd.Internet/Branding/images/favicons/apple-touch-icon-180x180.png",
+      "fallback": "initials",
+      "brand_domain": "parlament.ch",
+      "file": "assets/logos/ws.parlament.ch.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Schweizer Parlament – OData Web Services",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:40.832Z",
+      "robots": "allowed"
+    }
+  }
+}

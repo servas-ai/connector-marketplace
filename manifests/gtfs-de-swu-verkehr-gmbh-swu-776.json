@@ -1,0 +1,150 @@
+{
+  "id": "servas-ai.opencli-gtfs-de-swu-verkehr-gmbh-swu-776",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SWU Verkehr GmbH (SWU) (GTFS-Fahrplan)",
+  "description": "SWU Verkehr GmbH (SWU): offizieller GTFS-Soll-Fahrplan (Ulm, Baden-Württemberg, Deutschland) aus dem Mobility-Database-Katalog (mdb-776), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten (Mobility-Database-Katalog, Gültigkeit aus feed_info/calendar)",
+      "command": "gtfs-de-swu-verkehr-gmbh-swu-776-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt, --q Filter)",
+      "command": "gtfs-de-swu-verkehr-gmbh-swu-776-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt, --q Filter)",
+      "command": "gtfs-de-swu-verkehr-gmbh-swu-776-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id (<id>)",
+      "command": "gtfs-de-swu-verkehr-gmbh-swu-776-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_timetable",
+    "realtime": false,
+    "source_url": "https://gtfs.swu.de/daten/SWU.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gtfs.swu.de/robots.txt geprüft: Download-URL nicht gesperrt. Feed im Mobility Database Katalog ohne Auth gelistet (files.mobilitydatabase.org selbst ist per robots gesperrt und wird nicht genutzt).",
+    "tos": "Offene Fahrplandaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "ulm",
+      "swu verkehr gmbh (swu)",
+      "deutschland",
+      "germany"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Baden-Württemberg",
+      "city": "Ulm",
+      "bbox": [
+        9.878826,
+        48.299867,
+        10.030753,
+        48.45508
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "gtfs.swu.de",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=gtfs.swu.de&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/gtfs.swu.de.png",
+      "brand_domain": "gtfs.swu.de"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 149,
+      "throughput_rps": 6.711,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": "2026-10-13T09:51:17.223Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "SWU Verkehr GmbH (SWU) (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.swu.de/"
+  }
+}

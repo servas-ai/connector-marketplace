@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-kliniksuche-at",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI kliniksuche-at",
+  "description": "Krankenanstalten in Österreich über Kliniksuche.at (GÖG) finden, nach Bundesland, Träger (gemeinnützig/privat) oder Umkreis. Ohne Login. Nutze diesen Skill, wenn ein Agent Spitäler in Österreich braucht.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "adapters"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "drift",
+      "displayName": "drift",
+      "description": "Prüft das Schema der internen API gegen EXPECTED_KEYS (Drift-Test)",
+      "command": "kliniksuche-at-cli drift"
+    },
+    {
+      "name": "spitaeler",
+      "displayName": "spitaeler",
+      "description": "Krankenanstalten suchen (--bundesland, --typ, --lat/--lng/--km, --q Name/Ort)",
+      "command": "kliniksuche-at-cli spitaeler"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "adapters",
+    "realtime": false,
+    "source_url": "https://khstrukturdaten.goeg.at/backend2/KliniksucheV2/api/spitaeler",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "json_endpoint",
+    "login": false,
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS)",
+    "robots_status": "ok",
+    "robots": "robots.txt: kliniksuche.at ohne Einträge (leer), khstrukturdaten.goeg.at ohne robots.txt (404); öffentliches Backend der Website des Gesundheitsministeriums/GÖG. Nur Einzelabfragen, gedrosselt 1,5 s.",
+    "logo": {
+      "domain": "khstrukturdaten.goeg.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://khstrukturdaten.goeg.at/images/favicon/apple-touch-icon.png",
+      "fallback": "initials",
+      "file": "assets/logos/khstrukturdaten.goeg.at.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "mcp",
+      "cli",
+      "http"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2918,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "KliniksucheV2 (Website-Backend)",
+      "last_scrape": "2026-10-13T03:47:18.575Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "OpenCLI kliniksuche-at",
+        "subtitle": "adapters",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "author_bot": "Health Connector Builder",
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "kliniksuche",
+      "kliniksuche-at",
+      "krankenanstalten",
+      "österreich",
+      "gög",
+      "finden",
+      "bundesland",
+      "träger",
+      "gemeinnützig",
+      "privat",
+      "umkreis",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "spitäler",
+      "braucht",
+      "adapters",
+      "drift",
+      "spitaeler"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "XT-AS x-tention Informationstechnologie GmbH",
+      "asn": 41384,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:47:18Z",
+      "host": "khstrukturdaten.goeg.at",
+      "hoster": "XT-AS x-tention Informationstechnologie GmbH",
+      "http_status": 200,
+      "ip": "193.228.99.106",
+      "server_header": "Microsoft-IIS/10.0",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://khstrukturdaten.goeg.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:35.878Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://khstrukturdaten.goeg.at/"
+  }
+}

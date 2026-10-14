@@ -1,0 +1,171 @@
+{
+  "id": "servas-ai.opencli-polyu-research-data",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "PolyU Research Data Repository – Hong Kong Polytechnic University (Dataverse)",
+  "description": "PolyU Research Data Repository: Open-Access-Forschungsdaten der Hong Kong Polytechnic University (Ingenieurwesen, GNSS, Biomedizin, Design). Zugriff über die offizielle Dataverse-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Hongkong",
+    "Universität",
+    "The Hong Kong Polytechnic University"
+  ],
+  "keywords": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Hongkong",
+    "Universität",
+    "The Hong Kong Polytechnic University"
+  ],
+  "homepage": "https://www.polyu.edu.hk/",
+  "license": "MIT",
+  "geo": {
+    "country": "HK",
+    "region": null,
+    "city": "Hongkong",
+    "scope": "institution"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "polyu-research-data neu",
+      "command": "polyu-research-data-cli neu"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "polyu-research-data suche",
+      "command": "polyu-research-data-cli suche"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "polyu-research-data dataset",
+      "command": "polyu-research-data-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://researchdata.lib.polyu.edu.hk/api/search",
+    "homepage": "https://www.polyu.edu.hk/",
+    "portal": "https://researchdata.lib.polyu.edu.hk/",
+    "provider": "The Hong Kong Polytechnic University (PolyU) Library",
+    "keywords": [
+      "Dataverse",
+      "Forschungsdaten",
+      "research data",
+      "open data",
+      "Repositorium",
+      "DOI",
+      "Hongkong",
+      "Universität",
+      "The Hong Kong Polytechnic University"
+    ],
+    "geo": {
+      "country": "HK",
+      "region": null,
+      "city": "Hongkong",
+      "scope": "global"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "researchdata.lib.polyu.edu.hk/robots.txt (HTTP 200): /api/search und /api/datasets/:persistentId nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "The Hong Kong Polytechnic University (PolyU) Library: öffentliche Dataverse Native/Search API ohne Key/Login (nur veröffentlichte Datensätze); Fair Use.",
+    "logo": {
+      "domain": "researchdata.lib.polyu.edu.hk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.polyu.edu.hk/assets/img/main-logo-1x.png",
+      "fallback": "initials",
+      "file": "assets/logos/researchdata.lib.polyu.edu.hk.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dataverse-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "PolyU Research Data Repository – Hong Kong Polytechnic University (Dataverse)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "HK",
+    "ampel": "grün",
+    "license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "data_license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "logo_source": "official-site",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:08:05.901Z",
+      "robots": "allowed"
+    }
+  }
+}

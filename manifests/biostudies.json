@@ -1,0 +1,181 @@
+{
+  "id": "servas-ai.opencli-biostudies",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "EBI BioStudies",
+  "description": "EBI BioStudies: Suche nach Studien, Papers und Publikationen (Metadaten: Titel, Autoren, Jahr, DOI, URL, Abstract wo erlaubt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "generic"
+  ],
+  "tags": [
+    "wissenschaft",
+    "publikationen",
+    "studien",
+    "papers"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "search",
+      "displayName": "search",
+      "description": "biostudies search",
+      "command": "biostudies-cli search"
+    },
+    {
+      "name": "get",
+      "displayName": "get",
+      "description": "biostudies get",
+      "command": "biostudies-cli get"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "kind": "publication",
+    "realtime": false,
+    "source_url": "https://www.ebi.ac.uk/biostudies",
+    "homepage": "https://www.ebi.ac.uk/biostudies/",
+    "country": "INT",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1 s",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "keywords": [
+      "biostudies",
+      "ebi",
+      "studien",
+      "paper-suche",
+      "titel",
+      "autoren",
+      "jahr",
+      "doi",
+      "url",
+      "abstract",
+      "erlaubt",
+      "ausgabe",
+      "servas",
+      "record",
+      "type",
+      "generic",
+      "kind",
+      "publication",
+      "nutze",
+      "diesen",
+      "skill",
+      "wissenschaftliche",
+      "literaturrecherche",
+      "papers",
+      "publikationen",
+      "metadaten",
+      "international",
+      "publications",
+      "research",
+      "wissenschaft"
+    ],
+    "geo": {
+      "country": "GB",
+      "scope": "country"
+    },
+    "logo": {
+      "domain": "www.ebi.ac.uk",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=www.ebi.ac.uk&sz=128",
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "BioStudies API v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "EBI BioStudies",
+        "subtitle": "publication",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "authors",
+          "year",
+          "doi"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "JANET Jisc Services Limited",
+      "asn": 786,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:35:50Z",
+      "host": "www.ebi.ac.uk",
+      "hoster": "JANET Jisc Services Limited",
+      "http_status": 200,
+      "ip": "193.62.193.80",
+      "server_header": "Apache",
+      "tls_issuer": "Sectigo Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://www.ebi.ac.uk",
+      "country": "GB"
+    },
+    "license": "CC-BY-4.0",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:31.906Z",
+      "robots": "allowed"
+    }
+  }
+}

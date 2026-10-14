@@ -1,0 +1,182 @@
+{
+  "id": "servas-ai.opencli-mtender-md",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "MTender – Öffentliche Vergaben Moldau (OCDS)",
+  "description": "MTender Public API (Republik Moldau, OCDS 1.1): Feed neuer Vergabeverfahren und Budgets sowie Vergabe-Records nach OCID mit Titel, Status, Wert und Beteiligten – keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "vergabe"
+  ],
+  "tags": [
+    "moldau",
+    "moldova",
+    "vergabe",
+    "procurement",
+    "ocds",
+    "mtender",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "tender",
+      "displayName": "tender",
+      "description": "mtender-md tender",
+      "command": "mtender-md-cli tender"
+    },
+    {
+      "name": "budgets",
+      "displayName": "budgets",
+      "description": "mtender-md budgets",
+      "command": "mtender-md-cli budgets"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "vergabe",
+    "realtime": false,
+    "source_url": "https://public.mtender.gov.md/",
+    "homepage": "https://public.mtender.gov.md/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "public.mtender.gov.md/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "MTender Public API: öffentlich, ohne Key; Fair-Use, Drossel.",
+    "license": "terms-of-source (MTender Open Data, Open-Definition-konform)",
+    "country": "MD",
+    "keywords": [
+      "moldau",
+      "moldova",
+      "vergabe",
+      "procurement",
+      "ocds",
+      "mtender",
+      "opendata"
+    ],
+    "geo": {
+      "country": "MD",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Company-Data-0404",
+    "worker": "company-data-0404",
+    "logo": {
+      "domain": "public.mtender.gov.md",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ocds-1.1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T04:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (MTender Open Data, Open-Definition-konform)",
+        "url": "https://public.mtender.gov.md/",
+        "evidence": "https://public.mtender.gov.md/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: MTender – Öffentliche Vergaben Moldau (OCDS) (public.mtender.gov.md)",
+      "personal_data": "company",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "MD",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Firmen-/Arbeitgeberangaben enthalten (keine Privatpersonen)"
+        ]
+      },
+      "checked_at": "2026-10-14T04:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "MTender – Öffentliche Vergaben Moldau (OCDS)",
+        "subtitle": "vergabe",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "datum"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "id": "servas-ai.opencli-bixi-montreal",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BIXI Montréal – GBFS",
+  "description": "GBFS-Feed (BIXI Montréal – GBFS): Stationen mit Standort/Kapazität und Echtzeit-Verfügbarkeit von Rädern und freien Stellplätzen.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "bikesharing",
+    "bike sharing",
+    "leihrad",
+    "rental bike",
+    "fahrrad",
+    "bicycle",
+    "mobilität",
+    "mobility"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feeds",
+      "displayName": "feeds",
+      "description": "Verfügbare GBFS-Feeds",
+      "command": "bixi-montreal-cli feeds"
+    },
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Einzelnen Feed roh als Zeilen (<name>)",
+      "command": "bixi-montreal-cli feed"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen (station_information)",
+      "command": "bixi-montreal-cli stationen"
+    },
+    {
+      "name": "verfuegbarkeit",
+      "displayName": "verfuegbarkeit",
+      "description": "Echtzeit-Verfügbarkeit (station_status)",
+      "command": "bixi-montreal-cli verfuegbarkeit"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "realtime": true,
+    "source_url": "https://gbfs.velobixi.com/gbfs/gbfs.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gbfs.velobixi.com/robots.txt: GBFS-Pfade nicht gesperrt. Offener GBFS-Feed (General Bikeshare Feed Specification), 1 req/2 s.",
+    "tos": "BIXI Montréal: offener GBFS-Feed (Open Data).",
+    "keywords": [
+      "bikesharing",
+      "bike sharing",
+      "leihrad",
+      "rental bike",
+      "fahrrad",
+      "bicycle",
+      "mobilität",
+      "mobility",
+      "gbfs",
+      "station",
+      "verfügbarkeit",
+      "availability",
+      "verkehr",
+      "transport",
+      "montreal",
+      "echtzeit"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": null,
+      "city": "Montreal",
+      "bbox": [
+        -73.75,
+        45.4,
+        -73.47,
+        45.7
+      ],
+      "lat": 45.5,
+      "lon": -73.57,
+      "scope": "city"
+    },
+    "wave": "Open-APIs-6",
+    "worker": "worker-ma4",
+    "logo": {
+      "domain": "gbfs.velobixi.com",
+      "file": "assets/logos/gbfs.velobixi.com.png",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ca/0d/10/ca0d100b-5225-2f51-26e2-758a962c803a/Placeholder.mill/512x512bb.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials",
+      "app": "BIXI",
+      "developer": "Lyft Bikes and Scooters, LLC"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1,
+      "latenz_ms": 5997,
+      "throughput_rps": 0.167,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T09:24:17.505Z",
+      "datenqualitaet": 1
+    },
+    "openui": {
+      "card": {
+        "title": "BIXI Montréal – GBFS",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "name",
+          "raeder",
+          "frei",
+          "kapazitaet"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "CA",
+    "homepage": "https://bixi.com",
+    "operator": {
+      "name": "BIXI Montréal",
+      "country": "CA",
+      "source": "x-servas.operator (vorher String; quality-v-2146 als Objekt normalisiert)"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:59.908Z",
+      "robots": "allowed"
+    }
+  }
+}

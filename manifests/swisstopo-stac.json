@@ -1,0 +1,146 @@
+{
+  "id": "servas-ai.opencli-swisstopo-stac",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "swisstopo STAC-Datenkatalog (data.geo.admin.ch)",
+  "description": "Bundesgeodaten Schweiz: STAC-Katalog von data.geo.admin.ch (Collections wie swissALTI3D, SWISSIMAGE) inkl. Lizenz und Ausdehnung. Ohne Key. Ergänzt geo-admin-ch (Suche).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "collections",
+      "displayName": "collections",
+      "description": "STAC-Collections (--limit)",
+      "command": "swisstopo-stac-cli collections"
+    },
+    {
+      "name": "collection",
+      "displayName": "collection",
+      "description": "Collection per ID (<id>)",
+      "command": "swisstopo-stac-cli collection"
+    },
+    {
+      "name": "items",
+      "displayName": "items",
+      "description": "Items einer Collection (<id>, --limit)",
+      "command": "swisstopo-stac-cli items"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "geo",
+    "realtime": false,
+    "source_url": "https://data.geo.admin.ch/api/stac/v0.9/collections",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.geo.admin.ch: kein robots.txt (404). Offizielle STAC-API des Bundes, Drossel ≥2 s, keine Asset-Downloads.",
+    "tos": "Bundesgeodaten: Open Government Data (freie Nutzung, Quellenangabe).",
+    "keywords": [
+      "swisstopo",
+      "stac",
+      "swisstopo-stac",
+      "bundesgeodaten",
+      "schweiz",
+      "stac-katalog",
+      "geo",
+      "admin",
+      "collections",
+      "wie",
+      "swissalti3d",
+      "swissimage",
+      "lizenz",
+      "ausdehnung",
+      "ergänzt",
+      "geo-admin-ch",
+      "stac-datenkatalog",
+      "collection",
+      "items",
+      "geodaten",
+      "geodata",
+      "maps"
+    ],
+    "geo": {
+      "country": "CH",
+      "scope": "country",
+      "bbox": [
+        5.96,
+        45.82,
+        10.49,
+        47.81
+      ]
+    },
+    "logo": {
+      "domain": "data.geo.admin.ch",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2c/4c/45/2c4c45a4-b71f-d0cd-04d1-6a87d69832ca/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/512x512bb.jpg",
+      "file": "assets/logos/data.geo.admin.ch.png",
+      "brand_domain": "geo.admin.ch",
+      "source": "appstore"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3489,
+      "throughput_rps": 0.287,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "STAC 0.9",
+      "last_scrape": "2026-10-13T09:08:08.235Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "swisstopo STAC-Datenkatalog (data.geo.admin.ch)",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "CH",
+    "homepage": "https://www.swisstopo.admin.ch",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:01.764Z",
+      "robots": "allowed"
+    }
+  }
+}

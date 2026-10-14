@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-freedictionary",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Free Dictionary API",
+  "description": "Free Dictionary API: englische Wortbedeutungen, Phonetik und Beispiele. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Dictionary",
+    "Englisch",
+    "Wörterbuch",
+    "Phonetik",
+    "definitions"
+  ],
+  "keywords": [
+    "Dictionary",
+    "Englisch",
+    "Wörterbuch",
+    "Phonetik",
+    "definitions"
+  ],
+  "homepage": "https://dictionaryapi.dev/",
+  "license": "MIT",
+  "geo": {
+    "country": null,
+    "region": "weltweit",
+    "city": null,
+    "coverage": "global",
+    "bbox": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "centroid": null
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "eintrag",
+      "displayName": "eintrag",
+      "description": "freedictionary eintrag",
+      "command": "freedictionary-cli eintrag"
+    },
+    {
+      "name": "bedeutungen",
+      "displayName": "bedeutungen",
+      "description": "freedictionary bedeutungen",
+      "command": "freedictionary-cli bedeutungen"
+    },
+    {
+      "name": "phonetik",
+      "displayName": "phonetik",
+      "description": "freedictionary phonetik",
+      "command": "freedictionary-cli phonetik"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.dictionaryapi.dev/api/v2/entries/en/hello",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.dictionaryapi.dev/robots.txt: API erlaubt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Free Dictionary API (community); Fair Use.",
+    "provider": "Free Dictionary API",
+    "homepage": "https://dictionaryapi.dev/",
+    "data_license": "Community Free Dictionary API",
+    "keywords": [
+      "Dictionary",
+      "Englisch",
+      "Wörterbuch",
+      "Phonetik",
+      "definitions"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "weltweit",
+      "city": null,
+      "coverage": "global",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "centroid": null,
+      "scope": "global"
+    },
+    "logo": {
+      "domain": "api.dictionaryapi.dev",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://dictionaryapi.dev/favicon.ico",
+      "fallback": "initials",
+      "brand_domain": "dictionaryapi.dev",
+      "file": "assets/logos/api.dictionaryapi.dev.png",
+      "source": "official-site",
+      "source_kind": "favicon.ico"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Free Dictionary API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:55.269Z",
+      "robots": "refused"
+    }
+  }
+}

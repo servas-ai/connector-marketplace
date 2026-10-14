@@ -1,0 +1,188 @@
+{
+  "id": "servas-ai.opencli-cos-gis-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Colorado Springs GIS Open Data (ArcGIS Hub)",
+  "description": "Colorado Springs GIS Open Data: Datensatz-Katalog der ArcGIS-Hub-Instanz (OGC API Records). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ArcGIS",
+    "Hub",
+    "Open Data",
+    "GIS",
+    "OGC",
+    "Katalog",
+    "US",
+    "City"
+  ],
+  "keywords": [
+    "ArcGIS",
+    "Hub",
+    "Open Data",
+    "GIS",
+    "OGC",
+    "Katalog",
+    "US",
+    "City"
+  ],
+  "homepage": "https://data-cos-gis.opendata.arcgis.com/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Vereinigte Staaten",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      -125.0,
+      24.4,
+      -66.9,
+      49.4
+    ],
+    "centroid": {
+      "lat": 39.8,
+      "lon": -98.6
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "cos-gis-hub suche",
+      "command": "cos-gis-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "cos-gis-hub neu",
+      "command": "cos-gis-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "cos-gis-hub datensatz",
+      "command": "cos-gis-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data-cos-gis.opendata.arcgis.com/api/search/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data-cos-gis.opendata.arcgis.com/robots.txt: /api/search nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "City of Colorado Springs ArcGIS Hub Open Data, öffentliche OGC API Records ohne Key; Fair Use.",
+    "provider": "City of Colorado Springs",
+    "homepage": "https://data-cos-gis.opendata.arcgis.com/",
+    "data_license": "Open Data (je Dataset / Terms of Use)",
+    "keywords": [
+      "ArcGIS",
+      "Hub",
+      "Open Data",
+      "GIS",
+      "OGC",
+      "Katalog",
+      "US",
+      "City"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Vereinigte Staaten",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        -125.0,
+        24.4,
+        -66.9,
+        49.4
+      ],
+      "centroid": {
+        "lat": 39.8,
+        "lon": -98.6
+      }
+    },
+    "logo": {
+      "domain": "data-cos-gis.opendata.arcgis.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://cos-gis.maps.arcgis.com/sharing/rest/content/items/2b745ee0af154d01b9a99eb881b16dde/data",
+      "fallback": "initials",
+      "brand_domain": "coloradosprings.gov",
+      "file": "assets/logos/data-cos-gis.opendata.arcgis.com.png",
+      "source": "official-site",
+      "source_kind": "og:image"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Colorado Springs GIS Open Data (ArcGIS Hub)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T14:26:40.837Z",
+      "robots": "allowed"
+    }
+  }
+}

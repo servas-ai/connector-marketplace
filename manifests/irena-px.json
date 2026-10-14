@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-irena-px",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "IRENASTAT – IRENA Statistikdatenbank (PxWeb)",
+  "description": "pxweb.irena.org PxWeb: IRENA: erneuerbare Energien Statistikdatenbank (PxWeb) – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "irena-px katalog",
+      "command": "irena-px-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "irena-px info",
+      "command": "irena-px-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "IRENA",
+    "renewable",
+    "Energie",
+    "energy",
+    "PxWeb",
+    "Statistik",
+    "Open Data"
+  ],
+  "geo": {
+    "country": "INT",
+    "region": "World",
+    "city": "Abu Dhabi",
+    "lat": 24.45,
+    "lon": 54.38,
+    "scope": "global",
+    "bbox": null
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://pxweb.irena.org/api/v1/en/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "pxweb.irena.org/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+    "tos": "IRENASTAT – IRENA Statistikdatenbank: öffentliche PxWeb-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe pxweb.irena.org.",
+    "keywords": [
+      "IRENA",
+      "renewable",
+      "Energie",
+      "energy",
+      "PxWeb",
+      "Statistik",
+      "Open Data"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "World",
+      "city": "Abu Dhabi",
+      "lat": 24.45,
+      "lon": 54.38,
+      "scope": "global",
+      "bbox": null
+    },
+    "country": "INT",
+    "logo": {
+      "domain": "pxweb.irena.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "IRENASTAT – IRENA Statistikdatenbank (PxWeb)",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-14T02:20:00Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://pxweb.irena.org/",
+    "wave": "orch-wave-0030",
+    "worker": "orch-wave-0030"
+  }
+}

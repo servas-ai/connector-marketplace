@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-heroku-status",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Heroku Status – Systeme, Incidents & Wartung",
+  "description": "Heroku Status API v4: Ampelstatus je System (Apps, Data, Tools), aktive Incidents, geplante Wartungen und Incident-Historie, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "status",
+    "paas",
+    "stoerung",
+    "incident",
+    "wartung",
+    "heroku",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "incidents",
+      "displayName": "incidents",
+      "description": "heroku-status incidents",
+      "command": "heroku-status-cli incidents"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://status.heroku.com/",
+    "homepage": "https://status.heroku.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "status.heroku.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Heroku Status API v4: öffentlich, keyless; Salesforce/Heroku Terms.",
+    "license": "terms-of-source (Heroku/Salesforce Terms)",
+    "country": "US",
+    "keywords": [
+      "status",
+      "paas",
+      "stoerung",
+      "incident",
+      "wartung",
+      "heroku",
+      "tech"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-16",
+    "worker": "open-apis-16-2022",
+    "logo": {
+      "domain": "status.heroku.com",
+      "file": "assets/logos/status.heroku.com.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://status.heroku.com/images/apple-touch-icon-152x152.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v4",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:00:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Heroku/Salesforce Terms)",
+        "url": "https://www.salesforce.com/company/legal/",
+        "evidence": "https://www.salesforce.com/company/legal/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Heroku Status – Systeme, Incidents & Wartung (status.heroku.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle"
+        ]
+      },
+      "checked_at": "2026-10-13T21:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Heroku Status – Systeme, Incidents & Wartung",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "system",
+          "status"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-bcra-cotizaciones",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BCRA – Wechselkurse Zentralbank Argentinien",
+  "description": "Banco Central de la República Argentina, API Estadísticas Cambiarias v1.0: offizielle Devisenkurse (tipo de pase/cotización) je Tag und Zeitreihen je Währung, keyless.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "argentinien",
+    "zentralbank",
+    "bcra",
+    "wechselkurs",
+    "peso",
+    "devisen",
+    "finanzen",
+    "statistik"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "reihe",
+      "displayName": "reihe",
+      "description": "bcra-cotizaciones reihe",
+      "command": "bcra-cotizaciones-cli reihe"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://api.bcra.gob.ar/",
+    "homepage": "https://api.bcra.gob.ar/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.bcra.gob.ar/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "BCRA: öffentliche Statistik-API (keyless), Quelle BCRA angeben.",
+    "license": "terms-of-source (BCRA, offizielle Statistik)",
+    "country": "AR",
+    "keywords": [
+      "argentinien",
+      "zentralbank",
+      "bcra",
+      "wechselkurs",
+      "peso",
+      "devisen",
+      "finanzen",
+      "statistik"
+    ],
+    "geo": {
+      "country": "AR",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-9",
+    "worker": "open-apis-9-1506",
+    "logo": {
+      "domain": "api.bcra.gob.ar",
+      "file": "assets/logos/api.bcra.gob.ar.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://www.bcra.gob.ar/wp-content/uploads/cropped-favicon-bcra-270x270.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1.0",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://www.bcra.gob.ar/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:14:35.447Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (BCRA, offizielle Statistik)",
+        "url": "https://www.bcra.gob.ar/",
+        "evidence": "https://www.bcra.gob.ar/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: BCRA – Wechselkurse Zentralbank Argentinien (api.bcra.gob.ar)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "BCRA – Wechselkurse Zentralbank Argentinien",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "waehrung",
+          "cotizacion"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

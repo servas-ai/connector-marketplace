@@ -1,0 +1,210 @@
+{
+  "id": "servas-ai.opencli-openrouter-models",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenRouter – Modelle & Preise",
+  "description": "OpenRouter LLM-Modellkatalog über die öffentliche API ohne Key: Preise pro 1 Mio. Tokens, Kontextlänge, Modalitäten, Anbieter-Endpunkte mit Uptime, Inferenz-Anbieter. Nutze den Skill für LLM-Preisvergleiche.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "modelle",
+      "displayName": "modelle",
+      "description": "openrouter-models modelle",
+      "command": "openrouter-models-cli modelle"
+    },
+    {
+      "name": "endpunkte",
+      "displayName": "endpunkte",
+      "description": "openrouter-models endpunkte",
+      "command": "openrouter-models-cli endpunkte"
+    },
+    {
+      "name": "anbieter",
+      "displayName": "anbieter",
+      "description": "openrouter-models anbieter",
+      "command": "openrouter-models-cli anbieter"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": true,
+    "source_url": "https://openrouter.ai/api/v1/models",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "openrouter.ai/robots.txt: User-Agent * Allow / (nur /seo/ gesperrt). /api/v1/models, /api/v1/models/{id}/endpoints und /api/v1/providers laut API-Doku ohne Auth. Drossel ≥2 s, Abbruch bei 403/429.",
+    "tos": "OpenRouter-API-Doku: Modell-Liste öffentlich; Connector macht keine Completions (die bräuchten einen Key).",
+    "logo": {
+      "domain": "openrouter.ai",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://openrouter.ai/apple-touch-icon.png",
+      "fallback": "initials",
+      "file": "assets/logos/openrouter.ai.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2155,
+      "throughput_rps": 0.464,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T05:07:45.176Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "OpenRouter – Modelle & Preise",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "prompt_usd_1m"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "openrouter",
+      "models",
+      "openrouter-models",
+      "llm-modellkatalog",
+      "preise",
+      "mio",
+      "tokens",
+      "kontextlänge",
+      "modalitäten",
+      "anbieter-endpunkte",
+      "uptime",
+      "inferenz-anbieter",
+      "nutze",
+      "skill",
+      "llm-preisvergleiche",
+      "modelle",
+      "tech",
+      "endpunkte",
+      "anbieter",
+      "comparison",
+      "preisvergleich",
+      "price comparison",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": "https://openrouter.ai/llms.txt",
+      "llms_full": "https://openrouter.ai/llms-full.txt",
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:42.479Z",
+      "robots": "allowed",
+      "access_chain_hints": [
+        {
+          "title": "Quickstart",
+          "url": "https://openrouter.ai/docs/quickstart.md"
+        },
+        {
+          "title": "API reference",
+          "url": "https://openrouter.ai/docs/api-reference/overview.md"
+        },
+        {
+          "title": "Docs index",
+          "url": "https://openrouter.ai/docs/llms.txt"
+        },
+        {
+          "title": "Full docs",
+          "url": "https://openrouter.ai/docs/llms-full.txt"
+        },
+        {
+          "title": "Limits",
+          "url": "https://openrouter.ai/docs/api-reference/limits.md"
+        },
+        {
+          "title": "Free variant",
+          "url": "https://openrouter.ai/docs/guides/routing/model-variants/free.md"
+        },
+        {
+          "title": "Free models router",
+          "url": "https://openrouter.ai/docs/guides/routing/routers/free-router.md"
+        },
+        {
+          "title": "FAQ",
+          "url": "https://openrouter.ai/docs/faq.md"
+        },
+        {
+          "title": "Model API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "title": "Ori Eval docs",
+          "url": "https://openrouter.ai/docs/guides/ori/eval.md"
+        },
+        {
+          "title": "Ori Harness docs",
+          "url": "https://openrouter.ai/docs/guides/ori/harness.md"
+        },
+        {
+          "title": "GET /api/v1/benchmarks",
+          "url": "https://openrouter.ai/api/v1/benchmarks"
+        },
+        {
+          "title": "Benchmarks API reference",
+          "url": "https://openrouter.ai/docs/api/api-reference/benchmarks/list-benchmarks"
+        }
+      ]
+    },
+    "homepage": "https://openrouter.ai/"
+  }
+}

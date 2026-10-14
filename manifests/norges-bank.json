@@ -1,0 +1,137 @@
+{
+  "id": "servas-ai.opencli-norges-bank",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Norges Bank – Kurse & Leitzins",
+  "description": "NOK-Wechselkurse und Leitzins der Norges Bank über die offene SDMX-API. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kurse",
+      "displayName": "kurse",
+      "description": "norges-bank kurse",
+      "command": "norges-bank-cli kurse"
+    },
+    {
+      "name": "leitzins",
+      "displayName": "leitzins",
+      "description": "norges-bank leitzins",
+      "command": "norges-bank-cli leitzins"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://data.norges-bank.no/api",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "refused",
+    "robots": "data.norges-bank.no/robots.txt: robots.txt HTTP 403 → fail-closed (#475): Datenabruf über kanonisches lib/robots.js gesperrt, Retry später (Audit quality-w-2215). Gedrosselt ≥1,1 s.",
+    "logo": {
+      "domain": "data.norges-bank.no",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.norges-bank.no/Static/NorgesBank/Vectors/norges-bank-logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/data.norges-bank.no.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2895,
+      "throughput_rps": 0.345,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "SDMX",
+      "last_scrape": "2026-10-13T04:11:05.806Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Norges Bank – Kurse & Leitzins",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "kurs_nok"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "NO",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "norges",
+      "bank",
+      "norges-bank",
+      "nok-wechselkurse",
+      "leitzins",
+      "offene",
+      "sdmx-api",
+      "kurse",
+      "finance",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "NO",
+      "scope": "country"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:28.142Z",
+      "robots": "refused"
+    },
+    "homepage": "https://www.norges-bank.no/"
+  }
+}

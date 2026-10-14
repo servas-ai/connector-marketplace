@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-oenb-basiszinssatz",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OeNB – Basis-/Referenzzinssatz",
+  "description": "OeNB Basis- und Referenzzinssatz Report 2.1",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "aktuell",
+      "displayName": "aktuell",
+      "description": "OeNB – Basis-/Referenzzinssatz: aktuell",
+      "command": "oenb-basiszinssatz-cli aktuell --format json"
+    },
+    {
+      "name": "historisch",
+      "displayName": "historisch",
+      "description": "OeNB – Basis-/Referenzzinssatz: historisch",
+      "command": "oenb-basiszinssatz-cli historisch --limit 20 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://www.oenb.at/isawebstat/stabfrage/createReport?lang=DE&report=2.1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "html",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host (OPENCLI_DELAY_MS, nicht unterschreiten)",
+    "robots_status": "ok",
+    "robots": "www.oenb.at/robots.txt: HTTP 404 (keine Sperre).",
+    "logo": {
+      "domain": "www.oenb.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.oenb.at/dam/jcr:40206280-9b8c-4290-ab86-920c683d469d/OENB_Logo_Gesamt.svg",
+      "fallback": "initials",
+      "file": "assets/logos/www.oenb.at.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "0.1.0",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "OeNB – Basis-/Referenzzinssatz",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "oenb",
+      "basiszinssatz",
+      "oenb-basiszinssatz",
+      "basis",
+      "referenzzinssatz",
+      "report",
+      "historie",
+      "nicht",
+      "generische",
+      "zeitreihen-api",
+      "finance",
+      "historisch",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "ASN-OENB-AT Oesterreichische Nationalbank",
+      "asn": 13042,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:26:12Z",
+      "host": "www.oenb.at",
+      "hoster": "ASN-OENB-AT Oesterreichische Nationalbank",
+      "http_status": 200,
+      "ip": "212.39.192.43",
+      "server_header": "Apache",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.oenb.at/serviceportal/impressum-und-haftung.html?tab=page-child-822a2426-7ecf-4c15-b234-5d8e0e60784b",
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://www.oenb.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:53.174Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.oenb.at/"
+  }
+}

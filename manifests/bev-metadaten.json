@@ -1,0 +1,157 @@
+{
+  "id": "servas-ai.opencli-bev-metadaten",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BEV Geodaten-Metadatenkatalog (CSW/INSPIRE)",
+  "description": "BEV (Bundesamt für Eich- und Vermessungswesen): INSPIRE-Metadatenkatalog (GeoNetwork-CSW) – Datensätze und Dienste suchen. Ohne Key. Ergänzt bev-adressregister.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datensaetze",
+      "displayName": "datensaetze",
+      "description": "Metadatensätze (--limit, --q TEXT)",
+      "command": "bev-metadaten-cli datensaetze"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "Metadatensatz per ID (<id>)",
+      "command": "bev-metadaten-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "record_kind": "geo",
+    "realtime": false,
+    "source_url": "https://data.bev.gv.at/geonetwork/srv/eng/csw",
+    "license": "CC-BY-4.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.bev.gv.at/robots.txt: Disallow nur /download – CSW erlaubt. INSPIRE-Dienst, Drossel ≥2 s.",
+    "tos": "BEV: Metadaten frei (INSPIRE), Daten CC BY 4.0.",
+    "keywords": [
+      "bev",
+      "metadaten",
+      "bev-metadaten",
+      "bundesamt",
+      "eich",
+      "vermessungswesen",
+      "inspire-metadatenkatalog",
+      "geonetwork-csw",
+      "datensätze",
+      "dienste",
+      "suchen",
+      "ergänzt",
+      "bev-adressregister",
+      "geodaten-metadatenkatalog",
+      "csw",
+      "inspire",
+      "geo",
+      "datensaetze",
+      "datensatz",
+      "geodaten",
+      "geodata",
+      "maps",
+      "registry",
+      "firmenbuch",
+      "company register"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "country": "AT",
+    "logo": {
+      "domain": "data.bev.gv.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.bev.gv.at/dam/jcr:f1894887-6cb9-46ae-a819-0069335e9ab9/Bundesamt-Eich-und-Vermessungswesen_Logo_srgb.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.bev.gv.at.png",
+      "brand_domain": "bev.gv.at",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3821,
+      "throughput_rps": 0.262,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "CSW 2.0.2",
+      "last_scrape": "2026-10-13T09:05:13.948Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "BEV Geodaten-Metadatenkatalog (CSW/INSPIRE)",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:18.505Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://www.bev.gv.at/"
+  }
+}

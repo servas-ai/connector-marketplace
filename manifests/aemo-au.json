@@ -1,0 +1,162 @@
+{
+  "id": "servas-ai.opencli-aemo-au",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "AEMO – NEM Echtzeit (Australien)",
+  "description": "5-Minuten-Spotpreise, Last und Austausch je Region des australischen Strommarkts NEM vom Marktbetreiber AEMO. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "nem-alle",
+      "displayName": "nem",
+      "description": "AEMO – NEM Echtzeit (Australien): nem",
+      "command": "aemo-au-cli nem --format json"
+    },
+    {
+      "name": "nem-vic",
+      "displayName": "nem",
+      "description": "AEMO – NEM Echtzeit (Australien): nem",
+      "command": "aemo-au-cli nem --region VIC1 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://visualisations.aemo.com.au",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-y-2302",
+    "logo": {
+      "domain": "visualisations.aemo.com.au",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/89/0a/13/890a13d9-da75-f66b-87d1-2cfa7ed96854/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "file": "assets/logos/visualisations.aemo.com.au.png",
+      "source": "appstore",
+      "developer": "AEMO"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1748,
+      "throughput_rps": 0.9,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ELEC_NEM_SUMMARY",
+      "last_scrape": "2026-10-13T04:24:54Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "AEMO – NEM Echtzeit (Australien)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "region",
+          "zeit",
+          "preis_aud_mwh",
+          "status",
+          "last_mw"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AU",
+    "ampel": "grün",
+    "license": "AEMO Copyright Permissions – Nutzung mit Quellenangabe",
+    "logo_source": null,
+    "keywords": [
+      "aemo",
+      "aemo-au",
+      "minuten-spotpreise",
+      "last",
+      "austausch",
+      "region",
+      "australischen",
+      "strommarkts",
+      "nem",
+      "vom",
+      "marktbetreiber",
+      "echtzeit",
+      "australien",
+      "international",
+      "nem-alle",
+      "nem-vic",
+      "electricity",
+      "power",
+      "energie",
+      "energy"
+    ],
+    "geo": {
+      "country": "AU",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:35:06Z",
+      "host": "visualisations.aemo.com.au",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "13.210.187.57",
+      "server_header": "Microsoft-IIS/8.5",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://visualisations.aemo.com.au",
+      "country": "AU"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:53.469Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://visualisations.aemo.com.au/"
+  }
+}

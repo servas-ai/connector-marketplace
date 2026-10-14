@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-receitaws-br",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ReceitaWS – Brasilianische Firmen (CNPJ)",
+  "description": "ReceitaWS Public API: Firmendaten Brasiliens nach CNPJ (Razão Social, Situação, CNAE, Adresse, QSA), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "brasilien",
+    "cnpj",
+    "firmen",
+    "register",
+    "receita",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "demo",
+      "displayName": "demo",
+      "description": "receitaws-br demo",
+      "command": "receitaws-br-cli demo"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://receitaws.com.br/",
+    "homepage": "https://receitaws.com.br/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "receitaws.com.br/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "ReceitaWS: öffentliche CNPJ-API ohne Key (Rate-Limit beachten); personenbezogene QSA-Felder kennzeichnen; Fair-Use.",
+    "license": "terms-of-source (ReceitaWS; Quelle Receita Federal Open Data)",
+    "country": "BR",
+    "keywords": [
+      "brasilien",
+      "cnpj",
+      "firmen",
+      "register",
+      "receita",
+      "opendata"
+    ],
+    "geo": {
+      "country": "BR",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Company-Data-0318",
+    "worker": "company-data-0318",
+    "logo": {
+      "domain": "receitaws.com.br",
+      "file": "assets/logos/receitaws.com.br.png",
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:45:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (ReceitaWS; Quelle Receita Federal Open Data)",
+        "url": "https://developers.receitaws.com.br/",
+        "evidence": "https://developers.receitaws.com.br/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: ReceitaWS – Brasilianische Firmen (CNPJ) (receitaws.com.br)",
+      "personal_data": "check",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": "BR",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Personenbezug prüfen",
+          "kommerzieller Betreiber, Terms der Quelle"
+        ]
+      },
+      "checked_at": "2026-10-14T03:45:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "ReceitaWS – Brasilianische Firmen (CNPJ)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "situacao"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

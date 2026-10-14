@@ -1,0 +1,163 @@
+{
+  "id": "servas-ai.opencli-stat-si",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Statistical Office of Slovenia – PxWeb API",
+  "description": "pxweb.stat.si PxWeb: Statistikkatalog und Tabellen-Metadaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "stat-si katalog",
+      "command": "stat-si-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "stat-si info",
+      "command": "stat-si-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://pxweb.stat.si/SiStatData/api/v1/en/Data",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "pxweb.stat.si/robots.txt: Disallow /sistatdata/ /betasistat/ (Kleinbuchstaben) – Pfad /SiStatData/api/ case-sensitiv nicht getroffen; öffentliche PxWeb API. Drossel ≥2 s.",
+    "tos": "SURS SiStat PxWeb API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "pxweb.stat.si",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:Slovenski_znak_SURS.png",
+      "fallback": "initials",
+      "file": "assets/logos/pxweb.stat.si.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Statistical Office of Slovenia – PxWeb API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "SI",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "stat",
+      "stat-si",
+      "pxweb",
+      "statistikkatalog",
+      "tabellen-metadaten",
+      "statistical",
+      "office",
+      "slovenia",
+      "international",
+      "opendata",
+      "katalog",
+      "info",
+      "statistics",
+      "zeitreihen",
+      "time series",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "SI",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "HKOM-AS The Ministry of Digital Transformation",
+      "asn": 58046,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:42:10Z",
+      "host": "pxweb.stat.si",
+      "hoster": "HKOM-AS The Ministry of Digital Transformation",
+      "http_status": 200,
+      "ip": "84.39.218.79",
+      "server_header": "Microsoft-IIS/10.0",
+      "tls_issuer": "Entrust Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://pxweb.stat.si",
+      "country": "SI"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "blocks:GPTBot,ClaudeBot,Google-Extended,CCBot,PerplexityBot,Bytespider",
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:00.667Z",
+      "robots": "allowed"
+    }
+  }
+}

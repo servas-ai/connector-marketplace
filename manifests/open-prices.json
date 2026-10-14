@@ -1,0 +1,141 @@
+{
+  "id": "servas-ai.opencli-open-prices",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open Prices (Open Food Facts)",
+  "description": "Open Prices: crowdgesourcte Lebensmittelpreise mit Datum, Währung, Geschäft (OpenStreetMap) und Beleg, je Barcode oder Kategorie, offizielle API ohne Login (keine Nutzernamen in der Ausgabe).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "preise",
+    "crowdsourcing"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "preise",
+      "displayName": "preise",
+      "description": "open-prices preise",
+      "command": "open-prices-cli preise"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://prices.openfoodfacts.org/api/v1",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "html"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/s je Host",
+    "robots_status": "ok",
+    "robots": "prices.openfoodfacts.org/robots.txt liefert die SPA-HTML-Seite (keine robots-Regeln) → API erlaubt.",
+    "license": "ODbL 1.0 – Open Prices",
+    "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "logo": {
+      "domain": "openfoodfacts.org",
+      "resolved": "https://prices.openfoodfacts.org/apple-touch-icon.png",
+      "file": "assets/logos/prices.openfoodfacts.org.png",
+      "source": "favicon"
+    },
+    "keywords": [
+      "open",
+      "prices",
+      "open-prices",
+      "crowdgesourcte",
+      "lebensmittelpreise",
+      "datum",
+      "währung",
+      "geschäft",
+      "openstreetmap",
+      "beleg",
+      "barcode",
+      "kategorie",
+      "keine",
+      "nutzernamen",
+      "ausgabe",
+      "food",
+      "facts",
+      "preise",
+      "groceries",
+      "nahrung",
+      "karte",
+      "karten",
+      "geodata",
+      "lebensmittel",
+      "ernährung"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1304,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Open Prices API v1",
+      "last_scrape": "2026-10-13T09:36:52.065Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Open Prices (Open Food Facts)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "preis",
+          "datum",
+          "waehrung"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://prices.openfoodfacts.org",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:51.207Z",
+      "robots": "pruefen"
+    }
+  }
+}

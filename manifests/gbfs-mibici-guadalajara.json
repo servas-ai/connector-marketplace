@@ -1,0 +1,142 @@
+{
+  "id": "servas-ai.opencli-gbfs-mibici-guadalajara",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Mibici Guadalajara (GBFS)",
+  "description": "Mibici Guadalajara in Guadalajara (Mexiko): offener GBFS-Feed 1.1 ; 2.3 ; 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-mibici-guadalajara-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-mibici-guadalajara-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-mibici-guadalajara-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-mibici-guadalajara-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://guadalajara.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "guadalajara.publicbikesystem.net/robots.txt 404 → allow-all (RFC 9309)",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "guadalajara",
+      "mibici guadalajara",
+      "mexiko",
+      "mexico"
+    ],
+    "geo": {
+      "country": "MX",
+      "region": null,
+      "city": "Guadalajara",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "guadalajara.publicbikesystem.net",
+      "chain": [
+        "official",
+        "favicon",
+        "initials"
+      ],
+      "resolved": "https://mibici.net/site/templates/assets/images/logo-mibici-obscuro.svg",
+      "fallback": "initials",
+      "file": "assets/logos/guadalajara.publicbikesystem.net.png",
+      "brand_domain": "mibici.net"
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Mibici Guadalajara (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.mibici.net/en/"
+  }
+}

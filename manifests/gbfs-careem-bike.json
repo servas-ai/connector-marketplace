@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-gbfs-careem-bike",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Careem BIKE (GBFS)",
+  "description": "Careem BIKE in Dubai (Vereinigte Arabische Emirate): offener GBFS-Feed 1.1 ; 2.3 ; 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-careem-bike-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-careem-bike-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-careem-bike-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-careem-bike-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://careem.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "careem.publicbikesystem.net/robots.txt per kanonischem robots.js geprüft (fail-closed): Feed nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "dubai",
+      "careem bike",
+      "vereinigte arabische emirate",
+      "united arab emirates"
+    ],
+    "geo": {
+      "country": "AE",
+      "region": null,
+      "city": "Dubai",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "careem.publicbikesystem.net",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ea/fd/16/eafd1623-07f3-ea6a-793a-d4ccbb4e6e8c/SuperAppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/careem.com.png",
+      "brand_domain": "careem.com",
+      "source_kind": "appstore"
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS 3.0",
+      "last_scrape": "2026-10-13T14:25:24.607Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Careem BIKE (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": null,
+        "evidence": "https://careem.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json (system_information ohne license_id/license_url); gelistet in MobilityData systems.csv ohne Authentifizierung",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": "Daten: Careem BIKE (GBFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GBFS-Feed des Betreibers (MobilityData systems.csv, ohne Auth); Terms der Quelle: check",
+      "source_kind": "official",
+      "server_country": "FR",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Datenlizenz im Feed nicht angegeben – Nutzungsbedingungen des Betreibers prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T14:24:33Z"
+    },
+    "homepage": "https://www.careem.com/en-ae/careem-bike/"
+  }
+}

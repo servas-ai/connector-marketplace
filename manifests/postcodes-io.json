@@ -1,0 +1,169 @@
+{
+  "id": "servas-ai.opencli-postcodes-io",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Postcodes.io – UK-Postleitzahlen",
+  "description": "Postcodes.io: UK-Postcodes nachschlagen (Koordinaten, Verwaltung, Wahlkreis), Postcode-Suche und nächste Postcodes. Ohne Login/Key (Daten ONS/OS).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "postcode",
+      "displayName": "postcode",
+      "description": "postcodes-io postcode",
+      "command": "postcodes-io-cli postcode"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "postcodes-io suche",
+      "command": "postcodes-io-cli suche"
+    },
+    {
+      "name": "naechste",
+      "displayName": "naechste",
+      "description": "postcodes-io naechste",
+      "command": "postcodes-io-cli naechste"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.postcodes.io/postcodes",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.postcodes.io/robots.txt: 404 (keine Einschränkung). Freie Open-Source-API. Drossel ≥2 s.",
+    "tos": "Postcodes.io: frei (MIT), Daten unter Open Government Licence (ONS/Ordnance Survey/Royal Mail Attribution).",
+    "logo": {
+      "domain": "api.postcodes.io",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://api.postcodes.io/img/favicon.ico",
+      "fallback": "initials",
+      "file": "assets/logos/api.postcodes.io.png",
+      "brand_domain": "postcodes.io",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3947,
+      "throughput_rps": 0.253,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:27:07.846Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Postcodes.io – UK-Postleitzahlen",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "OGL-UK-3.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "postcodes",
+      "postcodes-io",
+      "uk-postcodes",
+      "nachschlagen",
+      "koordinaten",
+      "verwaltung",
+      "wahlkreis",
+      "postcode-suche",
+      "nächste",
+      "ons",
+      "uk-postleitzahlen",
+      "opendata",
+      "postcode",
+      "naechste",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:32:54Z",
+      "host": "api.postcodes.io",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 200,
+      "ip": "172.67.71.82",
+      "server_header": "cloudflare",
+      "tls_issuer": "Google Trust Services",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://postcodes.io"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://api.postcodes.io/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:32.268Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://postcodes.io/"
+  }
+}

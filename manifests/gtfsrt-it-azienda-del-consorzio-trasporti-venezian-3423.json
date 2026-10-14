@@ -1,0 +1,155 @@
+{
+  "id": "servas-ai.opencli-gtfsrt-it-azienda-del-consorzio-trasporti-venezian-3423",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Azienda del Consorzio Trasporti Veneziano (ACTV) Automobilis (GTFS-Realtime)",
+  "description": "Azienda del Consorzio Trasporti Veneziano (ACTV) Automobilis: offizieller GTFS-Realtime-Feed (Cavallino-Treporti, Veneto, Italien; tu) aus dem Mobility-Database-Katalog (mdb-3423). Status, Fahrzeugpositionen, Prognosen, Störungen. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "Feed-Status: Zeitstempel und Anzahl Fahrten/Fahrzeuge/Meldungen",
+      "command": "gtfsrt-it-azienda-del-consorzio-trasporti-venezian-3423-cli status"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Fahrzeugpositionen (VehiclePosition, --limit N)",
+      "command": "gtfsrt-it-azienda-del-consorzio-trasporti-venezian-3423-cli fahrzeuge"
+    },
+    {
+      "name": "updates",
+      "displayName": "updates",
+      "description": "Fahrt-Prognosen (TripUpdate, --limit N)",
+      "command": "gtfsrt-it-azienda-del-consorzio-trasporti-venezian-3423-cli updates"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Störungsmeldungen (Alert, --limit N)",
+      "command": "gtfsrt-it-azienda-del-consorzio-trasporti-venezian-3423-cli meldungen"
+    },
+    {
+      "name": "entity",
+      "displayName": "entity",
+      "description": "Ein Entity per ID (<id>)",
+      "command": "gtfsrt-it-azienda-del-consorzio-trasporti-venezian-3423-cli entity"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_realtime",
+    "realtime": true,
+    "source_url": "https://tpl.actv.it/aut/GTFSRT/tripUpdates",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "tpl.actv.it/robots.txt per kanonischem robots.js geprüft (fail-closed). Feed im Mobility Database Katalog ohne Auth gelistet.",
+    "tos": "Offene Echtzeitdaten, Lizenz: https://actv.avmspa.it/it/content/catalogo-dei-dati-metadati-e-banche-dati-actv.",
+    "keywords": [
+      "echtzeit",
+      "realtime",
+      "gtfs-rt",
+      "gtfs realtime",
+      "öffis",
+      "public transport",
+      "verspätung",
+      "delay",
+      "fahrzeugposition",
+      "vehicle position",
+      "störung",
+      "alert",
+      "cavallino-treporti",
+      "azienda del consorzio trasporti venezian",
+      "italien",
+      "italy"
+    ],
+    "geo": {
+      "country": "IT",
+      "region": "Veneto",
+      "city": "Cavallino-Treporti",
+      "bbox": [
+        12.28028,
+        45.22369,
+        12.447123,
+        45.49509
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "tpl.actv.it",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=tpl.actv.it&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/tpl.actv.it.png",
+      "brand_domain": "tpl.actv.it"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3231,
+      "throughput_rps": 0.31,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS-RT 2.0",
+      "last_scrape": "2026-10-13T13:14:56.109Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Azienda del Consorzio Trasporti Veneziano (ACTV) Automobilis (GTFS-Realtime)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://actv.avmspa.it/"
+  }
+}

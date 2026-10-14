@@ -1,0 +1,136 @@
+{
+  "id": "servas-ai.opencli-mexc",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "MEXC – Krypto-Marktdaten",
+  "description": "MEXC Spot API v3 (öffentlich): 24h-Ticker, Top-Märkte nach Volumen, Orderbuch. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "mexc ticker",
+      "command": "mexc-cli ticker"
+    },
+    {
+      "name": "top",
+      "displayName": "top",
+      "description": "mexc top",
+      "command": "mexc-cli top"
+    },
+    {
+      "name": "orderbuch",
+      "displayName": "orderbuch",
+      "description": "mexc orderbuch",
+      "command": "mexc-cli orderbuch"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.mexc.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.mexc.com/robots.txt: 404 (keine Einschränkung). Öffentliche Marktdaten-Endpunkte. Drossel ≥2 s.",
+    "tos": "MEXC – öffentliche Marktdaten-API; Fair Use.",
+    "logo": {
+      "domain": "api.mexc.com",
+      "resolved": "https://static.mocortech.com/image-host/web/common/logo/logo-light.png",
+      "file": "assets/logos/api.mexc.com.png",
+      "source": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "MEXC – Krypto-Marktdaten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "license": "proprietär – MEXC API Terms (öffentliche Marktdaten, Fair Use)",
+    "keywords": [
+      "mexc",
+      "spot",
+      "h-ticker",
+      "top-märkte",
+      "volumen",
+      "orderbuch",
+      "krypto-marktdaten",
+      "finance",
+      "ticker",
+      "top",
+      "crypto",
+      "cryptocurrency",
+      "kryptowährung",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:16.409Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-loc-gov",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Library of Congress – loc.gov JSON API",
+  "description": "Library of Congress loc.gov JSON API: Fotos/Drucke, Karten und allgemeine Sammlungssuche (Titel, Datum, Ort, Format, Online-Status) sowie Item-Details per ID. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "fotos",
+      "displayName": "fotos",
+      "description": "loc-gov fotos",
+      "command": "loc-gov-cli fotos"
+    },
+    {
+      "name": "karten",
+      "displayName": "karten",
+      "description": "loc-gov karten",
+      "command": "loc-gov-cli karten"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "loc-gov suche",
+      "command": "loc-gov-cli suche"
+    },
+    {
+      "name": "item",
+      "displayName": "item",
+      "description": "loc-gov item",
+      "command": "loc-gov-cli item"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "kultur",
+    "realtime": false,
+    "source_url": "https://www.loc.gov/photos/?fo=json",
+    "homepage": "https://www.loc.gov/",
+    "keywords": [
+      "loc",
+      "loc-gov",
+      "library",
+      "congress",
+      "gov",
+      "fotos",
+      "drucke",
+      "karten",
+      "allgemeine",
+      "sammlungssuche",
+      "titel",
+      "datum",
+      "ort",
+      "online-status",
+      "item-details",
+      "international",
+      "item",
+      "map",
+      "maps",
+      "geodaten"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.loc.gov/robots.txt: Suchseiten /photos/, /maps/, /search/ und /item/ nicht gesperrt (geprüft je Request). Offizielle JSON-API (fo=json). Drossel ≥2 s (LoC-Limit 20 Requests/10 s).",
+    "tos": "loc.gov API: frei, keine Registrierung; Rate-Limits der LoC beachten; Rechte je Item.",
+    "logo": {
+      "domain": "www.loc.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.loc.gov/favicon.ico",
+      "fallback": "initials",
+      "file": "assets/logos/www.loc.gov.png",
+      "brand_domain": "loc.gov",
+      "source": "official-site",
+      "source_kind": "favicon.ico"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3823,
+      "throughput_rps": 0.262,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:05:04.046Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Library of Congress – loc.gov JSON API",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:38:26Z",
+      "host": "www.loc.gov",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 200,
+      "ip": "104.18.64.82",
+      "server_header": "cloudflare",
+      "tls_issuer": "Google Trust Services",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://www.loc.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:48.590Z",
+      "robots": "allowed"
+    }
+  }
+}

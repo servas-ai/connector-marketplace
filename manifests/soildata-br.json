@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-soildata-br",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SoilData – Brasilianisches Bodendaten-Repositorium (Dataverse)",
+  "description": "SoilData: größtes brasilianisches Bodendaten-Repositorium mit Profil- und Probendaten zu Bodeneigenschaften (Kohlenstoff, Textur, Klassifikation) aus ganz Brasilien. Zugriff über die offizielle Dataverse-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Brasilien",
+    "Boden",
+    "MapBiomas",
+    "SoilData / MapBiomas Solo"
+  ],
+  "keywords": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Brasilien",
+    "Boden",
+    "MapBiomas",
+    "SoilData / MapBiomas Solo"
+  ],
+  "homepage": "https://soildata.mapbiomas.org/",
+  "license": "MIT",
+  "geo": {
+    "country": "BR",
+    "region": null,
+    "city": null,
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "soildata-br neu",
+      "command": "soildata-br-cli neu"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "soildata-br suche",
+      "command": "soildata-br-cli suche"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "soildata-br dataset",
+      "command": "soildata-br-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://repositorio.soildata.mapbiomas.org/api/search",
+    "homepage": "https://soildata.mapbiomas.org/",
+    "portal": "https://repositorio.soildata.mapbiomas.org/",
+    "provider": "SoilData / MapBiomas Solo (Universidade Federal de Santa Maria u. a.)",
+    "keywords": [
+      "Dataverse",
+      "Forschungsdaten",
+      "research data",
+      "open data",
+      "Repositorium",
+      "DOI",
+      "Brasilien",
+      "Boden",
+      "MapBiomas",
+      "SoilData / MapBiomas Solo"
+    ],
+    "geo": {
+      "country": "BR",
+      "region": null,
+      "city": null,
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "repositorio.soildata.mapbiomas.org/robots.txt (HTTP 200): /api/search und /api/datasets/:persistentId nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "SoilData / MapBiomas Solo (Universidade Federal de Santa Maria u. a.): öffentliche Dataverse Native/Search API ohne Key/Login (nur veröffentlichte Datensätze); Fair Use.",
+    "logo": {
+      "domain": "repositorio.soildata.mapbiomas.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://mapbiomas.org/wp-content/themes/mapbiomas/assets/img/logo-MapBiomas-10anos-header.svg",
+      "fallback": "initials",
+      "file": "assets/logos/repositorio.soildata.mapbiomas.org.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dataverse-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "SoilData – Brasilianisches Bodendaten-Repositorium (Dataverse)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "BR",
+    "ampel": "grün",
+    "license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "data_license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "logo_source": "official-site",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:08:07.564Z",
+      "robots": "allowed"
+    }
+  }
+}

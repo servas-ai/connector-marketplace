@@ -1,0 +1,185 @@
+{
+  "id": "servas-ai.opencli-gbfs-cap-cotentin-velo",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Cap Cotentin Vélo (GBFS)",
+  "description": "Cap Cotentin Vélo in Cherbourg-en-Cotentin (Frankreich): offener GBFS-Feed (Vélos en libre service) – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key. Gelistet auf transport.data.gouv.fr.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-cap-cotentin-velo-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-cap-cotentin-velo-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-cap-cotentin-velo-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-cap-cotentin-velo-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://api.gbfs.ecovelo.mobi/capcotentin/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.gbfs.ecovelo.mobi/robots.txt per kanonischem robots.js geprüft (fail-closed): 404 → allow-all (RFC 9309), Feed nicht gesperrt.",
+    "tos": "Licence Ouverte 2.0 (Etalab) laut transport.data.gouv.fr",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "cherbourg",
+      "cotentin",
+      "frankreich",
+      "france"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": "Cherbourg-en-Cotentin",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "api.gbfs.ecovelo.mobi",
+      "chain": [
+        "official",
+        "favicon"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": null,
+      "brand_domain": "capcotentin.ecovelo.mobi",
+      "source_kind": null
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Cap Cotentin Vélo (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "Licence-Ouverte-2.0",
+        "url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+        "per_dataset": false,
+        "evidence": "https://transport.data.gouv.fr/datasets/velos-a-assistance-electrique-en-libre-service-cap-cotentin (licence: lov2)"
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Daten: Cap Cotentin Vélo via transport.data.gouv.fr",
+      "personal_data": "none",
+      "legal_basis": "Offener GBFS-Feed, gelistet im Point d'Accès National transport.data.gouv.fr (ohne Auth)",
+      "source_kind": "official",
+      "server_country": "DE",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Licence Ouverte 2.0, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T22:55:00Z"
+    },
+    "homepage": "https://capcotentin.ecovelo.mobi/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://api.gbfs.ecovelo.mobi/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:52:39.263Z",
+      "robots": "allowed"
+    }
+  }
+}

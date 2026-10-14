@@ -1,0 +1,164 @@
+{
+  "id": "servas-ai.opencli-wien-ogd",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Stadt Wien – Open Government Data (Katalog)",
+  "description": "Offene Verwaltungsdaten von der Stadt Wien (Katalog l9 auf data.gv.at, offizielle piveau-Hub-Such-API): Datensätze suchen, Themen, Formate, Lizenz und Download-Links. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "wien-ogd suche",
+      "command": "wien-ogd-cli suche"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "wien-ogd datensatz",
+      "command": "wien-ogd-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.data.gv.at/api/hub/search/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.data.gv.at/robots.txt: keine Disallow-Regel für /api/. Offizielle Such-API des Bundes-OGD-Portals.",
+    "tos": "data.gv.at: Metadaten CC0, Datensätze meist CC BY 4.0 (je Datensatz angegeben).",
+    "keywords": [
+      "wien",
+      "ogd",
+      "wien-ogd",
+      "offene",
+      "verwaltungsdaten",
+      "stadt",
+      "katalog",
+      "piveau-hub-such-api",
+      "datensätze",
+      "suchen",
+      "themen",
+      "formate",
+      "lizenz",
+      "download-links",
+      "open",
+      "government",
+      "opendata",
+      "datensatz",
+      "open data",
+      "offene daten",
+      "datasets"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Wien",
+      "city": "Wien",
+      "lat": 48.2082,
+      "lon": 16.3738,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "www.data.gv.at",
+      "brand_domain": "gv.at",
+      "file": "assets/logos/data.wien.gv.at.png",
+      "source": "favicon",
+      "resolved": "https://www.wien.gv.at/layout-a/wienermelange/favicon.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "official",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Stadt Wien – Open Government Data (Katalog)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "BRZ Bundesrechenzentrum GmbH",
+      "asn": 8692,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:16:47Z",
+      "host": "www.data.gv.at",
+      "hoster": "BRZ Bundesrechenzentrum GmbH",
+      "http_status": 200,
+      "ip": "85.158.227.13",
+      "server_header": "Apache",
+      "tls_issuer": "Hellenic Academic and Research Institutions CA",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://www.data.gv.at",
+      "country": "AT"
+    },
+    "logo_source": "favicon",
+    "country": "AT",
+    "homepage": "https://data.wien.gv.at",
+    "license": "CC-BY-4.0",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:25.983Z",
+      "robots": "allowed"
+    }
+  }
+}

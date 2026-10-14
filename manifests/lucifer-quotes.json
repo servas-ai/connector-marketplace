@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-lucifer-quotes",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Lucifer Quotes",
+  "description": "Lucifer Quotes API: Zitate aus der Serie Lucifer (Text, Sprecher), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "media"
+  ],
+  "tags": [
+    "lucifer",
+    "quotes",
+    "tv",
+    "series",
+    "fan"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "eins",
+      "displayName": "eins",
+      "description": "lucifer-quotes eins",
+      "command": "lucifer-quotes-cli eins"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "media",
+    "realtime": false,
+    "source_url": "https://lucifer-quotes.vercel.app/",
+    "homepage": "https://lucifer-quotes.vercel.app/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "lucifer-quotes.vercel.app/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Lucifer Quotes: keyless Demo; IP bei Rechteinhabern, Drossel.",
+    "license": "terms-of-source (lucifer-quotes demo; Lucifer IP bei Warner/Netflix)",
+    "country": "INT",
+    "keywords": [
+      "lucifer",
+      "quotes",
+      "tv",
+      "series",
+      "fan"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-32",
+    "worker": "open-apis-32-0343",
+    "logo": {
+      "domain": "lucifer-quotes.vercel.app",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:25:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (lucifer-quotes demo; Lucifer IP bei Warner/Netflix)",
+        "url": "https://lucifer-quotes.vercel.app/",
+        "evidence": "https://lucifer-quotes.vercel.app/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Lucifer Quotes (lucifer-quotes.vercel.app)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T03:25:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Lucifer Quotes",
+        "subtitle": "media",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "quote"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

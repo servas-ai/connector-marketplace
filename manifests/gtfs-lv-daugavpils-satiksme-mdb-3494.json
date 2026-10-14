@@ -1,0 +1,198 @@
+{
+  "id": "servas-ai.opencli-gtfs-lv-daugavpils-satiksme-mdb-3494",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Daugavpils satiksme (GTFS-Fahrplan)",
+  "description": "Daugavpils satiksme: offizieller GTFS-Soll-Fahrplan (Daugavpils, Lettland) aus dem Mobility-Database-Katalog (mdb-3494), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-lv-daugavpils-satiksme-mdb-3494-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-lv-daugavpils-satiksme-mdb-3494-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-lv-daugavpils-satiksme-mdb-3494-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-lv-daugavpils-satiksme-mdb-3494-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://satiksme.daugavpils.lv/saraksti/GTFS.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "satiksme.daugavpils.lv/robots.txt geprüft (kanonisches robots.js, fail-closed): GTFS-Download nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "daugavpils",
+      "daugavpils satiksme",
+      "lettland",
+      "latvia"
+    ],
+    "geo": {
+      "country": "LV",
+      "region": "Daugavpils",
+      "city": "Daugavpils",
+      "bbox": [
+        26.44675,
+        55.836,
+        26.6204333,
+        55.94345
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "satiksme.daugavpils.lv",
+      "chain": [
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://satiksme.daugavpils.lv/wp-content/uploads/2025/08/cropped-favicon-180x180.png",
+      "fallback": "initials",
+      "file": "assets/logos/satiksme.daugavpils.lv.png",
+      "brand_domain": "satiksme.daugavpils.lv"
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Daugavpils satiksme (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": null,
+        "evidence": "https://mobilitydatabase.org/feeds/mdb-3494 – urls.license leer (feeds_v2.csv); offener Download ohne Authentifizierung (authentication_type 0)",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": "Fahrplandaten: Daugavpils satiksme (GTFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GTFS-Download des Betreibers (Mobility Database, ohne Auth); Terms der Quelle: check",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Datenlizenz nicht maschinenlesbar belegt – Nutzungsbedingungen des Betreibers vor kommerzieller Nutzung prüfen",
+          "Server-Land nicht eindeutig (Anycast/CDN)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:28:53Z"
+    },
+    "homepage": "https://satiksme.daugavpils.lv/",
+    "operator": {
+      "name": "Daugavpils satiksme",
+      "legal_form": "pruefen",
+      "country": "LV",
+      "website": "https://satiksme.daugavpils.lv/",
+      "source": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T15:38:11.751Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "id": "servas-ai.opencli-gtfs-de-karlsruher-verkehrsverbund-mdb-2231",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Karlsruher Verkehrsverbund (GTFS-Fahrplan)",
+  "description": "Karlsruher Verkehrsverbund: offizieller GTFS-Soll-Fahrplan (Landkreis Karlsruhe, Deutschland) aus dem Mobility-Database-Katalog (mdb-2231), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-de-karlsruher-verkehrsverbund-mdb-2231-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-de-karlsruher-verkehrsverbund-mdb-2231-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-de-karlsruher-verkehrsverbund-mdb-2231-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-de-karlsruher-verkehrsverbund-mdb-2231-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://projekte.kvv-efa.de/GTFS/google_transit.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "projekte.kvv-efa.de/robots.txt geprüft (kanonisches robots.js, fail-closed): GTFS-Download nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://www.kvv.de/fahrplan/fahrplaene/open-data.html.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "landkreis karlsruhe",
+      "karlsruher verkehrsverbu",
+      "deutschland",
+      "germany"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Baden-Württemberg",
+      "city": "Landkreis Karlsruhe",
+      "bbox": [
+        7.92986021,
+        48.44442871,
+        9.52728936,
+        49.35226413
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "projekte.kvv-efa.de",
+      "chain": [
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://www.kvv.de/_assets/192e022c12f42336bcb9cd4695831367/FavIcons/KVV/favicon.svg",
+      "fallback": "initials",
+      "file": "assets/logos/kvv.de.png",
+      "brand_domain": "kvv.de"
+    },
+    "license": "https://www.kvv.de/fahrplan/fahrplaene/open-data.html",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Karlsruher Verkehrsverbund (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://www.kvv.de/fahrplan/fahrplaene/open-data.html",
+        "evidence": "https://mobilitydatabase.org/feeds/mdb-2231 → urls.license = https://www.kvv.de/fahrplan/fahrplaene/open-data.html",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": "Fahrplandaten: Karlsruher Verkehrsverbund (KVV) (GTFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GTFS-Download des Betreibers (Mobility Database, ohne Auth); Terms der Quelle: check",
+      "source_kind": "official",
+      "server_country": "DE",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Datenlizenz nicht maschinenlesbar belegt – Nutzungsbedingungen des Betreibers vor kommerzieller Nutzung prüfen (https://www.kvv.de/fahrplan/fahrplaene/open-data.html)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:28:53Z"
+    },
+    "homepage": "https://www.kvv.de/",
+    "operator": {
+      "name": "Karlsruher Verkehrsverbund (KVV)",
+      "legal_form": "pruefen",
+      "country": "DE",
+      "website": "https://www.kvv.de/",
+      "source": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T15:37:56.392Z",
+      "robots": "allowed"
+    }
+  }
+}

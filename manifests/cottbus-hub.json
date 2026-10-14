@@ -1,0 +1,195 @@
+{
+  "id": "servas-ai.opencli-cottbus-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Stadt Cottbus/Chóśebuz – Open Data Portal (ArcGIS Hub)",
+  "description": "opendataportal.cottbus.de – Stadt Cottbus/Chóśebuz: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "cottbus-hub suche",
+      "command": "cottbus-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "cottbus-hub neu",
+      "command": "cottbus-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "cottbus-hub datensatz",
+      "command": "cottbus-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://opendataportal.cottbus.de/search",
+    "homepage": "https://opendataportal.cottbus.de/",
+    "country": "DE",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendataportal.cottbus.de/robots.txt geprüft (fail-closed): Disallow nur /sites/ /admin/ /sessions/ /groups/ /people/ /workspace/ – /api/search/v1 nicht gesperrt; Crawl-delay 60 (Hub-Standard) → nur Einzelabfragen, kein Bulk-Crawl. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Stadt Cottbus/Chóśebuz: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "logo": {
+      "domain": "opendataportal.cottbus.de",
+      "brand_domain": "cottbus.de",
+      "chain": [
+        "official-site",
+        "wikimedia"
+      ],
+      "resolved": "https://cottbus.de/wp-content/uploads/2025/04/cropped-favicon-2-1-300x300.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/opendataportal.cottbus.de.png",
+      "source": "official-site",
+      "kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Stadt Cottbus/Chóśebuz – Open Data Portal (ArcGIS Hub)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "operator": {
+      "name": "Stadt Cottbus/Chóśebuz",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "DE",
+      "source": "Portal-Impressum/Domain"
+    },
+    "geo": {
+      "country": "DE",
+      "scope": "city",
+      "region": "Brandenburg",
+      "city": "Cottbus"
+    },
+    "llms_txt": {
+      "llms_txt": false,
+      "llms_full_txt": false,
+      "openapi": null,
+      "api_kind": "OGC API Records (ArcGIS Hub Search v1)",
+      "checked_at": "2026-10-13T14:30:00Z"
+    },
+    "ampel": "grün",
+    "license": "Datenlizenz Deutschland – Namensnennung 2.0 (Portal-Metadaten)",
+    "logo_source": "official-site",
+    "connector_meta": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "DL-DE-BY-2.0",
+        "url": "https://www.govdata.de/dl-de/by-2-0",
+        "evidence": "https://opendataportal.cottbus.de/api/search/v1/collections/dataset/items (properties.licenseInfo), Stand 2026-10-13",
+        "per_dataset": true
+      },
+      "commercial_use": "attribution",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Stadt Cottbus/Chóśebuz – https://opendataportal.cottbus.de/",
+      "personal_data": "none",
+      "legal_basis": "Offene Verwaltungsdaten (EU-Richtlinie 2019/1024 Open Data/PSI) – Lizenz je Datensatz",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offizielle Behördenquelle",
+          "robots.txt beachtet (fail-closed)",
+          "kein Login, keine Umgehung",
+          "nur Katalog-Metadaten, keine personenbezogenen Felder",
+          "Hosting Esri ArcGIS Online (Server-Region nicht belegt)"
+        ]
+      },
+      "checked_at": "2026-10-13T14:30:00Z"
+    },
+    "keywords": [
+      "cottbus hub",
+      "opendata",
+      "arcgis",
+      "open data",
+      "hub",
+      "de",
+      "cottbus",
+      "opendataportal",
+      "stadt",
+      "ebuz",
+      "open",
+      "data",
+      "katalog"
+    ],
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:08:22.728Z",
+      "robots": "allowed"
+    }
+  }
+}

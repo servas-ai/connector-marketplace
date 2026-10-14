@@ -1,0 +1,145 @@
+{
+  "id": "servas-ai.opencli-tvmaze",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "TVmaze – TV-Serien & Programm",
+  "description": "TVmaze API: TV-Serien suchen, Detail je Serie, Episodenliste und tagesaktuelles TV-Programm je Land. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "tvmaze suche",
+      "command": "tvmaze-cli suche"
+    },
+    {
+      "name": "serie",
+      "displayName": "serie",
+      "description": "tvmaze serie",
+      "command": "tvmaze-cli serie"
+    },
+    {
+      "name": "episoden",
+      "displayName": "episoden",
+      "description": "tvmaze episoden",
+      "command": "tvmaze-cli episoden"
+    },
+    {
+      "name": "programm",
+      "displayName": "programm",
+      "description": "tvmaze programm",
+      "command": "tvmaze-cli programm"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.tvmaze.com/search/shows",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.tvmaze.com/robots.txt: 404 (keine Einschränkung). Offizielle öffentliche API. Drossel ≥2 s (Limit 20 Calls/10 s).",
+    "tos": "TVmaze API: Daten CC BY-SA 4.0, Attribution 'TVmaze.com' Pflicht, Rate-Limit 20 Calls/10 s.",
+    "logo": {
+      "domain": "api.tvmaze.com",
+      "brand_domain": "tvmaze.com",
+      "file": "assets/logos/api.tvmaze.com.png",
+      "source": "header-logo",
+      "resolved": "https://static.tvmaze.com/images/tvm-header-logo.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4005,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:27:56.028Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "TVmaze – TV-Serien & Programm",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC-BY-SA-4.0",
+    "logo_source": "header-logo",
+    "keywords": [
+      "tvmaze",
+      "tv-serien",
+      "suchen",
+      "serie",
+      "episodenliste",
+      "tagesaktuelles",
+      "tv-programm",
+      "land",
+      "programm",
+      "tech",
+      "episoden",
+      "technology",
+      "technik",
+      "Serien",
+      "TV"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "homepage": "https://www.tvmaze.com",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:44.741Z",
+      "robots": "allowed"
+    }
+  }
+}

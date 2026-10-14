@@ -1,0 +1,182 @@
+{
+  "id": "servas-ai.opencli-cbs-opendata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CBS Netherlands – Open Data Catalog (OData)",
+  "description": "Centraal Bureau voor de Statistiek (NL): Tabellenkatalog und Datensätze über die öffentliche OData-API. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "CBS",
+    "Niederlande",
+    "Statistik",
+    "OData",
+    "Netherlands",
+    "statistics"
+  ],
+  "keywords": [
+    "CBS",
+    "Niederlande",
+    "Statistik",
+    "OData",
+    "Netherlands",
+    "statistics"
+  ],
+  "homepage": "https://opendata.cbs.nl/",
+  "license": "MIT",
+  "geo": {
+    "country": "NL",
+    "region": "Niederlande",
+    "city": null,
+    "coverage": "national",
+    "bbox": [
+      3.36,
+      50.75,
+      7.23,
+      53.55
+    ],
+    "centroid": {
+      "lat": 52.1,
+      "lon": 5.3
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "tabellen",
+      "displayName": "tabellen",
+      "description": "cbs-opendata tabellen",
+      "command": "cbs-opendata-cli tabellen"
+    },
+    {
+      "name": "datensaetze",
+      "displayName": "datensaetze",
+      "description": "cbs-opendata datensaetze",
+      "command": "cbs-opendata-cli datensaetze"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "cbs-opendata suche",
+      "command": "cbs-opendata-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://opendata.cbs.nl/ODataCatalog/Tables",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.cbs.nl/robots.txt: OData-Pfade erlaubt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "CBS Open Data / CC-BY; Quellenangabe Centraal Bureau voor de Statistiek.",
+    "provider": "Centraal Bureau voor de Statistiek",
+    "homepage": "https://opendata.cbs.nl/",
+    "data_license": "CBS Open Data (CC BY)",
+    "keywords": [
+      "CBS",
+      "Niederlande",
+      "Statistik",
+      "OData",
+      "Netherlands",
+      "statistics"
+    ],
+    "geo": {
+      "country": "NL",
+      "region": "Niederlande",
+      "city": null,
+      "coverage": "national",
+      "bbox": [
+        3.36,
+        50.75,
+        7.23,
+        53.55
+      ],
+      "centroid": {
+        "lat": 52.1,
+        "lon": 5.3
+      }
+    },
+    "logo": {
+      "domain": "opendata.cbs.nl",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://opendata.cbs.nl/Content/favicon/favicon-180x180.png",
+      "fallback": "initials",
+      "brand_domain": "cbs.nl",
+      "file": "assets/logos/opendata.cbs.nl.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "CBS Netherlands – Open Data Catalog (OData)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:08:49.544Z",
+      "robots": "allowed"
+    }
+  }
+}

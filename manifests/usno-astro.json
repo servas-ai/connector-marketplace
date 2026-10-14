@@ -1,0 +1,179 @@
+{
+  "id": "servas-ai.opencli-usno-astro",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "U.S. Naval Observatory – Sonne, Mond, Jahreszeiten",
+  "description": "USNO Astronomical Applications API: Sonnen-/Mondauf- und -untergang, Dämmerung und Mondphase für Ort+Datum, nächste Mondphasen und Jahreszeiten/Äquinoktien eines Jahres. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "sonne-mond",
+      "displayName": "sonne-mond",
+      "description": "usno-astro sonne-mond",
+      "command": "usno-astro-cli sonne-mond"
+    },
+    {
+      "name": "mondphasen",
+      "displayName": "mondphasen",
+      "description": "usno-astro mondphasen",
+      "command": "usno-astro-cli mondphasen"
+    },
+    {
+      "name": "jahreszeiten",
+      "displayName": "jahreszeiten",
+      "description": "usno-astro jahreszeiten",
+      "command": "usno-astro-cli jahreszeiten"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://aa.usno.navy.mil/api/rstt/oneday",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "aa.usno.navy.mil/robots.txt: 404 (keine Einschränkung). Offizielle öffentliche API der US Navy. Drossel ≥2 s.",
+    "tos": "USNO AA API: öffentlich (US-Regierungswerk, gemeinfrei), keine Registrierung nötig.",
+    "logo": {
+      "domain": "aa.usno.navy.mil",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:U.S._Naval_Observatory-seal.gif",
+      "fallback": "initials",
+      "file": "assets/logos/aa.usno.navy.mil.png",
+      "brand_domain": "usno.navy.mil",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3937,
+      "throughput_rps": 0.254,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "4.0",
+      "last_scrape": "2026-10-13T08:04:22.343Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "U.S. Naval Observatory – Sonne, Mond, Jahreszeiten",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "wikimedia",
+    "keywords": [
+      "usno",
+      "astro",
+      "usno-astro",
+      "astronomical",
+      "applications",
+      "sonnen",
+      "mondauf",
+      "untergang",
+      "dämmerung",
+      "mondphase",
+      "ort",
+      "datum",
+      "nächste",
+      "mondphasen",
+      "jahreszeiten",
+      "äquinoktien",
+      "jahres",
+      "naval",
+      "observatory",
+      "sonne",
+      "mond",
+      "opendata",
+      "sonne-mond",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
+      "asn": 5852,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:34:42Z",
+      "host": "aa.usno.navy.mil",
+      "hoster": "United States Department of Defense (DoD)",
+      "http_status": 200,
+      "ip": "140.19.33.121",
+      "server_header": "nginx",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://aa.usno.navy.mil",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.885Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://aa.usno.navy.mil/"
+  }
+}

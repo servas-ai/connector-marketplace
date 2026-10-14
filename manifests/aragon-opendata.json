@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-aragon-opendata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Aragón Open Data – Gobierno de Aragón (CKAN)",
+  "description": "Aragón Open Data: offenes Datenportal der Regionalregierung von Aragonien (Spanien) mit Verwaltungs-, Statistik-, Umwelt- und Wirtschaftsdaten. Zugriff über die offizielle CKAN-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Spanien",
+    "Aragonien",
+    "Region",
+    "Gobierno de Aragón"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Spanien",
+    "Aragonien",
+    "Region",
+    "Gobierno de Aragón"
+  ],
+  "homepage": "https://www.aragon.es/",
+  "license": "MIT",
+  "geo": {
+    "country": "ES",
+    "region": "Aragón",
+    "city": null,
+    "scope": "region"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "aragon-opendata datasets",
+      "command": "aragon-opendata-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "aragon-opendata dataset",
+      "command": "aragon-opendata-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://opendata.aragon.es/api/3/action/package_search",
+    "homepage": "https://www.aragon.es/",
+    "portal": "https://opendata.aragon.es/dataset",
+    "provider": "Gobierno de Aragón",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "CKAN",
+      "Datenkatalog",
+      "datasets",
+      "Spanien",
+      "Aragonien",
+      "Region",
+      "Gobierno de Aragón"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Aragón",
+      "city": null,
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.aragon.es/robots.txt (HTTP 200): /api/3/action/package_search und package_show nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "Gobierno de Aragón: öffentliche CKAN-Action-API v3 ohne Key/Login; Fair Use.",
+    "logo": {
+      "domain": "opendata.aragon.es",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://opendata.aragon.es/",
+      "fallback": "initials",
+      "file": "assets/logos/opendata.aragon.es.png",
+      "source": "official-site",
+      "kind": "header-svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Aragón Open Data – Gobierno de Aragón (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "ES",
+    "ampel": "grün",
+    "license": "Creative Commons Attribution 4.0 (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "data_license": "Creative Commons Attribution 4.0 (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "official-site",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:08:53.320Z",
+      "robots": "allowed"
+    }
+  }
+}

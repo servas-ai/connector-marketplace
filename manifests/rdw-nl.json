@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-rdw-nl",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "RDW Open Data – Kfz-Register Niederlande",
+  "description": "RDW Open Data (opendata.rdw.nl, Socrata SODA): zugelassene Fahrzeuge in den Niederlanden – Abfrage per Kennzeichen oder Marke/Modell, inkl. Kraftstoffdaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kennzeichen",
+      "displayName": "kennzeichen",
+      "description": "rdw-nl kennzeichen",
+      "command": "rdw-nl-cli kennzeichen"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "rdw-nl fahrzeuge",
+      "command": "rdw-nl-cli fahrzeuge"
+    },
+    {
+      "name": "kraftstoff",
+      "displayName": "kraftstoff",
+      "description": "rdw-nl kraftstoff",
+      "command": "rdw-nl-cli kraftstoff"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://opendata.rdw.nl/resource/m9d7-ebf2.json",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.rdw.nl/robots.txt: Crawl-delay 1; Disallow nur Browse/OData-Pfade – /resource/*.json (SODA-API) nicht gesperrt. Drossel ≥2 s.",
+    "tos": "RDW Open Data: CC0-Daten, SODA-API ohne App-Token mit Throttling erlaubt; keine personenbezogenen Daten.",
+    "logo": {
+      "domain": "opendata.rdw.nl",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.rdw.nl/-/media/rdwnl/iconen/logo/logo-particulier-zakelijk-en-nrd.svg?rev=0494494f7e3c47e69bf45a39ebd27ea4",
+      "fallback": "initials",
+      "file": "assets/logos/opendata.rdw.nl.png",
+      "brand_domain": "rdw.nl",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3985,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "soda-2.1",
+      "last_scrape": "2026-10-13T07:30:21.890Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "RDW Open Data – Kfz-Register Niederlande",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "NL",
+    "ampel": "grün",
+    "license": "CC0-1.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "rdw",
+      "rdw-nl",
+      "open",
+      "opendata",
+      "socrata",
+      "soda",
+      "zugelassene",
+      "fahrzeuge",
+      "niederlanden",
+      "abfrage",
+      "kennzeichen",
+      "marke",
+      "modell",
+      "kraftstoffdaten",
+      "kfz-register",
+      "niederlande",
+      "kraftstoff",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze",
+      "registry",
+      "firmenbuch",
+      "company register"
+    ],
+    "geo": {
+      "country": "NL",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:33:03Z",
+      "host": "opendata.rdw.nl",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "52.51.221.164",
+      "server_header": "nginx",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://rdw.nl",
+      "country": "NL"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:35.028Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://opendata.rdw.nl/"
+  }
+}

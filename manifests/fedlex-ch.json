@@ -1,0 +1,171 @@
+{
+  "id": "servas-ai.opencli-fedlex-ch",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Fedlex – Schweizer Bundesrecht (SR, SPARQL)",
+  "description": "Fedlex Linked Data (Bundeskanzlei): Suche im systematischen Bundesrecht der Schweiz (Titel, ELI-URI, Datum) über den offiziellen SPARQL-Endpunkt, keyless.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "recht",
+    "gesetze",
+    "schweiz",
+    "bundesrecht",
+    "fedlex",
+    "eli",
+    "sparql",
+    "legal"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://fedlex.data.admin.ch/",
+    "homepage": "https://fedlex.data.admin.ch/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "fedlex.data.admin.ch/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Fedlex Open Data: SPARQL-Endpunkt öffentlich, keyless; Quellenangabe; kleine Abfragen.",
+    "license": "terms-of-source (Fedlex/opendata.swiss: freie Nutzung, Quellenangabe Pflicht)",
+    "country": "CH",
+    "keywords": [
+      "recht",
+      "gesetze",
+      "schweiz",
+      "bundesrecht",
+      "fedlex",
+      "eli",
+      "sparql",
+      "legal"
+    ],
+    "geo": {
+      "country": "CH",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Intl-Legal-Finanz-A",
+    "worker": "intl-legal-a-2236",
+    "logo": {
+      "domain": "fedlex.data.admin.ch",
+      "file": "assets/logos/fedlex.data.admin.ch.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://www.admin.ch/images/swiss-logo-flag.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sparql-1.1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:30:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Fedlex/opendata.swiss: freie Nutzung, Quellenangabe Pflicht)",
+        "url": "https://opendata.swiss/de/terms-of-use",
+        "evidence": "https://opendata.swiss/de/terms-of-use",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Fedlex – Schweizer Bundesrecht (SR, SPARQL) (fedlex.data.admin.ch)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "CH",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T23:30:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Fedlex – Schweizer Bundesrecht (SR, SPARQL)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "uri"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "id": "servas-ai.opencli-datahub-population",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "DataHub – Bevölkerung nach Ländern (Weltbank-Spiegel)",
+  "description": "DataHub – Bevölkerung nach Ländern (Weltbank-Spiegel): offizielle Gesamtdatei (CSV) als Datensätze – Liste, Volltextsuche, Dump-Metadaten. Download höchstens 1× pro Tag (Cache 24 h). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "datahub-population liste",
+      "command": "datahub-population-cli liste"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "datahub-population suche",
+      "command": "datahub-population-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "datahub-population info",
+      "command": "datahub-population-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://datahub.io/core/population/_r/-/data/population.csv",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host, Dump ≤1×/Tag",
+    "robots_status": "ok",
+    "robots": "datahub.io/robots.txt geprüft: Dump-Pfad nicht gesperrt (zusätzlich Laufzeitprüfung). Kein Key. Drossel ≥2 s/Host, Dump-Cache 24 h.",
+    "tos": "Lizenz: ODC-PDDL / CC BY 4.0 (Weltbank). Quelle nennen.",
+    "logo": {
+      "domain": "datahub.io",
+      "brand_domain": "datahub.io",
+      "file": "assets/logos/datahub.io.png",
+      "source": "header-logo",
+      "resolved": "https://r2-assets.datahub.io/logo.svg"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 215,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dump",
+      "last_scrape": "2026-10-13T09:24:50.272Z",
+      "datenqualitaet": 1.0
+    },
+    "keywords": [
+      "datahub",
+      "population",
+      "datahub-population",
+      "bevölkerung",
+      "ländern",
+      "weltbank-spiegel",
+      "gesamtdatei",
+      "csv",
+      "datensätze",
+      "liste",
+      "volltextsuche",
+      "dump-metadaten",
+      "download",
+      "höchstens",
+      "tag",
+      "cache",
+      "opendata",
+      "info",
+      "open data",
+      "offene daten",
+      "datasets"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "openui": {
+      "card": {
+        "title": "DataHub – Bevölkerung nach Ländern (Weltbank-Spiegel)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://datahub.io",
+    "license": "PDDL",
+    "logo_source": "header-logo",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:09.678Z",
+      "robots": "allowed"
+    }
+  }
+}

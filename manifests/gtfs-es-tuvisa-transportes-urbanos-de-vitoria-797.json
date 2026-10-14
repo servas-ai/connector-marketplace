@@ -1,0 +1,150 @@
+{
+  "id": "servas-ai.opencli-gtfs-es-tuvisa-transportes-urbanos-de-vitoria-797",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "TUVISA (Transportes Urbanos de Vitoria) (GTFS-Fahrplan)",
+  "description": "TUVISA (Transportes Urbanos de Vitoria): offizieller GTFS-Soll-Fahrplan (Vitoria-Gasteiz, Autonomous Community of the Basque Country, Spanien) aus dem Mobility-Database-Katalog (mdb-797), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten (Mobility-Database-Katalog, Gültigkeit aus feed_info/calendar)",
+      "command": "gtfs-es-tuvisa-transportes-urbanos-de-vitoria-797-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt, --q Filter)",
+      "command": "gtfs-es-tuvisa-transportes-urbanos-de-vitoria-797-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt, --q Filter)",
+      "command": "gtfs-es-tuvisa-transportes-urbanos-de-vitoria-797-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id (<id>)",
+      "command": "gtfs-es-tuvisa-transportes-urbanos-de-vitoria-797-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_timetable",
+    "realtime": false,
+    "source_url": "http://www.vitoria-gasteiz.org/we001/http/vgTransit/google_transit.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.vitoria-gasteiz.org/robots.txt geprüft: Download-URL nicht gesperrt. Feed im Mobility Database Katalog ohne Auth gelistet (files.mobilitydatabase.org selbst ist per robots gesperrt und wird nicht genutzt).",
+    "tos": "Offene Fahrplandaten, Lizenz: https://www.vitoria-gasteiz.org/wb021/was/contenidoAction.do?idioma=es&uid=app_j34_0021.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "vitoria-gasteiz",
+      "tuvisa (transportes urbanos de vitoria)",
+      "spanien",
+      "spain"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Autonomous Community of the Basque Country",
+      "city": "Vitoria-Gasteiz",
+      "bbox": [
+        -2.74981,
+        42.826893,
+        -2.616074,
+        42.890694
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "vitoria-gasteiz.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=vitoria-gasteiz.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/vitoria-gasteiz.org.png",
+      "brand_domain": "www.vitoria-gasteiz.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 177,
+      "throughput_rps": 5.65,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": "2026-10-13T09:55:07.435Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "TUVISA (Transportes Urbanos de Vitoria) (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.vitoria-gasteiz.org/"
+  }
+}

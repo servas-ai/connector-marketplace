@@ -1,0 +1,227 @@
+{
+  "id": "servas-ai.opencli-ecdc-opendata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI ecdc-opendata",
+  "description": "Wöchentliche Daten des ECDC zu Atemwegsinfekten (ILI/ARI, SARI, Testpositivität, Influenza-Subtypen, SARS-CoV-2-Varianten) je EU-Land aus dem offiziellen ECDC-Repository. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+  "author": "servas-ai (Health Connector Builder)",
+  "categories": [
+    "connector",
+    "ui",
+    "gesundheit"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.page.register",
+    "ui.dashboardWidget.register"
+  ],
+  "entrypoints": {
+    "worker": "./dist/worker.js",
+    "ui": "./dist/ui"
+  },
+  "tools": [
+    {
+      "name": "ecdc-opendata-daten",
+      "displayName": "ecdc-opendata daten",
+      "description": "CLI-Befehl `daten` (node bin/cli.js daten --format json)",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "ui": {
+    "slots": [
+      {
+        "type": "page",
+        "id": "table",
+        "displayName": "ecdc-opendata",
+        "exportName": "RecordsPage",
+        "routePath": "opencli-ecdc-opendata"
+      },
+      {
+        "type": "dashboardWidget",
+        "id": "kpis",
+        "displayName": "ecdc-opendata KPIs",
+        "exportName": "KpiWidget",
+        "openui": "paperclip/openui.txt"
+      }
+    ]
+  },
+  "x-servas": {
+    "status": "cli-ready; worker/ui bundle noch nicht gebaut (dist/ fehlt)",
+    "category": "international",
+    "cli_commands": [
+      "daten"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "record_schema": {
+      "$id": "servas.record.v1",
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "name",
+        "source",
+        "source_url",
+        "fetched_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "const": "ecdc-opendata"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "fetched_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "raw": {
+          "type": "object",
+          "description": "Originalzeile des Connectors (CLI rows[])"
+        }
+      }
+    },
+    "kpis": {
+      "tests_passed": 3,
+      "tests_total": 3,
+      "last_live_run": "2026-10-13T03:23:59.715Z",
+      "median_ms": 1498,
+      "login": "none",
+      "captcha": false
+    },
+    "robots": {
+      "status": "allowed",
+      "note": "raw.githubusercontent.com hat keine robots.txt (404); offizielles, öffentlich publiziertes ECDC-Repository. Ein Download pro Aufruf."
+    },
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS)",
+    "access_chain": [
+      "official_api"
+    ],
+    "source_url": "https://github.com/EU-ECDC/Respiratory_viruses_weekly_data",
+    "logo": {
+      "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=64",
+      "source_host": "github.com",
+      "domain": "github.com",
+      "file": "assets/logos/atlas.ecdc.europa.eu.png",
+      "source": "wikimedia",
+      "resolved": "https://commons.wikimedia.org/wiki/File:ECDC_symbol.svg",
+      "source_kind": "wikimedia"
+    },
+    "login": "none",
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "llms": {
+      "llms_txt": "https://github.com/llms.txt",
+      "llms_full": "https://github.com/llms-full.txt",
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "blocks:Bytespider",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:08.910Z",
+      "robots": "allowed",
+      "access_chain_hints": [
+        {
+          "title": "Versions API",
+          "url": "https://docs.github.com/api/pagelist/versions"
+        },
+        {
+          "title": "Languages API",
+          "url": "https://docs.github.com/api/pagelist/languages"
+        },
+        {
+          "title": "Page List API",
+          "url": "https://docs.github.com/api/pagelist/en/free-pro-team@latest"
+        },
+        {
+          "title": "Article API",
+          "url": "https://docs.github.com/api/article"
+        },
+        {
+          "title": "Article Body API",
+          "url": "https://docs.github.com/api/article/body"
+        },
+        {
+          "title": "Search API",
+          "url": "https://docs.github.com/api/search/v1"
+        },
+        {
+          "title": "Extend Copilot Chat with MCP",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp"
+        },
+        {
+          "title": "Use the GitHub MCP Server",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server"
+        },
+        {
+          "title": "Set up the GitHub MCP Server",
+          "url": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/set-up-the-github-mcp-server"
+        },
+        {
+          "title": "About cloud agent",
+          "url": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent"
+        },
+        {
+          "title": "Create custom agents in your IDE",
+          "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-custom-agents-in-your-ide"
+        },
+        {
+          "title": "GitHub CLI",
+          "url": "https://docs.github.com/en/github-cli/github-cli"
+        },
+        {
+          "title": "Quickstart",
+          "url": "https://docs.github.com/en/github-cli/github-cli/quickstart"
+        },
+        {
+          "title": "REST API",
+          "url": "https://docs.github.com/en/rest"
+        },
+        {
+          "title": "GraphQL API",
+          "url": "https://docs.github.com/en/graphql"
+        }
+      ]
+    },
+    "homepage": "https://www.ecdc.europa.eu/",
+    "keywords": [
+      "ecdc",
+      "opendata",
+      "ecdc-opendata",
+      "wöchentliche",
+      "atemwegsinfekten",
+      "ili",
+      "ari",
+      "sari",
+      "testpositivität",
+      "influenza-subtypen",
+      "sars-cov-2-varianten",
+      "eu-land",
+      "offiziellen",
+      "ecdc-repository",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "gesundheitsdaten"
+    ]
+  }
+}

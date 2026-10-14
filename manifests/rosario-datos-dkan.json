@@ -1,0 +1,202 @@
+{
+  "id": "servas-ai.opencli-rosario-datos-dkan",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Municipalidad de Rosario – Datos Abiertos (DKAN)",
+  "description": "datosabiertos.rosario.gob.ar – Municipalidad de Rosario: DKAN-Open-Data-Katalog (DCAT-US-Schema): Dataset-Liste/Filter, Volltextsuche, Dataset-Metadaten mit Distributionen und Datastore-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "dkan",
+    "ar",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "rosario-datos-dkan datasets",
+      "command": "rosario-datos-dkan-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "rosario-datos-dkan dataset",
+      "command": "rosario-datos-dkan-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "rosario-datos-dkan rows",
+      "command": "rosario-datos-dkan-cli rows"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "rosario-datos-dkan suche",
+      "command": "rosario-datos-dkan-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://datosabiertos.rosario.gob.ar/api/1/metastore/schemas/dataset/items",
+    "homepage": "https://datosabiertos.rosario.gob.ar/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "datosabiertos.rosario.gob.ar/robots.txt geprüft (fail-closed, RFC 9309 via tools/robots/robots.js): Gruppe '*' sperrt nur HTML-/Admin-/Facetten-Pfade – die DKAN-API /api/1/metastore, /api/1/datastore/query und /api/1/search nicht gesperrt. Drossel ≥2 s/Host.",
+    "tos": "Municipalidad de Rosario: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "ODC-BY-1.0",
+    "country": "AR",
+    "keywords": [
+      "opendata",
+      "dkan",
+      "katalog",
+      "ar"
+    ],
+    "geo": {
+      "country": "AR",
+      "scope": "city",
+      "region": "Santa Fe",
+      "city": "Rosario"
+    },
+    "operator": {
+      "name": "Municipalidad de Rosario",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "AR",
+      "url": "https://www.rosario.gob.ar/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "datosabiertos.rosario.gob.ar",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dkan-2 (api/1)",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:30:00Z",
+      "robots": "allowed",
+      "api_kind": "DKAN 2 REST API v1",
+      "openapi_version": null,
+      "openapi_paths": null,
+      "dcat": null,
+      "dcat_profile": null,
+      "ogc_api": null,
+      "access_chain_hints": [
+        "dkan-api: https://datosabiertos.rosario.gob.ar/api/1"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "ODC-BY-1.0",
+        "url": "https://datosabiertos.rosario.gob.ar/",
+        "evidence": "https://datosabiertos.rosario.gob.ar/",
+        "per_dataset": true
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Municipalidad de Rosario – Datos Abiertos (DKAN) (datosabiertos.rosario.gob.ar)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten",
+          "Hosting-Land nicht öffentlich belegt (Portal-Land AR) – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-14T02:30:00Z"
+    },
+    "wave": "opendata-wave-0156",
+    "worker": "opendata-wave-0156",
+    "openui": {
+      "card": {
+        "title": "Municipalidad de Rosario – Datos Abiertos (DKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

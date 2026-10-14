@@ -1,0 +1,183 @@
+{
+  "id": "servas-ai.opencli-lemreveal",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Lemreveal – Offizielle Firmenregister (keyless)",
+  "description": "Lemreveal Public API: Firmensuche in offiziellen nationalen Registern (u.a. NO/FR/DK/AU/CA/GB) und Register-Coverage/Status, keyless JSON (120 req/h, llms.txt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "firmenregister",
+    "company-registry",
+    "kyb",
+    "handelsregister",
+    "opendata",
+    "lei"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "register",
+      "displayName": "register",
+      "description": "lemreveal register",
+      "command": "lemreveal-cli register"
+    },
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "lemreveal status",
+      "command": "lemreveal-cli status"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://lemreveal.com/",
+    "homepage": "https://lemreveal.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "lemreveal.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Lemreveal: öffentliche read-only API ohne Key, 120 req/h/IP; Fair-Use, keine Scraping-Umgehung.",
+    "license": "terms-of-source (Lemreveal; Daten von Amtsregistern)",
+    "country": "INT",
+    "keywords": [
+      "firmenregister",
+      "company-registry",
+      "kyb",
+      "handelsregister",
+      "opendata",
+      "lei"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Company-Data-0318",
+    "worker": "company-data-0318",
+    "logo": {
+      "domain": "lemreveal.com",
+      "file": "assets/logos/lemreveal.com.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://lemreveal.com/assets/lemreveal-logo-dark-_nRhIRUS.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://lemreveal.com/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:45:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Lemreveal; Daten von Amtsregistern)",
+        "url": "https://lemreveal.com/developers/api",
+        "evidence": "https://lemreveal.com/developers/api",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Lemreveal – Offizielle Firmenregister (keyless) (lemreveal.com)",
+      "personal_data": "company",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Firmen-/Arbeitgeberangaben enthalten (keine Privatpersonen)",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T03:45:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Lemreveal – Offizielle Firmenregister (keyless)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "land"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

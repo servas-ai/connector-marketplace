@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-cystat-cy",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CYSTAT-DB Cyprus Statistical Service (PxWeb)",
+  "description": "cystatdb.cystat.gov.cy PxWeb: CYSTAT-DB Statistical Service of Cyprus (PxWeb-Katalog) – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "cystat-cy katalog",
+      "command": "cystat-cy-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "cystat-cy info",
+      "command": "cystat-cy-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Cyprus",
+    "Kypros",
+    "CYSTAT",
+    "national statistics",
+    "Statistik",
+    "PxWeb",
+    "Open Data"
+  ],
+  "geo": {
+    "country": "CY",
+    "region": null,
+    "city": "Nicosia",
+    "lat": 35.17,
+    "lon": 33.36,
+    "scope": "country",
+    "bbox": null
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://cystatdb.cystat.gov.cy/api/v1/en/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "cystatdb.cystat.gov.cy/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+    "tos": "CYSTAT-DB Cyprus Statistical Service (PxWeb): öffentliche Schnittstelle ohne Login/Key, Fair Use; Quellenangabe cystatdb.cystat.gov.cy.",
+    "keywords": [
+      "Cyprus",
+      "Kypros",
+      "CYSTAT",
+      "national statistics",
+      "Statistik",
+      "PxWeb",
+      "Open Data"
+    ],
+    "geo": {
+      "country": "CY",
+      "region": null,
+      "city": "Nicosia",
+      "lat": 35.17,
+      "lon": 33.36,
+      "scope": "country",
+      "bbox": null
+    },
+    "country": "CY",
+    "logo": {
+      "domain": "cystatdb.cystat.gov.cy",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": "assets/logos/cystatdb.cystat.gov.cy.png",
+      "source": "initials",
+      "source_kind": "fallback"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "CYSTAT-DB Cyprus Statistical Service (PxWeb)",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-14T03:55:00Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.cystat.gov.cy/",
+    "wave": "orch-wave-0032",
+    "worker": "orch-wave-0032"
+  }
+}

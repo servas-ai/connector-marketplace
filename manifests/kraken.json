@@ -1,0 +1,148 @@
+{
+  "id": "servas-ai.opencli-kraken",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Kraken – öffentliche Marktdaten",
+  "description": "Krypto-Kurse in Echtzeit (Ticker, OHLC-Kerzen, Paare) von der öffentlichen Kraken-REST-API. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "kraken ticker",
+      "command": "kraken-cli ticker"
+    },
+    {
+      "name": "ohlc",
+      "displayName": "ohlc",
+      "description": "kraken ohlc",
+      "command": "kraken-cli ohlc"
+    },
+    {
+      "name": "paare",
+      "displayName": "paare",
+      "description": "kraken paare",
+      "command": "kraken-cli paare"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.kraken.com/0/public",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-y-2302",
+    "logo": {
+      "domain": "api.kraken.com",
+      "file": "assets/logos/api.kraken.com.png",
+      "source": "apple-touch-icon",
+      "resolved": "https://www.kraken.com/_assets/icons/apple-touch-icon.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 934,
+      "throughput_rps": 0.909,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "0",
+      "last_scrape": "2026-10-13T03:31:49.119Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Krypto-Kurse in Echtzeit (Ticker, OHLC-Kerzen, Paare) von de",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "preis"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      },
+      "live": {
+        "view": "sparkline",
+        "value_field": "preis",
+        "command": "ticker",
+        "refresh_s": 60
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "apple-touch-icon",
+    "keywords": [
+      "kraken",
+      "krypto-kurse",
+      "echtzeit",
+      "ticker",
+      "ohlc-kerzen",
+      "paare",
+      "öffentlichen",
+      "kraken-rest-api",
+      "marktdaten",
+      "finance",
+      "ohlc",
+      "crypto",
+      "cryptocurrency",
+      "kryptowährung",
+      "finanzen",
+      "markets",
+      "märkte",
+      "Krypto",
+      "Exchange"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "homepage": "https://www.kraken.com",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:04.876Z",
+      "robots": "allowed"
+    }
+  }
+}

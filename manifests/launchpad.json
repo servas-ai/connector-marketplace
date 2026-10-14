@@ -1,0 +1,139 @@
+{
+  "id": "servas-ai.opencli-launchpad",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Launchpad – Projekte & Serien (Canonical)",
+  "description": "Launchpad API 1.0: Projekt-/Distributionsdaten und Release-Serien (z. B. Ubuntu-Versionen). Ohne Login (anonymer Lesezugriff).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "projekt",
+      "displayName": "projekt",
+      "description": "launchpad projekt",
+      "command": "launchpad-cli projekt"
+    },
+    {
+      "name": "serien",
+      "displayName": "serien",
+      "description": "launchpad serien",
+      "command": "launchpad-cli serien"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.launchpad.net/1.0/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.launchpad.net/robots.txt: 404 (keine Einschränkung); offizielle Web-Service-API, anonymer Read-Only-Zugriff vorgesehen. Drossel ≥2 s.",
+    "tos": "Launchpad Web Service: öffentlich lesbar ohne OAuth; Fair Use.",
+    "logo": {
+      "domain": "api.launchpad.net",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://launchpad.net/@@/apple-touch-icon.png?v=2022",
+      "fallback": "initials",
+      "file": "assets/logos/api.launchpad.net.png",
+      "brand_domain": "launchpad.net",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2392,
+      "throughput_rps": 0.418,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "1.0",
+      "last_scrape": "2026-10-13T06:35:57.145Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Launchpad – Projekte & Serien (Canonical)",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "launchpad",
+      "projekt",
+      "distributionsdaten",
+      "release-serien",
+      "ubuntu-versionen",
+      "anonymer",
+      "lesezugriff",
+      "projekte",
+      "serien",
+      "canonical",
+      "tech",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:07.816Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://launchpad.net/"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-gbfs-7-vallees-velo",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "7 Vallées Vélo (GBFS)",
+  "description": "7 Vallées Vélo in Marconne (Frankreich): offener GBFS-Feed 2.2 ; 3.0 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-7-vallees-velo-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-7-vallees-velo-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-7-vallees-velo-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-7-vallees-velo-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://api.gbfs.v3.0.ecovelo.mobi/7vallees/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.gbfs.v3.0.ecovelo.mobi/robots.txt per kanonischem robots.js geprüft (fail-closed): Feed nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "marconne",
+      "7 vall es v lo",
+      "frankreich",
+      "france"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": "Marconne",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "api.gbfs.v3.0.ecovelo.mobi",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/86/e4/dd/86e4dd5d-41da-1532-b884-75f9a7c5cd5a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/7valleesvelo.ecovelo.mobi.png",
+      "brand_domain": "7valleesvelo.ecovelo.mobi",
+      "source_kind": "appstore"
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS 3.0",
+      "last_scrape": "2026-10-13T14:28:14.249Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "7 Vallées Vélo (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": null,
+        "evidence": "https://api.gbfs.v3.0.ecovelo.mobi/7vallees/gbfs.json (system_information ohne license_id/license_url); gelistet in MobilityData systems.csv ohne Authentifizierung",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": "Daten: 7 Vallées Vélo (GBFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GBFS-Feed des Betreibers (MobilityData systems.csv, ohne Auth); Terms der Quelle: check",
+      "source_kind": "official",
+      "server_country": "DE",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Datenlizenz im Feed nicht angegeben – Nutzungsbedingungen des Betreibers prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T14:27:32Z"
+    },
+    "homepage": "https://7valleesvelo.ecovelo.mobi"
+  }
+}

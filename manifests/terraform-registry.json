@@ -1,0 +1,147 @@
+{
+  "id": "servas-ai.opencli-terraform-registry",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Terraform Registry – Module & Provider",
+  "description": "HashiCorp Terraform Registry API: Module suchen (Downloads, Verifizierung), Provider-Metadaten und Modul-Detail. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "module",
+      "displayName": "module",
+      "description": "terraform-registry module",
+      "command": "terraform-registry-cli module"
+    },
+    {
+      "name": "modul",
+      "displayName": "modul",
+      "description": "terraform-registry modul",
+      "command": "terraform-registry-cli modul"
+    },
+    {
+      "name": "provider",
+      "displayName": "provider",
+      "description": "terraform-registry provider",
+      "command": "terraform-registry-cli provider"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://registry.terraform.io/v1/modules/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "registry.terraform.io/robots.txt: kein Disallow für /v1/. Offizielle Registry-API (öffentliche Endpunkte). Drossel ≥2 s.",
+    "tos": "Terraform Registry: öffentliche API für Terraform-Clients, Fair Use.",
+    "logo": {
+      "domain": "registry.terraform.io",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://registry.terraform.io/images/favicons/apple-touch-icon.png",
+      "fallback": "initials",
+      "file": "assets/logos/registry.terraform.io.png",
+      "brand_domain": "terraform.io",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3939,
+      "throughput_rps": 0.254,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:27:42.175Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Terraform Registry – Module & Provider",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "terraform",
+      "registry",
+      "terraform-registry",
+      "hashicorp",
+      "module",
+      "suchen",
+      "downloads",
+      "verifizierung",
+      "provider-metadaten",
+      "modul-detail",
+      "provider",
+      "tech",
+      "modul",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:04.954Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://registry.terraform.io/"
+  }
+}

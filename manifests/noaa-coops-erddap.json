@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-noaa-coops-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NOAA CO-OPS – Tides & Currents (ERDDAP)",
+  "description": "NOAA CO-OPS ERDDAP: Wasserstands-, Gezeiten- und Meteorologiedaten (Air Gap, Wassertemperatur, Luftdruck) des National Ocean Service. Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Gezeiten",
+    "Wasserstand",
+    "NOAA",
+    "NOAA Center for Operational Oceanographic Products and Services"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Gezeiten",
+    "Wasserstand",
+    "NOAA",
+    "NOAA Center for Operational Oceanographic Products and Services"
+  ],
+  "homepage": "https://tidesandcurrents.noaa.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": null,
+    "city": null,
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "noaa-coops-erddap datasets",
+      "command": "noaa-coops-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "noaa-coops-erddap suche",
+      "command": "noaa-coops-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "noaa-coops-erddap info",
+      "command": "noaa-coops-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://opendap.co-ops.nos.noaa.gov/erddap/info/index.json",
+    "homepage": "https://tidesandcurrents.noaa.gov/",
+    "portal": "https://opendap.co-ops.nos.noaa.gov/erddap/index.html",
+    "provider": "NOAA Center for Operational Oceanographic Products and Services (CO-OPS)",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Gezeiten",
+      "Wasserstand",
+      "NOAA",
+      "NOAA Center for Operational Oceanographic Products and Services"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendap.co-ops.nos.noaa.gov/robots.txt (HTTP 200): /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "NOAA Center for Operational Oceanographic Products and Services (CO-OPS): öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "opendap.co-ops.nos.noaa.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://tidesandcurrents.noaa.gov/assets/logos/logo_separate/tidesandcurrentslogo.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/opendap.co-ops.nos.noaa.gov.png",
+      "source": "official-site",
+      "kind": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "NOAA CO-OPS – Tides & Currents (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:07.289Z",
+      "robots": "allowed"
+    }
+  }
+}

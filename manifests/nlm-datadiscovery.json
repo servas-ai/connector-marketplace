@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-nlm-datadiscovery",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NLM Data Discovery – U.S. National Library of Medicine (Socrata)",
+  "description": "NLM Data Discovery: Datensätze der U.S. National Library of Medicine, u. a. MeSH-Vokabulare, Pillbox, Toxikologie- und Gesundheitsdaten. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Medizin",
+    "MeSH",
+    "NIH",
+    "U.S. National Library of Medicine (NIH)"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Medizin",
+    "MeSH",
+    "NIH",
+    "U.S. National Library of Medicine (NIH)"
+  ],
+  "homepage": "https://www.nlm.nih.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": null,
+    "city": null,
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "nlm-datadiscovery datasets",
+      "command": "nlm-datadiscovery-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "nlm-datadiscovery dataset",
+      "command": "nlm-datadiscovery-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "nlm-datadiscovery rows",
+      "command": "nlm-datadiscovery-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://datadiscovery.nlm.nih.gov/api/catalog/v1",
+    "homepage": "https://www.nlm.nih.gov/",
+    "portal": "https://datadiscovery.nlm.nih.gov/",
+    "provider": "U.S. National Library of Medicine (NIH)",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Medizin",
+      "MeSH",
+      "NIH",
+      "U.S. National Library of Medicine (NIH)"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "datadiscovery.nlm.nih.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "U.S. National Library of Medicine (NIH) Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "datadiscovery.nlm.nih.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:US-NationalLibraryOfMedicine-Logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/datadiscovery.nlm.nih.gov.png",
+      "source": "wikimedia",
+      "license": "Public domain"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "NLM Data Discovery – U.S. National Library of Medicine (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von U.S. National Library of Medicine (NIH); je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von U.S. National Library of Medicine (NIH); je Dataset im Feld license",
+    "logo_source": "wikimedia",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:22.150Z",
+      "robots": "allowed"
+    }
+  }
+}

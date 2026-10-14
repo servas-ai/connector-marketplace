@@ -1,0 +1,198 @@
+{
+  "id": "servas-ai.opencli-gtfs-ca-via-rail-canada-mdb-735",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "VIA Rail Canada (GTFS-Fahrplan)",
+  "description": "VIA Rail Canada: offizieller GTFS-Soll-Fahrplan (Kanada) aus dem Mobility-Database-Katalog (mdb-735), direkt vom Betreiber-Download. Linien, Haltestellen, Gültigkeit. Zip wird 12 h lokal gecacht. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feed",
+      "displayName": "feed",
+      "description": "Feed-Metadaten",
+      "command": "gtfs-ca-via-rail-canada-mdb-735-cli feed"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "Linien (routes.txt)",
+      "command": "gtfs-ca-via-rail-canada-mdb-735-cli linien"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "Haltestellen (stops.txt)",
+      "command": "gtfs-ca-via-rail-canada-mdb-735-cli haltestellen"
+    },
+    {
+      "name": "haltestelle",
+      "displayName": "haltestelle",
+      "description": "Eine Haltestelle per stop_id",
+      "command": "gtfs-ca-via-rail-canada-mdb-735-cli haltestelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": false,
+    "source_url": "https://www.viarail.ca/sites/all/files/gtfs/viarail.zip",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.viarail.ca/robots.txt geprüft (kanonisches robots.js, fail-closed): GTFS-Download nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: https://www.viarail.ca/en/developer-resources.",
+    "keywords": [
+      "fahrplan",
+      "timetable",
+      "gtfs",
+      "öffis",
+      "public transport",
+      "nahverkehr",
+      "transit",
+      "haltestellen",
+      "stops",
+      "linien",
+      "routes",
+      "bus",
+      "bahn",
+      "via rail canada",
+      "kanada",
+      "canada"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": "Manitoba",
+      "city": null,
+      "bbox": [
+        -130.352241212,
+        40.7502300443,
+        -63.2759008362,
+        58.767685933
+      ],
+      "scope": "region"
+    },
+    "logo": {
+      "domain": "www.viarail.ca",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a3/11/57/a3115725-1225-e2cb-04b8-a5720c634786/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.png",
+      "fallback": "initials",
+      "file": "assets/logos/viarail.ca.png",
+      "brand_domain": "viarail.ca"
+    },
+    "license": "https://www.viarail.ca/en/developer-resources",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "VIA Rail Canada (GTFS-Fahrplan)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://www.viarail.ca/en/developer-resources",
+        "evidence": "https://mobilitydatabase.org/feeds/mdb-735 → urls.license = https://www.viarail.ca/en/developer-resources",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": "Fahrplandaten: VIA Rail Canada (GTFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GTFS-Download des Betreibers (Mobility Database, ohne Auth); Terms der Quelle: check",
+      "source_kind": "official",
+      "server_country": "CA",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "Datenlizenz nicht maschinenlesbar belegt – Nutzungsbedingungen des Betreibers vor kommerzieller Nutzung prüfen (https://www.viarail.ca/en/developer-resources)",
+          "Server außerhalb EU (CA) – keine personenbezogenen Daten, daher DSGVO-unkritisch"
+        ]
+      },
+      "checked_at": "2026-10-13T15:28:53Z"
+    },
+    "homepage": "https://www.viarail.ca/",
+    "operator": {
+      "name": "VIA Rail Canada",
+      "legal_form": "pruefen",
+      "country": "CA",
+      "website": "https://www.viarail.ca/",
+      "source": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T15:38:28.628Z",
+      "robots": "allowed"
+    }
+  }
+}

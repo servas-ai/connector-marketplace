@@ -1,0 +1,154 @@
+{
+  "id": "servas-ai.opencli-gtfsrt-es-la-regional-vallisoletana-s-a-arroyobus-3510",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "La Regional Vallisoletana S.A – ArroyoBus (GTFS-Realtime)",
+  "description": "La Regional Vallisoletana S.A: offizieller GTFS-Realtime-Feed (Arroyo de la Encomienda, Castile and León, Spanien; tu) aus dem Mobility-Database-Katalog (mdb-3510). Status, Fahrzeugpositionen, Prognosen, Störungen. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "Feed-Status: Zeitstempel und Anzahl Fahrten/Fahrzeuge/Meldungen",
+      "command": "gtfsrt-es-la-regional-vallisoletana-s-a-arroyobus-3510-cli status"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Fahrzeugpositionen (VehiclePosition, --limit N)",
+      "command": "gtfsrt-es-la-regional-vallisoletana-s-a-arroyobus-3510-cli fahrzeuge"
+    },
+    {
+      "name": "updates",
+      "displayName": "updates",
+      "description": "Fahrt-Prognosen (TripUpdate, --limit N)",
+      "command": "gtfsrt-es-la-regional-vallisoletana-s-a-arroyobus-3510-cli updates"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Störungsmeldungen (Alert, --limit N)",
+      "command": "gtfsrt-es-la-regional-vallisoletana-s-a-arroyobus-3510-cli meldungen"
+    },
+    {
+      "name": "entity",
+      "displayName": "entity",
+      "description": "Ein Entity per ID (<id>)",
+      "command": "gtfsrt-es-la-regional-vallisoletana-s-a-arroyobus-3510-cli entity"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_realtime",
+    "realtime": true,
+    "source_url": "https://enzeyiwpoomhlxmcjivn.supabase.co/functions/v1/gtfs-rt-trip-updates",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "enzeyiwpoomhlxmcjivn.supabase.co/robots.txt per kanonischem robots.js geprüft (fail-closed). Feed im Mobility Database Katalog ohne Auth gelistet.",
+    "tos": "Offene Echtzeitdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "echtzeit",
+      "realtime",
+      "gtfs-rt",
+      "gtfs realtime",
+      "öffis",
+      "public transport",
+      "verspätung",
+      "delay",
+      "fahrzeugposition",
+      "vehicle position",
+      "störung",
+      "alert",
+      "arroyo de la encomienda",
+      "la regional vallisoletana s.a",
+      "spanien",
+      "spain"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Castile and León",
+      "city": "Arroyo de la Encomienda",
+      "bbox": [
+        -4.8144399,
+        41.6109561,
+        -4.70562,
+        41.66496
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "enzeyiwpoomhlxmcjivn.supabase.co",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=enzeyiwpoomhlxmcjivn.supabase.co&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/enzeyiwpoomhlxmcjivn.supabase.co.png",
+      "brand_domain": "enzeyiwpoomhlxmcjivn.supabase.co"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4143,
+      "throughput_rps": 0.241,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS-RT 2.0",
+      "last_scrape": "2026-10-13T13:19:26.030Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "La Regional Vallisoletana S.A – ArroyoBus (GTFS-Realtime)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    }
+  }
+}

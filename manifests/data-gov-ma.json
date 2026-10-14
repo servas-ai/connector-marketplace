@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-data-gov-ma",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "data.gov.ma – Portail Open Data du Maroc (CKAN)",
+  "description": "data.gov.ma: nationales Open-Data-Portal Marokkos mit Datensätzen von Ministerien und Behörden (Berichte, Statistik, Verwaltung). Zugriff über die offizielle CKAN-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Marokko",
+    "national",
+    "Afrika",
+    "Royaume du Maroc – Agence de Développement du Digital"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "CKAN",
+    "Datenkatalog",
+    "datasets",
+    "Marokko",
+    "national",
+    "Afrika",
+    "Royaume du Maroc – Agence de Développement du Digital"
+  ],
+  "homepage": "https://www.add.gov.ma/",
+  "license": "MIT",
+  "geo": {
+    "country": "MA",
+    "region": null,
+    "city": null,
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "data-gov-ma datasets",
+      "command": "data-gov-ma-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "data-gov-ma dataset",
+      "command": "data-gov-ma-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.gov.ma/data/api/3/action/package_search",
+    "homepage": "https://www.add.gov.ma/",
+    "portal": "https://data.gov.ma/data/dataset",
+    "provider": "Royaume du Maroc – Agence de Développement du Digital",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "CKAN",
+      "Datenkatalog",
+      "datasets",
+      "Marokko",
+      "national",
+      "Afrika",
+      "Royaume du Maroc – Agence de Développement du Digital"
+    ],
+    "geo": {
+      "country": "MA",
+      "region": null,
+      "city": null,
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.gov.ma/robots.txt (HTTP 200): /data/api/3/action/package_search und package_show nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "Royaume du Maroc – Agence de Développement du Digital: öffentliche CKAN-Action-API v3 ohne Key/Login; Fair Use.",
+    "logo": {
+      "domain": "data.gov.ma",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.gov.ma/sites/default/files/logo-ar.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.gov.ma.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "data.gov.ma – Portail Open Data du Maroc (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "MA",
+    "ampel": "grün",
+    "license": "Open Data Commons Open Database License (ODbL) (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "data_license": "Open Data Commons Open Database License (ODbL) (häufigste Dataset-Lizenz); je Dataset im Feld license",
+    "logo_source": "official-site",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:11:28.140Z",
+      "robots": "allowed"
+    }
+  }
+}

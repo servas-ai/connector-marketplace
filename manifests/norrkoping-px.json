@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-norrkoping-px",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Norrköpings kommun Statistik (PxWeb)",
+  "description": "statistik.norrkoping.se PxWeb: amtliche Statistik-Zeitreihen (Norrköping kommun statistik (PxWeb)). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "norrkoping-px katalog",
+      "command": "norrkoping-px-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "norrkoping-px info",
+      "command": "norrkoping-px-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "Zeitreihen",
+    "time series",
+    "PxWeb",
+    "Tabellen",
+    "tables",
+    "Amtliche Statistik",
+    "official statistics",
+    "Open Data",
+    "offene Daten",
+    "Datenkatalog",
+    "data catalogue",
+    "Norrköping",
+    "Östergötland",
+    "Sweden"
+  ],
+  "geo": {
+    "country": "SE",
+    "region": "Östergötland",
+    "city": "Norrköping",
+    "lat": 58.59,
+    "lon": 16.18,
+    "scope": "city",
+    "bbox": null
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://statistik.norrkoping.se/pxweb/api/v1/sv/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "statistik.norrkoping.se/robots.txt geprüft: keine Sperre für den API-Pfad – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "Norrköpings kommun Statistik: öffentliche PxWeb-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe statistik.norrkoping.se.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "Zeitreihen",
+      "time series",
+      "PxWeb",
+      "Tabellen",
+      "tables",
+      "Amtliche Statistik",
+      "official statistics",
+      "Open Data",
+      "offene Daten",
+      "Datenkatalog",
+      "data catalogue",
+      "Norrköping",
+      "Östergötland",
+      "Sweden"
+    ],
+    "geo": {
+      "country": "SE",
+      "region": "Östergötland",
+      "city": "Norrköping",
+      "lat": 58.59,
+      "lon": 16.18,
+      "scope": "city",
+      "bbox": null
+    },
+    "country": "SE",
+    "logo": {
+      "domain": "statistik.norrkoping.se",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://norrkoping.se/images/18.5ff942e1184b3f255e22e2e4/1629784198818/Norrkoping-logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/statistik.norrkoping.se.png",
+      "source": "header-logo",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Norrköpings kommun Statistik (PxWeb)",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:00.257Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://norrkoping.se/"
+  }
+}

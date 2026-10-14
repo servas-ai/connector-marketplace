@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-retsinformation-dk",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Retsinformation – Dänische Rechtsdokumente (Änderungsfeed)",
+  "description": "Retsinformation API (Civilstyrelsen): tägliche Änderungen an dänischen Rechtsdokumenten (Gesetze LOV/LBK, Verordnungen BEK, Vejledninger) mit Dokumenttyp und ELI-Link – keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "dänemark",
+    "gesetze",
+    "legislation",
+    "retsinformation",
+    "eli",
+    "rechtsgrundlagen",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "statistik",
+      "displayName": "statistik",
+      "description": "retsinformation-dk statistik",
+      "command": "retsinformation-dk-cli statistik"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://api.retsinformation.dk/",
+    "homepage": "https://api.retsinformation.dk/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.retsinformation.dk/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Retsinformation API: öffentlich, ohne Key; ein Abruf je Tag/Lauf, Fair-Use.",
+    "license": "public-domain (amtliche Rechtstexte, § 9 dän. UrhG)",
+    "country": "DK",
+    "keywords": [
+      "dänemark",
+      "gesetze",
+      "legislation",
+      "retsinformation",
+      "eli",
+      "rechtsgrundlagen",
+      "opendata"
+    ],
+    "geo": {
+      "country": "DK",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Company-Data-0404",
+    "worker": "company-data-0404",
+    "logo": {
+      "domain": "api.retsinformation.dk",
+      "file": "assets/logos/api.retsinformation.dk.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://www.retsinformation.dk/apple-touch-icon-180x180.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T04:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "public-domain (amtliche Rechtstexte, § 9 dän. UrhG)",
+        "url": "https://www.retsinformation.dk/data",
+        "evidence": "https://www.retsinformation.dk/data",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Retsinformation – Dänische Rechtsdokumente (Änderungsfeed) (api.retsinformation.dk)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "DK",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-14T04:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Retsinformation – Dänische Rechtsdokumente (Änderungsfeed)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "typ"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

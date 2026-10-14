@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-smc-performance",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "San Mateo County Performance Dashboards (Socrata)",
+  "description": "San Mateo County Performance: Kennzahlen-Dashboards von San Mateo County (Kalifornien) – ÖPNV-Fahrgäste, Gesundheit, Wohnen und Dienste. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Kalifornien",
+    "County of San Mateo"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Kalifornien",
+    "County of San Mateo"
+  ],
+  "homepage": "https://www.smcgov.org/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "California",
+    "city": "San Mateo County",
+    "scope": "county"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "smc-performance datasets",
+      "command": "smc-performance-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "smc-performance dataset",
+      "command": "smc-performance-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "smc-performance rows",
+      "command": "smc-performance-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://performance.smcgov.org/api/catalog/v1",
+    "homepage": "https://www.smcgov.org/",
+    "portal": "https://performance.smcgov.org/",
+    "provider": "County of San Mateo, California",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Kennzahlen",
+      "Performance",
+      "Kalifornien",
+      "County of San Mateo"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "California",
+      "city": "San Mateo County",
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "performance.smcgov.org/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "County of San Mateo, California Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "performance.smcgov.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.smcgov.org/sites/default/files/favicon.png",
+      "fallback": "initials",
+      "file": "assets/logos/performance.smcgov.org.png",
+      "source": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "San Mateo County Performance Dashboards (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von County of San Mateo, California; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von County of San Mateo, California; je Dataset im Feld license",
+    "logo_source": "favicon",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:08:21.949Z",
+      "robots": "allowed"
+    }
+  }
+}

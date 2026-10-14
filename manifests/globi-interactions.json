@@ -1,0 +1,177 @@
+{
+  "id": "servas-ai.opencli-globi-interactions",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GloBI – Global Biotic Interactions",
+  "description": "Global Biotic Interactions (GloBI) API: Arten-Interaktionen (frisst, bestäubt, parasitiert …) je Taxon aus Hunderten Datensätzen sowie das Interaktions-Vokabular (OBO RO), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "biodiversitaet",
+    "oekologie",
+    "arten",
+    "interaktionen",
+    "taxonomie",
+    "forschung",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "types",
+      "displayName": "types",
+      "description": "globi-interactions types",
+      "command": "globi-interactions-cli types"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.globalbioticinteractions.org/",
+    "homepage": "https://api.globalbioticinteractions.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.globalbioticinteractions.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "GloBI API: öffentlich, keyless; Lizenz und Zitat je Quelldatensatz beachten.",
+    "license": "per-item (CC BY/CC0 je Quelldatensatz)",
+    "country": "INT",
+    "keywords": [
+      "biodiversitaet",
+      "oekologie",
+      "arten",
+      "interaktionen",
+      "taxonomie",
+      "forschung",
+      "opendata"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-16",
+    "worker": "open-apis-16-2022",
+    "logo": {
+      "domain": "api.globalbioticinteractions.org",
+      "file": "assets/logos/api.globalbioticinteractions.org.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://www.globalbioticinteractions.org/apple-touch-icon.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:00:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "per-item (CC BY/CC0 je Quelldatensatz)",
+        "url": "https://www.globalbioticinteractions.org/about",
+        "evidence": "https://www.globalbioticinteractions.org/about",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: GloBI – Global Biotic Interactions (api.globalbioticinteractions.org)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T21:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "GloBI – Global Biotic Interactions",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "source",
+          "interaction",
+          "target"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "servas-ai.opencli-imf-sdmx",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "IMF Data API (SDMX)",
+  "description": "IMF-Daten-API (api.imf.org, SDMX 2.1): Dataflows (CPI, IFS, WEO …) durchsuchen und Zeitreihen je Schlüssel (z. B. CPI Österreich monatlich) abrufen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dataflows",
+      "displayName": "dataflows",
+      "description": "imf-sdmx dataflows",
+      "command": "imf-sdmx-cli dataflows"
+    },
+    {
+      "name": "daten",
+      "displayName": "daten",
+      "description": "imf-sdmx daten",
+      "command": "imf-sdmx-cli daten"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://api.imf.org/external/sdmx/2.1/dataflow",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "api.imf.org/robots.txt: keine Regeln (HTTP 5xx/keine Datei) – keine Einschränkung angegeben. Offizielle öffentliche SDMX-API des IMF. Drossel ≥2 s.",
+    "tos": "International Monetary Fund – IMF Data, Nutzung gemäss IMF Copyright and Usage (frei mit Quellenangabe).",
+    "logo": {
+      "domain": "api.imf.org",
+      "resolved": "https://commons.wikimedia.org/wiki/File:IMF-Seal_ENG_RGB.svg",
+      "file": "assets/logos/api.imf.org.png",
+      "source": "wikimedia",
+      "license": "Public domain"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sdmx-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "IMF Data API (SDMX)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "license": "IMF Copyright and Usage – frei mit Quellenangabe",
+    "keywords": [
+      "imf",
+      "sdmx",
+      "imf-sdmx",
+      "imf-daten-api",
+      "dataflows",
+      "cpi",
+      "ifs",
+      "weo",
+      "durchsuchen",
+      "zeitreihen",
+      "schlüssel",
+      "österreich",
+      "monatlich",
+      "abrufen",
+      "international"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:01.577Z",
+      "robots": "pruefen"
+    }
+  }
+}

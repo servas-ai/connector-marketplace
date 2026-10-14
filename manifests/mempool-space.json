@@ -1,0 +1,155 @@
+{
+  "id": "servas-ai.opencli-mempool-space",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "mempool.space – Bitcoin-Mempool & Blöcke",
+  "description": "mempool.space REST-API: empfohlene Bitcoin-Gebühren, letzte Blöcke und Mining-Pools. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "gebuehren",
+      "displayName": "gebuehren",
+      "description": "mempool-space gebuehren",
+      "command": "mempool-space-cli gebuehren"
+    },
+    {
+      "name": "bloecke",
+      "displayName": "bloecke",
+      "description": "mempool-space bloecke",
+      "command": "mempool-space-cli bloecke"
+    },
+    {
+      "name": "pools",
+      "displayName": "pools",
+      "description": "mempool-space pools",
+      "command": "mempool-space-cli pools"
+    },
+    {
+      "name": "block",
+      "displayName": "block",
+      "description": "mempool-space block",
+      "command": "mempool-space-cli block"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://mempool.space/api/v1/fees/recommended",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "mempool.space/robots.txt: kein Disallow für /api/. Öffentliche REST-API (Open Source). Drossel ≥2 s.",
+    "tos": "mempool.space: öffentliche API mit Rate-Limit, für Massenabfragen eigene Instanz empfohlen.",
+    "logo": {
+      "domain": "mempool.space",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://mempool.space/resources/favicons/apple-touch-icon.png",
+      "fallback": "initials",
+      "file": "assets/logos/mempool.space.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3078,
+      "throughput_rps": 0.325,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T07:26:19.968Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "mempool.space – Bitcoin-Mempool & Blöcke",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "mempool",
+      "space",
+      "mempool-space",
+      "rest-api",
+      "empfohlene",
+      "bitcoin-gebühren",
+      "letzte",
+      "blöcke",
+      "mining-pools",
+      "bitcoin-mempool",
+      "finance",
+      "gebuehren",
+      "bloecke",
+      "pools",
+      "block",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:54.730Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://mempool.space/"
+  }
+}

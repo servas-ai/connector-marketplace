@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-spaceflight-news",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Spaceflight News API – Raumfahrt-News",
+  "description": "Spaceflight News API v4 (The Space Devs): aktuelle Raumfahrt-Artikel, Blogs und Berichte (ISS u. a.) mit Volltextsuche. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "artikel",
+      "displayName": "artikel",
+      "description": "spaceflight-news artikel",
+      "command": "spaceflight-news-cli artikel"
+    },
+    {
+      "name": "blogs",
+      "displayName": "blogs",
+      "description": "spaceflight-news blogs",
+      "command": "spaceflight-news-cli blogs"
+    },
+    {
+      "name": "berichte",
+      "displayName": "berichte",
+      "description": "spaceflight-news berichte",
+      "command": "spaceflight-news-cli berichte"
+    },
+    {
+      "name": "artikel-detail",
+      "displayName": "artikel-detail",
+      "description": "spaceflight-news artikel-detail",
+      "command": "spaceflight-news-cli artikel-detail"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "intel",
+    "realtime": true,
+    "source_url": "https://api.spaceflightnewsapi.net/v4/articles/",
+    "homepage": "https://www.spaceflightnewsapi.net/",
+    "keywords": [
+      "spaceflight",
+      "news",
+      "spaceflight-news",
+      "space",
+      "devs",
+      "raumfahrt-artikel",
+      "blogs",
+      "berichte",
+      "iss",
+      "volltextsuche",
+      "raumfahrt-news",
+      "international",
+      "artikel",
+      "artikel-detail"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.spaceflightnewsapi.net/robots.txt: 404 (keine Einschränkung). Offizielle freie API (The Space Devs). Drossel ≥2 s.",
+    "tos": "Spaceflight News API: frei, ohne Key; Inhalte verlinken auf Originalquellen.",
+    "logo": {
+      "domain": "api.spaceflightnewsapi.net",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://spaceflightnewsapi.net/img/favicon.ico",
+      "fallback": "initials",
+      "file": "assets/logos/api.spaceflightnewsapi.net.png",
+      "brand_domain": "spaceflightnewsapi.net",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3462,
+      "throughput_rps": 0.289,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v4",
+      "last_scrape": "2026-10-13T07:27:27.875Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Spaceflight News API – Raumfahrt-News",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:41:18Z",
+      "host": "api.spaceflightnewsapi.net",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 404,
+      "ip": "188.114.96.3",
+      "server_header": "cloudflare",
+      "tls_issuer": "Google Trust Services",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://spaceflightnewsapi.net"
+    },
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:35.206Z",
+      "robots": "allowed"
+    }
+  }
+}

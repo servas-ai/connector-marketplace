@@ -1,0 +1,184 @@
+{
+  "id": "servas-ai.opencli-la-metro",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "LA Metro API – Linien, Haltestellen, Ausfälle (Los Angeles)",
+  "description": "LA Metro API (Los Angeles County MTA): Linienübersicht (Bus/Bahn), Haltestellen je Linie und Zusammenfassung ausgefallener Fahrten, OpenAPI 3.1, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "mobility"
+  ],
+  "tags": [
+    "oepnv",
+    "bus",
+    "bahn",
+    "los-angeles",
+    "gtfs",
+    "fahrplan",
+    "mobilitaet",
+    "usa"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "la-metro haltestellen",
+      "command": "la-metro-cli haltestellen"
+    },
+    {
+      "name": "ausfaelle",
+      "displayName": "ausfaelle",
+      "description": "la-metro ausfaelle",
+      "command": "la-metro-cli ausfaelle"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "mobility",
+    "realtime": true,
+    "source_url": "https://api.metro.net/",
+    "homepage": "https://api.metro.net/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.metro.net/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "LA Metro API: öffentliche Lese-Endpunkte ohne Key (Login-Routen nicht genutzt), Developer-Terms, Fair-Use.",
+    "license": "terms-of-source (LA Metro Developer Terms)",
+    "country": "US",
+    "keywords": [
+      "oepnv",
+      "bus",
+      "bahn",
+      "los-angeles",
+      "gtfs",
+      "fahrplan",
+      "mobilitaet",
+      "usa"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-19",
+    "worker": "open-apis-19-2215",
+    "logo": {
+      "domain": "api.metro.net",
+      "file": "assets/logos/api.metro.net.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://i0.wp.com/brand.metro.net/wp-content/uploads/2018/08/metro-logo-preferred-e1543619521338.png?h=75",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://api.metro.net/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (LA Metro Developer Terms)",
+        "url": "https://developer.metro.net/",
+        "evidence": "https://developer.metro.net/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: LA Metro API – Linien, Haltestellen, Ausfälle (Los Angeles) (api.metro.net)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T22:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "LA Metro API – Linien, Haltestellen, Ausfälle (Los Angeles)",
+        "subtitle": "mobility",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "route_code",
+          "route_type"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

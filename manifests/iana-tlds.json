@@ -1,0 +1,147 @@
+{
+  "id": "servas-ai.opencli-iana-tlds",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "IANA – Top-Level-Domain-Liste",
+  "description": "IANA – Top-Level-Domain-Liste: offizielle Gesamtdatei (LINES) als Datensätze – Liste, Volltextsuche, Dump-Metadaten. Download höchstens 1× pro Tag (Cache 24 h). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "iana-tlds liste",
+      "command": "iana-tlds-cli liste"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "iana-tlds suche",
+      "command": "iana-tlds-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "iana-tlds info",
+      "command": "iana-tlds-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.iana.org/TLD/tlds-alpha-by-domain.txt",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host, Dump ≤1×/Tag",
+    "robots_status": "ok",
+    "robots": "data.iana.org/robots.txt geprüft: Dump-Pfad nicht gesperrt (zusätzlich Laufzeitprüfung). Kein Key. Drossel ≥2 s/Host, Dump-Cache 24 h.",
+    "tos": "Lizenz: IANA, frei nutzbar. Quelle nennen.",
+    "logo": {
+      "domain": "data.iana.org",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=data.iana.org&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data.iana.org.png",
+      "brand_domain": "data.iana.org"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 129,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dump",
+      "last_scrape": "2026-10-13T09:25:09.773Z",
+      "datenqualitaet": 1.0
+    },
+    "keywords": [
+      "iana",
+      "tlds",
+      "iana-tlds",
+      "top-level-domain-liste",
+      "gesamtdatei",
+      "lines",
+      "datensätze",
+      "liste",
+      "volltextsuche",
+      "dump-metadaten",
+      "download",
+      "höchstens",
+      "tag",
+      "cache",
+      "opendata",
+      "info",
+      "open data",
+      "offene daten",
+      "datasets"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "openui": {
+      "card": {
+        "title": "IANA – Top-Level-Domain-Liste",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:11.442Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.iana.org/"
+  }
+}

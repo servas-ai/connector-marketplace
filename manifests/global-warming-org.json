@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-global-warming-org",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "global-warming.org – Klima-Indikatoren",
+  "description": "global-warming.org API: Zeitreihen zu globaler Temperaturanomalie, CO₂, Methan, N₂O und arktischer Meereisausdehnung (Quellen NOAA/NASA/NSIDC), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "climate",
+    "global-warming",
+    "co2",
+    "methane",
+    "temperature",
+    "sea-ice"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "meereis",
+      "displayName": "meereis",
+      "description": "global-warming-org meereis",
+      "command": "global-warming-org-cli meereis"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://global-warming.org/",
+    "homepage": "https://global-warming.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "global-warming.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "global-warming.org: kostenlose keyless API; nur Lesen, gedrosselt, Quellen NOAA/NASA nennen.",
+    "license": "terms-of-source (global-warming.org; Quelldaten NOAA/NASA/NSIDC public domain)",
+    "country": "INT",
+    "keywords": [
+      "climate",
+      "global-warming",
+      "co2",
+      "methane",
+      "temperature",
+      "sea-ice"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-29",
+    "worker": "open-apis-29-0218",
+    "logo": {
+      "domain": "global-warming.org",
+      "file": "assets/logos/global-warming.org.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://global-warming.org/images/logo-planet-image.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:50:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (global-warming.org; Quelldaten NOAA/NASA/NSIDC public domain)",
+        "url": "https://global-warming.org/",
+        "evidence": "https://global-warming.org/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: global-warming.org – Klima-Indikatoren (global-warming.org)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T02:50:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "global-warming.org – Klima-Indikatoren",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "value"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "id": "servas-ai.opencli-nearblocks",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NearBlocks – NEAR-Protokoll Explorer (Stats, Blöcke, Tokens)",
+  "description": "NearBlocks API v1: NEAR-Netzwerkstatistik (Supply, Preis, Marktkapitalisierung, TPS), letzte Blöcke und Fungible-Token-Rangliste, keyless JSON, OpenAPI 3.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "near",
+    "nearblocks",
+    "blockchain",
+    "explorer",
+    "tokens",
+    "blöcke",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "bloecke",
+      "displayName": "bloecke",
+      "description": "nearblocks bloecke",
+      "command": "nearblocks-cli bloecke"
+    },
+    {
+      "name": "tokens",
+      "displayName": "tokens",
+      "description": "nearblocks tokens",
+      "command": "nearblocks-cli tokens"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.nearblocks.io/",
+    "homepage": "https://api.nearblocks.io/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.nearblocks.io/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "NearBlocks API: freier Zugang ohne Key mit niedrigem Rate-Limit (Key/Plan nur für mehr), Quellenangabe.",
+    "license": "terms-of-source (NearBlocks)",
+    "country": "INT",
+    "keywords": [
+      "near",
+      "nearblocks",
+      "blockchain",
+      "explorer",
+      "tokens",
+      "blöcke",
+      "finance"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-22",
+    "worker": "open-apis-22-2302",
+    "logo": {
+      "domain": "api.nearblocks.io",
+      "file": "assets/logos/api.nearblocks.io.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://nearblocks.io/icon.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://api.nearblocks.io/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (NearBlocks)",
+        "url": "https://nearblocks.io/terms-and-conditions",
+        "evidence": "https://nearblocks.io/terms-and-conditions",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: NearBlocks – NEAR-Protokoll Explorer (Stats, Blöcke, Tokens) (api.nearblocks.io)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "NearBlocks – NEAR-Protokoll Explorer (Stats, Blöcke, Tokens)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "near_price",
+          "tps"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

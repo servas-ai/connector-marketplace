@@ -1,0 +1,176 @@
+{
+  "id": "servas-ai.opencli-gbfs-levelo-marseille",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "levélo - Marseille (GBFS)",
+  "description": "levélo - Marseille in Marseille (Frankreich): offener GBFS-Feed 2.2 – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-levelo-marseille-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-levelo-marseille-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-levelo-marseille-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-levelo-marseille-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://gbfs.omega.fifteen.eu/gbfs/2.2/marseille/en/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gbfs.omega.fifteen.eu/robots.txt per kanonischem robots.js geprüft (fail-closed): Feed nicht gesperrt.",
+    "tos": "Öffentliche Mobilitätsdaten, Lizenz: laut Betreiber.",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "marseille",
+      "lev lo marseille",
+      "frankreich",
+      "france"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": "Marseille",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "gbfs.omega.fifteen.eu",
+      "chain": [
+        "appstore",
+        "official",
+        "favicon"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5c/89/cd/5c89cd63-ef62-5c2b-117c-4c93af1fa69a/AppIconLeVelo-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/512x512bb.jpg",
+      "fallback": "initials",
+      "file": "assets/logos/levelo.ampmetropole.fr.png",
+      "brand_domain": "levelo.ampmetropole.fr",
+      "source_kind": "appstore"
+    },
+    "license": "https://spdx.org/licenses/ODbL-1.0.html",
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS 2.2",
+      "last_scrape": "2026-10-13T14:25:24.358Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "levélo - Marseille (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "ODbL-1.0",
+        "url": "https://spdx.org/licenses/ODbL-1.0.html",
+        "evidence": "https://gbfs.omega.fifteen.eu/gbfs/2.2/marseille/en/gbfs.json → system_information.license_id/license_url",
+        "per_dataset": false
+      },
+      "commercial_use": "attribution",
+      "attribution_required": "yes",
+      "attribution_text": "Daten: levélo (GBFS)",
+      "personal_data": "none",
+      "legal_basis": "Offener GBFS-Feed des Betreibers (MobilityData systems.csv, ohne Auth); Lizenz ODbL-1.0",
+      "source_kind": "official",
+      "server_country": "BE",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Offene Lizenz ODbL-1.0 im Feed belegt, keine personenbezogenen Daten, kein Login, robots.txt erlaubt"
+        ]
+      },
+      "checked_at": "2026-10-13T14:24:33Z"
+    },
+    "homepage": "https://levelo.ampmetropole.fr"
+  }
+}

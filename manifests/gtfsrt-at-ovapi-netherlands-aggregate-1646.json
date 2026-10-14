@@ -1,0 +1,155 @@
+{
+  "id": "servas-ai.opencli-gtfsrt-at-ovapi-netherlands-aggregate-1646",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OVapi – Netherlands aggregate (GTFS-Realtime)",
+  "description": "OVapi: offizieller GTFS-Realtime-Feed (Bezirk Amstetten, Lower Austria, Österreich; vp) aus dem Mobility-Database-Katalog (mdb-1646). Status, Fahrzeugpositionen, Prognosen, Störungen. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "Feed-Status: Zeitstempel und Anzahl Fahrten/Fahrzeuge/Meldungen",
+      "command": "gtfsrt-at-ovapi-netherlands-aggregate-1646-cli status"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Fahrzeugpositionen (VehiclePosition, --limit N)",
+      "command": "gtfsrt-at-ovapi-netherlands-aggregate-1646-cli fahrzeuge"
+    },
+    {
+      "name": "updates",
+      "displayName": "updates",
+      "description": "Fahrt-Prognosen (TripUpdate, --limit N)",
+      "command": "gtfsrt-at-ovapi-netherlands-aggregate-1646-cli updates"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Störungsmeldungen (Alert, --limit N)",
+      "command": "gtfsrt-at-ovapi-netherlands-aggregate-1646-cli meldungen"
+    },
+    {
+      "name": "entity",
+      "displayName": "entity",
+      "description": "Ein Entity per ID (<id>)",
+      "command": "gtfsrt-at-ovapi-netherlands-aggregate-1646-cli entity"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_realtime",
+    "realtime": true,
+    "source_url": "http://gtfs.ovapi.nl/nl/vehiclePositions.pb",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "gtfs.ovapi.nl/robots.txt per kanonischem robots.js geprüft (fail-closed). Feed im Mobility Database Katalog ohne Auth gelistet.",
+    "tos": "Offene Echtzeitdaten, Lizenz: https://old.datahub.io/dataset/gtfs-nl.",
+    "keywords": [
+      "echtzeit",
+      "realtime",
+      "gtfs-rt",
+      "gtfs realtime",
+      "öffis",
+      "public transport",
+      "verspätung",
+      "delay",
+      "fahrzeugposition",
+      "vehicle position",
+      "störung",
+      "alert",
+      "bezirk amstetten",
+      "ovapi",
+      "österreich",
+      "austria"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Lower Austria",
+      "city": "Bezirk Amstetten",
+      "bbox": [
+        -0.12515,
+        0.0,
+        21.05204,
+        55.67283
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "gtfs.ovapi.nl",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=gtfs.ovapi.nl&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/gtfs.ovapi.nl.png",
+      "brand_domain": "gtfs.ovapi.nl"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2041,
+      "throughput_rps": 0.49,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS-RT 2.0",
+      "last_scrape": "2026-10-13T13:10:39.584Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "OVapi – Netherlands aggregate (GTFS-Realtime)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://ovapi.nl/"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "id": "servas-ai.opencli-agribalyse-fr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "AGRIBALYSE 3.1 Umweltwirkung von Lebensmitteln (ADEME)",
+  "description": "AGRIBALYSE 3.1 (ADEME/INRAE): Klima- und Umweltwirkung von rund 2.500 Lebensmitteln je kg (CO2e, PEF-Gesamtscore, Wasser, Fläche) mit CIQUAL-Code, über die offizielle data-fair-API.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "umwelt",
+    "co2",
+    "frankreich"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ciqual",
+      "displayName": "ciqual",
+      "description": "agribalyse-fr ciqual",
+      "command": "agribalyse-fr-cli ciqual"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "agribalyse-fr suche",
+      "command": "agribalyse-fr-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://data.ademe.fr/data-fair/api/v1/datasets/agribalyse-31-synthese",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "html"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/s je Host",
+    "robots_status": "ok",
+    "robots": "data.ademe.fr/robots.txt: User-agent * Allow /.",
+    "license": "Licence Ouverte / Etalab 2.0",
+    "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+    "logo": {
+      "domain": "ademe.fr",
+      "resolved": "https://data.ademe.fr/api/v1/portals/efWMeL1ZP/assets/logo?draft=false&hash=fit-2e58cae358.png",
+      "file": "assets/logos/data.ademe.fr.png",
+      "source": "favicon"
+    },
+    "keywords": [
+      "agribalyse",
+      "agribalyse-fr",
+      "ademe",
+      "inrae",
+      "klima",
+      "umweltwirkung",
+      "rund",
+      "lebensmitteln",
+      "co2e",
+      "pef-gesamtscore",
+      "wasser",
+      "fläche",
+      "ciqual-code",
+      "data-fair-api",
+      "food",
+      "ciqual",
+      "groceries",
+      "nahrung",
+      "luft",
+      "luftqualität",
+      "lebensmittel",
+      "ernährung"
+    ],
+    "geo": {
+      "country": "FR",
+      "scope": "country"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2160,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "data-fair API v1",
+      "last_scrape": "2026-10-13T09:35:00.714Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "AGRIBALYSE 3.1 Umweltwirkung von Lebensmitteln (ADEME)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "ciqual_code",
+          "co2e_kg_pro_kg",
+          "ef_score"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "country": "FR",
+    "homepage": "https://agribalyse.ademe.fr",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:33.123Z",
+      "robots": "allowed"
+    }
+  }
+}

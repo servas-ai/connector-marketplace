@@ -1,0 +1,191 @@
+{
+  "id": "servas-ai.opencli-kolomyia-opendata-ckan",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Kolomyia Open Data (CKAN)",
+  "description": "dani.kolrada.gov.ua – Kolomyia City Council: CKAN-Katalog: Dataset-Suche und Dataset-Details (Organisation, Ressourcen, Formate, Lizenz). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "ckan",
+    "ua",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "kolomyia-opendata-ckan datasets",
+      "command": "kolomyia-opendata-ckan-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "kolomyia-opendata-ckan dataset",
+      "command": "kolomyia-opendata-ckan-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://dani.kolrada.gov.ua/api/3/action/package_search",
+    "homepage": "https://dani.kolrada.gov.ua/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "ok/robots.txt geprüft (fail-closed, RFC 9309 via tools/robots/robots.js): Gruppe '*' sperrt nur HTML-/Admin-/Facetten-Pfade – die CKAN Action API unter /api/3/action (package_search, package_show) nicht gesperrt. Portal-Frontend dani.kolrada.gov.ua (SPA) liefert robots.txt als HTML → dort wird nichts abgerufen; Zugriff ausschließlich über den API-Host. Drossel ≥2 s/Host.",
+    "tos": "Kolomyia City Council: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "UA",
+    "keywords": [
+      "opendata",
+      "ckan",
+      "katalog",
+      "ua"
+    ],
+    "geo": {
+      "country": "UA",
+      "scope": "city",
+      "region": "Kolomyia",
+      "city": "Kolomyia"
+    },
+    "operator": {
+      "name": "Kolomyia City Council",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "UA",
+      "url": "https://dani.kolrada.gov.ua/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "dani.kolrada.gov.ua",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:45:00Z",
+      "robots": "allowed",
+      "api_kind": "CKAN Action API v3",
+      "openapi_version": null,
+      "openapi_paths": null,
+      "dcat": null,
+      "dcat_profile": null,
+      "ogc_api": null,
+      "access_chain_hints": [
+        "ckan-action-api: https://dani.kolrada.gov.ua/api/3/action"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://dani.kolrada.gov.ua/",
+        "evidence": "https://dani.kolrada.gov.ua/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Kolomyia Open Data (CKAN) (dani.kolrada.gov.ua)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Hosting-Land nicht öffentlich belegt (Portal-Land UA) – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-14T03:45:00Z"
+    },
+    "wave": "opendata-wave-0318",
+    "worker": "opendata-wave-0318",
+    "openui": {
+      "card": {
+        "title": "Kolomyia Open Data (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

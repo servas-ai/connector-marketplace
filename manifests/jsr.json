@@ -1,0 +1,148 @@
+{
+  "id": "servas-ai.opencli-jsr",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "JSR – JavaScript Registry (Deno)",
+  "description": "JSR API: Paketsuche, Paketmetadaten (Score, Runtime-Kompatibilität) und Versionsliste der modernen JavaScript/TypeScript-Registry. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "jsr suche",
+      "command": "jsr-cli suche"
+    },
+    {
+      "name": "paket",
+      "displayName": "paket",
+      "description": "jsr paket",
+      "command": "jsr-cli paket"
+    },
+    {
+      "name": "versionen",
+      "displayName": "versionen",
+      "description": "jsr versionen",
+      "command": "jsr-cli versionen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://api.jsr.io/packages",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.jsr.io/robots.txt: 404 (keine Einschränkung). Offizielle JSR-API (OpenAPI dokumentiert). Drossel ≥2 s.",
+    "tos": "JSR (Deno Land): öffentliche Registry-API; Fair Use.",
+    "logo": {
+      "domain": "api.jsr.io",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://jsr.io/logo-square.svg?__frsh_c=dfd7fe8bec6abf3831004df829d7a757624d163a",
+      "fallback": "initials",
+      "file": "assets/logos/api.jsr.io.png",
+      "brand_domain": "jsr.io",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2256,
+      "throughput_rps": 0.443,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "api",
+      "last_scrape": "2026-10-13T06:37:07.135Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "JSR – JavaScript Registry (Deno)",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "jsr",
+      "paketsuche",
+      "paketmetadaten",
+      "score",
+      "runtime-kompatibilität",
+      "versionsliste",
+      "modernen",
+      "javascript",
+      "typescript-registry",
+      "registry",
+      "deno",
+      "tech",
+      "paket",
+      "versionen",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:04.840Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://jsr.io/"
+  }
+}

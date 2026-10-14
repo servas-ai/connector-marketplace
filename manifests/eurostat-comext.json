@@ -1,0 +1,164 @@
+{
+  "id": "servas-ai.opencli-eurostat-comext",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Eurostat Comext SDMX – SDMX",
+  "description": "ec.europa.eu SDMX: amtliche Statistik-Zeitreihen (Eurostat Comext SDMX). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dataflows",
+      "displayName": "dataflows",
+      "description": "eurostat-comext dataflows",
+      "command": "eurostat-comext-cli dataflows"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "eurostat-comext info",
+      "command": "eurostat-comext-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "Zeitreihen",
+    "time series",
+    "SDMX",
+    "Datenfluss",
+    "dataflow",
+    "Amtliche Statistik",
+    "official statistics",
+    "Open Data",
+    "offene Daten",
+    "Indikatoren",
+    "indicators",
+    "Außenhandel",
+    "foreign trade"
+  ],
+  "geo": {
+    "country": "EU",
+    "region": "Europe",
+    "city": "Luxembourg",
+    "lat": 49.61,
+    "lon": 6.13,
+    "bbox": null,
+    "scope": "supranational"
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://ec.europa.eu/eurostat/api/comext/dissemination/sdmx/2.1/dataflow/ESTAT/all",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "ec.europa.eu/robots.txt geprüft: keine Sperre für den API-Pfad – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "Eurostat Comext SDMX: öffentliche SDMX-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe ec.europa.eu.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "Zeitreihen",
+      "time series",
+      "SDMX",
+      "Datenfluss",
+      "dataflow",
+      "Amtliche Statistik",
+      "official statistics",
+      "Open Data",
+      "offene Daten",
+      "Indikatoren",
+      "indicators",
+      "Außenhandel",
+      "foreign trade"
+    ],
+    "geo": {
+      "country": "EU",
+      "region": "Europe",
+      "city": "Luxembourg",
+      "lat": 49.61,
+      "lon": 6.13,
+      "bbox": null,
+      "scope": "multi-country"
+    },
+    "logo": {
+      "domain": "ec.europa.eu",
+      "file": "assets/logos/ec.europa.eu_eurostat.png",
+      "source": "wikimedia",
+      "resolved": "https://commons.wikimedia.org/wiki/File:Eurostat_Newlogo.png"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sdmx-rest-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Eurostat Comext SDMX – SDMX",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "logo_source": "wikimedia",
+    "country": "EU",
+    "homepage": "https://ec.europa.eu/eurostat",
+    "license": "CC-BY-4.0",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:27.018Z",
+      "robots": "allowed"
+    }
+  }
+}

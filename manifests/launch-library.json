@@ -1,0 +1,143 @@
+{
+  "id": "servas-ai.opencli-launch-library",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Launch Library 2 (The Space Devs)",
+  "description": "The Space Devs Launch Library 2: kommende und vergangene Raketenstarts (Anbieter, Rakete, Startplatz, Mission). Ohne Login/Key (anonym 15 Anfragen/Stunde).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kommend",
+      "displayName": "kommend",
+      "description": "launch-library kommend",
+      "command": "launch-library-cli kommend"
+    },
+    {
+      "name": "vergangen",
+      "displayName": "vergangen",
+      "description": "launch-library vergangen",
+      "command": "launch-library-cli vergangen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "ll.thespacedevs.com/robots.txt: kein Disallow für /2.3.0/. Offizielle API, anonym 15 req/h – Connector fragt sparsam (1 Request/Befehl).",
+    "tos": "The Space Devs – Launch Library 2, freie Nutzung mit Namensnennung.",
+    "logo": {
+      "domain": "ll.thespacedevs.com",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://thespacedevs-prod.nyc3.cdn.digitaloceanspaces.com/static/home/ll_api/ll_favicon.png",
+      "fallback": "initials",
+      "file": "assets/logos/ll.thespacedevs.com.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "2.3.0",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Launch Library 2 (The Space Devs)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "launch",
+      "library",
+      "launch-library",
+      "space",
+      "devs",
+      "kommende",
+      "vergangene",
+      "raketenstarts",
+      "anbieter",
+      "rakete",
+      "startplatz",
+      "mission",
+      "anonym",
+      "anfragen",
+      "stunde",
+      "opendata",
+      "kommend",
+      "vergangen",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:46.199Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://thespacedevs.com/"
+  }
+}

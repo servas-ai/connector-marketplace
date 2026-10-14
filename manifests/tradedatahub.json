@@ -1,0 +1,188 @@
+{
+  "id": "servas-ai.opencli-tradedatahub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "TradeDataHub – US-Contractor-Datasets (Discovery)",
+  "description": "TradeDataHub Discovery API: Coverage, US-Bundesstaaten, Trades und Dataset-Katalog für Contractor-/Firmendaten (keyless Discovery; Kauf separat).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "contractor",
+    "usa",
+    "firmen",
+    "datasets",
+    "trade",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "states",
+      "displayName": "states",
+      "description": "tradedatahub states",
+      "command": "tradedatahub-cli states"
+    },
+    {
+      "name": "trades",
+      "displayName": "trades",
+      "description": "tradedatahub trades",
+      "command": "tradedatahub-cli trades"
+    },
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "tradedatahub datasets",
+      "command": "tradedatahub-cli datasets"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://tradedatahub.net/",
+    "homepage": "https://tradedatahub.net/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "tradedatahub.net/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "TradeDataHub: Discovery-Endpunkte keyless laut llms.txt; Datensätze kostenpflichtig – Connector nur Discovery/Preview-Metadaten.",
+    "license": "terms-of-source (TradeDataHub; Discovery frei)",
+    "country": "US",
+    "keywords": [
+      "contractor",
+      "usa",
+      "firmen",
+      "datasets",
+      "trade",
+      "opendata"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Company-Data-0318",
+    "worker": "company-data-0318",
+    "logo": {
+      "domain": "tradedatahub.net",
+      "file": "assets/logos/tradedatahub.net.png",
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://www.tradedatahub.net/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T03:45:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (TradeDataHub; Discovery frei)",
+        "url": "https://www.tradedatahub.net/",
+        "evidence": "https://www.tradedatahub.net/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: TradeDataHub – US-Contractor-Datasets (Discovery) (tradedatahub.net)",
+      "personal_data": "company",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Firmen-/Arbeitgeberangaben enthalten (keine Privatpersonen)",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T03:45:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "TradeDataHub – US-Contractor-Datasets (Discovery)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "record_count"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

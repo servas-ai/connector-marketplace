@@ -1,0 +1,166 @@
+{
+  "id": "servas-ai.opencli-getthedata-bng",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GetTheData – British National Grid → WGS84",
+  "description": "GetTheData bng2latlong: wandelt OSGB36-Rechts-/Hochwerte (British National Grid) in WGS84-Lat/Lon um, keyless JSON, llms-full.txt vorhanden.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "tags": [
+    "geo",
+    "koordinaten",
+    "osgb36",
+    "uk",
+    "umrechnung",
+    "llms"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "realtime": false,
+    "source_url": "https://api.getthedata.com/",
+    "homepage": "https://api.getthedata.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.getthedata.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "GetTheData: freie API, Fair-Use; Terms der Quelle.",
+    "license": "terms-of-source (GetTheData)",
+    "country": "GB",
+    "keywords": [
+      "geo",
+      "koordinaten",
+      "osgb36",
+      "uk",
+      "umrechnung",
+      "llms"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-13",
+    "worker": "open-apis-13-1834",
+    "logo": {
+      "domain": "api.getthedata.com",
+      "file": "assets/logos/api.getthedata.com.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://www.getthedata.com/images/getthedata_logo_icon_trans.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": "https://api.getthedata.com/llms-full.txt",
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:44.772Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (GetTheData)",
+        "url": "https://www.getthedata.com/bng2latlong",
+        "evidence": "https://www.getthedata.com/bng2latlong",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": "GB",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T18:55:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "GetTheData – British National Grid → WGS84",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "latitude",
+          "longitude"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

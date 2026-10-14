@@ -1,0 +1,151 @@
+{
+  "id": "servas-ai.opencli-snb",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "SNB – Devisenkurse & Leitzins",
+  "description": "Devisenkurse in CHF und Leitzins/SARON der Schweizerischen Nationalbank (data.snb.ch Cube-API). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "kurse",
+      "displayName": "kurse",
+      "description": "snb kurse",
+      "command": "snb-cli kurse"
+    },
+    {
+      "name": "leitzins",
+      "displayName": "leitzins",
+      "description": "snb leitzins",
+      "command": "snb-cli leitzins"
+    },
+    {
+      "name": "cube",
+      "displayName": "cube",
+      "description": "snb cube",
+      "command": "snb-cli cube"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://data.snb.ch/api/cube",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-y-2302",
+    "logo": {
+      "domain": "data.snb.ch",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://data.snb.ch/assets/icon.svg",
+      "fallback": "initials",
+      "file": "assets/logos/data.snb.ch.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2283,
+      "throughput_rps": 0.438,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "cube API",
+      "last_scrape": "2026-10-13T03:43:36.991Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "SNB – Devisenkurse & Leitzins",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "wert"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CH",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon",
+    "keywords": [
+      "snb",
+      "devisenkurse",
+      "chf",
+      "leitzins",
+      "saron",
+      "schweizerischen",
+      "nationalbank",
+      "cube-api",
+      "finance",
+      "kurse",
+      "cube",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "CH",
+      "scope": "country",
+      "bbox": [
+        5.96,
+        45.82,
+        10.49,
+        47.81
+      ]
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:12:50.916Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://data.snb.ch/"
+  }
+}

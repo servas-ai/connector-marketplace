@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-oecd-sdmx",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OECD Data Explorer SDMX – SDMX",
+  "description": "sdmx.oecd.org SDMX: amtliche Statistik-Zeitreihen (OECD Data Explorer SDMX). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dataflows",
+      "displayName": "dataflows",
+      "description": "oecd-sdmx dataflows",
+      "command": "oecd-sdmx-cli dataflows"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "oecd-sdmx info",
+      "command": "oecd-sdmx-cli info"
+    },
+    {
+      "name": "daten",
+      "displayName": "daten",
+      "description": "oecd-sdmx daten",
+      "command": "oecd-sdmx-cli daten"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Statistik",
+    "statistics",
+    "Zeitreihen",
+    "time series",
+    "SDMX",
+    "Datenfluss",
+    "dataflow",
+    "Amtliche Statistik",
+    "official statistics",
+    "Open Data",
+    "offene Daten",
+    "Indikatoren",
+    "indicators",
+    "OECD"
+  ],
+  "geo": {
+    "country": null,
+    "region": "OECD",
+    "city": "Paris",
+    "lat": 48.86,
+    "lon": 2.27,
+    "bbox": null,
+    "scope": "international"
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.SDD.TPS",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "sdmx.oecd.org/robots.txt geprüft: keine Sperre für den API-Pfad – offizielle Schnittstelle. Drossel ≥2 s.",
+    "tos": "OECD Data Explorer SDMX: öffentliche SDMX-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe sdmx.oecd.org.",
+    "keywords": [
+      "Statistik",
+      "statistics",
+      "Zeitreihen",
+      "time series",
+      "SDMX",
+      "Datenfluss",
+      "dataflow",
+      "Amtliche Statistik",
+      "official statistics",
+      "Open Data",
+      "offene Daten",
+      "Indikatoren",
+      "indicators",
+      "OECD"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": "OECD",
+      "city": "Paris",
+      "lat": 48.86,
+      "lon": 2.27,
+      "bbox": null,
+      "scope": "multi-country"
+    },
+    "logo": {
+      "domain": "sdmx.oecd.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:OECD_logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/sdmx.oecd.org.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "sdmx-rest-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "OECD Data Explorer SDMX – SDMX",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:16.867Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-otn-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Ocean Tracking Network – OTN (ERDDAP)",
+  "description": "Ocean Tracking Network: Telemetrie-Metadaten zu markierten Meerestieren, Empfängerstationen und Projekten des OTN (Dalhousie University). Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Telemetrie",
+    "Meerestiere",
+    "Kanada",
+    "Ocean Tracking Network"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Telemetrie",
+    "Meerestiere",
+    "Kanada",
+    "Ocean Tracking Network"
+  ],
+  "homepage": "https://oceantrackingnetwork.org/",
+  "license": "MIT",
+  "geo": {
+    "country": "CA",
+    "region": "Nova Scotia",
+    "city": "Halifax",
+    "scope": "global"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "otn-erddap datasets",
+      "command": "otn-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "otn-erddap suche",
+      "command": "otn-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "otn-erddap info",
+      "command": "otn-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://erddap.oceantrack.org/erddap/info/index.json",
+    "homepage": "https://oceantrackingnetwork.org/",
+    "portal": "https://erddap.oceantrack.org/erddap/index.html",
+    "provider": "Ocean Tracking Network (OTN), Dalhousie University",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Telemetrie",
+      "Meerestiere",
+      "Kanada",
+      "Ocean Tracking Network"
+    ],
+    "geo": {
+      "country": "CA",
+      "region": "Nova Scotia",
+      "city": "Halifax",
+      "scope": "global"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "erddap.oceantrack.org/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Ocean Tracking Network (OTN), Dalhousie University: öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "erddap.oceantrack.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://oceantrackingnetwork.org/wp-content/uploads/2019/11/cropped-minilogo-avatar-180x180.png",
+      "fallback": "initials",
+      "file": "assets/logos/erddap.oceantrack.org.png",
+      "source": "official-site",
+      "kind": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Ocean Tracking Network – OTN (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CA",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site"
+  }
+}

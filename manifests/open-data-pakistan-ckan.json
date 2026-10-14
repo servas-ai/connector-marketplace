@@ -1,0 +1,190 @@
+{
+  "id": "servas-ai.opencli-open-data-pakistan-ckan",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open Data Pakistan – opendata.com.pk (CKAN)",
+  "description": "opendata.com.pk – Open Data Pakistan (zivilgesellschaftliche Plattform, Datenbereitsteller u. a. SDPI, Gallup Pakistan): CKAN-Katalog: Dataset-Suche und Dataset-Details (Organisation, Ressourcen, Formate, Lizenz). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "ckan",
+    "pk",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "open-data-pakistan-ckan datasets",
+      "command": "open-data-pakistan-ckan-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "open-data-pakistan-ckan dataset",
+      "command": "open-data-pakistan-ckan-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://opendata.com.pk/api/3/action/package_search",
+    "homepage": "https://opendata.com.pk/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "opendata.com.pk/robots.txt geprüft (fail-closed, RFC 9309 via tools/robots): die CKAN Action API unter /api/3/action (package_search, package_show) ist nicht gesperrt. Drossel ≥2 s/Host. Öffentlicher Katalog ohne Key.",
+    "tos": "Open Data Pakistan (zivilgesellschaftliche Plattform, Datenbereitsteller u. a. SDPI, Gallup Pakistan): offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "PK",
+    "keywords": [
+      "opendata",
+      "ckan",
+      "katalog",
+      "pk"
+    ],
+    "geo": {
+      "country": "PK",
+      "scope": "country"
+    },
+    "operator": {
+      "name": "Open Data Pakistan (zivilgesellschaftliche Plattform, Datenbereitsteller u. a. SDPI, Gallup Pakistan)",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "PK",
+      "url": "https://opendata.com.pk/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "opendata.com.pk",
+      "file": "assets/logos/opendata.com.pk.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://opendata.com.pk/base/images/ckan.ico",
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:55:00Z",
+      "robots": "allowed",
+      "api_kind": "CKAN Action API v3",
+      "openapi_version": null,
+      "openapi_paths": null,
+      "dcat": null,
+      "dcat_profile": null,
+      "ogc_api": null,
+      "access_chain_hints": [
+        "ckan-action-api: https://opendata.com.pk/api/3/action"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://opendata.com.pk/api/3/action/license_list",
+        "evidence": "https://opendata.com.pk/api/3/action/license_list",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Open Data Pakistan – opendata.com.pk (CKAN) (opendata.com.pk)",
+      "personal_data": "check",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Community-Portal mit Fremddatensätzen (u. a. Branchenverzeichnis 'Yellow Pages' mit Geschäftskontakten) – Personenbezug/Lizenz je Dataset prüfen; Connector liefert nur Katalog-Metadaten",
+          "Hosting-Land nicht öffentlich belegt (Portal-Land PK) – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T23:55:00Z"
+    },
+    "wave": "opendata-wave-2302",
+    "worker": "opendata-wave-2302",
+    "openui": {
+      "card": {
+        "title": "Open Data Pakistan – opendata.com.pk (CKAN)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "id": "servas-ai.opencli-ipax-colocation",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "IPAX Colocation Wien – Preise",
+  "description": "Öffentliche Colocation-Preise von IPAX in Wien: Shared Rack, Serverhousing und Rackhousing an den Standorten IP.ONE/NDC2 (1100) und Interxion/Digital Realty VIE (1210) mit Monatspreis, Höheneinheiten, inkl. Strom und Uplink. Ohne Login.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "telekom"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "alle-preise",
+      "displayName": "preise",
+      "description": "IPAX Colocation Wien – Preise: preise",
+      "command": "ipax-colocation-cli preise --format json"
+    },
+    {
+      "name": "shared-rack",
+      "displayName": "preise",
+      "description": "IPAX Colocation Wien – Preise: preise",
+      "command": "ipax-colocation-cli preise --kategorie shared-rack --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "telekom",
+    "realtime": false,
+    "source_url": "https://www.ipax.at/colocation/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "html",
+    "login": false,
+    "rate_limit": "20 req/min/IP (anonym, PeeringDB) – CLI ≥3,1 s Pause + Cache: identische Anfragen höchstens 2x/Minute",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-aa-0002",
+    "logo": {
+      "domain": "www.ipax.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.ipax.at/favicon/192x192.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.ipax.at.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1100,
+      "throughput_rps": 0.32,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "html",
+      "last_scrape": "2026-10-13T03:45:54Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "IPAX Colocation Wien – Preise",
+        "subtitle": "telekom",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ],
+        "footer": "Daten: PeeringDB"
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "standort",
+          "preis_monat_eur",
+          "preis_typ",
+          "hoeheneinheiten",
+          "strom_w_inkl",
+          "uplink"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      },
+      "chart": {
+        "type": "bar",
+        "x": "title",
+        "y": "preis_monat_eur"
+      }
+    },
+    "attribution": "Daten: PeeringDB",
+    "usage_policy": {
+      "zweck": [
+        "Netzbetrieb",
+        "Fehlersuche",
+        "Forschung"
+      ],
+      "verboten": [
+        "Vollexport",
+        "Kontaktabfragen (poc)",
+        "Marketing"
+      ],
+      "quelle": "https://www.peeringdb.com/aup"
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "ipax",
+      "colocation",
+      "ipax-colocation",
+      "colocation-preise",
+      "wien",
+      "shared",
+      "rack",
+      "serverhousing",
+      "rackhousing",
+      "standorten",
+      "one",
+      "ndc2",
+      "interxion",
+      "digital",
+      "realty",
+      "vie",
+      "monatspreis",
+      "höheneinheiten",
+      "strom",
+      "uplink",
+      "preise",
+      "telekom",
+      "alle-preise",
+      "shared-rack",
+      "electricity",
+      "power",
+      "energie",
+      "energy",
+      "telecom",
+      "telekommunikation"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Wien",
+      "city": "Wien",
+      "lat": 48.2082,
+      "lon": 16.3738,
+      "scope": "city"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:43.841Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.ipax.at/"
+  }
+}

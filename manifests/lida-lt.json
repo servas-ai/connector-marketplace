@@ -1,0 +1,168 @@
+{
+  "id": "servas-ai.opencli-lida-lt",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "LiDA – Lithuanian Data Archive for Social Sciences and Humanities (Dataverse)",
+  "description": "LiDA: litauisches Datenarchiv für Sozial- und Geisteswissenschaften mit Umfrage-, Bildungs- und Statistikdaten (z. B. Learning Analytics, Wahlen, Werte). Zugriff über die offizielle Dataverse-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Litauen",
+    "Sozialwissenschaften",
+    "Archiv",
+    "Lithuanian Data Archive for SSH"
+  ],
+  "keywords": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Litauen",
+    "Sozialwissenschaften",
+    "Archiv",
+    "Lithuanian Data Archive for SSH"
+  ],
+  "homepage": "https://www.lidata.eu/",
+  "license": "MIT",
+  "geo": {
+    "country": "LT",
+    "region": null,
+    "city": "Kaunas",
+    "scope": "national"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "lida-lt neu",
+      "command": "lida-lt-cli neu"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "lida-lt suche",
+      "command": "lida-lt-cli suche"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "lida-lt dataset",
+      "command": "lida-lt-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://lida.dataverse.lt/api/search",
+    "homepage": "https://www.lidata.eu/",
+    "portal": "https://lida.dataverse.lt/",
+    "provider": "Lithuanian Data Archive for SSH (LiDA), Kaunas University of Technology",
+    "keywords": [
+      "Dataverse",
+      "Forschungsdaten",
+      "research data",
+      "open data",
+      "Repositorium",
+      "DOI",
+      "Litauen",
+      "Sozialwissenschaften",
+      "Archiv",
+      "Lithuanian Data Archive for SSH"
+    ],
+    "geo": {
+      "country": "LT",
+      "region": null,
+      "city": "Kaunas",
+      "scope": "country"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "lida.dataverse.lt/robots.txt (HTTP 200): /api/search und /api/datasets/:persistentId nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "Lithuanian Data Archive for SSH (LiDA), Kaunas University of Technology: öffentliche Dataverse Native/Search API ohne Key/Login (nur veröffentlichte Datensätze); Fair Use.",
+    "logo": {
+      "domain": "lida.dataverse.lt",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://lida.dataverse.lt/logos/navbar/LiDA-Logo-color-PNG-small.png",
+      "fallback": "initials",
+      "file": "assets/logos/lida.dataverse.lt.png",
+      "source": "official-site",
+      "kind": "official-site"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dataverse-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "LiDA – Lithuanian Data Archive for Social Sciences and Humanities (Dataverse)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "LT",
+    "ampel": "grün",
+    "license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "data_license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "logo_source": "official-site"
+  }
+}

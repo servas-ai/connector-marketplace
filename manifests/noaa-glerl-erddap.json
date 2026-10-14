@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-noaa-glerl-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NOAA CoastWatch Great Lakes Node – GLERL (ERDDAP)",
+  "description": "NOAA GLERL CoastWatch Great Lakes: Satelliten- und Modelldaten der Großen Seen (Oberflächentemperatur, Eisbedeckung, Ozeanfarbe). Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Große Seen",
+    "Eis",
+    "NOAA",
+    "NOAA Great Lakes Environmental Research Laboratory"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Große Seen",
+    "Eis",
+    "NOAA",
+    "NOAA Great Lakes Environmental Research Laboratory"
+  ],
+  "homepage": "https://www.glerl.noaa.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Michigan",
+    "city": "Ann Arbor",
+    "scope": "regional"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "noaa-glerl-erddap datasets",
+      "command": "noaa-glerl-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "noaa-glerl-erddap suche",
+      "command": "noaa-glerl-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "noaa-glerl-erddap info",
+      "command": "noaa-glerl-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://apps.glerl.noaa.gov/erddap/info/index.json",
+    "homepage": "https://www.glerl.noaa.gov/",
+    "portal": "https://apps.glerl.noaa.gov/erddap/index.html",
+    "provider": "NOAA Great Lakes Environmental Research Laboratory (GLERL), CoastWatch Great Lakes",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Große Seen",
+      "Eis",
+      "NOAA",
+      "NOAA Great Lakes Environmental Research Laboratory"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Michigan",
+      "city": "Ann Arbor",
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "apps.glerl.noaa.gov/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "NOAA Great Lakes Environmental Research Laboratory (GLERL), CoastWatch Great Lakes: öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "apps.glerl.noaa.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:US-GreatLakesEnvironmentalResearchLaboratory-Logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/apps.glerl.noaa.gov.png",
+      "source": "wikimedia",
+      "kind": "wikimedia",
+      "license": "Public domain"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "NOAA CoastWatch Great Lakes Node – GLERL (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "wikimedia",
+    "llms": {
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:26.036Z",
+      "robots": "allowed"
+    }
+  }
+}

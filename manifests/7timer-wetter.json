@@ -1,0 +1,177 @@
+{
+  "id": "servas-ai.opencli-7timer-wetter",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "7Timer! – Wetter- & Astro-Vorhersage (Punkt)",
+  "description": "7Timer! API: 8-Tage-Punktvorhersage (CIVIL: Wolken, Niederschlag, Temperatur, Wind) und Astro-Seeing/Transparenz für Sternbeobachtung je Koordinate, keyless JSON (GFS-basiert).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "geo"
+  ],
+  "tags": [
+    "wetter",
+    "vorhersage",
+    "astronomie",
+    "seeing",
+    "gfs",
+    "koordinaten",
+    "geo"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "astro",
+      "displayName": "astro",
+      "description": "7timer-wetter astro",
+      "command": "7timer-wetter-cli astro"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "geo",
+    "realtime": false,
+    "source_url": "https://www.7timer.info/",
+    "homepage": "https://www.7timer.info/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.7timer.info/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "7Timer!: freie API ohne Key, Quellenangabe erbeten, Fair-Use.",
+    "license": "terms-of-source (7Timer!, frei mit Quellenangabe)",
+    "country": "INT",
+    "keywords": [
+      "wetter",
+      "vorhersage",
+      "astronomie",
+      "seeing",
+      "gfs",
+      "koordinaten",
+      "geo"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-21",
+    "worker": "open-apis-21-2237",
+    "logo": {
+      "domain": "www.7timer.info",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "api.pl",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:05:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (7Timer!, frei mit Quellenangabe)",
+        "url": "https://www.7timer.info/doc.php",
+        "evidence": "https://www.7timer.info/doc.php",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: 7Timer! – Wetter- & Astro-Vorhersage (Punkt) (www.7timer.info)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "community",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:05:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "7Timer! – Wetter- & Astro-Vorhersage (Punkt)",
+        "subtitle": "geo",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "stunde",
+          "temp2m"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

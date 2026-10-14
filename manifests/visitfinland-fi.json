@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-visitfinland-fi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Visit Finland Statistics (PxWeb)",
+  "description": "visitfinland.stat.fi PxWeb: Visit Finland: Tourismusstatistik (PxWeb-Katalog) – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "visitfinland-fi katalog",
+      "command": "visitfinland-fi-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "visitfinland-fi info",
+      "command": "visitfinland-fi-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "keywords": [
+    "Visit Finland",
+    "Tourismus",
+    "tourism",
+    "Finland",
+    "PxWeb",
+    "Statistik",
+    "Open Data"
+  ],
+  "geo": {
+    "country": "FI",
+    "region": "Finland",
+    "city": "Helsinki",
+    "lat": 60.17,
+    "lon": 24.94,
+    "scope": "country",
+    "bbox": null
+  },
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://visitfinland.stat.fi/PXWeb/api/v1/en/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "visitfinland.stat.fi/robots.txt: 404 – keine Regeln, API erlaubt. Drossel ≥2 s.",
+    "tos": "Visit Finland Statistics: öffentliche PxWeb-Schnittstelle ohne Login/Key, Fair Use; Quellenangabe visitfinland.stat.fi.",
+    "keywords": [
+      "Visit Finland",
+      "Tourismus",
+      "tourism",
+      "Finland",
+      "PxWeb",
+      "Statistik",
+      "Open Data"
+    ],
+    "geo": {
+      "country": "FI",
+      "region": "Finland",
+      "city": "Helsinki",
+      "lat": 60.17,
+      "lon": 24.94,
+      "scope": "country",
+      "bbox": null
+    },
+    "country": "FI",
+    "logo": {
+      "domain": "visitfinland.stat.fi",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Visit Finland Statistics (PxWeb)",
+        "subtitle": "opendata · Zeitreihen",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-14T02:20:00Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.visitfinland.fi/",
+    "wave": "orch-wave-0030",
+    "worker": "orch-wave-0030"
+  }
+}

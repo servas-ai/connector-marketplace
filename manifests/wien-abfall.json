@@ -1,0 +1,243 @@
+{
+  "id": "servas-ai.opencli-wien-abfall",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Wien – Mistplätze, Problemstoffe & Altstoffsammelstellen (MA 48, OGD)",
+  "description": "Abfall & Mülltrennung Wien (MA 48, OGD Wien): Mistplätze, Problemstoffsammelstellen und ~4.300 Altstoffsammelstellen mit Fraktionen (Glas, Papier, Bio, Metall, Leichtverpackung), Bezirks- und Umkreissuche – ohne Login",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Wien",
+    "Müll",
+    "Abfall",
+    "Mülltrennung",
+    "Mistplatz",
+    "Altstoffsammelstelle",
+    "Altglas",
+    "Altpapier",
+    "Biomüll",
+    "Problemstoffe",
+    "MA 48",
+    "Vienna",
+    "waste",
+    "recycling",
+    "recycling centre",
+    "glass container"
+  ],
+  "keywords": [
+    "Wien",
+    "Müll",
+    "Abfall",
+    "Mülltrennung",
+    "Mistplatz",
+    "Altstoffsammelstelle",
+    "Altglas",
+    "Altpapier",
+    "Biomüll",
+    "Problemstoffe",
+    "MA 48",
+    "Vienna",
+    "waste",
+    "recycling",
+    "recycling centre",
+    "glass container"
+  ],
+  "geo": {
+    "country": "AT",
+    "region": "Wien",
+    "city": "Wien",
+    "coverage": "local",
+    "bbox": [
+      16.18,
+      48.12,
+      16.58,
+      48.33
+    ],
+    "centroid": {
+      "lat": 48.2082,
+      "lon": 16.3738
+    }
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "mistplaetze",
+      "displayName": "mistplaetze",
+      "description": "wien-abfall mistplaetze",
+      "command": "wien-abfall-cli mistplaetze"
+    },
+    {
+      "name": "problemstoffe",
+      "displayName": "problemstoffe",
+      "description": "wien-abfall problemstoffe",
+      "command": "wien-abfall-cli problemstoffe"
+    },
+    {
+      "name": "altstoff",
+      "displayName": "altstoff",
+      "description": "wien-abfall altstoff",
+      "command": "wien-abfall-cli altstoff"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "status": "gruen",
+    "realtime": false,
+    "source_url": "https://data.wien.gv.at/daten/geo?service=WFS&request=GetFeature&version=1.1.0&typeName=ogdwien:ALTSTOFFSAMMLUNGOGD",
+    "license": "CC-BY-4.0",
+    "license_evidence": "ToS-/Lizenz-Angabe der Quelle, beim Live-Lauf erhoben (SKILL.md/PRUEFPROTOKOLL.md dieses Connectors)",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.wien.gv.at/robots.txt: 404 – keine Sperre. Offizieller OGD-WFS der Stadt Wien. Drossel ≥2 s.",
+    "tos": "OGD Wien, CC BY 4.0, Quellenangabe „Stadt Wien – data.wien.gv.at“.",
+    "keywords": [
+      "wien",
+      "abfall",
+      "wien-abfall",
+      "mülltrennung",
+      "ogd",
+      "mistplätze",
+      "problemstoffsammelstellen",
+      "altstoffsammelstellen",
+      "fraktionen",
+      "glas",
+      "papier",
+      "bio",
+      "metall",
+      "leichtverpackung",
+      "bezirks",
+      "umkreissuche",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "kommunale",
+      "live",
+      "braucht",
+      "problemstoffe",
+      "opendata",
+      "mistplaetze",
+      "altstoff",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Wien",
+      "city": "Wien",
+      "lat": 48.2082,
+      "lon": 16.3738,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "wien.gv.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.wien.gv.at/layout-a/wienermelange/favicon.svg",
+      "fallback": "initials",
+      "brand_domain": "wien.gv.at",
+      "file": "assets/logos/data.wien.gv.at.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 4000,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "WFS 1.1.0",
+      "last_scrape": "2026-10-13T09:14:18Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Wien – Mistplätze, Problemstoffe & Altstoffsammelstellen (MA 48, OGD)",
+        "subtitle": "opendata · Wien",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "geo"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "keywords",
+          "geo"
+        ]
+      }
+    },
+    "infra": {
+      "as_org": "MAGWIEN Magistrat der Stadt Wien, Magistratsabteilung 01",
+      "asn": 6720,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:23:26Z",
+      "host": "data.wien.gv.at",
+      "hoster": "MAGWIEN Magistrat der Stadt Wien, Magistratsabteilung 01",
+      "http_status": 200,
+      "ip": "217.149.233.97",
+      "server_header": "Apache",
+      "tls_issuer": "Sectigo Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "imprint_url": "https://www.wien.gv.at/inhalt/impressum",
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://wien.gv.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:18:10.265Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.wien.gv.at/"
+  }
+}

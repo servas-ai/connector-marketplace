@@ -1,0 +1,209 @@
+{
+  "id": "servas-ai.opencli-abwassermonitoring-at",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Abwassermonitoring Österreich (SARS-CoV-2)",
+  "description": "SARS-CoV-2-Viruslast im Abwasser je Bundesland und national, Gesamtvirenfracht und Variantenanteile aus dem nationalen Abwassermonitoring (BMSGPK).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "health"
+  ],
+  "tags": [
+    "gesundheit",
+    "abwasser",
+    "covid",
+    "at"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "gruppen",
+      "displayName": "gruppen",
+      "description": "abwassermonitoring-at gruppen",
+      "command": "abwassermonitoring-at-cli gruppen"
+    },
+    {
+      "name": "national",
+      "displayName": "national",
+      "description": "abwassermonitoring-at national",
+      "command": "abwassermonitoring-at-cli national"
+    },
+    {
+      "name": "varianten",
+      "displayName": "varianten",
+      "description": "abwassermonitoring-at varianten",
+      "command": "abwassermonitoring-at-cli varianten"
+    },
+    {
+      "name": "verlauf",
+      "displayName": "verlauf",
+      "description": "abwassermonitoring-at verlauf",
+      "command": "abwassermonitoring-at-cli verlauf"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "health",
+    "realtime": false,
+    "source_url": "https://abwassermonitoring.at/dashboard",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 req/1,2 s",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "logo": {
+      "domain": "abwassermonitoring.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://abwassermonitoring.at/favicon.ico",
+      "fallback": "initials",
+      "file": "assets/logos/abwassermonitoring.at.png",
+      "source": "official-site",
+      "source_kind": "favicon.ico"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "CSV-Downloads cbe1/dl_*.csv",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Abwassermonitoring Österreich (SARS-CoV-2)",
+        "subtitle": "health",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "gruppe",
+          "datum",
+          "genkopien_pro_ew_tag_mio"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "abwassermonitoring",
+      "abwassermonitoring-at",
+      "sars-cov-2-viruslast",
+      "abwasser",
+      "bundesland",
+      "national",
+      "gesamtvirenfracht",
+      "variantenanteile",
+      "nationalen",
+      "bmsgpk",
+      "ausgabe",
+      "servas",
+      "record",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "diese",
+      "gesundheitsdaten",
+      "live",
+      "braucht",
+      "österreich",
+      "sars-cov-2",
+      "opendata",
+      "health",
+      "gruppen",
+      "varianten",
+      "verlauf",
+      "wastewater",
+      "sewage",
+      "medizin",
+      "medicine",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze",
+      "gesundheit"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "HETZNER-AS Hetzner Online GmbH",
+      "asn": 24940,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:16:32Z",
+      "host": "abwassermonitoring.at",
+      "hoster": "HETZNER-AS Hetzner Online GmbH",
+      "http_status": 200,
+      "ip": "116.203.216.98",
+      "server_header": "Apache/2.4.41 (Ubuntu)",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://abwassermonitoring.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:28.887Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://abwassermonitoring.at/"
+  }
+}

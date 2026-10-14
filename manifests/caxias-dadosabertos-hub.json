@@ -1,0 +1,202 @@
+{
+  "id": "servas-ai.opencli-caxias-dadosabertos-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Dados Abertos Caxias do Sul",
+  "description": "dadosabertos.caxias.rs.gov.br – Prefeitura Municipal de Caxias do Sul: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "hub",
+    "br",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "caxias-dadosabertos-hub suche",
+      "command": "caxias-dadosabertos-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "caxias-dadosabertos-hub neu",
+      "command": "caxias-dadosabertos-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "caxias-dadosabertos-hub datensatz",
+      "command": "caxias-dadosabertos-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://dadosabertos.caxias.rs.gov.br/search",
+    "homepage": "https://dadosabertos.caxias.rs.gov.br/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "dadosabertos.caxias.rs.gov.br/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Prefeitura Municipal de Caxias do Sul: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "BR",
+    "keywords": [
+      "opendata",
+      "hub",
+      "katalog",
+      "br"
+    ],
+    "geo": {
+      "country": "BR",
+      "scope": "city",
+      "region": "Rio Grande do Sul",
+      "city": "Caxias do Sul"
+    },
+    "operator": {
+      "name": "Prefeitura Municipal de Caxias do Sul",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "BR",
+      "url": "https://caxias.rs.gov.br/",
+      "source": "Portal-Header/Impressum, ArcGIS-Org"
+    },
+    "logo": {
+      "domain": "dadosabertos.caxias.rs.gov.br",
+      "file": "assets/logos/dadosabertos.caxias.rs.gov.br.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Bras%C3%A3o_de_Caxias_do_Sul_-_RS.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "hub-site-logo",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials",
+      "note": "Infobox pt.wikipedia.org/wiki/Caxias_do_Sul"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://dadosabertos.caxias.rs.gov.br/api/search/definition/?f=json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:45:00Z",
+      "robots": "allowed",
+      "api_kind": "OGC API Records (ArcGIS Hub Search v1)",
+      "openapi_version": "3.0.0",
+      "openapi_paths": 17,
+      "dcat": "https://dadosabertos.caxias.rs.gov.br/api/feed/dcat-ap/2.1.1.json",
+      "dcat_profile": "DCAT-AP 2.1.1 (JSON-LD)",
+      "ogc_api": "https://dadosabertos.caxias.rs.gov.br/api/search/v1",
+      "access_chain_hints": [
+        "openapi: https://dadosabertos.caxias.rs.gov.br/api/search/definition/?f=json",
+        "dcat: https://dadosabertos.caxias.rs.gov.br/api/feed/dcat-ap/2.1.1.json",
+        "ogc-api-records: https://dadosabertos.caxias.rs.gov.br/api/search/v1/collections"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://dadosabertos.caxias.rs.gov.br/",
+        "evidence": "https://dadosabertos.caxias.rs.gov.br/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Dados Abertos Caxias do Sul (dadosabertos.caxias.rs.gov.br)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Hosting Esri ArcGIS Online/Hub (Cloud), Server-Region nicht belegt – AVV/Region prüfen"
+        ]
+      },
+      "checked_at": "2026-10-13T22:45:00Z"
+    },
+    "wave": "opendata-wave-2215",
+    "worker": "opendata-wave-2215",
+    "openui": {
+      "card": {
+        "title": "Dados Abertos Caxias do Sul",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

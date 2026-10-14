@@ -1,0 +1,177 @@
+{
+  "id": "servas-ai.opencli-es-carburantes",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Spanien – Kraftstoffpreise der Tankstellen (MITECO)",
+  "description": "Geoportal Gasolineras (Ministerium für ökologischen Wandel, Spanien): tagesaktuelle Kraftstoffpreise aller Tankstellen je Provinz und Provinzliste, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "mobility"
+  ],
+  "tags": [
+    "tankstelle",
+    "kraftstoff",
+    "benzin",
+    "diesel",
+    "preise",
+    "spanien",
+    "mobilitaet",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "preise",
+      "displayName": "preise",
+      "description": "es-carburantes preise",
+      "command": "es-carburantes-cli preise"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "mobility",
+    "realtime": true,
+    "source_url": "https://sedeaplicaciones.minetur.gob.es/",
+    "homepage": "https://sedeaplicaciones.minetur.gob.es/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "sedeaplicaciones.minetur.gob.es/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Offizieller REST-Dienst des Ministeriums, öffentliche Weiterverwendung mit Quellenangabe; keyless, Fair-Use.",
+    "license": "terms-of-source (Reutilización de información del sector público, Ley 37/2007)",
+    "country": "ES",
+    "keywords": [
+      "tankstelle",
+      "kraftstoff",
+      "benzin",
+      "diesel",
+      "preise",
+      "spanien",
+      "mobilitaet",
+      "opendata"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-19",
+    "worker": "open-apis-19-2215",
+    "logo": {
+      "domain": "sedeaplicaciones.minetur.gob.es",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "REST",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Reutilización de información del sector público, Ley 37/2007)",
+        "url": "https://geoportalgasolineras.es/geoportal-instalaciones/Inicio",
+        "evidence": "https://geoportalgasolineras.es/geoportal-instalaciones/Inicio",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Spanien – Kraftstoffpreise der Tankstellen (MITECO) (sedeaplicaciones.minetur.gob.es)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "ES",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T22:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Spanien – Kraftstoffpreise der Tankstellen (MITECO)",
+        "subtitle": "mobility",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "provinz"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

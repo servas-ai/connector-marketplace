@@ -1,0 +1,126 @@
+{
+  "id": "servas-ai.opencli-ns-reisinformatie",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NS Reisinformatie API (opt-in)",
+  "description": "Nederlandse Spoorwegen: Stationen und Abfahrten über das NS-API-Portal, nur mit eigenem Subscription-Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "abfrage",
+      "displayName": "abfrage",
+      "description": "Generische Abfrage eines API-Pfads (--path, Standard /v2/stations)",
+      "command": "ns-reisinformatie-cli abfrage"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://gateway.apiportal.ns.nl/reisinformatie-api/api",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": true,
+    "opt_in": {
+      "env": "NS_API_KEY",
+      "required": true,
+      "never_in_repo": true
+    },
+    "status": "pruefen",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "none",
+    "robots": "apiportal.ns.nl: offizielle API, Zugriff nur mit eigenem Key.",
+    "tos": "NS API-Portal Nutzungsbedingungen (Key-Pflicht).",
+    "keywords": [
+      "reisinformatie",
+      "ns-reisinformatie",
+      "nederlandse",
+      "spoorwegen",
+      "stationen",
+      "abfahrten",
+      "ns-api-portal",
+      "eigenem",
+      "subscription-key",
+      "opt-in",
+      "verkehr",
+      "abfrage",
+      "transport",
+      "traffic",
+      "mobility"
+    ],
+    "geo": {
+      "country": "NL",
+      "scope": "country"
+    },
+    "logo": {
+      "domain": "apiportal.ns.nl",
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/07/f8/33/07f83384-9910-99d9-252e-6055cd554acf/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "file": "assets/logos/apiportal.ns.nl.png",
+      "brand_domain": "ns.nl",
+      "source": "appstore"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": true,
+      "api_version": "opt-in",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "NS Reisinformatie API (opt-in)",
+        "subtitle": "verkehr · opt-in",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime",
+          "opt_in"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "country": "NL",
+    "homepage": "https://apiportal.ns.nl",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:04.244Z",
+      "robots": "allowed"
+    }
+  }
+}

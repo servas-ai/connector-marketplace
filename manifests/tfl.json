@@ -1,0 +1,184 @@
+{
+  "id": "servas-ai.opencli-tfl",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Transport for London – Unified API",
+  "description": "TfL Unified API: Live-Status aller Linien je Verkehrsmittel (Tube, Overground, DLR, Bus …), Haltestellensuche und Linienliste. Ohne Login/Key (anonymes Kontingent).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "tfl status",
+      "command": "tfl-cli status"
+    },
+    {
+      "name": "haltestellen",
+      "displayName": "haltestellen",
+      "description": "tfl haltestellen",
+      "command": "tfl-cli haltestellen"
+    },
+    {
+      "name": "linien",
+      "displayName": "linien",
+      "description": "tfl linien",
+      "command": "tfl-cli linien"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": true,
+    "source_url": "https://api.tfl.gov.uk/Line/Mode/tube/Status",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.tfl.gov.uk/robots.txt: 404 (keine Einschränkung). Offizielle Unified API, anonym ohne App-Key nutzbar (geringeres Limit). Drossel ≥2 s.",
+    "tos": "TfL Open Data: Transport Data Service Terms, 'Powered by TfL Open Data', anonymes Rate-Limit.",
+    "logo": {
+      "domain": "api.tfl.gov.uk",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/da/83/54/da83543d-33e2-e253-b95b-680b7a989ca6/Placeholder.mill/512x512bb.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.tfl.gov.uk.png",
+      "brand_domain": "tfl.gov.uk",
+      "source": "appstore",
+      "source_kind": "appstore",
+      "app": "TfL Go: Plan, Pay, Travel",
+      "developer": "TfL"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3930,
+      "throughput_rps": 0.254,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "unified",
+      "last_scrape": "2026-10-13T07:26:59.180Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Transport for London – Unified API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "GB",
+    "ampel": "grün",
+    "license": "siehe Terms der Quelle",
+    "logo_source": "favicon",
+    "keywords": [
+      "tfl",
+      "unified",
+      "live-status",
+      "aller",
+      "linien",
+      "verkehrsmittel",
+      "tube",
+      "overground",
+      "dlr",
+      "bus",
+      "haltestellensuche",
+      "linienliste",
+      "anonymes",
+      "kontingent",
+      "transport",
+      "london",
+      "opendata",
+      "status",
+      "haltestellen",
+      "traffic",
+      "mobility",
+      "verkehr",
+      "mobilität",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": "England",
+      "city": "London",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "scope": "city"
+    },
+    "infra": {
+      "as_org": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn": 13335,
+      "cdn": "Cloudflare",
+      "checked_at": "2026-10-13T09:34:15Z",
+      "host": "api.tfl.gov.uk",
+      "hoster": "Cloudflare, Inc.",
+      "http_status": 200,
+      "ip": "104.16.97.104",
+      "server_header": "cloudflare",
+      "tls_issuer": "Google Trust Services",
+      "waf": "Cloudflare (CDN-integriert, nicht verifiziert)"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://tfl.gov.uk",
+      "country": "GB"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:40.123Z",
+      "robots": "allowed"
+    }
+  }
+}

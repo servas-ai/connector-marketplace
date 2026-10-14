@@ -1,0 +1,160 @@
+{
+  "id": "servas-ai.opencli-usgs-earthquakes",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "USGS – Erdbeben (FDSN Event API)",
+  "description": "USGS Earthquake Hazards FDSN Event API 1: aktuelle Erdbeben weltweit (Magnitude, Ort, Tiefe, Tsunami-Flag) und Einzel-Events. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "erdbeben",
+      "displayName": "erdbeben",
+      "description": "usgs-earthquakes erdbeben",
+      "command": "usgs-earthquakes-cli erdbeben"
+    },
+    {
+      "name": "event",
+      "displayName": "event",
+      "description": "usgs-earthquakes event",
+      "command": "usgs-earthquakes-cli event"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "umwelt",
+    "realtime": true,
+    "source_url": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+    "homepage": "https://earthquake.usgs.gov/",
+    "keywords": [
+      "usgs",
+      "earthquakes",
+      "usgs-earthquakes",
+      "earthquake",
+      "hazards",
+      "fdsn",
+      "event",
+      "erdbeben",
+      "weltweit",
+      "magnitude",
+      "ort",
+      "tiefe",
+      "tsunami-flag",
+      "einzel-events",
+      "international"
+    ],
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "earthquake.usgs.gov/robots.txt: 404 (keine Einschränkung). Offizielle FDSN-Event-API der USGS. Drossel ≥2 s, kleine Limits.",
+    "tos": "USGS: US-Government Public Domain; Fair Use der API.",
+    "logo": {
+      "domain": "earthquake.usgs.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://commons.wikimedia.org/wiki/File:USGS_logo_green.svg",
+      "fallback": "initials",
+      "file": "assets/logos/earthquake.usgs.gov.png",
+      "source": "wikimedia",
+      "source_kind": "wikimedia"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 14856,
+      "throughput_rps": 0.067,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "fdsnws-event-1",
+      "last_scrape": "2026-10-13T06:37:51.841Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "USGS – Erdbeben (FDSN Event API)",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "Public-Domain",
+    "logo_source": "wikimedia",
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "Amazon CloudFront",
+      "checked_at": "2026-10-13T09:43:44Z",
+      "host": "earthquake.usgs.gov",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "3.174.46.98",
+      "server_header": "nginx",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://earthquake.usgs.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:26.670Z",
+      "robots": "allowed"
+    }
+  }
+}

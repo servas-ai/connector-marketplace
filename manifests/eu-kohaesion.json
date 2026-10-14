@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-eu-kohaesion",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "EU-Kohäsionsfonds – Programmfinanzen (ESF/EFRE/ELER/EMFF)",
+  "description": "Geplante EU- und nationale Förderbeträge je Programm, Priorität und Fonds (Kohäsionspolitik 2014–2020) für AT und alle EU-Länder. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "vergabe"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "summe-at",
+      "displayName": "summe",
+      "description": "EU-Kohäsionsfonds – Programmfinanzen (ESF/EFRE/ELER/EMFF): summe",
+      "command": "eu-kohaesion-cli summe --land AT --format json"
+    },
+    {
+      "name": "programme-at-esf",
+      "displayName": "programme",
+      "description": "EU-Kohäsionsfonds – Programmfinanzen (ESF/EFRE/ELER/EMFF): programme",
+      "command": "eu-kohaesion-cli programme --land AT --fonds ESF --limit 10 --format json"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "vergabe",
+    "realtime": false,
+    "source_url": "https://cohesiondata.ec.europa.eu",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1s pro Host",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-aa-0002",
+    "logo": {
+      "domain": "cohesiondata.ec.europa.eu",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://cohesiondata.ec.europa.eu/assets/B602A9B9-E949-43D5-9DC1-AC87D1A629CA",
+      "fallback": "initials",
+      "file": "assets/logos/cohesiondata.ec.europa.eu.png",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1582,
+      "throughput_rps": 0.9,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Socrata SODA 2.1 (Datensatz 99js-gm52)",
+      "last_scrape": "2026-10-13T03:39:17Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "EU-Kohäsionsfonds – Programmfinanzen (ESF/EFRE/ELER/EMFF)",
+        "subtitle": "vergabe",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "land",
+          "fonds",
+          "programme",
+          "eu_betrag",
+          "gesamt_geplant"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "favicon",
+    "keywords": [
+      "kohaesion",
+      "eu-kohaesion",
+      "geplante",
+      "nationale",
+      "förderbeträge",
+      "programm",
+      "priorität",
+      "fonds",
+      "kohäsionspolitik",
+      "eu-länder",
+      "eu-kohäsionsfonds",
+      "programmfinanzen",
+      "esf",
+      "efre",
+      "eler",
+      "emff",
+      "vergabe",
+      "summe-at",
+      "programme-at-esf",
+      "finance",
+      "markets",
+      "procurement",
+      "ausschreibungen",
+      "tenders"
+    ],
+    "geo": {
+      "country": "EU",
+      "scope": "eu"
+    },
+    "infra": {
+      "as_org": "AMAZON-02 - Amazon.com, Inc.",
+      "asn": 16509,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:46:29Z",
+      "host": "cohesiondata.ec.europa.eu",
+      "hoster": "Amazon.com, Inc.",
+      "http_status": 200,
+      "ip": "52.16.175.47",
+      "server_header": "nginx",
+      "tls_issuer": "GlobalSign nv-sa",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://cohesiondata.ec.europa.eu"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:21.747Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://cohesiondata.ec.europa.eu/"
+  }
+}

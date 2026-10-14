@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-gtfsrt-es-empresa-municipal-de-transportes-de-madr-3102",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Empresa Municipal de Transportes de Madrid (EMT Madrid) (GTFS-Realtime)",
+  "description": "Empresa Municipal de Transportes de Madrid (EMT Madrid): offizieller GTFS-Realtime-Feed (Madrid, Community of Madrid, Spanien; sa) aus dem Mobility-Database-Katalog (mdb-3102). Status, Fahrzeugpositionen, Prognosen, Störungen. Ohne Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "status",
+      "displayName": "status",
+      "description": "Feed-Status: Zeitstempel und Anzahl Fahrten/Fahrzeuge/Meldungen",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-madr-3102-cli status"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Fahrzeugpositionen (VehiclePosition, --limit N)",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-madr-3102-cli fahrzeuge"
+    },
+    {
+      "name": "updates",
+      "displayName": "updates",
+      "description": "Fahrt-Prognosen (TripUpdate, --limit N)",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-madr-3102-cli updates"
+    },
+    {
+      "name": "meldungen",
+      "displayName": "meldungen",
+      "description": "Störungsmeldungen (Alert, --limit N)",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-madr-3102-cli meldungen"
+    },
+    {
+      "name": "entity",
+      "displayName": "entity",
+      "description": "Ein Entity per ID (<id>)",
+      "command": "gtfsrt-es-empresa-municipal-de-transportes-de-madr-3102-cli entity"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility_realtime",
+    "realtime": true,
+    "source_url": "https://openapi.emtmadrid.es/v1/bus/servicealerts/proto",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "openapi.emtmadrid.es/robots.txt per kanonischem robots.js geprüft (fail-closed). Feed im Mobility Database Katalog ohne Auth gelistet.",
+    "tos": "Offene Echtzeitdaten, Lizenz: https://datos.emtmadrid.es/dataset/tiempo-real-para-autobuses-de-emt.",
+    "keywords": [
+      "echtzeit",
+      "realtime",
+      "gtfs-rt",
+      "gtfs realtime",
+      "öffis",
+      "public transport",
+      "verspätung",
+      "delay",
+      "fahrzeugposition",
+      "vehicle position",
+      "störung",
+      "alert",
+      "madrid",
+      "empresa municipal de transportes de madr",
+      "spanien",
+      "spain"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Community of Madrid",
+      "city": "Madrid",
+      "bbox": [
+        -3.83657,
+        40.3322,
+        -3.54249,
+        40.53653
+      ],
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "openapi.emtmadrid.es",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=openapi.emtmadrid.es&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/openapi.emtmadrid.es.png",
+      "brand_domain": "openapi.emtmadrid.es"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 5019,
+      "throughput_rps": 0.199,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GTFS-RT 2.0",
+      "last_scrape": "2026-10-13T13:19:08.458Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Empresa Municipal de Transportes de Madrid (EMT Madrid) (GTFS-Realtime)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "homepage": "https://www.emtmadrid.es/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T20:13:24.818Z",
+      "robots": "allowed"
+    }
+  }
+}

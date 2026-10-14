@@ -1,0 +1,170 @@
+{
+  "id": "servas-ai.opencli-bfs-ch",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BFS Schweiz – PxWeb API",
+  "description": "www.pxweb.bfs.admin.ch: Schweizer Statistik-Tabellen (PxWeb) – Katalogeinträge und Tabellen-Info. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "bfs-ch katalog",
+      "command": "bfs-ch-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "bfs-ch info",
+      "command": "bfs-ch-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://www.pxweb.bfs.admin.ch/api/v1/en",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "www.pxweb.bfs.admin.ch/robots.txt: 404 (keine Sperre) – öffentliche BFS PxWeb API. Drossel ≥2 s.",
+    "tos": "BFS PxWeb API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "www.pxweb.bfs.admin.ch",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.pxweb.bfs.admin.ch/Resources/Images/logo_suisse.png",
+      "fallback": "initials",
+      "file": "assets/logos/www.pxweb.bfs.admin.ch.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "BFS Schweiz – PxWeb API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CH",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "bfs",
+      "bfs-ch",
+      "pxweb",
+      "admin",
+      "schweizer",
+      "statistik-tabellen",
+      "katalogeinträge",
+      "tabellen-info",
+      "schweiz",
+      "international",
+      "opendata",
+      "katalog",
+      "info",
+      "statistics",
+      "zeitreihen",
+      "time series",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "CH",
+      "scope": "country",
+      "bbox": [
+        5.96,
+        45.82,
+        10.49,
+        47.81
+      ]
+    },
+    "infra": {
+      "as_org": "SWISSGOV Swiss Federation represented by FOITT",
+      "asn": 33845,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:35:23Z",
+      "host": "www.pxweb.bfs.admin.ch",
+      "hoster": "SWISSGOV Swiss Federation represented by FOITT",
+      "http_status": 200,
+      "ip": "162.23.128.123",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://www.pxweb.bfs.admin.ch",
+      "country": "CH"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:59.492Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.pxweb.bfs.admin.ch/pxweb/de/"
+  }
+}

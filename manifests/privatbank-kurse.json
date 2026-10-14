@@ -1,0 +1,172 @@
+{
+  "id": "servas-ai.opencli-privatbank-kurse",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "PrivatBank – Wechselkurse UAH (Bar & Karte)",
+  "description": "PrivatBank Public API: aktuelle Ankaufs-/Verkaufskurse der Hrywnja (UAH) für EUR/USD, Bargeld und Karten-/Online-Kurs, keyless JSON, llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "wechselkurse",
+    "ukraine",
+    "uah",
+    "hrywnja",
+    "bank",
+    "fx",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://api.privatbank.ua/",
+    "homepage": "https://api.privatbank.ua/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.privatbank.ua/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "PrivatBank: öffentliche Kurs-API ohne Key (pubinfo), Fair-Use.",
+    "license": "terms-of-source (JSC CB PrivatBank)",
+    "country": "UA",
+    "keywords": [
+      "wechselkurse",
+      "ukraine",
+      "uah",
+      "hrywnja",
+      "bank",
+      "fx",
+      "finance"
+    ],
+    "geo": {
+      "country": "UA",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-21",
+    "worker": "open-apis-21-2237",
+    "logo": {
+      "domain": "api.privatbank.ua",
+      "file": "assets/logos/api.privatbank.ua.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://privatbank.ua/sites/pb/img/favicon/apple-touch-icon-180x180.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "p24api",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://privatbank.ua/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:05:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (JSC CB PrivatBank)",
+        "url": "https://api.privatbank.ua/",
+        "evidence": "https://api.privatbank.ua/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: PrivatBank – Wechselkurse UAH (Bar & Karte) (api.privatbank.ua)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:05:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "PrivatBank – Wechselkurse UAH (Bar & Karte)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "ccy",
+          "buy",
+          "sale"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "servas-ai.opencli-rdap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI rdap",
+  "description": "RDAP via rdap.org/IANA-Bootstrap (kein RDAP für .at/.de/.ch; port 43 von der Box gesperrt). Ohne Login, nur GET, 1 Req/1,5 s.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "webintel"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "rdap",
+      "displayName": "rdap",
+      "description": "rdap",
+      "command": "opencli-rdap"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "webintel",
+    "realtime": false,
+    "source_url": "https://rdap.org",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 1,5 s",
+    "robots_status": "ok",
+    "robots": "robots via webintel/_lib.robots_ok",
+    "logo": {
+      "domain": "rdap.org",
+      "chain": [
+        "direct"
+      ],
+      "resolved": "assets/logos/rdap.org.png",
+      "fallback": "initials",
+      "file": "assets/logos/rdap.org.png",
+      "source": "official-site"
+    },
+    "interfaces": [
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2000,
+      "throughput_rps": 0.5,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "HTTP",
+      "last_scrape": "2026-10-13T15:49:05.115Z",
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "rdap",
+        "subtitle": "webintel",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "source_url"
+        ]
+      }
+    },
+    "homepage": "https://rdap.org/",
+    "geo": {
+      "country": "INT",
+      "scope": "global"
+    },
+    "keywords": [
+      "rdap",
+      "webintel",
+      "via",
+      "org",
+      "iana",
+      "bootstrap",
+      "kein"
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "id": "servas-ai.opencli-ine-es",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "INE España – Tempus3 JSON API",
+  "description": "servicios.ine.es wstempus: statistische Operationen und Tabellen des Instituto Nacional de Estadística. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "operationen",
+      "displayName": "operationen",
+      "description": "ine-es operationen",
+      "command": "ine-es-cli operationen"
+    },
+    {
+      "name": "tabellen",
+      "displayName": "tabellen",
+      "description": "ine-es tabellen",
+      "command": "ine-es-cli tabellen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://servicios.ine.es/wstempus/js/EN/OPERACIONES_DISPONIBLES",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "servicios.ine.es/robots.txt: nicht abrufbar/keine Regeln – öffentliche INE Tempus3 JSON API. Drossel ≥2 s.",
+    "tos": "INE España: Datos abiertos, Reutilización permitida; Fair Use.",
+    "logo": {
+      "domain": "servicios.ine.es",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://ine.es/menus/_b/img/LogoINE.svg",
+      "fallback": "initials",
+      "file": "assets/logos/servicios.ine.es.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "wstempus-js",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "INE España – Tempus3 JSON API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "ES",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "ine",
+      "ine-es",
+      "servicios",
+      "wstempus",
+      "statistische",
+      "operationen",
+      "tabellen",
+      "instituto",
+      "nacional",
+      "estad",
+      "stica",
+      "espa",
+      "tempus3",
+      "international",
+      "opendata",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "ES",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "SEAP-AGE Ministerio de Transformacion Digital y de la Funcion Publica",
+      "asn": 200521,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:38:12Z",
+      "host": "servicios.ine.es",
+      "hoster": "SEAP-AGE Ministerio de Transformacion Digital y de la Funcion Publica",
+      "http_status": 0,
+      "ip": "195.254.149.35",
+      "tls_issuer": "FNMT-RCM",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://servicios.ine.es",
+      "country": "ES"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:19.597Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://www.ine.es/"
+  }
+}

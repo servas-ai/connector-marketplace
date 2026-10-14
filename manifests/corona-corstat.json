@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-corona-corstat",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CorStat – City of Corona CA Open Performance (Socrata)",
+  "description": "CorStat: Kennzahlen- und Open-Data-Portal der City of Corona (Kalifornien) mit Leistungs-, Haushalts- und Dienstleistungsdaten. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Kalifornien",
+    "City of Corona"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Kennzahlen",
+    "Performance",
+    "Kalifornien",
+    "City of Corona"
+  ],
+  "homepage": "https://www.coronaca.gov/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "California",
+    "city": "Corona",
+    "scope": "city"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "corona-corstat datasets",
+      "command": "corona-corstat-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "corona-corstat dataset",
+      "command": "corona-corstat-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "corona-corstat rows",
+      "command": "corona-corstat-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://corstat.coronaca.gov/api/catalog/v1",
+    "homepage": "https://www.coronaca.gov/",
+    "portal": "https://corstat.coronaca.gov/",
+    "provider": "City of Corona, California",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Kennzahlen",
+      "Performance",
+      "Kalifornien",
+      "City of Corona"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "California",
+      "city": "Corona",
+      "scope": "city"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "corstat.coronaca.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "City of Corona, California Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "corstat.coronaca.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://corstat.coronaca.gov/api/assets/E5724821-62C8-4C77-95F5-D69B987C8239?PrimaryLogo_Green_RGB.png",
+      "fallback": "initials",
+      "file": "assets/logos/corstat.coronaca.gov.png",
+      "source": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "CorStat – City of Corona CA Open Performance (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von City of Corona, California; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von City of Corona, California; je Dataset im Feld license",
+    "logo_source": "header-logo",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:23.059Z",
+      "robots": "allowed"
+    }
+  }
+}

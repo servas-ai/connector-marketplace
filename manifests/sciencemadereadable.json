@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-sciencemadereadable",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "ScienceMadeReadable – Scholars Reading List Search",
+  "description": "ScienceMadeReadable Scholars Reading List API: semantische und exakte Suche in ~200 Mio. wissenschaftlichen Papers (OpenAlex), ähnliche Werke und Lookups per DOI/OpenAlex-ID/PMCID, keyless, mit llms.txt, OpenAPI und MCP.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "wissenschaft",
+    "papers",
+    "openalex",
+    "suche",
+    "doi",
+    "semantic search",
+    "forschung",
+    "literatur"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "paper",
+      "displayName": "paper",
+      "description": "sciencemadereadable paper",
+      "command": "sciencemadereadable-cli paper"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.sciencemadereadable.com/",
+    "homepage": "https://api.sciencemadereadable.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.sciencemadereadable.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "ScienceMadeReadable: keyless REST/MCP, Fair-Use; Daten aus OpenAlex mit eigenen Lizenzen, Zitierung erbeten.",
+    "license": "terms-of-source (OpenAlex-Daten, Quelllizenzen je Paper)",
+    "country": "INT",
+    "keywords": [
+      "wissenschaft",
+      "papers",
+      "openalex",
+      "suche",
+      "doi",
+      "semantic search",
+      "forschung",
+      "literatur"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-10",
+    "worker": "open-apis-10-1539",
+    "logo": {
+      "domain": "api.sciencemadereadable.com",
+      "file": "assets/logos/api.sciencemadereadable.com.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://sciencemadereadable.com/favicon.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "0.3",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://api.sciencemadereadable.com/llms.txt",
+      "llms_full": null,
+      "openapi": "https://api.sciencemadereadable.com/openapi.json",
+      "mcp_endpoint": "https://api.sciencemadereadable.com/mcp",
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:13:25.737Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (OpenAlex-Daten, Quelllizenzen je Paper)",
+        "url": "https://api.sciencemadereadable.com/api/data/llms.txt",
+        "evidence": "https://api.sciencemadereadable.com/api/data/llms.txt",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: ScienceMadeReadable – Scholars Reading List Search (api.sciencemadereadable.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T16:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "ScienceMadeReadable – Scholars Reading List Search",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

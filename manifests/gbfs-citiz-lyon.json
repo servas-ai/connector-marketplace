@@ -1,0 +1,187 @@
+{
+  "id": "servas-ai.opencli-gbfs-citiz-lyon",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Citiz Lyon (Autopartage) (GBFS)",
+  "description": "Citiz Lyon (Autopartage) in Lyon (Frankreich): offener GBFS-Feed (Autopartage (Carsharing)) – Systeminfo, Stationen mit Echtzeit-Verfügbarkeit, freie Fahrzeuge (anonyme IDs). Ohne Key. Gelistet auf transport.data.gouv.fr.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "verkehr"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "Systeminformationen (Betreiber, Zeitzone, Kontakt-URL)",
+      "command": "gbfs-citiz-lyon-cli info"
+    },
+    {
+      "name": "stationen",
+      "displayName": "stationen",
+      "description": "Stationen mit Echtzeit-Verfügbarkeit (--limit N)",
+      "command": "gbfs-citiz-lyon-cli stationen"
+    },
+    {
+      "name": "station",
+      "displayName": "station",
+      "description": "Eine Station per ID (<id>)",
+      "command": "gbfs-citiz-lyon-cli station"
+    },
+    {
+      "name": "fahrzeuge",
+      "displayName": "fahrzeuge",
+      "description": "Freie Fahrzeuge mit Position (anonyme GBFS-IDs, --limit N)",
+      "command": "gbfs-citiz-lyon-cli fahrzeuge"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "verkehr",
+    "record_kind": "mobility",
+    "realtime": true,
+    "source_url": "https://data.grandlyon.com/files/rdata/lpa_mobilite.donnees/gbfs.json",
+    "access_chain": [
+      "official_api"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "opt_in": null,
+    "status": "ok",
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.grandlyon.com/robots.txt per kanonischem robots.js geprüft (fail-closed): 404 → allow-all (RFC 9309), Feed nicht gesperrt.",
+    "tos": "Licence Ouverte 2.0 (Etalab) laut transport.data.gouv.fr",
+    "keywords": [
+      "sharing",
+      "bikesharing",
+      "scooter",
+      "e-scooter",
+      "leihrad",
+      "bike share",
+      "carsharing",
+      "mikromobilität",
+      "micromobility",
+      "gbfs",
+      "echtzeit",
+      "realtime",
+      "lyon",
+      "citiz",
+      "autopartage",
+      "grand lyon",
+      "frankreich",
+      "france"
+    ],
+    "geo": {
+      "country": "FR",
+      "region": null,
+      "city": "Lyon",
+      "bbox": null,
+      "scope": "city"
+    },
+    "logo": {
+      "domain": "data.grandlyon.com",
+      "chain": [
+        "official",
+        "favicon"
+      ],
+      "resolved": null,
+      "fallback": "initials",
+      "file": null,
+      "brand_domain": "lyon.citiz.coop",
+      "source_kind": null
+    },
+    "license": null,
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBFS",
+      "last_scrape": null,
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Citiz Lyon (Autopartage) (GBFS)",
+        "subtitle": "verkehr",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords"
+        ]
+      }
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "Licence-Ouverte-2.0",
+        "url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+        "per_dataset": false,
+        "evidence": "https://transport.data.gouv.fr/datasets/offre-et-disponibilite-temps-reel-du-service-citiz-en-autopartage-metropole-de-lyon (licence: lov2)"
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Daten: Citiz Lyon (Autopartage) via transport.data.gouv.fr",
+      "personal_data": "none",
+      "legal_basis": "Offener GBFS-Feed, gelistet im Point d'Accès National transport.data.gouv.fr (ohne Auth)",
+      "source_kind": "official",
+      "server_country": "DE",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "Licence Ouverte 2.0, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T22:55:00Z"
+    },
+    "homepage": "https://lyon.citiz.coop",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:53:12.983Z",
+      "robots": "allowed"
+    }
+  }
+}

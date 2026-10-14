@@ -1,0 +1,152 @@
+{
+  "id": "servas-ai.opencli-htx-huobi",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "HTX (Huobi) – Krypto-Marktdaten",
+  "description": "HTX/Huobi Public Market API: Ticker je Symbol (merged), alle Ticker nach Quote-Währung gefiltert und Kerzen (K-Lines). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "ticker",
+      "displayName": "ticker",
+      "description": "htx-huobi ticker",
+      "command": "htx-huobi-cli ticker"
+    },
+    {
+      "name": "tickers",
+      "displayName": "tickers",
+      "description": "htx-huobi tickers",
+      "command": "htx-huobi-cli tickers"
+    },
+    {
+      "name": "kerzen",
+      "displayName": "kerzen",
+      "description": "htx-huobi kerzen",
+      "command": "htx-huobi-cli kerzen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.huobi.pro/market/tickers",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.huobi.pro/robots.txt: 404 (keine Einschränkung). Öffentliche Market-API ohne Key. Drossel ≥2 s.",
+    "tos": "HTX API: öffentliche Marktdaten ohne Signatur, Limit 10 Requests/s je IP.",
+    "logo": {
+      "domain": "api.huobi.pro",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=htx.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/api.huobi.pro.png",
+      "brand_domain": "htx.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3930,
+      "throughput_rps": 0.254,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:04:26.281Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "HTX (Huobi) – Krypto-Marktdaten",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "htx",
+      "huobi",
+      "htx-huobi",
+      "market",
+      "ticker",
+      "symbol",
+      "merged",
+      "quote-währung",
+      "gefiltert",
+      "kerzen",
+      "k-lines",
+      "krypto-marktdaten",
+      "finance",
+      "tickers",
+      "crypto",
+      "cryptocurrency",
+      "kryptowährung",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:01.434Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.htx.com/"
+  }
+}

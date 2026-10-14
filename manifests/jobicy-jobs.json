@@ -1,0 +1,179 @@
+{
+  "id": "servas-ai.opencli-jobicy-jobs",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Jobicy – Remote-Jobs (Feed nach Tag & Region)",
+  "description": "Jobicy Remote Jobs API v2: aktuelle Remote-Stellen mit Titel, Firma, Branche, Typ, Level, Region und Datum, filterbar nach Stichwort/Tag und Region, keyless JSON, llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "jobs",
+    "remote",
+    "stellen",
+    "arbeitsmarkt",
+    "jobicy",
+    "recruiting",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "region",
+      "displayName": "region",
+      "description": "jobicy-jobs region",
+      "command": "jobicy-jobs-cli region"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://jobicy.com/",
+    "homepage": "https://jobicy.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "jobicy.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Jobicy API: frei ohne Key; Jobicy klar mit Direktlink nennen, Bewerbungen auf Original-URL leiten; keine Weitergabe an andere Jobbörsen.",
+    "license": "terms-of-source (Jobicy, Quellenlink Pflicht)",
+    "country": "INT",
+    "keywords": [
+      "jobs",
+      "remote",
+      "stellen",
+      "arbeitsmarkt",
+      "jobicy",
+      "recruiting",
+      "opendata"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-22",
+    "worker": "open-apis-22-2302",
+    "logo": {
+      "domain": "jobicy.com",
+      "file": "assets/logos/jobicy.com.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://jobicy.com/data/elements/img/icon-default.192.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://jobicy.com/llms.txt",
+      "llms_full": "https://jobicy.com/llms-full.txt",
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Jobicy, Quellenlink Pflicht)",
+        "url": "https://jobicy.com/jobs-rss-feed",
+        "evidence": "https://jobicy.com/jobs-rss-feed",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Jobicy – Remote-Jobs (Feed nach Tag & Region) (jobicy.com)",
+      "personal_data": "company",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Firmen-/Arbeitgeberangaben enthalten (keine Privatpersonen)",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Jobicy – Remote-Jobs (Feed nach Tag & Region)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "company"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

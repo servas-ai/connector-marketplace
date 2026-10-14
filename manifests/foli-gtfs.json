@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-foli-gtfs",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Föli – GTFS Routes",
+  "description": "Föli (Turku) Open Data: GTFS-Routen und Stops, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "mobility"
+  ],
+  "tags": [
+    "foli",
+    "turku",
+    "finland",
+    "gtfs",
+    "bus",
+    "mobility"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "stops",
+      "displayName": "stops",
+      "description": "foli-gtfs stops",
+      "command": "foli-gtfs-cli stops"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "mobility",
+    "realtime": false,
+    "source_url": "https://data.foli.fi/",
+    "homepage": "https://data.foli.fi/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.foli.fi/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Föli Open Data: GTFS ohne Key, CC BY; nur Lesen.",
+    "license": "CC BY 4.0",
+    "country": "FI",
+    "keywords": [
+      "foli",
+      "turku",
+      "finland",
+      "gtfs",
+      "bus",
+      "mobility"
+    ],
+    "geo": {
+      "country": "FI",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-25",
+    "worker": "open-apis-25-0043",
+    "logo": {
+      "domain": "data.foli.fi",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v0",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T01:05:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "CC BY 4.0",
+        "url": "https://www.foli.fi/en/opendata",
+        "evidence": "https://www.foli.fi/en/opendata",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Föli – GTFS Routes (data.foli.fi)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "FI",
+      "server_in_eu": true,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-14T01:05:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Föli – GTFS Routes",
+        "subtitle": "mobility",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "short_name"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

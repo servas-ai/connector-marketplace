@@ -1,0 +1,142 @@
+{
+  "id": "servas-ai.opencli-bpstat",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Banco de Portugal BPstat",
+  "description": "Banco de Portugal BPstat-API: Statistikbereiche, Reihen-Metadaten und Beobachtungen (z. B. BIP, Zinsen, Kredite) als JSON-stat. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "bereiche",
+      "displayName": "bereiche",
+      "description": "bpstat bereiche",
+      "command": "bpstat-cli bereiche"
+    },
+    {
+      "name": "reihe",
+      "displayName": "reihe",
+      "description": "bpstat reihe",
+      "command": "bpstat-cli reihe"
+    },
+    {
+      "name": "werte",
+      "displayName": "werte",
+      "description": "bpstat werte",
+      "command": "bpstat-cli werte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://bpstat.bportugal.pt/data/v1/domains/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "pruefen",
+    "robots": "bpstat.bportugal.pt/robots.txt: kein Disallow für /data/v1/. Offizielle BPstat-API. Drossel ≥2 s.",
+    "tos": "Banco de Portugal – BPstat, freie Wiederverwendung mit Quellenangabe.",
+    "logo": {
+      "domain": "bpstat.bportugal.pt",
+      "resolved": "https://bpstat.bportugal.pt/static/favicon/apple-touch-icon-152x152.png",
+      "file": "assets/logos/bpstat.bportugal.pt.png",
+      "source": "official-site",
+      "source_kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "bpstat-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Banco de Portugal BPstat",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "PT",
+    "license": "Wiederverwendung mit Quellenangabe (Banco de Portugal, BPstat)",
+    "keywords": [
+      "bpstat",
+      "banco",
+      "portugal",
+      "bpstat-api",
+      "statistikbereiche",
+      "reihen-metadaten",
+      "beobachtungen",
+      "bip",
+      "zinsen",
+      "kredite",
+      "json-stat",
+      "finance",
+      "bereiche",
+      "reihe",
+      "werte",
+      "statistics",
+      "zeitreihen",
+      "time series",
+      "finanzen",
+      "markets",
+      "märkte"
+    ],
+    "geo": {
+      "country": "PT",
+      "scope": "country"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:10.968Z",
+      "robots": "pruefen"
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "id": "servas-ai.opencli-heidata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "heiDATA – Forschungsdatenrepositorium der Universität Heidelberg (Dataverse)",
+  "description": "heiDATA: institutionelles Forschungsdatenrepositorium der Universität Heidelberg mit publizierten Datensätzen (DOI) aus Medizin, Psychologie, Geistes- und Naturwissenschaften. Zugriff über die offizielle Dataverse-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Universität",
+    "Heidelberg",
+    "Universität Heidelberg"
+  ],
+  "keywords": [
+    "Dataverse",
+    "Forschungsdaten",
+    "research data",
+    "open data",
+    "Repositorium",
+    "DOI",
+    "Universität",
+    "Heidelberg",
+    "Universität Heidelberg"
+  ],
+  "homepage": "https://www.uni-heidelberg.de/",
+  "license": "MIT",
+  "geo": {
+    "country": "DE",
+    "region": "Baden-Württemberg",
+    "city": "Heidelberg",
+    "scope": "institution"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "heidata neu",
+      "command": "heidata-cli neu"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "heidata suche",
+      "command": "heidata-cli suche"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "heidata dataset",
+      "command": "heidata-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://heidata.uni-heidelberg.de/api/search",
+    "homepage": "https://www.uni-heidelberg.de/",
+    "portal": "https://heidata.uni-heidelberg.de/",
+    "provider": "Universität Heidelberg (Universitätsbibliothek / URZ)",
+    "keywords": [
+      "Dataverse",
+      "Forschungsdaten",
+      "research data",
+      "open data",
+      "Repositorium",
+      "DOI",
+      "Universität",
+      "Heidelberg",
+      "Universität Heidelberg"
+    ],
+    "geo": {
+      "country": "DE",
+      "region": "Baden-Württemberg",
+      "city": "Heidelberg",
+      "scope": "global"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "heidata.uni-heidelberg.de/robots.txt (HTTP 200): /api/search und /api/datasets/:persistentId nicht gesperrt (Stand 2026-10-13); Laufzeit-Prüfung fail-closed in lib/robots.js. Drossel ≥2 s.",
+    "tos": "Universität Heidelberg (Universitätsbibliothek / URZ): öffentliche Dataverse Native/Search API ohne Key/Login (nur veröffentlichte Datensätze); Fair Use.",
+    "logo": {
+      "domain": "heidata.uni-heidelberg.de",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://backend.uni-heidelberg.de/sites/default/files/site_logo/icon-symbol-uh-logo-black_1_0.svg",
+      "fallback": "initials",
+      "file": "assets/logos/heidata.uni-heidelberg.de.png",
+      "source": "official-site",
+      "kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "dataverse-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "heiDATA – Forschungsdatenrepositorium der Universität Heidelberg (Dataverse)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "DE",
+    "ampel": "grün",
+    "license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "data_license": "je Datensatz (meist CC BY 4.0 / CC0); Feld lizenz im Befehl dataset",
+    "logo_source": "official-site",
+    "llms": {
+      "ai_policy": "blocks:GPTBot,ClaudeBot,anthropic-ai,Google-Extended,CCBot,PerplexityBot,ChatGPT-User,Applebot-Extended,Bytespider",
+      "checked": true,
+      "checked_at": "2026-10-13T20:10:00.788Z",
+      "robots": "allowed"
+    }
+  }
+}

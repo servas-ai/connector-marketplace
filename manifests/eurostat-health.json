@@ -1,0 +1,147 @@
+{
+  "id": "servas-ai.opencli-eurostat-health",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenCLI eurostat-health",
+  "description": "Eurostat-Gesundheitsdaten (Spitalsbetten, Ärzte, Pflegepersonal, Gesundheitsausgaben, Lebenserwartung) für Österreich und andere Länder über die offizielle Dissemination-API. Ohne Login. Nutze diesen Skill, wenn ein Agent Gesundheitsdaten aus dieser Quelle braucht.",
+  "author": "servas-ai (Health Connector Builder)",
+  "categories": [
+    "connector",
+    "ui",
+    "gesundheit"
+  ],
+  "capabilities": [
+    "agent.tools.register",
+    "ui.page.register",
+    "ui.dashboardWidget.register"
+  ],
+  "entrypoints": {
+    "worker": "./dist/worker.js",
+    "ui": "./dist/ui"
+  },
+  "tools": [
+    {
+      "name": "eurostat-health-daten",
+      "displayName": "eurostat-health daten",
+      "description": "CLI-Befehl `daten` (node bin/cli.js daten --format json)",
+      "parametersSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "ui": {
+    "slots": [
+      {
+        "type": "page",
+        "id": "table",
+        "displayName": "eurostat-health",
+        "exportName": "RecordsPage",
+        "routePath": "opencli-eurostat-health"
+      },
+      {
+        "type": "dashboardWidget",
+        "id": "kpis",
+        "displayName": "eurostat-health KPIs",
+        "exportName": "KpiWidget",
+        "openui": "paperclip/openui.txt"
+      }
+    ]
+  },
+  "x-servas": {
+    "status": "cli-ready; worker/ui bundle noch nicht gebaut (dist/ fehlt)",
+    "category": "health",
+    "cli_commands": [
+      "daten"
+    ],
+    "record_schema_id": "servas.record.v1",
+    "record_schema": {
+      "$id": "servas.record.v1",
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "name",
+        "source",
+        "source_url",
+        "fetched_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "const": "eurostat-health"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "fetched_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "raw": {
+          "type": "object",
+          "description": "Originalzeile des Connectors (CLI rows[])"
+        }
+      }
+    },
+    "kpis": {
+      "tests_passed": 3,
+      "tests_total": 3,
+      "last_live_run": "2026-10-13T03:22:41.504Z",
+      "median_ms": 1437,
+      "login": "none",
+      "captcha": false
+    },
+    "robots": {
+      "status": "allowed",
+      "note": "robots.txt von ec.europa.eu sperrt /eurostat/api nicht für *; offizielle API. Gedrosselt 1,5 s."
+    },
+    "rate_limit": "1 Request / 1,5 s pro Host (OPENCLI_DELAY_MS, nicht unterschreiten)",
+    "access_chain": [
+      "official_api"
+    ],
+    "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data",
+    "logo": {
+      "favicon": "https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=64",
+      "source_host": "ec.europa.eu",
+      "domain": "ec.europa.eu",
+      "file": "assets/logos/ec.europa.eu.svg",
+      "source": "official-site"
+    },
+    "login": "none",
+    "pruefprotokoll": "PRUEFPROTOKOLL.md",
+    "country": "INT",
+    "ampel": "grün",
+    "license": "CC-BY-4.0",
+    "logo_source": "svg",
+    "homepage": "https://ec.europa.eu/eurostat",
+    "keywords": [
+      "Eurostat",
+      "Gesundheit",
+      "Statistik",
+      "EU"
+    ],
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:13:27.018Z",
+      "robots": "allowed"
+    }
+  }
+}

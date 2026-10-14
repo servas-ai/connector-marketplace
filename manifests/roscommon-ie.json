@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-roscommon-ie",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Roscommon County Council Open Data – ArcGIS Hub",
+  "description": "Roscommon County Council Open Data (Irland): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "roscommon-ie suche",
+      "command": "roscommon-ie-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "roscommon-ie neu",
+      "command": "roscommon-ie-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "roscommon-ie datensatz",
+      "command": "roscommon-ie-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data-RosCoCo.opendata.arcgis.com/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data-RosCoCo.opendata.arcgis.com/robots.txt geprüft: /api/search nicht gesperrt. Öffentliche OGC-API-Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "ArcGIS-Hub-Open-Data-Portal; Lizenz je Datensatz (Feld lizenz), Quelle nennen.",
+    "logo": {
+      "domain": "data-RosCoCo.opendata.arcgis.com",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=data-RosCoCo.opendata.arcgis.com&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/data-RosCoCo.opendata.arcgis.com.png",
+      "brand_domain": "data-RosCoCo.opendata.arcgis.com"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Roscommon County Council Open Data – ArcGIS Hub",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "ArcGIS Hub",
+      "Geodaten",
+      "geodata",
+      "GIS",
+      "Datenkatalog",
+      "data catalog",
+      "Datensätze",
+      "datasets",
+      "Karten",
+      "maps",
+      "Verwaltung",
+      "government",
+      "OGC API Records",
+      "Roscommon",
+      "Connacht",
+      "Irland"
+    ],
+    "geo": {
+      "country": "IE",
+      "region": "Connacht",
+      "city": "Roscommon",
+      "lat": 53.6314,
+      "lon": -8.1897,
+      "bbox": [
+        -8.69,
+        53.131,
+        -7.69,
+        54.131
+      ],
+      "scope": "region"
+    },
+    "homepage": "https://www.roscommoncoco.ie/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:12:03.941Z",
+      "robots": "allowed"
+    }
+  }
+}

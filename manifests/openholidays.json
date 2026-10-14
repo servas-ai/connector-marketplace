@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-openholidays",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "OpenHolidays API – Feiertage & Schulferien Europa",
+  "description": "OpenHolidays API: gesetzliche Feiertage und Schulferien je Land/Region (z. B. AT, AT-4 Oberösterreich), unterstützte Länder und Regionen (Subdivisions). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "feiertage",
+      "displayName": "feiertage",
+      "description": "openholidays feiertage",
+      "command": "openholidays-cli feiertage"
+    },
+    {
+      "name": "schulferien",
+      "displayName": "schulferien",
+      "description": "openholidays schulferien",
+      "command": "openholidays-cli schulferien"
+    },
+    {
+      "name": "laender",
+      "displayName": "laender",
+      "description": "openholidays laender",
+      "command": "openholidays-cli laender"
+    },
+    {
+      "name": "regionen",
+      "displayName": "regionen",
+      "description": "openholidays regionen",
+      "command": "openholidays-cli regionen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://openholidaysapi.org/PublicHolidays",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "openholidaysapi.org/robots.txt: 404 (keine Einschränkung). Offene API (Open Data, ODbL). Drossel ≥2 s.",
+    "tos": "OpenHolidays: Open-Data-Projekt, Daten unter ODbL, freie Nutzung mit Quellenangabe.",
+    "logo": {
+      "domain": "openholidaysapi.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.openholidaysapi.org/en/assets/logos/logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/openholidaysapi.org.png",
+      "brand_domain": "openholidaysapi.org",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3998,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": "2026-10-13T08:04:42.656Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "OpenHolidays API – Feiertage & Schulferien Europa",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "ODbL-1.0",
+    "logo_source": "svg",
+    "keywords": [
+      "openholidays",
+      "gesetzliche",
+      "feiertage",
+      "schulferien",
+      "land",
+      "region",
+      "at-4",
+      "oberösterreich",
+      "unterstützte",
+      "länder",
+      "regionen",
+      "subdivisions",
+      "europa",
+      "opendata",
+      "laender",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "AT",
+      "region": "Oberösterreich",
+      "scope": "region"
+    },
+    "infra": {
+      "as_org": "IONOS-AS IONOS SE",
+      "asn": 8560,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:26:45Z",
+      "host": "openholidaysapi.org",
+      "hoster": "IONOS-AS IONOS SE",
+      "http_status": 404,
+      "ip": "194.164.57.229",
+      "server_header": "nginx",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://openholidaysapi.org",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:42.112Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.openholidaysapi.org/"
+  }
+}

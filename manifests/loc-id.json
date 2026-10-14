@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-loc-id",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Library of Congress – Linked Data Service",
+  "description": "Library of Congress Linked Data Service: Autocomplete-Vorschläge für Normdaten (Names) und Subject-Authority-JSON, keyless.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "library of congress",
+    "normdaten",
+    "authority",
+    "subjects",
+    "linked data",
+    "katalog",
+    "bibliothek"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "subject",
+      "displayName": "subject",
+      "description": "loc-id subject",
+      "command": "loc-id-cli subject"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://id.loc.gov/",
+    "homepage": "https://id.loc.gov/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "id.loc.gov/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "LC Linked Data Service: öffentlich (keyless), Quellenangabe Library of Congress.",
+    "license": "terms-of-source (LC, weitgehend frei)",
+    "country": "US",
+    "keywords": [
+      "library of congress",
+      "normdaten",
+      "authority",
+      "subjects",
+      "linked data",
+      "katalog",
+      "bibliothek"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-10",
+    "worker": "open-apis-10-1539",
+    "logo": {
+      "domain": "id.loc.gov",
+      "file": "assets/logos/id.loc.gov.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://loc.gov/static/images/logo-loc-new-branding.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:07:08.309Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (LC, weitgehend frei)",
+        "url": "https://id.loc.gov/",
+        "evidence": "https://id.loc.gov/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Library of Congress – Linked Data Service (id.loc.gov)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T16:00:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Library of Congress – Linked Data Service",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "label"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

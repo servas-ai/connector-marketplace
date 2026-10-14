@@ -1,0 +1,146 @@
+{
+  "id": "servas-ai.opencli-off-taxonomien",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Open Food Facts Taxonomien (Allergene, E-Nummern)",
+  "description": "Open Food Facts Taxonomien: 14 EU-Allergene, 760+ Zusatzstoffe/E-Nummern mit Klassen und vegan/vegetarisch-Status, Kategorien, Labels und NOVA aus den offiziellen statischen JSON-Dateien (mehrsprachig).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "allergene",
+    "zusatzstoffe",
+    "taxonomie"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "liste",
+      "displayName": "liste",
+      "description": "off-taxonomien liste",
+      "command": "off-taxonomien-cli liste"
+    },
+    {
+      "name": "zusatzstoff",
+      "displayName": "zusatzstoff",
+      "description": "off-taxonomien zusatzstoff",
+      "command": "off-taxonomien-cli zusatzstoff"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://static.openfoodfacts.org/data/taxonomies/",
+    "access_chain": [
+      "dump",
+      "json_endpoint",
+      "html"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 req/s je Host",
+    "robots_status": "ok",
+    "robots": "static.openfoodfacts.org/robots.txt: User-agent * Disallow nur /api, /cgi, /facets → /data/taxonomies/ erlaubt.",
+    "license": "ODbL 1.0 (Datenbank) / DbCL (Inhalte) – Open Food Facts",
+    "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "logo": {
+      "domain": "openfoodfacts.org",
+      "resolved": "https://static.openfoodfacts.org/images/logos/off-logo-horizontal-light.svg",
+      "file": "assets/logos/static.openfoodfacts.org.png",
+      "source": "favicon"
+    },
+    "keywords": [
+      "off",
+      "taxonomien",
+      "off-taxonomien",
+      "open",
+      "food",
+      "facts",
+      "eu-allergene",
+      "zusatzstoffe",
+      "e-nummern",
+      "klassen",
+      "vegan",
+      "vegetarisch-status",
+      "kategorien",
+      "labels",
+      "nova",
+      "offiziellen",
+      "statischen",
+      "json-dateien",
+      "mehrsprachig",
+      "allergene",
+      "liste",
+      "zusatzstoff",
+      "lebensmittel",
+      "nahrung",
+      "ernährung"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1566,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "OFF Taxonomies JSON",
+      "last_scrape": "2026-10-13T09:36:47.092Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Open Food Facts Taxonomien (Allergene, E-Nummern)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "name_en"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "country": "INT",
+    "homepage": "https://world.openfoodfacts.org",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "blocks:GPTBot,ClaudeBot,anthropic-ai,PerplexityBot,ChatGPT-User",
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:04.934Z",
+      "robots": "allowed"
+    }
+  }
+}

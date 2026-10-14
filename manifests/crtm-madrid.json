@@ -1,0 +1,156 @@
+{
+  "id": "servas-ai.opencli-crtm-madrid",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Consorcio Regional de Transportes de Madrid – Datos Abiertos – ArcGIS Hub",
+  "description": "Consorcio Regional de Transportes de Madrid – Datos Abiertos (Spanien): Datensatz-Katalog der ArcGIS-Hub-Instanz – Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "crtm-madrid suche",
+      "command": "crtm-madrid-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "crtm-madrid neu",
+      "command": "crtm-madrid-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "crtm-madrid datensatz",
+      "command": "crtm-madrid-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://datos.crtm.es/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "datos.crtm.es/robots.txt geprüft: /api/search nicht gesperrt. Öffentliche OGC-API-Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "ArcGIS-Hub-Open-Data-Portal; Lizenz je Datensatz (Feld lizenz), Quelle nennen.",
+    "logo": {
+      "domain": "datos.crtm.es",
+      "chain": [
+        "logo.dev",
+        "brandfetch",
+        "google",
+        "duckduckgo",
+        "iconhorse",
+        "direct"
+      ],
+      "resolved": "https://www.google.com/s2/favicons?domain=datos.crtm.es&sz=128",
+      "fallback": "initials",
+      "file": "assets/logos/datos.crtm.es.png",
+      "brand_domain": "datos.crtm.es"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": 0.25,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "Consorcio Regional de Transportes de Madrid – Datos Abiertos – ArcGIS Hub",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "ArcGIS Hub",
+      "Geodaten",
+      "geodata",
+      "GIS",
+      "Datenkatalog",
+      "data catalog",
+      "Datensätze",
+      "datasets",
+      "Karten",
+      "maps",
+      "Verwaltung",
+      "government",
+      "OGC API Records",
+      "Madrid",
+      "Comunidad de Madrid",
+      "Spanien"
+    ],
+    "geo": {
+      "country": "ES",
+      "region": "Comunidad de Madrid",
+      "city": "Madrid",
+      "lat": 40.4168,
+      "lon": -3.7038,
+      "bbox": [
+        -4.204,
+        39.917,
+        -3.204,
+        40.917
+      ],
+      "scope": "region"
+    },
+    "homepage": "https://datos.crtm.es/",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T21:19:53.171Z",
+      "robots": "allowed"
+    }
+  }
+}

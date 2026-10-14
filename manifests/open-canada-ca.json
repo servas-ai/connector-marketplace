@@ -1,0 +1,157 @@
+{
+  "id": "servas-ai.opencli-open-canada-ca",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "open.canada.ca – Open Government Canada",
+  "description": "open.canada.ca CKAN API: Dataset-Suche und Dataset-Details. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "open-canada-ca datasets",
+      "command": "open-canada-ca-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "open-canada-ca dataset",
+      "command": "open-canada-ca-cli dataset"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://open.canada.ca/data/en/api/3/action/package_search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "open.canada.ca/robots.txt: Disallow Drupal-Core/Admin/search (HTML) – /data/en/api/3/action/ nicht gesperrt. Drossel ≥2 s.",
+    "tos": "open.canada.ca: Open Government Licence – Canada; Fair Use.",
+    "logo": {
+      "domain": "open.canada.ca",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg",
+      "fallback": "initials",
+      "file": "assets/logos/open.canada.ca.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "ckan-3",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "open.canada.ca – Open Government Canada",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "CA",
+    "ampel": "grün",
+    "license": "OGL-UK-3.0",
+    "logo_source": "svg",
+    "keywords": [
+      "open",
+      "canada",
+      "open-canada-ca",
+      "ckan",
+      "dataset-suche",
+      "dataset-details",
+      "government",
+      "opendata",
+      "datasets",
+      "dataset",
+      "open data",
+      "offene daten",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "CA",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn": 8075,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:26:23Z",
+      "host": "open.canada.ca",
+      "hoster": "Microsoft Corporation",
+      "http_status": 200,
+      "ip": "52.138.27.246",
+      "tls_issuer": "Entrust Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://canada.ca",
+      "country": "CA"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:15:12.245Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://open.canada.ca/en"
+  }
+}

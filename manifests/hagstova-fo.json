@@ -1,0 +1,165 @@
+{
+  "id": "servas-ai.opencli-hagstova-fo",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Statistics Faroe Islands – PxWeb API",
+  "description": "statbank.hagstova.fo PxWeb: Statistikkatalog und Tabellen-Metadaten. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "katalog",
+      "displayName": "katalog",
+      "description": "hagstova-fo katalog",
+      "command": "hagstova-fo-cli katalog"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "hagstova-fo info",
+      "command": "hagstova-fo-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://statbank.hagstova.fo/api/v1/en/H2",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "statbank.hagstova.fo/robots.txt: 404 (keine Sperre) – öffentliche PxWeb API. Drossel ≥2 s.",
+    "tos": "Hagstova Føroya PxWeb API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "statbank.hagstova.fo",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://statbank.hagstova.fo/favicon.ico",
+      "fallback": "initials",
+      "file": "assets/logos/statbank.hagstova.fo.png",
+      "source": "official-site",
+      "source_kind": "favicon.ico"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "pxweb-v1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "Statistics Faroe Islands – PxWeb API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "FO",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "hagstova",
+      "hagstova-fo",
+      "statbank",
+      "pxweb",
+      "statistikkatalog",
+      "tabellen-metadaten",
+      "statistics",
+      "faroe",
+      "islands",
+      "international",
+      "opendata",
+      "katalog",
+      "info",
+      "zeitreihen",
+      "time series",
+      "statistik",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "FO",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "Faroese-Telecom-AS P/F Telefonverkid",
+      "asn": 15389,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:38:00Z",
+      "host": "statbank.hagstova.fo",
+      "hoster": "Faroese-Telecom-AS P/F Telefonverkid",
+      "http_status": 200,
+      "ip": "212.55.56.59",
+      "server_header": "nginx",
+      "tls_issuer": "DigiCert Inc",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://statbank.hagstova.fo",
+      "country": "FO"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:16:31.840Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://statbank.hagstova.fo/"
+  }
+}

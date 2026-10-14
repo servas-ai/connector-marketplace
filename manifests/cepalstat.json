@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-cepalstat",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CEPALSTAT – UN ECLAC Statistik-API",
+  "description": "CEPALSTAT (UN ECLAC): thematischer Baum und Indikator-Metadaten für Lateinamerika/Karibik, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "international"
+  ],
+  "tags": [
+    "statistik",
+    "eclac",
+    "cepal",
+    "lateinamerika",
+    "un",
+    "opendata",
+    "amtlich"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "indicator",
+      "displayName": "indicator",
+      "description": "cepalstat indicator",
+      "command": "cepalstat-cli indicator"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "international",
+    "realtime": false,
+    "source_url": "https://api-cepalstat.cepal.org/",
+    "homepage": "https://api-cepalstat.cepal.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api-cepalstat.cepal.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "CEPALSTAT API: öffentlich, keyless; Quelle ECLAC/CEPAL angeben.",
+    "license": "terms-of-source (UN ECLAC; öffentliche Statistik, Quellenangabe)",
+    "country": "INT",
+    "keywords": [
+      "statistik",
+      "eclac",
+      "cepal",
+      "lateinamerika",
+      "un",
+      "opendata",
+      "amtlich"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-20",
+    "worker": "open-apis-20-2215",
+    "logo": {
+      "domain": "api-cepalstat.cepal.org",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:45:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (UN ECLAC; öffentliche Statistik, Quellenangabe)",
+        "url": "https://statistics.cepal.org/portal/cepalstat/",
+        "evidence": "https://statistics.cepal.org/portal/cepalstat/",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: CEPALSTAT – UN ECLAC Statistik-API (api-cepalstat.cepal.org)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "CL",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T22:45:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "CEPALSTAT – UN ECLAC Statistik-API",
+        "subtitle": "international",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "name"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "id": "servas-ai.opencli-kalshi-markets",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Kalshi – regulierte Prognosemärkte (Märkte, Events, Serien)",
+  "description": "Kalshi Trade API v2 (öffentlicher Teil): offene Event-Kontrakte mit Yes/No-Geld-/Briefkurs, letztem Preis, 24h-Volumen und Open Interest, Events und Serien-Details, keyless JSON, llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "kalshi",
+    "prognosemarkt",
+    "prediction-market",
+    "cftc",
+    "event-kontrakte",
+    "quoten",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "events",
+      "displayName": "events",
+      "description": "kalshi-markets events",
+      "command": "kalshi-markets-cli events"
+    },
+    {
+      "name": "serie",
+      "displayName": "serie",
+      "description": "kalshi-markets serie",
+      "command": "kalshi-markets-cli serie"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://api.elections.kalshi.com/",
+    "homepage": "https://api.elections.kalshi.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.elections.kalshi.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Kalshi: Marktdaten-Endpunkte ohne Login/Key öffentlich; nur Lesen, kein Handel, Rate-Limit laut Doku.",
+    "license": "terms-of-source (Kalshi Terms / Market Data)",
+    "country": "US",
+    "keywords": [
+      "kalshi",
+      "prognosemarkt",
+      "prediction-market",
+      "cftc",
+      "event-kontrakte",
+      "quoten",
+      "finance"
+    ],
+    "geo": {
+      "country": "US",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-22",
+    "worker": "open-apis-22-2302",
+    "logo": {
+      "domain": "api.elections.kalshi.com",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://docs.kalshi.com/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Kalshi Terms / Market Data)",
+        "url": "https://kalshi.com/docs/kalshi-terms-of-service",
+        "evidence": "https://kalshi.com/docs/kalshi-terms-of-service",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Kalshi – regulierte Prognosemärkte (Märkte, Events, Serien) (api.elections.kalshi.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": "US",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle"
+        ]
+      },
+      "checked_at": "2026-10-13T23:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Kalshi – regulierte Prognosemärkte (Märkte, Events, Serien)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "event_ticker"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

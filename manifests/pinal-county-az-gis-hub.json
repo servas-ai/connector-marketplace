@@ -1,0 +1,200 @@
+{
+  "id": "servas-ai.opencli-pinal-county-az-gis-hub",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Pinal County AZ – GIS Open Data",
+  "description": "pinal-county-gis-open-data-portal-pinal.hub.arcgis.com – Pinal County: Open-Data-Katalog (ArcGIS Hub, OGC API Records): Volltextsuche, zuletzt geänderte Datensätze, Einzel-Datensatz mit Lizenz und Service-URL. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "opendata",
+    "hub",
+    "us",
+    "katalog"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "pinal-county-az-gis-hub suche",
+      "command": "pinal-county-az-gis-hub-cli suche"
+    },
+    {
+      "name": "neu",
+      "displayName": "neu",
+      "description": "pinal-county-az-gis-hub neu",
+      "command": "pinal-county-az-gis-hub-cli neu"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "pinal-county-az-gis-hub datensatz",
+      "command": "pinal-county-az-gis-hub-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/search",
+    "homepage": "https://pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/robots.txt geprüft (fail-closed): Disallow typisch nur /sites/ /admin/ /sessions/ – /api/search/v1 nicht gesperrt; Crawl-delay beachten → nur Einzelabfragen. Öffentliche OGC API Records ohne Key. Drossel ≥2 s/Host.",
+    "tos": "Pinal County: offenes Datenportal; Lizenz je Datensatz (Portal-Metadaten), Quelle nennen; Fair Use, keine Massenabzüge.",
+    "license": "terms-of-source",
+    "country": "US",
+    "keywords": [
+      "opendata",
+      "hub",
+      "katalog",
+      "us"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "region",
+      "region": "Arizona",
+      "city": "Florence"
+    },
+    "operator": {
+      "name": "Pinal County",
+      "legal_form": "Behörde/öffentliche Körperschaft",
+      "country": "US",
+      "url": "https://pinalcountyaz.gov/",
+      "source": "Portal-Header/Impressum, Dataset-Attribution"
+    },
+    "logo": {
+      "domain": "pinal-county-gis-open-data-portal-pinal.hub.arcgis.com",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials",
+      "note": "initials:PC"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "hub-search-v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": "https://pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/api/search/definition/?f=json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T01:30:00Z",
+      "robots": "allowed",
+      "api_kind": "OGC API Records (ArcGIS Hub Search v1)",
+      "openapi_version": "3.0.0",
+      "openapi_paths": 17,
+      "dcat": "https://pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/api/feed/dcat-ap/2.1.1.json",
+      "dcat_profile": "DCAT-AP 2.1.1 (Hub-Feed)",
+      "ogc_api": null,
+      "access_chain_hints": [
+        "openapi: https://pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/api/search/definition/?f=json",
+        "dcat: https://pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/api/feed/dcat-ap/2.1.1.json",
+        "ogc-api-records: https://pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/api/search/v1"
+      ]
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/",
+        "evidence": "https://pinal-county-gis-open-data-portal-pinal.hub.arcgis.com/",
+        "per_dataset": true
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Pinal County AZ – GIS Open Data (pinal-county-gis-open-data-portal-pinal.hub.arcgis.com)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Datenlizenz je Datensatz / Terms der Quelle",
+          "Hosting Esri ArcGIS Online/Hub (Cloud), Server-Region nicht öffentlich belegt – AVV/Drittlandtransfer prüfen"
+        ]
+      },
+      "checked_at": "2026-10-14T01:30:00Z"
+    },
+    "wave": "opendata-wave-0104",
+    "worker": "opendata-wave-0104",
+    "openui": {
+      "card": {
+        "title": "Pinal County AZ – GIS Open Data",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "id": "servas-ai.opencli-usaspending",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "USAspending – US Federal Spending API",
+  "description": "api.usaspending.gov: Toptier-Agencies und Award-Suche (öffentliche Endpunkte). Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "agencies",
+      "displayName": "agencies",
+      "description": "usaspending agencies",
+      "command": "usaspending-cli agencies"
+    },
+    {
+      "name": "awards",
+      "displayName": "awards",
+      "description": "usaspending awards",
+      "command": "usaspending-cli awards"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.usaspending.gov/api/v2/references/toptier_agencies/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.usaspending.gov/robots.txt: 404 (keine Sperre) – öffentliche USAspending API. Drossel ≥2 s.",
+    "tos": "USAspending.gov API: öffentlich, Fair Use.",
+    "logo": {
+      "domain": "api.usaspending.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://files.usaspending.gov/django_static/img/logo.png",
+      "fallback": "initials",
+      "file": "assets/logos/api.usaspending.gov.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "USAspending – US Federal Spending API",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "usaspending",
+      "gov",
+      "toptier-agencies",
+      "award-suche",
+      "endpunkte",
+      "federal",
+      "spending",
+      "international",
+      "opendata",
+      "agencies",
+      "awards",
+      "open data",
+      "offene daten",
+      "datasets",
+      "datensätze"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "US-DEPARTMENT-OF-THE-TREASURY - United States Department of the Treasury",
+      "asn": 13506,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:43:35Z",
+      "host": "api.usaspending.gov",
+      "hoster": "United States Department of the Treasury",
+      "http_status": 200,
+      "ip": "166.123.8.118",
+      "tls_issuer": "Entrust Limited",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://usaspending.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:10:47.023Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://www.usaspending.gov/"
+  }
+}

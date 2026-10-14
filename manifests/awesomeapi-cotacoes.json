@@ -1,0 +1,179 @@
+{
+  "id": "servas-ai.opencli-awesomeapi-cotacoes",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "AwesomeAPI – Cotações (Brasilien)",
+  "description": "AwesomeAPI Economia: Echtzeit- und Tageskurse für über 150 Währungspaare (USD-BRL, EUR-BRL, BTC-BRL …) mit Hoch/Tief/Bid/Ask, keyless Basiszugang, mit llms.txt.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "brasilien",
+    "real",
+    "brl",
+    "wechselkurs",
+    "cotação",
+    "dolar",
+    "bitcoin",
+    "finanzen"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "verlauf",
+      "displayName": "verlauf",
+      "description": "awesomeapi-cotacoes verlauf",
+      "command": "awesomeapi-cotacoes-cli verlauf"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://economia.awesomeapi.com.br/",
+    "homepage": "https://economia.awesomeapi.com.br/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "economia.awesomeapi.com.br/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "AwesomeAPI: kostenloser Zugang ohne Key mit Limits (API-Key optional für mehr Kontingent), Fair-Use.",
+    "license": "terms-of-source",
+    "country": "BR",
+    "keywords": [
+      "brasilien",
+      "real",
+      "brl",
+      "wechselkurs",
+      "cotação",
+      "dolar",
+      "bitcoin",
+      "finanzen"
+    ],
+    "geo": {
+      "country": "BR",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-9",
+    "worker": "open-apis-9-1506",
+    "logo": {
+      "domain": "economia.awesomeapi.com.br",
+      "file": "assets/logos/economia.awesomeapi.com.br.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://docs.awesomeapi.com.br/~gitbook/image?url=https%3A%2F%2F343035455-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-LDDJfbHDy3v965nUzNO%252Ficon%252FTSPIESd7TJeR9PrEK9IA%252Ficon-only-white.png%3Falt%3Dmedia%26token%3Dd145414b-50de-43ae-a52e-bd529c639b06&width=180&height=180&sign=9d3bb87a3688e9d906cce10cb731bcc6&sv=3",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://docs.awesomeapi.com.br/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T15:40:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source",
+        "url": "https://docs.awesomeapi.com.br/",
+        "evidence": "https://docs.awesomeapi.com.br/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "AwesomeAPI – Cotações (Brasilien)",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "paar",
+          "bid"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

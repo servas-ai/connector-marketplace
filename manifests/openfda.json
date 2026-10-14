@@ -1,0 +1,199 @@
+{
+  "id": "servas-ai.opencli-openfda",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "openFDA Arzneimittel & Medizinprodukte",
+  "description": "Arzneimittel-Rückrufe, aggregierte Nebenwirkungsmeldungen, Fachinformationen und Medizinprodukte-Rückrufe der US FDA über die offizielle openFDA-API.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "health"
+  ],
+  "tags": [
+    "gesundheit",
+    "arzneimittel",
+    "global",
+    "us"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "geraete-rueckrufe",
+      "displayName": "geraete-rueckrufe",
+      "description": "openfda geraete-rueckrufe",
+      "command": "openfda-cli geraete-rueckrufe"
+    },
+    {
+      "name": "label",
+      "displayName": "label",
+      "description": "openfda label",
+      "command": "openfda-cli label"
+    },
+    {
+      "name": "nebenwirkungen",
+      "displayName": "nebenwirkungen",
+      "description": "openfda nebenwirkungen",
+      "command": "openfda-cli nebenwirkungen"
+    },
+    {
+      "name": "rueckrufe",
+      "displayName": "rueckrufe",
+      "description": "openfda rueckrufe",
+      "command": "openfda-cli rueckrufe"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "health",
+    "realtime": false,
+    "source_url": "https://api.fda.gov",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1,1 s (ohne Key 240/min, 1000/Tag)",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "logo": {
+      "domain": "api.fda.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.fda.gov/themes/custom/preview/assets/images/FDA_Logo_Icon_White.svg",
+      "fallback": "initials",
+      "file": "assets/logos/api.fda.gov.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1024,
+      "throughput_rps": 0.977,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "openFDA v1",
+      "last_scrape": "2026-10-13T04:27:05.576Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "openFDA Arzneimittel & Medizinprodukte",
+        "subtitle": "health",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "title",
+          "firma",
+          "klasse",
+          "datum"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "openfda",
+      "arzneimittel-rückrufe",
+      "aggregierte",
+      "nebenwirkungsmeldungen",
+      "fachinformationen",
+      "medizinprodukte-rückrufe",
+      "fda",
+      "openfda-api",
+      "ausgabe",
+      "servas",
+      "record",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "diese",
+      "gesundheitsdaten",
+      "live",
+      "braucht",
+      "arzneimittel",
+      "medizinprodukte",
+      "international",
+      "health",
+      "geraete-rueckrufe",
+      "label",
+      "nebenwirkungen",
+      "rueckrufe",
+      "medizin",
+      "medicine",
+      "gesundheit",
+      "devices",
+      "geräte",
+      "prices",
+      "preise"
+    ],
+    "geo": {
+      "country": "US",
+      "scope": "country"
+    },
+    "infra": {
+      "as_org": "GOVCLOUD - Amazon",
+      "asn": 8987,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:39:19Z",
+      "host": "api.fda.gov",
+      "hoster": "Amazon",
+      "http_status": 404,
+      "ip": "3.31.133.129",
+      "tls_issuer": "Let's Encrypt",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "Behörde",
+      "name": "pruefen",
+      "source": "domain",
+      "website": "https://fda.gov",
+      "country": "US"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:09:57.607Z",
+      "robots": "allowed"
+    }
+  }
+}

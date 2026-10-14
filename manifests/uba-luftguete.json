@@ -1,0 +1,200 @@
+{
+  "id": "servas-ai.opencli-uba-luftguete",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Umweltbundesamt Luftgüte AT",
+  "description": "Aktuelle Luftgüte-Messwerte (NO2, O3, PM10, PM2.5, SO2, CO) aller Messstellen in Österreich aus der Luftgütekarte des Umweltbundesamts.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "health"
+  ],
+  "tags": [
+    "gesundheit",
+    "umwelt",
+    "luft",
+    "at"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "komponenten",
+      "displayName": "komponenten",
+      "description": "uba-luftguete komponenten",
+      "command": "uba-luftguete-cli komponenten"
+    },
+    {
+      "name": "messwerte",
+      "displayName": "messwerte",
+      "description": "uba-luftguete messwerte",
+      "command": "uba-luftguete-cli messwerte"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "health",
+    "realtime": true,
+    "source_url": "https://luft.umweltbundesamt.at/pub/map_chart/index.pl",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "json_endpoint",
+    "login": false,
+    "rate_limit": "1 req/1,5 s",
+    "robots_status": "ok",
+    "robots": "luft.umweltbundesamt.at/robots.txt: leer (keine Disallow-Regeln). Öffentlicher JSON-Endpunkt der Luftgütekarte, keine offizielle Dokumentation → access_used json_endpoint. www.umweltbundesamt.at blockt Fetches (WAF) → nicht genutzt.",
+    "logo": {
+      "domain": "luft.umweltbundesamt.at",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://www.umweltbundesamt.at/resources-uba_site/Images/uba-logo-forest.svg",
+      "fallback": "initials",
+      "file": "assets/logos/luft.umweltbundesamt.at.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 1813,
+      "throughput_rps": 0.552,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "values_json (Luftgütekarte)",
+      "last_scrape": "2026-10-13T04:26:52.768Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Umweltbundesamt Luftgüte AT",
+        "subtitle": "health",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "station",
+          "komponente",
+          "wert",
+          "einheit",
+          "zeit"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "AT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "svg",
+    "keywords": [
+      "uba",
+      "luftguete",
+      "uba-luftguete",
+      "luftgüte-messwerte",
+      "no2",
+      "pm10",
+      "pm2",
+      "so2",
+      "aller",
+      "messstellen",
+      "österreich",
+      "luftgütekarte",
+      "umweltbundesamts",
+      "ausgabe",
+      "servas",
+      "record",
+      "nutze",
+      "diesen",
+      "skill",
+      "wenn",
+      "agent",
+      "diese",
+      "gesundheitsdaten",
+      "live",
+      "braucht",
+      "umweltbundesamt",
+      "luftgüte",
+      "opendata",
+      "health",
+      "komponenten",
+      "messwerte",
+      "air quality",
+      "luftqualität",
+      "map",
+      "maps",
+      "geodaten",
+      "medizin",
+      "medicine",
+      "open data",
+      "offene daten"
+    ],
+    "geo": {
+      "country": "AT",
+      "scope": "country",
+      "bbox": [
+        9.53,
+        46.37,
+        17.16,
+        49.02
+      ]
+    },
+    "infra": {
+      "as_org": "ACOnet - ACONET",
+      "asn": 1853,
+      "cdn": "keins erkannt",
+      "checked_at": "2026-10-13T09:34:26Z",
+      "host": "luft.umweltbundesamt.at",
+      "hoster": "ACONET",
+      "http_status": 200,
+      "ip": "193.170.161.31",
+      "tls_issuer": "Hellenic Academic and Research Institutions CA",
+      "waf": "pruefen"
+    },
+    "operator": {
+      "legal_form": "pruefen",
+      "name": "pruefen",
+      "source": "pruefen",
+      "website": "https://luft.umweltbundesamt.at",
+      "country": "AT"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:49.179Z",
+      "robots": "pruefen"
+    },
+    "homepage": "https://luft.umweltbundesamt.at/"
+  }
+}

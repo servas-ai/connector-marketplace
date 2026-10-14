@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-bcrp-series",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "BCRP – Peru Statistical Series API",
+  "description": "Banco Central de Reserva del Perú: Zeitreihen-API (z.B. Interbank-Wechselkurs USD), keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "peru",
+    "bcrp",
+    "zentralbank",
+    "wechselkurs",
+    "zeitreihe",
+    "finanzen",
+    "amtlich"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "usdPen",
+      "displayName": "usdPen",
+      "description": "bcrp-series usdPen",
+      "command": "bcrp-series-cli usdPen"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://estadisticas.bcrp.gob.pe/",
+    "homepage": "https://estadisticas.bcrp.gob.pe/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "estadisticas.bcrp.gob.pe/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "BCRP series API: öffentlich, keyless; Quelle BCRP angeben.",
+    "license": "terms-of-source (BCRP; öffentliche Statistik, Quellenangabe)",
+    "country": "PE",
+    "keywords": [
+      "peru",
+      "bcrp",
+      "zentralbank",
+      "wechselkurs",
+      "zeitreihe",
+      "finanzen",
+      "amtlich"
+    ],
+    "geo": {
+      "country": "PE",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-20",
+    "worker": "open-apis-20-2215",
+    "logo": {
+      "domain": "estadisticas.bcrp.gob.pe",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "series-json",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T22:45:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (BCRP; öffentliche Statistik, Quellenangabe)",
+        "url": "https://estadisticas.bcrp.gob.pe/",
+        "evidence": "https://estadisticas.bcrp.gob.pe/",
+        "per_dataset": false
+      },
+      "commercial_use": "yes",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: BCRP – Peru Statistical Series API (estadisticas.bcrp.gob.pe)",
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": "PE",
+      "server_in_eu": false,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "green",
+        "reasons": [
+          "offene Lizenz, keyless, robots ok, keine personenbezogenen Daten"
+        ]
+      },
+      "checked_at": "2026-10-13T22:45:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "BCRP – Peru Statistical Series API",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "period",
+          "value"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "servas-ai.opencli-efsa-openfoodtox",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "EFSA OpenFoodTox (Zenodo)",
+  "description": "EFSA OpenFoodTox, die Chemie-Gefahrendatenbank für Lebensmittel: Metadaten und Dateien der Zenodo-Veröffentlichung, nur über robots-erlaubte Pfade mit 10 s Crawl-Delay.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "lebensmittelsicherheit",
+    "efsa",
+    "toxikologie"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "dateien",
+      "displayName": "dateien",
+      "description": "efsa-openfoodtox dateien",
+      "command": "efsa-openfoodtox-cli dateien"
+    },
+    {
+      "name": "datensatz",
+      "displayName": "datensatz",
+      "description": "efsa-openfoodtox datensatz",
+      "command": "efsa-openfoodtox-cli datensatz"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://zenodo.org/records/19388272",
+    "access_chain": [
+      "dump",
+      "json_endpoint",
+      "official_api",
+      "html"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 req/10 s prozessübergreifend (Lockfile /tmp, Crawl-delay 10)",
+    "robots_status": "ok",
+    "robots": "zenodo.org/robots.txt: Disallow /api und /search, aber Allow /api/records/*/files; Crawl-delay 10. Connector nutzt nur /records/<id>/export/json und /api/records/<id>/files, 10 s prozessübergreifend.",
+    "license": "CC BY 4.0 (laut Zenodo-Record der EFSA)",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "logo": {
+      "domain": "efsa.europa.eu",
+      "resolved": "https://commons.wikimedia.org/wiki/File:EFSA_logo.svg",
+      "file": "assets/logos/efsa.europa.eu.png",
+      "source": "wikimedia"
+    },
+    "keywords": [
+      "efsa",
+      "openfoodtox",
+      "efsa-openfoodtox",
+      "chemie-gefahrendatenbank",
+      "lebensmittel",
+      "metadaten",
+      "dateien",
+      "zenodo-veröffentlichung",
+      "robots-erlaubte",
+      "pfade",
+      "crawl-delay",
+      "zenodo",
+      "food",
+      "datensatz",
+      "nahrung",
+      "ernährung",
+      "groceries"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 16265,
+      "throughput_rps": 0.1,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "Zenodo (InvenioRDM) export/json + files",
+      "last_scrape": "2026-10-13T09:35:42.203Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "EFSA OpenFoodTox (Zenodo)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "doi",
+          "datum"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "country": "EU",
+    "homepage": "https://www.efsa.europa.eu",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T12:18:17.726Z",
+      "robots": "allowed"
+    }
+  }
+}

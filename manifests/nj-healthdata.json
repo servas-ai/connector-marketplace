@@ -1,0 +1,173 @@
+{
+  "id": "servas-ai.opencli-nj-healthdata",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "New Jersey State Health Assessment Data – NJSHAD (Socrata)",
+  "description": "NJ Health Data: Gesundheitsindikatoren des New Jersey Department of Health – Sterberaten, Krankheitslast und Bevölkerungsgesundheit nach Jahr und Gruppe. Zugriff über die offizielle Socrata Discovery API und SODA: Dataset-Suche, Dataset-Metadaten und Dataset-Zeilen. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Gesundheit",
+    "health",
+    "New Jersey",
+    "New Jersey Department of Health"
+  ],
+  "keywords": [
+    "open data",
+    "offene Daten",
+    "Socrata",
+    "Datenkatalog",
+    "datasets",
+    "Verwaltung",
+    "Gesundheit",
+    "health",
+    "New Jersey",
+    "New Jersey Department of Health"
+  ],
+  "homepage": "https://www.nj.gov/health/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "New Jersey",
+    "city": null,
+    "scope": "state"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "nj-healthdata datasets",
+      "command": "nj-healthdata-cli datasets"
+    },
+    {
+      "name": "dataset",
+      "displayName": "dataset",
+      "description": "nj-healthdata dataset",
+      "command": "nj-healthdata-cli dataset"
+    },
+    {
+      "name": "rows",
+      "displayName": "rows",
+      "description": "nj-healthdata rows",
+      "command": "nj-healthdata-cli rows"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://healthdata.nj.gov/api/catalog/v1",
+    "homepage": "https://www.nj.gov/health/",
+    "portal": "https://healthdata.nj.gov/",
+    "provider": "New Jersey Department of Health",
+    "keywords": [
+      "open data",
+      "offene Daten",
+      "Socrata",
+      "Datenkatalog",
+      "datasets",
+      "Verwaltung",
+      "Gesundheit",
+      "health",
+      "New Jersey",
+      "New Jersey Department of Health"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "New Jersey",
+      "city": null,
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "healthdata.nj.gov/robots.txt (Socrata-Standard): Disallow nur /browse?…- und /page/…-Facetten (HTML) – /api/catalog/v1, /api/views/ und /resource/ nicht gesperrt (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "New Jersey Department of Health Open-Data-Portal (Tyler Data & Insights/Socrata), öffentliche SODA-API ohne Key; App-Token optional, nicht genutzt; Fair Use.",
+    "logo": {
+      "domain": "healthdata.nj.gov",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://healthdata.nj.gov/stylesheets/images/common/favicon.ico",
+      "fallback": "initials",
+      "file": "assets/logos/healthdata.nj.gov.png",
+      "source": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "socrata-discovery-v1+soda-2.1",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "New Jersey State Health Assessment Data – NJSHAD (Socrata)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "Open Data gemäß Terms of Use von New Jersey Department of Health; je Dataset im Feld license",
+    "data_license": "Open Data gemäß Terms of Use von New Jersey Department of Health; je Dataset im Feld license",
+    "logo_source": "apple-touch-icon",
+    "llms": {
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:06:00.326Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "id": "servas-ai.opencli-bls-de",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Bundeslebensmittelschlüssel BLS 4.0 (DE)",
+  "description": "Deutsche Nährstoffdatenbank BLS 4.0 (Max Rubner-Institut): 7.140 Lebensmittel, 138 Komponenten mit Datenherkunft, aus dem offiziellen Open-Data-Download (lokal gecacht, nicht im Repo).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "food"
+  ],
+  "tags": [
+    "lebensmittel",
+    "naehrwerte",
+    "deutschland"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "naehrwerte",
+      "displayName": "naehrwerte",
+      "description": "bls-de naehrwerte",
+      "command": "bls-de-cli naehrwerte"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "bls-de suche",
+      "command": "bls-de-cli suche"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "food",
+    "realtime": false,
+    "source_url": "https://blsdb.de/",
+    "access_chain": [
+      "dump",
+      "html",
+      "headless"
+    ],
+    "access_used": "dump",
+    "login": false,
+    "rate_limit": "1 req/s je Host; Dump max. 1×/180 Tage (Cache)",
+    "robots_status": "ok",
+    "robots": "blsdb.de/robots.txt: 404 (keine Regeln). Download-Seite nennt CC BY 4.0, kein Login/Formular nötig.",
+    "license": "CC BY 4.0 – Max Rubner-Institut als Herausgeber nennen",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "logo": {
+      "domain": "blsdb.de",
+      "resolved": "https://blsdb.de/assets/uploads/logo-bmelv.png",
+      "file": "assets/logos/blsdb.de.png",
+      "source": "favicon"
+    },
+    "keywords": [
+      "bls",
+      "bls-de",
+      "deutsche",
+      "nährstoffdatenbank",
+      "max",
+      "rubner-institut",
+      "lebensmittel",
+      "komponenten",
+      "datenherkunft",
+      "offiziellen",
+      "open-data-download",
+      "lokal",
+      "gecacht",
+      "nicht",
+      "repo",
+      "bundeslebensmittelschlüssel",
+      "food",
+      "naehrwerte",
+      "groceries",
+      "nahrung",
+      "ernährung"
+    ],
+    "geo": {
+      "country": "DE",
+      "scope": "country",
+      "bbox": [
+        5.87,
+        47.27,
+        15.04,
+        55.06
+      ]
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 2283,
+      "throughput_rps": 1.0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "BLS 4.0 (Dezember 2025, xlsx)",
+      "last_scrape": "2026-10-13T09:26:30.406Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Bundeslebensmittelschlüssel BLS 4.0 (DE)",
+        "subtitle": "food",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "bls_code",
+          "kcal_100g"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "license"
+        ]
+      }
+    },
+    "country": "DE",
+    "homepage": "https://blsdb.de",
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:11:08.808Z",
+      "robots": "allowed"
+    }
+  }
+}

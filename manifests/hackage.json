@@ -1,0 +1,146 @@
+{
+  "id": "servas-ai.opencli-hackage",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Hackage – Haskell-Paketarchiv",
+  "description": "Hackage (hackage.haskell.org): Haskell-Paketsuche, Versionen eines Pakets (normal/deprecated) und bevorzugte Versionsbereiche. Ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "hackage suche",
+      "command": "hackage-cli suche"
+    },
+    {
+      "name": "versionen",
+      "displayName": "versionen",
+      "description": "hackage versionen",
+      "command": "hackage-cli versionen"
+    },
+    {
+      "name": "bevorzugt",
+      "displayName": "bevorzugt",
+      "description": "hackage bevorzugt",
+      "command": "hackage-cli bevorzugt"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://hackage.haskell.org/packages/search",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "hackage.haskell.org/robots.txt: keine Regel für * (nur AI-Crawler-Sperrliste). JSON-Endpunkte per Accept-Header. Drossel ≥2 s.",
+    "tos": "Hackage: öffentliches Paketarchiv der Haskell-Community; Fair Use.",
+    "logo": {
+      "domain": "hackage.haskell.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://hackage.haskell.org/static/favicon.png",
+      "fallback": "initials",
+      "file": "assets/logos/hackage.haskell.org.png",
+      "brand_domain": "haskell.org",
+      "source": "official-site",
+      "source_kind": "favicon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 1.0,
+      "latenz_ms": 3986,
+      "throughput_rps": 0.251,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "json",
+      "last_scrape": "2026-10-13T08:05:05.316Z",
+      "datenqualitaet": 1.0
+    },
+    "openui": {
+      "card": {
+        "title": "Hackage – Haskell-Paketarchiv",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "INT",
+    "ampel": "grün",
+    "license": "unbekannt",
+    "logo_source": "favicon",
+    "keywords": [
+      "hackage",
+      "haskell",
+      "haskell-paketsuche",
+      "versionen",
+      "pakets",
+      "normal",
+      "deprecated",
+      "bevorzugte",
+      "versionsbereiche",
+      "haskell-paketarchiv",
+      "tech",
+      "bevorzugt",
+      "technology",
+      "technik"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:14:17.575Z",
+      "robots": "allowed"
+    },
+    "homepage": "https://hackage.haskell.org/"
+  }
+}

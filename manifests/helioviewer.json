@@ -1,0 +1,178 @@
+{
+  "id": "servas-ai.opencli-helioviewer",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Helioviewer – Sonnenbilder (NASA/ESA)",
+  "description": "Helioviewer API v2 (NASA/ESA): Datenquellen der Sonnenbeobachtung (SDO/AIA, SOHO, GOES …) mit Zeitraum und nächstgelegenes Sonnenbild zu Datum und Quelle.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "sonne",
+    "weltraum",
+    "sdo",
+    "soho",
+    "nasa",
+    "esa",
+    "heliophysik",
+    "bilder"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "bild",
+      "displayName": "bild",
+      "description": "helioviewer bild",
+      "command": "helioviewer-cli bild"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://api.helioviewer.org/",
+    "homepage": "https://api.helioviewer.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "api.helioviewer.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Helioviewer Project: öffentliche API (keyless); Bildrechte je Mission (NASA/ESA, Quellenangabe).",
+    "license": "terms-of-source (Bilder je Mission, meist NASA/ESA frei)",
+    "country": "INT",
+    "keywords": [
+      "sonne",
+      "weltraum",
+      "sdo",
+      "soho",
+      "nasa",
+      "esa",
+      "heliophysik",
+      "bilder"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-9",
+    "worker": "open-apis-9-1506",
+    "logo": {
+      "domain": "api.helioviewer.org",
+      "file": "assets/logos/api.helioviewer.org.png",
+      "source": "official-site",
+      "source_kind": "official-site",
+      "resolved": "https://helioviewer.org/resources/images/logos/hvlogo1s_transparent.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v2",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:13:55.322Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Bilder je Mission, meist NASA/ESA frei)",
+        "url": "https://api.helioviewer.org/docs/v2/",
+        "evidence": "https://api.helioviewer.org/docs/v2/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: Helioviewer – Sonnenbilder (NASA/ESA) (api.helioviewer.org)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T15:40:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Helioviewer – Sonnenbilder (NASA/ESA)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "source_id",
+          "name"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

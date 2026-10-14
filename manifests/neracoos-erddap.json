@@ -1,0 +1,174 @@
+{
+  "id": "servas-ai.opencli-neracoos-erddap",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "NERACOOS – Northeastern Regional Association of Coastal Ocean Observing Systems (ERDDAP)",
+  "description": "NERACOOS ERDDAP: Bojen- und Wellendaten des Golfs von Maine und Nordost-USA (Richtungswellen, Meteorologie, Ozeanografie). Zugriff über die offizielle ERDDAP-API (JSON), ohne Login/Key.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "opendata"
+  ],
+  "tags": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Golf von Maine",
+    "Bojen",
+    "IOOS",
+    "Northeastern Regional Association of Coastal Ocean Observing Systems"
+  ],
+  "keywords": [
+    "ERDDAP",
+    "Ozeandaten",
+    "Meeresdaten",
+    "open data",
+    "Umwelt",
+    "NetCDF",
+    "Golf von Maine",
+    "Bojen",
+    "IOOS",
+    "Northeastern Regional Association of Coastal Ocean Observing Systems"
+  ],
+  "homepage": "https://neracoos.org/",
+  "license": "MIT",
+  "geo": {
+    "country": "US",
+    "region": "Maine",
+    "city": null,
+    "scope": "regional"
+  },
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "datasets",
+      "displayName": "datasets",
+      "description": "neracoos-erddap datasets",
+      "command": "neracoos-erddap-cli datasets"
+    },
+    {
+      "name": "suche",
+      "displayName": "suche",
+      "description": "neracoos-erddap suche",
+      "command": "neracoos-erddap-cli suche"
+    },
+    {
+      "name": "info",
+      "displayName": "info",
+      "description": "neracoos-erddap info",
+      "command": "neracoos-erddap-cli info"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "opendata",
+    "realtime": false,
+    "source_url": "https://data.neracoos.org/erddap/info/index.json",
+    "homepage": "https://neracoos.org/",
+    "portal": "https://data.neracoos.org/erddap/index.html",
+    "provider": "Northeastern Regional Association of Coastal Ocean Observing Systems (NERACOOS)",
+    "keywords": [
+      "ERDDAP",
+      "Ozeandaten",
+      "Meeresdaten",
+      "open data",
+      "Umwelt",
+      "NetCDF",
+      "Golf von Maine",
+      "Bojen",
+      "IOOS",
+      "Northeastern Regional Association of Coastal Ocean Observing Systems"
+    ],
+    "geo": {
+      "country": "US",
+      "region": "Maine",
+      "city": null,
+      "scope": "region"
+    },
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "data.neracoos.org/robots.txt: HTTP 404 – keine Regeln (RFC 9309), /erddap/info, /erddap/search, /erddap/tabledap, /erddap/griddap frei; Laufzeit-Prüfung fail-closed in lib/robots.js (Stand 2026-10-13). Drossel ≥2 s.",
+    "tos": "Northeastern Regional Association of Coastal Ocean Observing Systems (NERACOOS): öffentlicher ERDDAP-Server (NOAA ERDDAP), JSON-Ausgabe ohne Key/Login; Fair Use, kleine Seitengrößen.",
+    "logo": {
+      "domain": "data.neracoos.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://neracoos.org/wp-content/uploads/2020/01/cropped-small-square-transparent-logo-only-180x180.png",
+      "fallback": "initials",
+      "file": "assets/logos/data.neracoos.org.png",
+      "source": "official-site",
+      "kind": "apple-touch-icon"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0.0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "erddap-json",
+      "last_scrape": null,
+      "datenqualitaet": 0.0
+    },
+    "openui": {
+      "card": {
+        "title": "NERACOOS – Northeastern Regional Association of Coastal Ocean Observing Systems (ERDDAP)",
+        "subtitle": "opendata",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "country": "US",
+    "ampel": "grün",
+    "license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "data_license": "je Datensatz im ERDDAP-Attribut license (überwiegend Public Domain bzw. CC BY 4.0); siehe info",
+    "logo_source": "official-site",
+    "llms": {
+      "openapi": "https://data.neracoos.org/openapi.json",
+      "checked": true,
+      "checked_at": "2026-10-13T20:11:13.818Z",
+      "robots": "allowed"
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "id": "servas-ai.opencli-blocklottos",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Block Lottos – On-Chain Lottery Stats",
+  "description": "Block Lottos API: Jackpot/Stats/Draw-History und Agent-Capabilities (Polygon/Base), OpenAPI 3.1, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "lottery",
+    "blockchain",
+    "polygon",
+    "base",
+    "crypto",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "stats",
+      "displayName": "stats",
+      "description": "blocklottos stats",
+      "command": "blocklottos-cli stats"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://blocklottos.com/",
+    "homepage": "https://blocklottos.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "blocklottos.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Block Lottos: öffentliche Lottery-Stats-API, Fair-Use.",
+    "license": "terms-of-source (Block Lottos)",
+    "country": "INT",
+    "keywords": [
+      "lottery",
+      "blockchain",
+      "polygon",
+      "base",
+      "crypto",
+      "tech"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-15",
+    "worker": "open-apis-15-2002",
+    "logo": {
+      "domain": "blocklottos.com",
+      "file": "assets/logos/blocklottos.com.png",
+      "source": "header-logo",
+      "source_kind": "header-logo",
+      "resolved": "https://blocklottos.com/images/logo.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://blocklottos.com/llms.txt",
+      "llms_full": null,
+      "openapi": "https://blocklottos.com/openapi.json",
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T20:20:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Block Lottos)",
+        "url": "https://blocklottos.com/llms.txt",
+        "evidence": "https://blocklottos.com/llms.txt",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "check",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T20:20:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Block Lottos – On-Chain Lottery Stats",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "chain",
+          "currency"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

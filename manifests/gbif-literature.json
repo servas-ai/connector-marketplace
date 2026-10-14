@@ -1,0 +1,161 @@
+{
+  "id": "servas-ai.opencli-gbif-literature",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "GBIF Literature",
+  "description": "GBIF Literature: Suche nach Studien, Papers und Publikationen (Metadaten: Titel, Autoren, Jahr, DOI, URL, Abstract wo erlaubt).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "generic"
+  ],
+  "tags": [
+    "wissenschaft",
+    "publikationen",
+    "studien",
+    "papers"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "search",
+      "displayName": "search",
+      "description": "gbif-literature search",
+      "command": "gbif-literature-cli search"
+    },
+    {
+      "name": "get",
+      "displayName": "get",
+      "description": "gbif-literature get",
+      "command": "gbif-literature-cli get"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "research",
+    "kind": "publication",
+    "realtime": false,
+    "source_url": "https://www.gbif.org/resource/search?contentType=literature",
+    "country": "INT",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 req/1.1 s",
+    "robots_status": "ok",
+    "robots": "kanonisches lib/robots.js (robotsFetch) – fail-closed #475; quality-z-2334",
+    "keywords": [
+      "gbif",
+      "literature",
+      "gbif-literature",
+      "studien",
+      "paper-suche",
+      "titel",
+      "autoren",
+      "jahr",
+      "doi",
+      "url",
+      "abstract",
+      "erlaubt",
+      "ausgabe",
+      "servas",
+      "record",
+      "type",
+      "generic",
+      "kind",
+      "publication",
+      "nutze",
+      "diesen",
+      "skill",
+      "wissenschaftliche",
+      "literaturrecherche",
+      "papers",
+      "publikationen",
+      "metadaten",
+      "international",
+      "publications",
+      "research",
+      "wissenschaft"
+    ],
+    "geo": {
+      "country": "pruefen",
+      "scope": "pruefen"
+    },
+    "logo": {
+      "domain": "www.gbif.org",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "resolved": "https://rs.gbif.org/style/logo.svg",
+      "fallback": "initials",
+      "file": "assets/logos/www.gbif.org.png",
+      "source": "official-site",
+      "source_kind": "header-logo"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": null,
+      "latenz_ms": null,
+      "throughput_rps": null,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "GBIF API v1 /literature",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "openui": {
+      "card": {
+        "title": "GBIF Literature",
+        "subtitle": "publication",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "title",
+          "authors",
+          "year",
+          "doi"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url"
+        ]
+      }
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": null,
+      "checked": true,
+      "checked_at": "2026-10-13T12:17:36.697Z",
+      "robots": "refused"
+    }
+  }
+}

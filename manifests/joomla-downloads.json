@@ -1,0 +1,177 @@
+{
+  "id": "servas-ai.opencli-joomla-downloads",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "Joomla! Downloads API – CMS-Versionen & Releases",
+  "description": "Joomla! Downloads API: aktuelle Version je Joomla!-Hauptzweig und vollständige Release-Historie des CMS mit Datum, keyless JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "tech"
+  ],
+  "tags": [
+    "joomla",
+    "cms",
+    "release",
+    "version",
+    "php",
+    "software",
+    "tech"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "releases",
+      "displayName": "releases",
+      "description": "joomla-downloads releases",
+      "command": "joomla-downloads-cli releases"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "tech",
+    "realtime": false,
+    "source_url": "https://downloads.joomla.org/",
+    "homepage": "https://downloads.joomla.org/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "downloads.joomla.org/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "Joomla! Downloads API: öffentliche JSON-Endpunkte ohne Key, Fair-Use.",
+    "license": "terms-of-source (Open Source Matters / Joomla! Project)",
+    "country": "INT",
+    "keywords": [
+      "joomla",
+      "cms",
+      "release",
+      "version",
+      "php",
+      "software",
+      "tech"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-21",
+    "worker": "open-apis-21-2237",
+    "logo": {
+      "domain": "downloads.joomla.org",
+      "file": "assets/logos/downloads.joomla.org.png",
+      "source": "apple-touch-icon",
+      "source_kind": "apple-touch-icon",
+      "resolved": "https://downloads.joomla.org/templates/joomla/images/apple-touch-icon-180x180.png",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:05:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (Open Source Matters / Joomla! Project)",
+        "url": "https://www.joomla.org/about-joomla/the-project/legal-information.html",
+        "evidence": "https://www.joomla.org/about-joomla/the-project/legal-information.html",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "no",
+      "attribution_text": null,
+      "personal_data": "none",
+      "legal_basis": "offene Verwaltungs-/Organisationsdaten, Terms der Quelle",
+      "source_kind": "official",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:05:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "Joomla! Downloads API – CMS-Versionen & Releases",
+        "subtitle": "tech",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "branch",
+          "version"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

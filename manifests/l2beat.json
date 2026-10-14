@@ -1,0 +1,180 @@
+{
+  "id": "servas-ai.opencli-l2beat",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "L2BEAT – Ethereum-Layer-2-Analytik",
+  "description": "L2BEAT JSON-API: Total Value Secured (TVS) und Aktivität (UOPS/TPS) je Layer-2-Projekt sowie Gesamt-Zeitreihe, keyless JSON (llms.txt vorhanden).",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "l2beat",
+    "ethereum",
+    "layer2",
+    "rollup",
+    "tvs",
+    "defi"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "aktivitaet",
+      "displayName": "aktivitaet",
+      "description": "l2beat aktivitaet",
+      "command": "l2beat-cli aktivitaet"
+    },
+    {
+      "name": "gesamt",
+      "displayName": "gesamt",
+      "description": "l2beat gesamt",
+      "command": "l2beat-cli gesamt"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": false,
+    "source_url": "https://l2beat.com/",
+    "homepage": "https://l2beat.com/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "l2beat.com/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "L2BEAT: öffentliche JSON-API laut llms.txt, keyless; nur Lesen, gedrosselt.",
+    "license": "terms-of-source (L2BEAT; Projektdaten open source)",
+    "country": "INT",
+    "keywords": [
+      "l2beat",
+      "ethereum",
+      "layer2",
+      "rollup",
+      "tvs",
+      "defi"
+    ],
+    "geo": {
+      "country": "INT",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "global"
+    },
+    "wave": "Open-APIs-29",
+    "worker": "open-apis-29-0218",
+    "logo": {
+      "domain": "l2beat.com",
+      "file": "assets/logos/l2beat.com.png",
+      "source": "favicon",
+      "source_kind": "favicon",
+      "resolved": "https://l2beat.com/static/icon.c58a8403.svg",
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": "https://l2beat.com/llms.txt",
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-14T02:50:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (L2BEAT; Projektdaten open source)",
+        "url": "https://l2beat.com/",
+        "evidence": "https://l2beat.com/",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: L2BEAT – Ethereum-Layer-2-Analytik (l2beat.com)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "public",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-14T02:50:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "L2BEAT – Ethereum-Layer-2-Analytik",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "timestamp"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}

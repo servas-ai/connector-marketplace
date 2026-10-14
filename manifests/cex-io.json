@@ -1,0 +1,182 @@
+{
+  "id": "servas-ai.opencli-cex-io",
+  "apiVersion": 1,
+  "version": "0.1.0",
+  "displayName": "CEX.IO – Krypto-Ticker & Paare",
+  "description": "CEX.IO Public API: Ticker je Paar (z.B. BTC/USD), Multi-Ticker und letzte Preise ohne Key, JSON.",
+  "author": "servas-ai",
+  "categories": [
+    "connector",
+    "finance"
+  ],
+  "tags": [
+    "cex",
+    "krypto",
+    "ticker",
+    "btc",
+    "börse",
+    "finance"
+  ],
+  "capabilities": [
+    "agent.tools.register"
+  ],
+  "tools": [
+    {
+      "name": "tickers",
+      "displayName": "tickers",
+      "description": "cex-io tickers",
+      "command": "cex-io-cli tickers"
+    },
+    {
+      "name": "last_prices",
+      "displayName": "last_prices",
+      "description": "cex-io last_prices",
+      "command": "cex-io-cli last_prices"
+    }
+  ],
+  "skill": "SKILL.md",
+  "proof": "PRUEFPROTOKOLL.md",
+  "x-servas": {
+    "schema": "servas.record.v1",
+    "category": "finance",
+    "realtime": true,
+    "source_url": "https://cex.io/",
+    "homepage": "https://cex.io/",
+    "access_chain": [
+      "official_api",
+      "dump",
+      "json_endpoint",
+      "html",
+      "headless"
+    ],
+    "access_used": "official_api",
+    "login": false,
+    "rate_limit": "1 Request / 2 s pro Host",
+    "robots_status": "ok",
+    "robots": "cex.io/robots.txt geprüft (tools/robots, fail-closed): API-Pfade erlaubt. Offizielle/öffentliche API, keyless, 1 req/2 s.",
+    "tos": "CEX.IO Public API: öffentliche Marktdaten ohne Key, Rate-Limit laut Doku; nur Lesen.",
+    "license": "terms-of-source (CEX.IO)",
+    "country": "GB",
+    "keywords": [
+      "cex",
+      "krypto",
+      "ticker",
+      "btc",
+      "börse",
+      "finance"
+    ],
+    "geo": {
+      "country": "GB",
+      "region": null,
+      "city": null,
+      "bbox": null,
+      "scope": "country"
+    },
+    "wave": "Open-APIs-23",
+    "worker": "open-apis-23-2334",
+    "logo": {
+      "domain": "cex.io",
+      "file": null,
+      "source": "initials",
+      "source_kind": "initials",
+      "resolved": null,
+      "chain": [
+        "appstore",
+        "official-site",
+        "wikimedia",
+        "initials"
+      ],
+      "fallback": "initials"
+    },
+    "interfaces": [
+      "paperclip",
+      "cli"
+    ],
+    "kpis": {
+      "stabilitaet": 0,
+      "latenz_ms": 0,
+      "throughput_rps": 0,
+      "captcha_rate": 0,
+      "login": false,
+      "api_version": "v1",
+      "last_scrape": null,
+      "datenqualitaet": null
+    },
+    "llms": {
+      "llms_txt": null,
+      "llms_full": null,
+      "openapi": null,
+      "mcp_endpoint": null,
+      "ai_policy": "no-ai-specific-rules",
+      "checked": true,
+      "checked_at": "2026-10-13T23:55:00Z",
+      "robots": "allowed"
+    },
+    "compliance": {
+      "schema": "connector-meta.v1",
+      "code_license": "MIT",
+      "data_license": {
+        "id": "terms-of-source (CEX.IO)",
+        "url": "https://cex.io/trade/api",
+        "evidence": "https://cex.io/trade/api",
+        "per_dataset": false
+      },
+      "commercial_use": "check",
+      "attribution_required": "yes",
+      "attribution_text": "Quelle: CEX.IO – Krypto-Ticker & Paare (cex.io)",
+      "personal_data": "none",
+      "legal_basis": "Terms der Quelle",
+      "source_kind": "commercial",
+      "server_country": null,
+      "server_in_eu": null,
+      "robots_respected": true,
+      "terms_respected": true,
+      "login_required": false,
+      "circumvention": false,
+      "rate_limit": {
+        "max_rps": 0.5,
+        "on_429": "stop"
+      },
+      "enterprise_ready": {
+        "level": "yellow",
+        "reasons": [
+          "kommerzielle Nutzung laut Terms prüfen",
+          "kommerzieller Betreiber, Terms der Quelle",
+          "Server-Land nicht belegt (pruefen)"
+        ]
+      },
+      "checked_at": "2026-10-13T23:55:00Z"
+    },
+    "openui": {
+      "card": {
+        "title": "CEX.IO – Krypto-Ticker & Paare",
+        "subtitle": "finance",
+        "icon": "logo",
+        "badges": [
+          "robots_status",
+          "login",
+          "realtime"
+        ]
+      },
+      "list": {
+        "columns": [
+          "id",
+          "last",
+          "volume"
+        ]
+      },
+      "detail": {
+        "fields": [
+          "kpis",
+          "access_chain",
+          "robots",
+          "source_url",
+          "geo",
+          "keywords",
+          "llms",
+          "compliance"
+        ]
+      }
+    }
+  }
+}
