@@ -46,3 +46,46 @@ CI-Workflow liegt in `ci/ci.yml` (Token ohne `workflow`-Scope); nach `gh auth re
 - `npm run signals`: Ampel grün/gelb/rot, Captcha-/403/429/Timeout/offline-Zeitreihe (`data/observations.json`, wächst pro Lauf), SVG-Badges unter `public/badges/<id>.svg`, Gesamt-Badge `public/badges/_all.svg`. Captchas werden nur erkannt und gezählt, nie umgangen.
 - Badge im README: `![Ampel](https://github.com/servas-ai/connector-marketplace/raw/main/public/badges/<id>.svg)`
 - Screenshots pro Quelle: `public/screens/<id>.png` (aus `opencli-connectors/proofs/*/source.thumb.png`).
+
+---
+
+## 🧭 SERVAS Stack Map
+
+> **servas-ai/connector-marketplace** · Read-only connector catalog. Architecture/ownership guide, not production-acceptance claim.
+
+### ✨ Scope
+
+- **Role:** Read-only connector catalog.
+- **Boundary:** this repository owns only its documented component; other services remain their own source of truth.
+- **Security:** least privilege, explicit principal/tenant scope, no secrets in Git/prompts, and read-only reconciliation for uncertain effects.
+- **Release:** pin source SHA and distinguish unit/synthetic tests from live acceptance.
+
+### 🗺️ System diagram
+
+```mermaid
+flowchart LR
+ U[Builder user] --> C[Catalog / metadata]
+ C --> P[Policy + compatibility]
+ P --> V[Versioned item]
+ V --> G[Install approval]
+ G --> R[Registered extension]
+```
+
+### 🖼️ Screenshots and visuals
+
+Only use checked-in screenshots captured from the actual tested build. No verified runtime screenshot was found in the README during this pass; no mock screenshot is represented as production evidence.
+
+### ✅ Readiness checklist
+
+- [ ] Source and deployed revision recorded.
+- [ ] Permissions and tenant/company scope verified.
+- [ ] Failure, retry, revoke and restore tested.
+- [ ] Runtime evidence linked; unit tests alone are not product acceptance.
+- [ ] UI screenshots, if relevant, captured from the actual tested build.
+
+### 🔗 Integration references
+
+- [Unified SERVAS stack](https://github.com/Martin-Hausleitner/hans/blob/3cfe8247af2df90f8c7173251d7cf2cf9a7a29ff/sources/transcripts/meetings/2026-10-24-kira-servas-review/SERVAS-GESAMTSTACK-MATRIX-MACRO-PAPERCLIP-HANS.md)
+- [WorkOS execution plan R3.1](https://github.com/Martin-Hausleitner/hans/blob/3cf6690f0c7c0f829f81a2c4f54e3463444a2a34/sources/transcripts/meetings/2026-10-24-kira-servas-review/repo-review-r2/EXECUTION-PLAN-R3.md)
+
+*Visual README overlay for review. This section does not imply the component is live, merged or accepted.*
