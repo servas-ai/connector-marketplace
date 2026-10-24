@@ -71,9 +71,17 @@ flowchart LR
  G --> R[Registered extension]
 ```
 
-### 🖼️ Screenshots and visuals
+### 🖼️ Existing screenshots and visual assets
 
-Only use checked-in screenshots captured from the actual tested build. No verified runtime screenshot was found in the README during this pass; no mock screenshot is represented as production evidence.
+![Grid](docs/marketplace-grid.png)
+
+![Detail](docs/marketplace-detail.png)
+
+![Dashboard](docs/marketplace-dashboard.png)
+
+![Ampel](https://github.com/servas-ai/connector-marketplace/raw/main/public/badges/<id>.svg)
+
+*Original repository visuals preserved. Their presence does not imply current runtime acceptance.*
 
 ### ✅ Readiness checklist
 
